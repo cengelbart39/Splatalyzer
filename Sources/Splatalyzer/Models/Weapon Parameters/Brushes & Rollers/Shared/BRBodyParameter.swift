@@ -1,5 +1,5 @@
 //
-//  BrushBodyParameter.swift
+//  BRBodyParameter.swift
 //
 //
 //  Created by Christopher Engelbart on 12/22/23.
@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct BrushBodyParameter: Codable {
+struct BRBodyParameter: Codable {
     let type: String
-    let collisionParam: BrushCollisionParameter
+    let collisionParam: BRCollisionParameter
     let damage: Int
-    let paintParam: BrushPaintParameter
-    let sideParam: BrushSideParameter
+    let paintParam: BRPaintParameter
+    let sideParam: BRSideParameter
     
     enum CodingKeys: String, CodingKey {
         case type = "$type"
@@ -23,12 +23,12 @@ struct BrushBodyParameter: Codable {
     }
 }
 
-struct BrushCollisionParameter: Codable {
-    let downRayCastLength: Double
-    let knockBackDefeat: Bool
-    let knockBackOpponent: BrushKnockBack
-    let knockBackRollerPlayerDamageOff: BrushKnockBack
-    let knockBackRollerPlayerDamageOn: BrushKnockBack
+struct BRCollisionParameter: Codable {
+    let downRayCastLength: Double?
+    let knockBackDefeat: Bool?
+    let knockBackOpponent: BRKnockBack
+    let knockBackRollerPlayerDamageOff: BRKnockBack
+    let knockBackRollerPlayerDamageOn: BRKnockBack
     let widthHalf: Double
     
     enum CodingKeys: String, CodingKey {
@@ -41,7 +41,7 @@ struct BrushCollisionParameter: Codable {
     }
 }
 
-struct BrushKnockBack: Codable {
+struct BRKnockBack: Codable {
     let accelMax: Double
     let accelMin: Double
     let myVelocityRate: Double
@@ -55,21 +55,25 @@ struct BrushKnockBack: Codable {
     }
 }
 
-struct BrushPaintParameter: Codable {
+struct BRPaintParameter: Codable {
+    let depth: Double?
     let speedMax: Double
     let speedMin: Double?
+    let widthAddWallCut: Double?
     let widthHalfMax: Double
-    let widthHalfMin: Double
+    let widthHalfMin: Double?
     
     enum CodingKeys: String, CodingKey {
+        case depth = "Depth"
         case speedMax = "SpeedMax"
         case speedMin = "SpeedMin"
+        case widthAddWallCut = "WidthAddWallCut"
         case widthHalfMax = "WidthHalfMax"
         case widthHalfMin = "WidthHalfMin"
     }
 }
 
-struct BrushSideParameter: Codable {
+struct BRSideParameter: Codable {
     let checkLength: Double
     let radius: Double
     

@@ -8,14 +8,14 @@
 import Foundation
 
 struct BrushWeapon: Codable {
-    let bodyParam: BrushBodyParameter
-    let bulletAdditionMovePlayerSplashNearestParam: BrushBulletAdditionMovePlayerSplashNearestParameter
-    let mainEffectiveRangeUpParam: BrushMainEffectiveRangeUpParameter
-    let mainWepaonSetting: BrushMainWeaponSetting
+    let bodyParam: BRBodyParameter
+    let bulletAdditionMovePlayerSplashNearestParam: BRBulletAdditionMovePlayerSplashNearestParameter
+    let mainEffectiveRangeUpParam: BRMainEffectiveRangeUpParameter
+    let mainWepaonSetting: BRMainWeaponSetting
     let swingUnitGroupParam: BrushSwingUnitGroupParameter
-    let weaponRollParam: BrushWeaponRollParameter
-    let weaponSwingParam: BrushWeaponSwingParameter
-    let spawnBulletAdditionMovePlayerParam: BrushSpawnBulletAdditionMoveParameter
+    let weaponRollParam: BRWeaponRollParameter
+    let weaponSwingParam: BRWeaponSwingParameter
+    let spawnBulletAdditionMovePlayerParam: BRSpawnBulletAdditionMoveParameter
     
     enum CodingKeys: String, CodingKey {
         case bodyParam = "BodyParam"

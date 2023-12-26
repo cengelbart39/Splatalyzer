@@ -1,34 +1,18 @@
 //
-//  BrushSwingUnitGroupParameter.swift
+//  BRUnitGroupParameter.swift
 //
 //
-//  Created by Christopher Engelbart on 12/22/23.
+//  Created by Christopher Engelbart on 12/25/23.
 //
 
 import Foundation
 
-struct BrushSwingUnitGroupParameter: Codable {
-    let type: String
-    let pushOutCheckFieldCollisionFrame: Int?
-    let damageParam: BrushDamageParameter
-    let splashNearestParam: BrushSplashNearestParameter
-    let unit: [BrushUnit]
-    
-    enum CodingKeys: String, CodingKey {
-        case type = "$type"
-        case pushOutCheckFieldCollisionFrame = "PushOutCheckFieldCollisionFrame"
-        case damageParam = "DamageParam"
-        case splashNearestParam = "SplashNearestParam"
-        case unit = "Unit"
-    }
-}
-
-struct BrushDamageParameter: Codable {
+struct BRDamageParameter: Codable {
     let damageRejectEndFrame: Int
     let damageRejectState: Double
     let damageRejectStartFrame: Int
-    let inside: BrushDamage
-    let outside: BrushDamage
+    let inside: BRDamage
+    let outside: BRDamage
     
     enum CodingKeys: String, CodingKey {
         case damageRejectEndFrame = "DamageRejectEndFrame"
@@ -39,7 +23,7 @@ struct BrushDamageParameter: Codable {
     }
 }
 
-struct BrushDamage: Codable {
+struct BRDamage: Codable {
     let damageHighDistance: Double
     let damageHighValue: Int
     let damageLowDistance: Double
@@ -49,7 +33,8 @@ struct BrushDamage: Codable {
     let damageMinDistance: Double
     let damageMinValue: Int?
     let damageRate: Double?
-    let degree: Double
+    let degree: Double?
+    let depletionDamageRate: Double?
     let finalDamageMinValue: Int?
     let insideDistanceXZ: Double?
     
@@ -64,12 +49,25 @@ struct BrushDamage: Codable {
         case damageMinValue = "DamageMinValue"
         case damageRate = "DamageRate"
         case degree = "Degree"
+        case depletionDamageRate = "DepletionDamageRate"
         case finalDamageMinValue = "FinalDamageMinValue"
         case insideDistanceXZ = "InsideDistanceXZ"
     }
 }
 
-struct BrushSplashNearestParameter: Codable {
+struct BRSplashNearestParameter: Codable {
+    let loopNum: Int?
+    let orderNum: Int?
+    let spawnParam: BRSpawnParameter
+    
+    enum CodingKeys: String, CodingKey {
+        case loopNum = "LoopNum"
+        case orderNum = "OrderNum"
+        case spawnParam = "SpawnParam"
+    }
+}
+
+struct BRSpawnParameter: Codable {
     let maxHeight: Double?
     let offset: Offset
     let paintDepthScale: Double?
@@ -97,47 +95,67 @@ struct BrushSplashNearestParameter: Codable {
     }
 }
 
-struct BrushUnit: Codable {
-    let addSpawnSpeedYRateBySpeed: Double
+struct BRUnit: Codable {
+    let addSpawnSpeedYRateBySpeed: Double?
+    let afterOffsetSpawnRoateXDegree: Double?
+    let afterOffsetSpawnSpeed: Double?
     let bulletNum: Int?
     let depletionBulletNum: Int?
-    let depletionSpeedRate: Double
+    let depletionSpeedRate: Double?
+    let fourPetalsCenterRadiusRate: Double?
+    let fourPetalsPetalRadiusRate: Double?
+    let paintOnly: Bool?
+    let spawnPositionHeight: Int?
     let spawnPositionOffsetHeight: Double?
-    let spawnPositionRandomCube: Double
-    let spawnPositionWidth: Double
+    let spawnPositionRandomCube: Double?
+    let spawnPositionWidth: Double?
+    let spawnRotateXDegreeBase: Double?
+    let spawnRotateYDegree: Double?
     let spawnRotateYDegreeLeftToRight: Double?
     let spawnRotateYDegreeRightToLeft: Double?
-    let spawnSpeedBase: Double
-    let spawnSpeedRandom: Double
-    let spawnWideDegree: Double
-    let swerveRateBySpeed: Double
-    let unitParam: [BrushUnitParameter]
+    let spawnSpeedBase: Double?
+    let spawnSpeedRandom: Double?
+    let spawnSplash: Bool?
+    let spawnWideDegree: Int?
+    let swerveRateBySpeed: Double?
+    let unitDamageRate: Double?
+    let unitParam: [BRUnitParameter]
     
     enum CodingKeys: String, CodingKey {
         case addSpawnSpeedYRateBySpeed = "AddSpawnSpeedYRateBySpeed"
+        case afterOffsetSpawnRoateXDegree
+        case afterOffsetSpawnSpeed
         case bulletNum = "BulletNum"
         case depletionBulletNum = "DepletionBulletNum"
         case depletionSpeedRate = "DepletionSpeedRate"
+        case fourPetalsCenterRadiusRate
+        case fourPetalsPetalRadiusRate
+        case paintOnly
+        case spawnPositionHeight
         case spawnPositionOffsetHeight = "SpawnPositionOffsetHeight"
         case spawnPositionRandomCube = "SpawnPositionRandomCube"
         case spawnPositionWidth = "SpawnPositionWidth"
+        case spawnRotateXDegreeBase
+        case spawnRotateYDegree
         case spawnRotateYDegreeLeftToRight = "SpawnRotateYDegreeLeftToRight"
         case spawnRotateYDegreeRightToLeft = "SpawnRotateYDegreeRightToLeft"
         case spawnSpeedBase = "SpawnSpeedBase"
         case spawnSpeedRandom = "SpawnSpeedRandom"
+        case spawnSplash
         case spawnWideDegree = "SpawnWideDegree"
         case swerveRateBySpeed = "SwerveRateBySpeed"
+        case unitDamageRate
         case unitParam = "UnitParam"
     }
 }
 
-struct BrushUnitParameter: Codable {
-    let collisionParam: BrushUnitCollisionParameter
-    let drawSizeParam: BrushUnitDrawSizeParameter
-    let moveParam: BrushUnitMoveParameter
-    let paintParam: BrushUnitPaintParameter
-    let wallDropCollisionPaintParam: BrushUnitWallDropCollisionPaintParameter
-    let wallDropMoveParam: BrushUnitWallDropMoveParameter
+struct BRUnitParameter: Codable {
+    let collisionParam: BRUnitCollisionParameter
+    let drawSizeParam: BRUnitDrawSizeParameter
+    let moveParam: BRUnitMoveParameter
+    let paintParam: BRUnitPaintParameter
+    let wallDropCollisionPaintParam: BRUnitWallDropCollisionPaintParameter
+    let wallDropMoveParam: BRUnitWallDropMoveParameter
     
     enum CodingKeys: String, CodingKey {
         case collisionParam = "CollisionParam"
@@ -149,7 +167,7 @@ struct BrushUnitParameter: Codable {
     }
 }
 
-struct BrushUnitCollisionParameter: Codable {
+struct BRUnitCollisionParameter: Codable {
     let chargeFrameForField: Int
     let chargeFrameForPlayer: Int
     let depletionRate: Double
@@ -171,17 +189,19 @@ struct BrushUnitCollisionParameter: Codable {
     }
 }
 
-struct BrushUnitDrawSizeParameter: Codable {
+struct BRUnitDrawSizeParameter: Codable {
+    let chargeFrame: Int?
     let endRadius: Double
     let initRadius: Double
     
     enum CodingKeys: String, CodingKey {
+        case chargeFrame = "ChangeFrame"
         case endRadius = "EndRadius"
         case initRadius = "InitRadius"
     }
 }
 
-struct BrushUnitMoveParameter: Codable {
+struct BRUnitMoveParameter: Codable {
     let freeAirResist: Double
     let freeGravity: Double
     let goStraightToBrakeStateFrame: Int
@@ -195,10 +215,11 @@ struct BrushUnitMoveParameter: Codable {
     }
 }
 
-struct BrushUnitPaintParameter: Codable {
+struct BRUnitPaintParameter: Codable {
     let changeFrameWidthRate: Double
     let changeWidthEndFrame: Int
     let changeWidthStartFrame: Int
+    let degreeUseDepthScaleMax: Double?
     let degreeUseDepthScaleMin: Double
     let depletionDepthWidthRate: Double
     let depthScaleMaxBreakFree: Double
@@ -206,7 +227,7 @@ struct BrushUnitPaintParameter: Codable {
     let depthScaleMinBreakFree: Double?
     let depthScaleMinStraight: Double?
     let distanceFar: Double?
-    let distanceNear: Double
+    let distanceNear: Double?
     let heightUseDepthScaleMaxBreakFree: Double?
     let heightUseDepthScaleMinBreakFree: Double
     let widthHalfFar: Double
@@ -216,6 +237,7 @@ struct BrushUnitPaintParameter: Codable {
         case changeFrameWidthRate = "ChangeFrameWidthRate"
         case changeWidthEndFrame = "ChangeWidthEndFrame"
         case changeWidthStartFrame = "ChangeWidthStartFrame"
+        case degreeUseDepthScaleMax = "DegreeUseDepthScaleMax"
         case degreeUseDepthScaleMin = "DegreeUseDepthScaleMin"
         case depletionDepthWidthRate = "DepletionDepthWidthRate"
         case depthScaleMaxBreakFree = "DepthScaleMaxBreakFree"
@@ -231,19 +253,21 @@ struct BrushUnitPaintParameter: Codable {
     }
 }
 
-struct BrushUnitWallDropCollisionPaintParameter: Codable {
-    let paintRadiusFall: Double
+struct BRUnitWallDropCollisionPaintParameter: Codable {
+    let fallPeriodFirstSecondTargetAlp: Double?
+    let paintRadiusFall: Double?
     let paintRadiusGround: Double?
     let paintRadiusShock: Double?
     
     enum CodingKeys: String, CodingKey {
+        case fallPeriodFirstSecondTargetAlp = "FallPeriodFirstSecondTargetAlp"
         case paintRadiusFall = "PaintRadiusFall"
         case paintRadiusGround = "PaintRadiusGround"
         case paintRadiusShock = "PaintRadiusShock"
     }
 }
 
-struct BrushUnitWallDropMoveParameter: Codable {
+struct BRUnitWallDropMoveParameter: Codable {
     let fallPeriodFirstFrameMax: Int
     let fallPeriodFirstFrameMin: Int
     let fallPeriodFirstTargetSpeed: Double?
