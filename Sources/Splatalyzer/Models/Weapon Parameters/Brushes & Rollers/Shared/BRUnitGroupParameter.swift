@@ -69,22 +69,10 @@ struct BRSplashNearestParameter: Codable {
 
 struct BRSpawnParameter: Codable {
     let maxHeight: Double?
-    let offset: Offset
+    let offset: XYZData
     let paintDepthScale: Double?
     let paintWidthHalf: Double
     let visible: Bool
-    
-    struct Offset: Codable {
-        let x: Double
-        let y: Double
-        let z: Double
-        
-        enum CodingKeys: String, CodingKey {
-            case x = "X"
-            case y = "Y"
-            case z = "Z"
-        }
-    }
     
     enum CodingKeys: String, CodingKey {
         case maxHeight = "MaxHeight"
