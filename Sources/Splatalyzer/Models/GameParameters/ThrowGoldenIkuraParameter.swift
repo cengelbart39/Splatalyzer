@@ -78,11 +78,13 @@ struct AttackBlastParameter: Codable {
 struct AttackKnockbackParameter: Codable {
     let accel: Double
     let bias: Double
+    let directionZeroAccelRate: Double?
     let distance: Double
     
     enum CodingKeys: String, CodingKey {
         case accel = "Accel"
         case bias = "Bias"
+        case directionZeroAccelRate = "DirectionZeroAccelRate"
         case distance = "Distance"
     }
 }
