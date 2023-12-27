@@ -143,6 +143,29 @@ struct StringerWeaponShotParameter: Codable {
     let enableOldTiltControl: Bool?
     let isStringerBear: Bool?
     
+    enum CodingKeys: String, CodingKey {
+        case arrowAngleMax = "ArrowAngleMax"
+        case arrowAngleMid = "ArrowAngleMid"
+        case arrowAngleMin = "ArrowAngleMin"
+        case arrowMargin = "ArrowMargin"
+        case arrowNum = "ArrowNum"
+        case bearMuzzleMoveDistArray = "BearMuzzleMoveDistArray"
+        case bearMuzzleResetFrame = "BearMuzzleResetFrame"
+        case bowJumpTiltSpeedForward = "BowJumpTiltSpeedForward"
+        case bowJumpTiltSpeedReverse = "BowJumpTiltSpeedReverse"
+        case bowTiltDegreeMax = "BowTiltDegreeMax"
+        case bowTiltDistanceMax = "BowTiltDistanceMax"
+        case bowTiltKeepFrame = "BowTiltKeepFrame"
+        case bowTiltResetSpeed = "BowTiltResetSpeed"
+        case bowTiltThreshold = "BowTiltThreshold"
+        case defiladeCheckAngle = "DefiladeCheckAngle"
+        case defiladeCheckDist = "DefiladeCheckDist"
+        case defildaedBulletSpeed = "DefildaedBulletSpeed"
+        case diffusionArrowParamArray = "DiffusionArrowParamArray"
+        case enableOldTiltControl = "EnableOldTiltControl"
+        case isStringerBear = "IsStringerBear"
+    }
+    
     struct DiffusionArrowParameter: Codable {
         let shotAddDegH: Double
         let shotAddDegV: Double
