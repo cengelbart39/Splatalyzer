@@ -74,6 +74,8 @@ struct SubMoveParameter: Codable {
     let paintRadiusBias: Double?
     let paintRadiusMaxCharge: Double?
     let paintRadiusMinCharge: Double?
+    let periodFirst: SubHighMiddleLow?
+    let periodSecond: SubHighMiddleLow?
     let placePaintRadius: Double?
     let sensorRadius: SubHighMiddleLow?
     let spawnRotatePitch: Double?
@@ -83,6 +85,11 @@ struct SubMoveParameter: Codable {
     let spawnSpeedYWorldMin: Double?
     let spawnSpeedZMaxCharge: Double?
     let spawnSpeedZSpecUp: SubHighMiddleLow
+    let spoutInkDrawRadius: Double?
+    let spoutInkPaintRadiusMaxHeight: Double?
+    let spoutInkPaintRadiusMaxRate: Double?
+    let spoutInkPaintRadiusMinHeight: Double?
+    let spoutInkPaintRadiusMinRate: Double?
     let unfindBurstWaitFrame: Int?
     let warningAnimRestFrame: Int?
     let warningSERestFrame: Int?
@@ -154,6 +161,8 @@ struct SubMoveParameter: Codable {
         case paintRadiusBias = "PaintRadiusBias"
         case paintRadiusMaxCharge = "PaintRadiusMaxCharge"
         case paintRadiusMinCharge = "PaintRadiusMinCharge"
+        case periodFirst = "PeriodFirst"
+        case periodSecond = "PeriodSecond"
         case placePaintRadius = "PlacePaintRadius"
         case sensorRadius = "SensorRadius"
         case spawnRotatePitch = "SpawnRotatePitch"
@@ -163,6 +172,11 @@ struct SubMoveParameter: Codable {
         case spawnSpeedYWorldMin = "SpawnSpeedYWorldMin"
         case spawnSpeedZMaxCharge = "SpawnSpeedZMaxCharge"
         case spawnSpeedZSpecUp = "SpawnSpeedZSpecUp"
+        case spoutInkDrawRadius = "SpoutInkDrawRadius"
+        case spoutInkPaintRadiusMaxHeight = "SpoutInkPaintRadiusMaxHeight"
+        case spoutInkPaintRadiusMaxRate = "SpoutInkPaintRadiusMaxRate"
+        case spoutInkPaintRadiusMinHeight = "SpoutInkPaintRadiusMinHeight"
+        case spoutInkPaintRadiusMinRate = "SpoutInkPaintRadiusMinRate"
         case unfindBurstWaitFrame = "UnfindBurstWaitFrame"
         case warningAnimRestFrame = "WarningAnimRestFrame"
         case warningSERestFrame = "WarningSERestFrame"
