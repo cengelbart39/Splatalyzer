@@ -16,16 +16,18 @@ struct KnockbackParameter: Codable {
 }
 
 struct SplashAroundParameter: Codable {
-    let num: Int
+    let num: Int?
     let paintRadius: Double
     let pitchMax: Double
+    let pitchMin: Double?
     let velocityMax: Double
-    let velocityMin: Double
+    let velocityMin: Double?
     
     enum CodingKeys: String, CodingKey {
         case num = "Num"
         case paintRadius = "PaintRadius"
         case pitchMax = "PitchMax"
+        case pitchMin = "PitchMin"
         case velocityMax = "VelocityMax"
         case velocityMin = "VelocityMin"
     }

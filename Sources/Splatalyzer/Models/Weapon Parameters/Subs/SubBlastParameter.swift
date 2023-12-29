@@ -42,7 +42,7 @@ struct SubBlastParameter: Codable {
 }
 
 struct SubBlastSpecialSpecUpList: Codable {
-    let specUpType: String
+    let specUpType: String?
     let value: SubHighMiddleLow
     
     enum CodingKeys: String, CodingKey {
@@ -52,7 +52,7 @@ struct SubBlastSpecialSpecUpList: Codable {
 }
 
 struct SubBlastSplashAroundParameter: Codable {
-    let num: Double
+    let num: Double?
     let offsetY: Double?
     let paintRadius: Double
     let pitchMax: Double?
