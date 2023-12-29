@@ -8,7 +8,7 @@
 import Foundation
 
 struct ChargerWallDropCollisionPaintParameter: Codable {
-    let type: String
+    let type: String?
     let paintRadiusFall: Double
     let paintRadiusFallMaxCharge: Double
     let paintRadiusFallMinCharge: Double

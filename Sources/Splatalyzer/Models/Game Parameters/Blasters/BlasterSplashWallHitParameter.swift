@@ -11,7 +11,7 @@ struct BlasterSplashWallHitParameter: Codable {
     let type: String
     let spawnParam: SpawnParameter
     let wallDropCollisionPaintParam: BlasterWallDropCollisionPaintParameter
-    let wallDropMoveParam: BlasterSplashWallDropMoveParameter
+    let wallDropMoveParam: BlasterWallDropMoveParameter
     
     struct SpawnParameter: Codable {
         let distanceXZRate: Double?

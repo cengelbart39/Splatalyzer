@@ -8,7 +8,7 @@
 import Foundation
 
 struct BlasterWallDropCollisionPaintParameter: Codable {
-    let type: String
+    let type: String?
     let fallPeriodFirstSecondTargetAlp: Double
     let paintRadiusFall: Double
     let paintRadiusGround: Double?

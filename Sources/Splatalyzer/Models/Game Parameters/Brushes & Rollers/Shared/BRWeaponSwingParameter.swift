@@ -28,7 +28,7 @@ struct BRWeaponSwingParameter: Codable {
     }
     
     enum CodingKeys: String, CodingKey {
-        case type = "$types"
+        case type = "$type"
         case guideParam = "GuideParam"
         case inkConsume = "InkConsume"
         case inkConsumeRateDepeletion = "InkConsumeRateDepletion"

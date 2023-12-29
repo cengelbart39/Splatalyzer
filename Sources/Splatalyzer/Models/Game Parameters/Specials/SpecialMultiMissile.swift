@@ -86,7 +86,7 @@ struct SpecialMultiMissile: Codable {
                 let num: Int?
                 let radius: Double?
                 let randomOffset: Double
-                let randomOffsetBias: Double
+                let randomOffsetBias: Double?
                 
                 enum CodingKeys: String, CodingKey {
                     case num = "Num"

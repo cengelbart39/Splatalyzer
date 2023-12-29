@@ -9,10 +9,10 @@ import Foundation
 
 struct ShooterMainWeaponSetting: Codable {
     let type: String
-    let overwriteConsmeRtMainHigh: String?
-    let overwriteConsmeRtMainMid: String?
-    let overwriteMoveVelRtShotHigh: String?
-    let overwriteMoveVelRtShotMid: String?
+    let overwriteConsmeRtMainHigh: Double?
+    let overwriteConsmeRtMainMid: Double?
+    let overwriteMoveVelRtShotHigh: Double?
+    let overwriteMoveVelRtShotMid: Double?
     let weaponAccType: String?
     let weaponSpeedType: String?
     

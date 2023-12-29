@@ -1,5 +1,5 @@
 //
-//  ShooterWeapon.swift
+//  ShooterParameters.swift
 //
 //
 //  Created by Christopher Engelbart on 12/26/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ShooterWeapon: Codable {
+struct ShooterParameters: Codable {
     let collisionParam: ShooterCollisionParameter
     let damageParam: ShooterDamageParameter
     

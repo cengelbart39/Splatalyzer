@@ -20,7 +20,7 @@ struct SlosherNearestParameter: Codable {
 }
 
 struct SlosherDrawSizeCollisionPaintParameter: Codable {
-    let collisionParam: SlosherCollisionParameter
+    let collisionParam: SlosherCollisionParameter?
     let paintDepthScale: Double
     let paintWidthHalf: Double
     

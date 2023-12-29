@@ -1,5 +1,5 @@
 //
-//  ChargerWeapon.swift
+//  ChargerParameters.swift
 //
 //
 //  Created by Christopher Engelbart on 12/22/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ChargerWeapon: Codable {
+struct ChargerParameters: Codable {
     let collisionParam: ChargerCollisionParameter
     let damageParam: ChargerDamageParameter
     let mainEffectiveRangeUpParam: ChargerMainEffectiveRangeUpParameter

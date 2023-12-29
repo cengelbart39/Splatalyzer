@@ -27,19 +27,11 @@ struct ExtraHitEffectorInfo: Codable {
     }
 }
 
-enum ModeType: Codable {
-    case coop
-    case mission
-    case rival
-    case versus
-    case other
-    
-    enum CodingKeys: String, CodingKey {
-        case coop = "Coop"
-        case mission = "Mission"
-        case rival = "Rival"
-        case versus = "Versus"
-        case other = "Other"
-    }
+enum ModeType: String, Codable {
+    case coop = "Coop"
+    case mission = "Mission"
+    case rival = "Rival"
+    case versus = "Versus"
+    case other = "Other"
 }
 

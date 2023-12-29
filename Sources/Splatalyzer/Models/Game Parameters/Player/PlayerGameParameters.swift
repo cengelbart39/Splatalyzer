@@ -1,5 +1,5 @@
 //
-//  GameParameters.swift
+//  PlayerGameParameters.swift
 //
 //
 //  Created by Christopher Engelbart on 12/21/23.
@@ -11,11 +11,7 @@ protocol Parametable: Codable {
     var type: String { get }
 }
 
-struct GameParameters: Codable {
-    let parameters: [Parameters]
-}
-
-struct Parameters: Codable {
+struct PlayerParameters: Codable {
     let dieBlastParam: DieBlastParameter
     
     let playerLeagueInGameModifierParam: PlayerLeagueInGameModifierParameter

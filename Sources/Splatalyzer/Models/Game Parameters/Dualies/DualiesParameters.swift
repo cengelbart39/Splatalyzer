@@ -1,5 +1,5 @@
 //
-//  DualiesWeapon.swift
+//  DualiesParameters.swift
 //
 //
 //  Created by Christopher Engelbart on 12/23/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DualiesWeapon: Codable {
+struct DualiesParameters: Codable {
     let collisionLapOverParam: DualiesCollisionParameter?
     let collisionParam: DualiesCollisionParameter?
     

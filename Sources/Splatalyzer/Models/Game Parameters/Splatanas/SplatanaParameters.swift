@@ -1,5 +1,5 @@
 //
-//  SplatanaWeapon.swift
+//  SplatanaParameters.swift
 //
 //
 //  Created by Christopher Engelbart on 12/26/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SplatanaWeapon: Codable {
+struct SplatanaParameters: Codable {
     let bulletSaberHorizontalParam: SplatanaBulletSaberParameter
     let bulletSaberSlashHorizontalParam: SplatanaBulletSaberSlashParameter
     

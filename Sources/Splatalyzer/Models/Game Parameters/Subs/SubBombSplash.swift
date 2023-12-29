@@ -14,6 +14,14 @@ struct SubBombSplash: SubParametable {
     let weaponParam: WeaponParameter
     let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
     
+    enum CodingKeys: String, CodingKey {
+        case blastParam = "BlastParam"
+        case moveParam = "MoveParam"
+        case subWeaponSetting = "SubWeaponSetting"
+        case weaponParam = "WeaponParam"
+        case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
+    }
+    
     struct BlastParameter: Codable {
         let type: String
         let distanceDamage: [DistanceDamage]

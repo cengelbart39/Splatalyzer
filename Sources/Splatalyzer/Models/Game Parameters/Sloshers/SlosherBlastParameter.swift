@@ -26,8 +26,8 @@ struct SlosherBlastParameter: Codable {
 }
 
 struct SlosherBlastInnerParameter: Codable {
-    let collisionRadiusForPaint: String
-    let crosSPaintCheckLength: Double
+    let collisionRadiusForPaint: Double
+    let crossPaintCheckLength: Double
     let crossPaintRadius: Double
     let damageAttackerPriority: Bool
     let damageOffsetY: Double
@@ -38,7 +38,7 @@ struct SlosherBlastInnerParameter: Codable {
     
     enum CodingKeys: String, CodingKey {
         case collisionRadiusForPaint = "CollisionRadiusForPaint"
-        case crosSPaintCheckLength = "CrossPaintCheckLength"
+        case crossPaintCheckLength = "CrossPaintCheckLength"
         case crossPaintRadius = "CrossPaintRadius"
         case damageAttackerPriority = "DamageAttackerPriority"
         case damageOffsetY = "DamageOffsetY"

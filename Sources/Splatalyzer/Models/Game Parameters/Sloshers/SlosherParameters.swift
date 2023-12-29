@@ -1,5 +1,5 @@
 //
-//  SlosherWeapon.swift
+//  SlosherParameters.swift
 //
 //
 //  Created by Christopher Engelbart on 12/27/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SlosherWeapon: Codable {
+struct SlosherParameters: Codable {
     let blastParam: SlosherBlastParameter?
     let bounceGroupParam: SlosherBounceGroupParameter?
     let mainEffectiveRangeUp: SlosherMainEffectiveRangeUpParameter

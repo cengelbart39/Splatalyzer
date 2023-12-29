@@ -32,7 +32,7 @@ struct SpecialBlower: Codable {
         let type: String
         let damageOffsetY: Double
         let distanceDamge: [DistanceDamage]
-        let knockBackParam: [AttackKnockbackParameter]
+        let knockBackParam: AttackKnockbackParameter
         let paintOffsetY: Double
         let paintRadius: Double
         

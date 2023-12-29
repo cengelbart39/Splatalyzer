@@ -1,5 +1,5 @@
 //
-//  BrellaWeapon.swift
+//  BrellaParameters.swift
 //
 //
 //  Created by Christopher Engelbart on 12/26/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BrellaWeapon: Codable {
+struct BrellaParameters: Codable {
     let mainEffectiveRangeUpParam: BrellaMainEffectiveRangeUpParameter
     let mainWeaponSetting: BrellaMainWeaponSetting
     

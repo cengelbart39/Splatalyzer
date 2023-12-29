@@ -13,8 +13,8 @@ struct SplatanaBulletSaberParameter: Codable {
     let collisionParam: SplatanaBulletCollisionParameter
     let damageParam: SplatanaBulletDamageParameter
     let moveParam: SplatanaBulletMoveParameter
-    let paintParam: SplatanaBulletPaintParameter
-    let splashPaintParam: SplatanaBulletSplashPaintParameter
+    let paintParam: SplatanaBulletPaintParameter?
+    let splashPaintParam: SplatanaBulletSplashPaintParameter?
     let splashSpawnParam: SplatanaBulletSplashSpawnParameter
     let wallDropPaintParam: SplatanaBulletWallDropPaintParameter?
     

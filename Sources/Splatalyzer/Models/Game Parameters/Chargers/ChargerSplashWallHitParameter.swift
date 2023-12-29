@@ -9,7 +9,7 @@ import Foundation
 
 struct ChargerSplashWallHitParameter: Codable {
     let type: String
-    let spawnParam: ChargerSpawnParameter
+    let spawnParam: ChargerSpawnParameter?
     let wallDropCollisionPaintParam: ChargerWallDropCollisionPaintParameter
     let wallDropMoveParam: ChargerWallDropMoveParameter
     

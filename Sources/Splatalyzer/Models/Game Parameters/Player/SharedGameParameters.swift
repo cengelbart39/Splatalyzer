@@ -19,9 +19,9 @@ struct SplashAroundParameter: Codable {
     let num: Int?
     let offsetY: Double?
     let paintRadius: Double
-    let pitchMax: Double
+    let pitchMax: Double?
     let pitchMin: Double?
-    let velocityMax: Double
+    let velocityMax: Double?
     let velocityMin: Double?
     
     enum CodingKeys: String, CodingKey {

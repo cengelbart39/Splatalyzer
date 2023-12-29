@@ -9,17 +9,17 @@ import Foundation
 
 struct SlosherWeaponParameter: Codable {
     let type: String
-    let frameOffsetDegreeRate: Double
-    let frameOffsetMaxDegree: Double
-    let frameOffsetMaxMoveLength: Double
+    let frameOffsetDegreeRate: Double?
+    let frameOffsetMaxDegree: Double?
+    let frameOffsetMaxMoveLength: Double?
     let inkConsume: Double
     let inkRecoverStop: Int
-    let moveLmtFrame: Int
+    let moveLmtFrame: Int?
     let moveSpeed: Double
-    let postDelayFrame: Int
+    let postDelayFrame: Int?
     let repeatFrame: Int
     let shotGuide: SlosherWeaponShotGuide
-    let swingLiftAnimFrame: Double
+    let swingLiftAnimFrame: Double?
     let swingLiftFrame: Int
     
     enum CodingKeys: String, CodingKey {
@@ -42,7 +42,7 @@ struct SlosherWeaponParameter: Codable {
 struct SlosherWeaponShotGuide: Codable {
     let bulletOrderNumInUnit: Int?
     let frame: Int
-    let unitOrderNum: Int
+    let unitOrderNum: Int?
     
     enum CodingKeys: String, CodingKey {
         case bulletOrderNumInUnit = "BulletOrderNumInUnit"

@@ -9,7 +9,7 @@ import Foundation
 
 struct BlasterMoveParameter: Codable {
     let type: String
-    let freeGravity: Double
+    let freeGravity: Double?
     let goStraightStateEndMaxSpeed: Double
     let goStraightToBrakeStateFrame: Int
     let spawnSpeed: Double

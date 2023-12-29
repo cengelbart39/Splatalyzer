@@ -1,5 +1,5 @@
 //
-//  BlasterSplashWallDropMoveParameter.swift
+//  BlasterWallDropMoveParameter.swift
 //
 //
 //  Created by Christopher Engelbart on 12/22/23.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct BlasterSplashWallDropMoveParameter: Codable {
-    let type: String
+struct BlasterWallDropMoveParameter: Codable {
+    let type: String?
     let fallPeriodFirstFrameMax: Int?
     let fallPeriodFirstFrameMin: Int
     let fallPeriodFirstTargetSpeed: Double

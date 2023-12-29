@@ -11,7 +11,7 @@ struct BrellaBulletShotgunGroupParameter: Codable {
     let addDegree: Double?
     let collisionParam: BrellaBulletShotgunGroupCollisionParameter?
     let damageParam: BrellaBulletShotgunGroupDamageParameter
-    let drawRadius: Int?
+    let drawRadius: Double?
     let horizontalDegree: Double
     let horizontalOffset: Double
     let initVelRandom: Double?

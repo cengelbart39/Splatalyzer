@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct WeaponInfoSpecial: Codable, Identifiable {
+typealias WeaponInfoSpecial = [WeaponInfoSpecialItem]
+
+struct WeaponInfoSpecialItem: Codable, Identifiable {
     let defaultDamageRate: DamageRateInfo
     let defaultHitEffector: HitEffectorType
     let extraDamageRateInfo: [ExtraDamageRateInfo]
@@ -35,8 +37,8 @@ struct WeaponInfoSpecial: Codable, Identifiable {
     }
 }
 
-extension Array where Element == WeaponInfoSpecial {
-    func lookupByRowId(_ rowId: SpecialRowId) -> WeaponInfoSpecial? {
+extension Array where Element == WeaponInfoSpecialItem {
+    func lookupByRowId(_ rowId: SpecialRowId) -> WeaponInfoSpecialItem? {
         for item in self {
             if item.rowId == rowId {
                 return item

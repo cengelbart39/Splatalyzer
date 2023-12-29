@@ -89,6 +89,15 @@ struct SpecialChariot: Codable {
         let moveParam: MoveParameter
         let splashParam: SplashParameter
         
+        enum CodingKeys: String, CodingKey {
+            case type = "$type"
+            case blastParam = "BlastParam"
+            case collisionParam = "CollisionParam"
+            case drawSize = "DrawSize"
+            case moveParam = "MoveParam"
+            case splashParam = "SplashParam"
+        }
+        
         struct BlastParameter: Codable {
             let crossPaintCheckLength: Double
             let crossPaintRadius: Double
@@ -134,6 +143,11 @@ struct SpecialChariot: Codable {
         struct SplashParameter: Codable {
             let drawSizeCollisionPaintParam: DrawSizeCollisionPaintParameter
             let spawnParam: SpawnParameter
+            
+            enum CodingKeys: String, CodingKey {
+                case drawSizeCollisionPaintParam = "DrawSizeCollisionPaintParam"
+                case spawnParam = "SpawnParam"
+            }
             
             struct DrawSizeCollisionPaintParameter: Codable {
                 let collisionParam: CollisionParameter

@@ -9,9 +9,9 @@ import Foundation
 
 struct BrellaMainWeaponSetting: Codable {
     let type: String
-    let overwriteConsumeRtMainHigh: String
-    let overwriteConsumeRtMainMid: String
-    let weaponSpeedType: String
+    let overwriteConsumeRtMainHigh: Double?
+    let overwriteConsumeRtMainMid: Double?
+    let weaponSpeedType: String?
     
     enum CodingKeys: String, CodingKey {
         case type = "$type"

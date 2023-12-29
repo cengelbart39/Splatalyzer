@@ -8,7 +8,7 @@
 import Foundation
 
 struct ChargerWallDropMoveParameter: Codable {
-    let type: String
+    let type: String?
     let fallPeriodFirstFrameMin: Int
     let fallPeriodFirstTargetSpeed: Double
     let fallPeriodLastFrameMax: Int

@@ -1,5 +1,5 @@
 //
-//  RollerWeapon.swift
+//  RollerParameters.swift
 //
 //
 //  Created by Christopher Engelbart on 12/25/23.
@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct RollerWeapon: Codable {
+struct RollerParameters: Codable {
     let bodyParam: BRBodyParameter
     let bulletAdditionMovePlayerSpalashNearestParam: BRBulletAdditionMovePlayerSplashNearestParameter
     
-    let knockBackByCanopyParam: RollerKnockBackByCanopyParameter
+    let knockBackByCanopyParam: RollerKnockBackByCanopyParameter?
     
     let mainEffectiveRangeUpParam: BRMainEffectiveRangeUpParameter
     let mainWeaponSetting: BRMainWeaponSetting

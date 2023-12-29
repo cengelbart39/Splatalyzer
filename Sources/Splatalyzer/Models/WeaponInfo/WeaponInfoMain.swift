@@ -7,13 +7,15 @@
 
 import Foundation
 
-struct WeaponInfoMain: Codable, Identifiable {
+typealias WeaponInfoMain = [WeaponInfoMainItem]
+
+struct WeaponInfoMainItem: Codable, Identifiable {
     let debugDispColumn: Int
     let debugDispOrder: Int
     let defaultDamgeRate: DamageRateInfo
-    let defaultHitEffector: MainHitEffectorType
-    let extraDamageRateInfo: [MainExtraDamageRateInfo]
-    let extraHitEffectorInfo: [MainExtraHitEffectorInfo]
+    let defaultHitEffector: HitEffectorType
+    let extraDamageRateInfo: [ExtraDamageRateInfo]
+    let extraHitEffectorInfo: [ExtraHitEffectorInfo]
     let gameActor: String
     let id: Int
     let isCoopRare: Bool
@@ -73,26 +75,6 @@ struct WeaponInfoMain: Codable, Identifiable {
     }
 }
 
-struct MainExtraDamageRateInfo: Codable {
-    let damageRateInfo: DamageRateInfo
-    let extraInfo: ExtraInfo
-    
-    enum CodingKeys: String, CodingKey {
-        case damageRateInfo = "DamageRateInfoRow"
-        case extraInfo = "ExtraInfo"
-    }
-}
-
-struct MainExtraHitEffectorInfo: Codable {
-    let extraInfo: ExtraInfo
-    let hitEffectorType: MainHitEffectorType
-    
-    enum CodingKeys: String, CodingKey {
-        case extraInfo = "ExtraInfo"
-        case hitEffectorType = "HitEffectorType"
-    }
-}
-
 struct UIParam: Codable {
     let type: UIParamType
     let value: Int
@@ -103,124 +85,34 @@ struct UIParam: Codable {
     }
 }
 
-enum MainHitEffectorType: Codable {
-    case blaster
-    case blasterExtraBombCore
-    case blasterExtraBombCoreWeak
-    case charger
-    case chargerFullCharge
-    case chargerPaintSplash
-    case `default`
-    case maneuver
-    case roller
-    case rollerNoDamage
-    case saber
-    case saberChargeShot
-    case saberChargeSlash
-    case saberShot
-    case saberSlash
-    case shelter
-    case shelterCanopy
-    case shooter
-    case shooterCriticalHit
-    case slosher
-    case slosherBathtub
-    case slosherBearLeader
-    case slosherBig
-    case slosherLauncherFollower
-    case slosherLauncherLeader
-    case slosherWashtubBombCore
-    case spinner
-    
-    enum CodingKeys: String, CodingKey {
-        case blaster = "Blaster"
-        case blasterExtraBombCore = "Blaster_ExtraBombCore"
-        case blasterExtraBombCoreWeak = "Blaster_ExtraBombCoreWeak"
-        case charger = "Charger"
-        case chargerFullCharge = "Charger_FullCharge"
-        case chargerPaintSplash = "Charger_PaintSplash"
-        case `default` = "Default"
-        case maneuver = "Maneuver"
-        case roller = "Roller"
-        case rollerNoDamage = "Roller_NoDamage"
-        case saber = "Saber"
-        case saberChargeShot = "Saber_ChargeShot"
-        case saberChargeSlash = "Saber_ChargeSlash"
-        case saberShot = "Saber_Shot"
-        case saberSlash = "Saber_Slash"
-        case shelter = "Shelter"
-        case shelterCanopy = "Shelter_Canopy"
-        case shooter = "Shooter"
-        case shooterCriticalHit = "Shooter_CriticalHit"
-        case slosher = "Slosher"
-        case slosherBathtub = "Slosher_Bathtub"
-        case slosherBearLeader = "Slosher_BearLeader"
-        case slosherBig = "Slosher_Big"
-        case slosherLauncherFollower = "Slosher_LauncherFollower"
-        case slosherLauncherLeader = "Slosher_LauncherLeader"
-        case slosherWashtubBombCore = "Slosher_WashtubBombCore"
-        case spinner = "Spinner"
-    }
+enum UIParamType: String, Codable {
+    case blaze = "Blaze"
+    case charge = "Charge"
+    case defence = "Defence"
+    case explosion = "Explosion"
+    case mobility = "Mobility"
+    case paintSpeed = "PaintSpeed"
+    case power = "Power"
+    case range = "Range"
+    case weight = "Weight"
 }
 
-enum UIParamType: Codable {
-    case blaze
-    case charge
-    case defence
-    case explosion
-    case mobility
-    case paintSpeed
-    case power
-    case range
-    case weight
-    
-    enum CodingKeys: String, CodingKey {
-        case blaze = "Blaze"
-        case charge = "Charge"
-        case defence = "Defence"
-        case explosion = "Explosion"
-        case mobility = "Mobility"
-        case paintSpeed = "PaintSpeed"
-        case power = "Power"
-        case range = "Range"
-        case weight = "Weight"
-    }
-}
-
-enum SubWeapon: Codable {
-    case beacon
-    case bombCurling
-    case bombFizzy
-    case bombQuick
-    case bombRobot
-    case bombSplash
-    case bombSuction
-    case bombTorpedo
-    case lineMarker
-    case none
-    case pointSensor
-    case poisonMist
-    case shield
-    case sprinkler
-    case trap
-    
-    enum CodingKeys: String, CodingKey {
-        case beacon = "Work/Gyml/Beacon.spl__WeaponInfoSub.gyml"
-        case bombCurling = "Work/Gyml/Bomb_Curling.spl__WeaponInfoSub.gyml"
-        case bombFizzy = "Work/Gyml/Bomb_Fizzy.spl__WeaponInfoSub.gyml"
-        case bombQuick = "Work/Gyml/Bomb_Quick.spl__WeaponInfoSub.gyml"
-        case bombRobot = "Work/Gyml/Bomb_Robot.spl__WeaponInfoSub.gyml"
-        case bombSplash = "Work/Gyml/Bomb_Splash.spl__WeaponInfoSub.gyml"
-        case bombSuction = "Work/Gyml/Bomb_Suction.spl__WeaponInfoSub.gyml"
-        case bombTorpedo = "Work/Gyml/Bomb_Torpedo.spl__WeaponInfoSub.gyml"
-        case lineMarker = "Work/Gyml/LineMarker.spl__WeaponInfoSub.gyml"
-        case none = ""
-        case pointSensor = "Work/Gyml/PointSensor.spl__WeaponInfoSub.gyml"
-        case poisonMist = "Work/Gyml/PoisonMist.spl__WeaponInfoSub.gyml"
-        case shield = "Work/Gyml/Shield.spl__WeaponInfoSub.gyml"
-        case sprinkler = "Work/Gyml/Sprinkler.spl__WeaponInfoSub.gyml"
-        case trap = "Work/Gyml/Trap.spl__WeaponInfoSub.gyml"
-    }
+enum SubWeapon: String, Codable {
+    case beacon = "Work/Gyml/Beacon.spl__WeaponInfoSub.gyml"
+    case bombCurling = "Work/Gyml/Bomb_Curling.spl__WeaponInfoSub.gyml"
+    case bombFizzy = "Work/Gyml/Bomb_Fizzy.spl__WeaponInfoSub.gyml"
+    case bombQuick = "Work/Gyml/Bomb_Quick.spl__WeaponInfoSub.gyml"
+    case bombRobot = "Work/Gyml/Bomb_Robot.spl__WeaponInfoSub.gyml"
+    case bombSplash = "Work/Gyml/Bomb_Splash.spl__WeaponInfoSub.gyml"
+    case bombSuction = "Work/Gyml/Bomb_Suction.spl__WeaponInfoSub.gyml"
+    case bombTorpedo = "Work/Gyml/Bomb_Torpedo.spl__WeaponInfoSub.gyml"
+    case lineMarker = "Work/Gyml/LineMarker.spl__WeaponInfoSub.gyml"
+    case none = ""
+    case pointSensor = "Work/Gyml/PointSensor.spl__WeaponInfoSub.gyml"
+    case poisonMist = "Work/Gyml/PoisonMist.spl__WeaponInfoSub.gyml"
+    case shield = "Work/Gyml/Shield.spl__WeaponInfoSub.gyml"
+    case sprinkler = "Work/Gyml/Sprinkler.spl__WeaponInfoSub.gyml"
+    case trap = "Work/Gyml/Trap.spl__WeaponInfoSub.gyml"
     
     func toSubRowId() -> SubRowId {
         switch self {
@@ -272,54 +164,29 @@ enum SubWeapon: Codable {
     }
 }
 
-enum SpecialWeapon: Codable {
-    case blower
-    case castle
-    case chariot
-    case chimney
-    case energyStand
-    case firework
-    case gachihoko
-    case greatBarrier
-    case inkStorm
-    case jetpack
-    case microLaser
-    case multiMissile
-    case niceBall
-    case none
-    case pogo
-    case shockSonar
-    case skewer
-    case superHook
-    case superLanding
-    case tripleTornado
-    case ultraShot
-    case ultraStamp
-    
-    enum CodingKeys: String, CodingKey {
-        case blower = "Work/Gyml/SpBlower.spl__WeaponInfoSpecial.gyml"
-        case castle = "Work/Gyml/SpCastle.spl__WeaponInfoSpecial.gyml"
-        case chariot = "Work/Gyml/SpChariot.spl__WeaponInfoSpecial.gyml"
-        case chimney = "Work/Gyml/SpChimney.spl__WeaponInfoSpecial.gyml"
-        case energyStand = "Work/Gyml/SpEnergyStand.spl__WeaponInfoSpecial.gyml"
-        case firework = "Work/Gyml/SpFirework.spl__WeaponInfoSpecial.gyml"
-        case gachihoko = "Work/Gyml/SpGachihoko.spl__WeaponInfoSpecial.gyml"
-        case greatBarrier = "Work/Gyml/SpGreatBarrier.spl__WeaponInfoSpecial.gyml"
-        case inkStorm = "Work/Gyml/SpInkStorm.spl__WeaponInfoSpecial.gyml"
-        case jetpack = "Work/Gyml/SpJetpack.spl__WeaponInfoSpecial.gyml"
-        case microLaser = "Work/Gyml/SpMicroLaser.spl__WeaponInfoSpecial.gyml"
-        case multiMissile = "Work/Gyml/SpMultiMissile.spl__WeaponInfoSpecial.gyml"
-        case niceBall = "Work/Gyml/SpNiceBall.spl__WeaponInfoSpecial.gyml"
-        case none = ""
-        case pogo = "Work/Gyml/SpPogo.spl__WeaponInfoSpecial.gyml"
-        case shockSonar = "Work/Gyml/SpShockSonar.spl__WeaponInfoSpecial.gyml"
-        case skewer = "Work/Gyml/SpSkewer.spl__WeaponInfoSpecial.gyml"
-        case superHook = "Work/Gyml/SpSuperHook.spl__WeaponInfoSpecial.gyml"
-        case superLanding = "Work/Gyml/SpSuperLanding.spl__WeaponInfoSpecial.gyml"
-        case tripleTornado = "Work/Gyml/SpTripleTorando.spl__WeaponInfoSpecial.gyml"
-        case ultraShot = "Work/Gyml/SpUltraShot.spl__WeaponInfoSpecial.gyml"
-        case ultraStamp = "Work/Gyml/SpUltraStamp.spl__WeaponInfoSpecial.gyml"
-    }
+enum SpecialWeapon: String, Codable {
+    case blower = "Work/Gyml/SpBlower.spl__WeaponInfoSpecial.gyml"
+    case castle = "Work/Gyml/SpCastle.spl__WeaponInfoSpecial.gyml"
+    case chariot = "Work/Gyml/SpChariot.spl__WeaponInfoSpecial.gyml"
+    case chimney = "Work/Gyml/SpChimney.spl__WeaponInfoSpecial.gyml"
+    case energyStand = "Work/Gyml/SpEnergyStand.spl__WeaponInfoSpecial.gyml"
+    case firework = "Work/Gyml/SpFirework.spl__WeaponInfoSpecial.gyml"
+    case gachihoko = "Work/Gyml/SpGachihoko.spl__WeaponInfoSpecial.gyml"
+    case greatBarrier = "Work/Gyml/SpGreatBarrier.spl__WeaponInfoSpecial.gyml"
+    case inkStorm = "Work/Gyml/SpInkStorm.spl__WeaponInfoSpecial.gyml"
+    case jetpack = "Work/Gyml/SpJetpack.spl__WeaponInfoSpecial.gyml"
+    case microLaser = "Work/Gyml/SpMicroLaser.spl__WeaponInfoSpecial.gyml"
+    case multiMissile = "Work/Gyml/SpMultiMissile.spl__WeaponInfoSpecial.gyml"
+    case niceBall = "Work/Gyml/SpNiceBall.spl__WeaponInfoSpecial.gyml"
+    case none = ""
+    case pogo = "Work/Gyml/SpPogo.spl__WeaponInfoSpecial.gyml"
+    case shockSonar = "Work/Gyml/SpShockSonar.spl__WeaponInfoSpecial.gyml"
+    case skewer = "Work/Gyml/SpSkewer.spl__WeaponInfoSpecial.gyml"
+    case superHook = "Work/Gyml/SpSuperHook.spl__WeaponInfoSpecial.gyml"
+    case superLanding = "Work/Gyml/SpSuperLanding.spl__WeaponInfoSpecial.gyml"
+    case tripleTornado = "Work/Gyml/SpTripleTornado.spl__WeaponInfoSpecial.gyml"
+    case ultraShot = "Work/Gyml/SpUltraShot.spl__WeaponInfoSpecial.gyml"
+    case ultraStamp = "Work/Gyml/SpUltraStamp.spl__WeaponInfoSpecial.gyml"
     
     func toSpecialRowId() -> SpecialRowId {
         switch self {

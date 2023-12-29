@@ -124,7 +124,7 @@ struct StringerWeaponShotGuideParameter: Codable {
 struct StringerWeaponShotParameter: Codable {
     let arrowAngleMax: Double
     let arrowAngleMid: Double?
-    let arrowAngleMin: Double
+    let arrowAngleMin: Double?
     let arrowMargin: Double
     let arrowNum: Int?
     let bearMuzzleMoveDistArray: [Double]?

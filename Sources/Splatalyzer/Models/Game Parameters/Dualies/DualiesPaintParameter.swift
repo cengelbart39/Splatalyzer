@@ -9,7 +9,7 @@ import Foundation
 
 struct DualiesPaintParameter: Codable {
     let type: String
-    let degreeUseDepthScaleMin: Double
+    let degreeUseDepthScaleMin: Double?
     let depthScaleMax: Double
     let depthScaleMaxBreakFree: Double
     let depthScaleMin: Double

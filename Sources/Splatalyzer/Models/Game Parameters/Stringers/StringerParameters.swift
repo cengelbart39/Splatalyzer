@@ -1,5 +1,5 @@
 //
-//  StringerWeapon.swift
+//  StringerParameters.swift
 //
 //
 //  Created by Christopher Engelbart on 12/27/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct StringerWeapon: Codable {
+struct StringerParameters: Codable {
     let mainEffectiveRangeUpParam: StringerMainEffectiveRangeUpParameter
     let mainWeaponSetting: StringerMainWeaponSetting
     

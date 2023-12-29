@@ -17,7 +17,7 @@ struct BlasterWeaponParameter: Codable {
     let jumpDegSwerve: Double
     let moveSpeed: Double
     let postDelayFrame: Int
-    let postDelayFrameBlaster: Int
+    let postDelayFrameBlaster: Int?
     let preDelayFrameHumanShot: Int
     let preDelayFrameSquidShot: Int
     let repeatFrame: Int

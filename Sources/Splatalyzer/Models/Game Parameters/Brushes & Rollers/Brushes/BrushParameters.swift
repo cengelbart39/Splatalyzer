@@ -1,5 +1,5 @@
 //
-//  BrushWeapon.swift
+//  BrushParameters.swift
 //
 //
 //  Created by Christopher Engelbart on 12/22/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BrushWeapon: Codable {
+struct BrushParameters: Codable {
     let bodyParam: BRBodyParameter
     let bulletAdditionMovePlayerSplashNearestParam: BRBulletAdditionMovePlayerSplashNearestParameter
     let mainEffectiveRangeUpParam: BRMainEffectiveRangeUpParameter

@@ -72,7 +72,7 @@ struct BRSpawnParameter: Codable {
     let offset: XYZData
     let paintDepthScale: Double?
     let paintWidthHalf: Double
-    let visible: Bool
+    let visible: Bool?
     
     enum CodingKeys: String, CodingKey {
         case maxHeight = "MaxHeight"
@@ -107,7 +107,7 @@ struct BRUnit: Codable {
     let spawnWideDegree: Int?
     let swerveRateBySpeed: Double?
     let unitDamageRate: Double?
-    let unitParam: [BRUnitParameter]
+    let unitParam: BRUnitParameter
     
     enum CodingKeys: String, CodingKey {
         case addSpawnSpeedYRateBySpeed = "AddSpawnSpeedYRateBySpeed"
@@ -157,7 +157,7 @@ struct BRUnitParameter: Codable {
 
 struct BRUnitCollisionParameter: Codable {
     let chargeFrameForField: Int
-    let chargeFrameForPlayer: Int
+    let chargeFrameForPlayer: Int?
     let depletionRate: Double
     let endRadiusForField: Double
     let endRadiusForPlayer: Double
@@ -257,7 +257,7 @@ struct BRUnitWallDropCollisionPaintParameter: Codable {
 
 struct BRUnitWallDropMoveParameter: Codable {
     let fallPeriodFirstFrameMax: Int
-    let fallPeriodFirstFrameMin: Int
+    let fallPeriodFirstFrameMin: Int?
     let fallPeriodFirstTargetSpeed: Double?
     let fallPeriodLastFrameMax: Int
     let fallPeriodLastFrameMin: Int

@@ -1,5 +1,5 @@
 //
-//  SplatlingWeapon.swift
+//  SplatlingParameters.swift
 //
 //
 //  Created by Christopher Engelbart on 12/27/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SplatlingWeapon: Codable {
+struct SplatlingParameters: Codable {
     let collisionParam: SplatlingCollisionParameter
     let damageParam: SplatlingDamageParameter
     let mainEffectiveRangeUpParam: SplatlingMainEffectiveRangeUpParameter

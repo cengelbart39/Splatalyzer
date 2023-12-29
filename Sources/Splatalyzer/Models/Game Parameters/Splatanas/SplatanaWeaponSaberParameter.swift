@@ -15,6 +15,16 @@ struct SplatanaWeaponSaberParameter: Codable {
     let isEnableChargeKeep: Bool?
     let shotGuideParam: SplatanaShotGuideParameter
     let swingParam: SplatanaSwingParameter
+    
+    enum CodingKeys: String, CodingKey {
+        case type = "$type"
+        case chargeKeepParam = "ChargeKeepParam"
+        case chargeParam = "ChargeParam"
+        case footSplashPaintParam = "FootSplashPaintParam"
+        case isEnableChargeKeep = "IsEnableChargeKeep"
+        case shotGuideParam = "ShotGuideParam"
+        case swingParam = "SwingParam"
+    }
 }
 
 struct SplatanaChargeKeepParameter: Codable {
@@ -79,7 +89,7 @@ struct SplatanaShotGuideParameter: Codable {
 
 struct SplatanaSwingParameter: Codable {
     let chargeMoveVelLimit: Double
-    let chargeSwingASFrame: Int
+    let chargeSwingASFrame: Int?
     let chargeSwingFrame: Int
     let chargeSwingPostDelayFrame: Int
     let chargeSwingShotBulletFrame: Int

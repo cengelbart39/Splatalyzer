@@ -262,8 +262,8 @@ struct SlosherUnitPaintParameter: Codable {
 }
 
 struct SlosherUnitSplashAndSplashWallHitSpawnParameter: Codable {
-    let combination: [SlosherSplashHitSpawnCombination]
-    let splashParam: [SlosherSplashHitSpawnSplashParameter]
+    let combination: [SlosherSplashHitSpawnCombination]?
+    let splashParam: [SlosherSplashHitSpawnSplashParameter]?
 }
 
 struct SlosherSplashHitSpawnCombination: Codable {
@@ -391,13 +391,13 @@ struct SlosherUnitWallDropMoveParameter: Codable {
     let freeGravityType: String
     
     enum CodingKeys: String, CodingKey {
-        case fallPeriodFirstFrameMax
-        case fallPeriodFirstFrameMin
-        case fallPeriodFirstTargetSpeed
-        case fallPeriodLastFrameMax
-        case fallPeriodLastFrameMin
-        case fallPeriodSecondFrame
-        case fallPeriodSecondTargetSpeed
-        case freeGravityType
+        case fallPeriodFirstFrameMax = "FallPeriodFirstFrameMax"
+        case fallPeriodFirstFrameMin = "FallPeriodFirstFrameMin"
+        case fallPeriodFirstTargetSpeed = "FallPeriodFirstTargetSpeed"
+        case fallPeriodLastFrameMax = "FallPeriodLastFrameMax"
+        case fallPeriodLastFrameMin = "FallPeriodLastFrameMin"
+        case fallPeriodSecondFrame = "FallPeriodSecondFrame"
+        case fallPeriodSecondTargetSpeed = "FallPeriodSecondTargetSpeed"
+        case freeGravityType = "FreeGravityType"
     }
 }

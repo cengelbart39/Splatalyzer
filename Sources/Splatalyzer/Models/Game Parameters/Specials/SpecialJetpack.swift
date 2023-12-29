@@ -15,6 +15,15 @@ struct SpecialJetpack: Codable {
     let weaponParam: WeaponParameter
     let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
     
+    enum CodingKeys: String, CodingKey {
+        case blastParam = "BlastParam"
+        case jetParam = "JetParam"
+        case launcherCollisionParam = "LauncherCollisionParam"
+        case moveParam = "MoveParam"
+        case weaponParam = "WeaponParam"
+        case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
+    }
+    
     struct BlastParameter: Codable {
         let type: String
         let crossPaintCheckLength: Double

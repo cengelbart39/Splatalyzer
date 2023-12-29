@@ -119,10 +119,10 @@ struct SubBombTorpedo: SubParametable {
         let inkConsume: Double
         let inkRecoverStop: Int
         
-        enum CodingKeys: CodingKey {
-            case type
-            case inkConsume
-            case inkRecoverStop
+        enum CodingKeys: String, CodingKey {
+            case type = "$type"
+            case inkConsume = "InkConsume"
+            case inkRecoverStop = "InkRecoverStop"
         }
     }
     
