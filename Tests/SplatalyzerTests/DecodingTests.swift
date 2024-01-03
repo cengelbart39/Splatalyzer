@@ -22,4 +22,9 @@ final class DecodingTests: XCTestCase {
         let service = JSONServiceForTests()
         XCTAssertNoThrow(try service.decode(DamageRateInfoConfig.self, from: "spl__DamageRateInfoConfig.pp__CombinationDataTableData"))
     }
+    
+    func test_AbilityValues_decode_noThrows() {
+        let service = JSONServiceForTests()
+        XCTAssertNoThrow(try service.decode(AbilityValues.self, from: "ability-values"))
+    }
 }
