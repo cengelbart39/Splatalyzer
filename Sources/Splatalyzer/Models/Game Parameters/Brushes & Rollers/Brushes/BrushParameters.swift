@@ -11,7 +11,7 @@ struct BrushParameters: Codable {
     let bodyParam: BRBodyParameter
     let bulletAdditionMovePlayerSplashNearestParam: BRBulletAdditionMovePlayerSplashNearestParameter
     let mainEffectiveRangeUpParam: BRMainEffectiveRangeUpParameter
-    let mainWepaonSetting: BRMainWeaponSetting
+    let mainWepaonSetting: MainWeaponSettings
     let swingUnitGroupParam: BrushSwingUnitGroupParameter
     let weaponRollParam: BRWeaponRollParameter
     let weaponSwingParam: BRWeaponSwingParameter

@@ -11,7 +11,7 @@ struct ChargerParameters: Codable {
     let collisionParam: ChargerCollisionParameter
     let damageParam: ChargerDamageParameter
     let mainEffectiveRangeUpParam: ChargerMainEffectiveRangeUpParameter
-    let mainWeaponSetting: ChargerMainWeaponSetting
+    let mainWeaponSetting: MainWeaponSettings
     let moveParam: ChargerMoveParameter
     let paintParam: ChargerPaintParameter
     let splashPaintParam: ChargerSplashPaintParameter

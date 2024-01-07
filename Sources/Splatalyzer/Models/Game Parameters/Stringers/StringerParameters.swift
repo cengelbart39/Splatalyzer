@@ -9,7 +9,7 @@ import Foundation
 
 struct StringerParameters: Codable {
     let mainEffectiveRangeUpParam: StringerMainEffectiveRangeUpParameter
-    let mainWeaponSetting: StringerMainWeaponSetting
+    let mainWeaponSetting: MainWeaponSettings
     
     let bulletStringerParam: StringerBulletParameter
     let weaponStringerParam: StringerWeaponParameter

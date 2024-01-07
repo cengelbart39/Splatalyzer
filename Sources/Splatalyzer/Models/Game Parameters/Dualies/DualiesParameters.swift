@@ -15,7 +15,7 @@ struct DualiesParameters: Codable {
     let damageParam: DualiesDamageParameter
     
     let mainEffectiveRangeUpParam: DualiesMainEffectiveRangeUpParameter?
-    let mainWeaponSetting: DualiesMainWeaponSetting?
+    let mainWeaponSetting: MainWeaponSettings?
     
     let moveLapOverParam: DualiesMoveParameter?
     let moveParam: DualiesMoveParameter

@@ -14,7 +14,7 @@ struct RollerParameters: Codable {
     let knockBackByCanopyParam: RollerKnockBackByCanopyParameter?
     
     let mainEffectiveRangeUpParam: BRMainEffectiveRangeUpParameter
-    let mainWeaponSetting: BRMainWeaponSetting
+    let mainWeaponSetting: MainWeaponSettings
     
     let verticalSwingUnitGroupParam: RollerVerticalSwingUnitGroupParameter
     let weaponRollParam: BRWeaponRollParameter

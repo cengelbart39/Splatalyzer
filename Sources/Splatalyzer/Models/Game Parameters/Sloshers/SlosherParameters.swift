@@ -11,7 +11,7 @@ struct SlosherParameters: Codable {
     let blastParam: SlosherBlastParameter?
     let bounceGroupParam: SlosherBounceGroupParameter?
     let mainEffectiveRangeUp: SlosherMainEffectiveRangeUpParameter
-    let mainWeaponSetting: SlosherMainWeaponSetting
+    let mainWeaponSetting: MainWeaponSettings
     let nearestParam: SlosherNearestParameter
     let splashSlosherScatterParam: SlosherSplashScatterParameter?
     let splashSlosherSpiralParam: SlosherSplashSpiralParameter?

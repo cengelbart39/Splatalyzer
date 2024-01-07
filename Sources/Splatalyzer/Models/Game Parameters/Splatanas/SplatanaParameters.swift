@@ -15,7 +15,7 @@ struct SplatanaParameters: Codable {
     let bulletSaberVerticalParam: SplatanaBulletSaberParameter
     
     let mainEffectiveRangeUpParam: SplatanaMainEffectiveRangeUpParameter?
-    let mainWeaponSetting: SplatanaMainWeaponSetting
+    let mainWeaponSetting: MainWeaponSettings
     
     let weaponSaberParam: SplatanaWeaponSaberParameter
     

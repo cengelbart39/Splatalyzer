@@ -9,7 +9,7 @@ import Foundation
 
 struct BrellaParameters: Codable {
     let mainEffectiveRangeUpParam: BrellaMainEffectiveRangeUpParameter
-    let mainWeaponSetting: BrellaMainWeaponSetting
+    let mainWeaponSetting: MainWeaponSettings
     
     let bulletShelterCanopyParam: BrellaBulletCanopyParameter
     let bulletShelterShotgunParam: BrellaBulletShotgunParameter

@@ -12,7 +12,7 @@ struct ShooterParameters: Codable {
     let damageParam: ShooterDamageParameter
     
     let mainEffectiveRangeUpParam: ShooterMainEffectiveRangeUpParameter
-    let mainWeaponSetting: ShooterMainWeaponSetting
+    let mainWeaponSetting: MainWeaponSettings
     
     let moveParam: ShooterMoveParameter
     let paintParam: ShooterPaintParameter

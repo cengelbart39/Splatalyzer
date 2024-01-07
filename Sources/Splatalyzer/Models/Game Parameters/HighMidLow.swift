@@ -8,9 +8,9 @@
 import Foundation
 
 struct HighMidLow: Codable {
-    let high: Double
-    let low: Double
-    let mid: Double
+    let high: Double?
+    let low: Double?
+    let mid: Double?
     
     enum CodingKeys: String, CodingKey {
         case high = "High"

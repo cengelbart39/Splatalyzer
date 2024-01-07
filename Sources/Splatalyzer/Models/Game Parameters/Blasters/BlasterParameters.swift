@@ -20,7 +20,7 @@ struct BlasterParameters: Codable {
     let damageParam: BlasterDamageParameter
     
     let mainEffectiveRangeUpParam: BlasterMainEffectiveRangeUpParameter?
-    let mainWeaponSetting: BlasterMainWeaponSetting
+    let mainWeaponSetting: MainWeaponSettings
     
     let moveJumpParam: BlasterMoveParameter?
     let moveParam: BlasterMoveParameter

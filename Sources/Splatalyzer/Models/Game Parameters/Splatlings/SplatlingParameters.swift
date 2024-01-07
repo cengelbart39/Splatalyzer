@@ -11,7 +11,7 @@ struct SplatlingParameters: Codable {
     let collisionParam: SplatlingCollisionParameter
     let damageParam: SplatlingDamageParameter
     let mainEffectiveRangeUpParam: SplatlingMainEffectiveRangeUpParameter
-    let mainWeaponSetting: SplatanaMainWeaponSetting
+    let mainWeaponSetting: MainWeaponSettings
     let moveParam: SplatlingMoveParameter
     let paintParam: SplatlingPaintParameter
     let splashPaintParam: SplatlingSplashPaintParameter
