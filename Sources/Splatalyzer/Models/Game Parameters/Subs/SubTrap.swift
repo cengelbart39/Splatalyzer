@@ -44,7 +44,7 @@ struct SubTrap: SubParametable {
         let crossPaintRadius: Double
         let damageOffsetY: Double
         let distanceDamage: [DistanceDamage]
-        let knockBackParam: AttackKnockbackParameter
+        let knockBackParam: KnockbackParameter
         let paintOffsetY: Double
         let paintRadius: Double
         let planeDamage: [DistanceDamage]

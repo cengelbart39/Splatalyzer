@@ -30,7 +30,7 @@ struct SpecialTripleTornado: Codable {
         let damageRadiusEnd: Double
         let damageValueEnd: Int
         let damageValueStart: Int
-        let knockBackParam: AttackKnockbackParameter
+        let knockBackParam: KnockbackParameter
         let paintRadiusEnd: Double
         let paintRadiusStart: Double
         let paintRotateDegree: Double

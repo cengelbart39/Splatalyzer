@@ -42,7 +42,7 @@ struct SpecialSuperHook: Codable {
         let type: String
         let collisionRadiusForField: Double
         let collisionRadiusForPlayer: Double
-        let knockBackParam: AttackKnockbackParameter
+        let knockBackParam: KnockbackParameter
         let paintDepthScale: Double
         let paintSpanFrame: Int
         let paintWidthHalf: Double
@@ -63,7 +63,7 @@ struct SpecialSuperHook: Codable {
         let crossPaintCheckLength: Double
         let crossPaintRadius: Double
         let distanceDamage: [DistanceDamage]
-        let knockBackParam: AttackKnockbackParameter
+        let knockBackParam: KnockbackParameter
         
         enum CodingKeys: String, CodingKey {
             case type = "$type"

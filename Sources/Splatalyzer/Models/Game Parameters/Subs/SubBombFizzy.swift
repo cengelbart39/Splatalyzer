@@ -68,7 +68,7 @@ struct SubBombFizzy: SubParametable {
         struct BlastParameter: Codable {
             let crossPaintRadius: Double
             let distanceDamage: [DistanceDamage]
-            let knockBackParam: AttackKnockbackParameter
+            let knockBackParam: KnockbackParameter
             let paintRadius: Double
             let splashAroundParam: SplashAroundParameter
             

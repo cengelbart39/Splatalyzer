@@ -40,7 +40,7 @@ struct SpecialUltraStamp: Codable {
         let damageAttackerPriority: Bool
         let damageOffsetY: Double
         let distanceDamage: [DistanceDamage]
-        let knockBackParam: AttackKnockbackParameter
+        let knockBackParam: KnockbackParameter
         let paintOffsetY: Double
         let paintRadius: Double
         
@@ -112,7 +112,7 @@ struct SpecialUltraStamp: Codable {
         let crossPaintCheckLength: Double
         let crosSPaintRadius: Double
         let distanceDamage: [DistanceDamage]
-        let knockBackParma: AttackKnockbackParameter
+        let knockBackParma: KnockbackParameter
         let paintRadius: Double
         
         enum CodingKeys: String, CodingKey {
@@ -169,7 +169,7 @@ struct SpecialUltraStamp: Codable {
         let type: String
         let bangDownSmallTurnLimitAngleDeg: Double
         let bangDownVelLimitY: Double
-        let holdSwingKnockBackParam: AttackKnockbackParameter
+        let holdSwingKnockBackParam: KnockbackParameter
         let specialTotalFrame: HighMidLow
         let velLimitNoPaint: Double
         

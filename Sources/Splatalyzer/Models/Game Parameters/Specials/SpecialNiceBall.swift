@@ -27,7 +27,7 @@ struct SpecialNiceBall: Codable {
         let crossPaintCheckLength: Double
         let crossPaintRadius: Double
         let damageOffsetY: Double
-        let knockBackParam: AttackKnockbackParameter
+        let knockBackParam: KnockbackParameter
         let paintOffsetY: Double
         let paintRadiusEnd: Double
         let paintRotateDegree: Double

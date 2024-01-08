@@ -80,20 +80,9 @@ struct MainWeaponData {
     init(weaponInfo: WeaponInfoMainItem, container: BlasterGameParameters) {
         let gameParams = container.gameParameters
                 
-        let damageValueDirect: Double? =
-        if  gameParams.damageParam.valueMax == gameParams.damageParam.valueMin {
-            Double(gameParams.damageParam.valueMax)
-            
-        } else {
-            nil
-        }
+        let damageValueDirect = gameParams.damageParam.valueMax == gameParams.damageParam.valueMin ? Double(gameParams.damageParam.valueMax) : nil
         
-        let damageValueMax: Int? = if damageValueDirect == nil {
-           nil
-            
-        } else {
-            gameParams.damageParam.valueMax
-        }
+        let damageValueMax: Int? = damageValueDirect == nil ? nil : gameParams.damageParam.valueMax
                 
         self.specialPoints = weaponInfo.specialPoint
         self.subWeapon = weaponInfo.subWeapon
@@ -309,17 +298,9 @@ struct MainWeaponData {
     init(weaponInfo: WeaponInfoMainItem, container: ManeuverGameParameters) {
         let gameParams = container.gameParameters
                 
-        let damageParamValueDirect: Double? = if gameParams.damageParam.valueMax == gameParams.damageParam.valueMin {
-            Double(gameParams.damageParam.valueMax)
-        } else {
-            nil
-        }
+        let damageParamValueDirect = gameParams.damageParam.valueMax == gameParams.damageParam.valueMin ? Double(gameParams.damageParam.valueMax) : nil
         
-        let damageParamMax: Int? = if damageParamValueDirect != nil {
-            nil
-        } else {
-            gameParams.damageParam.valueMax
-        }
+        let damageParamMax = damageParamValueDirect != nil ? nil : gameParams.damageParam.valueMax
         
         self.specialPoints = weaponInfo.specialPoint
         self.subWeapon = weaponInfo.subWeapon
@@ -541,17 +522,9 @@ struct MainWeaponData {
     init(weaponInfo: WeaponInfoMainItem, container: ShooterGameParameters) {
         let gameParams = container.gameParameters
         
-        let damageValueDirect: Double? = if gameParams.damageParam.valueMax == gameParams.damageParam.valueMin {
-            Double(gameParams.damageParam.valueMax)
-        } else {
-            nil
-        }
+        let damageValueDirect = gameParams.damageParam.valueMax == gameParams.damageParam.valueMin ? Double(gameParams.damageParam.valueMax) : nil
         
-        let damageValueMax: Int? = if damageValueDirect != nil {
-            nil
-        } else {
-            gameParams.damageParam.valueMax
-        }
+        let damageValueMax = damageValueDirect != nil ? nil : gameParams.damageParam.valueMax
         
         self.specialPoints = weaponInfo.specialPoint
         self.subWeapon = weaponInfo.subWeapon
@@ -623,14 +596,15 @@ struct MainWeaponData {
     init(weaponInfo: WeaponInfoMainItem, container: ShelterGameParameters) {
         let gameParams = container.gameParameters
                 
-        let inkConsumeShelterCanopy: Double? = if gameParams.weaponShelterCanopyParam.inkConsumeUmbrella != 0 { gameParams.weaponShelterCanopyParam.inkConsumeUmbrella
-        } else { nil }
+        let inkConsumeShelterCanopy =
+            gameParams.weaponShelterCanopyParam.inkConsumeUmbrella != 0
+            ? gameParams.weaponShelterCanopyParam.inkConsumeUmbrella
+            : nil
 
-        let inkConsumeShelterShotgun = if weaponInfo.rowId == .shelterNormal00 || weaponInfo.rowId == .shelterNormal01 {
-            0.0632499977946
-        } else {
-            gameParams.weaponShelterShotgunParam.inkConsume
-        }
+        let inkConsumeShelterShotgun =
+            weaponInfo.rowId == .shelterNormal00 || weaponInfo.rowId == .shelterNormal01
+            ? 0.0632499977946
+            : gameParams.weaponShelterShotgunParam.inkConsume
         
         self.specialPoints = weaponInfo.specialPoint
         self.subWeapon = weaponInfo.subWeapon

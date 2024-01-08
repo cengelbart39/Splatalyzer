@@ -29,7 +29,7 @@ struct SpecialUltraShot: Codable {
     struct BlastParameter: Codable {
         let type: String
         let distanceDamage: [DistanceDamage]
-        let knockBackParam: AttackKnockbackParameter
+        let knockBackParam: KnockbackParameter
         let paintRadius: Double
         let subSpecialSpecUpList: [SubSpecialSpecUpList]
         

@@ -26,7 +26,7 @@ struct SpecialPogo: Codable {
         let crossPaintRadius: Double
         let crossPaintTexture: String
         let distanceDamage: [DistanceDamage]
-        let knockBackParam: AttackKnockbackParameter
+        let knockBackParam: KnockbackParameter
         let paintRadius: Double
         let paintTexture: String
         let planeDamage: [DistanceDamage]

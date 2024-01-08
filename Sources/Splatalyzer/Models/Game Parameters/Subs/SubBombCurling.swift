@@ -30,7 +30,7 @@ struct SubBombCurling: SubParametable {
         let crossPaintRadius: Double
         let damageAttackerPriority: Bool
         let distanceDamage: [DistanceDamage]
-        let knockBackParam: AttackKnockbackParameter
+        let knockBackParam: KnockbackParameter
         let paintRadius: Double
         let splashAroundParam: SplashAroundParameter
         
@@ -63,7 +63,7 @@ struct SubBombCurling: SubParametable {
         let groundGravity: Double
         let groundPositionAirResist: Double
         let guideHitCollisionType: String
-        let knockBackParam: AttackKnockbackParameter
+        let knockBackParam: KnockbackParameter
         let modelRotateHitWall45Degree: Double
         let modelRotateReduceDegree: Double
         let paintBurstRadiusBias: Double

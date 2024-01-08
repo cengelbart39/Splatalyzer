@@ -27,7 +27,7 @@ struct SubBombRobot: SubParametable {
         let crossPaintCheckLength: Double
         let crossPaintRadius: Double
         let distanceDamage: [DistanceDamage]
-        let knockBackParam: AttackKnockbackParameter
+        let knockBackParam: KnockbackParameter
         let splashAroundParam: SplashAroundParameter
         
         enum CodingKeys: String, CodingKey {

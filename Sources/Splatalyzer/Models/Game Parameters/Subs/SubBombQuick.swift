@@ -29,7 +29,7 @@ struct SubBombQuick: SubParametable {
         let damageAttackerPriority: Bool
         let damageLinear: Bool
         let distanceDamage: [DistanceDamage]
-        let knockBackParam: AttackKnockbackParameter
+        let knockBackParam: KnockbackParameter
         let paintOffsetY: Double
         let paintRadius: Double
         let splashAroundParam: SplashAroundParameter

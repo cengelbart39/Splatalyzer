@@ -58,7 +58,7 @@ struct SpecialFirework: Codable {
             let crossPaintRadius: Double
             let damageOffsetY: Double
             let distanceDamage: [DistanceDamage]
-            let knockBackParam: AttackKnockbackParameter
+            let knockBackParam: KnockbackParameter
             let paintHeight: Double
             let paintOffsetY: Double
             let paintRadius: Double

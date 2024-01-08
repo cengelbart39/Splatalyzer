@@ -29,7 +29,7 @@ struct SubBombTorpedo: SubParametable {
     struct BlastParameter: Codable {
         let type: String
         let distanceDamage: [DistanceDamage]
-        let knockBackParam: AttackKnockbackParameter
+        let knockBackParam: KnockbackParameter
         let paintOffsetY: Double?
         let paintRadius: Double
         let splashAroundParam: SplashAroundParameter
@@ -49,7 +49,7 @@ struct SubBombTorpedo: SubParametable {
             let crossPaintCheckLength: Double
             let crossPaintRadius: Double
             let distanceDamage: [DistanceDamage]
-            let knockBackParam: AttackKnockbackParameter
+            let knockBackParam: KnockbackParameter
             let paintRadius: Double
             
             enum CodingKeys: String, CodingKey {

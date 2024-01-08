@@ -28,7 +28,7 @@ struct SubLineMarker: SubParametable {
         let crossPaintCheckLength: Double
         let crossPaintRadius: Double
         let damageAttackerPriority: Bool
-        let knockBackParam: AttackKnockbackParameter
+        let knockBackParam: KnockbackParameter
         let paintHeight: Double
         let paintOffsetY: Double
         let paintRadius: Double

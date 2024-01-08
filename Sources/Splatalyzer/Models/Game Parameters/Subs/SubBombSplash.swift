@@ -25,7 +25,7 @@ struct SubBombSplash: SubParametable {
     struct BlastParameter: Codable {
         let type: String
         let distanceDamage: [DistanceDamage]
-        let knockBackParam: AttackKnockbackParameter
+        let knockBackParam: KnockbackParameter
         let paintOffsetY: Double
         let splashAroundParam: SplashAroundParameter
         
