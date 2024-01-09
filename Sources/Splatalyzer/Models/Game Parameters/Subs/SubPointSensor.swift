@@ -77,4 +77,16 @@ struct SubPointSensor: SubParametable {
             case yPlusRate = "YPlusRate"
         }
     }
+    
+    func getOverwrites(_ playerInfo: PlayerParameters? = nil) -> SubOverwrites {
+        return SubOverwrites(
+            spawnSpeedZSpecUp: self.moveParam.spawnSpeedZSpecUp,
+            periodFirst: nil,
+            periodSecond: nil,
+            markingFrameSubSpec: self.moveParam.markingFrameSubSpec,
+            sensorRadius: nil,
+            explosionRadius: self.areaParam.distance,
+            maxHp: nil,
+            subSpecUpParam: nil)
+    }
 }

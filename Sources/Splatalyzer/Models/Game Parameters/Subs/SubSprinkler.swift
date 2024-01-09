@@ -91,4 +91,16 @@ struct SubSprinkler: SubParametable {
             case zRate = "ZRate"
         }
     }
+    
+    func getOverwrites(_ playerInfo: PlayerParameters? = nil) -> SubOverwrites {
+        return SubOverwrites(
+            spawnSpeedZSpecUp: self.moveParam.spawnSpeedZSpecUp,
+            periodFirst: self.moveParam.periodFirst,
+            periodSecond: self.moveParam.periodSecond,
+            markingFrameSubSpec: nil,
+            sensorRadius: nil,
+            explosionRadius: nil,
+            maxHp: nil,
+            subSpecUpParam: nil)
+    }
 }

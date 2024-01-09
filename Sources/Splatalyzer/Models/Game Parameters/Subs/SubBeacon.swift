@@ -51,4 +51,16 @@ struct SubBeacon: SubParametable {
             }
         }
     }
+    
+    func getOverwrites(_ playerInfo: PlayerParameters?) -> SubOverwrites {
+        return SubOverwrites(
+            spawnSpeedZSpecUp: self.moveParam.spawnSpeedZSpecUp,
+            periodFirst: nil,
+            periodSecond: nil,
+            markingFrameSubSpec: nil,
+            sensorRadius: nil,
+            explosionRadius: nil,
+            maxHp: nil,
+            subSpecUpParam: playerInfo?.playerBeaconSubSpecUpParam)
+    }
 }

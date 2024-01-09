@@ -103,4 +103,16 @@ struct SubTrap: SubParametable {
             }
         }
     }
+    
+    func getOverwrites(_ playerInfo: PlayerParameters? = nil) -> SubOverwrites {
+        return SubOverwrites(
+            spawnSpeedZSpecUp: self.moveParam.spawnSpeedZSpecUp,
+            periodFirst: nil,
+            periodSecond: nil,
+            markingFrameSubSpec: nil,
+            sensorRadius: self.moveParam.sensorRadius,
+            explosionRadius: self.areaParam.distance,
+            maxHp: nil,
+            subSpecUpParam: nil)
+    }
 }

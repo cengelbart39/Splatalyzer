@@ -265,25 +265,26 @@ extension PlayerParameters.InkRailPlayerParameter {
     }
 }
 
-extension PlayerParameters {
-    struct BeaconSubSpecUpParameter: Codable {
-        let type: String
-        let subSpecUpParam: SubSpecUpParameter
-        
-        enum CodingKeys: String, CodingKey {
-            case type = "$type"
-            case subSpecUpParam = "SubSpecUpParam"
-        }
+// Not a extension since used in SubWeaponData
+struct BeaconSubSpecUpParameter: Codable {
+    let type: String
+    let subSpecUpParam: SubSpecUpParameter
+    
+    enum CodingKeys: String, CodingKey {
+        case type = "$type"
+        case subSpecUpParam = "SubSpecUpParam"
     }
 }
 
-extension PlayerParameters.BeaconSubSpecUpParameter {
+extension BeaconSubSpecUpParameter {
     struct SubSpecUpParameter: Codable {
         let high: Double
+        let low: Double?
         let mid: Double
         
         enum CodingKeys: String, CodingKey {
             case high = "High"
+            case low = "Low"
             case mid = "Mid"
         }
     }

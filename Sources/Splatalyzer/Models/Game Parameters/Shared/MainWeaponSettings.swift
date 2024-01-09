@@ -35,8 +35,8 @@ struct MainWeaponSettings: Codable {
         case mid = "Mid"
     }
     
-    func getOverwrites() -> Overwrites {
-        return Overwrites(settings: self)
+    func getOverwrites() -> MainOverwrites {
+        return MainOverwrites(settings: self)
     }
 }
 
@@ -46,7 +46,7 @@ enum WeaponSpeedType: String, Codable {
     case fast = "Fast"
 }
 
-struct Overwrites {
+struct MainOverwrites {
     let consumeRtMain: HighMidLow?
     let moveVelRtShot: HighMidLow?
     

@@ -14,7 +14,7 @@ struct MainWeaponData {
     let specialPoints: Int
     let subWeapon: SubWeapon
     let specialWeapon: SpecialWeapon
-    let overwrites: Overwrites
+    let overwrites: MainOverwrites
     let tripleShotSpanFrame: Int?
     let weaponSpeedType: WeaponSpeedType?
     let moveSpeed: Double?
@@ -157,7 +157,7 @@ struct MainWeaponData {
         self.specialPoints = weaponInfo.specialPoint
         self.subWeapon = weaponInfo.subWeapon
         self.specialWeapon = weaponInfo.specialWeapon
-        self.overwrites = Overwrites()
+        self.overwrites = MainOverwrites()
         self.tripleShotSpanFrame = nil
         self.weaponSpeedType = gameParams.mainWepaonSetting.weaponSpeedType
         self.moveSpeed = nil
@@ -305,7 +305,7 @@ struct MainWeaponData {
         self.specialPoints = weaponInfo.specialPoint
         self.subWeapon = weaponInfo.subWeapon
         self.specialWeapon = weaponInfo.specialWeapon
-        self.overwrites = gameParams.mainWeaponSetting?.getOverwrites() ?? Overwrites()
+        self.overwrites = gameParams.mainWeaponSetting?.getOverwrites() ?? MainOverwrites()
         self.tripleShotSpanFrame = nil
         self.weaponSpeedType = gameParams.mainWeaponSetting?.weaponSpeedType
         self.moveSpeed = gameParams.weaponParam.moveSpeed

@@ -127,4 +127,16 @@ struct SubBombSplash: SubParametable {
             case yPlusRate = "YPlusRate"
         }
     }
+    
+    func getOverwrites(_ playerInfo: PlayerParameters? = nil) -> SubOverwrites {
+        return SubOverwrites(
+            spawnSpeedZSpecUp: self.moveParam.spawnSpeedZSpecUp,
+            periodFirst: nil,
+            periodSecond: nil,
+            markingFrameSubSpec: nil,
+            sensorRadius: nil,
+            explosionRadius: nil,
+            maxHp: nil,
+            subSpecUpParam: nil)
+    }
 }
