@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SpecialBlower: Codable {
+struct SpecialBlower: SpecialParametable {
     let exhaleBlastParamMaxCharge: ExhaleBlastParameterCharge
     let exhaleBlastParamMinCharge: ExhaleBlastParameterCharge
     let exhaleCollisionParam: ExhaleCollisionParameter
@@ -212,5 +212,29 @@ struct SpecialBlower: Codable {
             case yPlusRate = "YPlusRate"
             case zRate = "ZRate"
         }
+    }
+    
+    func getOverwrites() -> SpecialOverwrites {
+        return SpecialOverwrites(
+            chargeRateAutoPerFrame: nil,
+            crossPaintCheckLength: nil,
+            crossPaintRadius: nil,
+            distanceDamageDistanceRate: nil,
+            inkConsumeHook: nil,
+            inkConsumePerSec: nil,
+            maxFieldHp: nil,
+            maxFrame: nil,
+            maxHp: nil,
+            maxRadius: nil,
+            moveSpeed: nil,
+            paintRadius: nil,
+            powerUpFrame: nil,
+            radiusMax: self.inhaleParam.radiusMax,
+            radiusMin: self.inhaleParam.radiusMin,
+            spawnSpeedZSpecUp: nil,
+            specialDurationFrame: nil,
+            splashAroundVelocityMax: nil,
+            splashAroundVelocityMin: nil,
+            targetInCircleRadius: nil)
     }
 }

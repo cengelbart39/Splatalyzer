@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SpecialMicroLaser: Codable {
+struct SpecialMicroLaser: SpecialParametable {
     let bulletBitParam: BulletBitParameter
     let weaponParam: WeaponParameter
     
@@ -106,5 +106,29 @@ struct SpecialMicroLaser: Codable {
                 case afterShotNoSquidFrm = "AfterShot_NoSquidFrm"
             }
         }
+    }
+    
+    func getOverwrites() -> SpecialOverwrites {
+        return SpecialOverwrites(
+            chargeRateAutoPerFrame: nil,
+            crossPaintCheckLength: nil,
+            crossPaintRadius: nil,
+            distanceDamageDistanceRate: nil,
+            inkConsumeHook: nil,
+            inkConsumePerSec: nil,
+            maxFieldHp: nil,
+            maxFrame: nil,
+            maxHp: nil,
+            maxRadius: nil,
+            moveSpeed: nil,
+            paintRadius: nil,
+            powerUpFrame: nil,
+            radiusMax: nil,
+            radiusMin: nil,
+            spawnSpeedZSpecUp: nil,
+            specialDurationFrame: self.bulletBitParam.laserParam.laserFrame,
+            splashAroundVelocityMax: nil,
+            splashAroundVelocityMin: nil,
+            targetInCircleRadius: nil)
     }
 }

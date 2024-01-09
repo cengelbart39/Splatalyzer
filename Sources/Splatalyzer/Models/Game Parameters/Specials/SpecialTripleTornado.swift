@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SpecialTripleTornado: Codable {
+struct SpecialTripleTornado: SpecialParametable {
     let blastParam: BlastParameter
     let missileParam: MissileParameter
     let motherParam: MotherParameter
@@ -112,5 +112,29 @@ struct SpecialTripleTornado: Codable {
             case yMax = "YMax"
             case yPlusRate = "YPlusRate"
         }
+    }
+    
+    func getOverwrites() -> SpecialOverwrites {
+        return SpecialOverwrites(
+            chargeRateAutoPerFrame: nil,
+            crossPaintCheckLength: nil,
+            crossPaintRadius: nil,
+            distanceDamageDistanceRate: nil,
+            inkConsumeHook: nil,
+            inkConsumePerSec: nil,
+            maxFieldHp: nil,
+            maxFrame: nil,
+            maxHp: nil,
+            maxRadius: nil,
+            moveSpeed: nil,
+            paintRadius: nil,
+            powerUpFrame: nil,
+            radiusMax: nil,
+            radiusMin: nil,
+            spawnSpeedZSpecUp: self.moveParam.spawnSpeedZSpecUp,
+            specialDurationFrame: nil,
+            splashAroundVelocityMax: nil,
+            splashAroundVelocityMin: nil,
+            targetInCircleRadius: nil)
     }
 }

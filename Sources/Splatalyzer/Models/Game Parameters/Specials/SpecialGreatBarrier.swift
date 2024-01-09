@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SpecialGreatBarrier: Codable {
+struct SpecialGreatBarrier: SpecialParametable {
     let bulletMoveParam: BulletMoveParameter
     let weaponParam: WeaponParameter
     
@@ -86,5 +86,29 @@ struct SpecialGreatBarrier: Codable {
                 case impactValue = "ImpactValue"
             }
         }
+    }
+    
+    func getOverwrites() -> SpecialOverwrites {
+        return SpecialOverwrites(
+            chargeRateAutoPerFrame: nil,
+            crossPaintCheckLength: nil,
+            crossPaintRadius: nil,
+            distanceDamageDistanceRate: nil,
+            inkConsumeHook: nil,
+            inkConsumePerSec: nil,
+            maxFieldHp: self.bulletMoveParam.barrierParam.maxFieldHP,
+            maxFrame: nil,
+            maxHp: self.bulletMoveParam.barrierParam.maxHP,
+            maxRadius: nil,
+            moveSpeed: nil,
+            paintRadius: nil,
+            powerUpFrame: nil,
+            radiusMax: nil,
+            radiusMin: nil,
+            spawnSpeedZSpecUp: nil,
+            specialDurationFrame: nil,
+            splashAroundVelocityMax: nil,
+            splashAroundVelocityMin: nil,
+            targetInCircleRadius: nil)
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SpecialNiceBall: Codable {
+struct SpecialNiceBall: SpecialParametable {
     let blastParam: BlastParameter
     let footSplashParam: FootSplashParameter
     let moveParam: MoveParameter
@@ -106,5 +106,29 @@ struct SpecialNiceBall: Codable {
             case yPlusRate = "YPlusRate"
             case zRate = "ZRate"
         }
+    }
+    
+    func getOverwrites() -> SpecialOverwrites {
+        return SpecialOverwrites(
+            chargeRateAutoPerFrame: self.weaponParam.chargeRateAutoPerFrame,
+            crossPaintCheckLength: nil,
+            crossPaintRadius: nil,
+            distanceDamageDistanceRate: nil,
+            inkConsumeHook: nil,
+            inkConsumePerSec: nil,
+            maxFieldHp: nil,
+            maxFrame: nil,
+            maxHp: nil,
+            maxRadius: nil,
+            moveSpeed: nil,
+            paintRadius: nil,
+            powerUpFrame: nil,
+            radiusMax: nil,
+            radiusMin: nil,
+            spawnSpeedZSpecUp: nil,
+            specialDurationFrame: nil,
+            splashAroundVelocityMax: nil,
+            splashAroundVelocityMin: nil,
+            targetInCircleRadius: nil)
     }
 }

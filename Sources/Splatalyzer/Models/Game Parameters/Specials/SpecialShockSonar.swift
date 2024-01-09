@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SpecialShockSonar: Codable {
+struct SpecialShockSonar: SpecialParametable {
     let bulletInformImpactControlForGeyserParam: BulletInformImpactControlForGeyserParameter
     let bulletParam: BulletParameter
     
@@ -127,5 +127,29 @@ struct SpecialShockSonar: Codable {
         }
         
         struct EmptyStruct: Codable { }
+    }
+    
+    func getOverwrites() -> SpecialOverwrites {
+        return SpecialOverwrites(
+            chargeRateAutoPerFrame: nil,
+            crossPaintCheckLength: nil,
+            crossPaintRadius: nil,
+            distanceDamageDistanceRate: nil,
+            inkConsumeHook: nil,
+            inkConsumePerSec: nil,
+            maxFieldHp: nil,
+            maxFrame: self.bulletParam.waveParam.maxFrame,
+            maxHp: nil,
+            maxRadius: self.bulletParam.waveParam.maxRadius,
+            moveSpeed: nil,
+            paintRadius: nil,
+            powerUpFrame: nil,
+            radiusMax: nil,
+            radiusMin: nil,
+            spawnSpeedZSpecUp: nil,
+            specialDurationFrame: nil,
+            splashAroundVelocityMax: nil,
+            splashAroundVelocityMin: nil,
+            targetInCircleRadius: nil)
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SpecialCastle: Codable {
+struct SpecialCastle: SpecialParametable {
     let bodyParam: BodyParameter
     let weaponParam: WeaponParameter
     
@@ -122,5 +122,29 @@ struct SpecialCastle: Codable {
             case startDelayFrameNetSend = "StartDelayFrame_NetSend"
             case stickDownRtOnVLift = "StickDownRt_OnVLift"
         }
+    }
+    
+    func getOverwrites() -> SpecialOverwrites {
+        return SpecialOverwrites(
+            chargeRateAutoPerFrame: nil,
+            crossPaintCheckLength: nil,
+            crossPaintRadius: nil,
+            distanceDamageDistanceRate: nil,
+            inkConsumeHook: nil,
+            inkConsumePerSec: nil,
+            maxFieldHp: nil,
+            maxFrame: nil,
+            maxHp: nil,
+            maxRadius: nil,
+            moveSpeed: nil,
+            paintRadius: nil,
+            powerUpFrame: nil,
+            radiusMax: nil,
+            radiusMin: nil,
+            spawnSpeedZSpecUp: nil,
+            specialDurationFrame: self.weaponParam.specialTotalFrame,
+            splashAroundVelocityMax: nil,
+            splashAroundVelocityMin: nil,
+            targetInCircleRadius: nil)
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SpecialSkewer: Codable {
+struct SpecialSkewer: SpecialParametable {
     let bulletBlastParam: BulletBlastParameter
     let bulletParam: BulletParameter
     let weaponParam: WeaponParameter
@@ -98,5 +98,39 @@ struct SpecialSkewer: Codable {
             case rutPaintRadius = "RutPaintRadius"
             case unrelaxFrame = "UnrelaxFrame"
         }
+    }
+    
+    func getOverwrites() -> SpecialOverwrites {
+        let paintRadius =  self.bulletBlastParam.subSpecialSpecUpList[safe: 1]?.value
+        let splashAroundPaintRadius = self.bulletBlastParam.subSpecialSpecUpList[safe: 4]?.value
+        
+        let overwritePaintRadius = HighMidLow(
+            high: (paintRadius?.high ?? 0) + (splashAroundPaintRadius?.high ?? 0),
+            low: (paintRadius?.low ?? 0) + (splashAroundPaintRadius?.low ?? 0),
+            mid: (paintRadius?.mid ?? 0) + (splashAroundPaintRadius?.mid ?? 0))
+        
+        let paintRadiusExists = paintRadius?.high != nil && paintRadius?.low != nil && paintRadius?.mid != nil && splashAroundPaintRadius?.high != nil && splashAroundPaintRadius?.low != nil && splashAroundPaintRadius?.mid != nil
+        
+        return SpecialOverwrites(
+            chargeRateAutoPerFrame: nil,
+            crossPaintCheckLength: nil,
+            crossPaintRadius: nil,
+            distanceDamageDistanceRate: self.bulletBlastParam.subSpecialSpecUpList[safe: 0]?.value,
+            inkConsumeHook: nil,
+            inkConsumePerSec: nil,
+            maxFieldHp: nil,
+            maxFrame: nil,
+            maxHp: nil,
+            maxRadius: nil,
+            moveSpeed: nil,
+            paintRadius: paintRadiusExists ? overwritePaintRadius : nil,
+            powerUpFrame: nil,
+            radiusMax: nil,
+            radiusMin: nil,
+            spawnSpeedZSpecUp: nil,
+            specialDurationFrame: nil,
+            splashAroundVelocityMax: self.bulletBlastParam.subSpecialSpecUpList[safe: 3]?.value,
+            splashAroundVelocityMin: self.bulletBlastParam.subSpecialSpecUpList[safe: 2]?.value,
+            targetInCircleRadius: nil)
     }
 }

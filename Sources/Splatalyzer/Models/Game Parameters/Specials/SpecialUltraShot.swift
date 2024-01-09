@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SpecialUltraShot: Codable {
+struct SpecialUltraShot: SpecialParametable {
     let blastParam: BlastParameter
     let collisionParam: CollisionParameter
     let damageParam: DamageParameter
@@ -170,5 +170,29 @@ struct SpecialUltraShot: Codable {
                 case stickDownRt = "StickDownRt"
             }
         }
+    }
+    
+    func getOverwrites() -> SpecialOverwrites {
+        return SpecialOverwrites(
+            chargeRateAutoPerFrame: nil,
+            crossPaintCheckLength: nil,
+            crossPaintRadius: nil,
+            distanceDamageDistanceRate: self.blastParam.subSpecialSpecUpList[safe: 1]?.value,
+            inkConsumeHook: nil,
+            inkConsumePerSec: nil,
+            maxFieldHp: nil,
+            maxFrame: nil,
+            maxHp: nil,
+            maxRadius: nil,
+            moveSpeed: nil,
+            paintRadius: self.blastParam.subSpecialSpecUpList[safe: 0]?.value,
+            powerUpFrame: nil,
+            radiusMax: nil,
+            radiusMin: nil,
+            spawnSpeedZSpecUp: nil,
+            specialDurationFrame: self.weaponParam.specialDurationFrame,
+            splashAroundVelocityMax: nil,
+            splashAroundVelocityMin: nil,
+            targetInCircleRadius: nil)
     }
 }

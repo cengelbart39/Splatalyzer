@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SpecialJetpack: Codable {
+struct SpecialJetpack: SpecialParametable {
     let blastParam: BlastParameter
     let jetParam: JetParameter
     let launcherCollisionParam: LauncherCollisionParameter
@@ -114,5 +114,38 @@ struct SpecialJetpack: Codable {
             case yPlusRate = "YPlusRate"
             case zRate = "ZRate"
         }
+    }
+    
+    func getOverwrites() -> SpecialOverwrites {
+        let blastPaintRadius = self.blastParam.paintRadius
+        let specUpPaintRadius = self.blastParam.subSpecialSpecUpList[safe: 4]?.value
+        let specUpPaintRadiusExists = specUpPaintRadius?.high != nil  && specUpPaintRadius?.low != nil && specUpPaintRadius?.mid != nil
+        
+        let paintRadius = HighMidLow(
+            high: (specUpPaintRadius?.high ?? 0) + blastPaintRadius,
+            low: (specUpPaintRadius?.low ?? 0) + blastPaintRadius,
+            mid: (specUpPaintRadius?.mid ?? 0) + blastPaintRadius)
+        
+        return SpecialOverwrites(
+            chargeRateAutoPerFrame: nil,
+            crossPaintCheckLength: nil,
+            crossPaintRadius: nil,
+            distanceDamageDistanceRate: self.blastParam.subSpecialSpecUpList[safe: 1]?.value,
+            inkConsumeHook: nil,
+            inkConsumePerSec: nil,
+            maxFieldHp: nil,
+            maxFrame: nil,
+            maxHp: nil,
+            maxRadius: nil,
+            moveSpeed: nil,
+            paintRadius: specUpPaintRadiusExists ? paintRadius : nil,
+            powerUpFrame: nil,
+            radiusMax: nil,
+            radiusMin: nil,
+            spawnSpeedZSpecUp: nil,
+            specialDurationFrame: nil,
+            splashAroundVelocityMax: self.blastParam.subSpecialSpecUpList[safe: 3]?.value,
+            splashAroundVelocityMin: self.blastParam.subSpecialSpecUpList[safe: 2]?.value,
+            targetInCircleRadius: nil)
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SpecialChimney: Codable {
+struct SpecialChimney: SpecialParametable {
     let moveParam: MoveParameter
     let wallParam: WallParameter
     let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
@@ -106,5 +106,29 @@ struct SpecialChimney: Codable {
             case yMax = "YMax"
             case yPlusRate = "YPlusRate"
         }
+    }
+    
+    func getOverwrites() -> SpecialOverwrites {
+        return SpecialOverwrites(
+            chargeRateAutoPerFrame: nil,
+            crossPaintCheckLength: nil,
+            crossPaintRadius: nil,
+            distanceDamageDistanceRate: nil,
+            inkConsumeHook: nil,
+            inkConsumePerSec: nil,
+            maxFieldHp: nil,
+            maxFrame: nil,
+            maxHp: nil,
+            maxRadius: nil,
+            moveSpeed: self.wallParam.moveSpeed,
+            paintRadius: nil,
+            powerUpFrame: nil,
+            radiusMax: nil,
+            radiusMin: nil,
+            spawnSpeedZSpecUp: self.moveParam.spawnSpeedZSpecUp,
+            specialDurationFrame: nil,
+            splashAroundVelocityMax: nil,
+            splashAroundVelocityMin: nil,
+            targetInCircleRadius: nil)
     }
 }

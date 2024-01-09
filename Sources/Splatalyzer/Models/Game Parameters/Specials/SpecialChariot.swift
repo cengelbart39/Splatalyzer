@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SpecialChariot: Codable {
+struct SpecialChariot: SpecialParametable {
     let additionMovePlayerParam: AdditionMovePlayerParameter
     let bodyParam: BodyParameter
     let cannonParam: CannonParameter
@@ -373,5 +373,29 @@ struct SpecialChariot: Codable {
             case type = "$type"
             case relabilityMinTime = "RelabilityMinTime"
         }
+    }
+    
+    func getOverwrites() -> SpecialOverwrites {
+        return SpecialOverwrites(
+            chargeRateAutoPerFrame: nil,
+            crossPaintCheckLength: nil,
+            crossPaintRadius: nil,
+            distanceDamageDistanceRate: nil,
+            inkConsumeHook: nil,
+            inkConsumePerSec: nil,
+            maxFieldHp: nil,
+            maxFrame: nil,
+            maxHp: nil,
+            maxRadius: nil,
+            moveSpeed: nil,
+            paintRadius: nil,
+            powerUpFrame: nil,
+            radiusMax: nil,
+            radiusMin: nil,
+            spawnSpeedZSpecUp: nil,
+            specialDurationFrame: self.weaponParam.specialTotalFrame,
+            splashAroundVelocityMax: nil,
+            splashAroundVelocityMin: nil,
+            targetInCircleRadius: nil)
     }
 }

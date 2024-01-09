@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SpecialPogo: Codable {
+struct SpecialPogo: SpecialParametable {
     let blastParamDokanWarp: BlastParameter
     let blastParamNormal: BlastParameter
     let bulletParam: BulletParameter
@@ -82,5 +82,29 @@ struct SpecialPogo: Codable {
             case riseNoDamageStartFrame = "Rise_NoDamageStartFrame"
             case specialTotalFrame = "SpecialTotalFrame"
         }
+    }
+    
+    func getOverwrites() -> SpecialOverwrites {
+        return SpecialOverwrites(
+            chargeRateAutoPerFrame: nil,
+            crossPaintCheckLength: nil,
+            crossPaintRadius: nil,
+            distanceDamageDistanceRate: self.blastParamDokanWarp.subSpecialSpecUpList[safe: 0]?.value,
+            inkConsumeHook: nil,
+            inkConsumePerSec: nil,
+            maxFieldHp: nil,
+            maxFrame: nil,
+            maxHp: nil,
+            maxRadius: nil,
+            moveSpeed: nil,
+            paintRadius: self.blastParamDokanWarp.subSpecialSpecUpList[safe: 1]?.value,
+            powerUpFrame: nil,
+            radiusMax: nil,
+            radiusMin: nil,
+            spawnSpeedZSpecUp: nil,
+            specialDurationFrame: nil,
+            splashAroundVelocityMax: nil,
+            splashAroundVelocityMin: nil,
+            targetInCircleRadius: nil)
     }
 }

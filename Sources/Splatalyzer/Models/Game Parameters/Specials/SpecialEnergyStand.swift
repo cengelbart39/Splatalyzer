@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SpecialEnergyStand: Codable {
+struct SpecialEnergyStand: SpecialParametable {
     let fridgeParam: FridgeParameter
     let moveParam: MoveParameter
     let weaponParam: WeaponParameter
@@ -118,5 +118,29 @@ struct SpecialEnergyStand: Codable {
             case yPlusRate = "YPlusRate"
             case zRate = "ZRate"
         }
+    }
+    
+    func getOverwrites() -> SpecialOverwrites {
+        return SpecialOverwrites(
+            chargeRateAutoPerFrame: nil,
+            crossPaintCheckLength: nil,
+            crossPaintRadius: nil,
+            distanceDamageDistanceRate: nil,
+            inkConsumeHook: nil,
+            inkConsumePerSec: nil,
+            maxFieldHp: nil,
+            maxFrame: nil,
+            maxHp: nil,
+            maxRadius: nil,
+            moveSpeed: nil,
+            paintRadius: nil,
+            powerUpFrame: self.fridgeParam.powerUpFrame,
+            radiusMax: nil,
+            radiusMin: nil,
+            spawnSpeedZSpecUp: nil,
+            specialDurationFrame: nil,
+            splashAroundVelocityMax: nil,
+            splashAroundVelocityMin: nil,
+            targetInCircleRadius: nil)
     }
 }

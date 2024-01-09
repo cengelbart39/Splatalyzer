@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SpecialFirework: Codable {
+struct SpecialFirework: SpecialParametable {
     let iceParam: IceParameter
     let pipeParam: PipeParameter
     let weaponParam: WeaponParameter
@@ -116,5 +116,29 @@ struct SpecialFirework: Codable {
             case useDistanceMinCameraDownRate = "UseDistanceMinCameraDownRate"
             case useDistanceMinCameraUpRate = "UseDistanceMinCameraUpRate"
         }
+    }
+    
+    func getOverwrites() -> SpecialOverwrites {
+        return SpecialOverwrites(
+            chargeRateAutoPerFrame: nil,
+            crossPaintCheckLength: self.iceParam.blastParam.subSpecialSpecUpList[safe: 1]?.value,
+            crossPaintRadius: self.iceParam.blastParam.subSpecialSpecUpList[safe: 2]?.value,
+            distanceDamageDistanceRate: self.iceParam.blastParam.subSpecialSpecUpList[safe: 3]?.value,
+            inkConsumeHook: nil,
+            inkConsumePerSec: nil,
+            maxFieldHp: nil,
+            maxFrame: nil,
+            maxHp: nil,
+            maxRadius: nil,
+            moveSpeed: nil,
+            paintRadius: nil,
+            powerUpFrame: nil,
+            radiusMax: nil,
+            radiusMin: nil,
+            spawnSpeedZSpecUp: nil,
+            specialDurationFrame: nil,
+            splashAroundVelocityMax: nil,
+            splashAroundVelocityMin: nil,
+            targetInCircleRadius: nil)
     }
 }

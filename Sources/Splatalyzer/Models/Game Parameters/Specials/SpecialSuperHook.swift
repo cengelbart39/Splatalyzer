@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SpecialSuperHook: Codable {
+struct SpecialSuperHook: SpecialParametable {
     let bulletBombMoveParam: BulletBombMoveParameter
     let bulletParam: BulletParameter
     let hookBlastParam: HookBlastParameter
@@ -118,5 +118,29 @@ struct SpecialSuperHook: Codable {
             case specialTotalFrame = "SpecialTotalFrame"
             case waitFrameShot2Attack = "WaitFrameShot2Attack"
         }
+    }
+    
+    func getOverwrites() -> SpecialOverwrites {
+        return SpecialOverwrites(
+            chargeRateAutoPerFrame: nil,
+            crossPaintCheckLength: nil,
+            crossPaintRadius: nil,
+            distanceDamageDistanceRate: nil,
+            inkConsumeHook: self.weaponParam.inkConsumeHook,
+            inkConsumePerSec: self.weaponParam.inkConsumePerSec,
+            maxFieldHp: nil,
+            maxFrame: nil,
+            maxHp: nil,
+            maxRadius: nil,
+            moveSpeed: nil,
+            paintRadius: nil,
+            powerUpFrame: nil,
+            radiusMax: nil,
+            radiusMin: nil,
+            spawnSpeedZSpecUp: nil,
+            specialDurationFrame: nil,
+            splashAroundVelocityMax: nil,
+            splashAroundVelocityMin: nil,
+            targetInCircleRadius: nil)
     }
 }

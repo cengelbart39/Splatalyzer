@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SpecialUltraStamp: Codable {
+struct SpecialUltraStamp: SpecialParametable {
     let swingBigBlastParam: SwingBlastParam
     let swingBulletWallParam: SwingBulletWallParameter
     let swingParam: SwingParameter
@@ -181,5 +181,29 @@ struct SpecialUltraStamp: Codable {
             case specialTotalFrame = "SpecialTotalFrame"
             case velLimitNoPaint = "VelLimit_NoPaint"
         }
+    }
+    
+    func getOverwrites() -> SpecialOverwrites {
+        return SpecialOverwrites(
+            chargeRateAutoPerFrame: nil,
+            crossPaintCheckLength: nil,
+            crossPaintRadius: nil,
+            distanceDamageDistanceRate: nil,
+            inkConsumeHook: nil,
+            inkConsumePerSec: nil,
+            maxFieldHp: nil,
+            maxFrame: nil,
+            maxHp: nil,
+            maxRadius: nil,
+            moveSpeed: nil,
+            paintRadius: nil,
+            powerUpFrame: nil,
+            radiusMax: nil,
+            radiusMin: nil,
+            spawnSpeedZSpecUp: nil,
+            specialDurationFrame: self.weaponParam.specialTotalFrame,
+            splashAroundVelocityMax: nil,
+            splashAroundVelocityMin: nil,
+            targetInCircleRadius: nil)
     }
 }
