@@ -8,36 +8,51 @@
 import Foundation
 
 enum SubRowId: String, Codable {
-    case beacon = "Beacon"
-    case bombCurling = "Bomb_Curling"
-    case bombCurlingHero = "Bomb_Curling_Hero"
-    case bombCurlingMission = "Bomb_Curling_Mission"
-    case bombCurlingRival = "Bomb_Curling_Rival"
-    case bombFizzy = "Bomb_Fizzy"
-    case bombQuick = "Bomb_Quick"
-    case bombQuickHero = "Bomb_Quick_Hero"
-    case bombQuickMission = "Bomb_Quick_Mission"
-    case bombQuickRival = "Bomb_Quick_Rival"
-    case bombRobot = "Bomb_Robot"
-    case bombRobotMission = "Bomb_Robot_Mission"
-    case bombRobotRival = "Bomb_Robot_Rival"
-    case bombSplash = "Bomb_Splash"
-    case bombSplashBigCoop = "Bomb_Splash_Big_Coop"
-    case bombSplashCoop = "Bomb_Splash_Coop"
-    case bombSplashHero = "Bomb_Splash_Hero"
-    case bombSplashMission = "Bomb_Splash_Mission"
-    case bombSplashRival = "Bomb_Splash_Rival"
-    case bombSuction = "Bomb_Suction"
-    case bombSuctionMission = "Bomb_Suction_Mission"
-    case bombTorpedo = "Bomb_Torpedo"
-    case lineMarker = "LineMarker"
-    case lineMarkerMission = "LineMarker_Mission"
+    case squidBeakon = "Beacon"
+    
+    case curlingBomb = "Bomb_Curling"
+    case curlingBombHero = "Bomb_Curling_Hero"
+    case curlingBombMission = "Bomb_Curling_Mission"
+    case curlingBombRival = "Bomb_Curling_Rival"
+    
+    case fizzyBomb = "Bomb_Fizzy"
+    
+    case burstBomb = "Bomb_Quick"
+    case burstBombHero = "Bomb_Quick_Hero"
+    case burstBombMission = "Bomb_Quick_Mission"
+    case burstBombRival = "Bomb_Quick_Rival"
+    
+    case autobomb = "Bomb_Robot"
+    case autobombMission = "Bomb_Robot_Mission"
+    case autobombRival = "Bomb_Robot_Rival"
+    
+    case splatBomb = "Bomb_Splash"
+    case splatBombBigCoop = "Bomb_Splash_Big_Coop"
+    case splatBombCoop = "Bomb_Splash_Coop"
+    case splatBombHero = "Bomb_Splash_Hero"
+    case splatBombMission = "Bomb_Splash_Mission"
+    case splatBombRival = "Bomb_Splash_Rival"
+    
+    case suctionBomb = "Bomb_Suction"
+    case suctionBombMission = "Bomb_Suction_Mission"
+    
+    case torpedo = "Bomb_Torpedo"
+    
+    case angleShooter = "LineMarker"
+    case angleShooterMission = "LineMarker_Mission"
+    
     case none = ""
+    
     case pointSensor = "PointSensor"
-    case poisonMist = "PoisonMist"
+    
+    case toxicMist = "PoisonMist"
+    
     case salmonBuddy = "SalmonBuddy"
-    case shield = "Shield"
+    
+    case splashWall = "Shield"
+    
     case sprinkler = "Sprinkler"
-    case trap = "Trap"
-    case trapMission = "Trap_Mission"
+    
+    case inkMine = "Trap"
+    case inkMineMission = "Trap_Mission"
 }

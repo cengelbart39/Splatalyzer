@@ -12,18 +12,18 @@ final class StringerDecodingTests: XCTestCase {
 
     let service = JSONServiceForTests()
     
-    func test_StrignerBear_decode_noThrows() {
+    func test_GrizzcoStringer_decode_noThrows() {
         let fileName = "WeaponStringerBear_Coop.game__GameParameterTable"
         XCTAssertNoThrow(try service.decode(StringerGameParameters.self, from: fileName))
     }
     
-    func test_StrignerNormal_decode_noThrows() {
-        let fileName = "WeaponStringerNormal.game__GameParameterTable"
+    func test_Reeflux450_decode_noThrows() {
+        let fileName = "WeaponStringerShort.game__GameParameterTable"
         XCTAssertNoThrow(try service.decode(StringerGameParameters.self, from: fileName))
     }
     
-    func test_StrignerShort_decode_noThrows() {
-        let fileName = "WeaponStringerShort.game__GameParameterTable"
+    func test_TriStringer_decode_noThrows() {
+        let fileName = "WeaponStringerNormal.game__GameParameterTable"
         XCTAssertNoThrow(try service.decode(StringerGameParameters.self, from: fileName))
     }
 }

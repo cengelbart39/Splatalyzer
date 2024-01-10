@@ -23,8 +23,8 @@ struct SubWeaponData {
     /// - Parameters:
     ///   - container: `Beacon` game parameters
     ///   - playerInfo: Player game parameters
-    init(container: SubBeaconGameParameters, playerInfo: PlayerParameters) {
-        let gameParams = container.gameParameters
+    init(container: SquidBeakonGameParameters, playerInfo: PlayerParameters) {
+        let gameParams = container.parameters
         
         self.overwrites = gameParams.getOverwrites(playerInfo)        
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
@@ -39,8 +39,8 @@ struct SubWeaponData {
     
     /// Create an instance for the `BombCurling` sub weapon
     /// - Parameter container: `BombCurling` game parameters
-    init(container: SubBombCurlingGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: CurlingBombGameParameters) {
+        let gameParams = container.parameters
         
         self.overwrites = gameParams.getOverwrites()
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
@@ -58,8 +58,8 @@ struct SubWeaponData {
     
     /// Create an instance for the `BombFizzy` sub weapon
     /// - Parameter container: `BombFizzy` game parameters
-    init(container: SubBombFizzyGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: FizzyBombGameParameters) {
+        let gameParams = container.parameters
         
         self.overwrites = gameParams.getOverwrites()
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
@@ -74,8 +74,8 @@ struct SubWeaponData {
     
     /// Create an instance for the `BombQuick` sub weapon
     /// - Parameter container: `BombQuick` game parameters
-    init(container: SubBombQuickGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: BurstBombGameParameters) {
+        let gameParams = container.parameters
         
         self.overwrites = gameParams.getOverwrites()
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
@@ -90,8 +90,8 @@ struct SubWeaponData {
     
     /// Create an instance for the `BombRobot` sub weapon
     /// - Parameter container: `BombRobot` game parameters
-    init(container: SubBombRobotGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: AutobombGameParameters) {
+        let gameParams = container.parameters
         
         self.overwrites = gameParams.getOverwrites()
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
@@ -106,8 +106,8 @@ struct SubWeaponData {
     
     /// Create an instance for the `BombSplash` sub weapon
     /// - Parameter container: `BombSplash` game parameters
-    init(container: SubBombSplashGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: SplatBombGameParameters) {
+        let gameParams = container.parameters
         
         self.overwrites = gameParams.getOverwrites()
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
@@ -122,8 +122,8 @@ struct SubWeaponData {
     
     /// Create an instance for the `BombSuction` sub weapon
     /// - Parameter container: `BombSuction` game parameters
-    init(container: SubBombSuctionGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: SuctionBombGameParameters) {
+        let gameParams = container.parameters
         
         self.overwrites = gameParams.getOverwrites()
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
@@ -138,8 +138,8 @@ struct SubWeaponData {
     
     /// Create an instance for the `BombTorpedo` sub weapon
     /// - Parameter container: `BombTorpedo` game parameters
-    init(container: SubBombTorpedoGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: TorpedoGameParameters) {
+        let gameParams = container.parameters
         
         self.overwrites = gameParams.getOverwrites()
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
@@ -154,8 +154,8 @@ struct SubWeaponData {
     
     /// Create an instance for the `LineMarker` sub weapon
     /// - Parameter container: `LineMarker` game parameters
-    init(container: SubLineMarkerGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: AngleShooterGameParameters) {
+        let gameParams = container.parameters
         
         self.overwrites = gameParams.getOverwrites()
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
@@ -170,8 +170,8 @@ struct SubWeaponData {
     
     /// Create an instance for the `PointSensor` sub weapon
     /// - Parameter container: `PointSensor` game parameters
-    init(container: SubPointSensorGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: PointSensorGameParameters) {
+        let gameParams = container.parameters
         
         self.overwrites = gameParams.getOverwrites()
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
@@ -186,8 +186,8 @@ struct SubWeaponData {
     
     /// Create an instance for the `PoisonMist` sub weapon
     /// - Parameter container: `PoisonMist` game parameters
-    init(container: SubPoisonMistGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: ToxicMistGameParameters) {
+        let gameParams = container.parameters
         
         self.overwrites = gameParams.getOverwrites()
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
@@ -202,8 +202,8 @@ struct SubWeaponData {
     
     /// Create an instance for the `Shield` sub weapon
     /// - Parameter container: `Shield` game parameters
-    init(container: SubShieldGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: SplashWallGameParameters) {
+        let gameParams = container.parameters
         
         self.overwrites = gameParams.getOverwrites()
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
@@ -218,8 +218,8 @@ struct SubWeaponData {
     
     /// Create an instance for the `Sprinkler` sub weapon
     /// - Parameter container: `Sprinkler` game parameters
-    init(container: SubSprinklerGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: SprinklerGameParameters) {
+        let gameParams = container.parameters
         
         self.overwrites = gameParams.getOverwrites()
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
@@ -234,8 +234,8 @@ struct SubWeaponData {
     
     /// Create an instance for the `Trap` sub weapon
     /// - Parameter container: `Trap` game parameters
-    init(container: SubTrapGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: InkMineGameParameters) {
+        let gameParams = container.parameters
         
         self.overwrites = gameParams.getOverwrites()
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2

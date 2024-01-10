@@ -175,9 +175,31 @@ extension Ability {
     static let shoesAbilities = Ability.allCases.filter {
         $0.restriction == .shoesOnly || $0.restriction == .none
     }
+    
+    static let nonRestrictedAbilities = Ability.allCases.filter {
+        $0.restriction == .none
+    }
+    
+    func toSpecialEffect(intensity: Int = 0) -> AbilitySpecialEffect? {
+        if self == .dropRoller {
+            return .dropRoller
+            
+        } else if self == .openingGambit {
+            return .openingGambit
+            
+        } else if self == .lastDitchEffort {
+            return .lastDitchEffort(intensity)
+            
+        } else if self == .comeback {
+            return .comeBack
+            
+        } else {
+            return nil
+        }
+    }
 }
 
-/// The geartype an ``Ability`` is restricted to
+/// The geartype an ``Ability`` or ``GearPiece`` is restricted to
 enum AbilityRestriction {
     case headgearOnly
     case clothesOnly

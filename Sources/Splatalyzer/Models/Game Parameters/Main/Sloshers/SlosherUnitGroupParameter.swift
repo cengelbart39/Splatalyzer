@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension SlosherParameters {
+extension Slosher {
     struct UnitGroupParameter: Codable {
         let type: String
         let unit: [UnitParameter]
@@ -19,7 +19,7 @@ extension SlosherParameters {
     }
 }
 
-extension SlosherParameters.UnitGroupParameter {
+extension Slosher.UnitGroupParameter {
     struct UnitParameter: Codable {
         let addSpawnSpeedYRateByXZ: Double
         let afterOffsetDelayFrame: Int
@@ -85,7 +85,7 @@ extension SlosherParameters.UnitGroupParameter {
     }
 }
 
-extension SlosherParameters.UnitGroupParameter.UnitParameter {
+extension Slosher.UnitGroupParameter.UnitParameter {
     struct AfterPaintParameter: Codable {
         let depthScaleFar: Double
         let depthScaleNear: Double
@@ -272,7 +272,7 @@ extension SlosherParameters.UnitGroupParameter.UnitParameter {
     }
 }
 
-extension SlosherParameters.UnitGroupParameter.UnitParameter.SplashAndSplashWallHitSpawnParameter {
+extension Slosher.UnitGroupParameter.UnitParameter.SplashAndSplashWallHitSpawnParameter {
     
     struct SplashHitSpawnCombination: Codable {
         let orderNum: Int
@@ -299,10 +299,10 @@ extension SlosherParameters.UnitGroupParameter.UnitParameter.SplashAndSplashWall
     }
 }
 
-extension SlosherParameters.UnitGroupParameter.UnitParameter.SplashAndSplashWallHitSpawnParameter.SplashHitSpawnSplashParameter {
+extension Slosher.UnitGroupParameter.UnitParameter.SplashAndSplashWallHitSpawnParameter.SplashHitSpawnSplashParameter {
     
     struct DrawSizeCollisionPaintParameter: Codable {
-        let collisionParam: SlosherParameters.CollisionParameter
+        let collisionParam: Slosher.CollisionParameter
         let drawRadius: Double
         let paintDepthScale: Double
         let paintWidthHalf: Double
@@ -362,7 +362,7 @@ extension SlosherParameters.UnitGroupParameter.UnitParameter.SplashAndSplashWall
 //    }
 //}
 
-extension SlosherParameters.UnitGroupParameter.UnitParameter {
+extension Slosher.UnitGroupParameter.UnitParameter {
     struct SplashHitParameter: Codable {
         let collisionRadius: Double
         let drawRadius: Double

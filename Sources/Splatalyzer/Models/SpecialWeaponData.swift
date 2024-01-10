@@ -25,8 +25,8 @@ struct SpecialWeaponData {
     let tickDamage: Int?
     let waveDamage: Int?
     
-    init(container: SpecialBlowerGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: InkVacGameParameters) {
+        let gameParams = container.parameters
         
         self.armorHp = nil
         self.bulletDamageMax = nil
@@ -46,8 +46,8 @@ struct SpecialWeaponData {
         self.waveDamage = nil
     }
     
-    init(container: SpecialCastleGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: KrakenRoyaleGameParameters) {
+        let gameParams = container.parameters
         
         self.armorHp = nil
         self.bulletDamageMax = nil
@@ -67,8 +67,8 @@ struct SpecialWeaponData {
         self.waveDamage = nil
     }
     
-    init(container: SpecialChariotGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: CrabTankGameParameters) {
+        let gameParams = container.parameters
         
         var canon = [DistanceDamage(damage: 600, distance: 1)]
         canon.append(contentsOf: gameParams.cannonParam.blastParam.distanceDamage)
@@ -91,8 +91,8 @@ struct SpecialWeaponData {
         self.waveDamage = nil
     }
     
-    init(container: SpecialChimneyGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: SplattercolorScreenGameParameters) {
+        let gameParams = container.parameters
         
         self.armorHp = nil
         self.bulletDamageMax = nil
@@ -112,8 +112,8 @@ struct SpecialWeaponData {
         self.waveDamage = nil
     }
     
-    init(container: SpecialEnergyStandGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: TacticoolerGameParameters) {
+        let gameParams = container.parameters
         
         self.armorHp = nil
         self.bulletDamageMax = nil
@@ -133,8 +133,8 @@ struct SpecialWeaponData {
         self.waveDamage = nil
     }
     
-    init(container: SpecialFireworkGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: SuperChumpGameParameters) {
+        let gameParams = container.parameters
         
         self.armorHp = nil
         self.bulletDamageMax = nil
@@ -154,8 +154,8 @@ struct SpecialWeaponData {
         self.waveDamage = nil
     }
     
-    init(container: SpecialInkStormGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: InkStormGameParameters) {
+        let gameParams = container.parameters
         
         self.armorHp = nil
         self.bulletDamageMax = nil
@@ -175,8 +175,8 @@ struct SpecialWeaponData {
         self.waveDamage = nil
     }
     
-    init(container: SpecialJetpackGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: InkjetGameParameters) {
+        let gameParams = container.parameters
         
         self.armorHp = nil
         self.bulletDamageMax = nil
@@ -196,8 +196,8 @@ struct SpecialWeaponData {
         self.waveDamage = nil
     }
     
-    init(container: SpecialMicroLaserGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: KillerWail51GameParameters) {
+        let gameParams = container.parameters
         
         self.armorHp = nil
         self.bulletDamageMax = nil
@@ -217,8 +217,8 @@ struct SpecialWeaponData {
         self.waveDamage = nil
     }
     
-    init(container: SpecialMultiMissileGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: TentaMissilesGameParameters) {
+        let gameParams = container.parameters
         
         self.armorHp = nil
         self.bulletDamageMax = nil
@@ -238,8 +238,8 @@ struct SpecialWeaponData {
         self.waveDamage = nil
     }
     
-    init(container: SpecialNiceBallGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: BooyahBombGameParameters) {
+        let gameParams = container.parameters
         
         self.armorHp = nil
         self.bulletDamageMax = nil
@@ -259,8 +259,8 @@ struct SpecialWeaponData {
         self.waveDamage = nil
     }
     
-    init(container: SpecialPogoGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: TripleSplashdownGameParameters) {
+        let gameParams = container.parameters
         
         self.armorHp = nil
         self.bulletDamageMax = nil
@@ -280,8 +280,8 @@ struct SpecialWeaponData {
         self.waveDamage = nil
     }
     
-    init(container: SpecialShockSonarGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: WaveBreakerGameParameters) {
+        let gameParams = container.parameters
         
         self.armorHp = nil
         self.bulletDamageMax = nil
@@ -301,8 +301,8 @@ struct SpecialWeaponData {
         self.waveDamage = gameParams.bulletParam.waveParam.damage
     }
     
-    init(container: SpecialSuperHookGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: ZipcasterGameParameters) {
+        let gameParams = container.parameters
         
         self.armorHp = nil
         self.bulletDamageMax = nil
@@ -322,8 +322,8 @@ struct SpecialWeaponData {
         self.waveDamage = nil
     }
     
-    init(container: SpecialTripleTornadoGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: TripleInkstrikeGameParameters) {
+        let gameParams = container.parameters
         
         self.armorHp = nil
         self.bulletDamageMax = nil
@@ -343,8 +343,8 @@ struct SpecialWeaponData {
         self.waveDamage = nil
     }
     
-    init(container: SpecialUltraShotGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: TrizookaGameParameters) {
+        let gameParams = container.parameters
         
         self.armorHp = nil
         self.bulletDamageMax = nil
@@ -364,8 +364,8 @@ struct SpecialWeaponData {
         self.waveDamage = nil
     }
     
-    init(container: SpecialUltraStampGameParameters) {
-        let gameParams = container.gameParameters
+    init(container: UltraStampGameParameters) {
+        let gameParams = container.parameters
         
         var swingDmg = [DistanceDamage(damage: 1000, distance: 0)]
         swingDmg.append(contentsOf: gameParams.swingBigBlastParam.distanceDamage)

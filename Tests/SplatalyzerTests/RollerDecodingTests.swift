@@ -12,28 +12,28 @@ final class RollerDecodingTests: XCTestCase {
 
     let service = JSONServiceForTests()
 
-    func test_RollerCompact_decode_noThrows() {
+    func test_BigSwigRoller_decode_noThrows() {
+        let fileName = "WeaponRollerWide.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(RollerGameParameters.self, from: fileName))
+    }
+    
+    func test_CarbonRoller_decode_noThrows() {
         let fileName = "WeaponRollerCompact.game__GameParameterTable"
         XCTAssertNoThrow(try service.decode(RollerGameParameters.self, from: fileName))
     }
 
-    func test_RollerHeavy_decode_noThrows() {
+    func test_DynamoRoller_decode_noThrows() {
         let fileName = "WeaponRollerHeavy.game__GameParameterTable"
         XCTAssertNoThrow(try service.decode(RollerGameParameters.self, from: fileName))
     }
     
-    func test_RollerHunter_decode_noThrows() {
+    func test_FlingzaRoller_decode_noThrows() {
         let fileName = "WeaponRollerHunter.game__GameParameterTable"
         XCTAssertNoThrow(try service.decode(RollerGameParameters.self, from: fileName))
     }
     
-    func test_RollerNormal_decode_noThrows() {
+    func test_SplatRoller_decode_noThrows() {
         let fileName = "WeaponRollerNormal.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(RollerGameParameters.self, from: fileName))
-    }
-    
-    func test_RollerWide_decode_noThrows() {
-        let fileName = "WeaponRollerWide.game__GameParameterTable"
         XCTAssertNoThrow(try service.decode(RollerGameParameters.self, from: fileName))
     }
 }

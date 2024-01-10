@@ -12,73 +12,74 @@ final class SubDecodingTests: XCTestCase {
 
     let service = JSONServiceForTests()
     
-    func test_SubBeacon_decode_noThrows() {
-        let fileName = "WeaponBeacon.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SubBeaconGameParameters.self, from: fileName))
-    }
-    
-    func test_SubBombCurling_decode_noThrows() {
-        let fileName = "WeaponBombCurling.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SubBombCurlingGameParameters.self, from: fileName))
-    }
-    
-    func test_SubBombFizzy_decode_noThrows() {
-        let fileName = "WeaponBombFizzy.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SubBombFizzyGameParameters.self, from: fileName))
-    }
-    
-    func test_SubBombQuick_decode_noThrows() {
-        let fileName = "WeaponBombQuick.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SubBombQuickGameParameters.self, from: fileName))
-    }
-    
-    func test_SubBombRobot_decode_noThrows() {
-        let fileName = "WeaponBombRobot.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SubBombRobotGameParameters.self, from: fileName))
-    }
-    
-    func test_SubBombSplash_decode_noThrows() {
-        let fileName = "WeaponBombSplash.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SubBombSplashGameParameters.self, from: fileName))
-    }
-    
-    func test_SubBombSuction_decode_noThrows() {
-        let fileName = "WeaponBombSuction.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SubBombSuctionGameParameters.self, from: fileName))
-    }
-    
-    func test_SubBombTorpedo_decode_noThrows() {
-        let fileName = "WeaponBombTorpedo.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SubBombTorpedoGameParameters.self, from: fileName))
-    }
-    
-    func test_SubLineMarker_decode_noThrows() {
+    func test_AngleShooter_decode_noThrows() {
         let fileName = "WeaponLineMarker.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SubLineMarkerGameParameters.self, from: fileName))
+        XCTAssertNoThrow(try service.decode(AngleShooterGameParameters.self, from: fileName))
     }
     
-    func test_SubPointSensor_decode_noThrows() {
-        let fileName = "WeaponPointSensor.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SubPointSensorGameParameters.self, from: fileName))
+    func test_Autobomb_decode_noThrows() {
+        let fileName = "WeaponBombRobot.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(AutobombGameParameters.self, from: fileName))
     }
     
-    func test_SubPoisonMist_decode_noThrows() {
-        let fileName = "WeaponPoisonMist.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SubPoisonMistGameParameters.self, from: fileName))
+    func test_BurstBomb_decode_noThrows() {
+        let fileName = "WeaponBombQuick.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(BurstBombGameParameters.self, from: fileName))
     }
     
-    func test_SubShield_decode_noThrows() {
-        let fileName = "WeaponShield.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SubShieldGameParameters.self, from: fileName))
+    func test_CurlingBomb_decode_noThrows() {
+        let fileName = "WeaponBombCurling.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(CurlingBombGameParameters.self, from: fileName))
     }
     
-    func test_SubSprinkler_decode_noThrows() {
-        let fileName = "WeaponSprinkler.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SubSprinklerGameParameters.self, from: fileName))
+    func test_FizzyBomb_decode_noThrows() {
+        let fileName = "WeaponBombFizzy.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(FizzyBombGameParameters.self, from: fileName))
     }
     
-    func test_SubTrap_decode_noThrows() {
+    func test_InkMine_decode_noThrows() {
         let fileName = "WeaponTrap.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SubTrapGameParameters.self, from: fileName))
+        XCTAssertNoThrow(try service.decode(InkMineGameParameters.self, from: fileName))
+    }
+    
+    func test_PointSensor_decode_noThrows() {
+        let fileName = "WeaponPointSensor.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(PointSensorGameParameters.self, from: fileName))
+    }
+    
+    func test_SplashWall_decode_noThrows() {
+        let fileName = "WeaponShield.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(SplashWallGameParameters.self, from: fileName))
+    }
+    
+    func test_SplatBomb_decode_noThrows() {
+        let fileName = "WeaponBombSplash.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(SplatBombGameParameters.self, from: fileName))
+    }
+    
+    func test_Sprinkler_decode_noThrows() {
+        let fileName = "WeaponSprinkler.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(SprinklerGameParameters.self, from: fileName))
+    }
+    
+    func test_SquidBeakon_decode_noThrows() {
+        let fileName = "WeaponBeacon.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(SquidBeakonGameParameters.self, from: fileName))
+    }
+
+    
+    func test_SuctionBomb_decode_noThrows() {
+        let fileName = "WeaponBombSuction.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(SuctionBombGameParameters.self, from: fileName))
+    }
+    
+    func test_Torpedo_decode_noThrows() {
+        let fileName = "WeaponBombTorpedo.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(TorpedoGameParameters.self, from: fileName))
+    }
+    
+    func test_ToxicMist_decode_noThrows() {
+        let fileName = "WeaponPoisonMist.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(ToxicMistGameParameters.self, from: fileName))
     }
 }

@@ -98,50 +98,50 @@ enum UIParamType: String, Codable {
 }
 
 enum SubWeapon: String, Codable {
-    case beacon = "Work/Gyml/Beacon.spl__WeaponInfoSub.gyml"
-    case bombCurling = "Work/Gyml/Bomb_Curling.spl__WeaponInfoSub.gyml"
-    case bombFizzy = "Work/Gyml/Bomb_Fizzy.spl__WeaponInfoSub.gyml"
-    case bombQuick = "Work/Gyml/Bomb_Quick.spl__WeaponInfoSub.gyml"
-    case bombRobot = "Work/Gyml/Bomb_Robot.spl__WeaponInfoSub.gyml"
-    case bombSplash = "Work/Gyml/Bomb_Splash.spl__WeaponInfoSub.gyml"
-    case bombSuction = "Work/Gyml/Bomb_Suction.spl__WeaponInfoSub.gyml"
-    case bombTorpedo = "Work/Gyml/Bomb_Torpedo.spl__WeaponInfoSub.gyml"
-    case lineMarker = "Work/Gyml/LineMarker.spl__WeaponInfoSub.gyml"
+    case squidBeakon = "Work/Gyml/Beacon.spl__WeaponInfoSub.gyml"
+    case curlingBomb = "Work/Gyml/Bomb_Curling.spl__WeaponInfoSub.gyml"
+    case fizzyBomb = "Work/Gyml/Bomb_Fizzy.spl__WeaponInfoSub.gyml"
+    case burstBomb = "Work/Gyml/Bomb_Quick.spl__WeaponInfoSub.gyml"
+    case autobomb = "Work/Gyml/Bomb_Robot.spl__WeaponInfoSub.gyml"
+    case splatBomb = "Work/Gyml/Bomb_Splash.spl__WeaponInfoSub.gyml"
+    case suctionBomb = "Work/Gyml/Bomb_Suction.spl__WeaponInfoSub.gyml"
+    case torpedo = "Work/Gyml/Bomb_Torpedo.spl__WeaponInfoSub.gyml"
+    case angleShooter = "Work/Gyml/LineMarker.spl__WeaponInfoSub.gyml"
     case none = ""
     case pointSensor = "Work/Gyml/PointSensor.spl__WeaponInfoSub.gyml"
-    case poisonMist = "Work/Gyml/PoisonMist.spl__WeaponInfoSub.gyml"
-    case shield = "Work/Gyml/Shield.spl__WeaponInfoSub.gyml"
+    case toxicMist = "Work/Gyml/PoisonMist.spl__WeaponInfoSub.gyml"
+    case splashWall = "Work/Gyml/Shield.spl__WeaponInfoSub.gyml"
     case sprinkler = "Work/Gyml/Sprinkler.spl__WeaponInfoSub.gyml"
-    case trap = "Work/Gyml/Trap.spl__WeaponInfoSub.gyml"
+    case inkMine = "Work/Gyml/Trap.spl__WeaponInfoSub.gyml"
     
     func toSubRowId() -> SubRowId {
         switch self {
-        case .beacon:
-            return .beacon
+        case .squidBeakon:
+            return .squidBeakon
             
-        case .bombCurling:
-            return .bombCurling
+        case .curlingBomb:
+            return .curlingBomb
             
-        case .bombFizzy:
-            return .bombFizzy
+        case .fizzyBomb:
+            return .fizzyBomb
             
-        case .bombQuick:
-            return .bombQuick
+        case .burstBomb:
+            return .burstBomb
             
-        case .bombRobot:
-            return .bombRobot
+        case .autobomb:
+            return .autobomb
             
-        case .bombSplash:
-            return .bombSplash
+        case .splatBomb:
+            return .splatBomb
             
-        case .bombSuction:
-            return .bombSuction
+        case .suctionBomb:
+            return .suctionBomb
             
-        case .bombTorpedo:
-            return .bombTorpedo
+        case .torpedo:
+            return .torpedo
             
-        case .lineMarker:
-            return .lineMarker
+        case .angleShooter:
+            return .angleShooter
             
         case .none:
             return .none
@@ -149,109 +149,109 @@ enum SubWeapon: String, Codable {
         case .pointSensor:
             return .pointSensor
             
-        case .poisonMist:
-            return .poisonMist
+        case .toxicMist:
+            return .toxicMist
             
-        case .shield:
-            return .shield
+        case .splashWall:
+            return .splashWall
             
         case .sprinkler:
             return .sprinkler
             
-        case .trap:
-            return .trap
+        case .inkMine:
+            return .inkMine
         }
     }
 }
 
 enum SpecialWeapon: String, Codable {
-    case blower = "Work/Gyml/SpBlower.spl__WeaponInfoSpecial.gyml"
-    case castle = "Work/Gyml/SpCastle.spl__WeaponInfoSpecial.gyml"
-    case chariot = "Work/Gyml/SpChariot.spl__WeaponInfoSpecial.gyml"
-    case chimney = "Work/Gyml/SpChimney.spl__WeaponInfoSpecial.gyml"
-    case energyStand = "Work/Gyml/SpEnergyStand.spl__WeaponInfoSpecial.gyml"
-    case firework = "Work/Gyml/SpFirework.spl__WeaponInfoSpecial.gyml"
-    case gachihoko = "Work/Gyml/SpGachihoko.spl__WeaponInfoSpecial.gyml"
-    case greatBarrier = "Work/Gyml/SpGreatBarrier.spl__WeaponInfoSpecial.gyml"
+    case inkVac = "Work/Gyml/SpBlower.spl__WeaponInfoSpecial.gyml"
+    case krakenRoyale = "Work/Gyml/SpCastle.spl__WeaponInfoSpecial.gyml"
+    case crabTank = "Work/Gyml/SpChariot.spl__WeaponInfoSpecial.gyml"
+    case splattercolorScreen = "Work/Gyml/SpChimney.spl__WeaponInfoSpecial.gyml"
+    case tacticooler = "Work/Gyml/SpEnergyStand.spl__WeaponInfoSpecial.gyml"
+    case superChump = "Work/Gyml/SpFirework.spl__WeaponInfoSpecial.gyml"
+    case rainmaker = "Work/Gyml/SpGachihoko.spl__WeaponInfoSpecial.gyml"
+    case bigBubbler = "Work/Gyml/SpGreatBarrier.spl__WeaponInfoSpecial.gyml"
     case inkStorm = "Work/Gyml/SpInkStorm.spl__WeaponInfoSpecial.gyml"
-    case jetpack = "Work/Gyml/SpJetpack.spl__WeaponInfoSpecial.gyml"
-    case microLaser = "Work/Gyml/SpMicroLaser.spl__WeaponInfoSpecial.gyml"
-    case multiMissile = "Work/Gyml/SpMultiMissile.spl__WeaponInfoSpecial.gyml"
-    case niceBall = "Work/Gyml/SpNiceBall.spl__WeaponInfoSpecial.gyml"
+    case inkjet = "Work/Gyml/SpJetpack.spl__WeaponInfoSpecial.gyml"
+    case killerWail51 = "Work/Gyml/SpMicroLaser.spl__WeaponInfoSpecial.gyml"
+    case tentaMissiles = "Work/Gyml/SpMultiMissile.spl__WeaponInfoSpecial.gyml"
+    case booyahBomb = "Work/Gyml/SpNiceBall.spl__WeaponInfoSpecial.gyml"
     case none = ""
-    case pogo = "Work/Gyml/SpPogo.spl__WeaponInfoSpecial.gyml"
-    case shockSonar = "Work/Gyml/SpShockSonar.spl__WeaponInfoSpecial.gyml"
-    case skewer = "Work/Gyml/SpSkewer.spl__WeaponInfoSpecial.gyml"
-    case superHook = "Work/Gyml/SpSuperHook.spl__WeaponInfoSpecial.gyml"
-    case superLanding = "Work/Gyml/SpSuperLanding.spl__WeaponInfoSpecial.gyml"
-    case tripleTornado = "Work/Gyml/SpTripleTornado.spl__WeaponInfoSpecial.gyml"
-    case ultraShot = "Work/Gyml/SpUltraShot.spl__WeaponInfoSpecial.gyml"
+    case tripleSplashdown = "Work/Gyml/SpPogo.spl__WeaponInfoSpecial.gyml"
+    case waveBreaker = "Work/Gyml/SpShockSonar.spl__WeaponInfoSpecial.gyml"
+    case reefslider = "Work/Gyml/SpSkewer.spl__WeaponInfoSpecial.gyml"
+    case zipcaster = "Work/Gyml/SpSuperHook.spl__WeaponInfoSpecial.gyml"
+    case splashdown = "Work/Gyml/SpSuperLanding.spl__WeaponInfoSpecial.gyml"
+    case tripleInkstrike = "Work/Gyml/SpTripleTornado.spl__WeaponInfoSpecial.gyml"
+    case trizooka = "Work/Gyml/SpUltraShot.spl__WeaponInfoSpecial.gyml"
     case ultraStamp = "Work/Gyml/SpUltraStamp.spl__WeaponInfoSpecial.gyml"
     
     func toSpecialRowId() -> SpecialRowId {
         switch self {
-        case .blower:
-            return .blower
+        case .inkVac:
+            return .inkVac
             
-        case .castle:
-            return .castle
+        case .krakenRoyale:
+            return .krakenRoyale
             
-        case .chariot:
-            return .chariot
+        case .crabTank:
+            return .crabTank
             
-        case .chimney:
-            return .chimney
+        case .splattercolorScreen:
+            return .splattercolorScreen
             
-        case .energyStand:
-            return .energyStand
+        case .tacticooler:
+            return .tacticooler
             
-        case .firework:
-            return .firework
+        case .superChump:
+            return .superChump
             
-        case .gachihoko:
-            return .gachihoko
+        case .rainmaker:
+            return .rainmaker
             
-        case .greatBarrier:
-            return .greatBarrier
+        case .bigBubbler:
+            return .bigBubbler
             
         case .inkStorm:
             return .inkStorm
             
-        case .jetpack:
-            return .jetpack
+        case .inkjet:
+            return .inkjet
             
-        case .microLaser:
-            return .microLaser
+        case .killerWail51:
+            return .killerWail51
             
-        case .multiMissile:
-            return .multiMissile
+        case .tentaMissiles:
+            return .tentaMissiles
             
-        case .niceBall:
-            return .niceBall
+        case .booyahBomb:
+            return .booyahBomb
             
         case .none:
             return .none
             
-        case .pogo:
-            return .pogo
+        case .tripleSplashdown:
+            return .tripleSplashdown
             
-        case .shockSonar:
-            return .shockSonar
+        case .waveBreaker:
+            return .waveBreaker
             
-        case .skewer:
-            return .skewer
+        case .reefslider:
+            return .reefslider
             
-        case .superHook:
-            return .superHook
+        case .zipcaster:
+            return .zipcaster
             
-        case .superLanding:
-            return .superLanding
+        case .splashdown:
+            return .splashdown
             
-        case .tripleTornado:
-            return .tripleTornado
+        case .tripleInkstrike:
+            return .tripleInkstrike
             
-        case .ultraShot:
-            return .ultraShot
+        case .trizooka:
+            return .trizooka
             
         case .ultraStamp:
             return .ultraStamp

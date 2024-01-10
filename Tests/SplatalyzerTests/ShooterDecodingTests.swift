@@ -12,73 +12,73 @@ final class ShooterDecodingTests: XCTestCase {
 
     let service = JSONServiceForTests()
 
-    func test_ShooterBlaze_decode_noThrows() {
-        let fileName = "WeaponShooterBlaze.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(ShooterGameParameters.self, from: fileName))
-    }
-
-    func test_ShooterExpert_decode_noThrows() {
-        let fileName = "WeaponShooterExpert.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(ShooterGameParameters.self, from: fileName))
-    }
-    
-    func test_ShooterFirst_decode_noThrows() {
-        let fileName = "WeaponShooterFirst.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(ShooterGameParameters.self, from: fileName))
-    }
-    
-    func test_ShooterFlash_decode_noThrows() {
-        let fileName = "WeaponShooterFlash.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(ShooterGameParameters.self, from: fileName))
-    }
-    
-    func test_ShooterGravity_decode_noThrows() {
+    func test_52Gal_noThrows() {
         let fileName = "WeaponShooterGravity.game__GameParameterTable"
         XCTAssertNoThrow(try service.decode(ShooterGameParameters.self, from: fileName))
     }
     
-    func test_ShooterHeavy_decode_noThrows() {
+    func test_96Gal_decode_noThrows() {
         let fileName = "WeaponShooterHeavy.game__GameParameterTable"
         XCTAssertNoThrow(try service.decode(ShooterGameParameters.self, from: fileName))
     }
     
-    func test_ShooterLong_decode_noThrows() {
+    func test_Aerospray_decode_noThrows() {
+        let fileName = "WeaponShooterBlaze.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(ShooterGameParameters.self, from: fileName))
+    }
+    
+    func test_H3Nozzlenose_decode_noThrows() {
+        let fileName = "WeaponShooterTripleQuick.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(ShooterGameParameters.self, from: fileName))
+    }
+    
+    func test_JetSquelcher_decode_noThrows() {
         let fileName = "WeaponShooterLong.game__GameParameterTable"
         XCTAssertNoThrow(try service.decode(ShooterGameParameters.self, from: fileName))
     }
     
-    func test_ShooterNormal_decode_noThrows() {
-        let fileName = "WeaponShooterNormal.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(ShooterGameParameters.self, from: fileName))
-    }
-    
-    func test_ShooterPrecision_decode_noThrows() {
-        let fileName = "WeaponShooterPrecision.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(ShooterGameParameters.self, from: fileName))
-    }
-    
-    func test_ShooterQuickLong_decode_noThrows() {
-        let fileName = "WeaponShooterQuickLong.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(ShooterGameParameters.self, from: fileName))
-    }
-    
-    func test_ShooterQuickMiddle_decode_noThrows() {
-        let fileName = "WeaponShooterQuickMiddle.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(ShooterGameParameters.self, from: fileName))
-    }
-    
-    func test_ShooterShort_decode_noThrows() {
-        let fileName = "WeaponShooterShort.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(ShooterGameParameters.self, from: fileName))
-    }
-    
-    func test_ShooterTripleMiddle_decode_noThrows() {
+    func test_L3Nozzlenose_decode_noThrows() {
         let fileName = "WeaponShooterTripleMiddle.game__GameParameterTable"
         XCTAssertNoThrow(try service.decode(ShooterGameParameters.self, from: fileName))
     }
     
-    func test_ShooterTripleQuick_decode_noThrows() {
-        let fileName = "WeaponShooterTripleQuick.game__GameParameterTable"
+    func test_NZap_decode_noThrows() {
+        let fileName = "WeaponShooterQuickMiddle.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(ShooterGameParameters.self, from: fileName))
+    }
+    
+    func test_Splashomatic_decode_noThrows() {
+        let fileName = "WeaponShooterPrecision.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(ShooterGameParameters.self, from: fileName))
+    }
+
+    func test_Splattershot_decode_noThrows() {
+        let fileName = "WeaponShooterNormal.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(ShooterGameParameters.self, from: fileName))
+    }
+    
+    func test_SplattershotJr_decode_noThrows() {
+        let fileName = "WeaponShooterFirst.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(ShooterGameParameters.self, from: fileName))
+    }
+    
+    func test_SplattershotNova_decode_noThrows() {
+        let fileName = "WeaponShooterQuickLong.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(ShooterGameParameters.self, from: fileName))
+    }
+    
+    func test_SplattershotPro_decode_noThrows() {
+        let fileName = "WeaponShooterExpert.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(ShooterGameParameters.self, from: fileName))
+    }
+    
+    func test_Splooshomatic_decode_noThrows() {
+        let fileName = "WeaponShooterShort.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(ShooterGameParameters.self, from: fileName))
+    }
+    
+    func test_Squeezer_decode_noThrows() {
+        let fileName = "WeaponShooterFlash.game__GameParameterTable"
         XCTAssertNoThrow(try service.decode(ShooterGameParameters.self, from: fileName))
     }
 }

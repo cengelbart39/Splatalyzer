@@ -12,113 +12,115 @@ final class SpecialDecodingTests: XCTestCase {
 
     let service = JSONServiceForTests()
     
-    func test_SpecialBlower_decode_noThrows() {
+    func test_BigBubbler_decode_noThrows() {
+        let fileName = "WeaponSpGreatBarrier.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(BigBubblerGameParameters.self, from: fileName))
+    }
+    
+    func test_BooyahBomb_decode_noThrows() {
+        let fileName = "WeaponSpNiceBall.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(BooyahBombGameParameters.self, from: fileName))
+    }
+    
+    func test_CrabTank_decode_noThrows() {
+        let fileName = "WeaponSpChariot.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(CrabTankGameParameters.self, from: fileName))
+    }
+    
+    func testIkuraShoot_decode_noThrows() {
+        let fileName = "WeaponSpIkuraShoot.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(IkuraShootGameParameters.self, from: fileName))
+    }
+    
+    func test_Inkjet_decode_noThrows() {
+        let fileName = "WeaponSpJetpack.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(InkjetGameParameters.self, from: fileName))
+    }
+    
+    func test_InkStorm_decode_noThrows() {
+        let fileName = "WeaponSpInkStorm.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(InkStormGameParameters.self, from: fileName))
+    }
+    
+    func test_InkVac_decode_noThrows() {
         let fileName = "WeaponSpBlower.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SpecialBlowerGameParameters.self, from: fileName))
+        XCTAssertNoThrow(try service.decode(InkVacGameParameters.self, from: fileName))
     }
 
-    func test_SpecialCastle_decode_noThrows() {
+    func test_KrakenRoyale_decode_noThrows() {
         let fileName = "WeaponSpCastle.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SpecialCastleGameParameters.self, from: fileName))
+        XCTAssertNoThrow(try service.decode(KrakenRoyaleGameParameters.self, from: fileName))
     }
     
-    func test_SpecialChariot_decode_noThrows() {
-        let fileName = "WeaponSpChariot.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SpecialChariotGameParameters.self, from: fileName))
-    }
-    
-    func test_SpecialChimney_decode_noThrows() {
-        let fileName = "WeaponSpChimney.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SpecialChimneyGameParameters.self, from: fileName))
-    }
-    
-    func test_SpecialEnergyStand_decode_noThrows() {
-        let fileName = "WeaponSpEnergyStand.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SpecialEnergyStandGameParameters.self, from: fileName))
-    }
-    
-    func test_SpecialFirework_decode_noThrows() {
-        let fileName = "WeaponSpFirework.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SpecialFireworkGameParameters.self, from: fileName))
-    }
-    
-    func test_SpecialGachihoko_decode_noThrows() {
-        let fileName = "WeaponSpGachihoko.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SpecialGachihokoGameParameters.self, from: fileName))
-    }
-    
-    func test_SpecialGreatBarrier_decode_noThrows() {
-        let fileName = "WeaponSpGreatBarrier.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SpecialGreatBarrierGameParameters.self, from: fileName))
-    }
-    
-    func test_SpecialIkuraShoot_decode_noThrows() {
-        let fileName = "WeaponSpIkuraShoot.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SpecialIkuraShootGameParameters.self, from: fileName))
-    }
-    
-    func test_SpecialInkStorm_decode_noThrows() {
-        let fileName = "WeaponSpInkStorm.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SpecialInkStormGameParameters.self, from: fileName))
-    }
-    
-    func test_SpecialJetpack_decode_noThrows() {
-        let fileName = "WeaponSpJetpack.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SpecialJetpackGameParameters.self, from: fileName))
-    }
-    
-    func test_SpecialMicroLaser_decode_noThrows() {
+    func test_KillerWail51_decode_noThrows() {
         let fileName = "WeaponSpMicroLaser.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SpecialMicroLaserGameParameters.self, from: fileName))
+        XCTAssertNoThrow(try service.decode(KillerWail51GameParameters.self, from: fileName))
     }
     
-    func test_SpecialMultiMissile_decode_noThrows() {
-        let fileName = "WeaponSpMultiMissile.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SpecialMultiMissileGameParameters.self, from: fileName))
+    func test_Rainmaker_decode_noThrows() {
+        let fileName = "WeaponSpGachihoko.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(RainmakerGameParameters.self, from: fileName))
     }
-    
-    func test_SpecialNiceBall_decode_noThrows() {
-        let fileName = "WeaponSpNiceBall.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SpecialNiceBallGameParameters.self, from: fileName))
-    }
-    
-    func test_SpecialPogo_decode_noThrows() {
-        let fileName = "WeaponSpPogo.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SpecialPogoGameParameters.self, from: fileName))
-    }
-    
-    func test_SpecialShockSonar_decode_noThrows() {
-        let fileName = "WeaponSpShockSonar.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SpecialShockSonarGameParameters.self, from: fileName))
-    }
-    
-    func test_SpecialSkewer_decode_noThrows() {
+
+    func test_Reefslider_decode_noThrows() {
         let fileName = "WeaponSpSkewer.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SpecialSkewerGameParameters.self, from: fileName))
+        XCTAssertNoThrow(try service.decode(ReefsliderGameParameters.self, from: fileName))
     }
     
-    func test_SpecialSuperHook_decode_noThrows() {
-        let fileName = "WeaponSpSuperHook.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SpecialSuperHookGameParameters.self, from: fileName))
-    }
-    
-    func test_SpecialSuperLanding_decode_noThrows() {
+    func test_Splashdown_decode_noThrows() {
         let fileName = "WeaponSpSuperLanding.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SpecialSuperLandingGameParameters.self, from: fileName))
+        XCTAssertNoThrow(try service.decode(SplashdownGameParameters.self, from: fileName))
+    }
+
+    func test_SplattercolorScreen_decode_noThrows() {
+        let fileName = "WeaponSpChimney.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(SplattercolorScreenGameParameters.self, from: fileName))
+    }
+
+    func test_SuperChump_decode_noThrows() {
+        let fileName = "WeaponSpFirework.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(SuperChumpGameParameters.self, from: fileName))
     }
     
-    func test_SpecialTripleTornado_decode_noThrows() {
+    func test_Tacticooler_decode_noThrows() {
+        let fileName = "WeaponSpEnergyStand.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(TacticoolerGameParameters.self, from: fileName))
+    }
+    
+    func test_TentaMissiles_decode_noThrows() {
+        let fileName = "WeaponSpMultiMissile.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(TentaMissilesGameParameters.self, from: fileName))
+    }
+    
+    func test_TripleInkstrike_decode_noThrows() {
         let fileName = "WeaponSpTripleTornado.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SpecialTripleTornadoGameParameters.self, from: fileName))
+        XCTAssertNoThrow(try service.decode(TripleInkstrikeGameParameters.self, from: fileName))
     }
     
-    func test_SpecialUltraShot_decode_noThrows() {
+    func test_TripleSplashdown_decode_noThrows() {
+        let fileName = "WeaponSpPogo.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(TripleSplashdownGameParameters.self, from: fileName))
+    }
+    
+    func test_Trizooka_decode_noThrows() {
         let fileName = "WeaponSpUltraShot.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SpecialUltraShotGameParameters.self, from: fileName))
+        XCTAssertNoThrow(try service.decode(TrizookaGameParameters.self, from: fileName))
     }
     
-    func test_SpecialUltraStamp_decode_noThrows() {
+    func test_UltraStamp_decode_noThrows() {
         let fileName = "WeaponSpUltraStamp.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SpecialUltraStampGameParameters.self, from: fileName))
+        XCTAssertNoThrow(try service.decode(UltraStampGameParameters.self, from: fileName))
+    }
+    
+    func test_WaveBreaker_decode_noThrows() {
+        let fileName = "WeaponSpShockSonar.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(WaveBreakerGameParameters.self, from: fileName))
+    }
+    
+
+    
+    func test_Zipcaster_decode_noThrows() {
+        let fileName = "WeaponSpSuperHook.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(ZipcasterGameParameters.self, from: fileName))
     }
 }

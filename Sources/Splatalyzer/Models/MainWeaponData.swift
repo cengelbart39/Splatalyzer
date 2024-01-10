@@ -12,6 +12,7 @@ import Foundation
 /// Combines information from ``GameParametersContainer`` and ``WeaponInfoMain``
 struct MainWeaponData {
     let specialPoints: Int
+    let mainWeaponId: MainRowId
     let subWeapon: SubWeapon
     let specialWeapon: SpecialWeapon
     let overwrites: MainOverwrites
@@ -78,12 +79,13 @@ struct MainWeaponData {
         - container: Weapon game parameters
      */
     init(weaponInfo: WeaponInfoMainItem, container: BlasterGameParameters) {
-        let gameParams = container.gameParameters
+        let gameParams = container.parameters
                 
         let damageValueDirect = gameParams.damageParam.valueMax == gameParams.damageParam.valueMin ? Double(gameParams.damageParam.valueMax) : nil
         
         let damageValueMax: Int? = damageValueDirect == nil ? nil : gameParams.damageParam.valueMax
                 
+        self.mainWeaponId = weaponInfo.rowId
         self.specialPoints = weaponInfo.specialPoint
         self.subWeapon = weaponInfo.subWeapon
         self.specialWeapon = weaponInfo.specialWeapon
@@ -152,8 +154,9 @@ struct MainWeaponData {
         - container: Weapon game parameters
      */
     init(weaponInfo: WeaponInfoMainItem, container: BrushGameParameters) {
-        let gameParams = container.gameParameters
+        let gameParams = container.parameters
         
+        self.mainWeaponId = weaponInfo.rowId
         self.specialPoints = weaponInfo.specialPoint
         self.subWeapon = weaponInfo.subWeapon
         self.specialWeapon = weaponInfo.specialWeapon
@@ -226,8 +229,9 @@ struct MainWeaponData {
         - container: Weapon game parameters
      */
     init(weaponInfo: WeaponInfoMainItem, container: ChargerGameParameters) {
-        let gameParams = container.gameParameters
+        let gameParams = container.parameters
                 
+        self.mainWeaponId = weaponInfo.rowId
         self.specialPoints = weaponInfo.specialPoint
         self.subWeapon = weaponInfo.subWeapon
         self.specialWeapon = weaponInfo.specialWeapon
@@ -295,13 +299,14 @@ struct MainWeaponData {
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
         - container: Weapon game parameters
      */
-    init(weaponInfo: WeaponInfoMainItem, container: ManeuverGameParameters) {
-        let gameParams = container.gameParameters
+    init(weaponInfo: WeaponInfoMainItem, container: DualieGameParameters) {
+        let gameParams = container.parameters
                 
         let damageParamValueDirect = gameParams.damageParam.valueMax == gameParams.damageParam.valueMin ? Double(gameParams.damageParam.valueMax) : nil
         
         let damageParamMax = damageParamValueDirect != nil ? nil : gameParams.damageParam.valueMax
         
+        self.mainWeaponId = weaponInfo.rowId
         self.specialPoints = weaponInfo.specialPoint
         self.subWeapon = weaponInfo.subWeapon
         self.specialWeapon = weaponInfo.specialWeapon
@@ -369,8 +374,9 @@ struct MainWeaponData {
      - container: Weapon game parameters
      */
     init(weaponInfo: WeaponInfoMainItem, container: RollerGameParameters) {
-        let gameParams = container.gameParameters
+        let gameParams = container.parameters
         
+        self.mainWeaponId = weaponInfo.rowId
         self.specialPoints = weaponInfo.specialPoint
         self.subWeapon = weaponInfo.subWeapon
         self.specialWeapon = weaponInfo.specialWeapon
@@ -450,9 +456,10 @@ struct MainWeaponData {
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
         - container: Weapon game parameters
      */
-    init(weaponInfo: WeaponInfoMainItem, container: SaberGameParameters) {
-        let gameParams = container.gameParameters
+    init(weaponInfo: WeaponInfoMainItem, container: SplatanaGameParameters) {
+        let gameParams = container.parameters
         
+        self.mainWeaponId = weaponInfo.rowId
         self.specialPoints = weaponInfo.specialPoint
         self.subWeapon = weaponInfo.subWeapon
         self.specialWeapon = weaponInfo.specialWeapon
@@ -520,12 +527,13 @@ struct MainWeaponData {
      - container: Weapon game parameters
      */
     init(weaponInfo: WeaponInfoMainItem, container: ShooterGameParameters) {
-        let gameParams = container.gameParameters
+        let gameParams = container.parameters
         
         let damageValueDirect = gameParams.damageParam.valueMax == gameParams.damageParam.valueMin ? Double(gameParams.damageParam.valueMax) : nil
         
         let damageValueMax = damageValueDirect != nil ? nil : gameParams.damageParam.valueMax
         
+        self.mainWeaponId = weaponInfo.rowId
         self.specialPoints = weaponInfo.specialPoint
         self.subWeapon = weaponInfo.subWeapon
         self.specialWeapon = weaponInfo.specialWeapon
@@ -593,8 +601,8 @@ struct MainWeaponData {
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
         - container: Weapon game parameters
      */
-    init(weaponInfo: WeaponInfoMainItem, container: ShelterGameParameters) {
-        let gameParams = container.gameParameters
+    init(weaponInfo: WeaponInfoMainItem, container: BrellaGameParameters) {
+        let gameParams = container.parameters
                 
         let inkConsumeShelterCanopy =
             gameParams.weaponShelterCanopyParam.inkConsumeUmbrella != 0
@@ -602,10 +610,11 @@ struct MainWeaponData {
             : nil
 
         let inkConsumeShelterShotgun =
-            weaponInfo.rowId == .shelterNormal00 || weaponInfo.rowId == .shelterNormal01
+            weaponInfo.rowId == .splatBrella || weaponInfo.rowId == .sorellaBrella
             ? 0.0632499977946
             : gameParams.weaponShelterShotgunParam.inkConsume
         
+        self.mainWeaponId = weaponInfo.rowId
         self.specialPoints = weaponInfo.specialPoint
         self.subWeapon = weaponInfo.subWeapon
         self.specialWeapon = weaponInfo.specialWeapon
@@ -674,15 +683,16 @@ struct MainWeaponData {
         - container: Weapon game parameters
      */
     init(weaponInfo: WeaponInfoMainItem, container: SlosherGameParameters) {
-        let gameParams = container.gameParameters
+        let gameParams = container.parameters
                 
         let damageDirectMax = gameParams.unitGroupParam.unit.first?.damageParam.valueMax
         let damageDirectMin = gameParams.unitGroupParam.unit.first?.damageParam.valueMin
         let damageDirect = damageDirectMax == damageDirectMin && damageDirectMax != nil ? damageDirectMax : nil
         
-        let isSloshingMachine = weaponInfo.rowId == .slosherLauncher00 || weaponInfo.rowId == .slosherLauncher01
-        let isDreadWringer = weaponInfo.rowId == .slosherDouble00
+        let isSloshingMachine = weaponInfo.rowId == .sloshingMachine || weaponInfo.rowId == .sloshingMachineNeo
+        let isDreadWringer = weaponInfo.rowId == .dreadWringer
         
+        self.mainWeaponId = weaponInfo.rowId
         self.specialPoints = weaponInfo.specialPoint
         self.subWeapon = weaponInfo.subWeapon
         self.specialWeapon = weaponInfo.specialWeapon
@@ -750,12 +760,13 @@ struct MainWeaponData {
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
         - container: Weapon game parameters
      */
-    init(weaponInfo: WeaponInfoMainItem, container: SpinnerGameParameters) {
-        let gameParams = container.gameParameters
+    init(weaponInfo: WeaponInfoMainItem, container: SplatlingGameParameters) {
+        let gameParams = container.parameters
         
         let damageDirect = gameParams.damageParam.valueMax == gameParams.damageParam.valueMin ? Double(gameParams.damageParam.valueMax) : nil
         let damageMax = damageDirect != nil ? gameParams.damageParam.valueMax : nil
         
+        self.mainWeaponId = weaponInfo.rowId
         self.specialPoints = weaponInfo.specialPoint
         self.subWeapon = weaponInfo.subWeapon
         self.specialWeapon = weaponInfo.specialWeapon
@@ -824,8 +835,9 @@ struct MainWeaponData {
         - container: Weapon game parameters
      */
     init(weaponInfo: WeaponInfoMainItem, container: StringerGameParameters) {
-        let gameParams = container.gameParameters
-        
+        let gameParams = container.parameters
+            
+        self.mainWeaponId = weaponInfo.rowId
         self.specialPoints = weaponInfo.specialPoint
         self.subWeapon = weaponInfo.subWeapon
         self.specialWeapon = weaponInfo.specialWeapon
@@ -846,7 +858,7 @@ struct MainWeaponData {
         self.damageLapOverValueMax = nil
         self.damageLapOverValueMin = nil
         self.blastSplashDirect = nil
-        self.blastDamageDistance = weaponInfo.rowId == .stringerShort00 || weaponInfo.rowId == .stringerShort01 ? [] : gameParams.bulletStringerParam.detonationParam.blastParam.distanceDamage
+        self.blastDamageDistance = weaponInfo.rowId == .reeflux450 || weaponInfo.rowId == .reeflux450Deco ? [] : gameParams.bulletStringerParam.detonationParam.blastParam.distanceDamage
         self.damageValueFullCharge = nil
         self.damageValueFullChargeMax = nil
         self.damageValueMaxCharge = nil

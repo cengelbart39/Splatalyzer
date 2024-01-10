@@ -8,57 +8,79 @@
 import Foundation
 
 enum SpecialRowId: String, Codable {
-    case blower = "SpBlower"
-    case blowerMission = "SpBlower_Mission"
-    case castle = "SpCastle"
-    case castleCoop = "SpCastle_Coop"
-    case chariot = "SpChariot"
-    case chariotCoop = "SpChariot_Coop"
-    case chariotMission = "SpChariot_Mission"
-    case chimney = "SpChimney"
-    case energyStand = "SpEnergyStand"
-    case firework = "SpFirework"
-    case gachihoko = "SpGachihoko"
-    case gachihokoForEventMatch = "SpGachihokoForEventMatch"
-    case greatBarrier = "SpGreatBarrier"
-    case greatBarrierRival = "SpGreatBarrier_Rival"
+    case inkVac = "SpBlower"
+    case inkVacMission = "SpBlower_Mission"
+    
+    case krakenRoyale = "SpCastle"
+    case krakenRoyaleCoop = "SpCastle_Coop"
+    
+    case crabTank = "SpChariot"
+    case crabTankCoop = "SpChariot_Coop"
+    case crabTankMission = "SpChariot_Mission"
+    
+    case splattercolorScreen = "SpChimney"
+    
+    case tacticooler = "SpEnergyStand"
+    
+    case superChump = "SpFirework"
+    
+    case rainmaker = "SpGachihoko"
+    case rainmakerForEventMatch = "SpGachihokoForEventMatch"
+    
+    case bigBubbler = "SpGreatBarrier"
+    case bigBubblerRival = "SpGreatBarrier_Rival"
+    
     case ikuraShoot = "SpIkuraShoot"
+    
     case inkStorm = "SpInkStorm"
     case inkStormMission = "SpInkStorm_Mission"
     case inkStormRival = "SpInkStorm_Rival"
-    case jetpack = "SpJetpack"
-    case jetpackCoop = "SpJetpack_Coop"
-    case jetpackMission = "SpJetpack_Mission"
-    case jetpackRival = "SpJetpack_Rival"
-    case microLaser = "SpMicroLaser"
-    case microLaserCoop = "SpMicroLaser_Coop"
-    case microLaserMission = "SpMicroLaser_Mission"
-    case multiMissile = "SpMultiMissile"
-    case multiMissileMission = "SpMultiMissile_Mission"
-    case multiMissileRival = "SpMultiMissile_Rival"
-    case niceBall = "SpNiceBall"
-    case niceBallCoop = "SpNiceBall_Coop"
+    
+    case inkjet = "SpJetpack"
+    case inkjetCoop = "SpJetpack_Coop"
+    case inkjetMission = "SpJetpack_Mission"
+    case inkjetRival = "SpJetpack_Rival"
+    
+    case killerWail51 = "SpMicroLaser"
+    case killerWail51Coop = "SpMicroLaser_Coop"
+    case killerWail51Mission = "SpMicroLaser_Mission"
+    
+    case tentaMissiles = "SpMultiMissile"
+    case tentaMissilesMission = "SpMultiMissile_Mission"
+    case tentaMissilesRival = "SpMultiMissile_Rival"
+    
+    case booyahBomb = "SpNiceBall"
+    case booyahBombCoop = "SpNiceBall_Coop"
+    
     case none = ""
-    case pogo = "SpPogo"
-    case pogoCoop = "SpPogo_Coop"
-    case shockSonar = "SpShockSonar"
-    case shockSonarCoop = "SpShockSonar_Coop"
-    case shockSonorMission = "SpShockSonar_Mission"
-    case shockSonarRival = "SpShockSonar_Rival"
-    case skewer = "SpSkewer"
-    case skewerCoop = "SpSkewer_Coop"
-    case skewerMission = "SpSkewer_Mission"
-    case superHook = "SpSuperHook"
-    case superHookMission = "SpSuperHook_Mission"
-    case superLanding = "SpSuperLanding"
-    case superLandingCoop = "SpSuperLanding_Coop"
-    case superLandingRival = "SpSuperLanding_Rival"
-    case tripleTornado = "SpTripleTornado"
-    case tripleTornadoCoop = "SpTripleTornado_Coop"
-    case tripleTornadoMission = "SpTripleTornado_Mission"
-    case ultraShot = "SpUltraShot"
-    case utlraShotCoop = "SpUltraShot_Coop"
-    case ultraShotMission = "SpUltraShot_Mission"
+    
+    case tripleSplashdown = "SpPogo"
+    case tripleSplashdownCoop = "SpPogo_Coop"
+    
+    case waveBreaker = "SpShockSonar"
+    case waveBreakerCoop = "SpShockSonar_Coop"
+    case waveBreakerMission = "SpShockSonar_Mission"
+    case waveBreakerRival = "SpShockSonar_Rival"
+    
+    case reefslider = "SpSkewer"
+    case reefsliderCoop = "SpSkewer_Coop"
+    case reefsliderMission = "SpSkewer_Mission"
+    
+    case zipcaster = "SpSuperHook"
+    case zipcasterMission = "SpSuperHook_Mission"
+    
+    case splashdown = "SpSuperLanding"
+    case splashdownCoop = "SpSuperLanding_Coop"
+    case splashdownRival = "SpSuperLanding_Rival"
+    
+    case tripleInkstrike = "SpTripleTornado"
+    case tripleInkstrikeCoop = "SpTripleTornado_Coop"
+    case tripleInkstrikeMission = "SpTripleTornado_Mission"
+    
+    case trizooka = "SpUltraShot"
+    case trizookaCoop = "SpUltraShot_Coop"
+    case trizookaMission = "SpUltraShot_Mission"
+    
     case ultraStamp = "SpUltraStamp"
     case ultraStampMission = "SpUltraStamp_Mission"
 }
