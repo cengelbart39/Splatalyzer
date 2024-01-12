@@ -1358,10 +1358,9 @@ struct StatHelper {
         let value = values.dictionary[value]
         
         let effect =  HighMidLow(
-            high: overwrites?.high ?? value?.high ?? 0,
-            low: overwrites?.low ?? value?.low ?? 0,
-            mid: overwrites?.mid ?? value?.mid ?? 0
-        )
+            high: overwrites?.high ?? value?.high ?? 0.0,
+            mid: overwrites?.mid ?? value?.mid ?? 0.0,
+            low: overwrites?.low ?? value?.low ?? 0.0)
         
         return effect
     }

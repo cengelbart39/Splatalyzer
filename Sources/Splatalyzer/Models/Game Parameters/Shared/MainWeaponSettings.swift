@@ -53,13 +53,13 @@ struct MainOverwrites: Overwritable {
     init(settings: MainWeaponSettings) {
         self.consumeRtMain = HighMidLow(
             high: settings.overwriteConsumeRtMainHigh,
-            low: settings.overwriteConsumeRtMainLow,
-            mid: settings.overwriteConsumeRtMainMid)
+            mid: settings.overwriteConsumeRtMainMid,
+            low: settings.overwriteConsumeRtMainLow)
         
         self.moveVelRtShot = HighMidLow(
             high: settings.overwriteMoveVelRtShotHigh,
-            low: settings.overwriteMoveVelRtShotLow,
-            mid: settings.overwriteMoveVelRtShotMid)
+            mid: settings.overwriteMoveVelRtShotMid,
+            low: settings.overwriteMoveVelRtShotLow)
     }
     
     init() {

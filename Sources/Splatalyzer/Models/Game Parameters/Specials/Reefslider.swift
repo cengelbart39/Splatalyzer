@@ -106,8 +106,8 @@ struct Reefslider: SpecialParametable {
         
         let overwritePaintRadius = HighMidLow(
             high: (paintRadius?.high ?? 0) + (splashAroundPaintRadius?.high ?? 0),
-            low: (paintRadius?.low ?? 0) + (splashAroundPaintRadius?.low ?? 0),
-            mid: (paintRadius?.mid ?? 0) + (splashAroundPaintRadius?.mid ?? 0))
+            mid: (paintRadius?.mid ?? 0) + (splashAroundPaintRadius?.mid ?? 0),
+            low: (paintRadius?.low ?? 0) + (splashAroundPaintRadius?.low ?? 0))
         
         let paintRadiusExists = paintRadius?.high != nil && paintRadius?.low != nil && paintRadius?.mid != nil && splashAroundPaintRadius?.high != nil && splashAroundPaintRadius?.low != nil && splashAroundPaintRadius?.mid != nil
         

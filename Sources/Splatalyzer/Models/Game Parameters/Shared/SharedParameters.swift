@@ -49,7 +49,7 @@ struct HighMidLow: Codable {
         self.mid = 0
     }
     
-    init(high: Double?, low: Double?, mid: Double?) {
+    init(high: Double?, mid: Double?, low: Double?) {
         self.high = high
         self.low = low
         self.mid = mid

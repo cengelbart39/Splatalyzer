@@ -123,8 +123,8 @@ struct Inkjet: SpecialParametable {
         
         let paintRadius = HighMidLow(
             high: (specUpPaintRadius?.high ?? 0) + blastPaintRadius,
-            low: (specUpPaintRadius?.low ?? 0) + blastPaintRadius,
-            mid: (specUpPaintRadius?.mid ?? 0) + blastPaintRadius)
+            mid: (specUpPaintRadius?.mid ?? 0) + blastPaintRadius,
+            low: (specUpPaintRadius?.low ?? 0) + blastPaintRadius)
         
         return SpecialOverwrites(
             chargeRateAutoPerFrame: nil,
