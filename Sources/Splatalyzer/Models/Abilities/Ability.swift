@@ -7,6 +7,8 @@
 
 import Foundation
 
+typealias AbilityPoints = [Ability : Int]
+
 /// Special attributes for gear that effect the player and/oror weapons
 enum Ability: CaseIterable {
     /// A unassigned ability

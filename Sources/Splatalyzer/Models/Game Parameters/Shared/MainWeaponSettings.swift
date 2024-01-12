@@ -46,7 +46,7 @@ enum WeaponSpeedType: String, Codable {
     case fast = "Fast"
 }
 
-struct MainOverwrites {
+struct MainOverwrites: Overwritable {
     let consumeRtMain: HighMidLow?
     let moveVelRtShot: HighMidLow?
     
@@ -65,5 +65,17 @@ struct MainOverwrites {
     init() {
         self.consumeRtMain = nil
         self.moveVelRtShot = nil
+    }
+    
+    func value(for key: AbilityValue) -> HighMidLow? {
+        if key == .consumeRtMain {
+            return self.consumeRtMain
+            
+        } else if key == .moveVelRtShot {
+            return self.moveVelRtShot
+            
+        } else {
+            return nil
+        }
     }
 }

@@ -18,7 +18,8 @@ struct JSONServiceForTests {
             let data = try Data(contentsOf: url)
             
             do {
-                return try JSONDecoder().decode(T.self, from: data)
+                let obj = try JSONDecoder().decode(T.self, from: data)
+                return obj
                 
             } catch DecodingError.keyNotFound(let key, let context) {
                 print(context.codingPath)

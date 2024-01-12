@@ -28,7 +28,7 @@ struct GearBuild {
         return self.headgear.isValid() && self.clothes.isValid() && self.shoes.isValid()
     }
     
-    func toAbilityPoints(ldeIntensity: Int = 0, usingTacticooler: Bool) -> [Ability : Int] {
+    func toAbilityPoints(ldeIntensity: Int = 0, usingTacticooler: Bool) -> AbilityPoints {
         let apHead = self.headgear.toAbilityPoints()
         let apClothes = self.clothes.toAbilityPoints()
         let apShoes = self.shoes.toAbilityPoints()
@@ -72,6 +72,10 @@ struct GearBuild {
         }
         
         return effects
+    }
+    
+    func hasAbility(_ ability: Ability) -> Bool {
+        return self.headgear.hasAbility(ability) || self.clothes.hasAbility(ability) || self.shoes.hasAbility(ability)
     }
 }
 
@@ -118,8 +122,8 @@ struct GearPiece {
         return [self.main, self.sub1, self.sub2, self.sub3]
     }
     
-    func toAbilityPoints() -> [Ability : Int] {
-        var result = [Ability : Int]()
+    func toAbilityPoints() -> AbilityPoints {
+        var result = AbilityPoints()
         
         let abilities = self.toArray()
         var hasAbilityDoubler = false
@@ -143,5 +147,9 @@ struct GearPiece {
     
     func specialEffect(ldeIntensity: Int = 0) -> AbilitySpecialEffect? {
         return self.main.toSpecialEffect(intensity: ldeIntensity)
+    }
+    
+    func hasAbility(_ ability: Ability) -> Bool {
+        return self.main == ability || self.sub1 == ability || self.sub2 == ability || self.sub3 == ability
     }
 }

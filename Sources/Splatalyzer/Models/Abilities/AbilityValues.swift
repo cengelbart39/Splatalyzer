@@ -8,22 +8,56 @@
 import Foundation
 
 struct AbilityValues: Codable {
-    var dictionary: [AbilityValue : [Double]]
+    var dictionary: [AbilityValue : HighMidLow]
     
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         let stringDictionary = try container.decode([String : [Double]].self)
-
+        
         dictionary = [:]
         for (stringKey, value) in stringDictionary {
-          guard let key = AbilityValue(rawValue: stringKey) else {
-            throw DecodingError.dataCorruptedError(
-              in: container,
-              debugDescription: "Invalid key '\(stringKey)'"
-            )
-          }
-          dictionary[key] = value
+            guard let key = AbilityValue(rawValue: stringKey) else {
+                throw DecodingError.dataCorruptedError(
+                    in: container,
+                    debugDescription: "Invalid key '\(stringKey)'"
+                )
+            }
+            
+            let sorted = value.sorted(by: {$0 < $1})
+            
+            guard let hml = HighMidLow(sorted) else {
+                throw DecodingError.dataCorruptedError(
+                    in: container, 
+                    debugDescription: "\(value) for '\(stringKey)' does not have 3 elements."
+                )
+            }
+            
+            dictionary[key] = hml
         }
+        
+        dictionary[.markingFrameSubSpec] = HighMidLow()
+        dictionary[.subSpecUpParam] = HighMidLow()
+        dictionary[.subVelocity] = HighMidLow()
+        dictionary[.subFirstPhaseDuration] = HighMidLow()
+        dictionary[.subSecondPhaseDuration] = HighMidLow()
+        dictionary[.subMarkingTimeInSeconds] = HighMidLow()
+        dictionary[.subMarkingRadius] = HighMidLow()
+        dictionary[.subExplosionRadius] = HighMidLow()
+        dictionary[.subHp] = HighMidLow()
+        
+        dictionary[.specialDurationFrame] = HighMidLow()
+        dictionary[.specialDamageDistance] = HighMidLow()
+        dictionary[.specialPaintRadius] = HighMidLow()
+        dictionary[.specialFieldHp] = HighMidLow()
+        dictionary[.specialDeviceHp] = HighMidLow()
+        dictionary[.specialHookInkConsumption] = HighMidLow()
+        dictionary[.specialInkConsumptionPerSecond] = HighMidLow()
+        dictionary[.specialReticleRadius] = HighMidLow()
+        dictionary[.specialThrowDistance] = HighMidLow()
+        dictionary[.specialAutoChargeRate] = HighMidLow()
+        dictionary[.specialMaxRadius] = HighMidLow()
+        dictionary[.specialMinRadius] = HighMidLow()
+        dictionary[.specialPowerUpDuration] = HighMidLow()
     }
 }
 
@@ -70,4 +104,69 @@ enum AbilityValue: String, Codable {
     case superJumpMoveFrm = "SuperJump_MoveFrm"
     case wallJumpChargeFrm = "WallJumpChargeFrm"
     case reduceJumpSwerveRate = "ReduceJumpSwerveRate"
+    
+    case markingFrameSubSpec
+    case subSpecUpParam
+    case subVelocity
+    case subFirstPhaseDuration
+    case subSecondPhaseDuration
+    case subMarkingTimeInSeconds
+    case subMarkingRadius
+    case subExplosionRadius
+    case subHp
+    
+    case specialDurationFrame
+    case specialDamageDistance
+    case specialPaintRadius
+    case specialFieldHp
+    case specialDeviceHp
+    case specialHookInkConsumption
+    case specialInkConsumptionPerSecond
+    case specialReticleRadius
+    case specialThrowDistance
+    case specialMoveSpeed
+    case specialAutoChargeRate
+    case specialMaxRadius
+    case specialMinRadius
+    case specialPowerUpDuration
+    
+    static func getSubConsumeLevel(for lvl: Int) -> AbilityValue {
+        if lvl == 0 {
+            return .consumeRtSubLv0
+            
+        } else if lvl == 1 {
+            return .consumeRtSubLv1
+            
+        } else if lvl == 2 {
+            return .consumeRtSubLv2
+            
+        } else if lvl == 3 {
+            return .consumeRtSubLv3
+            
+        } else {
+            return .consumeRtSubLv4
+        }
+    }
+    
+    static func getMoveVelHumanLvl(for speedType: WeaponSpeedType) -> AbilityValue {
+        switch speedType {
+        case .slow:
+            return .moveVelHumanSlow
+        case .mid:
+            return .moveVelHuman
+        case .fast:
+            return .moveVelHumanFast
+        }
+    }
+    
+    static func getMoveVelStealthLvl(for speedType: WeaponSpeedType) -> AbilityValue {
+        switch speedType {
+        case .slow:
+            return .moveVelStealthSlow
+        case .mid:
+            return .moveVelStealth
+        case .fast:
+            return .moveVelStealthFast
+        }
+    }
 }

@@ -10,12 +10,12 @@ import Foundation
 /// An object representing the necessary Main Weapon information for build analysis.
 ///
 /// Combines information from ``GameParametersContainer`` and ``WeaponInfoMain``
-struct MainWeaponData {
+struct MainWeaponData: WeaponDatable {
     let specialPoints: Int
     let mainWeaponId: MainRowId
     let subWeapon: SubWeapon
     let specialWeapon: SpecialWeapon
-    let overwrites: MainOverwrites
+    let overwrites: Overwritable
     let tripleShotSpanFrame: Int?
     let weaponSpeedType: WeaponSpeedType?
     let moveSpeed: Double?
@@ -31,7 +31,7 @@ struct MainWeaponData {
     let damageSecondaryValueDirectMin: Double?
     let damageLapOverValueMax: Int?
     let damageLapOverValueMin: Int?
-    let blastSplashDirect: Double?
+    let blastSplashDamage: Double?
     let blastDamageDistance: [DistanceDamage]
     let damageValueFullCharge: Int?
     let damageValueFullChargeMax: Int?
@@ -72,6 +72,16 @@ struct MainWeaponData {
     let inkConsumeSwing: Double?
     let inkConsumeChargeFullCharge: Double?
     
+    var inkTankSize: Double {
+        if self.mainWeaponId == .splattershotJr || self.mainWeaponId == .customSplattershotJr {
+            
+            return 1.1
+            
+        } else {
+            return 1
+        }
+    }
+    
     /**
      Creates an instance for a Blaster weapon
      - Parameters:
@@ -105,7 +115,7 @@ struct MainWeaponData {
         self.damageSecondaryValueDirectMin = nil
         self.damageLapOverValueMax = nil
         self.damageLapOverValueMin = nil
-        self.blastSplashDirect = nil
+        self.blastSplashDamage = nil
         self.blastDamageDistance = gameParams.blastParam.distanceDamage
         self.damageValueFullCharge = nil
         self.damageValueFullChargeMax = nil
@@ -176,7 +186,7 @@ struct MainWeaponData {
         self.damageSecondaryValueDirectMin = nil
         self.damageLapOverValueMax = nil
         self.damageLapOverValueMin = nil
-        self.blastSplashDirect = nil
+        self.blastSplashDamage = nil
         self.blastDamageDistance = []
         self.damageValueFullCharge = nil
         self.damageValueFullChargeMax = nil
@@ -251,7 +261,7 @@ struct MainWeaponData {
         self.damageSecondaryValueDirectMin = nil
         self.damageLapOverValueMax = nil
         self.damageLapOverValueMin = nil
-        self.blastSplashDirect = nil
+        self.blastSplashDamage = nil
         self.blastDamageDistance = []
         self.damageValueFullCharge = gameParams.damageParam.valueFullCharge
         self.damageValueFullChargeMax = nil
@@ -326,7 +336,7 @@ struct MainWeaponData {
         self.damageSecondaryValueDirectMin = nil
         self.damageLapOverValueMax = gameParams.damageLapOverParam?.valueMax
         self.damageLapOverValueMin = gameParams.damageLapOverParam?.valueMin
-        self.blastSplashDirect = nil
+        self.blastSplashDamage = nil
         self.blastDamageDistance = []
         self.damageValueFullCharge = nil
         self.damageValueFullChargeMax = nil
@@ -396,7 +406,7 @@ struct MainWeaponData {
         self.damageSecondaryValueDirectMin = nil
         self.damageLapOverValueMax = nil
         self.damageLapOverValueMin = nil
-        self.blastSplashDirect = nil
+        self.blastSplashDamage = nil
         self.blastDamageDistance = []
         self.damageValueFullCharge = nil
         self.damageValueFullChargeMax = nil
@@ -479,7 +489,7 @@ struct MainWeaponData {
         self.damageSecondaryValueDirectMin = nil
         self.damageLapOverValueMax = nil
         self.damageLapOverValueMin = nil
-        self.blastSplashDirect = nil
+        self.blastSplashDamage = nil
         self.blastDamageDistance = []
         self.damageValueFullCharge = nil
         self.damageValueFullChargeMax = nil
@@ -553,7 +563,7 @@ struct MainWeaponData {
         self.damageSecondaryValueDirectMin = nil
         self.damageLapOverValueMax = nil
         self.damageLapOverValueMin = nil
-        self.blastSplashDirect = nil
+        self.blastSplashDamage = nil
         self.blastDamageDistance = []
         self.damageValueFullCharge = nil
         self.damageValueFullChargeMax = nil
@@ -634,7 +644,7 @@ struct MainWeaponData {
         self.damageSecondaryValueDirectMin = nil
         self.damageLapOverValueMax = nil
         self.damageLapOverValueMin = nil
-        self.blastSplashDirect = nil
+        self.blastSplashDamage = nil
         self.blastDamageDistance = []
         self.damageValueFullCharge = nil
         self.damageValueFullChargeMax = nil
@@ -712,7 +722,7 @@ struct MainWeaponData {
         self.damageSecondaryValueDirectMin = isDreadWringer ? nil : gameParams.unitGroupParam.unit[1].damageParam.valueMin
         self.damageLapOverValueMax = nil
         self.damageLapOverValueMin = nil
-        self.blastSplashDirect = isSloshingMachine ? gameParams.unitGroupParam.unit[1].damageParam.valueMax : nil
+        self.blastSplashDamage = isSloshingMachine ? gameParams.unitGroupParam.unit[1].damageParam.valueMax : nil
         self.blastDamageDistance = gameParams.blastParam?.blastParam.distanceDamage ?? []
         self.damageValueFullCharge = nil
         self.damageValueFullChargeMax = nil
@@ -786,7 +796,7 @@ struct MainWeaponData {
         self.damageSecondaryValueDirectMin = nil
         self.damageLapOverValueMax = nil
         self.damageLapOverValueMin = nil
-        self.blastSplashDirect = nil
+        self.blastSplashDamage = nil
         self.blastDamageDistance = []
         self.damageValueFullCharge = nil
         self.damageValueFullChargeMax = gameParams.damageParam.valueFullChargeMax
@@ -857,7 +867,7 @@ struct MainWeaponData {
         self.damageSecondaryValueDirectMin = nil
         self.damageLapOverValueMax = nil
         self.damageLapOverValueMin = nil
-        self.blastSplashDirect = nil
+        self.blastSplashDamage = nil
         self.blastDamageDistance = weaponInfo.rowId == .reeflux450 || weaponInfo.rowId == .reeflux450Deco ? [] : gameParams.bulletStringerParam.detonationParam.blastParam.distanceDamage
         self.damageValueFullCharge = nil
         self.damageValueFullChargeMax = nil
@@ -898,6 +908,144 @@ struct MainWeaponData {
         self.inkConsumeSwing = nil
         self.inkConsumeChargeFullCharge = gameParams.weaponStringerParam.chargeParameter.inkConsumeFullCharge
     }
+    
+    func inkConsume(for type: InkConsumeType) -> Double? {
+        switch type {
+        case .normal:
+            return self.inkConsume ?? self.inkConsumeWeaponShelterShotgun
+            
+        case .swing:
+            return self.inkConsumeSwing ?? self.inkConsumeWeaponSwing
+            
+        case .slosh:
+            return self.inkConsumeSlosher
+            
+        case .verticalSwing:
+            return self.inkConsumeWeaponVerticalSwing
+            
+        case .horizontalSwing:
+            return self.inkConsumeWeaponWideSwing
+            
+        case .tapShot:
+            return self.inkConsumeMinCharge
+            
+        case .fullCharge:
+            return self.inkConsumeFullCharge ?? self.inkConsumeChargeFullCharge
+            
+        case .splatlingCharge:
+            return self.inkConsumeFullChargeSplatling
+            
+        case .shieldLaunch:
+            return self.inkConsumeUmbrellaShelterCanopy
+            
+        case .dualieRoll:
+            return self.inkConsumeSideStep
+        }
+    }
+    
+    func damage(for type: DamageType) -> Any? {
+        switch type {
+        case .turretMax:
+            return self.damageLapOverValueMax.toDouble()
+            
+        case .turretMin:
+            return self.damageLapOverValueMin.toDouble()
+            
+        case .normalMaxFullCharge:
+            return self.damageValueFullChargeMax.toDouble()
+            
+        case .normalMax:
+            return self.damageValueMax.toDouble()
+            
+        case .normalMin:
+            return self.damageValueMin.toDouble()
+            
+        case .direct:
+            return self.damageValueDirect
+            
+        case .directMax:
+            return self.damageValueDirectMax
+            
+        case .directMin:
+            return self.damageValueDirectMin
+            
+        case .directSecondaryMax:
+            return self.damageSecondaryValueDirectMax
+            
+        case .directSecondaryMin:
+            return self.damageSecondaryValueDirectMin
+            
+        case .fullCharge:
+            return self.damageValueFullCharge.toDouble()
+            
+        case .maxCharge:
+            return self.damageValueMaxCharge.toDouble()
+            
+        case .tapShot:
+            return self.damageValueMinCharge.toDouble()
+            
+        case .splash:
+            return self.blastSplashDamage
+            
+        case .splatanaVertical:
+            return self.damageSplatanaVertical.toDouble()
+            
+        case .splatanaVerticalDirect:
+            return self.damageSplatanaVerticalDirect.toDouble()
+            
+        case .splatanaHorizontal:
+            return self.damageSplatanaHorizontal.toDouble()
+            
+        case .splatanaHorizontalDirect:
+            return self.damageSplatanaHorizontalDirect.toDouble()
+            
+        case .splashMax:
+            return self.swingUnitGroupDamageMax.toDouble()
+            
+        case .splashMin:
+            return self.swingUnitGroupDamageMin.toDouble()
+            
+        case .splashVerticalMax:
+            return self.verticalSwingUnitGroupDamageMax.toDouble()
+            
+        case .splashVerticalMin:
+            return self.verticalSwingUnitGroupDamageMin.toDouble()
+            
+        case .splashHorizontalMax:
+            return self.wideSwingUnitGroupDamageMax.toDouble()
+            
+        case .splashHorizontalMin:
+            return self.wideSwingUnitGroupDamageMin.toDouble()
+            
+        case .rollOver:
+            return self.bodyDamage.toDouble()
+            
+        case .secondaryModeMax:
+            return self.variableDamageMax.toDouble()
+            
+        case .secondaryModeMin:
+            return self.variableDamageMin.toDouble()
+            
+        case .distance:
+            return self.blastDamageDistance
+            
+        default:
+            return nil
+        }
+    }
+    
+    func shootingRunSpeed(for type: ShootingRunSpeedType) -> Double? {
+        switch type {
+        case .moveSpeed:
+            return self.moveSpeed
+        case .moveSpeedCharge:
+            return self.moveSpeedCharge
+        case .moveSpeedFullCharge:
+            return self.moveSpeedFullCharge
+        case .moveSpeedVariable:
+            return self.moveSpeedVariable
+        }
+    }
 }
 
 @inlinable public func min<T: Comparable>(_ x: T?, _ y: T?) -> T? {
@@ -915,4 +1063,3 @@ struct MainWeaponData {
         
     }
 }
-

@@ -42,6 +42,32 @@ struct HighMidLow: Codable {
         case low = "Low"
         case mid = "Mid"
     }
+    
+    init() {
+        self.high = 0
+        self.low = 0
+        self.mid = 0
+    }
+    
+    init(high: Double?, low: Double?, mid: Double?) {
+        self.high = high
+        self.low = low
+        self.mid = mid
+    }
+    
+    init?(_ arr: [Double]) {
+        if arr.count != 3 { return nil }
+        
+        let sorted = arr.sorted(by: {$0 < $1})
+        
+        self.low = sorted[0]
+        self.mid = sorted[1]
+        self.high = sorted[2]
+    }
+    
+    func hasEffect() -> Bool {
+        return high != mid || mid != low
+    }
 }
 
 struct KnockbackParameter: Codable {

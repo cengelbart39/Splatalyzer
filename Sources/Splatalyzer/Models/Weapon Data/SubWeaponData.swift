@@ -7,12 +7,13 @@
 
 import Foundation
 
-struct SubWeaponData {
-    let overwrites: SubOverwrites
+struct SubWeaponData: WeaponDatable {
+    let id: SubRowId
+    let overwrites: Overwritable
     let subLevelSave: Int
     let inkConsume: Double
     let inkRecoverStop: Int
-    let distanceDamage: [[DistanceDamage]]
+    let distanceDamage: [DistanceDamage]
     let directDamage: Int?
     let blastParam: [DistanceDamage]
     let blastParamChase: [DistanceDamage]
@@ -26,7 +27,8 @@ struct SubWeaponData {
     init(container: SquidBeakonGameParameters, playerInfo: PlayerParameters) {
         let gameParams = container.parameters
         
-        self.overwrites = gameParams.getOverwrites(playerInfo)        
+        self.id = .squidBeakon
+        self.overwrites = gameParams.getOverwrites(playerInfo)
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
         self.inkConsume = gameParams.weaponParam.inkConsume
         self.inkRecoverStop = gameParams.weaponParam.inkRecoverStop
@@ -42,14 +44,12 @@ struct SubWeaponData {
     init(container: CurlingBombGameParameters) {
         let gameParams = container.parameters
         
+        self.id = .curlingBomb
         self.overwrites = gameParams.getOverwrites()
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
         self.inkConsume = gameParams.weaponParam.inkConsume
         self.inkRecoverStop = gameParams.weaponParam.inkRecoverStop
-        self.distanceDamage = [
-            gameParams.blastParamMaxCharge.distanceDamage,
-            gameParams.blastParamMinCharge.distanceDamage
-        ]
+        self.distanceDamage = gameParams.blastParamMaxCharge.distanceDamage + gameParams.blastParamMinCharge.distanceDamage
         self.directDamage = gameParams.moveParam.damageDirectHit
         self.blastParam = []
         self.blastParamChase = []
@@ -61,6 +61,7 @@ struct SubWeaponData {
     init(container: FizzyBombGameParameters) {
         let gameParams = container.parameters
         
+        self.id = .fizzyBomb
         self.overwrites = gameParams.getOverwrites()
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
         self.inkConsume = gameParams.weaponParam.inkConsume
@@ -77,11 +78,12 @@ struct SubWeaponData {
     init(container: BurstBombGameParameters) {
         let gameParams = container.parameters
         
+        self.id = .burstBomb
         self.overwrites = gameParams.getOverwrites()
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
         self.inkConsume = gameParams.weaponParam.inkConsume
         self.inkRecoverStop = gameParams.weaponParam.inkRecoverStop
-        self.distanceDamage = [gameParams.blastParam.distanceDamage]
+        self.distanceDamage = gameParams.blastParam.distanceDamage
         self.directDamage = nil
         self.blastParam = []
         self.blastParamChase = []
@@ -93,11 +95,12 @@ struct SubWeaponData {
     init(container: AutobombGameParameters) {
         let gameParams = container.parameters
         
+        self.id = .autobomb
         self.overwrites = gameParams.getOverwrites()
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
         self.inkConsume = gameParams.weaponParam.inkConsume
         self.inkRecoverStop = gameParams.weaponParam.inkRecoverStop
-        self.distanceDamage = [gameParams.blastParam.distanceDamage]
+        self.distanceDamage = gameParams.blastParam.distanceDamage
         self.directDamage = nil
         self.blastParam = []
         self.blastParamChase = []
@@ -109,11 +112,12 @@ struct SubWeaponData {
     init(container: SplatBombGameParameters) {
         let gameParams = container.parameters
         
+        self.id = .splatBomb
         self.overwrites = gameParams.getOverwrites()
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
         self.inkConsume = 0.7
         self.inkRecoverStop = gameParams.weaponParam.inkRecoverStop
-        self.distanceDamage = [gameParams.blastParam.distanceDamage]
+        self.distanceDamage = gameParams.blastParam.distanceDamage
         self.directDamage = nil
         self.blastParam = []
         self.blastParamChase = []
@@ -125,11 +129,12 @@ struct SubWeaponData {
     init(container: SuctionBombGameParameters) {
         let gameParams = container.parameters
         
+        self.id = .suctionBomb
         self.overwrites = gameParams.getOverwrites()
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
         self.inkConsume = 0.7
         self.inkRecoverStop = gameParams.weaponParam.inkRecoverStop
-        self.distanceDamage = [gameParams.blastParam.distanceDamage]
+        self.distanceDamage = gameParams.blastParam.distanceDamage
         self.directDamage = nil
         self.blastParam = []
         self.blastParamChase = []
@@ -141,6 +146,7 @@ struct SubWeaponData {
     init(container: TorpedoGameParameters) {
         let gameParams = container.parameters
         
+        self.id = .torpedo
         self.overwrites = gameParams.getOverwrites()
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
         self.inkConsume = gameParams.weaponParam.inkConsume
@@ -157,6 +163,7 @@ struct SubWeaponData {
     init(container: AngleShooterGameParameters) {
         let gameParams = container.parameters
         
+        self.id = .angleShooter
         self.overwrites = gameParams.getOverwrites()
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
         self.inkConsume = gameParams.weaponParam.inkConsume
@@ -173,6 +180,7 @@ struct SubWeaponData {
     init(container: PointSensorGameParameters) {
         let gameParams = container.parameters
         
+        self.id = .pointSensor
         self.overwrites = gameParams.getOverwrites()
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
         self.inkConsume = gameParams.weaponParam.inkConsume
@@ -189,6 +197,7 @@ struct SubWeaponData {
     init(container: ToxicMistGameParameters) {
         let gameParams = container.parameters
         
+        self.id = .toxicMist
         self.overwrites = gameParams.getOverwrites()
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
         self.inkConsume = gameParams.weaponParam.inkConsume
@@ -205,6 +214,7 @@ struct SubWeaponData {
     init(container: SplashWallGameParameters) {
         let gameParams = container.parameters
         
+        self.id = .splashWall
         self.overwrites = gameParams.getOverwrites()
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
         self.inkConsume = gameParams.weaponParam.inkConsume
@@ -221,6 +231,7 @@ struct SubWeaponData {
     init(container: SprinklerGameParameters) {
         let gameParams = container.parameters
         
+        self.id = .sprinkler
         self.overwrites = gameParams.getOverwrites()
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
         self.inkConsume = gameParams.weaponParam.inkConsume
@@ -237,14 +248,56 @@ struct SubWeaponData {
     init(container: InkMineGameParameters) {
         let gameParams = container.parameters
         
+        self.id = .inkMine
         self.overwrites = gameParams.getOverwrites()
         self.subLevelSave = gameParams.subWeaponSetting.subInkSaveLv ?? 2
         self.inkConsume = gameParams.weaponParam.inkConsume
         self.inkRecoverStop = gameParams.weaponParam.inkRecoverStop
-        self.distanceDamage = [gameParams.blastParam.distanceDamage]
+        self.distanceDamage = gameParams.blastParam.distanceDamage
         self.directDamage = nil
         self.blastParam = []
         self.blastParamChase = []
         self.splashBlastParam = []
+    }
+    
+    func damage(for type: DamageType) -> Any? {
+        switch type {
+        case .bombNormal:
+            return self.distanceDamage
+            
+        case .bombDirect:
+            return self.directDamage ?? self.blastParamChase
+            
+        case .distance:
+            return self.blastParam
+            
+        case .splash:
+            return self.splashBlastParam
+            
+        default:
+            return nil
+        }
+    }
+    
+    func abilityValue() -> AbilityValue? {
+        switch self.id {
+        case .splatBomb, .suctionBomb, .curlingBomb, .autobomb, .inkMine, .torpedo:
+            return .damageRtBombH
+            
+        case .burstBomb, .fizzyBomb:
+            return .damageRtBombL
+            
+        case .angleShooter:
+            return .damageRtLineMarker
+            
+        case .sprinkler:
+            return .damageRtSprinkler
+            
+        case .splashWall:
+            return .damageRtShield
+            
+        default:
+            return nil
+        }
     }
 }
