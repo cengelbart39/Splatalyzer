@@ -5,6 +5,12 @@
 //  Created by Christopher Engelbart on 1/12/24.
 //
 
+#if os(macOS)
+import AppKit
+#else
+import UIKit
+#endif
+
 import Foundation
 
 public enum SubWeapon: String, CaseIterable {
@@ -22,6 +28,16 @@ public enum SubWeapon: String, CaseIterable {
     case splashWall = "Shield"
     case sprinkler = "Sprinkler"
     case inkMine = "Trap"
+    
+    #if os(macOS)
+    var image: NSImage? {
+        return NSImage(named: self.rawValue)
+    }
+    #else
+    var image: UIImage? {
+        return UIImage(named: self.rawValue)
+    }
+    #endif
     
     func fileName() -> String {
         if self.rawValue.contains("_") {

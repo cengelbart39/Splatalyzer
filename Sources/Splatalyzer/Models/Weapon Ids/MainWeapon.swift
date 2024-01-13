@@ -5,6 +5,12 @@
 //  Created by Christopher Engelbart on 1/12/24.
 //
 
+#if os(macOS)
+import AppKit
+#else
+import UIKit
+#endif
+
 import Foundation
 
 public enum MainWeapon: String, CaseIterable {
@@ -176,6 +182,16 @@ public enum MainWeapon: String, CaseIterable {
             return .stringer
         }
     }
+    
+    #if os(macOS)
+    public var image: NSImage? {
+        return NSImage(named: "Path_Wst_\(self.rawValue).png")
+    }
+    #else
+    public var image: UIImage? {
+        return UIImage(named: "Path_Wst_\(self.rawValue).png")
+    }
+    #endif
     
     func fileName() -> String {
         let split = self.rawValue.split(separator: "_")
