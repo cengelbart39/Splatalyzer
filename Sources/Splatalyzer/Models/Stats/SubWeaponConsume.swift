@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct SubWeaponConsume {
-    let inkConsume: Double
-    let maxSubsFromFullInkTank: Int
+public struct SubWeaponConsume {
+    public let inkConsume: Double
+    public let maxSubsFromFullInkTank: Int
     
-    init(
+    public init(
         _ ap: AbilityPoints,
         _ abilities: AbilityValues,
         _ mainInfo: MainWeaponData,

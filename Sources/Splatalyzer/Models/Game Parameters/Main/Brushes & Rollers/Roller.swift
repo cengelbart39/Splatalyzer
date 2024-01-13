@@ -7,24 +7,24 @@
 
 import Foundation
 
-struct Roller: Codable {
-    let bodyParam: BRBodyParameter
-    let bulletAdditionMovePlayerSpalashNearestParam: BRBulletAdditionMovePlayerSplashNearestParameter
+public struct Roller: Codable {
+    public let bodyParam: BRBodyParameter
+    public let bulletAdditionMovePlayerSpalashNearestParam: BRBulletAdditionMovePlayerSplashNearestParameter
     
-    let knockBackByCanopyParam: KnockBackByCanopyParameter?
+    public let knockBackByCanopyParam: KnockBackByCanopyParameter?
     
-    let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
-    let mainWeaponSetting: MainWeaponSettings
+    public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
+    public let mainWeaponSetting: MainWeaponSettings
     
-    let verticalSwingUnitGroupParam: VerticalSwingUnitGroupParameter
-    let weaponRollParam: BRWeaponRollParameter
-    let weaponVerticalSwingParam: BRWeaponSwingParameter
-    let weaponWideSwingParam: BRWeaponSwingParameter
-    let wideSwingUnitGroupParam: WideSwingUnitGroupParameter
+    public let verticalSwingUnitGroupParam: VerticalSwingUnitGroupParameter
+    public let weaponRollParam: BRWeaponRollParameter
+    public let weaponVerticalSwingParam: BRWeaponSwingParameter
+    public let weaponWideSwingParam: BRWeaponSwingParameter
+    public let wideSwingUnitGroupParam: WideSwingUnitGroupParameter
     
-    let spawnBulletAdditionMovePlayerParam: BRSpawnBulletAdditionMoveParameter
+    public let spawnBulletAdditionMovePlayerParam: BRSpawnBulletAdditionMoveParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case bodyParam = "BodyParam"
         case bulletAdditionMovePlayerSpalashNearestParam = "BulletAdditionMovePlayerSplashNearestParam"
         case knockBackByCanopyParam = "KnockBackByCanopyParam"
@@ -41,29 +41,29 @@ struct Roller: Codable {
 }
 
 extension Roller {
-    struct KnockBackByCanopyParameter: Codable {
-        let type: String
-        let knockBackRollerPlayerDamageOff: BRKnockBack
-        let knockBackRollerPlayerDamageOn: BRKnockBack
+    public struct KnockBackByCanopyParameter: Codable {
+        public let type: String
+        public let knockBackRollerPlayerDamageOff: BRKnockBack
+        public let knockBackRollerPlayerDamageOn: BRKnockBack
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case knockBackRollerPlayerDamageOff = "KnockBackRollerPlayerDamageOff"
             case knockBackRollerPlayerDamageOn = "KnockBackRollerPlayerDamageOn"
         }
     }
     
-    struct VerticalSwingUnitGroupParameter: Codable {
-        let type: String
-        let damageParam: BRDamageParameter
-        let spawnSplashBetweenLength: Double
-        let spawnSplashFirstLength: Double
-        let spawnSplashNum: Int
-        let splashNearestParam: BRSplashNearestParameter
-        let splashPaintParam: SplashPaintParameter
-        let unit: [BRUnit]
+    public struct VerticalSwingUnitGroupParameter: Codable {
+        public let type: String
+        public let damageParam: BRDamageParameter
+        public let spawnSplashBetweenLength: Double
+        public let spawnSplashFirstLength: Double
+        public let spawnSplashNum: Int
+        public let splashNearestParam: BRSplashNearestParameter
+        public let splashPaintParam: SplashPaintParameter
+        public let unit: [BRUnit]
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case damageParam = "DamageParam"
             case spawnSplashBetweenLength = "SpawnSplashBetweenLength"
@@ -75,13 +75,13 @@ extension Roller {
         }
     }
     
-    struct WideSwingUnitGroupParameter: Codable {
-        let type: String
-        let damageParam: BRDamageParameter
-        let splashNearestParam: BRSplashNearestParameter
-        let unit: [BRUnit]
+    public struct WideSwingUnitGroupParameter: Codable {
+        public let type: String
+        public let damageParam: BRDamageParameter
+        public let splashNearestParam: BRSplashNearestParameter
+        public let unit: [BRUnit]
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case damageParam = "DamageParam"
             case splashNearestParam = "SplashNearestParam"
@@ -91,13 +91,13 @@ extension Roller {
 }
 
 extension Roller.VerticalSwingUnitGroupParameter {
-    struct SplashPaintParameter: Codable {
-        let depthScaleMax: Double
-        let depthScaleMin: Double
-        let widthHalf: Double
-        let widthHalfNearest: Double
+    public struct SplashPaintParameter: Codable {
+        public let depthScaleMax: Double
+        public let depthScaleMin: Double
+        public let widthHalf: Double
+        public let widthHalfNearest: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case depthScaleMax = "DepthScaleMax"
             case depthScaleMin = "DepthScaleMin"
             case widthHalf = "WidthHalf"

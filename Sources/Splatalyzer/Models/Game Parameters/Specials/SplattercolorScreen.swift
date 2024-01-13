@@ -7,26 +7,26 @@
 
 import Foundation
 
-struct SplattercolorScreen: SpecialParametable {
-    let moveParam: MoveParameter
-    let wallParam: WallParameter
-    let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
+public struct SplattercolorScreen: SpecialParametable {
+    public let moveParam: MoveParameter
+    public let wallParam: WallParameter
+    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case moveParam = "MoveParam"
         case wallParam = "WallParam"
         case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
     }
     
-    struct MoveParameter: Codable {
-        let type: String
-        let damageValueForDamageTag: Int
-        let guideHitCollisionType: String
-        let spawnSpeedY: Double
-        let spawnSpeedYWorldMin: Double
-        let spawnSpeedZSpecUp: HighMidLow
+    public struct MoveParameter: Codable {
+        public let type: String
+        public let damageValueForDamageTag: Int
+        public let guideHitCollisionType: String
+        public let spawnSpeedY: Double
+        public let spawnSpeedYWorldMin: Double
+        public let spawnSpeedZSpecUp: HighMidLow
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case damageValueForDamageTag = "DamageValueForDamageTag"
             case guideHitCollisionType = "GuideHitCollisionType"
@@ -36,35 +36,35 @@ struct SplattercolorScreen: SpecialParametable {
         }
     }
     
-    struct WallParameter: Codable {
-        let type: String
-        let closingFrame: Int
-        let damageValue: Int
-        let debugBlockRotateDistance: Double
-        let debugBlockRotateSpeedMax: Double
-        let debugBlockRotateSpeedMin: Double
-        let debugCircleRadius: Double
-        let debugCircleSideOffset: Double
-        let debugCircleSlantOffset: XYData
-        let debugWallAlpha: Int
-        let markingFrame: Int
-        let moveSpeed: HighMidLow
-        let runningFrame: Int
-        let saturationChangeOutFrame: Int
-        let saturationFrame: Int
-        let saturationTarget: Double
-        let splashPaintRadius: Double
-        let splashSpawnAllFrame: Int
-        let splashSpawnPosition: [XYZData]
-        let splashSpawnSpan: Int
-        let startUpFrame: Int
-        let targetSpeedFrame: Int
-        let wallDepth: Double
-        let wallHeightDown: Double
-        let wallHeightUp: Double
-        let wallWidth: Double
+    public struct WallParameter: Codable {
+        public let type: String
+        public let closingFrame: Int
+        public let damageValue: Int
+        public let debugBlockRotateDistance: Double
+        public let debugBlockRotateSpeedMax: Double
+        public let debugBlockRotateSpeedMin: Double
+        public let debugCircleRadius: Double
+        public let debugCircleSideOffset: Double
+        public let debugCircleSlantOffset: XYData
+        public let debugWallAlpha: Int
+        public let markingFrame: Int
+        public let moveSpeed: HighMidLow
+        public let runningFrame: Int
+        public let saturationChangeOutFrame: Int
+        public let saturationFrame: Int
+        public let saturationTarget: Double
+        public let splashPaintRadius: Double
+        public let splashSpawnAllFrame: Int
+        public let splashSpawnPosition: [XYZData]
+        public let splashSpawnSpan: Int
+        public let startUpFrame: Int
+        public let targetSpeedFrame: Int
+        public let wallDepth: Double
+        public let wallHeightDown: Double
+        public let wallHeightUp: Double
+        public let wallWidth: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case closingFrame = "ClosingFrame"
             case damageValue = "DamageValue"
@@ -94,13 +94,13 @@ struct SplattercolorScreen: SpecialParametable {
         }
     }
     
-    struct SpawnBulletAdditionMovePlayerParameter: Codable {
-        let type: String
-        let xRate: Double
-        let yMax: Double
-        let yPlusRate: Double
+    public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public let type: String
+        public let xRate: Double
+        public let yMax: Double
+        public let yPlusRate: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case xRate = "XRate"
             case yMax = "YMax"
@@ -108,7 +108,7 @@ struct SplattercolorScreen: SpecialParametable {
         }
     }
     
-    func getOverwrites() -> SpecialOverwrites {
+    public func getOverwrites() -> SpecialOverwrites {
         return SpecialOverwrites(
             chargeRateAutoPerFrame: nil,
             crossPaintCheckLength: nil,

@@ -7,33 +7,33 @@
 
 import Foundation
 
-struct BRUnit: Codable {
-    let addSpawnSpeedYRateBySpeed: Double?
-    let afterOffsetSpawnRoateXDegree: Double?
-    let afterOffsetSpawnSpeed: Double?
-    let bulletNum: Int?
-    let depletionBulletNum: Int?
-    let depletionSpeedRate: Double?
-    let fourPetalsCenterRadiusRate: Double?
-    let fourPetalsPetalRadiusRate: Double?
-    let paintOnly: Bool?
-    let spawnPositionHeight: Int?
-    let spawnPositionOffsetHeight: Double?
-    let spawnPositionRandomCube: Double?
-    let spawnPositionWidth: Double?
-    let spawnRotateXDegreeBase: Double?
-    let spawnRotateYDegree: Double?
-    let spawnRotateYDegreeLeftToRight: Double?
-    let spawnRotateYDegreeRightToLeft: Double?
-    let spawnSpeedBase: Double?
-    let spawnSpeedRandom: Double?
-    let spawnSplash: Bool?
-    let spawnWideDegree: Int?
-    let swerveRateBySpeed: Double?
-    let unitDamageRate: Double?
-    let unitParam: UnitParameter
+public struct BRUnit: Codable {
+    public let addSpawnSpeedYRateBySpeed: Double?
+    public let afterOffsetSpawnRoateXDegree: Double?
+    public let afterOffsetSpawnSpeed: Double?
+    public let bulletNum: Int?
+    public let depletionBulletNum: Int?
+    public let depletionSpeedRate: Double?
+    public let fourPetalsCenterRadiusRate: Double?
+    public let fourPetalsPetalRadiusRate: Double?
+    public let paintOnly: Bool?
+    public let spawnPositionHeight: Int?
+    public let spawnPositionOffsetHeight: Double?
+    public let spawnPositionRandomCube: Double?
+    public let spawnPositionWidth: Double?
+    public let spawnRotateXDegreeBase: Double?
+    public let spawnRotateYDegree: Double?
+    public let spawnRotateYDegreeLeftToRight: Double?
+    public let spawnRotateYDegreeRightToLeft: Double?
+    public let spawnSpeedBase: Double?
+    public let spawnSpeedRandom: Double?
+    public let spawnSplash: Bool?
+    public let spawnWideDegree: Int?
+    public let swerveRateBySpeed: Double?
+    public let unitDamageRate: Double?
+    public let unitParam: UnitParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case addSpawnSpeedYRateBySpeed = "AddSpawnSpeedYRateBySpeed"
         case afterOffsetSpawnRoateXDegree
         case afterOffsetSpawnSpeed
@@ -62,15 +62,15 @@ struct BRUnit: Codable {
 }
 
 extension BRUnit {
-    struct UnitParameter: Codable {
-        let collisionParam: CollisionParameter
-        let drawSizeParam: DrawSizeParameter
-        let moveParam: MoveParameter
-        let paintParam: PaintParameter
-        let wallDropCollisionPaintParam: WallDropCollisionPaintParameter
-        let wallDropMoveParam: WallDropMoveParameter
+    public struct UnitParameter: Codable {
+        public let collisionParam: CollisionParameter
+        public let drawSizeParam: DrawSizeParameter
+        public let moveParam: MoveParameter
+        public let paintParam: PaintParameter
+        public let wallDropCollisionPaintParam: WallDropCollisionPaintParameter
+        public let wallDropMoveParam: WallDropMoveParameter
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case collisionParam = "CollisionParam"
             case drawSizeParam = "DrawSizeParam"
             case moveParam = "MoveParam"
@@ -82,17 +82,17 @@ extension BRUnit {
 }
 
 extension BRUnit.UnitParameter {
-    struct CollisionParameter: Codable {
-        let chargeFrameForField: Int
-        let chargeFrameForPlayer: Int?
-        let depletionRate: Double
-        let endRadiusForField: Double
-        let endRadiusForPlayer: Double
-        let friendThroughFrameForPlayer: Int
-        let initRadiusForField: Double
-        let initRadiusForPlayer: Double
+    public struct CollisionParameter: Codable {
+        public let chargeFrameForField: Int
+        public let chargeFrameForPlayer: Int?
+        public let depletionRate: Double
+        public let endRadiusForField: Double
+        public let endRadiusForPlayer: Double
+        public let friendThroughFrameForPlayer: Int
+        public let initRadiusForField: Double
+        public let initRadiusForPlayer: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case chargeFrameForField = "ChangeFrameForField"
             case chargeFrameForPlayer = "ChangeFrameForPlayer"
             case depletionRate = "DepletionRate"
@@ -104,25 +104,25 @@ extension BRUnit.UnitParameter {
         }
     }
     
-    struct DrawSizeParameter: Codable {
-        let chargeFrame: Int?
-        let endRadius: Double
-        let initRadius: Double
+    public struct DrawSizeParameter: Codable {
+        public let chargeFrame: Int?
+        public let endRadius: Double
+        public let initRadius: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case chargeFrame = "ChangeFrame"
             case endRadius = "EndRadius"
             case initRadius = "InitRadius"
         }
     }
     
-    struct MoveParameter: Codable {
-        let freeAirResist: Double
-        let freeGravity: Double
-        let goStraightToBrakeStateFrame: Int
-        let spawnSpeed: Double
+    public struct MoveParameter: Codable {
+        public let freeAirResist: Double
+        public let freeGravity: Double
+        public let goStraightToBrakeStateFrame: Int
+        public let spawnSpeed: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case freeAirResist = "FreeAirResist"
             case freeGravity = "FreeGravity"
             case goStraightToBrakeStateFrame = "GoStraightToBrakeStateFrame"
@@ -130,25 +130,25 @@ extension BRUnit.UnitParameter {
         }
     }
     
-    struct PaintParameter: Codable {
-        let changeFrameWidthRate: Double
-        let changeWidthEndFrame: Int
-        let changeWidthStartFrame: Int
-        let degreeUseDepthScaleMax: Double?
-        let degreeUseDepthScaleMin: Double
-        let depletionDepthWidthRate: Double
-        let depthScaleMaxBreakFree: Double
-        let depthScaleMaxStraight: Double
-        let depthScaleMinBreakFree: Double?
-        let depthScaleMinStraight: Double?
-        let distanceFar: Double?
-        let distanceNear: Double?
-        let heightUseDepthScaleMaxBreakFree: Double?
-        let heightUseDepthScaleMinBreakFree: Double
-        let widthHalfFar: Double
-        let widthHalfNear: Double
+    public struct PaintParameter: Codable {
+        public let changeFrameWidthRate: Double
+        public let changeWidthEndFrame: Int
+        public let changeWidthStartFrame: Int
+        public let degreeUseDepthScaleMax: Double?
+        public let degreeUseDepthScaleMin: Double
+        public let depletionDepthWidthRate: Double
+        public let depthScaleMaxBreakFree: Double
+        public let depthScaleMaxStraight: Double
+        public let depthScaleMinBreakFree: Double?
+        public let depthScaleMinStraight: Double?
+        public let distanceFar: Double?
+        public let distanceNear: Double?
+        public let heightUseDepthScaleMaxBreakFree: Double?
+        public let heightUseDepthScaleMinBreakFree: Double
+        public let widthHalfFar: Double
+        public let widthHalfNear: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case changeFrameWidthRate = "ChangeFrameWidthRate"
             case changeWidthEndFrame = "ChangeWidthEndFrame"
             case changeWidthStartFrame = "ChangeWidthStartFrame"
@@ -168,13 +168,13 @@ extension BRUnit.UnitParameter {
         }
     }
     
-    struct WallDropCollisionPaintParameter: Codable {
-        let fallPeriodFirstSecondTargetAlp: Double?
-        let paintRadiusFall: Double?
-        let paintRadiusGround: Double?
-        let paintRadiusShock: Double?
+    public struct WallDropCollisionPaintParameter: Codable {
+        public let fallPeriodFirstSecondTargetAlp: Double?
+        public let paintRadiusFall: Double?
+        public let paintRadiusGround: Double?
+        public let paintRadiusShock: Double?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case fallPeriodFirstSecondTargetAlp = "FallPeriodFirstSecondTargetAlp"
             case paintRadiusFall = "PaintRadiusFall"
             case paintRadiusGround = "PaintRadiusGround"
@@ -182,16 +182,16 @@ extension BRUnit.UnitParameter {
         }
     }
     
-    struct WallDropMoveParameter: Codable {
-        let fallPeriodFirstFrameMax: Int
-        let fallPeriodFirstFrameMin: Int?
-        let fallPeriodFirstTargetSpeed: Double?
-        let fallPeriodLastFrameMax: Int
-        let fallPeriodLastFrameMin: Int
-        let fallPeriodSecondFrame: Int
-        let fallPeriodSecondTargetSpeed: Double
+    public struct WallDropMoveParameter: Codable {
+        public let fallPeriodFirstFrameMax: Int
+        public let fallPeriodFirstFrameMin: Int?
+        public let fallPeriodFirstTargetSpeed: Double?
+        public let fallPeriodLastFrameMax: Int
+        public let fallPeriodLastFrameMin: Int
+        public let fallPeriodSecondFrame: Int
+        public let fallPeriodSecondTargetSpeed: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case fallPeriodFirstFrameMax = "FallPeriodFirstFrameMax"
             case fallPeriodFirstFrameMin = "FallPeriodFirstFrameMin"
             case fallPeriodFirstTargetSpeed = "FallPeriodFirstTargetSpeed"

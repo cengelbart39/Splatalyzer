@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct SplashWall: SubParametable {
-    let moveParam: MoveParameter
-    let subWeaponSetting: SubWeaponSetting
-    let weaponParam: WeaponParameter
-    let bulletInformImpactControlForGeyserParam: BulletInformImpactControlForGeyserParameter
-    let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
+public struct SplashWall: SubParametable {
+    public let moveParam: MoveParameter
+    public let subWeaponSetting: SubWeaponSetting
+    public let weaponParam: WeaponParameter
+    public let bulletInformImpactControlForGeyserParam: BulletInformImpactControlForGeyserParameter
+    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case moveParam = "MoveParam"
         case subWeaponSetting = "SubWeaponSetting"
         case weaponParam = "WeaponParam"
@@ -22,17 +22,17 @@ struct SplashWall: SubParametable {
         case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
     }
     
-    struct MoveParameter: Codable {
-        let type: String
-        let damageSpanFrame: Int
-        let flyGravity: Double
-        let flyPositionAirResist: Double
-        let maxHP: HighMidLow
-        let spawnSpeedY: Double
-        let spawnSpeedYWorldMin: Double
-        let spawnSpeedZSpecUp: HighMidLow
+    public struct MoveParameter: Codable {
+        public let type: String
+        public let damageSpanFrame: Int
+        public let flyGravity: Double
+        public let flyPositionAirResist: Double
+        public let maxHP: HighMidLow
+        public let spawnSpeedY: Double
+        public let spawnSpeedYWorldMin: Double
+        public let spawnSpeedZSpecUp: HighMidLow
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case damageSpanFrame = "DamageSpanFrame"
             case flyGravity = "FlyGravity"
@@ -44,35 +44,35 @@ struct SplashWall: SubParametable {
         }
     }
     
-    struct WeaponParameter: Codable {
-        let type: String
-        let inkConsume: Double
-        let inkRecoverStop: Int
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let inkConsume: Double
+        public let inkRecoverStop: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case inkConsume = "InkConsume"
             case inkRecoverStop = "InkRecoverStop"
         }
     }
     
-    struct BulletInformImpactControlForGeyserParameter: Codable {
-        let type: String
-        let addSpeedPerImpact: Double
+    public struct BulletInformImpactControlForGeyserParameter: Codable {
+        public let type: String
+        public let addSpeedPerImpact: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case addSpeedPerImpact = "AddSpeedPerImpact"
         }
     }
     
-    struct SpawnBulletAdditionMovePlayerParameter: Codable {
-        let type: String
-        let xRate: Double
-        let yPlusRate: Double
-        let zRate: Double
+    public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public let type: String
+        public let xRate: Double
+        public let yPlusRate: Double
+        public let zRate: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case xRate = "XRate"
             case yPlusRate = "YPlusRate"
@@ -80,7 +80,7 @@ struct SplashWall: SubParametable {
         }
     }
     
-    func getOverwrites(_ playerInfo: PlayerParameters? = nil) -> SubOverwrites {
+    public func getOverwrites(_ playerInfo: PlayerParameters? = nil) -> SubOverwrites {
         return SubOverwrites(
             spawnSpeedZSpecUp: self.moveParam.spawnSpeedZSpecUp,
             periodFirst: nil,

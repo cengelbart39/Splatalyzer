@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct AbilityValues: Codable {
-    var dictionary: [AbilityValue : HighMidLow]
+public struct AbilityValues: Codable {
+    public var dictionary: [AbilityValue : HighMidLow]
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         let stringDictionary = try container.decode([String : [Double]].self)
         
@@ -62,7 +62,7 @@ struct AbilityValues: Codable {
 }
 
 
-enum AbilityValue: String, Codable {
+public enum AbilityValue: String, Codable {
     case consumeRtMain = "ConsumeRt_Main"
     case consumeRtSubLv0 = "ConsumeRt_Sub_Lv0"
     case consumeRtSubLv1 = "ConsumeRt_Sub_Lv1"

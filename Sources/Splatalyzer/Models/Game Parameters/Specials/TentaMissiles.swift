@@ -7,15 +7,15 @@
 
 import Foundation
 
-struct TentaMissiles: SpecialParametable {
-    let bulletBlastParam: BulletBlastParameter
-    let bulletDamageParam: BulletDamageParameter
-    let bulletMoveParam: BulletMoveParameter
-    let weaponLaunchParam: WeaponLaunchParameter
-    let weaponLockOnParam: WeaponLockOnParameter
-    let weaponPlayerParam: WeaponPlayerParameter
+public struct TentaMissiles: SpecialParametable {
+    public let bulletBlastParam: BulletBlastParameter
+    public let bulletDamageParam: BulletDamageParameter
+    public let bulletMoveParam: BulletMoveParameter
+    public let weaponLaunchParam: WeaponLaunchParameter
+    public let weaponLockOnParam: WeaponLockOnParameter
+    public let weaponPlayerParam: WeaponPlayerParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case bulletBlastParam = "spl__BulletBlastParam"
         case bulletDamageParam = "spl__BulletSpMultiMissileDamageParam"
         case bulletMoveParam = "spl__BulletSpMultiMissileMoveParam"
@@ -24,17 +24,17 @@ struct TentaMissiles: SpecialParametable {
         case weaponPlayerParam = "spl__WeaponSpMultiMissilePlayerParam"
     }
     
-    struct BulletBlastParameter: Codable {
-        let type: String
-        let crossPaintCheckLength: Double
-        let damageOffsetY: Double
-        let distanceDamage: [DistanceDamage]
-        let knockBackParam: KnockbackParameter
-        let paintOffsetY: Double
-        let paintRadius: Double
-        let subSpecialSpecUpList: [SubSpecialSpecUpList]
+    public struct BulletBlastParameter: Codable {
+        public let type: String
+        public let crossPaintCheckLength: Double
+        public let damageOffsetY: Double
+        public let distanceDamage: [DistanceDamage]
+        public let knockBackParam: KnockbackParameter
+        public let paintOffsetY: Double
+        public let paintRadius: Double
+        public let subSpecialSpecUpList: [SubSpecialSpecUpList]
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case crossPaintCheckLength = "CrossPaintCheckLength"
             case damageOffsetY = "DamageOffsetY"
@@ -46,49 +46,49 @@ struct TentaMissiles: SpecialParametable {
         }
     }
     
-    struct BulletDamageParameter: Codable {
-        let type: String
+    public struct BulletDamageParameter: Codable {
+        public let type: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
         }
     }
     
-    struct BulletMoveParameter: Codable {
-        let type: String
-        let riseParam: RiseParameter
-        let targetParam: TargetParameter
+    public struct BulletMoveParameter: Codable {
+        public let type: String
+        public let riseParam: RiseParameter
+        public let targetParam: TargetParameter
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case riseParam = "RiseParam"
             case targetParam = "TargetParam"
         }
         
-        struct RiseParameter: Codable {
-            let riseBaseSpeedComeUnderRate: Double
+        public struct RiseParameter: Codable {
+            public let riseBaseSpeedComeUnderRate: Double
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case riseBaseSpeedComeUnderRate = "RiseBaseSpeedComeUnderRate"
             }
         }
         
-        struct TargetParameter: Codable {
-            let multiTargetCircleArray: [TargetCircle]
-            let oneTargetCircleArray: [TargetCircle]
+        public struct TargetParameter: Codable {
+            public let multiTargetCircleArray: [TargetCircle]
+            public let oneTargetCircleArray: [TargetCircle]
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case multiTargetCircleArray = "MultiTargetCircleArray"
                 case oneTargetCircleArray = "OneTargetCircleArray"
             }
             
-            struct TargetCircle: Codable {
-                let num: Int?
-                let radius: Double?
-                let randomOffset: Double
-                let randomOffsetBias: Double?
+            public struct TargetCircle: Codable {
+                public let num: Int?
+                public let radius: Double?
+                public let randomOffset: Double
+                public let randomOffsetBias: Double?
                 
-                enum CodingKeys: String, CodingKey {
+                public enum CodingKeys: String, CodingKey {
                     case num = "Num"
                     case radius = "Radius"
                     case randomOffset = "RandomOffset"
@@ -98,43 +98,43 @@ struct TentaMissiles: SpecialParametable {
         }
     }
     
-    struct WeaponLaunchParameter: Codable {
-        let type: String
-        let shotIntervalTargetArray: [Int]
-        let shotNumOneTargetArray: [Int]
+    public struct WeaponLaunchParameter: Codable {
+        public let type: String
+        public let shotIntervalTargetArray: [Int]
+        public let shotNumOneTargetArray: [Int]
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case shotIntervalTargetArray = "ShotIntervalTargetArray"
             case shotNumOneTargetArray = "ShotNumOneTargetArray"
         }
     }
     
-    struct WeaponLockOnParameter: Codable {
-        let target: String
-        let targetCircleEffectDefaultRadius: Double
-        let targetInCircleRadius: HighMidLow
+    public struct WeaponLockOnParameter: Codable {
+        public let target: String
+        public let targetCircleEffectDefaultRadius: Double
+        public let targetInCircleRadius: HighMidLow
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case target = "$type"
             case targetCircleEffectDefaultRadius = "TargetCircleEffectDefaultRadius"
             case targetInCircleRadius = "TargetInCircleRadius"
         }
     }
     
-    struct WeaponPlayerParameter: Codable {
-        let type: String
-        let jumpVelLimitSearching: Double
-        let moveVelLimitSearching: Double
+    public struct WeaponPlayerParameter: Codable {
+        public let type: String
+        public let jumpVelLimitSearching: Double
+        public let moveVelLimitSearching: Double
 
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case jumpVelLimitSearching = "JumpVelLimitSearching"
             case moveVelLimitSearching = "MoveVelLimitSearching"
         }
     }
     
-    func getOverwrites() -> SpecialOverwrites {
+    public func getOverwrites() -> SpecialOverwrites {
         return SpecialOverwrites(
             chargeRateAutoPerFrame: nil,
             crossPaintCheckLength: nil,

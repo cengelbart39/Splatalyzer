@@ -10,69 +10,69 @@ import Foundation
 /// An object representing the necessary Main Weapon information for build analysis.
 ///
 /// Combines information from ``GameParametersContainer`` and ``WeaponInfoMain``
-struct MainWeaponData: WeaponDatable {
-    let specialPoints: Int
-    let mainWeaponId: MainRowId
-    let subWeapon: SubWeapon
-    let specialWeapon: SpecialWeapon
-    let overwrites: Overwritable
-    let tripleShotSpanFrame: Int?
-    let weaponSpeedType: WeaponSpeedType?
-    let moveSpeed: Double?
-    let moveSpeedCharge: Double?
-    let moveSpeedFullCharge: Double?
-    let moveSpeedVariable: Double?
-    let damageValueMax: Int?
-    let damageValueMin: Int?
-    let damageValueDirect: Double?
-    let damageValueDirectMax: Double?
-    let damageValueDirectMin: Double?
-    let damageSecondaryValueDirectMax: Double?
-    let damageSecondaryValueDirectMin: Double?
-    let damageLapOverValueMax: Int?
-    let damageLapOverValueMin: Int?
-    let blastSplashDamage: Double?
-    let blastDamageDistance: [DistanceDamage]
-    let damageValueFullCharge: Int?
-    let damageValueFullChargeMax: Int?
-    let damageValueMaxCharge: Int?
-    let damageValueMinCharge: Int?
-    let damageSplatanaVerticalDirect: Int?
-    let damageSplatanaVertical: Int?
-    let damageSplatanaHorizontalDirect: Int?
-    let damageSplatanaHorizontal: Int?
-    let bodyDamage: Int?
-    let variableDamageMax: Int?
-    let variableDamageMin: Int?
-    let swingUnitGroupDamageMin: Int?
-    let swingUnitGroupDamageMax: Int?
-    let verticalSwingUnitGroupDamageMin: Int?
-    let verticalSwingUnitGroupDamageMax: Int?
-    let wideSwingUnitGroupDamageMin: Int?
-    let wideSwingUnitGroupDamageMax: Int?
-    let canopyHP: Int?
-    let chargeFrameFullCharge: Int?
-    let keepChargeFullFrame: Int?
-    let jumpDegSwerve: Double?
-    let standDegSwerve: Double?
-    let variableJumpDegSwerve: Double?
-    let variableStandDegSwerve: Double?
-    let inkRecoverStop: Int?
-    let inkConsume: Double?
-    let inkConsumeSlosher: Double?
-    let inkConsumeFullCharge: Double?
-    let inkConsumeMinCharge: Double?
-    let inkConsumeFullChargeSplatling: Double?
-    let inkConsumeWeaponSwing: Double?
-    let inkConsumeWeaponVerticalSwing: Double?
-    let inkConsumeWeaponWideSwing: Double?
-    let inkConsumeUmbrellaShelterCanopy: Double?
-    let inkConsumeWeaponShelterShotgun: Double?
-    let inkConsumeSideStep: Double?
-    let inkConsumeSwing: Double?
-    let inkConsumeChargeFullCharge: Double?
+public struct MainWeaponData: WeaponDatable {
+    public let specialPoints: Int
+    public let mainWeaponId: MainWeapon
+    public let subWeapon: SubWeapon
+    public let specialWeapon: SpecialWeapon
+    public let overwrites: Overwritable
+    public let tripleShotSpanFrame: Int?
+    public let weaponSpeedType: WeaponSpeedType?
+    public let moveSpeed: Double?
+    public let moveSpeedCharge: Double?
+    public let moveSpeedFullCharge: Double?
+    public let moveSpeedVariable: Double?
+    public let damageValueMax: Int?
+    public let damageValueMin: Int?
+    public let damageValueDirect: Double?
+    public let damageValueDirectMax: Double?
+    public let damageValueDirectMin: Double?
+    public let damageSecondaryValueDirectMax: Double?
+    public let damageSecondaryValueDirectMin: Double?
+    public let damageLapOverValueMax: Int?
+    public let damageLapOverValueMin: Int?
+    public let blastSplashDamage: Double?
+    public let blastDamageDistance: [DistanceDamage]
+    public let damageValueFullCharge: Int?
+    public let damageValueFullChargeMax: Int?
+    public let damageValueMaxCharge: Int?
+    public let damageValueMinCharge: Int?
+    public let damageSplatanaVerticalDirect: Int?
+    public let damageSplatanaVertical: Int?
+    public let damageSplatanaHorizontalDirect: Int?
+    public let damageSplatanaHorizontal: Int?
+    public let bodyDamage: Int?
+    public let variableDamageMax: Int?
+    public let variableDamageMin: Int?
+    public let swingUnitGroupDamageMin: Int?
+    public let swingUnitGroupDamageMax: Int?
+    public let verticalSwingUnitGroupDamageMin: Int?
+    public let verticalSwingUnitGroupDamageMax: Int?
+    public let wideSwingUnitGroupDamageMin: Int?
+    public let wideSwingUnitGroupDamageMax: Int?
+    public let canopyHP: Int?
+    public let chargeFrameFullCharge: Int?
+    public let keepChargeFullFrame: Int?
+    public let jumpDegSwerve: Double?
+    public let standDegSwerve: Double?
+    public let variableJumpDegSwerve: Double?
+    public let variableStandDegSwerve: Double?
+    public let inkRecoverStop: Int?
+    public let inkConsume: Double?
+    public let inkConsumeSlosher: Double?
+    public let inkConsumeFullCharge: Double?
+    public let inkConsumeMinCharge: Double?
+    public let inkConsumeFullChargeSplatling: Double?
+    public let inkConsumeWeaponSwing: Double?
+    public let inkConsumeWeaponVerticalSwing: Double?
+    public let inkConsumeWeaponWideSwing: Double?
+    public let inkConsumeUmbrellaShelterCanopy: Double?
+    public let inkConsumeWeaponShelterShotgun: Double?
+    public let inkConsumeSideStep: Double?
+    public let inkConsumeSwing: Double?
+    public let inkConsumeChargeFullCharge: Double?
     
-    var inkTankSize: Double {
+    public var inkTankSize: Double {
         if self.mainWeaponId == .splattershotJr || self.mainWeaponId == .customSplattershotJr {
             
             return 1.1
@@ -88,17 +88,17 @@ struct MainWeaponData: WeaponDatable {
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
         - container: Weapon game parameters
      */
-    init(weaponInfo: WeaponInfoMainItem, container: BlasterGameParameters) {
+    public init(weaponInfo: WeaponInfoMainItem, container: BlasterGameParameters) {
         let gameParams = container.parameters
                 
         let damageValueDirect = gameParams.damageParam.valueMax == gameParams.damageParam.valueMin ? Double(gameParams.damageParam.valueMax) : nil
         
         let damageValueMax: Int? = damageValueDirect == nil ? nil : gameParams.damageParam.valueMax
                 
-        self.mainWeaponId = weaponInfo.rowId
+        self.mainWeaponId = MainWeapon(rawValue: weaponInfo.rowId.rawValue)!
         self.specialPoints = weaponInfo.specialPoint
-        self.subWeapon = weaponInfo.subWeapon
-        self.specialWeapon = weaponInfo.specialWeapon
+        self.subWeapon = weaponInfo.subWeapon.toSubWeapon()!
+        self.specialWeapon = weaponInfo.specialWeapon.toSpecialWeapon()!
         self.overwrites = gameParams.mainWeaponSetting.getOverwrites()
         self.tripleShotSpanFrame = nil
         self.weaponSpeedType = gameParams.mainWeaponSetting.weaponSpeedType
@@ -163,13 +163,13 @@ struct MainWeaponData: WeaponDatable {
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
         - container: Weapon game parameters
      */
-    init(weaponInfo: WeaponInfoMainItem, container: BrushGameParameters) {
+    public init(weaponInfo: WeaponInfoMainItem, container: BrushGameParameters) {
         let gameParams = container.parameters
         
-        self.mainWeaponId = weaponInfo.rowId
+        self.mainWeaponId = MainWeapon(rawValue: weaponInfo.rowId.rawValue)!
         self.specialPoints = weaponInfo.specialPoint
-        self.subWeapon = weaponInfo.subWeapon
-        self.specialWeapon = weaponInfo.specialWeapon
+        self.subWeapon = weaponInfo.subWeapon.toSubWeapon()!
+        self.specialWeapon = weaponInfo.specialWeapon.toSpecialWeapon()!
         self.overwrites = MainOverwrites()
         self.tripleShotSpanFrame = nil
         self.weaponSpeedType = gameParams.mainWepaonSetting.weaponSpeedType
@@ -238,13 +238,13 @@ struct MainWeaponData: WeaponDatable {
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
         - container: Weapon game parameters
      */
-    init(weaponInfo: WeaponInfoMainItem, container: ChargerGameParameters) {
+    public init(weaponInfo: WeaponInfoMainItem, container: ChargerGameParameters) {
         let gameParams = container.parameters
                 
-        self.mainWeaponId = weaponInfo.rowId
+        self.mainWeaponId = MainWeapon(rawValue: weaponInfo.rowId.rawValue)!
         self.specialPoints = weaponInfo.specialPoint
-        self.subWeapon = weaponInfo.subWeapon
-        self.specialWeapon = weaponInfo.specialWeapon
+        self.subWeapon = weaponInfo.subWeapon.toSubWeapon()!
+        self.specialWeapon = weaponInfo.specialWeapon.toSpecialWeapon()!
         self.overwrites = gameParams.mainWeaponSetting.getOverwrites()
         self.tripleShotSpanFrame = nil
         self.weaponSpeedType = gameParams.mainWeaponSetting.weaponSpeedType
@@ -309,17 +309,17 @@ struct MainWeaponData: WeaponDatable {
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
         - container: Weapon game parameters
      */
-    init(weaponInfo: WeaponInfoMainItem, container: DualieGameParameters) {
+    public init(weaponInfo: WeaponInfoMainItem, container: DualieGameParameters) {
         let gameParams = container.parameters
                 
         let damageParamValueDirect = gameParams.damageParam.valueMax == gameParams.damageParam.valueMin ? Double(gameParams.damageParam.valueMax) : nil
         
         let damageParamMax = damageParamValueDirect != nil ? nil : gameParams.damageParam.valueMax
         
-        self.mainWeaponId = weaponInfo.rowId
+        self.mainWeaponId = MainWeapon(rawValue: weaponInfo.rowId.rawValue)!
         self.specialPoints = weaponInfo.specialPoint
-        self.subWeapon = weaponInfo.subWeapon
-        self.specialWeapon = weaponInfo.specialWeapon
+        self.subWeapon = weaponInfo.subWeapon.toSubWeapon()!
+        self.specialWeapon = weaponInfo.specialWeapon.toSpecialWeapon()!
         self.overwrites = gameParams.mainWeaponSetting?.getOverwrites() ?? MainOverwrites()
         self.tripleShotSpanFrame = nil
         self.weaponSpeedType = gameParams.mainWeaponSetting?.weaponSpeedType
@@ -383,13 +383,13 @@ struct MainWeaponData: WeaponDatable {
      - weaponInfo: Weapon info from `WeaponInfoMain.json`
      - container: Weapon game parameters
      */
-    init(weaponInfo: WeaponInfoMainItem, container: RollerGameParameters) {
+    public init(weaponInfo: WeaponInfoMainItem, container: RollerGameParameters) {
         let gameParams = container.parameters
         
-        self.mainWeaponId = weaponInfo.rowId
+        self.mainWeaponId = MainWeapon(rawValue: weaponInfo.rowId.rawValue)!
         self.specialPoints = weaponInfo.specialPoint
-        self.subWeapon = weaponInfo.subWeapon
-        self.specialWeapon = weaponInfo.specialWeapon
+        self.subWeapon = weaponInfo.subWeapon.toSubWeapon()!
+        self.specialWeapon = weaponInfo.specialWeapon.toSpecialWeapon()!
         self.overwrites = gameParams.mainWeaponSetting.getOverwrites()
         self.tripleShotSpanFrame = nil
         self.weaponSpeedType = gameParams.mainWeaponSetting.weaponSpeedType
@@ -466,13 +466,13 @@ struct MainWeaponData: WeaponDatable {
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
         - container: Weapon game parameters
      */
-    init(weaponInfo: WeaponInfoMainItem, container: SplatanaGameParameters) {
+    public init(weaponInfo: WeaponInfoMainItem, container: SplatanaGameParameters) {
         let gameParams = container.parameters
         
-        self.mainWeaponId = weaponInfo.rowId
+        self.mainWeaponId = MainWeapon(rawValue: weaponInfo.rowId.rawValue)!
         self.specialPoints = weaponInfo.specialPoint
-        self.subWeapon = weaponInfo.subWeapon
-        self.specialWeapon = weaponInfo.specialWeapon
+        self.subWeapon = weaponInfo.subWeapon.toSubWeapon()!
+        self.specialWeapon = weaponInfo.specialWeapon.toSpecialWeapon()!
         self.overwrites = gameParams.mainWeaponSetting.getOverwrites()
         self.tripleShotSpanFrame = nil
         self.weaponSpeedType = gameParams.mainWeaponSetting.weaponSpeedType
@@ -536,17 +536,17 @@ struct MainWeaponData: WeaponDatable {
      - weaponInfo: Weapon info from `WeaponInfoMain.json`
      - container: Weapon game parameters
      */
-    init(weaponInfo: WeaponInfoMainItem, container: ShooterGameParameters) {
+    public init(weaponInfo: WeaponInfoMainItem, container: ShooterGameParameters) {
         let gameParams = container.parameters
         
         let damageValueDirect = gameParams.damageParam.valueMax == gameParams.damageParam.valueMin ? Double(gameParams.damageParam.valueMax) : nil
         
         let damageValueMax = damageValueDirect != nil ? nil : gameParams.damageParam.valueMax
         
-        self.mainWeaponId = weaponInfo.rowId
+        self.mainWeaponId = MainWeapon(rawValue: weaponInfo.rowId.rawValue)!
         self.specialPoints = weaponInfo.specialPoint
-        self.subWeapon = weaponInfo.subWeapon
-        self.specialWeapon = weaponInfo.specialWeapon
+        self.subWeapon = weaponInfo.subWeapon.toSubWeapon()!
+        self.specialWeapon = weaponInfo.specialWeapon.toSpecialWeapon()!
         self.overwrites = gameParams.mainWeaponSetting.getOverwrites()
         self.tripleShotSpanFrame = gameParams.weaponParam.tripleShotSpanFrame
         self.weaponSpeedType = gameParams.mainWeaponSetting.weaponSpeedType
@@ -611,7 +611,7 @@ struct MainWeaponData: WeaponDatable {
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
         - container: Weapon game parameters
      */
-    init(weaponInfo: WeaponInfoMainItem, container: BrellaGameParameters) {
+    public init(weaponInfo: WeaponInfoMainItem, container: BrellaGameParameters) {
         let gameParams = container.parameters
                 
         let inkConsumeShelterCanopy =
@@ -624,10 +624,10 @@ struct MainWeaponData: WeaponDatable {
             ? 0.0632499977946
             : gameParams.weaponShelterShotgunParam.inkConsume
         
-        self.mainWeaponId = weaponInfo.rowId
+        self.mainWeaponId = MainWeapon(rawValue: weaponInfo.rowId.rawValue)!
         self.specialPoints = weaponInfo.specialPoint
-        self.subWeapon = weaponInfo.subWeapon
-        self.specialWeapon = weaponInfo.specialWeapon
+        self.subWeapon = weaponInfo.subWeapon.toSubWeapon()!
+        self.specialWeapon = weaponInfo.specialWeapon.toSpecialWeapon()!
         self.overwrites = gameParams.mainWeaponSetting.getOverwrites()
         self.tripleShotSpanFrame = nil
         self.weaponSpeedType = gameParams.mainWeaponSetting.weaponSpeedType
@@ -692,7 +692,7 @@ struct MainWeaponData: WeaponDatable {
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
         - container: Weapon game parameters
      */
-    init(weaponInfo: WeaponInfoMainItem, container: SlosherGameParameters) {
+    public init(weaponInfo: WeaponInfoMainItem, container: SlosherGameParameters) {
         let gameParams = container.parameters
                 
         let damageDirectMax = gameParams.unitGroupParam.unit.first?.damageParam.valueMax
@@ -702,10 +702,10 @@ struct MainWeaponData: WeaponDatable {
         let isSloshingMachine = weaponInfo.rowId == .sloshingMachine || weaponInfo.rowId == .sloshingMachineNeo
         let isDreadWringer = weaponInfo.rowId == .dreadWringer
         
-        self.mainWeaponId = weaponInfo.rowId
+        self.mainWeaponId = MainWeapon(rawValue: weaponInfo.rowId.rawValue)!
         self.specialPoints = weaponInfo.specialPoint
-        self.subWeapon = weaponInfo.subWeapon
-        self.specialWeapon = weaponInfo.specialWeapon
+        self.subWeapon = weaponInfo.subWeapon.toSubWeapon()!
+        self.specialWeapon = weaponInfo.specialWeapon.toSpecialWeapon()!
         self.overwrites = gameParams.mainWeaponSetting.getOverwrites()
         self.tripleShotSpanFrame = nil
         self.weaponSpeedType = gameParams.mainWeaponSetting.weaponSpeedType
@@ -770,16 +770,16 @@ struct MainWeaponData: WeaponDatable {
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
         - container: Weapon game parameters
      */
-    init(weaponInfo: WeaponInfoMainItem, container: SplatlingGameParameters) {
+    public init(weaponInfo: WeaponInfoMainItem, container: SplatlingGameParameters) {
         let gameParams = container.parameters
         
         let damageDirect = gameParams.damageParam.valueMax == gameParams.damageParam.valueMin ? Double(gameParams.damageParam.valueMax) : nil
         let damageMax = damageDirect != nil ? gameParams.damageParam.valueMax : nil
         
-        self.mainWeaponId = weaponInfo.rowId
+        self.mainWeaponId = MainWeapon(rawValue: weaponInfo.rowId.rawValue)!
         self.specialPoints = weaponInfo.specialPoint
-        self.subWeapon = weaponInfo.subWeapon
-        self.specialWeapon = weaponInfo.specialWeapon
+        self.subWeapon = weaponInfo.subWeapon.toSubWeapon()!
+        self.specialWeapon = weaponInfo.specialWeapon.toSpecialWeapon()!
         self.overwrites = gameParams.mainWeaponSetting.getOverwrites()
         self.tripleShotSpanFrame = nil
         self.weaponSpeedType = gameParams.mainWeaponSetting.weaponSpeedType
@@ -844,13 +844,13 @@ struct MainWeaponData: WeaponDatable {
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
         - container: Weapon game parameters
      */
-    init(weaponInfo: WeaponInfoMainItem, container: StringerGameParameters) {
+    public init(weaponInfo: WeaponInfoMainItem, container: StringerGameParameters) {
         let gameParams = container.parameters
             
-        self.mainWeaponId = weaponInfo.rowId
+        self.mainWeaponId = MainWeapon(rawValue: weaponInfo.rowId.rawValue)!
         self.specialPoints = weaponInfo.specialPoint
-        self.subWeapon = weaponInfo.subWeapon
-        self.specialWeapon = weaponInfo.specialWeapon
+        self.subWeapon = weaponInfo.subWeapon.toSubWeapon()!
+        self.specialWeapon = weaponInfo.specialWeapon.toSpecialWeapon()!
         self.overwrites = gameParams.mainWeaponSetting.getOverwrites()
         self.tripleShotSpanFrame = nil
         self.weaponSpeedType = gameParams.mainWeaponSetting.weaponSpeedType
@@ -943,7 +943,7 @@ struct MainWeaponData: WeaponDatable {
         }
     }
     
-    func damage(for type: DamageType) -> Any? {
+    public func damage(for type: DamageType) -> Any? {
         switch type {
         case .turretMax:
             return self.damageLapOverValueMax.toDouble()
@@ -1034,7 +1034,7 @@ struct MainWeaponData: WeaponDatable {
         }
     }
     
-    func shootingRunSpeed(for type: ShootingRunSpeedType) -> Double? {
+    public func shootingRunSpeed(for type: ShootingRunSpeedType) -> Double? {
         switch type {
         case .moveSpeed:
             return self.moveSpeed

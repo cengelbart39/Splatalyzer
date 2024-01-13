@@ -27,4 +27,9 @@ final class DecodingTests: XCTestCase {
         let service = JSONServiceForTests()
         XCTAssertNoThrow(try service.decode(AbilityValues.self, from: "ability-values"))
     }
+    
+    func test_PlayerParams_decode_noThrows() {
+        let service = JSONServiceForTests()
+        XCTAssertNoThrow(try service.decode(PlayerGameParameters.self, from: "SplPlayer.game__GameParameterTable"))
+    }
 }

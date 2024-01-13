@@ -7,24 +7,24 @@
 
 import Foundation
 
-struct SubWeaponData: WeaponDatable {
-    let id: SubRowId
-    let overwrites: Overwritable
-    let subLevelSave: Int
-    let inkConsume: Double
-    let inkRecoverStop: Int
-    let distanceDamage: [DistanceDamage]
-    let directDamage: Int?
-    let blastParam: [DistanceDamage]
-    let blastParamChase: [DistanceDamage]
-    let splashBlastParam: [DistanceDamage]
+public struct SubWeaponData: WeaponDatable {
+    public let id: SubWeapon
+    public let overwrites: Overwritable
+    public let subLevelSave: Int
+    public let inkConsume: Double
+    public let inkRecoverStop: Int
+    public let distanceDamage: [DistanceDamage]
+    public let directDamage: Int?
+    public let blastParam: [DistanceDamage]
+    public let blastParamChase: [DistanceDamage]
+    public let splashBlastParam: [DistanceDamage]
     
 
     /// Create an instance for the Beacon sub weapon
     /// - Parameters:
     ///   - container: `Beacon` game parameters
     ///   - playerInfo: Player game parameters
-    init(container: SquidBeakonGameParameters, playerInfo: PlayerParameters) {
+    public init(container: SquidBeakonGameParameters, playerInfo: PlayerParameters) {
         let gameParams = container.parameters
         
         self.id = .squidBeakon
@@ -41,7 +41,7 @@ struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `BombCurling` sub weapon
     /// - Parameter container: `BombCurling` game parameters
-    init(container: CurlingBombGameParameters) {
+    public init(container: CurlingBombGameParameters) {
         let gameParams = container.parameters
         
         self.id = .curlingBomb
@@ -58,7 +58,7 @@ struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `BombFizzy` sub weapon
     /// - Parameter container: `BombFizzy` game parameters
-    init(container: FizzyBombGameParameters) {
+    public init(container: FizzyBombGameParameters) {
         let gameParams = container.parameters
         
         self.id = .fizzyBomb
@@ -75,7 +75,7 @@ struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `BombQuick` sub weapon
     /// - Parameter container: `BombQuick` game parameters
-    init(container: BurstBombGameParameters) {
+    public init(container: BurstBombGameParameters) {
         let gameParams = container.parameters
         
         self.id = .burstBomb
@@ -92,7 +92,7 @@ struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `BombRobot` sub weapon
     /// - Parameter container: `BombRobot` game parameters
-    init(container: AutobombGameParameters) {
+    public init(container: AutobombGameParameters) {
         let gameParams = container.parameters
         
         self.id = .autobomb
@@ -109,7 +109,7 @@ struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `BombSplash` sub weapon
     /// - Parameter container: `BombSplash` game parameters
-    init(container: SplatBombGameParameters) {
+    public init(container: SplatBombGameParameters) {
         let gameParams = container.parameters
         
         self.id = .splatBomb
@@ -126,7 +126,7 @@ struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `BombSuction` sub weapon
     /// - Parameter container: `BombSuction` game parameters
-    init(container: SuctionBombGameParameters) {
+    public init(container: SuctionBombGameParameters) {
         let gameParams = container.parameters
         
         self.id = .suctionBomb
@@ -143,7 +143,7 @@ struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `BombTorpedo` sub weapon
     /// - Parameter container: `BombTorpedo` game parameters
-    init(container: TorpedoGameParameters) {
+    public init(container: TorpedoGameParameters) {
         let gameParams = container.parameters
         
         self.id = .torpedo
@@ -160,7 +160,7 @@ struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `LineMarker` sub weapon
     /// - Parameter container: `LineMarker` game parameters
-    init(container: AngleShooterGameParameters) {
+    public init(container: AngleShooterGameParameters) {
         let gameParams = container.parameters
         
         self.id = .angleShooter
@@ -177,7 +177,7 @@ struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `PointSensor` sub weapon
     /// - Parameter container: `PointSensor` game parameters
-    init(container: PointSensorGameParameters) {
+    public init(container: PointSensorGameParameters) {
         let gameParams = container.parameters
         
         self.id = .pointSensor
@@ -194,7 +194,7 @@ struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `PoisonMist` sub weapon
     /// - Parameter container: `PoisonMist` game parameters
-    init(container: ToxicMistGameParameters) {
+    public init(container: ToxicMistGameParameters) {
         let gameParams = container.parameters
         
         self.id = .toxicMist
@@ -211,7 +211,7 @@ struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `Shield` sub weapon
     /// - Parameter container: `Shield` game parameters
-    init(container: SplashWallGameParameters) {
+    public init(container: SplashWallGameParameters) {
         let gameParams = container.parameters
         
         self.id = .splashWall
@@ -228,7 +228,7 @@ struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `Sprinkler` sub weapon
     /// - Parameter container: `Sprinkler` game parameters
-    init(container: SprinklerGameParameters) {
+    public init(container: SprinklerGameParameters) {
         let gameParams = container.parameters
         
         self.id = .sprinkler
@@ -245,7 +245,7 @@ struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `Trap` sub weapon
     /// - Parameter container: `Trap` game parameters
-    init(container: InkMineGameParameters) {
+    public init(container: InkMineGameParameters) {
         let gameParams = container.parameters
         
         self.id = .inkMine
@@ -260,7 +260,7 @@ struct SubWeaponData: WeaponDatable {
         self.splashBlastParam = []
     }
     
-    func damage(for type: DamageType) -> Any? {
+    public func damage(for type: DamageType) -> Any? {
         switch type {
         case .bombNormal:
             return self.distanceDamage
@@ -279,7 +279,7 @@ struct SubWeaponData: WeaponDatable {
         }
     }
     
-    func abilityValue() -> AbilityValue? {
+    public func abilityValue() -> AbilityValue? {
         switch self.id {
         case .splatBomb, .suctionBomb, .curlingBomb, .autobomb, .inkMine, .torpedo:
             return .damageRtBombH

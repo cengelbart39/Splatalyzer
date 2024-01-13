@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol SubParametable: Codable {
+public protocol SubParametable: Codable {
     associatedtype MoveParameter
     associatedtype WeaponParameter
     
@@ -18,17 +18,17 @@ protocol SubParametable: Codable {
     func getOverwrites(_ playerInfo: PlayerParameters?) -> SubOverwrites
 }
 
-struct SubOverwrites: Overwritable {
-    let spawnSpeedZSpecUp: HighMidLow
-    let periodFirst: HighMidLow?
-    let periodSecond: HighMidLow?
-    let markingFrameSubSpec: HighMidLow?
-    let sensorRadius: HighMidLow?
-    let explosionRadius: HighMidLow?
-    let maxHp: HighMidLow?
-    let subSpecUpParam: BeaconSubSpecUpParameter?
+public struct SubOverwrites: Overwritable {
+    public let spawnSpeedZSpecUp: HighMidLow
+    public let periodFirst: HighMidLow?
+    public let periodSecond: HighMidLow?
+    public let markingFrameSubSpec: HighMidLow?
+    public let sensorRadius: HighMidLow?
+    public let explosionRadius: HighMidLow?
+    public let maxHp: HighMidLow?
+    public let subSpecUpParam: BeaconSubSpecUpParameter?
     
-    func value(for key: AbilityValue) -> HighMidLow? {
+    public func value(for key: AbilityValue) -> HighMidLow? {
         switch key {
         case .markingFrameSubSpec, .subMarkingTimeInSeconds:
             return self.markingFrameSubSpec

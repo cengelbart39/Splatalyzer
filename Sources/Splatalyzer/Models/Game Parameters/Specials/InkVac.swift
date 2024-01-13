@@ -7,17 +7,17 @@
 
 import Foundation
 
-struct InkVac: SpecialParametable {
-    let exhaleBlastParamMaxCharge: ExhaleBlastParameterCharge
-    let exhaleBlastParamMinCharge: ExhaleBlastParameterCharge
-    let exhaleCollisionParam: ExhaleCollisionParameter
-    let exhaleParam: ExhaleParameter
-    let exhaleSplashPaintSpawnParam: ExhaleSplashPaintSpawnParameter
-    let inhaleParam: InhaleParameter
-    let weaponParam: WeaponParameter
-    let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParam
+public struct InkVac: SpecialParametable {
+    public let exhaleBlastParamMaxCharge: ExhaleBlastParameterCharge
+    public let exhaleBlastParamMinCharge: ExhaleBlastParameterCharge
+    public let exhaleCollisionParam: ExhaleCollisionParameter
+    public let exhaleParam: ExhaleParameter
+    public let exhaleSplashPaintSpawnParam: ExhaleSplashPaintSpawnParameter
+    public let inhaleParam: InhaleParameter
+    public let weaponParam: WeaponParameter
+    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParam
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case exhaleBlastParamMaxCharge = "ExhaleBlastParamMaxCharge"
         case exhaleBlastParamMinCharge = "ExhaleBlastParamMinCharge"
         case exhaleCollisionParam = "ExhaleCollisionParam"
@@ -28,15 +28,15 @@ struct InkVac: SpecialParametable {
         case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
     }
     
-    struct ExhaleBlastParameterCharge: Codable {
-        let type: String
-        let damageOffsetY: Double
-        let distanceDamge: [DistanceDamage]
-        let knockBackParam: KnockbackParameter
-        let paintOffsetY: Double
-        let paintRadius: Double
+    public struct ExhaleBlastParameterCharge: Codable {
+        public let type: String
+        public let damageOffsetY: Double
+        public let distanceDamge: [DistanceDamage]
+        public let knockBackParam: KnockbackParameter
+        public let paintOffsetY: Double
+        public let paintRadius: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case damageOffsetY = "DamageOffsetY"
             case distanceDamge = "DistanceDamage"
@@ -46,33 +46,33 @@ struct InkVac: SpecialParametable {
         }
     }
     
-    struct ExhaleCollisionParameter: Codable {
-        let type: String
-        let radiusForPlayerMinCharge: Double
+    public struct ExhaleCollisionParameter: Codable {
+        public let type: String
+        public let radiusForPlayerMinCharge: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case radiusForPlayerMinCharge = "RadiusForPlayerMinCharge"
         }
     }
     
-    struct ExhaleParameter: Codable {
-        let type: String
-        let directAccel: Double
-        let directDamage: Int
-        let flyGravity: Double
-        let flyPositionAirResist: Double
-        let guideHitCollisionType: String
-        let guideRadius: Double
-        let paintRadiusMaxCharge: Double
-        let paintRadiusMinCharge: Double
-        let spawnBlastWaitFrame: Int
-        let spawnSpeedY: Double
-        let spawnSpeedYMaxCharge: Double
-        let spawnSpeedZMaxCharge: Double
-        let spawnSpeedZSpecUp: HighMidLow
+    public struct ExhaleParameter: Codable {
+        public let type: String
+        public let directAccel: Double
+        public let directDamage: Int
+        public let flyGravity: Double
+        public let flyPositionAirResist: Double
+        public let guideHitCollisionType: String
+        public let guideRadius: Double
+        public let paintRadiusMaxCharge: Double
+        public let paintRadiusMinCharge: Double
+        public let spawnBlastWaitFrame: Int
+        public let spawnSpeedY: Double
+        public let spawnSpeedYMaxCharge: Double
+        public let spawnSpeedZMaxCharge: Double
+        public let spawnSpeedZSpecUp: HighMidLow
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case directAccel = "DirectAccel"
             case directDamage = "DirectDamage"
@@ -90,38 +90,38 @@ struct InkVac: SpecialParametable {
         }
     }
     
-    struct ExhaleSplashPaintSpawnParameter: Codable {
-        let type: String
+    public struct ExhaleSplashPaintSpawnParameter: Codable {
+        public let type: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
         }
     }
     
-    struct InhaleParameter: Codable {
-        let type: String
-        let collisionAccelRateNearest: Double
-        let collisionAccelRatePerDist: Double
-        let collisionAirResist: Double
-        let collisionAirResistMaxNum: Int
-        let collisionAirResistNum0: Double
-        let damagePerFrameByObject: Int
-        let effectRingSpanFrame: Int
-        let effectRingSpeed: RateData
-        let effectScalePerCollision: RateData
-        let effectSpanForGeyser: Int
-        let effectSpeed: Double
-        let lengthAddPerFrame: Double
-        let lengthMax: Double
-        let muzzleCollisionOffset: Double
-        let muzzleCollisionRadius: Double
-        let poisonMistForPlayer: PoisonMistForPlayer
-        let radiusMax: HighMidLow
-        let radiusMin: HighMidLow
-        let receiveDamageForGeyser: Int
-        let receiveDamageForPlayer: Int
+    public struct InhaleParameter: Codable {
+        public let type: String
+        public let collisionAccelRateNearest: Double
+        public let collisionAccelRatePerDist: Double
+        public let collisionAirResist: Double
+        public let collisionAirResistMaxNum: Int
+        public let collisionAirResistNum0: Double
+        public let damagePerFrameByObject: Int
+        public let effectRingSpanFrame: Int
+        public let effectRingSpeed: RateData
+        public let effectScalePerCollision: RateData
+        public let effectSpanForGeyser: Int
+        public let effectSpeed: Double
+        public let lengthAddPerFrame: Double
+        public let lengthMax: Double
+        public let muzzleCollisionOffset: Double
+        public let muzzleCollisionRadius: Double
+        public let poisonMistForPlayer: PoisonMistForPlayer
+        public let radiusMax: HighMidLow
+        public let radiusMin: HighMidLow
+        public let receiveDamageForGeyser: Int
+        public let receiveDamageForPlayer: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case collisionAccelRateNearest = "CollisionAccelRateNearest"
             case collisionAccelRatePerDist = "CollisionAccelRatePerDist"
@@ -146,13 +146,13 @@ struct InkVac: SpecialParametable {
         }
     }
     
-    struct PoisonMistForPlayer: Codable {
-        let effectFrame: Int
-        let level: [PoisonMistForPlayerLevel]
-        let sideStepInkConsumeRate: Double
-        let specialWeapon: Bool
+    public struct PoisonMistForPlayer: Codable {
+        public let effectFrame: Int
+        public let level: [PoisonMistForPlayerLevel]
+        public let sideStepInkConsumeRate: Double
+        public let specialWeapon: Bool
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case effectFrame = "EffectFrame"
             case level = "Level"
             case sideStepInkConsumeRate = "SideStepInkConsumeRate"
@@ -160,31 +160,31 @@ struct InkVac: SpecialParametable {
         }
     }
     
-    struct PoisonMistForPlayerLevel: Codable {
-        let frame: Int?
-        let nextLevelCount: Int?
+    public struct PoisonMistForPlayerLevel: Codable {
+        public let frame: Int?
+        public let nextLevelCount: Int?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case frame = "Frame"
             case nextLevelCount = "NextLevelCount"
         }
     }
     
-    struct WeaponParameter: Codable {
-        let type: String
-        let exhaleWaitFrame: Int
-        let inhaleToExhaleWaitFrame: Int
-        let jumpHeightFullCharge: Double
-        let jumpHeightMinCharge: Double
-        let jumpVelExhale: Double
-        let moveJumpDownBias: Double
-        let moveJumpDownStartChargeRate: Double
-        let moveSpeedFullCharge: Double
-        let moveSpeedMinCharge: Double
-        let shotDirXZRotDegH: Double
-        let shotPitVel: Double
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let exhaleWaitFrame: Int
+        public let inhaleToExhaleWaitFrame: Int
+        public let jumpHeightFullCharge: Double
+        public let jumpHeightMinCharge: Double
+        public let jumpVelExhale: Double
+        public let moveJumpDownBias: Double
+        public let moveJumpDownStartChargeRate: Double
+        public let moveSpeedFullCharge: Double
+        public let moveSpeedMinCharge: Double
+        public let shotDirXZRotDegH: Double
+        public let shotPitVel: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case exhaleWaitFrame = "ExhaleWaitFrame"
             case inhaleToExhaleWaitFrame = "InhaleToExhaleWaitFrame"
@@ -200,13 +200,13 @@ struct InkVac: SpecialParametable {
         }
     }
     
-    struct SpawnBulletAdditionMovePlayerParam: Codable {
-        let type: String
-        let xRate: Double
-        let yPlusRate: Double
-        let zRate: Double
+    public struct SpawnBulletAdditionMovePlayerParam: Codable {
+        public let type: String
+        public let xRate: Double
+        public let yPlusRate: Double
+        public let zRate: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case xRate = "XRate"
             case yPlusRate = "YPlusRate"
@@ -214,7 +214,7 @@ struct InkVac: SpecialParametable {
         }
     }
     
-    func getOverwrites() -> SpecialOverwrites {
+    public func getOverwrites() -> SpecialOverwrites {
         return SpecialOverwrites(
             chargeRateAutoPerFrame: nil,
             crossPaintCheckLength: nil,

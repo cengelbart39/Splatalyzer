@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct Tacticooler: SpecialParametable {
-    let fridgeParam: FridgeParameter
-    let moveParam: MoveParameter
-    let weaponParam: WeaponParameter
-    let bulletInformImpactControlForGeyserParam: BulletInformImpactControlForGeyserParameter
-    let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
+public struct Tacticooler: SpecialParametable {
+    public let fridgeParam: FridgeParameter
+    public let moveParam: MoveParameter
+    public let weaponParam: WeaponParameter
+    public let bulletInformImpactControlForGeyserParam: BulletInformImpactControlForGeyserParameter
+    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case fridgeParam = "FridgeParam"
         case moveParam = "MoveParam"
         case weaponParam = "WeaponParam"
@@ -22,17 +22,17 @@ struct Tacticooler: SpecialParametable {
         case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
     }
     
-    struct FridgeParameter: Codable {
-        let type: String
-        let powerUpFrame: HighMidLow
-        let putFrame: Int
-        let putFrameOnYagura: Int
-        let serveAreaHeightDown: Double
-        let serveAreaHeightUp: Double
-        let serveAreaRadius: Double
-        let vanishDistance: Double
+    public struct FridgeParameter: Codable {
+        public let type: String
+        public let powerUpFrame: HighMidLow
+        public let putFrame: Int
+        public let putFrameOnYagura: Int
+        public let serveAreaHeightDown: Double
+        public let serveAreaHeightUp: Double
+        public let serveAreaRadius: Double
+        public let vanishDistance: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case powerUpFrame = "PowerUpFrame"
             case putFrame = "PutFrame"
@@ -44,26 +44,26 @@ struct Tacticooler: SpecialParametable {
         }
     }
     
-    struct MoveParameter: Codable {
-        let type: String
-        let canPlaceBoundDegree: Double
-        let canPlaceBoundVel: Double
-        let canPlaceCheckLength1: Double
-        let canPlaceCheckLength2: Double
-        let canPlaceHeight: Double
-        let flyGravity: Double
-        let flyHitDeg50WallReboundMaxRt: Double
-        let flyHitVerticalWallReboundMaxRt: Double
-        let flyHitWallPitchToPlane: Double
-        let flyHitWallReboundResetFrame: Int
-        let flyPositionAirResist: Double
-        let guideHitCollisionType: String
-        let guideRadius: Double
-        let spawnSpeedY: Double
-        let spawnSpeedYWorldMin: Double
-        let spawnSpeedZSpecUp: HighMidLow
+    public struct MoveParameter: Codable {
+        public let type: String
+        public let canPlaceBoundDegree: Double
+        public let canPlaceBoundVel: Double
+        public let canPlaceCheckLength1: Double
+        public let canPlaceCheckLength2: Double
+        public let canPlaceHeight: Double
+        public let flyGravity: Double
+        public let flyHitDeg50WallReboundMaxRt: Double
+        public let flyHitVerticalWallReboundMaxRt: Double
+        public let flyHitWallPitchToPlane: Double
+        public let flyHitWallReboundResetFrame: Int
+        public let flyPositionAirResist: Double
+        public let guideHitCollisionType: String
+        public let guideRadius: Double
+        public let spawnSpeedY: Double
+        public let spawnSpeedYWorldMin: Double
+        public let spawnSpeedZSpecUp: HighMidLow
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case canPlaceBoundDegree = "CanPlaceBoundDegree"
             case canPlaceBoundVel = "CanPlaceBoundVel"
@@ -84,34 +84,34 @@ struct Tacticooler: SpecialParametable {
         }
     }
     
-    struct WeaponParameter: Codable {
-        let type: String
-        let specialReduceFrame: Int
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let specialReduceFrame: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case specialReduceFrame = "SpecialReduceFrame"
         }
     }
     
-    struct BulletInformImpactControlForGeyserParameter: Codable {
-        let type: String
-        let addSpeedPerImpact: Double
+    public struct BulletInformImpactControlForGeyserParameter: Codable {
+        public let type: String
+        public let addSpeedPerImpact: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case addSpeedPerImpact = "AddSpeedPerImpact"
         }
     }
     
-    struct SpawnBulletAdditionMovePlayerParameter: Codable {
-        let type: String
-        let xRate: Double
-        let yMax: Double
-        let yPlusRate: Double
-        let zRate: Double
+    public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public let type: String
+        public let xRate: Double
+        public let yMax: Double
+        public let yPlusRate: Double
+        public let zRate: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case xRate = "XRate"
             case yMax = "YMax"
@@ -120,7 +120,7 @@ struct Tacticooler: SpecialParametable {
         }
     }
     
-    func getOverwrites() -> SpecialOverwrites {
+    public func getOverwrites() -> SpecialOverwrites {
         return SpecialOverwrites(
             chargeRateAutoPerFrame: nil,
             crossPaintCheckLength: nil,

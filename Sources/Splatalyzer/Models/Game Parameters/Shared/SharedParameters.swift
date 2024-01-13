@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct AdditionalMoveParameter: Codable {
-    let xRate: Double
-    let yMax: Double
-    let yPlusRate: Double
-    let zRate: Double
+public struct AdditionalMoveParameter: Codable {
+    public let xRate: Double
+    public let yMax: Double
+    public let yPlusRate: Double
+    public let zRate: Double?
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case xRate = "XRate"
         case yMax = "YMax"
         case yPlusRate = "YPlusRate"
@@ -22,40 +22,40 @@ struct AdditionalMoveParameter: Codable {
 }
 
 
-struct DistanceDamage: Codable {
-    let damage: Int
-    let distance: Double
+public struct DistanceDamage: Codable {
+    public let damage: Int
+    public let distance: Double
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case damage = "Damage"
         case distance = "Distance"
     }
 }
 
-struct HighMidLow: Codable {
-    let high: Double?
-    let low: Double?
-    let mid: Double?
+public struct HighMidLow: Codable {
+    public let high: Double?
+    public let low: Double?
+    public let mid: Double?
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case high = "High"
         case low = "Low"
         case mid = "Mid"
     }
     
-    init() {
+    public init() {
         self.high = 0
         self.low = 0
         self.mid = 0
     }
     
-    init(high: Double?, mid: Double?, low: Double?) {
+    public init(high: Double?, mid: Double?, low: Double?) {
         self.high = high
         self.low = low
         self.mid = mid
     }
     
-    init?(_ arr: [Double]) {
+    public init?(_ arr: [Double]) {
         if arr.count != 3 { return nil }
         
         let sorted = arr.sorted(by: {$0 < $1})
@@ -70,14 +70,14 @@ struct HighMidLow: Codable {
     }
 }
 
-struct KnockbackParameter: Codable {
-    let accel: Double
-    let bias: Double?
-    let degree: Double?
-    let directionZeroAccelRate: Double?
-    let distance: Double?
+public struct KnockbackParameter: Codable {
+    public let accel: Double
+    public let bias: Double?
+    public let degree: Double?
+    public let directionZeroAccelRate: Double?
+    public let distance: Double?
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case accel = "Accel"
         case bias = "Bias"
         case degree = "Degree"
@@ -87,28 +87,28 @@ struct KnockbackParameter: Codable {
 }
 
 
-struct RateData: Codable {
-    let data: [Double]
-    let maxX: Double
-    let type: String
+public struct RateData: Codable {
+    public let data: [Double]
+    public let maxX: Double
+    public let type: String
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case data = "Data"
         case maxX = "MaxX"
         case type = "Type"
     }
 }
 
-struct SplashAroundParameter: Codable {
-    let num: Int?
-    let offsetY: Double?
-    let paintRadius: Double
-    let pitchMax: Double?
-    let pitchMin: Double?
-    let velocityMax: Double?
-    let velocityMin: Double?
+public struct SplashAroundParameter: Codable {
+    public let num: Int?
+    public let offsetY: Double?
+    public let paintRadius: Double
+    public let pitchMax: Double?
+    public let pitchMin: Double?
+    public let velocityMax: Double?
+    public let velocityMin: Double?
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case num = "Num"
         case offsetY = "OffsetY"
         case paintRadius = "PaintRadius"
@@ -119,44 +119,32 @@ struct SplashAroundParameter: Codable {
     }
 }
 
-struct SpawnSpeedZSpecUp: Codable {
-    let high: Double
-    let low: Double
-    let mid: Double
+public struct SubSpecialSpecUpList: Codable {
+    public let specUpType: String?
+    public let value: HighMidLow
     
-    enum CodingKeys: String, CodingKey {
-        case high = "High"
-        case low = "Low"
-        case mid = "Mid"
-    }
-}
-
-struct SubSpecialSpecUpList: Codable {
-    let specUpType: String?
-    let value: HighMidLow
-    
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case specUpType = "SpecUpType"
         case value = "Value"
     }
 }
 
-struct XYData: Codable {
-    let x: Double
-    let y: Double
+public struct XYData: Codable {
+    public let x: Double
+    public let y: Double
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case x = "X"
         case y = "Y"
     }
 }
 
-struct XYZData: Codable {
-    let x: Double
-    let y: Double
-    let z: Double
+public struct XYZData: Codable {
+    public let x: Double
+    public let y: Double
+    public let z: Double
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case x = "X"
         case y = "Y"
         case z = "Z"

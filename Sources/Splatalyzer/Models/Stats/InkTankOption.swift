@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct InkTankOption {
-    let id = UUID()
-    let subsFromFullInkTank: Int
-    let type: InkConsumeType
-    let value: Double
+public struct InkTankOption {
+    public let id = UUID()
+    public let subsFromFullInkTank: Int
+    public let type: InkConsumeType
+    public let value: Double
 }

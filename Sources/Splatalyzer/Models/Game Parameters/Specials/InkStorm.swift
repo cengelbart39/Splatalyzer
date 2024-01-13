@@ -7,27 +7,27 @@
 
 import Foundation
 
-struct InkStorm: SpecialParametable {
-    let cloudParam: CloudParameter
-    let moveParam: MoveParameter
-    let rainParam: RainParameter
-    let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
+public struct InkStorm: SpecialParametable {
+    public let cloudParam: CloudParameter
+    public let moveParam: MoveParameter
+    public let rainParam: RainParameter
+    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case cloudParam = "CloudParam"
         case moveParam = "MoveParam"
         case rainParam = "RainParam"
         case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
     }
     
-    struct CloudParameter: Codable {
-        let type: String
-        let noPaintRainNum: Double
-        let rainNum: Int
-        let rainyFrame: HighMidLow
-        let withNoPaintRainNum: Int
+    public struct CloudParameter: Codable {
+        public let type: String
+        public let noPaintRainNum: Double
+        public let rainNum: Int
+        public let rainyFrame: HighMidLow
+        public let withNoPaintRainNum: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case noPaintRainNum = "NoPaintRainNum"
             case rainNum = "RainNum"
@@ -36,14 +36,14 @@ struct InkStorm: SpecialParametable {
         }
     }
     
-    struct MoveParameter: Codable {
-        let type: String
-        let guideHitCollisionType: String
-        let spawnSpeedY: Double
-        let spawnSpeedYWorldMin: Double
-        let spawnSpeedZSpecUp: HighMidLow
+    public struct MoveParameter: Codable {
+        public let type: String
+        public let guideHitCollisionType: String
+        public let spawnSpeedY: Double
+        public let spawnSpeedYWorldMin: Double
+        public let spawnSpeedZSpecUp: HighMidLow
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case guideHitCollisionType = "GuideHitCollisionType"
             case spawnSpeedY = "SpawnSpeedY"
@@ -52,24 +52,24 @@ struct InkStorm: SpecialParametable {
         }
     }
     
-    struct RainParameter: Codable {
-        let type: String
-        let collisionParam: CollisionParameter
-        let moveParam: RainParameter.MoveParameter
+    public struct RainParameter: Codable {
+        public let type: String
+        public let collisionParam: CollisionParameter
+        public let moveParam: RainParameter.MoveParameter
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case collisionParam = "CollisionParam"
             case moveParam = "MoveParam"
         }
         
-        struct CollisionParameter: Codable {
-            let endRadiusForField: Double
-            let endRadiusForPlayer: Double
-            let initRadiusForField: Double
-            let initRadiusForPlayer: Double
+        public struct CollisionParameter: Codable {
+            public let endRadiusForField: Double
+            public let endRadiusForPlayer: Double
+            public let initRadiusForField: Double
+            public let initRadiusForPlayer: Double
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case endRadiusForField = "EndRadiusForField"
                 case endRadiusForPlayer = "EndRadiusForPlayer"
                 case initRadiusForField = "InitRadiusForField"
@@ -77,19 +77,19 @@ struct InkStorm: SpecialParametable {
             }
         }
         
-        struct MoveParameter: Codable {
-            let brakeAirResist: Double
-            let brakeGravity: Double
-            let brakeToFreeStateFrame: Double
-            let brakeToFreeVelocityXZ: Double
-            let brakeToFreeVelocityY: Double
-            let freeAirResist: Double
-            let freeGravity: Double
-            let goStraightStateEndMaxSpeed: Double
-            let goStraightToBrakeStateFrame: Double
-            let spawnSpeed: Double
+        public struct MoveParameter: Codable {
+            public let brakeAirResist: Double
+            public let brakeGravity: Double
+            public let brakeToFreeStateFrame: Double
+            public let brakeToFreeVelocityXZ: Double
+            public let brakeToFreeVelocityY: Double
+            public let freeAirResist: Double
+            public let freeGravity: Double
+            public let goStraightStateEndMaxSpeed: Double
+            public let goStraightToBrakeStateFrame: Double
+            public let spawnSpeed: Double
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case brakeAirResist = "BrakeAirResist"
                 case brakeGravity = "BrakeGravity"
                 case brakeToFreeStateFrame = "BrakeToFreeStateFrame"
@@ -104,13 +104,13 @@ struct InkStorm: SpecialParametable {
         }
     }
     
-    struct SpawnBulletAdditionMovePlayerParameter: Codable {
-        let type: String
-        let xRate: Double
-        let yMax: Double
-        let yPlusRate: Double
+    public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public let type: String
+        public let xRate: Double
+        public let yMax: Double
+        public let yPlusRate: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case xRate = "XRate"
             case yMax = "YMax"
@@ -118,7 +118,7 @@ struct InkStorm: SpecialParametable {
         }
     }
     
-    func getOverwrites() -> SpecialOverwrites {
+    public func getOverwrites() -> SpecialOverwrites {
         return SpecialOverwrites(
             chargeRateAutoPerFrame: nil,
             crossPaintCheckLength: nil,

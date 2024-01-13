@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum DamageType: CaseIterable {
+public enum DamageType: CaseIterable {
     case turretMax
     case turretMin
     case normalMaxFullCharge

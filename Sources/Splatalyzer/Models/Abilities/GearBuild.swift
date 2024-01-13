@@ -7,24 +7,24 @@
 
 import Foundation
 
-struct GearBuild {
-    let headgear: GearPiece
-    let clothes: GearPiece
-    let shoes: GearPiece
+public struct GearBuild {
+    public var headgear: GearPiece
+    public var clothes: GearPiece
+    public var shoes: GearPiece
     
-    init(headgear: GearPiece, clothes: GearPiece, shoes: GearPiece) {
+    public init(headgear: GearPiece, clothes: GearPiece, shoes: GearPiece) {
         self.headgear = headgear
         self.clothes = clothes
         self.shoes = shoes
     }
     
-    init() {
+    public init() {
         self.headgear = GearPiece(for: .headgearOnly)
         self.clothes = GearPiece(for: .clothesOnly)
         self.shoes = GearPiece(for: .shoesOnly)
     }
     
-    func isValid() -> Bool {
+    public func isValid() -> Bool {
         return self.headgear.isValid() && self.clothes.isValid() && self.shoes.isValid()
     }
     
@@ -74,19 +74,19 @@ struct GearBuild {
         return effects
     }
     
-    func hasAbility(_ ability: Ability) -> Bool {
+    public func hasAbility(_ ability: Ability) -> Bool {
         return self.headgear.hasAbility(ability) || self.clothes.hasAbility(ability) || self.shoes.hasAbility(ability)
     }
 }
 
-struct GearPiece {
-    let main: Ability
-    let sub1: Ability
-    let sub2: Ability
-    let sub3: Ability
-    let slot: AbilityRestriction
+public struct GearPiece {
+    public var main: Ability
+    public var sub1: Ability
+    public var sub2: Ability
+    public var sub3: Ability
+    public var slot: AbilityRestriction
     
-    init(main: Ability, sub1: Ability, sub2: Ability, sub3: Ability, for slot: AbilityRestriction) {
+    public init(main: Ability, sub1: Ability, sub2: Ability, sub3: Ability, for slot: AbilityRestriction) {
         self.main = main
         self.sub1 = sub1
         self.sub2 = sub2
@@ -94,7 +94,7 @@ struct GearPiece {
         self.slot = slot
     }
     
-    init(for slot: AbilityRestriction) {
+    public init(for slot: AbilityRestriction) {
         self.main = .none
         self.sub1 = .none
         self.sub2 = .none
@@ -102,7 +102,7 @@ struct GearPiece {
         self.slot = slot
     }
     
-    func isValid() -> Bool {
+    public func isValid() -> Bool {
         switch self.slot {
         case .headgearOnly:
             return Ability.headgearAbilities.contains(self.main)
@@ -149,7 +149,7 @@ struct GearPiece {
         return self.main.toSpecialEffect(intensity: ldeIntensity)
     }
     
-    func hasAbility(_ ability: Ability) -> Bool {
+    public func hasAbility(_ ability: Ability) -> Bool {
         return self.main == ability || self.sub1 == ability || self.sub2 == ability || self.sub3 == ability
     }
 }

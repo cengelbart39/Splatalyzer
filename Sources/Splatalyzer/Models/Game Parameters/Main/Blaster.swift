@@ -7,42 +7,42 @@
 
 import Foundation
 
-struct Blaster: Codable {
-    let blastJumpParam: BlastParameter?
-    let blastParam: BlastParameter
+public struct Blaster: Codable {
+    public let blastJumpParam: BlastParameter?
+    public let blastParam: BlastParameter
     
-    let blasterBurstJumpParam: BurstParameter?
-    let blasterBurstParam: BurstParameter
+    public let blasterBurstJumpParam: BurstParameter?
+    public let blasterBurstParam: BurstParameter
     
-    let collisionParam: CollisionParameter
+    public let collisionParam: CollisionParameter
     
-    let damageJumpParam: DamageParameter?
-    let damageParam: DamageParameter
+    public let damageJumpParam: DamageParameter?
+    public let damageParam: DamageParameter
     
-    let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter?
-    let mainWeaponSetting: MainWeaponSettings
+    public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter?
+    public let mainWeaponSetting: MainWeaponSettings
     
-    let moveJumpParam: MoveParameter?
-    let moveParam: MoveParameter
+    public let moveJumpParam: MoveParameter?
+    public let moveParam: MoveParameter
     
-    let paintParam: PaintParameter
+    public let paintParam: PaintParameter
     
-    let splashPaintParam: SplashPaintParameter
-    let splashSpawnParam: SplashSpawnParameter
-    let splashWallHitParam: SplashWallHitParameter
+    public let splashPaintParam: SplashPaintParameter
+    public let splashSpawnParam: SplashSpawnParameter
+    public let splashWallHitParam: SplashWallHitParameter
     
-    let wallDropCollisionPaintParam: WallDropCollisionPaintParameter
-    let wallDropMoveParam: WallDropMoveParameter
+    public let wallDropCollisionPaintParam: WallDropCollisionPaintParameter
+    public let wallDropMoveParam: WallDropMoveParameter
     
-    let weaponParam: WeaponParameter
+    public let weaponParam: WeaponParameter
     
-    let skillActionSpecUpReduceJumpSwerveRate: ActionSpecUpReduceJumpSwerveRate?
+    public let skillActionSpecUpReduceJumpSwerveRate: ActionSpecUpReduceJumpSwerveRate?
     
-    let skillMainEffectUpRangeUp: MainEffectiveRangeUpSkill?
+    public let skillMainEffectUpRangeUp: MainEffectiveRangeUpSkill?
     
-    let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
+    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case blastJumpParam = "BlastJumpParam"
         case blastParam = "BlastParam"
         case blasterBurstJumpParam = "BlasterBurstJumpParam"
@@ -68,18 +68,18 @@ struct Blaster: Codable {
 }
 
 extension Blaster {
-    struct BlastParameter: Codable {
-        let type: String
-        let crossPaintCheckLength: Double
-        let crossPaintRadius: Double
-        let damageAttackPriority: Bool
-        let damageLinear: Bool
-        let distanceDamage: [DistanceDamage]
-        let knockbackParam: KnockbackParameter
-        let paintRadius: Double
-        let splashAroundParam: SplashAroundParameter?
+    public struct BlastParameter: Codable {
+        public let type: String
+        public let crossPaintCheckLength: Double
+        public let crossPaintRadius: Double
+        public let damageAttackPriority: Bool
+        public let damageLinear: Bool
+        public let distanceDamage: [DistanceDamage]
+        public let knockbackParam: KnockbackParameter
+        public let paintRadius: Double
+        public let splashAroundParam: SplashAroundParameter?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case crossPaintCheckLength = "CrossPaintCheckLength"
             case crossPaintRadius = "CrossPaintRadius"
@@ -92,25 +92,25 @@ extension Blaster {
         }
     }
     
-    struct BurstParameter: Codable {
-        let type: String
-        let burstFrame: Int?
-        let moveLength: Double?
-        let noOccurRoundYOver90RoundXPlus: Bool?
-        let noOccurRoundYOver90RoundXMinus: Bool?
-        let shotCollisionHitDamageRate: Double?
-        let shotCollisionHitRadiusRate: Double?
-        let splashDropPaintRadius: Double?
-        let splashDropPaintShotColHitRadius: Double
-        let splashPaintRadius: Double?
-        let splashPaintShotColHitRadius: Double?
-        let splashRoundAxisXArray: [Double]
-        let splashRoundAxisYArray: [Double]
-        let splashWallDropMoveParam: WallDropMoveParameter
-        let splashWallDropPaintParam: SplashWallDropPaintParameter
-        let wallHitPaintRadius: Double?
+    public struct BurstParameter: Codable {
+        public let type: String
+        public let burstFrame: Int?
+        public let moveLength: Double?
+        public let noOccurRoundYOver90RoundXPlus: Bool?
+        public let noOccurRoundYOver90RoundXMinus: Bool?
+        public let shotCollisionHitDamageRate: Double?
+        public let shotCollisionHitRadiusRate: Double?
+        public let splashDropPaintRadius: Double?
+        public let splashDropPaintShotColHitRadius: Double
+        public let splashPaintRadius: Double?
+        public let splashPaintShotColHitRadius: Double?
+        public let splashRoundAxisXArray: [Double]
+        public let splashRoundAxisYArray: [Double]
+        public let splashWallDropMoveParam: WallDropMoveParameter
+        public let splashWallDropPaintParam: SplashWallDropPaintParameter
+        public let wallHitPaintRadius: Double?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case burstFrame = "BurstFrame"
             case moveLength = "MoveLength"
@@ -132,12 +132,12 @@ extension Blaster {
 }
 
 extension Blaster.BurstParameter {
-    struct SplashWallDropPaintParameter: Codable {
-        let paintRadiusFall: Double
-        let paintRadiusGround: Double
-        let paintRadiusShock: Double
+    public struct SplashWallDropPaintParameter: Codable {
+        public let paintRadiusFall: Double
+        public let paintRadiusGround: Double
+        public let paintRadiusShock: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case paintRadiusFall = "PaintRadiusFall"
             case paintRadiusGround = "PaintRadiusGround"
             case paintRadiusShock = "PaintRadiusShock"
@@ -146,16 +146,16 @@ extension Blaster.BurstParameter {
 }
 
 extension Blaster {
-    struct CollisionParameter: Codable {
-        let type: String
-        let changeFrameForField: Int
-        let endRadiusForField: Double
-        let endRadiusForPlayer: Double
-        let friendThroughFrameForPlayer: Int
-        let initRadiusForField: Double
-        let initRadiusForPlayer: Double
+    public struct CollisionParameter: Codable {
+        public let type: String
+        public let changeFrameForField: Int
+        public let endRadiusForField: Double
+        public let endRadiusForPlayer: Double
+        public let friendThroughFrameForPlayer: Int
+        public let initRadiusForField: Double
+        public let initRadiusForPlayer: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case changeFrameForField = "ChangeFrameForField"
             case endRadiusForField = "EndRadiusForField"
@@ -166,14 +166,14 @@ extension Blaster {
         }
     }
 
-    struct DamageParameter: Codable {
-        let type: String
-        let reduceEndFrame: Int
-        let reduceStartFrame: Int
-        let valueMax: Int
-        let valueMin: Int
+    public struct DamageParameter: Codable {
+        public let type: String
+        public let reduceEndFrame: Int
+        public let reduceStartFrame: Int
+        public let valueMax: Int
+        public let valueMin: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case reduceEndFrame = "ReduceEndFrame"
             case reduceStartFrame = "ReduceStartFrame"
@@ -182,14 +182,14 @@ extension Blaster {
         }
     }
     
-    struct MoveParameter: Codable {
-        let type: String
-        let freeGravity: Double?
-        let goStraightStateEndMaxSpeed: Double
-        let goStraightToBrakeStateFrame: Int
-        let spawnSpeed: Double
+    public struct MoveParameter: Codable {
+        public let type: String
+        public let freeGravity: Double?
+        public let goStraightStateEndMaxSpeed: Double
+        public let goStraightToBrakeStateFrame: Int
+        public let spawnSpeed: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case freeGravity = "FreeGravity"
             case goStraightStateEndMaxSpeed = "GoStraightStateEndMaxSpeed"
@@ -198,14 +198,14 @@ extension Blaster {
         }
     }
 
-    struct PaintParameter: Codable {
-        let type: String
-        let distanceMiddle: Double
-        let widthHalfFar: Double
-        let widthHalfMiddle: Double
-        let widthHalfNear: Double
+    public struct PaintParameter: Codable {
+        public let type: String
+        public let distanceMiddle: Double
+        public let widthHalfFar: Double
+        public let widthHalfMiddle: Double
+        public let widthHalfNear: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case distanceMiddle = "DistanceMiddle"
             case widthHalfFar = "WidthHalfFar"
@@ -214,15 +214,15 @@ extension Blaster {
         }
     }
 
-    struct SplashPaintParameter: Codable {
-        let type: String
-        let depthMaxDropHeight: Double
-        let depthMinDropHeight: Double
-        let depthScaleMax: Double?
-        let widthHalf: Double
-        let widthHalfNearest: Double
+    public struct SplashPaintParameter: Codable {
+        public let type: String
+        public let depthMaxDropHeight: Double
+        public let depthMinDropHeight: Double
+        public let depthScaleMax: Double?
+        public let widthHalf: Double
+        public let widthHalfNearest: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case depthMaxDropHeight = "DepthMaxDropHeight"
             case depthMinDropHeight = "DepthMinDropHeight"
@@ -232,19 +232,19 @@ extension Blaster {
         }
     }
 
-    struct SplashSpawnParameter: Codable {
-        let type: String
-        let forceSpawnNearestAddNumArray: [Double]
-        let randomSpawnVelXMax: Double?
-        let randomSpawnVelYMax: Double?
-        let randomSpaceVelZMax: Double?
-        let randomSpaceVelZMin: Double?
-        let spawnBetweenLength: Double
-        let spawnNearestLength: Double
-        let spawnNum: Double
-        let splitNum: Int
+    public struct SplashSpawnParameter: Codable {
+        public let type: String
+        public let forceSpawnNearestAddNumArray: [Double]
+        public let randomSpawnVelXMax: Double?
+        public let randomSpawnVelYMax: Double?
+        public let randomSpaceVelZMax: Double?
+        public let randomSpaceVelZMin: Double?
+        public let spawnBetweenLength: Double
+        public let spawnNearestLength: Double
+        public let spawnNum: Double
+        public let splitNum: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case forceSpawnNearestAddNumArray = "ForceSpawnNearestAddNumArray"
             case randomSpawnVelXMax = "RandomSpawnVelXMax"
@@ -258,13 +258,13 @@ extension Blaster {
         }
     }
 
-    struct SplashWallHitParameter: Codable {
-        let type: String
-        let spawnParam: SpawnParameter
-        let wallDropCollisionPaintParam: WallDropCollisionPaintParameter
-        let wallDropMoveParam: WallDropMoveParameter
+    public struct SplashWallHitParameter: Codable {
+        public let type: String
+        public let spawnParam: SpawnParameter
+        public let wallDropCollisionPaintParam: WallDropCollisionPaintParameter
+        public let wallDropMoveParam: WallDropMoveParameter
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case spawnParam = "SpawnParam"
             case wallDropCollisionPaintParam = "WallDropCollisionPaintParam"
@@ -274,12 +274,12 @@ extension Blaster {
 }
 
 extension Blaster.SplashWallHitParameter {
-    struct SpawnParameter: Codable {
-        let distanceXZRate: Double?
-        let firstDistance: Double
-        let velocityMinusYRate: Double
+    public struct SpawnParameter: Codable {
+        public let distanceXZRate: Double?
+        public let firstDistance: Double
+        public let velocityMinusYRate: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case distanceXZRate = "DistanceXZRate"
             case firstDistance = "FirstDistance"
             case velocityMinusYRate = "VelocityMinusYRate"
@@ -288,14 +288,14 @@ extension Blaster.SplashWallHitParameter {
 }
 
 extension Blaster {
-    struct WallDropCollisionPaintParameter: Codable {
-        let type: String?
-        let fallPeriodFirstSecondTargetAlp: Double
-        let paintRadiusFall: Double
-        let paintRadiusGround: Double?
-        let paintRadiusShock: Double
+    public struct WallDropCollisionPaintParameter: Codable {
+        public let type: String?
+        public let fallPeriodFirstSecondTargetAlp: Double
+        public let paintRadiusFall: Double
+        public let paintRadiusGround: Double?
+        public let paintRadiusShock: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case fallPeriodFirstSecondTargetAlp = "FallPeriodFirstSecondTargetAlp"
             case paintRadiusFall = "PaintRadiusFall"
@@ -304,17 +304,17 @@ extension Blaster {
         }
     }
 
-    struct WallDropMoveParameter: Codable {
-        let type: String?
-        let fallPeriodFirstFrameMax: Int?
-        let fallPeriodFirstFrameMin: Int
-        let fallPeriodFirstTargetSpeed: Double
-        let fallPeriodLastFrameMax: Int
-        let fallPeriodLastFrameMin: Int
-        let fallPeriodSecondFrame: Int
-        let fallPeriodSecondTargetSpeed: Double
+    public struct WallDropMoveParameter: Codable {
+        public let type: String?
+        public let fallPeriodFirstFrameMax: Int?
+        public let fallPeriodFirstFrameMin: Int
+        public let fallPeriodFirstTargetSpeed: Double
+        public let fallPeriodLastFrameMax: Int
+        public let fallPeriodLastFrameMin: Int
+        public let fallPeriodSecondFrame: Int
+        public let fallPeriodSecondTargetSpeed: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case fallPeriodFirstFrameMax = "FallPeriodFirstFrameMax"
             case fallPeriodFirstFrameMin = "FallPeriodFirstFrameMin"
@@ -326,29 +326,29 @@ extension Blaster {
         }
     }
 
-    struct WeaponParameter: Codable {
-        let type: String
-        let inkConsume: Double
-        let inkRecoverStop: Int
-        let jumpDegBiasDecreaseStartFrame: Int
-        let jumpDegBiasEndFrame: Int
-        let jumpDegBiasMax: Double
-        let jumpDegSwerve: Double
-        let moveSpeed: Double
-        let postDelayFrame: Int
-        let postDelayFrameBlaster: Int?
-        let preDelayFrameHumanShot: Int
-        let preDelayFrameSquidShot: Int
-        let repeatFrame: Int
-        let shotGuideFrame: Int
-        let squidShotShorteningFrame: Int?
-        let standDegBiasDecrease: Double
-        let standDegBiasKf: Double
-        let standDegBiasMax: Double
-        let standDegBiasMin: Double
-        let standDegSwerve: Double
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let inkConsume: Double
+        public let inkRecoverStop: Int
+        public let jumpDegBiasDecreaseStartFrame: Int
+        public let jumpDegBiasEndFrame: Int
+        public let jumpDegBiasMax: Double
+        public let jumpDegSwerve: Double
+        public let moveSpeed: Double
+        public let postDelayFrame: Int
+        public let postDelayFrameBlaster: Int?
+        public let preDelayFrameHumanShot: Int
+        public let preDelayFrameSquidShot: Int
+        public let repeatFrame: Int
+        public let shotGuideFrame: Int
+        public let squidShotShorteningFrame: Int?
+        public let standDegBiasDecrease: Double
+        public let standDegBiasKf: Double
+        public let standDegBiasMax: Double
+        public let standDegBiasMin: Double
+        public let standDegSwerve: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case inkConsume = "InkConsume"
             case inkRecoverStop = "InkRecoverStop"
@@ -372,27 +372,27 @@ extension Blaster {
         }
     }
 
-    struct ActionSpecUpReduceJumpSwerveRate: Codable {
-        let type: String
-        let mid: Double
+    public struct ActionSpecUpReduceJumpSwerveRate: Codable {
+        public let type: String
+        public let mid: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case mid = "Mid"
         }
     }
     
-    struct MainEffectiveRangeUpSkill: Codable {
-        let type: String
+    public struct MainEffectiveRangeUpSkill: Codable {
+        public let type: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
         }
     }
     
-    struct SpawnBulletAdditionMovePlayerParameter: Codable {
-        let type: String
-        let zRate: Double
+    public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public let type: String
+        public let zRate: Double
         
         enum CodingKeys: String, CodingKey {
             case type = "$type"

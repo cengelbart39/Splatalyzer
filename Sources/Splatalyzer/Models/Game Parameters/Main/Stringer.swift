@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct Stringer: Codable {
-    let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
-    let mainWeaponSetting: MainWeaponSettings
+public struct Stringer: Codable {
+    public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
+    public let mainWeaponSetting: MainWeaponSettings
     
-    let bulletStringerParam: BulletParameter
-    let weaponStringerParam: WeaponParameter
+    public let bulletStringerParam: BulletParameter
+    public let weaponStringerParam: WeaponParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
         case mainWeaponSetting = "MainWeaponSetting"
         case bulletStringerParam = "spl__BulletStringerParam"
@@ -23,22 +23,22 @@ struct Stringer: Codable {
 }
 
 extension Stringer {
-    struct BulletParameter: Codable {
-        let type: String
-        let collisionParam: CollisionParameter
-        let damageParam: DamageParameter
-        let detonationParam: DetonationParameter
-        let drawParam: DrawParameter
-        let effect1stParam: Effect1stParameter
-        let effect2ndParam: Effect2ndParameter
-        let moveParam: MoveParameter
-        let paintParam: PaintParameter
-        let splashPaintParam: SplashPaintParameter
-        let splashSpawnParam: SplashSpawnParameter
-        let wallDropMoveParam: WallDropMoveParameter
-        let wallDropPaintParam: WallDropPaintParameter?
+    public struct BulletParameter: Codable {
+        public let type: String
+        public let collisionParam: CollisionParameter
+        public let damageParam: DamageParameter
+        public let detonationParam: DetonationParameter
+        public let drawParam: DrawParameter
+        public let effect1stParam: Effect1stParameter
+        public let effect2ndParam: Effect2ndParameter
+        public let moveParam: MoveParameter
+        public let paintParam: PaintParameter
+        public let splashPaintParam: SplashPaintParameter
+        public let splashSpawnParam: SplashSpawnParameter
+        public let wallDropMoveParam: WallDropMoveParameter
+        public let wallDropPaintParam: WallDropPaintParameter?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case collisionParam = "CollisionParam"
             case damageParam = "DamageParam"
@@ -57,16 +57,16 @@ extension Stringer {
 }
 
 extension Stringer.BulletParameter {
-    struct CollisionParameter: Codable {
-        let changeFrameForField: Int?
-        let changeFrameForPlayer: Int?
-        let endRadiusForField: Double?
-        let endRadiusForPlayer: Double
-        let friendThroughFrameForPlayer: Int?
-        let initRadiusForField: Double?
-        let initRadiusForPlayer: Double
+    public struct CollisionParameter: Codable {
+        public let changeFrameForField: Int?
+        public let changeFrameForPlayer: Int?
+        public let endRadiusForField: Double?
+        public let endRadiusForPlayer: Double
+        public let friendThroughFrameForPlayer: Int?
+        public let initRadiusForField: Double?
+        public let initRadiusForPlayer: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case changeFrameForField = "ChangeFrameForField"
             case changeFrameForPlayer = "ChangeFrameForPlayer"
             case endRadiusForField = "EndRadiusForField"
@@ -77,25 +77,25 @@ extension Stringer.BulletParameter {
         }
     }
     
-    struct DamageParameter: Codable {
-        let directHitDamageMax: Int
-        let directHitDamageMid: Int
-        let directHitDamageMin: Int
+    public struct DamageParameter: Codable {
+        public let directHitDamageMax: Int
+        public let directHitDamageMid: Int
+        public let directHitDamageMin: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case directHitDamageMax = "DirectHitDamageMax"
             case directHitDamageMid = "DirectHitDamageMid"
             case directHitDamageMin = "DirectHitDamageMin"
         }
     }
     
-    struct DetonationParameter: Codable {
-        let blastParam: BlastParameter
-        let detonationFrame: Int
-        let isExplosiveBoltMidCharge: Bool
-        let isExplosiveBoltMinCharge: Bool?
+    public struct DetonationParameter: Codable {
+        public let blastParam: BlastParameter
+        public let detonationFrame: Int
+        public let isExplosiveBoltMidCharge: Bool
+        public let isExplosiveBoltMinCharge: Bool?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case blastParam = "BlastParam"
             case detonationFrame = "DetonationFrame"
             case isExplosiveBoltMidCharge = "IsExplosiveBoltMidCharge"
@@ -103,14 +103,14 @@ extension Stringer.BulletParameter {
         }
     }
     
-    struct DrawParameter: Codable {
-        let attInterpRate: Double?
-        let capsuleLength: Double
-        let capsuleRadius: Double
-        let isDrawCapsule: Bool
-        let isDrawCollision: Bool
+    public struct DrawParameter: Codable {
+        public let attInterpRate: Double?
+        public let capsuleLength: Double
+        public let capsuleRadius: Double
+        public let isDrawCapsule: Bool
+        public let isDrawCollision: Bool
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case attInterpRate = "AttInterpRate"
             case capsuleLength = "CapsuleLength"
             case capsuleRadius = "CapsuleRadius"
@@ -119,23 +119,23 @@ extension Stringer.BulletParameter {
         }
     }
     
-    struct Effect1stParameter: Codable {
-        let delayFrame: Int
-        let maxLength: Double
+    public struct Effect1stParameter: Codable {
+        public let delayFrame: Int
+        public let maxLength: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case delayFrame = "DelayFrame"
             case maxLength = "MaxLen"
         }
     }
     
-    struct Effect2ndParameter: Codable {
-        let landArrowMinAngle: Int?
-        let landArrowRiseFrame: Int?
-        let smokeInterval: Double
-        let smokeStartLen: Double?
+    public struct Effect2ndParameter: Codable {
+        public let landArrowMinAngle: Int?
+        public let landArrowRiseFrame: Int?
+        public let smokeInterval: Double
+        public let smokeStartLen: Double?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case landArrowMinAngle = "LandArrowMinAngle"
             case landArrowRiseFrame = "LandArrowRiseFrame"
             case smokeInterval = "SmokeInterval"
@@ -143,23 +143,23 @@ extension Stringer.BulletParameter {
         }
     }
     
-    struct MoveParameter: Codable {
-        let brakeAirResist: Double
-        let brakeGravity: Double
-        let brakeToFreeStateFrame: Int
-        let brakeToFreeVelocityXZ: Double
-        let brakeToFreeVelocityY: Double
-        let freeAirResist: Double
-        let freeGravity: Double
-        let goStraightStateEndMaxSpeed: Double
-        let goStraightToBrakeStateFrame: Int
-        let hitWallKeepFrame: Int?
-        let spawnSpeed: Double
-        let spawnSpeedMax: Double
-        let spawnSpeedMid: Double
-        let spawnSpeedMin: Double
+    public struct MoveParameter: Codable {
+        public let brakeAirResist: Double
+        public let brakeGravity: Double
+        public let brakeToFreeStateFrame: Int
+        public let brakeToFreeVelocityXZ: Double
+        public let brakeToFreeVelocityY: Double
+        public let freeAirResist: Double
+        public let freeGravity: Double
+        public let goStraightStateEndMaxSpeed: Double
+        public let goStraightToBrakeStateFrame: Int
+        public let hitWallKeepFrame: Int?
+        public let spawnSpeed: Double
+        public let spawnSpeedMax: Double
+        public let spawnSpeedMid: Double
+        public let spawnSpeedMin: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case brakeAirResist = "BrakeAirResist"
             case brakeGravity = "BrakeGravity"
             case brakeToFreeStateFrame = "BrakeToFreeStateFrame"
@@ -177,16 +177,16 @@ extension Stringer.BulletParameter {
         }
     }
     
-    struct PaintParameter: Codable {
-        let depthScaleMax: Double?
-        let depthScaleMin: Double?
-        let paintDegreeMax: Double?
-        let paintDegreeMin: Double?
-        let widthHalfMax: Double
-        let widthHalfMid: Double
-        let widthHalfMin: Double
+    public struct PaintParameter: Codable {
+        public let depthScaleMax: Double?
+        public let depthScaleMin: Double?
+        public let paintDegreeMax: Double?
+        public let paintDegreeMin: Double?
+        public let widthHalfMax: Double
+        public let widthHalfMid: Double
+        public let widthHalfMin: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case depthScaleMax = "DepthScaleMax"
             case depthScaleMin = "DepthScaleMin"
             case paintDegreeMax = "PaintDegreeMax"
@@ -197,15 +197,15 @@ extension Stringer.BulletParameter {
         }
     }
     
-    struct SplashPaintParameter: Codable {
-        let depthMaxDropHeight: Double?
-        let depthMinDropHeight: Double?
-        let depthScaleMax: Double
-        let depthScaleMin: Double?
-        let widthHalf: Double
-        let widthHalfNearest: Double?
+    public struct SplashPaintParameter: Codable {
+        public let depthMaxDropHeight: Double?
+        public let depthMinDropHeight: Double?
+        public let depthScaleMax: Double
+        public let depthScaleMin: Double?
+        public let widthHalf: Double
+        public let widthHalfNearest: Double?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case depthMaxDropHeight = "DepthMaxDropHeight"
             case depthMinDropHeight = "DepthMinDropHeight"
             case depthScaleMax = "DepthScaleMax"
@@ -215,17 +215,17 @@ extension Stringer.BulletParameter {
         }
     }
     
-    struct SplashSpawnParameter: Codable {
-        let dropInterval: Double
-        let nearestLen: Double?
-        let randomSpawnVelXMax: Double?
-        let randomSpawnVelYMax: Double?
-        let randomSpawnVelZMax: Double?
-        let randomSpawnVelZMin: Double?
-        let splashNumMax: Int?
-        let splitNum: Int
+    public struct SplashSpawnParameter: Codable {
+        public let dropInterval: Double
+        public let nearestLen: Double?
+        public let randomSpawnVelXMax: Double?
+        public let randomSpawnVelYMax: Double?
+        public let randomSpawnVelZMax: Double?
+        public let randomSpawnVelZMin: Double?
+        public let splashNumMax: Int?
+        public let splitNum: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case dropInterval = "DropInterval"
             case nearestLen = "NearestLen"
             case randomSpawnVelXMax = "RandomSpawnVelXMax"
@@ -237,17 +237,17 @@ extension Stringer.BulletParameter {
         }
     }
     
-    struct WallDropMoveParameter: Codable {
-        let fallPeriodFirstFrameMax: Int
-        let fallPeriodFirstFrameMin: Int
-        let fallPeriodFirstTargetSpeed: Double?
-        let fallPeriodLastFrameMax: Int
-        let fallPeriodLastFrameMin: Int?
-        let fallPeriodSecondFrame: Int?
-        let fallPeriodSecondTargetSpeed: Double?
-        let freeGravityType: String?
+    public struct WallDropMoveParameter: Codable {
+        public let fallPeriodFirstFrameMax: Int
+        public let fallPeriodFirstFrameMin: Int
+        public let fallPeriodFirstTargetSpeed: Double?
+        public let fallPeriodLastFrameMax: Int
+        public let fallPeriodLastFrameMin: Int?
+        public let fallPeriodSecondFrame: Int?
+        public let fallPeriodSecondTargetSpeed: Double?
+        public let freeGravityType: String?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case fallPeriodFirstFrameMax = "FallPeriodFirstFrameMax"
             case fallPeriodFirstFrameMin = "FallPeriodFirstFrameMin"
             case fallPeriodFirstTargetSpeed = "FallPeriodFirstTargetSpeed"
@@ -259,13 +259,13 @@ extension Stringer.BulletParameter {
         }
     }
     
-    struct WallDropPaintParameter: Codable {
-        let fallPeriodFirstSecondTargetAlp: Double
-        let paintRadiusFall: Double
-        let paintRadiusGround: Double
-        let paintRadiusShock: Double
+    public struct WallDropPaintParameter: Codable {
+        public let fallPeriodFirstSecondTargetAlp: Double
+        public let paintRadiusFall: Double
+        public let paintRadiusGround: Double
+        public let paintRadiusShock: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case fallPeriodFirstSecondTargetAlp = "FallPeriodFirstSecondTargetAlp"
             case paintRadiusFall = "PaintRadiusFall"
             case paintRadiusGround = "PaintRadiusGround"
@@ -275,27 +275,27 @@ extension Stringer.BulletParameter {
 }
 
 extension Stringer.BulletParameter.DetonationParameter {
-    struct BlastParameter: Codable {
-        let collisionRadiusForPaint: Double?
-        let crossPaintCheckLength: Double?
-        let crossPaintRadius: Double?
-        let crossPaintTexture: String?
-        let crossPaintUseChageArea: Bool?
-        let damageAttackerPriority: Bool?
-        let damageLinear: Bool?
-        let damageOffsetY: Double
-        let distanceDamage: [DistanceDamage]
-        let knockBackParam: KnockbackParameter?
-        let paintHeight: Double?
-        let paintOffsetY: Double
-        let paintRadius: Double
-        let paintTexture: String?
-        let planeDamage: [Int]?
-        let reactionVel: Double?
-        let splashAroundParam: SplashAroundParameter?
-        let subSpecialSpecUpList: [String]?
+    public struct BlastParameter: Codable {
+        public let collisionRadiusForPaint: Double?
+        public let crossPaintCheckLength: Double?
+        public let crossPaintRadius: Double?
+        public let crossPaintTexture: String?
+        public let crossPaintUseChageArea: Bool?
+        public let damageAttackerPriority: Bool?
+        public let damageLinear: Bool?
+        public let damageOffsetY: Double
+        public let distanceDamage: [DistanceDamage]
+        public let knockBackParam: KnockbackParameter?
+        public let paintHeight: Double?
+        public let paintOffsetY: Double
+        public let paintRadius: Double
+        public let paintTexture: String?
+        public let planeDamage: [Int]?
+        public let reactionVel: Double?
+        public let splashAroundParam: SplashAroundParameter?
+        public let subSpecialSpecUpList: [String]?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case collisionRadiusForPaint = "CollisionRadiusForPaint"
             case crossPaintCheckLength = "CrossPaintCheckLength"
             case crossPaintRadius = "CrossPaintRadius"
@@ -319,16 +319,16 @@ extension Stringer.BulletParameter.DetonationParameter {
 }
 
 extension Stringer {
-    struct WeaponParameter: Codable {
-        let type: String
-        let chargeKeepParameter: ChargeKeepParameter
-        let chargeParameter: ChargeParameter
-        let isEnableChargeKeep: Bool?
-        let playerParam: PlayerParameter
-        let shotGuideParam: ShotGuideParameter
-        let shotParam: ShotParameter
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let chargeKeepParameter: ChargeKeepParameter
+        public let chargeParameter: ChargeParameter
+        public let isEnableChargeKeep: Bool?
+        public let playerParam: PlayerParameter
+        public let shotGuideParam: ShotGuideParameter
+        public let shotParam: ShotParameter
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case chargeKeepParameter = "ChargeKeepParam"
             case chargeParameter = "ChargeParam"
@@ -341,15 +341,15 @@ extension Stringer {
 }
 
 extension Stringer.WeaponParameter {
-    struct ChargeKeepParameter: Codable {
-        let enableKeepChargeAnytime: Bool?
-        let enableKeepChargeTransCancel: Bool?
-        let keepChargeFullFrame: Int
-        let keepChargePreDelayFrame: Int
-        let keepChargePreDelayFramePre: Int
-        let muzzleLocalPos: XYZData?
+    public struct ChargeKeepParameter: Codable {
+        public let enableKeepChargeAnytime: Bool?
+        public let enableKeepChargeTransCancel: Bool?
+        public let keepChargeFullFrame: Int
+        public let keepChargePreDelayFrame: Int
+        public let keepChargePreDelayFramePre: Int
+        public let muzzleLocalPos: XYZData?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case enableKeepChargeAnytime = "EnableKeepChargeAnytime"
             case enableKeepChargeTransCancel = "EnableKeepChargeTransCancel"
             case keepChargeFullFrame = "KeepChargeFullFrame"
@@ -359,27 +359,27 @@ extension Stringer.WeaponParameter {
         }
     }
     
-    struct ChargeParameter: Codable {
-        let airChargeRateByInkEmpty: Int
-        let chargeFrameFullCharge: Int
-        let chargeFrameMidCharge: Int
-        let chargeFrameMinCharge: Int
-        let freezeFrameFullCharge: Int
-        let freezeFrameMidCharge: Int
-        let freezeFrameMinCharge: Int
-        let inkConsumeFullCharge: Double
-        let inkConsumeMidCharge: Double
-        let inkConsumeMinCharge: Double
-        let inkEmptyChargeTimes: Int?
-        let inkRecoverStop: Int?
-        let inkRecoverStopChargeKeep: Int?
-        let jumpHeightFullCharge: Double
-        let moveJumpDownBias: Double?
-        let moveJumpDownStartChargeRate: Double?
-        let moveSpeedFullCharge: Double
-        let postDelayFrame: Int
+    public struct ChargeParameter: Codable {
+        public let airChargeRateByInkEmpty: Int
+        public let chargeFrameFullCharge: Int
+        public let chargeFrameMidCharge: Int
+        public let chargeFrameMinCharge: Int
+        public let freezeFrameFullCharge: Int
+        public let freezeFrameMidCharge: Int
+        public let freezeFrameMinCharge: Int
+        public let inkConsumeFullCharge: Double
+        public let inkConsumeMidCharge: Double
+        public let inkConsumeMinCharge: Double
+        public let inkEmptyChargeTimes: Int?
+        public let inkRecoverStop: Int?
+        public let inkRecoverStopChargeKeep: Int?
+        public let jumpHeightFullCharge: Double
+        public let moveJumpDownBias: Double?
+        public let moveJumpDownStartChargeRate: Double?
+        public let moveSpeedFullCharge: Double
+        public let postDelayFrame: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case airChargeRateByInkEmpty = "AirChargeRateByInkEmpty"
             case chargeFrameFullCharge = "ChargeFrameFullCharge"
             case chargeFrameMidCharge = "ChargeFrameMidCharge"
@@ -401,27 +401,27 @@ extension Stringer.WeaponParameter {
         }
     }
     
-    struct PlayerParameter: Codable {
-        let bowTiltDegRcvInterpRate: Double
+    public struct PlayerParameter: Codable {
+        public let bowTiltDegRcvInterpRate: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case bowTiltDegRcvInterpRate = "BowTiltDegRcvInterpRate"
         }
     }
     
-    struct ShotGuideParameter: Codable {
-        let delayFrameShowShotGuide: Int?
-        let guideDrawFrameDefilade: Int?
-        let guideDrawFrameFirst: Int
-        let guideDrawFrameSecond: Int
-        let isDrawTrajectory: Bool
-        let mainArrowGuideDrawFrame: Int
-        let subArrowGuideDrawFrame: Int
-        let tiltGuideEnabled: Bool
-        let tiltGuideLength: Double
-        let tiltGuideWidth: Double
+    public struct ShotGuideParameter: Codable {
+        public let delayFrameShowShotGuide: Int?
+        public let guideDrawFrameDefilade: Int?
+        public let guideDrawFrameFirst: Int
+        public let guideDrawFrameSecond: Int
+        public let isDrawTrajectory: Bool
+        public let mainArrowGuideDrawFrame: Int
+        public let subArrowGuideDrawFrame: Int
+        public let tiltGuideEnabled: Bool
+        public let tiltGuideLength: Double
+        public let tiltGuideWidth: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case delayFrameShowShotGuide = "DelayFrameShowShotGuide"
             case guideDrawFrameDefilade = "GuideDrawFrameDefilade"
             case guideDrawFrameFirst = "GuideDrawFrameFirst"
@@ -435,29 +435,29 @@ extension Stringer.WeaponParameter {
         }
     }
     
-    struct ShotParameter: Codable {
-        let arrowAngleMax: Double
-        let arrowAngleMid: Double?
-        let arrowAngleMin: Double?
-        let arrowMargin: Double
-        let arrowNum: Int?
-        let bearMuzzleMoveDistArray: [Double]?
-        let bearMuzzleResetFrame: Int?
-        let bowJumpTiltSpeedForward: Double
-        let bowJumpTiltSpeedReverse: Double
-        let bowTiltDegreeMax: Double
-        let bowTiltDistanceMax: Double?
-        let bowTiltKeepFrame: Double
-        let bowTiltResetSpeed: Double
-        let bowTiltThreshold: Double?
-        let defiladeCheckAngle: Double?
-        let defiladeCheckDist: Double?
-        let defildaedBulletSpeed: Double?
-        let diffusionArrowParamArray: [DiffusionArrowParameter]?
-        let enableOldTiltControl: Bool?
-        let isStringerBear: Bool?
+    public struct ShotParameter: Codable {
+        public let arrowAngleMax: Double
+        public let arrowAngleMid: Double?
+        public let arrowAngleMin: Double?
+        public let arrowMargin: Double
+        public let arrowNum: Int?
+        public let bearMuzzleMoveDistArray: [Double]?
+        public let bearMuzzleResetFrame: Int?
+        public let bowJumpTiltSpeedForward: Double
+        public let bowJumpTiltSpeedReverse: Double
+        public let bowTiltDegreeMax: Double
+        public let bowTiltDistanceMax: Double?
+        public let bowTiltKeepFrame: Double
+        public let bowTiltResetSpeed: Double
+        public let bowTiltThreshold: Double?
+        public let defiladeCheckAngle: Double?
+        public let defiladeCheckDist: Double?
+        public let defildaedBulletSpeed: Double?
+        public let diffusionArrowParamArray: [DiffusionArrowParameter]?
+        public let enableOldTiltControl: Bool?
+        public let isStringerBear: Bool?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case arrowAngleMax = "ArrowAngleMax"
             case arrowAngleMid = "ArrowAngleMid"
             case arrowAngleMin = "ArrowAngleMin"
@@ -483,14 +483,14 @@ extension Stringer.WeaponParameter {
 }
 
 extension Stringer.WeaponParameter.ShotParameter {
-    struct DiffusionArrowParameter: Codable {
-        let shotAddDegH: Double
-        let shotAddDegV: Double
-        let spawnSpeedMax: Double
-        let spawnSpeedMid: Double
-        let spawnSpeedMin: Double
+    public struct DiffusionArrowParameter: Codable {
+        public let shotAddDegH: Double
+        public let shotAddDegV: Double
+        public let spawnSpeedMax: Double
+        public let spawnSpeedMid: Double
+        public let spawnSpeedMin: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case shotAddDegH = "ShotAddDeg_H"
             case shotAddDegV = "ShotAddDeg_V"
             case spawnSpeedMax = "SpawnSpeedMax"

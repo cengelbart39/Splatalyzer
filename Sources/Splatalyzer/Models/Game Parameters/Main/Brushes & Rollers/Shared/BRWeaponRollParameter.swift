@@ -7,22 +7,22 @@
 
 import Foundation
 
-struct BRWeaponRollParameter: Codable {
-    let type: String
-    let dashFrame: Int?
-    let inkConsumeMaxPerFrame: Double
-    let inkConsumeMinPerFrame: Double
-    let noOpInkEffect: Bool?
-    let inkRecoverStop: Int?
-    let speedDash: Double?
-    let speedDashTurnBreak: Double?
-    let speedInkConsumeMax: Double?
-    let speedInkConsumeMin: Double?
-    let speedNormal: Double?
-    let swingRepeatFrame: Int?
-    let toPaintFrame: Double?
+public struct BRWeaponRollParameter: Codable {
+    public let type: String
+    public let dashFrame: Int?
+    public let inkConsumeMaxPerFrame: Double
+    public let inkConsumeMinPerFrame: Double
+    public let noOpInkEffect: Bool?
+    public let inkRecoverStop: Int?
+    public let speedDash: Double?
+    public let speedDashTurnBreak: Double?
+    public let speedInkConsumeMax: Double?
+    public let speedInkConsumeMin: Double?
+    public let speedNormal: Double?
+    public let swingRepeatFrame: Int?
+    public let toPaintFrame: Double?
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case type = "$type"
         case dashFrame = "DashFrame"
         case inkConsumeMaxPerFrame = "InkConsumeMaxPerFrame"

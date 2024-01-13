@@ -7,15 +7,15 @@
 
 import Foundation
 
-struct MainEffectiveRangeUpParameter: Codable {
-    let type: String
-    let baseDistance: Double?
-    let high: Double?
-    let low: Double?
-    let mid: Double?
-    let validMinCharge: Bool?
+public struct MainEffectiveRangeUpParameter: Codable {
+    public let type: String
+    public let baseDistance: Double?
+    public let high: Double?
+    public let low: Double?
+    public let mid: Double?
+    public let validMinCharge: Bool?
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case type = "$type"
         case baseDistance = "BaseDistance"
         case high = "High"

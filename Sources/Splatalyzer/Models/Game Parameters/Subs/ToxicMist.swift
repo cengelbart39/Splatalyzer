@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct ToxicMist: SubParametable {
-    let areaParam: AreaParameter
-    let moveParam: MoveParameter
-    let subWeaponSetting: SubWeaponSetting
-    let weaponParam: WeaponParameter
-    let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
+public struct ToxicMist: SubParametable {
+    public let areaParam: AreaParameter
+    public let moveParam: MoveParameter
+    public let subWeaponSetting: SubWeaponSetting
+    public let weaponParam: WeaponParameter
+    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case areaParam = "AreaParam"
         case moveParam = "MoveParam"
         case subWeaponSetting = "SubWeaponSetting"
@@ -22,31 +22,31 @@ struct ToxicMist: SubParametable {
         case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
     }
     
-    struct AreaParameter: Codable {
-        let type: String
-        let areaOffsetY: Double
-        let distanceForOff: Double
-        let effectParam: EffectParameter
+    public struct AreaParameter: Codable {
+        public let type: String
+        public let areaOffsetY: Double
+        public let distanceForOff: Double
+        public let effectParam: EffectParameter
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case areaOffsetY = "AreaOffsetY"
             case distanceForOff = "DistanceForOff"
             case effectParam = "EffectParam"
         }
         
-        struct EffectParameter: Codable {
-            let level: [Level]
+        public struct EffectParameter: Codable {
+            public let level: [Level]
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case level = "Level"
             }
             
-            struct Level: Codable {
-                let frame: Int
-                let nextLevelCount: Int
+            public struct Level: Codable {
+                public let frame: Int
+                public let nextLevelCount: Int
                 
-                enum CodingKeys: String, CodingKey {
+                public enum CodingKeys: String, CodingKey {
                     case frame = "Frame"
                     case nextLevelCount = "NextLevelCount"
                 }
@@ -54,14 +54,14 @@ struct ToxicMist: SubParametable {
         }
     }
     
-    struct MoveParameter: Codable {
-        let type: String
-        let guideHitCollisionType: String
-        let spawnSpeedY: Double
-        let spawnSpeedYWorldMin: Double
-        let spawnSpeedZSpecUp: HighMidLow
+    public struct MoveParameter: Codable {
+        public let type: String
+        public let guideHitCollisionType: String
+        public let spawnSpeedY: Double
+        public let spawnSpeedYWorldMin: Double
+        public let spawnSpeedZSpecUp: HighMidLow
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case guideHitCollisionType = "GuideHitCollisionType"
             case spawnSpeedY = "SpawnSpeedY"
@@ -70,25 +70,25 @@ struct ToxicMist: SubParametable {
         }
     }
     
-    struct WeaponParameter: Codable {
-        let type: String
-        let inkConsume: Double
-        let inkRecoverStop: Int
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let inkConsume: Double
+        public let inkRecoverStop: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case inkConsume = "InkConsume"
             case inkRecoverStop = "InkRecoverStop"
         }
     }
     
-    struct SpawnBulletAdditionMovePlayerParameter: Codable {
-        let type: String
-        let xRate: Double
-        let yMax: Double
-        let yPlusRate: Double
+    public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public let type: String
+        public let xRate: Double
+        public let yMax: Double
+        public let yPlusRate: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case xRate = "XRate"
             case yMax = "YMax"
@@ -96,7 +96,7 @@ struct ToxicMist: SubParametable {
         }
     }
     
-    func getOverwrites(_ playerInfo: PlayerParameters? = nil) -> SubOverwrites {
+    public func getOverwrites(_ playerInfo: PlayerParameters? = nil) -> SubOverwrites {
         return SubOverwrites(
             spawnSpeedZSpecUp: self.moveParam.spawnSpeedZSpecUp,
             periodFirst: nil,

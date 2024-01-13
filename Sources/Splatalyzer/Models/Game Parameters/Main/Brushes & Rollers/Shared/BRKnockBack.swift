@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct BRKnockBack: Codable {
-    let accelMax: Double
-    let accelMin: Double
-    let myVelocityRate: Double
-    let opponentVelocityRate: Double
+public struct BRKnockBack: Codable {
+    public let accelMax: Double
+    public let accelMin: Double
+    public let myVelocityRate: Double
+    public let opponentVelocityRate: Double
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case accelMax = "AccelMax"
         case accelMin = "AccelMin"
         case myVelocityRate = "MyVelocityRate"

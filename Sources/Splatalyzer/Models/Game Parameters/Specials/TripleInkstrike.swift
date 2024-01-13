@@ -7,15 +7,15 @@
 
 import Foundation
 
-struct TripleInkstrike: SpecialParametable {
-    let blastParam: BlastParameter
-    let missileParam: MissileParameter
-    let motherParam: MotherParameter
-    let moveParam: MoveParameter
-    let weaponParam: WeaponParameter
-    let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
+public struct TripleInkstrike: SpecialParametable {
+    public let blastParam: BlastParameter
+    public let missileParam: MissileParameter
+    public let motherParam: MotherParameter
+    public let moveParam: MoveParameter
+    public let weaponParam: WeaponParameter
+    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case blastParam = "BlastParam"
         case missileParam = "MissileParam"
         case motherParam = "MotherParam"
@@ -24,20 +24,20 @@ struct TripleInkstrike: SpecialParametable {
         case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
     }
     
-    struct BlastParameter: Codable {
-        let type: String
-        let damageHeightUp: Double
-        let damageRadiusEnd: Double
-        let damageValueEnd: Int
-        let damageValueStart: Int
-        let knockBackParam: KnockbackParameter
-        let paintRadiusEnd: Double
-        let paintRadiusStart: Double
-        let paintRotateDegree: Double
-        let paintSpanFrame: Int
-        let radiusSpreadFrame: Double
+    public struct BlastParameter: Codable {
+        public let type: String
+        public let damageHeightUp: Double
+        public let damageRadiusEnd: Double
+        public let damageValueEnd: Int
+        public let damageValueStart: Int
+        public let knockBackParam: KnockbackParameter
+        public let paintRadiusEnd: Double
+        public let paintRadiusStart: Double
+        public let paintRotateDegree: Double
+        public let paintSpanFrame: Int
+        public let radiusSpreadFrame: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case damageHeightUp = "DamageHeightUp"
             case damageRadiusEnd = "DamageRadiusEnd"
@@ -52,36 +52,36 @@ struct TripleInkstrike: SpecialParametable {
         }
     }
     
-    struct MissileParameter: Codable {
-        let type: String
-        let useDirect: Bool
-        let xzBias: Double
+    public struct MissileParameter: Codable {
+        public let type: String
+        public let useDirect: Bool
+        public let xzBias: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case useDirect = "UseDirect"
             case xzBias = "XZBias"
         }
     }
     
-    struct MotherParameter: Codable {
-        let type: String
-        let targetHeight: Double
+    public struct MotherParameter: Codable {
+        public let type: String
+        public let targetHeight: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case targetHeight = "TargetHeight"
         }
     }
     
-    struct MoveParameter: Codable {
-        let type: String
-        let guideHitCollisionType: String
-        let spawnSpeedY: Double
-        let spawnSpeedYWorldMin: Double
-        let spawnSpeedZSpecUp: HighMidLow
+    public struct MoveParameter: Codable {
+        public let type: String
+        public let guideHitCollisionType: String
+        public let spawnSpeedY: Double
+        public let spawnSpeedYWorldMin: Double
+        public let spawnSpeedZSpecUp: HighMidLow
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case guideHitCollisionType = "GuideHitCollisionType"
             case spawnSpeedY = "SpawnSpeedY"
@@ -90,23 +90,23 @@ struct TripleInkstrike: SpecialParametable {
         }
     }
     
-    struct WeaponParameter: Codable {
-        let type: String
-        let specialTotalFrame: Int
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let specialTotalFrame: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case specialTotalFrame = "SpecialTotalFrame"
         }
     }
     
-    struct SpawnBulletAdditionMovePlayerParameter: Codable {
-        let type: String
-        let xRate: Double
-        let yMax: Double
-        let yPlusRate: Double
+    public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public let type: String
+        public let xRate: Double
+        public let yMax: Double
+        public let yPlusRate: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case xRate = "XRate"
             case yMax = "YMax"
@@ -114,7 +114,7 @@ struct TripleInkstrike: SpecialParametable {
         }
     }
     
-    func getOverwrites() -> SpecialOverwrites {
+    public func getOverwrites() -> SpecialOverwrites {
         return SpecialOverwrites(
             chargeRateAutoPerFrame: nil,
             crossPaintCheckLength: nil,

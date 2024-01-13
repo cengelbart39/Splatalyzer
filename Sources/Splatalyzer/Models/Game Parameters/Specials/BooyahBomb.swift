@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct BooyahBomb: SpecialParametable {
-    let blastParam: BlastParameter
-    let footSplashParam: FootSplashParameter
-    let moveParam: MoveParameter
-    let weaponParam: WeaponParameter
-    let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
+public struct BooyahBomb: SpecialParametable {
+    public let blastParam: BlastParameter
+    public let footSplashParam: FootSplashParameter
+    public let moveParam: MoveParameter
+    public let weaponParam: WeaponParameter
+    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case blastParam = "BlastParam"
         case footSplashParam = "FootSplashParam"
         case moveParam = "MoveParam"
@@ -22,18 +22,18 @@ struct BooyahBomb: SpecialParametable {
         case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
     }
     
-    struct BlastParameter: Codable {
-        let type: String
-        let crossPaintCheckLength: Double
-        let crossPaintRadius: Double
-        let damageOffsetY: Double
-        let knockBackParam: KnockbackParameter
-        let paintOffsetY: Double
-        let paintRadiusEnd: Double
-        let paintRotateDegree: Double
-        let paintSpanFrame: Int
+    public struct BlastParameter: Codable {
+        public let type: String
+        public let crossPaintCheckLength: Double
+        public let crossPaintRadius: Double
+        public let damageOffsetY: Double
+        public let knockBackParam: KnockbackParameter
+        public let paintOffsetY: Double
+        public let paintRadiusEnd: Double
+        public let paintRotateDegree: Double
+        public let paintSpanFrame: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case crossPaintCheckLength = "CrossPaintCheckLength"
             case crossPaintRadius = "CrossPaintRadius"
@@ -46,25 +46,25 @@ struct BooyahBomb: SpecialParametable {
         }
     }
     
-    struct FootSplashParameter: Codable {
-        let type: String
-        let paintRadius: Double
+    public struct FootSplashParameter: Codable {
+        public let type: String
+        public let paintRadius: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case paintRadius = "PaintRadius"
         }
     }
     
-    struct MoveParameter: Codable {
-        let type: String
-        let flyGravity: Double
-        let flyPositionAirResist: Double
-        let guideHitCollisionType: String
-        let spawnSpeedYWorldMin: Double
-        let spawnSpeedZSpecUp: HighMidLow
+    public struct MoveParameter: Codable {
+        public let type: String
+        public let flyGravity: Double
+        public let flyPositionAirResist: Double
+        public let guideHitCollisionType: String
+        public let spawnSpeedYWorldMin: Double
+        public let spawnSpeedZSpecUp: HighMidLow
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case flyGravity = "FlyGravity"
             case flyPositionAirResist = "FlyPositionAirResist"
@@ -74,15 +74,15 @@ struct BooyahBomb: SpecialParametable {
         }
     }
     
-    struct WeaponParameter: Codable {
-        let type: String
-        let armorHp: Int
-        let chargeRateAutoPerFrame: HighMidLow
-        let chargeRateNiceFriend: [Double]
-        let thanksPaintPointMax: Double
-        let thanksPaintPointOnce: [Double]
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let armorHp: Int
+        public let chargeRateAutoPerFrame: HighMidLow
+        public let chargeRateNiceFriend: [Double]
+        public let thanksPaintPointMax: Double
+        public let thanksPaintPointOnce: [Double]
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case armorHp = "ArmorHP"
             case chargeRateAutoPerFrame = "ChargeRateAutoPerFrame"
@@ -92,14 +92,14 @@ struct BooyahBomb: SpecialParametable {
         }
     }
     
-    struct SpawnBulletAdditionMovePlayerParameter: Codable {
-        let type: String
-        let xRate: Double
-        let yMinusRate: Double
-        let yPlusRate: Double
-        let zRate: Double
+    public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public let type: String
+        public let xRate: Double
+        public let yMinusRate: Double
+        public let yPlusRate: Double
+        public let zRate: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case xRate = "XRate"
             case yMinusRate = "YMinusRate"
@@ -108,7 +108,7 @@ struct BooyahBomb: SpecialParametable {
         }
     }
     
-    func getOverwrites() -> SpecialOverwrites {
+    public func getOverwrites() -> SpecialOverwrites {
         return SpecialOverwrites(
             chargeRateAutoPerFrame: self.weaponParam.chargeRateAutoPerFrame,
             crossPaintCheckLength: nil,

@@ -7,32 +7,32 @@
 
 import Foundation
 
-struct TripleSplashdown: SpecialParametable {
-    let blastParamDokanWarp: BlastParameter
-    let blastParamNormal: BlastParameter
-    let bulletParam: BulletParameter
-    let weaponParam: WeaponParameter
+public struct TripleSplashdown: SpecialParametable {
+    public let blastParamDokanWarp: BlastParameter
+    public let blastParamNormal: BlastParameter
+    public let bulletParam: BulletParameter
+    public let weaponParam: WeaponParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case blastParamDokanWarp = "BlastParamDokanWarp"
         case blastParamNormal = "BlastParamNormal"
         case bulletParam = "BulletParam"
         case weaponParam = "spl__WeaponSpPogoParam"
     }
     
-    struct BlastParameter: Codable {
-        let type: String
-        let crossPaintCheckLength: Double
-        let crossPaintRadius: Double
-        let crossPaintTexture: String
-        let distanceDamage: [DistanceDamage]
-        let knockBackParam: KnockbackParameter
-        let paintRadius: Double
-        let paintTexture: String
-        let planeDamage: [DistanceDamage]
-        let subSpecialSpecUpList: [SubSpecialSpecUpList]
+    public struct BlastParameter: Codable {
+        public let type: String
+        public let crossPaintCheckLength: Double
+        public let crossPaintRadius: Double
+        public let crossPaintTexture: String
+        public let distanceDamage: [DistanceDamage]
+        public let knockBackParam: KnockbackParameter
+        public let paintRadius: Double
+        public let paintTexture: String
+        public let planeDamage: [DistanceDamage]
+        public let subSpecialSpecUpList: [SubSpecialSpecUpList]
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case crossPaintCheckLength = "CrossPaintCheckLength"
             case crossPaintRadius = "CrossPaintRadius"
@@ -46,18 +46,18 @@ struct TripleSplashdown: SpecialParametable {
         }
     }
     
-    struct BulletParameter: Codable {
-        let type: String
-        let hitPoint: Int
-        let moveCollisionHeight: [Double]
-        let moveDistance: Double
-        let moveFrame: Int
-        let startInvincibleFrame: Int
-        let superJumpWaitFrame0: Int
-        let superJumpWaitFrame1: Int
-        let waitRiseFrame: Int
+    public struct BulletParameter: Codable {
+        public let type: String
+        public let hitPoint: Int
+        public let moveCollisionHeight: [Double]
+        public let moveDistance: Double
+        public let moveFrame: Int
+        public let startInvincibleFrame: Int
+        public let superJumpWaitFrame0: Int
+        public let superJumpWaitFrame1: Int
+        public let waitRiseFrame: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case hitPoint = "HitPoint"
             case moveCollisionHeight = "MoveCollisionHeight"
@@ -70,13 +70,13 @@ struct TripleSplashdown: SpecialParametable {
         }
     }
     
-    struct WeaponParameter: Codable {
-        let type: String
-        let riseFrame: Int
-        let riseNoDamageStartFrame: Int
-        let specialTotalFrame: Int
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let riseFrame: Int
+        public let riseNoDamageStartFrame: Int
+        public let specialTotalFrame: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case riseFrame = "Rise_Frame"
             case riseNoDamageStartFrame = "Rise_NoDamageStartFrame"
@@ -84,7 +84,7 @@ struct TripleSplashdown: SpecialParametable {
         }
     }
     
-    func getOverwrites() -> SpecialOverwrites {
+    public func getOverwrites() -> SpecialOverwrites {
         return SpecialOverwrites(
             chargeRateAutoPerFrame: nil,
             crossPaintCheckLength: nil,

@@ -7,15 +7,15 @@
 
 import Foundation
 
-struct Inkjet: SpecialParametable {
-    let blastParam: BlastParameter
-    let jetParam: JetParameter
-    let launcherCollisionParam: LauncherCollisionParameter
-    let moveParam: MoveParameter
-    let weaponParam: WeaponParameter
-    let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
+public struct Inkjet: SpecialParametable {
+    public let blastParam: BlastParameter
+    public let jetParam: JetParameter
+    public let launcherCollisionParam: LauncherCollisionParameter
+    public let moveParam: MoveParameter
+    public let weaponParam: WeaponParameter
+    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case blastParam = "BlastParam"
         case jetParam = "JetParam"
         case launcherCollisionParam = "LauncherCollisionParam"
@@ -24,17 +24,17 @@ struct Inkjet: SpecialParametable {
         case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
     }
     
-    struct BlastParameter: Codable {
-        let type: String
-        let crossPaintCheckLength: Double
-        let crossPaintRadius: Double
-        let distanceDamage: [DistanceDamage]
-        let knockBackParam: KnockbackParameter
-        let paintRadius: Double
-        let splashAroundParam: SplashAroundParameter
-        let subSpecialSpecUpList: [SubSpecialSpecUpList]
+    public struct BlastParameter: Codable {
+        public let type: String
+        public let crossPaintCheckLength: Double
+        public let crossPaintRadius: Double
+        public let distanceDamage: [DistanceDamage]
+        public let knockBackParam: KnockbackParameter
+        public let paintRadius: Double
+        public let splashAroundParam: SplashAroundParameter
+        public let subSpecialSpecUpList: [SubSpecialSpecUpList]
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case crossPaintCheckLength = "CrossPaintCheckLength"
             case crossPaintRadius = "CrossPaintRadius"
@@ -46,25 +46,25 @@ struct Inkjet: SpecialParametable {
         }
     }
     
-    struct JetParameter: Codable {
-        let type: String
+    public struct JetParameter: Codable {
+        public let type: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
         }
     }
     
-    struct LauncherCollisionParameter: Codable {
-        let type: String
-        let changeFrameForField: Int
-        let changeFrameForPlayer: Int
-        let endRadiusForField: Double
-        let endRadiusForPlayer: Double
-        let friendThroughFrameForPlayer: Int
-        let initRadiusForField: Double
-        let initRadiusForPlayer: Double
+    public struct LauncherCollisionParameter: Codable {
+        public let type: String
+        public let changeFrameForField: Int
+        public let changeFrameForPlayer: Int
+        public let endRadiusForField: Double
+        public let endRadiusForPlayer: Double
+        public let friendThroughFrameForPlayer: Int
+        public let initRadiusForField: Double
+        public let initRadiusForPlayer: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case changeFrameForField = "ChangeFrameForField"
             case changeFrameForPlayer = "ChangeFrameForPlayer"
@@ -76,37 +76,37 @@ struct Inkjet: SpecialParametable {
         }
     }
     
-    struct MoveParameter: Codable {
-        let type: String
-        let distance: Double
+    public struct MoveParameter: Codable {
+        public let type: String
+        public let distance: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case distance = "Distance"
         }
     }
     
-    struct WeaponParameter: Codable {
-        let type: String
-        let boostJumpVel: Double
-        let specialTotalFrame: HighMidLow
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let boostJumpVel: Double
+        public let specialTotalFrame: HighMidLow
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case boostJumpVel = "Boost_JumpVel"
             case specialTotalFrame = "SpecialTotalFrame"
         }
     }
     
-    struct SpawnBulletAdditionMovePlayerParameter: Codable {
-        let type: String
-        let xRate: Double
-        let yMax: Double
-        let yMinusRate: Double
-        let yPlusRate: Double
-        let zRate: Double
+    public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public let type: String
+        public let xRate: Double
+        public let yMax: Double
+        public let yMinusRate: Double
+        public let yPlusRate: Double
+        public let zRate: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case xRate = "XRate"
             case yMax = "YMax"
@@ -116,7 +116,7 @@ struct Inkjet: SpecialParametable {
         }
     }
     
-    func getOverwrites() -> SpecialOverwrites {
+    public func getOverwrites() -> SpecialOverwrites {
         let blastPaintRadius = self.blastParam.paintRadius
         let specUpPaintRadius = self.blastParam.subSpecialSpecUpList[safe: 4]?.value
         let specUpPaintRadiusExists = specUpPaintRadius?.high != nil  && specUpPaintRadius?.low != nil && specUpPaintRadius?.mid != nil

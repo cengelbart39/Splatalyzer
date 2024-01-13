@@ -7,17 +7,17 @@
 
 import Foundation
 
-struct Brush: Codable {
-    let bodyParam: BRBodyParameter
-    let bulletAdditionMovePlayerSplashNearestParam: BRBulletAdditionMovePlayerSplashNearestParameter
-    let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
-    let mainWepaonSetting: MainWeaponSettings
-    let swingUnitGroupParam: SwingUnitGroupParameter
-    let weaponRollParam: BRWeaponRollParameter
-    let weaponSwingParam: BRWeaponSwingParameter
-    let spawnBulletAdditionMovePlayerParam: BRSpawnBulletAdditionMoveParameter
+public struct Brush: Codable {
+    public let bodyParam: BRBodyParameter
+    public let bulletAdditionMovePlayerSplashNearestParam: BRBulletAdditionMovePlayerSplashNearestParameter
+    public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
+    public let mainWepaonSetting: MainWeaponSettings
+    public let swingUnitGroupParam: SwingUnitGroupParameter
+    public let weaponRollParam: BRWeaponRollParameter
+    public let weaponSwingParam: BRWeaponSwingParameter
+    public let spawnBulletAdditionMovePlayerParam: BRSpawnBulletAdditionMoveParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case bodyParam = "BodyParam"
         case bulletAdditionMovePlayerSplashNearestParam = "BulletAdditionMovePlayerSplashNearestParam"
         case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
@@ -30,14 +30,14 @@ struct Brush: Codable {
 }
 
 extension Brush {
-    struct SwingUnitGroupParameter: Codable {
-        let type: String
-        let damageParam: BRDamageParameter
-        let pushOutCheckFieldCollisionFrame: Int?
-        let splashNearestParam: BRSplashNearestParameter
-        let unit: [BRUnit]
+    public struct SwingUnitGroupParameter: Codable {
+        public let type: String
+        public let damageParam: BRDamageParameter
+        public let pushOutCheckFieldCollisionFrame: Int?
+        public let splashNearestParam: BRSplashNearestParameter
+        public let unit: [BRUnit]
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case damageParam = "DamageParam"
             case pushOutCheckFieldCollisionFrame = "PushOutCheckFieldCollisionFrame"

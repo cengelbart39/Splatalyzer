@@ -7,27 +7,27 @@
 
 import Foundation
 
-struct Reefslider: SpecialParametable {
-    let bulletBlastParam: BulletBlastParameter
-    let bulletParam: BulletParameter
-    let weaponParam: WeaponParameter
+public struct Reefslider: SpecialParametable {
+    public let bulletBlastParam: BulletBlastParameter
+    public let bulletParam: BulletParameter
+    public let weaponParam: WeaponParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case bulletBlastParam = "BulletBlastParam"
         case bulletParam = "BulletParam"
         case weaponParam = "WeaponParam"
     }
     
-    struct BulletBlastParameter: Codable {
-        let type: String
-        let distanceDamage: [DistanceDamage]
-        let knockBackParam: KnockbackParameter
-        let paintRadius: Double
-        let paintTexture: String
-        let splashAroundParam: SplashAroundParameter
-        let subSpecialSpecUpList: [SubSpecialSpecUpList]
+    public struct BulletBlastParameter: Codable {
+        public let type: String
+        public let distanceDamage: [DistanceDamage]
+        public let knockBackParam: KnockbackParameter
+        public let paintRadius: Double
+        public let paintTexture: String
+        public let splashAroundParam: SplashAroundParameter
+        public let subSpecialSpecUpList: [SubSpecialSpecUpList]
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case distanceDamage = "DistanceDamage"
             case knockBackParam = "KnockBackParam"
@@ -38,13 +38,13 @@ struct Reefslider: SpecialParametable {
         }
     }
     
-    struct BulletParameter: Codable {
-        let type: String
-        let collisionRadiusForPlayer: Double
-        let damageValue: Int
-        let knockBackLen: Double
+    public struct BulletParameter: Codable {
+        public let type: String
+        public let collisionRadiusForPlayer: Double
+        public let damageValue: Int
+        public let knockBackLen: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case collisionRadiusForPlayer = "CollisionRadiusForPlayer"
             case damageValue = "DamageValue"
@@ -52,30 +52,30 @@ struct Reefslider: SpecialParametable {
         }
     }
     
-    struct WeaponParameter: Codable {
-        let type: String
-        let chargeFrame: Int
-        let distanceAfterglow: Double
-        let gravityKf: Double
-        let moveAcc: Double
-        let moveBrk: Double
-        let moveCancelableFrame: Int
-        let moveFrame: Int
-        let moveFrameOmen: Int
-        let moveRotDeg: Double
-        let moveSpeed: Double
-        let moveSpeedAerial: Double
-        let noDamageFrameAfterBurst: Int
-        let noDamageStartFramePreMove: Int
-        let offsetLocalDetectPlayer: XYZData
-        let preBurstEmitFrame: Int
-        let preBurstFrame: Int
-        let preMoveFrame: Int
-        let radiusDetectPlayer: Double
-        let rutPaintRadius: Double
-        let unrelaxFrame: Int
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let chargeFrame: Int
+        public let distanceAfterglow: Double
+        public let gravityKf: Double
+        public let moveAcc: Double
+        public let moveBrk: Double
+        public let moveCancelableFrame: Int
+        public let moveFrame: Int
+        public let moveFrameOmen: Int
+        public let moveRotDeg: Double
+        public let moveSpeed: Double
+        public let moveSpeedAerial: Double
+        public let noDamageFrameAfterBurst: Int
+        public let noDamageStartFramePreMove: Int
+        public let offsetLocalDetectPlayer: XYZData
+        public let preBurstEmitFrame: Int
+        public let preBurstFrame: Int
+        public let preMoveFrame: Int
+        public let radiusDetectPlayer: Double
+        public let rutPaintRadius: Double
+        public let unrelaxFrame: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case chargeFrame = "ChargeFrame"
             case distanceAfterglow = "Distance_Afterglow"
@@ -100,7 +100,7 @@ struct Reefslider: SpecialParametable {
         }
     }
     
-    func getOverwrites() -> SpecialOverwrites {
+    public func getOverwrites() -> SpecialOverwrites {
         let paintRadius =  self.bulletBlastParam.subSpecialSpecUpList[safe: 1]?.value
         let splashAroundPaintRadius = self.bulletBlastParam.subSpecialSpecUpList[safe: 4]?.value
         

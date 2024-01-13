@@ -7,15 +7,15 @@
 
 import Foundation
 
-struct CurlingBomb: SubParametable {
-    let blastParamMaxCharge: BlastParameter
-    let blastParamMinCharge: BlastParameter
-    let moveParam: MoveParameter
-    let subWeaponSetting: SubWeaponSetting
-    let weaponParam: WeaponParameter
-    let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
+public struct CurlingBomb: SubParametable {
+    public let blastParamMaxCharge: BlastParameter
+    public let blastParamMinCharge: BlastParameter
+    public let moveParam: MoveParameter
+    public let subWeaponSetting: SubWeaponSetting
+    public let weaponParam: WeaponParameter
+    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case blastParamMaxCharge = "BlastParamMaxCharge"
         case blastParamMinCharge = "BlastParamMinCharge"
         case moveParam = "MoveParam"
@@ -24,17 +24,17 @@ struct CurlingBomb: SubParametable {
         case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
     }
     
-    struct BlastParameter: Codable {
-        let type: String
-        let crossPaintCheckLength: Double
-        let crossPaintRadius: Double
-        let damageAttackerPriority: Bool
-        let distanceDamage: [DistanceDamage]
-        let knockBackParam: KnockbackParameter
-        let paintRadius: Double
-        let splashAroundParam: SplashAroundParameter
+    public struct BlastParameter: Codable {
+        public let type: String
+        public let crossPaintCheckLength: Double
+        public let crossPaintRadius: Double
+        public let damageAttackerPriority: Bool
+        public let distanceDamage: [DistanceDamage]
+        public let knockBackParam: KnockbackParameter
+        public let paintRadius: Double
+        public let splashAroundParam: SplashAroundParameter
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case crossPaintCheckLength = "CrossPaintCheckLength"
             case crossPaintRadius = "CrossPaintRadius"
@@ -46,39 +46,39 @@ struct CurlingBomb: SubParametable {
         }
     }
     
-    struct MoveParameter: Codable {
-        let type: String
-        let baseSpeedComeOverRate: Double
-        let baseSpeedComeUnderRate: Double
-        let baseSpeedMinCharge: Double
-        let burstFrame: Int
-        let burstTimingSpeedStartRestFrame: Int
-        let burstTimingSpeedStopBias: Double
-        let contactDashPanel: ContactDashPanel
-        let contactJumpPanel: ContactJumpPanel
-        let damageDirectHit: Int
-        let damageDirectSpanSecond: Double
-        let flyGravity: Double
-        let flyPositionAirResist: Double
-        let groundGravity: Double
-        let groundPositionAirResist: Double
-        let guideHitCollisionType: String
-        let knockBackParam: KnockbackParameter
-        let modelRotateHitWall45Degree: Double
-        let modelRotateReduceDegree: Double
-        let paintBurstRadiusBias: Double
-        let paintCheckHeight: Double
-        let paintRadiusBias: Double
-        let paintRadiusMaxCharge: Double
-        let paintRadiusMinCharge: Double
-        let spawnSpeedY: Double
-        let spawnSpeedYMaxCharge: Double
-        let spawnSpeedYWorldMin: Double
-        let spawnSpeedZMaxCharge: Double
-        let spawnSpeedZSpecUp: HighMidLow
-        let warningAnimRestFrame: Int
+    public struct MoveParameter: Codable {
+        public let type: String
+        public let baseSpeedComeOverRate: Double
+        public let baseSpeedComeUnderRate: Double
+        public let baseSpeedMinCharge: Double
+        public let burstFrame: Int
+        public let burstTimingSpeedStartRestFrame: Int
+        public let burstTimingSpeedStopBias: Double
+        public let contactDashPanel: ContactDashPanel
+        public let contactJumpPanel: ContactJumpPanel
+        public let damageDirectHit: Int
+        public let damageDirectSpanSecond: Double
+        public let flyGravity: Double
+        public let flyPositionAirResist: Double
+        public let groundGravity: Double
+        public let groundPositionAirResist: Double
+        public let guideHitCollisionType: String
+        public let knockBackParam: KnockbackParameter
+        public let modelRotateHitWall45Degree: Double
+        public let modelRotateReduceDegree: Double
+        public let paintBurstRadiusBias: Double
+        public let paintCheckHeight: Double
+        public let paintRadiusBias: Double
+        public let paintRadiusMaxCharge: Double
+        public let paintRadiusMinCharge: Double
+        public let spawnSpeedY: Double
+        public let spawnSpeedYMaxCharge: Double
+        public let spawnSpeedYWorldMin: Double
+        public let spawnSpeedZMaxCharge: Double
+        public let spawnSpeedZSpecUp: HighMidLow
+        public let warningAnimRestFrame: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case baseSpeedComeOverRate = "BaseSpeedComeOverRate"
             case baseSpeedComeUnderRate = "BaseSpeedComeUnderRate"
@@ -111,24 +111,24 @@ struct CurlingBomb: SubParametable {
             case warningAnimRestFrame = "WarningAnimRestFrame"
         }
         
-        struct ContactDashPanel: Codable {
-            let addSpeedPerImpact: Double
-            let addSpeedSequenceFrameRate: Double
-            let impactDirectionSaveSpeedRate: Double
+        public struct ContactDashPanel: Codable {
+            public let addSpeedPerImpact: Double
+            public let addSpeedSequenceFrameRate: Double
+            public let impactDirectionSaveSpeedRate: Double
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case addSpeedPerImpact = "AddSpeedPerImpact"
                 case addSpeedSequenceFrameRate = "AddSpeedSequenceFrameRate"
                 case impactDirectionSaveSpeedRate = "ImpactDirectionSaveSpeedRate"
             }
         }
         
-        struct ContactJumpPanel: Codable {
-            let addSpeedOneBoundRate: Double
-            let addSpeedPerImpact: Double
-            let maxBoundNum: Int
+        public struct ContactJumpPanel: Codable {
+            public let addSpeedOneBoundRate: Double
+            public let addSpeedPerImpact: Double
+            public let maxBoundNum: Int
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case addSpeedOneBoundRate = "AddSpeedOneBoundRate"
                 case addSpeedPerImpact = "AddSpeedPerImpact"
                 case maxBoundNum = "MaxBoundNum"
@@ -136,15 +136,15 @@ struct CurlingBomb: SubParametable {
         }
     }
     
-    struct WeaponParameter: Codable {
-        let type: String
-        let chargeFrameBlastRate: Double
-        let inkConsume: Double
-        let inkRecoverStop: Int
-        let inkRecoverStopMaxCharge: Int
-        let maxChargeFrame: Int
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let chargeFrameBlastRate: Double
+        public let inkConsume: Double
+        public let inkRecoverStop: Int
+        public let inkRecoverStopMaxCharge: Int
+        public let maxChargeFrame: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case chargeFrameBlastRate = "ChargeFrameBlastRate"
             case inkConsume = "InkConsume"
@@ -154,15 +154,15 @@ struct CurlingBomb: SubParametable {
         }
     }
     
-    struct SpawnBulletAdditionMovePlayerParameter: Codable {
-        let type: String
-        let xRate: Double
-        let yMax: Double
-        let yMinusRate: Double
-        let yPlusRate: Double
-        let zRate: Double
+    public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public let type: String
+        public let xRate: Double
+        public let yMax: Double
+        public let yMinusRate: Double
+        public let yPlusRate: Double
+        public let zRate: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case xRate = "XRate"
             case yMax = "YMax"
@@ -172,7 +172,7 @@ struct CurlingBomb: SubParametable {
         }
     }
     
-    func getOverwrites(_ playerInfo: PlayerParameters? = nil) -> SubOverwrites {
+    public func getOverwrites(_ playerInfo: PlayerParameters? = nil) -> SubOverwrites {
         return SubOverwrites(
             spawnSpeedZSpecUp: self.moveParam.spawnSpeedZSpecUp,
             periodFirst: nil,

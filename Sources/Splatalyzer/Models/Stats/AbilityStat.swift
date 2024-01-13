@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct AbilityStat {
-    let baseValue: Double
-    let modifiedBy: [Ability]
-    let value: Double
+public struct AbilityStat {
+    public let baseValue: Double
+    public let modifiedBy: [Ability]
+    public let value: Double
 }

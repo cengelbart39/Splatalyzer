@@ -7,42 +7,42 @@
 
 import Foundation
 
-struct FizzyBomb: SubParametable {
-    let moveParam: MoveParameter
-    let subWeaponSetting: SubWeaponSetting
-    let weaponParam: WeaponParameter
-    let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
+public struct FizzyBomb: SubParametable {
+    public let moveParam: MoveParameter
+    public let subWeaponSetting: SubWeaponSetting
+    public let weaponParam: WeaponParameter
+    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case moveParam = "MoveParam"
         case subWeaponSetting = "SubWeaponSetting"
         case weaponParam = "WeaponParam"
         case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
     }
     
-    struct MoveParameter: Codable {
-        let type: String
-        let blastParamArray: [BlastParameter]
-        let burstSeFrameArray: [Int]
-        let burstWaitFrameArray: [Int]
-        let burstWarnFrameArray: [Int]
-        let chargeFrameArray: [Int]
-        let collisionSeSilentFrame: Int
-        let collisionSeVelDotGndNrm: Double
-        let flyRotateAirResist: Double
-        let flySplashDistanceArray: [Double]
-        let flySplashPaintParamArray: [FlySplashPaintParameter]
-        let flySplashPaintRadiusArray: [Double]
-        let groundGravity: Double
-        let groundPositionDeg50AirResist: Double
-        let groundPositionHorizonAirResist: Double
-        let groundRotateDeg50AirResist: Double
-        let groundRotateHorizonAirResist: Double
-        let objColDamage: Double
-        let spawnSpeedY: Double
-        let spawnSpeedZSpecUp: HighMidLow
+    public struct MoveParameter: Codable {
+        public let type: String
+        public let blastParamArray: [BlastParameter]
+        public let burstSeFrameArray: [Int]
+        public let burstWaitFrameArray: [Int]
+        public let burstWarnFrameArray: [Int]
+        public let chargeFrameArray: [Int]
+        public let collisionSeSilentFrame: Int
+        public let collisionSeVelDotGndNrm: Double
+        public let flyRotateAirResist: Double
+        public let flySplashDistanceArray: [Double]
+        public let flySplashPaintParamArray: [FlySplashPaintParameter]
+        public let flySplashPaintRadiusArray: [Double]
+        public let groundGravity: Double
+        public let groundPositionDeg50AirResist: Double
+        public let groundPositionHorizonAirResist: Double
+        public let groundRotateDeg50AirResist: Double
+        public let groundRotateHorizonAirResist: Double
+        public let objColDamage: Double
+        public let spawnSpeedY: Double
+        public let spawnSpeedZSpecUp: HighMidLow
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case blastParamArray = "BlastParamArray"
             case burstSeFrameArray = "BurstSeFrameArray"
@@ -65,14 +65,14 @@ struct FizzyBomb: SubParametable {
             case spawnSpeedZSpecUp = "SpawnSpeedZSpecUp"
         }
         
-        struct BlastParameter: Codable {
-            let crossPaintRadius: Double
-            let distanceDamage: [DistanceDamage]
-            let knockBackParam: KnockbackParameter
-            let paintRadius: Double
-            let splashAroundParam: SplashAroundParameter
+        public struct BlastParameter: Codable {
+            public let crossPaintRadius: Double
+            public let distanceDamage: [DistanceDamage]
+            public let knockBackParam: KnockbackParameter
+            public let paintRadius: Double
+            public let splashAroundParam: SplashAroundParameter
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case crossPaintRadius = "CrossPaintRadius"
                 case distanceDamage = "DistanceDamage"
                 case knockBackParam = "KnockBackParam"
@@ -81,15 +81,15 @@ struct FizzyBomb: SubParametable {
             }
         }
         
-        struct FlySplashPaintParameter: Codable {
-            let depthMaxDropHeight: Double?
-            let depthMinDropHeight: Double?
-            let depthScaleMax: Double
-            let depthScaleMin: Double
-            let widthHalf: Double
-            let widthHalfNearest: Double
+        public struct FlySplashPaintParameter: Codable {
+            public let depthMaxDropHeight: Double?
+            public let depthMinDropHeight: Double?
+            public let depthScaleMax: Double
+            public let depthScaleMin: Double
+            public let widthHalf: Double
+            public let widthHalfNearest: Double
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case depthMaxDropHeight = "DepthMaxDropHeight"
                 case depthMinDropHeight = "DepthMinDropHeight"
                 case depthScaleMax = "DepthScaleMax"
@@ -100,26 +100,26 @@ struct FizzyBomb: SubParametable {
         }
     }
     
-    struct WeaponParameter: Codable {
-        let type: String
-        let inkConsume: Double
-        let inkRecoverStop: Int
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let inkConsume: Double
+        public let inkRecoverStop: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case inkConsume = "InkConsume"
             case inkRecoverStop = "InkRecoverStop"
         }
     }
     
-    struct SpawnBulletAdditionMovePlayerParameter: Codable {
-        let type: String
-        let xRate: Double
-        let yMax: Double
-        let yPlusRate: Double
-        let zRate: Double
+    public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public let type: String
+        public let xRate: Double
+        public let yMax: Double
+        public let yPlusRate: Double
+        public let zRate: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case xRate = "XRate"
             case yMax = "YMax"
@@ -128,7 +128,7 @@ struct FizzyBomb: SubParametable {
         }
     }
     
-    func getOverwrites(_ playerInfo: PlayerParameters? = nil) -> SubOverwrites {
+    public func getOverwrites(_ playerInfo: PlayerParameters? = nil) -> SubOverwrites {
         return SubOverwrites(
             spawnSpeedZSpecUp: self.moveParam.spawnSpeedZSpecUp,
             periodFirst: nil,

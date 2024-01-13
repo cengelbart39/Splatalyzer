@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct StatHelper {
-    static let multiShotDict: [MainRowId : Int] = [
+public struct StatHelper {
+    public static let multiShotDict: [MainWeapon : Int] = [
         .l3Nozzlenose : 3,
         .l3NozzlenoseD : 3,
         .h3Nozzlenose : 3,
@@ -20,16 +20,16 @@ struct StatHelper {
         .dreadWringer : 2
     ]
     
-    static func specialPoint(
-        _ ap: AbilityPoints,
-        _ abilities: AbilityValues,
-        _ mainInfo: MainWeaponData
+    public static func specialPoint(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        mainInfo: MainWeaponData
     ) -> AbilityStat {
         let ability = Ability.specialPowerUp
         
         let spuAp = ap[ability] ?? 0
         
-        let apEffect = APEffect(for: .increaseRtSpecial, in: abilities, of: spuAp, weapon: mainInfo)
+        let apEffect = APEffect(for: .increaseRtSpecial, in: values, of: spuAp, weapon: mainInfo)
         
         return AbilityStat(
             baseValue: Double(mainInfo.specialPoints),
@@ -38,11 +38,11 @@ struct StatHelper {
         )
     }
     
-    static func specialLost(
-        _ ap: AbilityPoints,
-        _ abilities: AbilityValues,
-        _ gearBuild: GearBuild,
-        _ mainInfo: MainWeaponData,
+    public static func specialLost(
+        ap: AbilityPoints,
+        abilities: AbilityValues,
+        gearBuild: GearBuild,
+        mainInfo: MainWeaponData,
         splattedByRP: Bool = false
     ) -> AbilityStat {
         let ownRespawnPunisherLost = 0.225
@@ -70,15 +70,15 @@ struct StatHelper {
         )
     }
     
-    static func specialSavedAfterDeath(_ x: Double) -> Double {
+    public static func specialSavedAfterDeath(_ x: Double) -> Double {
         return (1 - x) * 100.0
     }
     
-    static func fullInkTankOptions(
-        _ ap: AbilityPoints,
-        _ abilities: AbilityValues,
-        _ mainInfo: MainWeaponData,
-        _ subInfo: SubWeaponData
+    public static func fullInkTankOptions(
+        ap: AbilityPoints,
+        abilities: AbilityValues,
+        mainInfo: MainWeaponData,
+        subInfo: SubWeaponData
     ) -> [InkTankOption] {
         var result = [InkTankOption]()
         
@@ -113,9 +113,7 @@ struct StatHelper {
         return result
     }
     
-    static func mainDamages(
-        _ mainInfo: MainWeaponData
-    ) -> [DamageStat] {
+    public static func mainDamages(mainInfo: MainWeaponData) -> [DamageStat] {
         var result = [DamageStat]()
         
         for type in DamageType.allCases {
@@ -153,9 +151,7 @@ struct StatHelper {
         return result
     }
     
-    static func specialDamages(
-        _ specialInfo: SpecialWeaponData
-    ) -> [DamageStat] {
+    public static func specialDamages(specialInfo: SpecialWeaponData) -> [DamageStat] {
         var result = [DamageStat]()
         
         for type in DamageType.allCases {
@@ -219,10 +215,10 @@ struct StatHelper {
         return result
     }
     
-    static func subDefenseDamages(
-        _ ap: AbilityPoints,
-        _ abilities: AbilityValues,
-        _ subInfo: SubWeaponData
+    public static func subDefenseDamages(
+        ap: AbilityPoints,
+        abilities: AbilityValues,
+        subInfo: SubWeaponData
     ) -> [DamageEffectStat] {
         let sruAp = ap[.subResistanceUp] ?? 0
         
@@ -315,7 +311,7 @@ struct StatHelper {
         return result
     }
     
-    static func shotsToSplat(
+    public static func shotsToSplat(
         for value: Double,
         of type: DamageType,
         with multiShots: Int?
@@ -330,7 +326,7 @@ struct StatHelper {
         }
     }
     
-    static func subDamageValue(
+    public static func subDamageValue(
         ap: Int,
         abilities: AbilityValues,
         baseValue: Double,
@@ -352,11 +348,11 @@ struct StatHelper {
         }
     }
     
-    static func subInkConsumptionPercentage(
-        _ ap: AbilityPoints,
-        _ abilities: AbilityValues,
-        _ mainInfo: MainWeaponData,
-        _ subInfo: SubWeaponData
+    public static func subInkConsumptionPercentage(
+        ap: AbilityPoints,
+        abilities: AbilityValues,
+        mainInfo: MainWeaponData,
+        subInfo: SubWeaponData
     ) -> AbilityStat {
         let subConsume = SubWeaponConsume(ap, abilities, mainInfo, subInfo)
         
@@ -366,11 +362,11 @@ struct StatHelper {
             value: (subConsume.inkConsume * 100) / mainInfo.inkTankSize)
     }
     
-    static func inkRecoverySeconds(
+    public static func inkRecoverySeconds(
         effectKey: AbilityValue,
-        _ ap: AbilityPoints,
-        _ abilities: AbilityValues,
-        _ mainInfo: MainWeaponData
+    ap: AbilityPoints,
+        abilities: AbilityValues,
+        mainInfo: MainWeaponData
     ) -> AbilityStat {
         let ability = Ability.inkRecoveryUp
         
@@ -389,10 +385,10 @@ struct StatHelper {
         )
     }
     
-    static func runSpeed(
-        _ ap: AbilityPoints,
-        _ abilities: AbilityValues,
-        _ mainInfo: MainWeaponData
+    public static func runSpeed(
+        ap: AbilityPoints,
+        abilities: AbilityValues,
+        mainInfo: MainWeaponData
     ) -> AbilityStat {
         let ability = Ability.runSpeedUp
         
@@ -410,11 +406,11 @@ struct StatHelper {
             value: apEffect.effect * 10)
     }
     
-    static func shootingRunSpeed(
+    public static func shootingRunSpeed(
         for type: ShootingRunSpeedType,
-        _ ap: AbilityPoints,
-        _ abilities: AbilityValues,
-        _ mainInfo: MainWeaponData
+        ap: AbilityPoints,
+        abilities: AbilityValues,
+        mainInfo: MainWeaponData
     ) -> AbilityStat? {
         let moveSpeed = mainInfo.shootingRunSpeed(for: type)
         
@@ -437,11 +433,11 @@ struct StatHelper {
         }
     }
     
-    static func swimSpeed(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ gearBuild: GearBuild,
-        _ mainInfo: MainWeaponData
+    public static func swimSpeed(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        gearBuild: GearBuild,
+        mainInfo: MainWeaponData
     ) -> AbilityStat {
         let ability = Ability.swimSpeedUp
         
@@ -463,13 +459,13 @@ struct StatHelper {
             value: apEffect.effect * 10 * ninjaSquidMultiplier)
     }
     
-    static func swimSpeedWithRainmaker(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ gearBuild: GearBuild,
-        _ mainInfo: MainWeaponData
+    public static func swimSpeedWithRainmaker(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        gearBuild: GearBuild,
+        mainInfo: MainWeaponData
     ) -> AbilityStat {
-        let withoutRM = StatHelper.swimSpeed(ap, values, gearBuild, mainInfo)
+        let withoutRM = StatHelper.swimSpeed(ap: ap, values: values, gearBuild: gearBuild, mainInfo: mainInfo)
         
         let rainmakerSpeedPenalty = 0.8
         
@@ -479,10 +475,10 @@ struct StatHelper {
             value: withoutRM.value * rainmakerSpeedPenalty)
     }
     
-    static func runSpeedInEnemyInk(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ mainInfo: MainWeaponData
+    public static func runSpeedInEnemyInk(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        mainInfo: MainWeaponData
     ) -> AbilityStat {
         let iru = Ability.inkResistanceUp
         let iruAp = ap[iru] ?? 0
@@ -499,10 +495,10 @@ struct StatHelper {
             value: apEffect.effect * 10)
     }
     
-    static func damageInEnemyInkPerSecond(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ mainInfo: MainWeaponData
+    public static func damageInEnemyInkPerSecond(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        mainInfo: MainWeaponData
     ) -> AbilityStat {
         let iru = Ability.inkResistanceUp
         let iruAp = ap[iru] ?? 0
@@ -519,10 +515,10 @@ struct StatHelper {
             value: apEffect.effectToDamage() * 60)
     }
     
-    static func enemyInkDamageLimit(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ mainInfo: MainWeaponData
+    public static func enemyInkDamageLimit(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        mainInfo: MainWeaponData
     ) -> AbilityStat {
         let iru = Ability.inkResistanceUp
         let iruAp = ap[iru] ?? 0
@@ -539,10 +535,10 @@ struct StatHelper {
             value: apEffect.effectToDamage() * 60)
     }
     
-    static func framesBeforeDamageInEnemyInk(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ mainInfo: MainWeaponData
+    public static func framesBeforeDamageInEnemyInk(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        mainInfo: MainWeaponData
     ) -> AbilityStat {
         let iru = Ability.inkResistanceUp
         let iruAp = ap[iru] ?? 0
@@ -559,11 +555,11 @@ struct StatHelper {
             value: ceil(apEffect.effect))
     }
     
-    static func respawnTime(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ gearBuild: GearBuild,
-        _ mainInfo: MainWeaponData,
+    public static func respawnTime(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        gearBuild: GearBuild,
+        mainInfo: MainWeaponData,
         splatedByRP: Bool,
         hasTacticooler: Bool
     ) -> AbilityStat {
@@ -599,10 +595,10 @@ struct StatHelper {
             value: respawnChaseFrame + chase.effect + around.effect + splattedByExtraFrames + ownRPExtraFrames - fasterRespawn)
     }
     
-    static func superJumpGroundFrames(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ mainInfo: MainWeaponData
+    public static func superJumpGroundFrames(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        mainInfo: MainWeaponData
     ) -> AbilityStat {
         let ability = Ability.quickSuperJump
         
@@ -620,7 +616,7 @@ struct StatHelper {
             value: ceil(apEffect.effect))
     }
     
-    static func superJumpTotalFrames(
+    public static func superJumpTotalFrames(
         _ ap: AbilityPoints,
         _ values: AbilityValues,
         _ mainInfo: MainWeaponData
@@ -647,10 +643,10 @@ struct StatHelper {
             value: (ceil(charge.effect) + ceil(move.effect)).framesToSeconds())
     }
     
-    static func shotSpreadAir(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ mainInfo: MainWeaponData
+    public static func shotSpreadAir(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        mainInfo: MainWeaponData
     ) -> AbilityStat? {
         let ability = Ability.intensifyAction
         
@@ -675,10 +671,10 @@ struct StatHelper {
             value: reducedExtraSpeed + groundSpread)
     }
     
-    static func shotAutofireSpreadAir(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ mainInfo: MainWeaponData
+    public static func shotAutofireSpreadAir(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        mainInfo: MainWeaponData
     ) -> AbilityStat? {
         let ability = Ability.intensifyAction
         
@@ -703,10 +699,10 @@ struct StatHelper {
             value: reducedExtraSpeed + groundSpread)
     }
     
-    static func squidSurgeChargeFrames(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ mainInfo: MainWeaponData
+    public static func squidSurgeChargeFrames(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        mainInfo: MainWeaponData
     ) -> AbilityStat {
         let ability = Ability.intensifyAction
         
@@ -724,11 +720,11 @@ struct StatHelper {
             value: ceil(apEffect.effect))
     }
     
-    static func markedSeconds(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ mainInfo: MainWeaponData,
-        _ subInfo: SubWeaponData
+    public static func markedSeconds(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        mainInfo: MainWeaponData,
+        subInfo: SubWeaponData
     ) -> AbilityStat {
         let sru = Ability.subResistanceUp
         let sruAp = ap[sru] ?? 0
@@ -751,10 +747,10 @@ struct StatHelper {
             value: (subEffect.baseEffect * mainEffect.effect).framesToSeconds())
     }
     
-    static func toxicMistMovementReduction(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ mainInfo: MainWeaponData
+    public static func toxicMistMovementReduction(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        mainInfo: MainWeaponData
     ) -> AbilityStat {
         let sru = Ability.subResistanceUp
         let sruAp = ap[sru] ?? 0
@@ -771,10 +767,10 @@ struct StatHelper {
             value: apEffect.effect * 100)
     }
     
-    static func quickSuperJumpBoost(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ subInfo: SubWeaponData
+    public static func quickSuperJumpBoost(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        subInfo: SubWeaponData
     ) -> AbilityStat? {
         let effect = abilityValues(for: .subSpecUpParam, in: values, weapon: subInfo)
         
@@ -794,7 +790,7 @@ struct StatHelper {
             value: effectCalc)
     }
     
-    static func quickSuperJumpValue(
+    public static func quickSuperJumpValue(
         for multiplier: HighMidLow,
         with ap: Int
     ) -> Double {
@@ -812,10 +808,10 @@ struct StatHelper {
         return floor(low + (high - low) * v8)
     }
     
-    static func subVelocity(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ subInfo: SubWeaponData
+    public static func subVelocity(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        subInfo: SubWeaponData
     ) -> AbilityStat? {
         let hml = abilityValues(for: .subSpecUpParam, in: values, weapon: subInfo)
         
@@ -838,10 +834,10 @@ struct StatHelper {
             value: apEffect.effect)
     }
     
-    static func subPhaseDuration(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ subInfo: SubWeaponData,
+    public static func subPhaseDuration(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        subInfo: SubWeaponData,
         first: Bool
     ) -> AbilityStat? {
         let hml = abilityValues(
@@ -868,10 +864,10 @@ struct StatHelper {
             value: apEffect.effect.framesToSeconds())
     }
     
-    static func subMarkingSeconds(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ subInfo: SubWeaponData
+    public static func subMarkingSeconds(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        subInfo: SubWeaponData
     ) -> AbilityStat? {
         let hml = abilityValues(for: .subMarkingTimeInSeconds, in: values, weapon: subInfo)
         
@@ -894,10 +890,10 @@ struct StatHelper {
             value: apEffect.effect.framesToSeconds())
     }
     
-    static func subMarkingRadius(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ subInfo: SubWeaponData
+    public static func subMarkingRadius(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        subInfo: SubWeaponData
     ) -> AbilityStat? {
         let hml = abilityValues(for: .subMarkingRadius, in: values, weapon: subInfo)
         
@@ -920,10 +916,10 @@ struct StatHelper {
             value: apEffect.effect)
     }
     
-    static func subExplosionRadius(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ subInfo: SubWeaponData
+    public static func subExplosionRadius(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        subInfo: SubWeaponData
     ) -> AbilityStat? {
         let hml = abilityValues(for: .subExplosionRadius, in: values, weapon: subInfo)
         
@@ -946,10 +942,10 @@ struct StatHelper {
             value: apEffect.effect)
     }
     
-    static func subHp(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ subInfo: SubWeaponData
+    public static func subHp(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        subInfo: SubWeaponData
     ) -> AbilityStat? {
         let hml = abilityValues(for: .subHp, in: values, weapon: subInfo)
         
@@ -972,10 +968,10 @@ struct StatHelper {
             value: apEffect.effect / 10)
     }
     
-    static func specialDuration(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ specialInfo: SpecialWeaponData
+    public static func specialDuration(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
         let hml = abilityValues(for: .specialDurationFrame, in: values, weapon: specialInfo)
         
@@ -998,10 +994,10 @@ struct StatHelper {
             value: apEffect.effect.framesToSeconds())
     }
     
-    static func specialDamageDistance(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ specialInfo: SpecialWeaponData
+    public static func specialDamageDistance(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
         let hml = abilityValues(for: .specialDamageDistance, in: values, weapon: specialInfo)
         
@@ -1024,7 +1020,7 @@ struct StatHelper {
             value: apEffect.effect)
     }
     
-    static func specialPaintRadius(
+    public static func specialPaintRadius(
         _ ap: AbilityPoints,
         _ values: AbilityValues,
         _ specialInfo: SpecialWeaponData
@@ -1050,10 +1046,10 @@ struct StatHelper {
             value: apEffect.effect)
     }
     
-    static func specialFieldHp(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ specialInfo: SpecialWeaponData
+    public static func specialFieldHp(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
         let hml = abilityValues(for: .specialFieldHp, in: values, weapon: specialInfo)
         
@@ -1076,10 +1072,10 @@ struct StatHelper {
             value: round(apEffect.effect / 10))
     }
     
-    static func specialDeviveHp(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ specialInfo: SpecialWeaponData
+    public static func specialDeviceHp(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
         let hml = abilityValues(for: .specialDeviceHp, in: values, weapon: specialInfo)
         
@@ -1102,10 +1098,10 @@ struct StatHelper {
             value: round(apEffect.effect / 10))
     }
     
-    static func specialHookInkConsumption(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ specialInfo: SpecialWeaponData
+    public static func specialHookInkConsumption(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
         let hml = abilityValues(for: .specialHookInkConsumption, in: values, weapon: specialInfo)
         
@@ -1130,10 +1126,10 @@ struct StatHelper {
             value: (apEffect.effect * 100) / zipcasterInkTankSize)
     }
     
-    static func specialInkConsumptionPerSecond(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ specialInfo: SpecialWeaponData
+    public static func specialInkConsumptionPerSecond(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
         let hml = abilityValues(for: .specialInkConsumptionPerSecond, in: values, weapon: specialInfo)
         
@@ -1158,10 +1154,10 @@ struct StatHelper {
             value: (apEffect.effect * 100) / zipcasterInkTankSize)
     }
     
-    static func specialReticleRadius(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ specialInfo: SpecialWeaponData
+    public static func specialReticleRadius(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
         let hml = abilityValues(for: .specialReticleRadius, in: values, weapon: specialInfo)
         
@@ -1184,10 +1180,10 @@ struct StatHelper {
             value: apEffect.effect)
     }
     
-    static func specialThrowDistance(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ specialInfo: SpecialWeaponData
+    public static func specialThrowDistance(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
         let hml = abilityValues(for: .specialThrowDistance, in: values, weapon: specialInfo)
         
@@ -1210,10 +1206,10 @@ struct StatHelper {
             value: apEffect.effect)
     }
     
-    static func specialMoveSpeed(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ specialInfo: SpecialWeaponData
+    public static func specialMoveSpeed(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
         let hml = abilityValues(for: .specialMoveSpeed, in: values, weapon: specialInfo)
         
@@ -1236,10 +1232,10 @@ struct StatHelper {
             value: apEffect.effect)
     }
     
-    static func specialAutoChargeRate(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ specialInfo: SpecialWeaponData
+    public static func specialAutoChargeRate(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
         let hml = abilityValues(for: .specialAutoChargeRate, in: values, weapon: specialInfo)
         
@@ -1262,10 +1258,10 @@ struct StatHelper {
             value: apEffect.effect * 100)
     }
     
-    static func specialMaxRadius(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ specialInfo: SpecialWeaponData
+    public static func specialMaxRadius(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
         let hml = abilityValues(for: .specialMaxRadius, in: values, weapon: specialInfo)
         
@@ -1288,10 +1284,10 @@ struct StatHelper {
             value: apEffect.effect)
     }
     
-    static func specialRadiusRange(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ specialInfo: SpecialWeaponData
+    public static func specialRadiusRange(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
         let hmlMax = abilityValues(for: .specialMaxRadius, in: values, weapon: specialInfo)
         
@@ -1322,10 +1318,10 @@ struct StatHelper {
             value: minEffect.effect - maxEffect.effect)
     }
     
-    static func specialPowerUpDuration(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ specialInfo: SpecialWeaponData
+    public static func specialPowerUpDuration(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
         let hml = abilityValues(for: .specialPowerUpDuration, in: values, weapon: specialInfo)
         
@@ -1348,7 +1344,7 @@ struct StatHelper {
             value: apEffect.effect)
     }
     
-    static func abilityValues(
+    public static func abilityValues(
         for value: AbilityValue,
         in values: AbilityValues,
         weapon: WeaponDatable

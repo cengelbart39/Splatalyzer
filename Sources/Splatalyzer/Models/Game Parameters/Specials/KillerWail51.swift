@@ -7,35 +7,35 @@
 
 import Foundation
 
-struct KillerWail51: SpecialParametable {
-    let bulletBitParam: BulletBitParameter
-    let weaponParam: WeaponParameter
+public struct KillerWail51: SpecialParametable {
+    public let bulletBitParam: BulletBitParameter
+    public let weaponParam: WeaponParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case bulletBitParam = "spl__BulletSpMicroLaserBitParam"
         case weaponParam = "spl__WeaponSpMicroLaserParam"
     }
     
-    struct BulletBitParameter: Codable {
-        let type: String
-        let chargeParam: ChargeParameter
-        let followParam: FollowParameter
-        let laserParam: LaserParameter
+    public struct BulletBitParameter: Codable {
+        public let type: String
+        public let chargeParam: ChargeParameter
+        public let followParam: FollowParameter
+        public let laserParam: LaserParameter
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case chargeParam = "ChargeParam"
             case followParam = "FollowParam"
             case laserParam = "LaserParam"
         }
         
-        struct ChargeParameter: Codable {
-            let chargeFrame: Int
-            let interpRate: Double
-            let maxAngularVel: Double
-            let maxAngularVelChargeStateNoTgt: Double
+        public struct ChargeParameter: Codable {
+            public let chargeFrame: Int
+            public let interpRate: Double
+            public let maxAngularVel: Double
+            public let maxAngularVelChargeStateNoTgt: Double
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case chargeFrame = "ChargeFrame"
                 case interpRate = "InterpRate"
                 case maxAngularVel = "MaxAngularVel"
@@ -43,22 +43,22 @@ struct KillerWail51: SpecialParametable {
             }
         }
         
-        struct FollowParameter: Codable {
-            let lockonEndFrame: Int
+        public struct FollowParameter: Codable {
+            public let lockonEndFrame: Int
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case lockonEndFrame = "LockonEndFrame"
             }
         }
         
-        struct LaserParameter: Codable {
-            let afterLaserWaitFrame: Int
-            let freeMoveRotSpeed: Double
-            let laserDamage: Int
-            let laserDamageIntervalFrame: Int
-            let laserFrame: HighMidLow
+        public struct LaserParameter: Codable {
+            public let afterLaserWaitFrame: Int
+            public let freeMoveRotSpeed: Double
+            public let laserDamage: Int
+            public let laserDamageIntervalFrame: Int
+            public let laserFrame: HighMidLow
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case afterLaserWaitFrame = "AfterLaserWaitFrame"
                 case freeMoveRotSpeed = "FreeMoveRotSpeed"
                 case laserDamage = "LaserDamage"
@@ -68,25 +68,25 @@ struct KillerWail51: SpecialParametable {
         }
     }
     
-    struct WeaponParameter: Codable {
-        let type: String
-        let launchParam: LaunchParameter
-        let playerParam: PlayerParameter
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let launchParam: LaunchParameter
+        public let playerParam: PlayerParameter
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case launchParam = "LaunchParam"
             case playerParam = "PlayerParam"
         }
         
-        struct LaunchParameter: Codable {
-            let enableDualLaunch: Bool
-            let laserBitCenterOffset: XYZData
-            let laserBitRadius: Double
-            let lockonDeg: Double
-            let lockonRadius: Double
+        public struct LaunchParameter: Codable {
+            public let enableDualLaunch: Bool
+            public let laserBitCenterOffset: XYZData
+            public let laserBitRadius: Double
+            public let lockonDeg: Double
+            public let lockonRadius: Double
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case enableDualLaunch = "EnableDualLaunch"
                 case laserBitCenterOffset = "LaserBitCenterOffset"
                 case laserBitRadius = "LaserBitRadius"
@@ -95,12 +95,12 @@ struct KillerWail51: SpecialParametable {
             }
         }
         
-        struct PlayerParameter: Codable {
-            let afterShotNoBombFrm: Int
-            let afterShotNoShotFrm: Int
-            let afterShotNoSquidFrm: Int
+        public struct PlayerParameter: Codable {
+            public let afterShotNoBombFrm: Int
+            public let afterShotNoShotFrm: Int
+            public let afterShotNoSquidFrm: Int
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case afterShotNoBombFrm = "AfterShot_NoBombFrm"
                 case afterShotNoShotFrm = "AfterShot_NoShotFrm"
                 case afterShotNoSquidFrm = "AfterShot_NoSquidFrm"
@@ -108,7 +108,7 @@ struct KillerWail51: SpecialParametable {
         }
     }
     
-    func getOverwrites() -> SpecialOverwrites {
+    public func getOverwrites() -> SpecialOverwrites {
         return SpecialOverwrites(
             chargeRateAutoPerFrame: nil,
             crossPaintCheckLength: nil,

@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct JSONService {
+protocol JSONServicable {
+    func decode<T: Codable>(_ type: T.Type, from file: String) throws -> T
+}
+
+struct JSONService: JSONServicable {
     func decode<T: Codable>(_ type: T.Type, from file: String) throws -> T {
         guard let url = Bundle.main.url(forResource: file, withExtension: "json", subdirectory: "Splatalyzer") else {
             throw JSONError.invalidUrl(file)
@@ -42,23 +46,23 @@ struct JSONService {
             throw JSONError.invalidData(file, error.localizedDescription)
         }
     }
+}
+
+enum JSONError: Error, LocalizedError {
+    case invalidUrl(String)
+    case invalidData(String, String)
+    case decode(String)
     
-    enum JSONError: Error, LocalizedError {
-        case invalidUrl(String)
-        case invalidData(String, String)
-        case decode(String)
-        
-        var errorDescription: String? {
-            switch self {
-            case .invalidUrl(let file):
-                return NSLocalizedString("Failed to locate '\(file)' in bundle.", comment: "")
-                
-            case .invalidData(let file, let descr):
-                return NSLocalizedString("Failed to load '\(file)' in bundle: \(descr)", comment: "")
-                
-            case .decode(let string):
-                return string
-            }
+    var errorDescription: String? {
+        switch self {
+        case .invalidUrl(let file):
+            return NSLocalizedString("Failed to locate '\(file)' in bundle.", comment: "")
+            
+        case .invalidData(let file, let descr):
+            return NSLocalizedString("Failed to load '\(file)' in bundle: \(descr)", comment: "")
+            
+        case .decode(let string):
+            return string
         }
     }
 }

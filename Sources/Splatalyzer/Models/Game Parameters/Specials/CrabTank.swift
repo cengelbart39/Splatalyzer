@@ -7,24 +7,24 @@
 
 import Foundation
 
-struct CrabTank: SpecialParametable {
-    let additionMovePlayerParam: AdditionMovePlayerParameter
-    let bodyParam: BodyParameter
-    let cannonParam: CannonParameter
-    let shooterCollisionParam: CollisionParameter
-    let shooterDamageParam: CrabTank.ShooterDamageParameter
-    let shooterMoveParam: CrabTank.ShooterMoveParameter
-    let shooterPaintParam: CrabTank.ShooterPaintParameter
-    let shooterSplashPaintParam: CrabTank.ShooterSplashPaintParameter
-    let shooterSplashSpawnParam: SpawnParameter
-    let shooterWallDropCollisionPaintParam: ShooterWallDropCollisionPaintParameter
-    let shooterWallDropMoveParam: CrabTank.ShooterWallDropMoveParameter
-    let weaponParam: WeaponParameter
+public struct CrabTank: SpecialParametable {
+    public let additionMovePlayerParam: AdditionMovePlayerParameter
+    public let bodyParam: BodyParameter
+    public let cannonParam: CannonParameter
+    public let shooterCollisionParam: CollisionParameter
+    public let shooterDamageParam: CrabTank.ShooterDamageParameter
+    public let shooterMoveParam: CrabTank.ShooterMoveParameter
+    public let shooterPaintParam: CrabTank.ShooterPaintParameter
+    public let shooterSplashPaintParam: CrabTank.ShooterSplashPaintParameter
+    public let shooterSplashSpawnParam: SpawnParameter
+    public let shooterWallDropCollisionPaintParam: ShooterWallDropCollisionPaintParameter
+    public let shooterWallDropMoveParam: CrabTank.ShooterWallDropMoveParameter
+    public let weaponParam: WeaponParameter
     
-    let bulletShooterTailLengthParam: BulletShooterTailLengthParameter
-    let paintMonitorSetParma: PaintMonitorSetParameter
+    public let bulletShooterTailLengthParam: BulletShooterTailLengthParameter
+    public let paintMonitorSetParma: PaintMonitorSetParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case additionMovePlayerParam = "AdditionMovePlayerParam"
         case bodyParam = "BodyParam"
         case cannonParam = "CannonParam"
@@ -41,24 +41,24 @@ struct CrabTank: SpecialParametable {
         case paintMonitorSetParma = "spl__PaintMonitorSetParam"
     }
     
-    struct AdditionMovePlayerParameter: Codable {
-        let type: String
-        let zRate: Double
+    public struct AdditionMovePlayerParameter: Codable {
+        public let type: String
+        public let zRate: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case zRate = "ZRate"
         }
     }
     
-    struct BodyParameter: Codable {
-        let type: String
-        let collisionRadiusForField: Double
-        let collisionRadiusForPlayer: Double
-        let knockBackChariotPlayer: KnockBack
-        let knockBackOpponent: KnockBack
+    public struct BodyParameter: Codable {
+        public let type: String
+        public let collisionRadiusForField: Double
+        public let collisionRadiusForPlayer: Double
+        public let knockBackChariotPlayer: KnockBack
+        public let knockBackOpponent: KnockBack
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case collisionRadiusForField = "CollisionRadiusForField"
             case collisionRadiusForPlayer = "CollisionRadiusForPlayer"
@@ -66,13 +66,13 @@ struct CrabTank: SpecialParametable {
             case knockBackOpponent = "KnockBackOpponent"
         }
         
-        struct KnockBack: Codable {
-            let accelMax: Double
-            let accelMin: Double
-            let myVelocityRate: Double
-            let opponentVelocityRate: Double
+        public struct KnockBack: Codable {
+            public let accelMax: Double
+            public let accelMin: Double
+            public let myVelocityRate: Double
+            public let opponentVelocityRate: Double
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case accelMax = "AccelMax"
                 case accelMin = "AccelMin"
                 case myVelocityRate = "MyVelocityRate"
@@ -81,15 +81,15 @@ struct CrabTank: SpecialParametable {
         }
     }
     
-    struct CannonParameter: Codable {
-        let type: String
-        let blastParam: BlastParameter
-        let collisionParam: CollisionParameter
-        let drawSize: Double
-        let moveParam: MoveParameter
-        let splashParam: SplashParameter
+    public struct CannonParameter: Codable {
+        public let type: String
+        public let blastParam: BlastParameter
+        public let collisionParam: CollisionParameter
+        public let drawSize: Double
+        public let moveParam: MoveParameter
+        public let splashParam: SplashParameter
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case blastParam = "BlastParam"
             case collisionParam = "CollisionParam"
@@ -98,16 +98,16 @@ struct CrabTank: SpecialParametable {
             case splashParam = "SplashParam"
         }
         
-        struct BlastParameter: Codable {
-            let crossPaintCheckLength: Double
-            let crossPaintRadius: Double
-            let damageOffsetY: Double
-            let distanceDamage: [DistanceDamage]
-            let knockBackParam: KnockbackParameter
-            let paintOffsetY: Double
-            let paintRadius: Double
+        public struct BlastParameter: Codable {
+            public let crossPaintCheckLength: Double
+            public let crossPaintRadius: Double
+            public let damageOffsetY: Double
+            public let distanceDamage: [DistanceDamage]
+            public let knockBackParam: KnockbackParameter
+            public let paintOffsetY: Double
+            public let paintRadius: Double
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case crossPaintCheckLength = "CrossPaintCheckLength"
                 case crossPaintRadius = "CrossPaintRadius"
                 case damageOffsetY = "DamageOffsetY"
@@ -118,17 +118,17 @@ struct CrabTank: SpecialParametable {
             }
         }
         
-        struct MoveParameter: Codable {
-            let brakeAirResist: Double
-            let brakeGravity: Double
-            let brakeToFreeStateFrame: Int
-            let brakeToFreeVelocityXZ: Double
-            let brakeToFreeVelocityY: Double
-            let freeAirResist: Double
-            let freeGravity: Double
-            let goStraightToBrakeStateFrame: Int
+        public struct MoveParameter: Codable {
+            public let brakeAirResist: Double
+            public let brakeGravity: Double
+            public let brakeToFreeStateFrame: Int
+            public let brakeToFreeVelocityXZ: Double
+            public let brakeToFreeVelocityY: Double
+            public let freeAirResist: Double
+            public let freeGravity: Double
+            public let goStraightToBrakeStateFrame: Int
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case brakeAirResist = "BrakeAirResist"
                 case brakeGravity = "BrakeGravity"
                 case brakeToFreeStateFrame = "BrakeToFreeStateFrame"
@@ -140,22 +140,22 @@ struct CrabTank: SpecialParametable {
             }
         }
         
-        struct SplashParameter: Codable {
-            let drawSizeCollisionPaintParam: DrawSizeCollisionPaintParameter
-            let spawnParam: SpawnParameter
+        public struct SplashParameter: Codable {
+            public let drawSizeCollisionPaintParam: DrawSizeCollisionPaintParameter
+            public let spawnParam: SpawnParameter
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case drawSizeCollisionPaintParam = "DrawSizeCollisionPaintParam"
                 case spawnParam = "SpawnParam"
             }
             
-            struct DrawSizeCollisionPaintParameter: Codable {
-                let collisionParam: CollisionParameter
-                let drawRadius: Double
-                let paintDepthScale: Double
-                let paintWidthHalf: Double
+            public struct DrawSizeCollisionPaintParameter: Codable {
+                public let collisionParam: CollisionParameter
+                public let drawRadius: Double
+                public let paintDepthScale: Double
+                public let paintWidthHalf: Double
                 
-                enum CodingKeys: String, CodingKey {
+                public enum CodingKeys: String, CodingKey {
                     case collisionParam = "CollisionParam"
                     case drawRadius = "DrawRadius"
                     case paintDepthScale = "PaintDepthScale"
@@ -167,16 +167,16 @@ struct CrabTank: SpecialParametable {
         }
     }
     
-    struct CollisionParameter: Codable {
-        let changeFrameForField: Int?
-        let changeFrameForPlayer: Int?
-        let endRadiusForField: Double
-        let endRadiusForPlayer: Double
-        let friendThroughFrameForPlayer: Int?
-        let initRadiusForField: Double
-        let initRadiusForPlayer: Double
+    public struct CollisionParameter: Codable {
+        public let changeFrameForField: Int?
+        public let changeFrameForPlayer: Int?
+        public let endRadiusForField: Double
+        public let endRadiusForPlayer: Double
+        public let friendThroughFrameForPlayer: Int?
+        public let initRadiusForField: Double
+        public let initRadiusForPlayer: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case changeFrameForField = "ChangeFrameForField"
             case changeFrameForPlayer = "ChangeFrameForPlayer"
             case endRadiusForField = "EndRadiusForField"
@@ -187,14 +187,14 @@ struct CrabTank: SpecialParametable {
         }
     }
     
-    struct ShooterDamageParameter: Codable {
-        let type: String
-        let reduceEndFrame: Int
-        let reduceStartFrame: Int
-        let valueMax: Int
-        let valueMin: Int
+    public struct ShooterDamageParameter: Codable {
+        public let type: String
+        public let reduceEndFrame: Int
+        public let reduceStartFrame: Int
+        public let valueMax: Int
+        public let valueMin: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case reduceEndFrame = "ReduceEndFrame"
             case reduceStartFrame = "ReduceStartFrame"
@@ -203,14 +203,14 @@ struct CrabTank: SpecialParametable {
         }
     }
     
-    struct ShooterMoveParameter: Codable {
-        let type: String
-        let freeGravity: Double
-        let goStraightStateEndMaxSpeed: Double
-        let goStraightToBrakeStateFrame: Int
-        let spawnSpeed: Double
+    public struct ShooterMoveParameter: Codable {
+        public let type: String
+        public let freeGravity: Double
+        public let goStraightStateEndMaxSpeed: Double
+        public let goStraightToBrakeStateFrame: Int
+        public let spawnSpeed: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case freeGravity = "FreeGravity"
             case goStraightStateEndMaxSpeed = "GoStraightStateEndMaxSpeed"
@@ -219,14 +219,14 @@ struct CrabTank: SpecialParametable {
         }
     }
     
-    struct ShooterPaintParameter: Codable {
-        let type: String
-        let distanceMiddle: Double
-        let widthHalfFar: Double
-        let widthHalfMiddle: Double
-        let widthHalfNear: Double
+    public struct ShooterPaintParameter: Codable {
+        public let type: String
+        public let distanceMiddle: Double
+        public let widthHalfFar: Double
+        public let widthHalfMiddle: Double
+        public let widthHalfNear: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case distanceMiddle = "DistanceMiddle"
             case widthHalfFar = "WidthHalfFar"
@@ -235,14 +235,14 @@ struct CrabTank: SpecialParametable {
         }
     }
     
-    struct ShooterSplashPaintParameter: Codable {
-        let type: String
-        let depthMaxDropHeight: Double
-        let depthMinDropHeight: Double
-        let widthHalf: Double
-        let widthHalfNearest: Double
+    public struct ShooterSplashPaintParameter: Codable {
+        public let type: String
+        public let depthMaxDropHeight: Double
+        public let depthMinDropHeight: Double
+        public let widthHalf: Double
+        public let widthHalfNearest: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case depthMaxDropHeight = "DepthMaxDropHeight"
             case depthMinDropHeight = "DepthMinDropHeight"
@@ -251,15 +251,15 @@ struct CrabTank: SpecialParametable {
         }
     }
     
-    struct SpawnParameter: Codable {
-        let type: String?
-        let forceSpawnNearestAddNumArray: [Int]?
-        let spawnBetweenLength: Double
-        let spawnNearestLength: Double?
-        let spawnNum: Double
-        let splitNum: Int?
+    public struct SpawnParameter: Codable {
+        public let type: String?
+        public let forceSpawnNearestAddNumArray: [Int]?
+        public let spawnBetweenLength: Double
+        public let spawnNearestLength: Double?
+        public let spawnNum: Double
+        public let splitNum: Int?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case forceSpawnNearestAddNumArray = "ForceSpawnNearestAddNumArray"
             case spawnBetweenLength = "SpawnBetweenLength"
@@ -269,13 +269,13 @@ struct CrabTank: SpecialParametable {
         }
     }
     
-    struct ShooterWallDropCollisionPaintParameter: Codable {
-        let type: String
-        let paintRadiusFall: Double
-        let paintRadiusGround: Double
-        let paintRadiusShock: Double
+    public struct ShooterWallDropCollisionPaintParameter: Codable {
+        public let type: String
+        public let paintRadiusFall: Double
+        public let paintRadiusGround: Double
+        public let paintRadiusShock: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case paintRadiusFall = "PaintRadiusFall"
             case paintRadiusGround = "PaintRadiusGround"
@@ -283,18 +283,18 @@ struct CrabTank: SpecialParametable {
         }
     }
     
-    struct ShooterWallDropMoveParameter: Codable {
-        let type: String
-        let fallPeriodFirstFrameMax: Int
-        let fallPeriodFirstFrameMin: Int
-        let fallPeriodFirstTargetSpeed: Double
-        let fallPeriodLastFrameMax: Int
-        let fallPeriodLastFrameMin: Int
-        let fallPeriodSecondFrame: Int
-        let fallPeriodSecondTargetSpeed: Double
-        let freeGravityType: String
+    public struct ShooterWallDropMoveParameter: Codable {
+        public let type: String
+        public let fallPeriodFirstFrameMax: Int
+        public let fallPeriodFirstFrameMin: Int
+        public let fallPeriodFirstTargetSpeed: Double
+        public let fallPeriodLastFrameMax: Int
+        public let fallPeriodLastFrameMin: Int
+        public let fallPeriodSecondFrame: Int
+        public let fallPeriodSecondTargetSpeed: Double
+        public let freeGravityType: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case fallPeriodFirstFrameMax = "FallPeriodFirstFrameMax"
             case fallPeriodFirstFrameMin = "FallPeriodFirstFrameMin"
@@ -307,29 +307,29 @@ struct CrabTank: SpecialParametable {
         }
     }
     
-    struct WeaponParameter: Codable {
-        let type: String
-        let armorHP: Int
-        let armorHPBreakScissors: Int
-        let cannonNoShotFrame: Int
-        let moveSpeedCoefSquid: Double
-        let moveSpeedX: Double
-        let moveSpeedXSpongeEnemy: Double
-        let moveSpeedZ: Double
-        let moveSpeedZSpongeEnemy: Double
-        let noShotBombReqFrmFinishSpecial: Int
-        let preDelayFrmSquidShotBomb: Int
-        let rotDegLmtToHumanFrm: Int
-        let shooterRepeatFrameBias: Double
-        let shooterRepeatFrameFirst: Double
-        let shooterRepeatFrameTerm: Double
-        let shotGuideCannonFrame: Int
-        let shotPitVelLmt: Double
-        let specialTotalFrame: HighMidLow
-        let startDelayFrameCannon: Int
-        let startDelayFrameShooter: Int
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let armorHP: Int
+        public let armorHPBreakScissors: Int
+        public let cannonNoShotFrame: Int
+        public let moveSpeedCoefSquid: Double
+        public let moveSpeedX: Double
+        public let moveSpeedXSpongeEnemy: Double
+        public let moveSpeedZ: Double
+        public let moveSpeedZSpongeEnemy: Double
+        public let noShotBombReqFrmFinishSpecial: Int
+        public let preDelayFrmSquidShotBomb: Int
+        public let rotDegLmtToHumanFrm: Int
+        public let shooterRepeatFrameBias: Double
+        public let shooterRepeatFrameFirst: Double
+        public let shooterRepeatFrameTerm: Double
+        public let shotGuideCannonFrame: Int
+        public let shotPitVelLmt: Double
+        public let specialTotalFrame: HighMidLow
+        public let startDelayFrameCannon: Int
+        public let startDelayFrameShooter: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case armorHP = "ArmorHP"
             case armorHPBreakScissors = "ArmorHP_BreakScissors"
@@ -353,29 +353,29 @@ struct CrabTank: SpecialParametable {
         }
     }
     
-    struct BulletShooterTailLengthParameter: Codable {
-        let type: String
-        let delayShotFrame: Int
-        let endMaxLength: Double
+    public struct BulletShooterTailLengthParameter: Codable {
+        public let type: String
+        public let delayShotFrame: Int
+        public let endMaxLength: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case delayShotFrame = "DelayShotFrame"
             case endMaxLength = "EndMaxLength"
         }
     }
     
-    struct PaintMonitorSetParameter: Codable {
-        let type: String
-        let relabilityMinTime: Int
+    public struct PaintMonitorSetParameter: Codable {
+        public let type: String
+        public let relabilityMinTime: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case relabilityMinTime = "RelabilityMinTime"
         }
     }
     
-    func getOverwrites() -> SpecialOverwrites {
+    public func getOverwrites() -> SpecialOverwrites {
         return SpecialOverwrites(
             chargeRateAutoPerFrame: nil,
             crossPaintCheckLength: nil,

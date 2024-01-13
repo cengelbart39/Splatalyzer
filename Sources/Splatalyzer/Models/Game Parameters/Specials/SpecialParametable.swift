@@ -7,34 +7,33 @@
 
 import Foundation
 
-protocol SpecialParametable: Codable {
-    
+public protocol SpecialParametable: Codable {
     func getOverwrites() -> SpecialOverwrites
 }
 
-struct SpecialOverwrites: Overwritable {
-    let chargeRateAutoPerFrame: HighMidLow?
-    let crossPaintCheckLength: HighMidLow?
-    let crossPaintRadius: HighMidLow?
-    let distanceDamageDistanceRate: HighMidLow?
-    let inkConsumeHook: HighMidLow?
-    let inkConsumePerSec: HighMidLow?
-    let maxFieldHp: HighMidLow?
-    let maxFrame: HighMidLow?
-    let maxHp: HighMidLow?
-    let maxRadius: HighMidLow?
-    let moveSpeed: HighMidLow?
-    let paintRadius: HighMidLow?
-    let powerUpFrame: HighMidLow?
-    let radiusMax: HighMidLow?
-    let radiusMin: HighMidLow?
-    let spawnSpeedZSpecUp: HighMidLow?
-    let specialDurationFrame: HighMidLow?
-    let splashAroundVelocityMax: HighMidLow?
-    let splashAroundVelocityMin: HighMidLow?
-    let targetInCircleRadius: HighMidLow?
+public struct SpecialOverwrites: Overwritable {
+    public let chargeRateAutoPerFrame: HighMidLow?
+    public let crossPaintCheckLength: HighMidLow?
+    public let crossPaintRadius: HighMidLow?
+    public let distanceDamageDistanceRate: HighMidLow?
+    public let inkConsumeHook: HighMidLow?
+    public let inkConsumePerSec: HighMidLow?
+    public let maxFieldHp: HighMidLow?
+    public let maxFrame: HighMidLow?
+    public let maxHp: HighMidLow?
+    public let maxRadius: HighMidLow?
+    public let moveSpeed: HighMidLow?
+    public let paintRadius: HighMidLow?
+    public let powerUpFrame: HighMidLow?
+    public let radiusMax: HighMidLow?
+    public let radiusMin: HighMidLow?
+    public let spawnSpeedZSpecUp: HighMidLow?
+    public let specialDurationFrame: HighMidLow?
+    public let splashAroundVelocityMax: HighMidLow?
+    public let splashAroundVelocityMin: HighMidLow?
+    public let targetInCircleRadius: HighMidLow?
     
-    func value(for key: AbilityValue) -> HighMidLow? {
+    public func value(for key: AbilityValue) -> HighMidLow? {
         switch key {
         case .specialDurationFrame:
             return self.specialDurationFrame

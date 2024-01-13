@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct Zipcaster: SpecialParametable {
-    let bulletBombMoveParam: BulletBombMoveParameter
-    let bulletParam: BulletParameter
-    let hookBlastParam: HookBlastParameter
-    let hookCollisionParam: HookCollisionParameter
-    let weaponParam: WeaponParameter
+public struct Zipcaster: SpecialParametable {
+    public let bulletBombMoveParam: BulletBombMoveParameter
+    public let bulletParam: BulletParameter
+    public let hookBlastParam: HookBlastParameter
+    public let hookCollisionParam: HookCollisionParameter
+    public let weaponParam: WeaponParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case bulletBombMoveParam = "BulletBombMoveParam"
         case bulletParam = "BulletParam"
         case hookBlastParam = "HookBlastParam"
@@ -22,14 +22,14 @@ struct Zipcaster: SpecialParametable {
         case weaponParam = "WeaponParam"
     }
     
-    struct BulletBombMoveParameter: Codable {
-        let type: String
-        let flyGravity: Double
-        let flyPositionAirResist: Double
-        let guideHitCollisionType: String
-        let spawnSpeedZSpecUp: HighMidLow
+    public struct BulletBombMoveParameter: Codable {
+        public let type: String
+        public let flyGravity: Double
+        public let flyPositionAirResist: Double
+        public let guideHitCollisionType: String
+        public let spawnSpeedZSpecUp: HighMidLow
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case flyGravity = "FlyGravity"
             case flyPositionAirResist = "FlyPositionAirResist"
@@ -38,16 +38,16 @@ struct Zipcaster: SpecialParametable {
         }
     }
     
-    struct BulletParameter: Codable {
-        let type: String
-        let collisionRadiusForField: Double
-        let collisionRadiusForPlayer: Double
-        let knockBackParam: KnockbackParameter
-        let paintDepthScale: Double
-        let paintSpanFrame: Int
-        let paintWidthHalf: Double
+    public struct BulletParameter: Codable {
+        public let type: String
+        public let collisionRadiusForField: Double
+        public let collisionRadiusForPlayer: Double
+        public let knockBackParam: KnockbackParameter
+        public let paintDepthScale: Double
+        public let paintSpanFrame: Int
+        public let paintWidthHalf: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case collisionRadiusForField = "CollisionRadiusForField"
             case collisionRadiusForPlayer = "CollisionRadiusForPlayer"
@@ -58,14 +58,14 @@ struct Zipcaster: SpecialParametable {
         }
     }
     
-    struct HookBlastParameter: Codable {
-        let type: String
-        let crossPaintCheckLength: Double
-        let crossPaintRadius: Double
-        let distanceDamage: [DistanceDamage]
-        let knockBackParam: KnockbackParameter
+    public struct HookBlastParameter: Codable {
+        public let type: String
+        public let crossPaintCheckLength: Double
+        public let crossPaintRadius: Double
+        public let distanceDamage: [DistanceDamage]
+        public let knockBackParam: KnockbackParameter
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case crossPaintCheckLength = "CrossPaintCheckLength"
             case crossPaintRadius = "CrossPaintRadius"
@@ -74,14 +74,14 @@ struct Zipcaster: SpecialParametable {
         }
     }
     
-    struct HookCollisionParameter: Codable {
-        let type: String
-        let endRadiusForField: Double
-        let endRadiusForPlayer: Double
-        let initRadiusForField: Double
-        let initRadiusForPlayer: Double
+    public struct HookCollisionParameter: Codable {
+        public let type: String
+        public let endRadiusForField: Double
+        public let endRadiusForPlayer: Double
+        public let initRadiusForField: Double
+        public let initRadiusForPlayer: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case endRadiusForField = "EndRadiusForField"
             case endRadiusForPlayer = "EndRadiusForPlayer"
@@ -90,21 +90,21 @@ struct Zipcaster: SpecialParametable {
         }
     }
     
-    struct WeaponParameter: Codable {
-        let type: String
-        let inkCapacityRt: Double
-        let inkConsumeHook: HighMidLow
-        let inkConsumePerSec: HighMidLow
-        let maxLengthHook: Double
-        let minLengthHookFloor: Double
-        let minLengthHookWall: Double
-        let moveAccAttack: Double
-        let moveSpeedAttackInit: Double
-        let shotFailedIntervalFrm: Double
-        let specialTotalFrame: Int
-        let waitFrameShot2Attack: Int
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let inkCapacityRt: Double
+        public let inkConsumeHook: HighMidLow
+        public let inkConsumePerSec: HighMidLow
+        public let maxLengthHook: Double
+        public let minLengthHookFloor: Double
+        public let minLengthHookWall: Double
+        public let moveAccAttack: Double
+        public let moveSpeedAttackInit: Double
+        public let shotFailedIntervalFrm: Double
+        public let specialTotalFrame: Int
+        public let waitFrameShot2Attack: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case inkCapacityRt = "InkCapacityRt"
             case inkConsumeHook = "InkConsume_Hook"
@@ -120,7 +120,7 @@ struct Zipcaster: SpecialParametable {
         }
     }
     
-    func getOverwrites() -> SpecialOverwrites {
+    public func getOverwrites() -> SpecialOverwrites {
         return SpecialOverwrites(
             chargeRateAutoPerFrame: nil,
             crossPaintCheckLength: nil,

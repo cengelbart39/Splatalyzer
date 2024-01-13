@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct BRDamageParameter: Codable {
-    let damageRejectEndFrame: Int
-    let damageRejectState: Double
-    let damageRejectStartFrame: Int
-    let inside: Damage
-    let outside: Damage
+public struct BRDamageParameter: Codable {
+    public let damageRejectEndFrame: Int
+    public let damageRejectState: Double
+    public let damageRejectStartFrame: Int
+    public let inside: Damage
+    public let outside: Damage
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case damageRejectEndFrame = "DamageRejectEndFrame"
         case damageRejectState = "DamageRejectRate"
         case damageRejectStartFrame = "DamageRejectStartFrame"
@@ -24,22 +24,22 @@ struct BRDamageParameter: Codable {
 }
 
 extension BRDamageParameter {
-    struct Damage: Codable {
-        let damageHighDistance: Double
-        let damageHighValue: Int
-        let damageLowDistance: Double
-        let damageLowValue: Int
-        let damageMaxDistance: Double
-        let damageMaxValue: Int
-        let damageMinDistance: Double
-        let damageMinValue: Int?
-        let damageRate: Double?
-        let degree: Double?
-        let depletionDamageRate: Double?
-        let finalDamageMinValue: Int?
-        let insideDistanceXZ: Double?
+    public struct Damage: Codable {
+        public let damageHighDistance: Double
+        public let damageHighValue: Int
+        public let damageLowDistance: Double
+        public let damageLowValue: Int
+        public let damageMaxDistance: Double
+        public let damageMaxValue: Int
+        public let damageMinDistance: Double
+        public let damageMinValue: Int?
+        public let damageRate: Double?
+        public let degree: Double?
+        public let depletionDamageRate: Double?
+        public let finalDamageMinValue: Int?
+        public let insideDistanceXZ: Double?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case damageHighDistance = "DamageHighDistance"
             case damageHighValue = "DamageHighValue"
             case damageLowDistance = "DamageLowDistance"

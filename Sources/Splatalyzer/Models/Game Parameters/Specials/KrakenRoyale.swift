@@ -7,35 +7,35 @@
 
 import Foundation
 
-struct KrakenRoyale: SpecialParametable {
-    let bodyParam: BodyParameter
-    let weaponParam: WeaponParameter
+public struct KrakenRoyale: SpecialParametable {
+    public let bodyParam: BodyParameter
+    public let weaponParam: WeaponParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case bodyParam = "BodyParam"
         case weaponParam = "WeaponParam"
     }
     
-    struct BodyParameter: Codable {
-        let type: String
-        let collisionAttackFrontOffset: Double
-        let collisionDashFrontOffset: Double
-        let collisionDashRadiusForPlayer: Double
-        let collisionJumpRadiusForPlayer: Double
-        let collisionPaintAttackFrontOffset: Double
-        let collisionPaintDashFrontOffset: Double
-        let collisionPaintOffFrontOffset: Double
-        let collisionRadiusForField: Double
-        let collisionUpperOffset: Double
-        let damageJumpValue: Int
-        let defiladeUpperOffset: Double
-        let defiladeYMinusLength: Double
-        let paintCheckUpperOffset: Double
-        let paintDepthScale: Double
-        let paintSpanFrame: Int
-        let paintWidthHalf: Double
+    public struct BodyParameter: Codable {
+        public let type: String
+        public let collisionAttackFrontOffset: Double
+        public let collisionDashFrontOffset: Double
+        public let collisionDashRadiusForPlayer: Double
+        public let collisionJumpRadiusForPlayer: Double
+        public let collisionPaintAttackFrontOffset: Double
+        public let collisionPaintDashFrontOffset: Double
+        public let collisionPaintOffFrontOffset: Double
+        public let collisionRadiusForField: Double
+        public let collisionUpperOffset: Double
+        public let damageJumpValue: Int
+        public let defiladeUpperOffset: Double
+        public let defiladeYMinusLength: Double
+        public let paintCheckUpperOffset: Double
+        public let paintDepthScale: Double
+        public let paintSpanFrame: Int
+        public let paintWidthHalf: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case collisionAttackFrontOffset = "CollisionAttackFrontOffset"
             case collisionDashFrontOffset = "CollisionDashFrontOffset"
@@ -56,40 +56,40 @@ struct KrakenRoyale: SpecialParametable {
         }
     }
     
-    struct WeaponParameter: Codable {
-        let type: String
-        let colBulletOffsetY: Double
-        let colBulletOffsetZHead: Double
-        let colBulletOffsetZTail: Double
-        let colBulletRadius: Double
-        let dashChargeCancelableFrame: Int
-        let dashChargeFrame: Int
-        let dashInvalidFrame: Int
-        let dashMoveFrame: Int
-        let dashMoveSpeedCoefCharged: Double
-        let dashMoveSpeedCoefChargingEd: Double
-        let dashMoveSpeedCoefChargingSt: Double
-        let dashMoveSpeedFloorMaxCharge: Double
-        let dashMoveSpeedFloorMinCharge: Double
-        let dashMoveSpeedFloorNoPaint: Double
-        let dashMoveSpeedWallMaxCharge: Double
-        let dashMoveSpeedWallMinCharge: Double
-        let dokanWarpLmtFrmFinishSpecial: Int
-        let finishAlertStartFrame: Int
-        let knockBackKfChargeEd: Double
-        let knockBackKfChargeEdFrm: Int
-        let knockBackKfChargeSt: Double
-        let knockBackKfDash: Double
-        let knockBackKfStd: Double
-        let moveSpeed: Double
-        let noShotBombFrmFinishSpecial: Int
-        let noShotBombReqFrmFinishSpecial: Int
-        let specialTotalFrame: HighMidLow
-        let startDelayFrameNetRecv: Int
-        let startDelayFrameNetSend: Int
-        let stickDownRtOnVLift: Double
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let colBulletOffsetY: Double
+        public let colBulletOffsetZHead: Double
+        public let colBulletOffsetZTail: Double
+        public let colBulletRadius: Double
+        public let dashChargeCancelableFrame: Int
+        public let dashChargeFrame: Int
+        public let dashInvalidFrame: Int
+        public let dashMoveFrame: Int
+        public let dashMoveSpeedCoefCharged: Double
+        public let dashMoveSpeedCoefChargingEd: Double
+        public let dashMoveSpeedCoefChargingSt: Double
+        public let dashMoveSpeedFloorMaxCharge: Double
+        public let dashMoveSpeedFloorMinCharge: Double
+        public let dashMoveSpeedFloorNoPaint: Double
+        public let dashMoveSpeedWallMaxCharge: Double
+        public let dashMoveSpeedWallMinCharge: Double
+        public let dokanWarpLmtFrmFinishSpecial: Int
+        public let finishAlertStartFrame: Int
+        public let knockBackKfChargeEd: Double
+        public let knockBackKfChargeEdFrm: Int
+        public let knockBackKfChargeSt: Double
+        public let knockBackKfDash: Double
+        public let knockBackKfStd: Double
+        public let moveSpeed: Double
+        public let noShotBombFrmFinishSpecial: Int
+        public let noShotBombReqFrmFinishSpecial: Int
+        public let specialTotalFrame: HighMidLow
+        public let startDelayFrameNetRecv: Int
+        public let startDelayFrameNetSend: Int
+        public let stickDownRtOnVLift: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case colBulletOffsetY = "ColBullet_OffsetY"
             case colBulletOffsetZHead = "ColBullet_OffsetZ_Head"
@@ -124,7 +124,7 @@ struct KrakenRoyale: SpecialParametable {
         }
     }
     
-    func getOverwrites() -> SpecialOverwrites {
+    public func getOverwrites() -> SpecialOverwrites {
         return SpecialOverwrites(
             chargeRateAutoPerFrame: nil,
             crossPaintCheckLength: nil,

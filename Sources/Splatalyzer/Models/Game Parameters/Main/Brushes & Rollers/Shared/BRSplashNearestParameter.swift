@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct BRSplashNearestParameter: Codable {
-    let loopNum: Int?
-    let orderNum: Int?
-    let spawnParam: SpawnParameter
+public struct BRSplashNearestParameter: Codable {
+    public let loopNum: Int?
+    public let orderNum: Int?
+    public let spawnParam: SpawnParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case loopNum = "LoopNum"
         case orderNum = "OrderNum"
         case spawnParam = "SpawnParam"
@@ -20,14 +20,14 @@ struct BRSplashNearestParameter: Codable {
 }
 
 extension BRSplashNearestParameter {
-    struct SpawnParameter: Codable {
-        let maxHeight: Double?
-        let offset: XYZData
-        let paintDepthScale: Double?
-        let paintWidthHalf: Double
-        let visible: Bool?
+    public struct SpawnParameter: Codable {
+        public let maxHeight: Double?
+        public let offset: XYZData
+        public let paintDepthScale: Double?
+        public let paintWidthHalf: Double
+        public let visible: Bool?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case maxHeight = "MaxHeight"
             case offset = "Offset"
             case paintDepthScale = "PaintDepthScale"

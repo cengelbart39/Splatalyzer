@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct Trizooka: SpecialParametable {
-    let blastParam: BlastParameter
-    let collisionParam: CollisionParameter
-    let damageParam: DamageParameter
-    let moveParam: MoveParameter
-    let ultraShotMoveParma: UltraShotMoveParameter
-    let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
-    let weaponParam: WeaponParameter
+public struct Trizooka: SpecialParametable {
+    public let blastParam: BlastParameter
+    public let collisionParam: CollisionParameter
+    public let damageParam: DamageParameter
+    public let moveParam: MoveParameter
+    public let ultraShotMoveParma: UltraShotMoveParameter
+    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
+    public let weaponParam: WeaponParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case blastParam = "BlastParam"
         case collisionParam = "CollisionParam"
         case damageParam = "DamageParam"
@@ -26,14 +26,14 @@ struct Trizooka: SpecialParametable {
         case weaponParam = "spl__WeaponSpUltraShotParam"
     }
     
-    struct BlastParameter: Codable {
-        let type: String
-        let distanceDamage: [DistanceDamage]
-        let knockBackParam: KnockbackParameter
-        let paintRadius: Double
-        let subSpecialSpecUpList: [SubSpecialSpecUpList]
+    public struct BlastParameter: Codable {
+        public let type: String
+        public let distanceDamage: [DistanceDamage]
+        public let knockBackParam: KnockbackParameter
+        public let paintRadius: Double
+        public let subSpecialSpecUpList: [SubSpecialSpecUpList]
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case distanceDamage = "DistanceDamage"
             case knockBackParam = "KnockBackParam"
@@ -42,16 +42,16 @@ struct Trizooka: SpecialParametable {
         }
     }
     
-    struct CollisionParameter: Codable {
-        let type: String
-        let changeFrameForField: Int
-        let changeFrameForPlayer: Int
-        let endRadiusForField: Double
-        let endRadiusForPlayer: Double
-        let initRadiusForField: Double
-        let initRadiusForPlayer: Double
+    public struct CollisionParameter: Codable {
+        public let type: String
+        public let changeFrameForField: Int
+        public let changeFrameForPlayer: Int
+        public let endRadiusForField: Double
+        public let endRadiusForPlayer: Double
+        public let initRadiusForField: Double
+        public let initRadiusForPlayer: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case changeFrameForField = "ChangeFrameForField"
             case changeFrameForPlayer = "ChangeFrameForPlayer"
@@ -62,30 +62,30 @@ struct Trizooka: SpecialParametable {
         }
     }
     
-    struct DamageParameter: Codable {
-        let type: String
-        let directHitDamage: Int
+    public struct DamageParameter: Codable {
+        public let type: String
+        public let directHitDamage: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case directHitDamage = "DirectHitDamage"
         }
     }
     
-    struct MoveParameter: Codable {
-        let type: String
-        let brakeAirResist: Double
-        let brakeGravity: Double
-        let brakeToFreeStateFrame: Double
-        let brakeToFreeVelocityXZ: Double
-        let brakeToFreeVelocityY: Double
-        let freeAirResist: Double
-        let freeGravity: Double
-        let goStraightStateEndMaxSpeed: Double
-        let goStraightToBrakeStateFrame: Int
-        let spawnSpeed: Double
+    public struct MoveParameter: Codable {
+        public let type: String
+        public let brakeAirResist: Double
+        public let brakeGravity: Double
+        public let brakeToFreeStateFrame: Double
+        public let brakeToFreeVelocityXZ: Double
+        public let brakeToFreeVelocityY: Double
+        public let freeAirResist: Double
+        public let freeGravity: Double
+        public let goStraightStateEndMaxSpeed: Double
+        public let goStraightToBrakeStateFrame: Int
+        public let spawnSpeed: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case brakeAirResist = "BrakeAirResist"
             case brakeGravity = "BrakeGravity"
@@ -100,25 +100,25 @@ struct Trizooka: SpecialParametable {
         }
     }
     
-    struct UltraShotMoveParameter: Codable {
-        let type: String
-        let orbitalRadiusEnd: Double
-        let orbitalRadiusTransitionFrame: Int
+    public struct UltraShotMoveParameter: Codable {
+        public let type: String
+        public let orbitalRadiusEnd: Double
+        public let orbitalRadiusTransitionFrame: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case orbitalRadiusEnd = "OrbitalRadiusEnd"
             case orbitalRadiusTransitionFrame = "OrbitalRadiusTransitionFrame"
         }
     }
     
-    struct SpawnBulletAdditionMovePlayerParameter: Codable {
-        let type: String
-        let xRate: Double
-        let yPlusRate: Double
-        let zRate: Double
+    public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public let type: String
+        public let xRate: Double
+        public let yPlusRate: Double
+        public let zRate: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case xRate = "XRate"
             case yPlusRate = "YPlusRate"
@@ -126,23 +126,23 @@ struct Trizooka: SpecialParametable {
         }
     }
     
-    struct WeaponParameter: Codable {
-        let type: String
-        let ejectCartridgeAngularVel: XYZData
-        let ejectCartridgeFadeOutFrame: Int
-        let ejectCartridgeFrame: Int
-        let ejectCartridgeInitSpeed: Double
-        let ejectCartridgeLifeTimeFrame: Double
-        let hideCartridgeBeforeEjectFrame: Int
-        let holdAimFrame: Int
-        let knockBackParam: KnockBackParam
-        let moveSpeed: Double
-        let moveSpeedInCharge: Double
-        let repeatFrame: Int
-        let shotDelayFrame: Int
-        let specialDurationFrame: HighMidLow
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let ejectCartridgeAngularVel: XYZData
+        public let ejectCartridgeFadeOutFrame: Int
+        public let ejectCartridgeFrame: Int
+        public let ejectCartridgeInitSpeed: Double
+        public let ejectCartridgeLifeTimeFrame: Double
+        public let hideCartridgeBeforeEjectFrame: Int
+        public let holdAimFrame: Int
+        public let knockBackParam: KnockBackParam
+        public let moveSpeed: Double
+        public let moveSpeedInCharge: Double
+        public let repeatFrame: Int
+        public let shotDelayFrame: Int
+        public let specialDurationFrame: HighMidLow
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case ejectCartridgeAngularVel = "EjectCartridgeAngularVel"
             case ejectCartridgeFadeOutFrame = "EjectCartridgeFadeOutFrame"
@@ -159,12 +159,12 @@ struct Trizooka: SpecialParametable {
             case specialDurationFrame = "SpecialDurationFrame"
         }
         
-        struct KnockBackParam: Codable {
-            let airBreakRt: Double
-            let impactValue: Double
-            let stickDownRt: Double
+        public struct KnockBackParam: Codable {
+            public let airBreakRt: Double
+            public let impactValue: Double
+            public let stickDownRt: Double
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case airBreakRt = "AirBreakRt"
                 case impactValue = "ImpactValue"
                 case stickDownRt = "StickDownRt"
@@ -172,7 +172,7 @@ struct Trizooka: SpecialParametable {
         }
     }
     
-    func getOverwrites() -> SpecialOverwrites {
+    public func getOverwrites() -> SpecialOverwrites {
         return SpecialOverwrites(
             chargeRateAutoPerFrame: nil,
             crossPaintCheckLength: nil,

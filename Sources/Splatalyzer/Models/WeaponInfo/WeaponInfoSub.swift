@@ -7,22 +7,34 @@
 
 import Foundation
 
-typealias WeaponInfoSub = [WeaponInfoSubItem]
+public typealias WeaponInfoSub = [WeaponInfoSubItem]
 
-struct WeaponInfoSubItem: Codable, Identifiable {
-    let defaultDamageRate: DamageRateInfo
-    let defaultHitEffector: HitEffectorType
-    let extraDamageRateInfo: [ExtraDamageRateInfo]
-    let extraHitEffectorInfo: [ExtraHitEffectorInfo]
-    let id: Int
-    let label: String
-    let lockerInfo: String
-    let npcActor: String
-    let specActor: String
-    let type: ModeType
-    let rowId: SubRowId
+public extension WeaponInfoSub {
+    func getItem(for weapon: SubWeapon) -> WeaponInfoSubItem? {
+        for item in self {
+            if item.rowId.rawValue == weapon.rawValue {
+                return item
+            }
+        }
+        
+        return nil
+    }
+}
+
+public struct WeaponInfoSubItem: Codable, Identifiable {
+    public let defaultDamageRate: DamageRateInfo
+    public let defaultHitEffector: HitEffectorType
+    public let extraDamageRateInfo: [ExtraDamageRateInfo]
+    public let extraHitEffectorInfo: [ExtraHitEffectorInfo]
+    public let id: Int
+    public let label: String
+    public let lockerInfo: String
+    public let npcActor: String
+    public let specActor: String
+    public let type: ModeType
+    public let rowId: SubRowId
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case defaultDamageRate = "DefaultDamageRateInfoRow"
         case defaultHitEffector = "DefaultHitEffectorType"
         case extraDamageRateInfo = "ExtraDamageRateInfoRowSet"
@@ -38,7 +50,7 @@ struct WeaponInfoSubItem: Codable, Identifiable {
 }
 
 extension Array where Element == WeaponInfoSubItem {
-    func lookupByRowId(_ rowId: SubRowId) -> WeaponInfoSubItem? {
+    public func lookupByRowId(_ rowId: SubRowId) -> WeaponInfoSubItem? {
         for item in self {
             if item.rowId == rowId {
                 return item

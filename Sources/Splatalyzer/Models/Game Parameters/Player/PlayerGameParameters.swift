@@ -7,98 +7,134 @@
 
 import Foundation
 
-protocol Parametable: Codable {
-    var type: String { get }
-}
-
-struct PlayerParameters: Codable {
-    let dieBlastParam: DieBlastParameter
+public struct PlayerParameters: Codable {
+    public let dieBlastParam: DieBlastParameter
     
-    let playerLeagueInGameModifierParam: PlayerLeagueInGameModifierParameter
+    public let playerLeagueInGameModifierParam: PlayerLeagueInGameModifierParameter
     
-    let constraintBidnableHelperParam: ConstraintBindableHelperParameter
+    public let constraintBidnableHelperParam: ConstraintBindableHelperParameter
     
-    let coopBuildParam: CoopBuildParameter
-    let coopBuildParamHumanMoveUp: CoopBuildParameterHumanMoveUp
-    let coopBuildParamOpInkEffectReduction: CoopBuildParameterOpInkEffectReduction
-    let coopBuildParamSquidMoveUp: CoopBuildParameterSquidMoveUp
+    public let coopBuildParam: CoopBuildParameter
+    public let coopBuildParamHumanMoveUp: CoopBuildParameterHumanMoveUp
+    public let coopBuildParamOpInkEffectReduction: CoopBuildParameterOpInkEffectReduction
+    public let coopBuildParamSquidMoveUp: CoopBuildParameterSquidMoveUp
     
-    let damageParam: DamageParameter
+    public let damageParam: DamageParameter
     
-    let displayItemGetHelperParam: DisplayItemGetHelperParameter
+    public let displayItemGetHelperParam: DisplayItemGetHelperParameter
     
-    let inkRailPlayerParam: InkRailPlayerParameter
+    public let inkRailPlayerParam: InkRailPlayerParameter
     
-    let playerAttractTargetParam: AttractTargetParameter
+    public let playerAttractTargetParam: AttractTargetParameter
     
-    let playerBeaconSubSpecUpParam: BeaconSubSpecUpParameter
+    public let playerBeaconSubSpecUpParam: BeaconSubSpecUpParameter
     
-    let playerCameraPeriscopeParam: CameraPeriscopeParameter
+    public let playerCameraPeriscopeParam: CameraPeriscopeParameter
     
-    let playerCanolaShotParam: CanolaShotParameter
+    public let playerCanolaShotParam: CanolaShotParameter
     
-    let playerEntryLiftParam: EntryLiftParameter
+    public let playerEntryLiftParam: EntryLiftParameter
     
-    let skillActionSpecUpSquidParam: ActionSpecUpSquidSkillParameter
+    public let skillActionSpecUpSquidParam: ActionSpecUpSquidSkillParameter
     
-    let skillHumanMoveUpParam: HumanMoveUpSkillParameter
+    public let skillHumanMoveUpParam: HumanMoveUpSkillParameter
     
-    let skillInkRecoveryUpParam: InkRecoveryUpSkillParameter
+    public let skillInkRecoveryUpParam: InkRecoveryUpSkillParameter
     
-    let skillMainInkSaveParam: MainInkSaveSkillParameter
+    public let skillMainInkSaveParam: MainInkSaveSkillParameter
     
-    let skillOpInkEffectReductionParam: OpInkEffectReductionSkillParameter
+    public let skillOpInkEffectReductionParam: OpInkEffectReductionSkillParameter
     
-    let skillRespawnSpecialGuageSaveParam: RespawnSpecialGuageSaveSkillParameter
+    public let skillRespawnSpecialGuageSaveParam: RespawnSpecialGuageSaveSkillParameter
     
-    let skillRespawnTimeSaveParam: RespawnTimeSaveSkillParameter
+    public let skillRespawnTimeSaveParam: RespawnTimeSaveSkillParameter
     
-    let skillSpecialIncreaseUpParam: SpecialIncreaseUpSkillParameter
+    public let skillSpecialIncreaseUpParam: SpecialIncreaseUpSkillParameter
     
-    let skillSquidMoveUpParam: SquidMoveUpSkillParameter
+    public let skillSquidMoveUpParam: SquidMoveUpSkillParameter
     
-    let skillSubEffectReductionParam: SubEffectReductionSkillParameter
+    public let skillSubEffectReductionParam: SubEffectReductionSkillParameter
     
-    let skillSubInkSaveParam: SubInkSaveSkillParameter
+    public let skillSubInkSaveParam: SubInkSaveSkillParameter
     
-    let skillSuperJumpTimeSave: SuperJumpTimeSaveSkillParameter
+    public let skillSuperJumpTimeSave: SuperJumpTimeSaveSkillParameter
     
-    let playerGeyserParam: GeyserParameter
+    public let playerGeyserParam: GeyserParameter
     
-    let playerGrindRailParam: GrindRailParameter
+    public let playerGrindRailParam: GrindRailParameter
     
-    let playerJumpGimmickParam: JumpGimmickParameter
+    public let playerJumpGimmickParam: JumpGimmickParameter
     
-    let playerMissionSearchAbilityParam: MissionSearchAbilityParameter
+    public let playerMissionSearchAbilityParam: MissionSearchAbilityParameter
     
-    let playerMissionSkillParam: MissionSkillParameter
+    public let playerMissionSkillParam: MissionSkillParameter
     
-    let playerPeriscopeParam: PeriscopeParameter
+    public let playerPeriscopeParam: PeriscopeParameter
     
-    let playerPipelineParam: PipelineParameter
+    public let playerPipelineParam: PipelineParameter
     
-    let playerVehicleSpectacleParam: VehicleSpectacleParameter
+    public let playerVehicleSpectacleParam: VehicleSpectacleParameter
     
-    let playerThrowClamParma: ThrowClamParameter
+    public let playerThrowClamParma: ThrowClamParameter
     
-    let playerThrowGoldIkuraParam: ThrowGoldenIkuraParameter
+    public let playerThrowGoldIkuraParam: ThrowGoldenIkuraParameter
+    
+    public enum CodingKeys: String, CodingKey {
+        case dieBlastParam = "DieBlastParam"
+        case playerLeagueInGameModifierParam = "PlayerLeagueInGameModifierParam"
+        case constraintBidnableHelperParam = "spl__ConstraintBindableHelperParam"
+        case coopBuildParam = "spl__CoopBuildParam"
+        case coopBuildParamHumanMoveUp = "spl__CoopBuildParam_HumanMoveUp"
+        case coopBuildParamOpInkEffectReduction = "spl__CoopBuildParam_OpInkEffectReduction"
+        case coopBuildParamSquidMoveUp = "spl__CoopBuildParam_SquidMoveUp"
+        case damageParam = "spl__DamageParam"
+        case displayItemGetHelperParam = "spl__DisplayItemGetHelperParam"
+        case inkRailPlayerParam = "spl__InkRailPlayerParam"
+        case playerAttractTargetParam = "spl__PlayerAttractTargetParam"
+        case playerBeaconSubSpecUpParam = "spl__PlayerBeaconSubSpecUpParam"
+        case playerCameraPeriscopeParam = "spl__PlayerCameraPeriscopeParam"
+        case playerCanolaShotParam = "spl__PlayerCanolaShotParam"
+        case playerEntryLiftParam = "spl__PlayerEntryLiftParam"
+        case skillActionSpecUpSquidParam = "spl__PlayerGearSkillParam_ActionSpecUp_Squid"
+        case skillHumanMoveUpParam = "spl__PlayerGearSkillParam_HumanMoveUp"
+        case skillInkRecoveryUpParam = "spl__PlayerGearSkillParam_InkRecoveryUp"
+        case skillMainInkSaveParam = "spl__PlayerGearSkillParam_MainInkSave"
+        case skillOpInkEffectReductionParam = "spl__PlayerGearSkillParam_OpInkEffectReduction"
+        case skillRespawnSpecialGuageSaveParam = "spl__PlayerGearSkillParam_RespawnSpecialGaugeSave"
+        case skillRespawnTimeSaveParam = "spl__PlayerGearSkillParam_RespawnTimeSave"
+        case skillSpecialIncreaseUpParam = "spl__PlayerGearSkillParam_SpecialIncreaseUp"
+        case skillSquidMoveUpParam = "spl__PlayerGearSkillParam_SquidMoveUp"
+        case skillSubEffectReductionParam = "spl__PlayerGearSkillParam_SubEffectReduction"
+        case skillSubInkSaveParam = "spl__PlayerGearSkillParam_SubInkSave"
+        case skillSuperJumpTimeSave = "spl__PlayerGearSkillParam_SuperJumpTimeSave"
+        case playerGeyserParam = "spl__PlayerGeyserParam"
+        case playerGrindRailParam = "spl__PlayerGrindRailParam"
+        case playerJumpGimmickParam = "spl__PlayerJumpGimmickParam"
+        case playerMissionSearchAbilityParam = "spl__PlayerMissionSearchAbilityParam"
+        case playerMissionSkillParam = "spl__PlayerMissionSkillParam"
+        case playerPeriscopeParam = "spl__PlayerPeriscopeParam"
+        case playerPipelineParam = "spl__PlayerPipelineParam"
+        case playerVehicleSpectacleParam = "spl__PlayerVehicleSpectacleParam"
+        case playerThrowClamParma = "spl__ThrowClamParam"
+        case playerThrowGoldIkuraParam = "spl__ThrowGoldenIkuraParam"
+    }
 }
 
 extension PlayerParameters {
-    struct DieBlastParameter: Codable {
-        let type: String
-        let collisionRadiusForPaint: Double
-        let crossPaintCheckLength: Double
-        let crossPaintRadius: Double
-        let crossPaintTexture: String
-        let damageOffsetY: Double
-        let knockbackParam: KnockbackParameter
-        let paintOffsetY: Double
-        let paintRadius: Double
-        let paintTexture: String
-        let splashAroundParam: SplashAroundParameter
+    public struct DieBlastParameter: Codable {
+        public let type: String
+        public let collisionRadiusForPaint: Double
+        public let crossPaintCheckLength: Double
+        public let crossPaintRadius: Double
+        public let crossPaintTexture: String
+        public let damageOffsetY: Double
+        public let knockbackParam: KnockbackParameter
+        public let paintOffsetY: Double
+        public let paintRadius: Double
+        public let paintTexture: String
+        public let splashAroundParam: SplashAroundParameter
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case collisionRadiusForPaint = "CollisionRadiusForPaint"
             case crossPaintCheckLength = "CrossPaintCheckLength"
@@ -113,15 +149,15 @@ extension PlayerParameters {
         }
     }
     
-    struct PlayerLeagueInGameModifierParameter: Codable {
-        let type: String
-        let highJumpExCoefSpecial: Double
-        let highJumpVelCoef: Double
-        let highJumpVelCoefSqdAct: Double
-        let highJumpVelLmtCoef: Double
-        let swimSpeedUpMaxSpeed: Double
+    public struct PlayerLeagueInGameModifierParameter: Codable {
+        public let type: String
+        public let highJumpExCoefSpecial: Double
+        public let highJumpVelCoef: Double
+        public let highJumpVelCoefSqdAct: Double
+        public let highJumpVelLmtCoef: Double
+        public let swimSpeedUpMaxSpeed: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case highJumpExCoefSpecial = "HighJump_ExCoef_Special"
             case highJumpVelCoef = "HighJump_JumpVelCoef"
@@ -131,65 +167,71 @@ extension PlayerParameters {
         }
     }
     
-    struct ConstraintBindableHelperParameter: Codable {
-        let type: String
+    public struct ConstraintBindableHelperParameter: Codable {
+        public let type: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
         }
     }
     
-    struct CoopBuildParameter: Codable {
-        let type: String
+    public struct CoopBuildParameter: Codable {
+        public let type: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
         }
     }
     
-    struct CoopBuildParameterHumanMoveUp: Codable {
-        let type: String
+    public struct CoopBuildParameterHumanMoveUp: Codable {
+        public let type: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
         }
     }
     
-    struct CoopBuildParameterOpInkEffectReduction: Codable {
-        let type: String
+    public struct CoopBuildParameterOpInkEffectReduction: Codable {
+        public let type: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
         }
     }
     
-    struct CoopBuildParameterSquidMoveUp: Codable {
-        let type: String
+    public struct CoopBuildParameterSquidMoveUp: Codable {
+        public let type: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
         }
     }
     
-    struct DamageParameter: Codable {
-        let type: String
-        let damageRecivers: [DamagerReciever]
-        let damageSenders: [DamageSender]
+    public struct DamageParameter: Codable {
+        public let type: String
+        public let damageRecivers: [DamagerReciever]
+        public let damageSenders: [DamageSender]
+        
+        public enum CodingKeys: String, CodingKey {
+            case type = "$type"
+            case damageRecivers = "DamageReceiverArray"
+            case damageSenders = "DamageSenderArray"
+        }
     }
 }
 
 extension PlayerParameters.DamageParameter {
-    struct DamagerReciever: Codable {
-        let damagerHistMaxSize: Int
-        let damageRateInfoCol: String
-        let flag: [String]
-        let isManualRefRigidBody: Bool
-        let name: String
-        let refHitPointerHolder: [String]
-        let refRigidBody: [String]
-        let shotTargetLocatorName: String
+    public struct DamagerReciever: Codable {
+        public let damagerHistMaxSize: Int
+        public let damageRateInfoCol: String
+        public let flag: [String]
+        public let isManualRefRigidBody: Bool
+        public let name: String
+        public let refHitPointerHolder: [String]
+        public let refRigidBody: [String]
+        public let shotTargetLocatorName: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case damagerHistMaxSize = "DamageHistMaxSize"
             case damageRateInfoCol = "DamageRateInfoCol"
             case flag = "Flag"
@@ -201,11 +243,11 @@ extension PlayerParameters.DamageParameter {
         }
     }
 
-    struct DamageSender: Codable {
-        let name: String
-        let refRigidBody: [String]
+    public struct DamageSender: Codable {
+        public let name: String
+        public let refRigidBody: [String]
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case name = "Name"
             case refRigidBody = "RefRigidBody"
         }
@@ -214,25 +256,25 @@ extension PlayerParameters.DamageParameter {
 }
  
 extension PlayerParameters {
-    struct DisplayItemGetHelperParameter: Codable {
-        let type: String
-        let displayOffsetY: Double
+    public struct DisplayItemGetHelperParameter: Codable {
+        public let type: String
+        public let displayOffsetY: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case displayOffsetY = "DisplayOffsetY"
         }
     }
     
-    struct InkRailPlayerParameter: Codable {
-        let type: String
-        let finishImmAfterFrame: Int
-        let finishPlayerVelRateY: Double
-        let modelDynamicsUnitParam: ModelDynamicsUnitParameter
-        let playerJumpRightSpeed: Double
-        let switchColBulletStarDist: Double
+    public struct InkRailPlayerParameter: Codable {
+        public let type: String
+        public let finishImmAfterFrame: Int
+        public let finishPlayerVelRateY: Double
+        public let modelDynamicsUnitParam: ModelDynamicsUnitParameter
+        public let playerJumpRightSpeed: Double
+        public let switchColBulletStarDist: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case finishImmAfterFrame = "FinishImmAfterFrame"
             case finishPlayerVelRateY = "FinishPlayerVelRateY"
@@ -244,16 +286,16 @@ extension PlayerParameters {
 }
 
 extension PlayerParameters.InkRailPlayerParameter {
-    struct ModelDynamicsUnitParameter: Codable {
-        let airRes: Double
-        let connectionForce: Double
-        let endBoneName: String
-        let gravity: Double
-        let limitAngle: Double
-        let limitLengthRateDiff: Double
-        let startBoneName: String
+    public struct ModelDynamicsUnitParameter: Codable {
+        public let airRes: Double
+        public let connectionForce: Double
+        public let endBoneName: String
+        public let gravity: Double
+        public let limitAngle: Double
+        public let limitLengthRateDiff: Double
+        public let startBoneName: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case airRes = "AirRes"
             case connectionForce = "ConnectionForce"
             case endBoneName = "EndBoneName"
@@ -266,32 +308,32 @@ extension PlayerParameters.InkRailPlayerParameter {
 }
 
 // Not a extension since used in SubWeaponData
-struct BeaconSubSpecUpParameter: Codable {
-    let type: String
-    let subSpecUpParam: HighMidLow
+public struct BeaconSubSpecUpParameter: Codable {
+    public let type: String
+    public let subSpecUpParam: HighMidLow
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case type = "$type"
         case subSpecUpParam = "SubSpecUpParam"
     }
 }
 
 extension PlayerParameters {
-    struct AttractTargetParameter: Codable {
-        let type: String
+    public struct AttractTargetParameter: Codable {
+        public let type: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
         }
     }
     
-    struct CameraPeriscopeParameter: Codable {
-        let type: String
-        let playerFollowRate: RateData
-        let yawAngleVelRateGyro: RateData
-        let yawAngleVelRateStick: RateData
+    public struct CameraPeriscopeParameter: Codable {
+        public let type: String
+        public let playerFollowRate: RateData
+        public let yawAngleVelRateGyro: RateData
+        public let yawAngleVelRateStick: RateData
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case playerFollowRate = "PlayerFollowRate"
             case yawAngleVelRateGyro = "YawAngleVelRateGyro"
@@ -299,51 +341,51 @@ extension PlayerParameters {
         }
     }
     
-    struct CanolaShotParameter: Codable {
-        var type: String
+    public struct CanolaShotParameter: Codable {
+        public var type: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
         }
     }
     
-    struct EntryLiftParameter: Codable {
-        let type: String
-        let finishVel: Double
+    public struct EntryLiftParameter: Codable {
+        public let type: String
+        public let finishVel: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case finishVel = "FinishVel"
         }
     }
 
-    struct GeyserParameter: Codable {
-        let type: String
-        let bindToRoofMinSec: Double
-        let jumpVelAtRoof: Double
+    public struct GeyserParameter: Codable {
+        public let type: String
+        public let bindToRoofMinSec: Double
+        public let jumpVelAtRoof: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case bindToRoofMinSec = "BindToRoofMinSec"
             case jumpVelAtRoof = "JumpVelAtRoof"
         }
     }
     
-    struct GrindRailParameter: Codable {
-        let type: String
-        let aerialVelYToBind: Double
-        let autoFinishCheckDist: Double
-        let autoFinishVelY: Double
-        let autoJumpFinishNoBindFrame: Int
-        let bindDistY: Double
-        let finishNoBindFrame: Int
-        let finishPlayerVelRateY: Double
-        let gndColFallNoBindFrame: Int
-        let gndColRadius: Double
-        let playerJumpSpeed: Double
-        let playerSideJumpEndFix: Int
+    public struct GrindRailParameter: Codable {
+        public let type: String
+        public let aerialVelYToBind: Double
+        public let autoFinishCheckDist: Double
+        public let autoFinishVelY: Double
+        public let autoJumpFinishNoBindFrame: Int
+        public let bindDistY: Double
+        public let finishNoBindFrame: Int
+        public let finishPlayerVelRateY: Double
+        public let gndColFallNoBindFrame: Int
+        public let gndColRadius: Double
+        public let playerJumpSpeed: Double
+        public let playerSideJumpEndFix: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case aerialVelYToBind = "AerialVelYToBind"
             case autoFinishCheckDist = "AutoFinish_CheckDist"
@@ -359,31 +401,31 @@ extension PlayerParameters {
         }
     }
     
-    struct JumpGimmickParameter: Codable {
-        let type: String
-        let jumpDisableFrm: Int
+    public struct JumpGimmickParameter: Codable {
+        public let type: String
+        public let jumpDisableFrm: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case jumpDisableFrm = "JumpDisableFrm"
         }
     }
     
-    struct MissionSkillParameter: Codable {
-        let type: String
-        let armorRecoverFrame: [Int]
-        let inkTankCapacityRate: [Double]
-        let markerCheckRadius: [Double]
-        let opInkEffectMoveSpeedJump: [Double]
-        let opInkEffectMoveSpeedNormal: [Double]
-        let opInkEffectMoveSpeedShot: [Double]
-        let shooterShotIntervalFrame: [Int]
-        let specialIncreaseUpRate: [Double]
-        let subWeapon1InkConsumeCoef: Double
-        let subWeapon2InkConsumeCoef: Double
-        let subWeapon3InkConsumeCoef: Double
+    public struct MissionSkillParameter: Codable {
+        public let type: String
+        public let armorRecoverFrame: [Int]
+        public let inkTankCapacityRate: [Double]
+        public let markerCheckRadius: [Double]
+        public let opInkEffectMoveSpeedJump: [Double]
+        public let opInkEffectMoveSpeedNormal: [Double]
+        public let opInkEffectMoveSpeedShot: [Double]
+        public let shooterShotIntervalFrame: [Int]
+        public let specialIncreaseUpRate: [Double]
+        public let subWeapon1InkConsumeCoef: Double
+        public let subWeapon2InkConsumeCoef: Double
+        public let subWeapon3InkConsumeCoef: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case armorRecoverFrame = "ArmorRecoverFrame"
             case inkTankCapacityRate = "InkTankCapacityRate"
@@ -399,13 +441,13 @@ extension PlayerParameters {
         }
     }
     
-    struct PeriscopeParameter: Codable {
-        let type: String
-        let extendSec: Double
-        let shrinkMoveGraph: RateData
-        let shrinkSec: Double
+    public struct PeriscopeParameter: Codable {
+        public let type: String
+        public let extendSec: Double
+        public let shrinkMoveGraph: RateData
+        public let shrinkSec: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case extendSec = "ExtendSec"
             case shrinkMoveGraph = "ShrinkMoveGraph"
@@ -413,20 +455,20 @@ extension PlayerParameters {
         }
     }
     
-    struct PipelineParameter: Codable {
-        let type: String
-        let darkenDelaySec: Double
-        let finishSec: Double
-        let finishVel: Double
-        let modelOffsetY: RateData
-        let modelOffsetZ: RateData
-        let moveAcc: Double
-        let openEndDistance: Double
-        let startAttCurve: RateData
-        let startSec: Double
-        let startSplashStartOffsetZ: Double
+    public struct PipelineParameter: Codable {
+        public let type: String
+        public let darkenDelaySec: Double
+        public let finishSec: Double
+        public let finishVel: Double
+        public let modelOffsetY: RateData
+        public let modelOffsetZ: RateData
+        public let moveAcc: Double
+        public let openEndDistance: Double
+        public let startAttCurve: RateData
+        public let startSec: Double
+        public let startSplashStartOffsetZ: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case darkenDelaySec = "DarkenDelaySec"
             case finishSec = "FinishSec"
@@ -441,23 +483,23 @@ extension PlayerParameters {
         }
     }
     
-    struct VehicleSpectacleParameter: Codable {
-        let type: String
+    public struct VehicleSpectacleParameter: Codable {
+        public let type: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
         }
     }
 }
 
 extension PlayerParameters {
-    struct ActionSpecUpSquidSkillParameter: Codable {
-        let type: String
-        let wallJumpChargeFormHigh: Int
-        let wallJumpChargeFormLow: Int
-        let wallJumpChargeFormMid: Int
+    public struct ActionSpecUpSquidSkillParameter: Codable {
+        public let type: String
+        public let wallJumpChargeFormHigh: Int
+        public let wallJumpChargeFormLow: Int
+        public let wallJumpChargeFormMid: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case wallJumpChargeFormHigh = "WallJumpChargeFrm_High"
             case wallJumpChargeFormLow = "WallJumpChargeFrm_Low"
@@ -465,107 +507,107 @@ extension PlayerParameters {
         }
     }
     
-    struct HumanMoveUpSkillParameter: Codable {
-        let type: String
+    public struct HumanMoveUpSkillParameter: Codable {
+        public let type: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
         }
     }
     
-    struct InkRecoveryUpSkillParameter: Codable {
-        let type: String
+    public struct InkRecoveryUpSkillParameter: Codable {
+        public let type: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
         }
     }
     
-    struct MainInkSaveSkillParameter: Codable {
-        let type: String
+    public struct MainInkSaveSkillParameter: Codable {
+        public let type: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
         }
     }
     
-    struct OpInkEffectReductionSkillParameter: Codable {
-        let type: String
+    public struct OpInkEffectReductionSkillParameter: Codable {
+        public let type: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
         }
     }
     
-    struct RespawnSpecialGuageSaveSkillParameter: Codable {
-        let type: String
+    public struct RespawnSpecialGuageSaveSkillParameter: Codable {
+        public let type: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
         }
     }
     
-    struct RespawnTimeSaveSkillParameter: Codable {
-        let type: String
+    public struct RespawnTimeSaveSkillParameter: Codable {
+        public let type: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
         }
     }
     
-    struct SpecialIncreaseUpSkillParameter: Codable {
-        let type: String
+    public struct SpecialIncreaseUpSkillParameter: Codable {
+        public let type: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
         }
     }
     
-    struct SquidMoveUpSkillParameter: Codable {
-        let type: String
+    public struct SquidMoveUpSkillParameter: Codable {
+        public let type: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
         }
     }
 
-    struct SubEffectReductionSkillParameter: Codable {
-        let type: String
-        let damageRtBombLHigh: Double
-        let damageRtBombLMid: Double
+    public struct SubEffectReductionSkillParameter: Codable {
+        public let type: String
+        public let damageRtBombLHigh: Double
+        public let damageRtBombLMid: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case damageRtBombLHigh = "DamageRt_BombL_High"
             case damageRtBombLMid = "DamageRt_BombL_Mid"
         }
     }
 
-    struct SubInkSaveSkillParameter: Codable {
-        let type: String
+    public struct SubInkSaveSkillParameter: Codable {
+        public let type: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
         }
     }
 
-    struct SuperJumpTimeSaveSkillParameter: Codable {
-        let type: String
+    public struct SuperJumpTimeSaveSkillParameter: Codable {
+        public let type: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
         }
     }
 }
 
 extension PlayerParameters {
-    struct MissionSearchAbilityParameter: Codable {
-        let type: String
-        let markingForgetTime: Double
-        let periscopeMarkingMaxNum: [Double]
-        let periscopeRadius: [Double]
-        let radiusParam: [RadiusParameter]
-        let slightParam: SlightParameter
+    public struct MissionSearchAbilityParameter: Codable {
+        public let type: String
+        public let markingForgetTime: Double
+        public let periscopeMarkingMaxNum: [Double]
+        public let periscopeRadius: [Double]
+        public let radiusParam: [RadiusParameter]
+        public let sightParam: SightParameter
         
         enum CodingKeys: String, CodingKey {
             case type = "$type"
@@ -573,29 +615,29 @@ extension PlayerParameters {
             case periscopeMarkingMaxNum = "PeriscopeMarkingMaxNum"
             case periscopeRadius = "PeriscopeRadius"
             case radiusParam = "RadiusParam"
-            case slightParam = "SlightParam"
+            case sightParam = "SightParam"
         }
     }
 }
 
 extension PlayerParameters.MissionSearchAbilityParameter {
-    struct RadiusParameter: Codable {
-        let strongRadius: Double
-        let weakRadius: Double
+    public struct RadiusParameter: Codable {
+        public let strongRadius: Double
+        public let weakRadius: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case strongRadius = "StrongRadius"
             case weakRadius = "WeakRadius"
         }
     }
     
-    struct SlightParameter: Codable {
-        let queryLayerHitMaskEntity: String
-        let querySubLayerHitMskEntity: String
-        let shapeHolderUnitParam: [ShapeHolderUnitParameter]
-        let userDefilade: Bool
+    public struct SightParameter: Codable {
+        public let queryLayerHitMaskEntity: String
+        public let querySubLayerHitMskEntity: String
+        public let shapeHolderUnitParam: [ShapeHolderUnitParameter]
+        public let userDefilade: Bool
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case queryLayerHitMaskEntity = "QueryLayerHitMaskEntity"
             case querySubLayerHitMskEntity = "QuerySubLayerHitMaskEntity"
             case shapeHolderUnitParam = "ShapeHolderUnitParamArray"
@@ -604,36 +646,39 @@ extension PlayerParameters.MissionSearchAbilityParameter {
     }
 }
 
-extension PlayerParameters.MissionSearchAbilityParameter.SlightParameter {
-    
-    struct ShapeHolderUnitParameter: Codable {
-        let name: String
-        let shapeHolderUnitParam: [ShapeHolderParameter]
+extension PlayerParameters.MissionSearchAbilityParameter.SightParameter {
+    public struct ShapeHolderUnitParameter: Codable {
+        public let name: String
+        public let shapeHolderUnitParam: ShapeHolderParameter
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case name = "Name"
             case shapeHolderUnitParam = "ShapeHolderParam"
         }
         
-        struct ShapeHolderParameter: Codable {
-            let sphereArray: [String]
+        public struct ShapeHolderParameter: Codable {
+            public let sphereArray: [Sphere]
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case sphereArray = "SphereArray"
+            }
+            
+            public struct Sphere: Codable {
+                public enum CodingKeys: CodingKey { }
             }
         }
     }
 }
 
 extension PlayerParameters {
-    struct ThrowClamParameter: Codable {
-        let type: String
-        let additionalMoveParam: AdditionalMoveParameter
-        let blastGachiParam: BlastGachiParameter
-        let throwGachiParam: ThrowParameter
-        let throwNormalParma: ThrowParameter
+    public struct ThrowClamParameter: Codable {
+        public let type: String
+        public let additionalMoveParam: AdditionalMoveParameter
+        public let blastGachiParam: BlastGachiParameter
+        public let throwGachiParam: ThrowParameter
+        public let throwNormalParma: ThrowParameter
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case additionalMoveParam = "AdditionMoveParam"
             case blastGachiParam = "BlastGachiParam"
@@ -644,14 +689,14 @@ extension PlayerParameters {
 }
 
 extension PlayerParameters.ThrowClamParameter {
-    struct BlastGachiParameter: Codable {
-        let crossPaintCheckLength: Double
-        let crossPaintRadius: Double
-        let distanceDamage: [DistanceDamage]
-        let knockbackParma: KnockbackParameter
-        let paintRadius: Double
+    public struct BlastGachiParameter: Codable {
+        public let crossPaintCheckLength: Double
+        public let crossPaintRadius: Double
+        public let distanceDamage: [DistanceDamage]
+        public let knockbackParma: KnockbackParameter
+        public let paintRadius: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case crossPaintCheckLength = "CrossPaintCheckLength"
             case crossPaintRadius = "CrossPaintRadius"
             case distanceDamage = "DistanceDamage"
@@ -660,14 +705,14 @@ extension PlayerParameters.ThrowClamParameter {
         }
     }
     
-    struct ThrowParameter: Codable {
-        let guideHitCollisionType: String
-        let guideRadius: Double
-        let spawnSpeedY: Double
-        let spawnSpeedYWorldMin: Double
-        let spawnSpeedZSpecUp: SpawnSpeedZSpecUp
+    public struct ThrowParameter: Codable {
+        public let guideHitCollisionType: String
+        public let guideRadius: Double
+        public let spawnSpeedY: Double
+        public let spawnSpeedYWorldMin: Double
+        public let spawnSpeedZSpecUp: HighMidLow
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case guideHitCollisionType = "GuideHitCollisionType"
             case guideRadius = "GuideRadius"
             case spawnSpeedY = "SpawnSpeedY"
@@ -678,15 +723,15 @@ extension PlayerParameters.ThrowClamParameter {
 }
 
 extension PlayerParameters {
-    struct ThrowGoldenIkuraParameter: Parametable {
-        let type: String
-        let additionalMoveParam: AdditionalMoveParameter
-        let attackParam: AttackParameter
-        let blastParam: BlastParameter
-        let inkConsume: Double
-        let throwParam: ThrowParameter
+    public struct ThrowGoldenIkuraParameter: Codable {
+        public let type: String
+        public let additionalMoveParam: AdditionalMoveParameter
+        public let attackParam: AttackParameter
+        public let blastParam: BlastParameter
+        public let inkConsume: Double
+        public let throwParam: ThrowParameter
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case additionalMoveParam = "AdditionMoveParam"
             case attackParam = "AttackParam"
@@ -698,19 +743,19 @@ extension PlayerParameters {
 }
 
 extension PlayerParameters.ThrowGoldenIkuraParameter {
-    struct AttackParameter: Codable {
-        let blastParam: BlastParameter
-        let collisionRadius: Double
-        let damageDirectHit: Int
-        let flyGravity: Double
-        let flyPositionAirResist: Double
-        let guideHitCollisionType: String
-        let guideRadius: Double
-        let spawnSpeedY: Double
-        let spawnSpeedYWorldMin: Double
-        let spawnSpeedZSpecUp: SpawnSpeedZSpecUp
+    public struct AttackParameter: Codable {
+        public let blastParam: BlastParameter
+        public let collisionRadius: Double
+        public let damageDirectHit: Int
+        public let flyGravity: Double
+        public let flyPositionAirResist: Double
+        public let guideHitCollisionType: String
+        public let guideRadius: Double
+        public let spawnSpeedY: Double
+        public let spawnSpeedYWorldMin: Double
+        public let spawnSpeedZSpecUp: HighMidLow
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case blastParam = "BlastParam"
             case collisionRadius = "CollisionRadius"
             case damageDirectHit = "DamageDirectHit"
@@ -724,27 +769,27 @@ extension PlayerParameters.ThrowGoldenIkuraParameter {
         }
     }
     
-    struct BlastParameter: Codable {
-        let damageAttackPriority: Bool
-        let distanceDamage: DistanceDamage
-        let paintRadius: Bool
+    public struct BlastParameter: Codable {
+        public let damageAttackPriority: Bool
+        public let distanceDamage: [DistanceDamage]
+        public let paintRadius: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case damageAttackPriority = "DamageAttackerPriority"
             case distanceDamage = "DistanceDamage"
             case paintRadius = "PaintRadius"
         }
     }
     
-    struct ThrowParameter: Codable {
-        let flyHitWallReboundRate: Double
-        let guideHitCollisionType: String
-        let returnWaterMinFrame: Int
-        let spawnSpeedY: Double
-        let spawnSpeedYWorldMin: Double
-        let spawnSpeedZSpecUp: SpawnSpeedZSpecUp
+    public struct ThrowParameter: Codable {
+        public let flyHitWallReboundRate: Double
+        public let guideHitCollisionType: String
+        public let returnWaterMinFrame: Int
+        public let spawnSpeedY: Double
+        public let spawnSpeedYWorldMin: Double
+        public let spawnSpeedZSpecUp: HighMidLow
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case flyHitWallReboundRate = "FlyHitWallReboundRate"
             case guideHitCollisionType = "GuideHitCollisionType"
             case returnWaterMinFrame = "ReturnWaterMinFrame"
@@ -756,18 +801,18 @@ extension PlayerParameters.ThrowGoldenIkuraParameter {
 }
 
 extension PlayerParameters.ThrowGoldenIkuraParameter.AttackParameter {
-    struct BlastParameter: Codable {
-        let crossPaintCheckLength: Double
-        let crossPaintRadius: Double
-        let damageAttackerPriority: Bool
-        let damageOffsetY: Double
-        let distanceDamage: DistanceDamage
-        let knockbackParam: KnockbackParameter
-        let paintOffsetY: Double
-        let paintRadius: Double
-        let splashAroundParam: SplashAroundParameter
+    public struct BlastParameter: Codable {
+        public let crossPaintCheckLength: Double
+        public let crossPaintRadius: Double
+        public let damageAttackerPriority: Bool
+        public let damageOffsetY: Double
+        public let distanceDamage: [DistanceDamage]
+        public let knockbackParam: KnockbackParameter
+        public let paintOffsetY: Double
+        public let paintRadius: Double
+        public let splashAroundParam: SplashAroundParameter
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case crossPaintCheckLength = "CrossPaintCheckLength"
             case crossPaintRadius = "CrossPaintRadius"
             case damageAttackerPriority = "DamageAttackerPriority"

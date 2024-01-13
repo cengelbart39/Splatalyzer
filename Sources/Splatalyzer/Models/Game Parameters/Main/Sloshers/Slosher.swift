@@ -7,19 +7,19 @@
 
 import Foundation
 
-struct Slosher: Codable {
-    let blastParam: BlastParameter?
-    let bounceGroupParam: BounceGroupParameter?
-    let mainEffectiveRangeUp: MainEffectiveRangeUpParameter
-    let mainWeaponSetting: MainWeaponSettings
-    let nearestParam: NearestParameter
-    let splashSlosherScatterParam: SplashScatterParameter?
-    let splashSlosherSpiralParam: SplashSpiralParameter?
-    let unitGroupParam: UnitGroupParameter
-    let weaponParam: WeaponParameter
-    let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
+public struct Slosher: Codable {
+    public let blastParam: BlastParameter?
+    public let bounceGroupParam: BounceGroupParameter?
+    public let mainEffectiveRangeUp: MainEffectiveRangeUpParameter
+    public let mainWeaponSetting: MainWeaponSettings
+    public let nearestParam: NearestParameter
+    public let splashSlosherScatterParam: SplashScatterParameter?
+    public let splashSlosherSpiralParam: SplashSpiralParameter?
+    public let unitGroupParam: UnitGroupParameter
+    public let weaponParam: WeaponParameter
+    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case blastParam = "BlastParam"
         case bounceGroupParam = "BounceGroupParam"
         case mainEffectiveRangeUp = "MainEffectiveRangeUpParam"
@@ -34,15 +34,15 @@ struct Slosher: Codable {
 }
 
 extension Slosher {
-    struct BlastParameter: Codable {
-        let type: String
-        let blastParam: BlastInnerParameter
-        let distanceFar: Double
-        let distanceNear: Double
-        let paintRadiusFar: Double
-        let paintRadiusNear: Double
+    public struct BlastParameter: Codable {
+        public let type: String
+        public let blastParam: BlastInnerParameter
+        public let distanceFar: Double
+        public let distanceNear: Double
+        public let paintRadiusFar: Double
+        public let paintRadiusNear: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case blastParam = "BlastParam"
             case distanceFar = "DistanceFar"
@@ -54,18 +54,18 @@ extension Slosher {
 }
 
 extension Slosher.BlastParameter {
-    struct BlastInnerParameter: Codable {
-        let collisionRadiusForPaint: Double
-        let crossPaintCheckLength: Double
-        let crossPaintRadius: Double
-        let damageAttackerPriority: Bool
-        let damageOffsetY: Double
-        let distanceDamage: [DistanceDamage]
-        let knockBackParam: KnockbackParameter
-        let paintOffsetY: Double
-        let paintRadius: Double
+    public struct BlastInnerParameter: Codable {
+        public let collisionRadiusForPaint: Double
+        public let crossPaintCheckLength: Double
+        public let crossPaintRadius: Double
+        public let damageAttackerPriority: Bool
+        public let damageOffsetY: Double
+        public let distanceDamage: [DistanceDamage]
+        public let knockBackParam: KnockbackParameter
+        public let paintOffsetY: Double
+        public let paintRadius: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case collisionRadiusForPaint = "CollisionRadiusForPaint"
             case crossPaintCheckLength = "CrossPaintCheckLength"
             case crossPaintRadius = "CrossPaintRadius"
@@ -80,11 +80,11 @@ extension Slosher.BlastParameter {
 }
 
 extension Slosher {
-    struct BounceGroupParameter: Codable {
-        let type: String
-        let bounceParam: [BounceParameter]
+    public struct BounceGroupParameter: Codable {
+        public let type: String
+        public let bounceParam: [BounceParameter]
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case bounceParam = "BounceParam"
         }
@@ -92,13 +92,13 @@ extension Slosher {
 }
 
 extension Slosher.BounceGroupParameter {
-    struct BounceParameter: Codable {
-        let afterOffsetPaintRadiusFirstBnce: Double?
-        let bounceAfterMaxSpeed: Double?
-        let paintRadiusFirstBounce: Double
-        let unitOrderNum: Int?
+    public struct BounceParameter: Codable {
+        public let afterOffsetPaintRadiusFirstBnce: Double?
+        public let bounceAfterMaxSpeed: Double?
+        public let paintRadiusFirstBounce: Double
+        public let unitOrderNum: Int?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case afterOffsetPaintRadiusFirstBnce = "AfterOffsetPaintRadiusFirstBnce"
             case bounceAfterMaxSpeed = "BounceAfterMaxSpeed"
             case paintRadiusFirstBounce = "PaintRadiusFirstBounce"
@@ -108,13 +108,13 @@ extension Slosher.BounceGroupParameter {
 }
 
 extension Slosher {
-    struct CollisionParameter: Codable {
-        let endRadiusForField: Double?
-        let endRadiusForPlayer: Double
-        let initRadiusForField: Double?
-        let initRadiusForPlayer: Double
+    public struct CollisionParameter: Codable {
+        public let endRadiusForField: Double?
+        public let endRadiusForPlayer: Double
+        public let initRadiusForField: Double?
+        public let initRadiusForPlayer: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case endRadiusForField = "EndRadiusForField"
             case endRadiusForPlayer = "EndRadiusForPlayer"
             case initRadiusForField = "InitRadiusForField"
@@ -124,12 +124,12 @@ extension Slosher {
 }
 
 extension Slosher {
-    struct NearestParameter: Codable {
-        let type: String
-        let drawSizeCollisionPaintParam: DrawSizeCollisionPaintParameter
-        let spawnOffset: XYData
+    public struct NearestParameter: Codable {
+        public let type: String
+        public let drawSizeCollisionPaintParam: DrawSizeCollisionPaintParameter
+        public let spawnOffset: XYData
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case drawSizeCollisionPaintParam = "DrawSizeCollisionPaintParam"
             case spawnOffset = "SpawnOffset"
@@ -138,12 +138,12 @@ extension Slosher {
 }
 
 extension Slosher.NearestParameter {
-    struct DrawSizeCollisionPaintParameter: Codable {
-        let collisionParam: Slosher.CollisionParameter?
-        let paintDepthScale: Double
-        let paintWidthHalf: Double
+    public struct DrawSizeCollisionPaintParameter: Codable {
+        public let collisionParam: Slosher.CollisionParameter?
+        public let paintDepthScale: Double
+        public let paintWidthHalf: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case collisionParam = "CollisionParam"
             case paintDepthScale = "PaintDepthScale"
             case paintWidthHalf = "PaintWidthHalf"
@@ -152,22 +152,22 @@ extension Slosher.NearestParameter {
 }
 
 extension Slosher {
-    struct SplashScatterParameter: Codable {
-        let type: String
-        let collisionParam: Slosher.CollisionParameter
-        let paintRadius: Double
-        let spawnFirstFrame: Int
-        let spawnMaxDegree: Double
-        let spawnMaxNum: Int
-        let spawnMinDegree: Double
-        let spawnOffsetMax: Double
-        let spawnOffsetMin: Double
-        let spawnSpanChangeEndFrame: Int
-        let spawnSpanFrameFirst: Int
-        let spawnSpanFrameLast: Int
-        let spawnSpeed: Double
+    public struct SplashScatterParameter: Codable {
+        public let type: String
+        public let collisionParam: Slosher.CollisionParameter
+        public let paintRadius: Double
+        public let spawnFirstFrame: Int
+        public let spawnMaxDegree: Double
+        public let spawnMaxNum: Int
+        public let spawnMinDegree: Double
+        public let spawnOffsetMax: Double
+        public let spawnOffsetMin: Double
+        public let spawnSpanChangeEndFrame: Int
+        public let spawnSpanFrameFirst: Int
+        public let spawnSpanFrameLast: Int
+        public let spawnSpeed: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case collisionParam = "CollisionParam"
             case paintRadius = "PaintRadius"
@@ -186,22 +186,22 @@ extension Slosher {
 }
 
 extension Slosher {
-    struct SplashSpiralParameter: Codable {
-        let type: String
-        let collisionParam: Slosher.CollisionParameter
-        let lifeFrame: Int
-        let roundSplitNum: Int
-        let sameTimeSpawnNum: Int
-        let spawnSpanChangeEndFrame: Int
-        let spawnSpanChangeStartFrame: Int
-        let spawnSpanFrameFirst: Int
-        let spawnSpanFrameLast: Int
-        let spawnSpeedChangeEndFallHeight: Double
-        let spawnSpeedChangeStartFallHeight: Double
-        let spawnSpeedFirst: Double
-        let spawnSpeedLast: Double
+    public struct SplashSpiralParameter: Codable {
+        public let type: String
+        public let collisionParam: Slosher.CollisionParameter
+        public let lifeFrame: Int
+        public let roundSplitNum: Int
+        public let sameTimeSpawnNum: Int
+        public let spawnSpanChangeEndFrame: Int
+        public let spawnSpanChangeStartFrame: Int
+        public let spawnSpanFrameFirst: Int
+        public let spawnSpanFrameLast: Int
+        public let spawnSpeedChangeEndFallHeight: Double
+        public let spawnSpeedChangeStartFallHeight: Double
+        public let spawnSpeedFirst: Double
+        public let spawnSpeedLast: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case collisionParam = "CollisionParam"
             case lifeFrame = "LifeFrame"
@@ -220,22 +220,22 @@ extension Slosher {
 }
 
 extension Slosher {
-    struct WeaponParameter: Codable {
-        let type: String
-        let frameOffsetDegreeRate: Double?
-        let frameOffsetMaxDegree: Double?
-        let frameOffsetMaxMoveLength: Double?
-        let inkConsume: Double
-        let inkRecoverStop: Int
-        let moveLmtFrame: Int?
-        let moveSpeed: Double
-        let postDelayFrame: Int?
-        let repeatFrame: Int
-        let shotGuide: ShotGuide
-        let swingLiftAnimFrame: Double?
-        let swingLiftFrame: Int
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let frameOffsetDegreeRate: Double?
+        public let frameOffsetMaxDegree: Double?
+        public let frameOffsetMaxMoveLength: Double?
+        public let inkConsume: Double
+        public let inkRecoverStop: Int
+        public let moveLmtFrame: Int?
+        public let moveSpeed: Double
+        public let postDelayFrame: Int?
+        public let repeatFrame: Int
+        public let shotGuide: ShotGuide
+        public let swingLiftAnimFrame: Double?
+        public let swingLiftFrame: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case frameOffsetDegreeRate = "FrameOffsetDegreeRate"
             case frameOffsetMaxDegree = "FrameOffsetMaxDegree"
@@ -254,12 +254,12 @@ extension Slosher {
 }
 
 extension Slosher.WeaponParameter {
-    struct ShotGuide: Codable {
-        let bulletOrderNumInUnit: Int?
-        let frame: Int
-        let unitOrderNum: Int?
+    public struct ShotGuide: Codable {
+        public let bulletOrderNumInUnit: Int?
+        public let frame: Int
+        public let unitOrderNum: Int?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case bulletOrderNumInUnit = "BulletOrderNumInUnit"
             case frame = "Frame"
             case unitOrderNum = "UnitOrderNum"
@@ -268,15 +268,15 @@ extension Slosher.WeaponParameter {
 }
 
 extension Slosher {
-    struct SpawnBulletAdditionMovePlayerParameter: Codable {
-        let type: String
-        let guideYMinusZero: Bool
-        let xRate: Double?
-        let yMinusRate: Double
-        let yPlusRate: Double?
-        let zRate: Double?
+    public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public let type: String
+        public let guideYMinusZero: Bool
+        public let xRate: Double?
+        public let yMinusRate: Double
+        public let yPlusRate: Double?
+        public let zRate: Double?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case guideYMinusZero = "GuideYMinusZero"
             case xRate = "XRate"

@@ -7,10 +7,10 @@
 
 import Foundation
 
-typealias AbilityPoints = [Ability : Int]
+public typealias AbilityPoints = [Ability : Int]
 
 /// Special attributes for gear that effect the player and/oror weapons
-enum Ability: CaseIterable {
+public enum Ability: CaseIterable {
     /// A unassigned ability
     case none
     
@@ -202,7 +202,7 @@ extension Ability {
 }
 
 /// The geartype an ``Ability`` or ``GearPiece`` is restricted to
-enum AbilityRestriction {
+public enum AbilityRestriction {
     case headgearOnly
     case clothesOnly
     case shoesOnly

@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct Autobomb: SubParametable {
-    let blastParam: BlastParameter
-    let moveParam: MoveParameter
-    let subWeaponSetting: SubWeaponSetting
-    let weaponParam: WeaponParameter
-    let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
+public struct Autobomb: SubParametable {
+    public let blastParam: BlastParameter
+    public let moveParam: MoveParameter
+    public let subWeaponSetting: SubWeaponSetting
+    public let weaponParam: WeaponParameter
+    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case blastParam = "BlastParam"
         case moveParam = "MoveParam"
         case subWeaponSetting = "SubWeaponSetting"
@@ -22,13 +22,13 @@ struct Autobomb: SubParametable {
         case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
     }
     
-    struct BlastParameter: Codable {
-        let type: String
-        let crossPaintCheckLength: Double
-        let crossPaintRadius: Double
-        let distanceDamage: [DistanceDamage]
-        let knockBackParam: KnockbackParameter
-        let splashAroundParam: SplashAroundParameter
+    public struct BlastParameter: Codable {
+        public let type: String
+        public let crossPaintCheckLength: Double
+        public let crossPaintRadius: Double
+        public let distanceDamage: [DistanceDamage]
+        public let knockBackParam: KnockbackParameter
+        public let splashAroundParam: SplashAroundParameter
         
         enum CodingKeys: String, CodingKey {
             case type = "$type"
@@ -40,41 +40,41 @@ struct Autobomb: SubParametable {
         }
     }
     
-    struct MoveParameter: Codable {
-        let type: String
-        let beforeRotateFrame: Int
-        let chaseAirAddSpeedXZPerFrame: Double
-        let chaseAirMaxSpeedXZ: Double
-        let chaseAirMaxSpeedY: Double
-        let chaseBurstWaitFrame: Int
-        let chaseFrame: Int
-        let chaseGroundAddSpeedPerFrame: Double
-        let chaseGroundMaxSpeed: Double
-        let chasePitchDegree: Double
-        let chaseRollDegree: Double
-        let chaseYawDegree: Double
-        let contactDashPanel: ContactDashPanel
-        let contactJumpPanel: ContactJumpPanel
-        let deathTargetApprouchDistance: Double
-        let findApproachBurstWaitFrame: Int
-        let findRotateFrame: Int
-        let flyGravity: Double
-        let flyHitWallPitchToPlane: Double
-        let flyHitWallReboundResetFrame: Int
-        let flyPositionAirResist: Double
-        let flyRotateAirResist: Double
-        let guideRadius: Double
-        let noReceiveTargetBurstWaitFrame: Int
-        let spawnRotatePitch: Double
-        let spawnRotateRoll: Double
-        let spawnSpeedY: Double
-        let spawnSpeedYWorldMin: Double
-        let spawnSpeedZSpecUp: HighMidLow
-        let unfindBurstWaitFrame: Int
-        let warningAnimRestFrame: Int
-        let warningSERestFrame: Int
+    public struct MoveParameter: Codable {
+        public let type: String
+        public let beforeRotateFrame: Int
+        public let chaseAirAddSpeedXZPerFrame: Double
+        public let chaseAirMaxSpeedXZ: Double
+        public let chaseAirMaxSpeedY: Double
+        public let chaseBurstWaitFrame: Int
+        public let chaseFrame: Int
+        public let chaseGroundAddSpeedPerFrame: Double
+        public let chaseGroundMaxSpeed: Double
+        public let chasePitchDegree: Double
+        public let chaseRollDegree: Double
+        public let chaseYawDegree: Double
+        public let contactDashPanel: ContactDashPanel
+        public let contactJumpPanel: ContactJumpPanel
+        public let deathTargetApprouchDistance: Double
+        public let findApproachBurstWaitFrame: Int
+        public let findRotateFrame: Int
+        public let flyGravity: Double
+        public let flyHitWallPitchToPlane: Double
+        public let flyHitWallReboundResetFrame: Int
+        public let flyPositionAirResist: Double
+        public let flyRotateAirResist: Double
+        public let guideRadius: Double
+        public let noReceiveTargetBurstWaitFrame: Int
+        public let spawnRotatePitch: Double
+        public let spawnRotateRoll: Double
+        public let spawnSpeedY: Double
+        public let spawnSpeedYWorldMin: Double
+        public let spawnSpeedZSpecUp: HighMidLow
+        public let unfindBurstWaitFrame: Int
+        public let warningAnimRestFrame: Int
+        public let warningSERestFrame: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case beforeRotateFrame = "BeforeRotateFrame"
             case chaseAirAddSpeedXZPerFrame = "ChaseAirAddSpeedXZPerFrame"
@@ -109,20 +109,20 @@ struct Autobomb: SubParametable {
             case warningSERestFrame = "WarningSERestFrame"
         }
         
-        struct ContactDashPanel: Codable {
-            let addSpeedPerImpact: Double
+        public struct ContactDashPanel: Codable {
+            public let addSpeedPerImpact: Double
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case addSpeedPerImpact = "AddSpeedPerImpact"
             }
         }
         
-        struct ContactJumpPanel: Codable {
-            let addSpeedOneBoundRate: Double
-            let addSpeedPerImpact: Double
-            let maxBoundNum: Int
+        public struct ContactJumpPanel: Codable {
+            public let addSpeedOneBoundRate: Double
+            public let addSpeedPerImpact: Double
+            public let maxBoundNum: Int
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case addSpeedOneBoundRate = "AddSpeedOneBoundRate"
                 case addSpeedPerImpact = "AddSpeedPerImpact"
                 case maxBoundNum = "MaxBoundNum"
@@ -130,10 +130,10 @@ struct Autobomb: SubParametable {
         }
     }
     
-    struct WeaponParameter: Codable {
-        let type: String
-        let inkConsume: Double
-        let inkRecoverStop: Int
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let inkConsume: Double
+        public let inkRecoverStop: Int
         
         enum CodingKeys: String, CodingKey {
             case type = "$type"
@@ -142,14 +142,14 @@ struct Autobomb: SubParametable {
         }
     }
     
-    struct SpawnBulletAdditionMovePlayerParameter: Codable {
-        let type: String
-        let xRate: Double
-        let yMax: Double
-        let yPlusRate: Double
-        let zRate: Double
+    public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public let type: String
+        public let xRate: Double
+        public let yMax: Double
+        public let yPlusRate: Double
+        public let zRate: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case xRate = "XRate"
             case yMax = "YMax"
@@ -158,7 +158,7 @@ struct Autobomb: SubParametable {
         }
     }
     
-    func getOverwrites(_ playerInfo: PlayerParameters? = nil) -> SubOverwrites {
+    public func getOverwrites(_ playerInfo: PlayerParameters? = nil) -> SubOverwrites {
         return SubOverwrites(
             spawnSpeedZSpecUp: self.moveParam.spawnSpeedZSpecUp,
             periodFirst: nil,

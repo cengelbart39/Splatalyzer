@@ -7,27 +7,27 @@
 
 import Foundation
 
-struct ExtraDamageRateInfo: Codable {
-    let damageRateInfo: DamageRateInfo
-    let extraInfo: ExtraInfo
+public struct ExtraDamageRateInfo: Codable {
+    public let damageRateInfo: DamageRateInfo
+    public let extraInfo: ExtraInfo
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case damageRateInfo = "DamageRateInfoRow"
         case extraInfo = "ExtraInfo"
     }
 }
 
-struct ExtraHitEffectorInfo: Codable {
-    let extraInfo: ExtraInfo
-    let hitEffectorType: HitEffectorType
+public struct ExtraHitEffectorInfo: Codable {
+    public let extraInfo: ExtraInfo
+    public let hitEffectorType: HitEffectorType
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case extraInfo = "ExtraInfo"
         case hitEffectorType = "HitEffectorType"
     }
 }
 
-enum ModeType: String, Codable {
+public enum ModeType: String, Codable {
     case coop = "Coop"
     case mission = "Mission"
     case rival = "Rival"

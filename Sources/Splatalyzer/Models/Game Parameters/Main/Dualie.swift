@@ -7,36 +7,36 @@
 
 import Foundation
 
-struct Dualie: Codable {
-    let collisionLapOverParam: CollisionParameter?
-    let collisionParam: CollisionParameter?
+public struct Dualie: Codable {
+    public let collisionLapOverParam: CollisionParameter?
+    public let collisionParam: CollisionParameter?
     
-    let damageLapOverParam: DamageParameter?
-    let damageParam: DamageParameter
+    public let damageLapOverParam: DamageParameter?
+    public let damageParam: DamageParameter
     
-    let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter?
-    let mainWeaponSetting: MainWeaponSettings?
+    public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter?
+    public let mainWeaponSetting: MainWeaponSettings?
     
-    let moveLapOverParam: MoveParameter?
-    let moveParam: MoveParameter
+    public let moveLapOverParam: MoveParameter?
+    public let moveParam: MoveParameter
     
-    let paintParam: PaintParameter?
+    public let paintParam: PaintParameter?
     
-    let sideStepBlastParam: SideStepBlastParameter?
-    let sideStepParam: SideStepParameter
+    public let sideStepBlastParam: SideStepBlastParameter?
+    public let sideStepParam: SideStepParameter
     
-    let splashPaintParam: SplashPaintParameter?
-    let splashSpawnLapOverParam: SplashSpawnParameter?
-    let splashSpawnParam: SplashSpawnParameter
+    public let splashPaintParam: SplashPaintParameter?
+    public let splashSpawnLapOverParam: SplashSpawnParameter?
+    public let splashSpawnParam: SplashSpawnParameter
     
-    let wallDropCollisionPaintParam: WallDropCollisionPaintParameter?
-    let wallDropMoveParam: WallDropMoveParameter?
+    public let wallDropCollisionPaintParam: WallDropCollisionPaintParameter?
+    public let wallDropMoveParam: WallDropMoveParameter?
     
-    let weaponParam: WeaponParameter
+    public let weaponParam: WeaponParameter
     
-    let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter?
+    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter?
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case collisionLapOverParam = "CollisionLapOverParam"
         case collisionParam = "CollisionParam"
         case damageLapOverParam = "DamageLapOverParam"
@@ -59,17 +59,17 @@ struct Dualie: Codable {
 }
 
 extension Dualie {
-    struct CollisionParameter: Codable {
-        let type: String
-        let changeFrameForField: Int
-        let changeFrameForPlayer: Int
-        let endRadiusForField: Double
-        let endRadiusForPlayer: Double
-        let friendThroughFrameForPlayer: Int
-        let initRadiusForField: Double
-        let initRadiusForPlayer: Double
+    public struct CollisionParameter: Codable {
+        public let type: String
+        public let changeFrameForField: Int
+        public let changeFrameForPlayer: Int
+        public let endRadiusForField: Double
+        public let endRadiusForPlayer: Double
+        public let friendThroughFrameForPlayer: Int
+        public let initRadiusForField: Double
+        public let initRadiusForPlayer: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case changeFrameForField = "ChangeFrameForField"
             case changeFrameForPlayer = "ChangeFrameForPlayer"
@@ -83,14 +83,14 @@ extension Dualie {
 }
 
 extension Dualie {
-    struct DamageParameter: Codable {
-        let type: String
-        let reduceEndFrame: Int?
-        let reduceStartFrame: Int?
-        let valueMax: Int
-        let valueMin: Int
+    public struct DamageParameter: Codable {
+        public let type: String
+        public let reduceEndFrame: Int?
+        public let reduceStartFrame: Int?
+        public let valueMax: Int
+        public let valueMin: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case reduceEndFrame = "ReduceEndFrame"
             case reduceStartFrame = "ReduceStartFrame"
@@ -101,14 +101,14 @@ extension Dualie {
 }
 
 extension Dualie {
-    struct MoveParameter: Codable {
-        let type: String
-        let freeGravity: Double?
-        let goStraightStateEndMaxSpeed: Double
-        let goStraightBrakeStateFrame: Int
-        let spawnSpeed: Double
+    public struct MoveParameter: Codable {
+        public let type: String
+        public let freeGravity: Double?
+        public let goStraightStateEndMaxSpeed: Double
+        public let goStraightBrakeStateFrame: Int
+        public let spawnSpeed: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case freeGravity = "FreeGravity"
             case goStraightStateEndMaxSpeed = "GoStraightStateEndMaxSpeed"
@@ -119,19 +119,19 @@ extension Dualie {
 }
 
 extension Dualie {
-    struct PaintParameter: Codable {
-        let type: String
-        let degreeUseDepthScaleMin: Double?
-        let depthScaleMax: Double
-        let depthScaleMaxBreakFree: Double
-        let depthScaleMin: Double
-        let depthScaleMinBreakFree: Double
-        let distanceMiddle: Double
-        let widthHalfFar: Double
-        let widthHalfMiddle: Double
-        let widthHalfNear: Double
+    public struct PaintParameter: Codable {
+        public let type: String
+        public let degreeUseDepthScaleMin: Double?
+        public let depthScaleMax: Double
+        public let depthScaleMaxBreakFree: Double
+        public let depthScaleMin: Double
+        public let depthScaleMinBreakFree: Double
+        public let distanceMiddle: Double
+        public let widthHalfFar: Double
+        public let widthHalfMiddle: Double
+        public let widthHalfNear: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case degreeUseDepthScaleMin = "DegreeUseDepthScaleMin"
             case depthScaleMax = "DepthScaleMax"
@@ -147,16 +147,16 @@ extension Dualie {
 }
 
 extension Dualie {
-    struct SideStepBlastParameter: Codable {
-        let type: String
-        let crossPaintCheckLength: Double
-        let crossPaintRadius: Double
-        let damageLinear: Bool
-        let distanceDamage: [DistanceDamage]
-        let paintHeight: Double
-        let paintRadius: Double
+    public struct SideStepBlastParameter: Codable {
+        public let type: String
+        public let crossPaintCheckLength: Double
+        public let crossPaintRadius: Double
+        public let damageLinear: Bool
+        public let distanceDamage: [DistanceDamage]
+        public let paintHeight: Double
+        public let paintRadius: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case crossPaintCheckLength = "CrossPaintCheckLength"
             case crossPaintRadius = "CrossPaintRadius"
@@ -169,31 +169,31 @@ extension Dualie {
 }
 
 extension Dualie {
-    struct SideStepParameter: Codable {
-        let type: String
-        let chargeFrame: Int?
-        let inkConsume: Double
-        let inkRecoverStop: Int?
-        let isShootableInMove: Bool?
-        let moveDist: Double?
-        let moveFrame: Int?
-        let repeatCnt: Int?
-        let slipMoveDistAir: Double?
-        let slipMoveDistGnd: Double?
-        let slipMoveFrame: Int?
-        let splashSlideParam: SplashSlideParameter?
-        let unrelaxFrameMove: Int
-        let unrelaxFrameMoveLast: Int
-        let unrelaxFrameNoSideStep: Int?
-        let unrelaxFrameNoSideStepLast: Int?
-        let unrelaxFrameNoSquid: Int?
-        let unrelaxFrameNoSquidLast: Int?
-        let unrelaxFrameNoWeapon: Int?
-        let unrelaxFrameNoWeaponLast: Int?
-        let unrelaxFrameOneMuzzle: Int?
-        let unrelaxFrameOneMuzzleLast: Int?
+    public struct SideStepParameter: Codable {
+        public let type: String
+        public let chargeFrame: Int?
+        public let inkConsume: Double
+        public let inkRecoverStop: Int?
+        public let isShootableInMove: Bool?
+        public let moveDist: Double?
+        public let moveFrame: Int?
+        public let repeatCnt: Int?
+        public let slipMoveDistAir: Double?
+        public let slipMoveDistGnd: Double?
+        public let slipMoveFrame: Int?
+        public let splashSlideParam: SplashSlideParameter?
+        public let unrelaxFrameMove: Int
+        public let unrelaxFrameMoveLast: Int
+        public let unrelaxFrameNoSideStep: Int?
+        public let unrelaxFrameNoSideStepLast: Int?
+        public let unrelaxFrameNoSquid: Int?
+        public let unrelaxFrameNoSquidLast: Int?
+        public let unrelaxFrameNoWeapon: Int?
+        public let unrelaxFrameNoWeaponLast: Int?
+        public let unrelaxFrameOneMuzzle: Int?
+        public let unrelaxFrameOneMuzzleLast: Int?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case chargeFrame = "ChargeFrame"
             case inkConsume = "InkConsume"
@@ -221,11 +221,11 @@ extension Dualie {
 }
 
 extension Dualie.SideStepParameter {
-    struct SplashSlideParameter: Codable {
-        let moveLength: Double?
-        let paintWidthHalf: Double
+    public struct SplashSlideParameter: Codable {
+        public let moveLength: Double?
+        public let paintWidthHalf: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case moveLength = "MoveLength"
             case paintWidthHalf = "PaintWidthHalf"
         }
@@ -233,15 +233,15 @@ extension Dualie.SideStepParameter {
 }
 
 extension Dualie {
-    struct SplashPaintParameter: Codable {
-        let type: String
-        let depthMaxDropHeight: Double
-        let depthMinDropHeight: Double
-        let depthScaleMin: Double
-        let widthHalf: Double
-        let widthHalfNearest: Double
+    public struct SplashPaintParameter: Codable {
+        public let type: String
+        public let depthMaxDropHeight: Double
+        public let depthMinDropHeight: Double
+        public let depthScaleMin: Double
+        public let widthHalf: Double
+        public let widthHalfNearest: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case depthMaxDropHeight = "DepthMaxDropHeight"
             case depthMinDropHeight = "DepthMinDropHeight"
@@ -253,15 +253,15 @@ extension Dualie {
 }
 
 extension Dualie {
-    struct SplashSpawnParameter: Codable {
-        let type: String
-        let forceSpawnNearestAddNumArray: [Double]?
-        let spawnBetweenLength: Double?
-        let spawnNearestLength: Double?
-        let spawnNum: Double
-        let splitNum: Int?
+    public struct SplashSpawnParameter: Codable {
+        public let type: String
+        public let forceSpawnNearestAddNumArray: [Double]?
+        public let spawnBetweenLength: Double?
+        public let spawnNearestLength: Double?
+        public let spawnNum: Double
+        public let splitNum: Int?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case forceSpawnNearestAddNumArray = "ForceSpawnNearestAddNumArray"
             case spawnBetweenLength = "SpawnBetweenLength"
@@ -273,13 +273,13 @@ extension Dualie {
 }
 
 extension Dualie {
-    struct WallDropCollisionPaintParameter: Codable {
-        let type: String
-        let paintRadiusFall: Double
-        let paintRadiusGround: Double
-        let paintRadiusChock: Double
+    public struct WallDropCollisionPaintParameter: Codable {
+        public let type: String
+        public let paintRadiusFall: Double
+        public let paintRadiusGround: Double
+        public let paintRadiusChock: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case paintRadiusFall = "PaintRadiusFall"
             case paintRadiusGround = "PaintRadiusGround"
@@ -289,18 +289,18 @@ extension Dualie {
 }
 
 extension Dualie {
-    struct WallDropMoveParameter: Codable {
-        let type: String
-        let fallPeriodFirstFrameMax: Int
-        let fallPeriodFirstFrameMin: Int
-        let fallPeriodFirstTargetSpeed: Double
-        let fallPeriodLastFrameMax: Int
-        let fallPeriodLastFrameMin: Int
-        let fallPeriodSecondFrame: Int
-        let fallPeriodSecondTargetSpeed: Double
-        let freeGravityType: String
+    public struct WallDropMoveParameter: Codable {
+        public let type: String
+        public let fallPeriodFirstFrameMax: Int
+        public let fallPeriodFirstFrameMin: Int
+        public let fallPeriodFirstTargetSpeed: Double
+        public let fallPeriodLastFrameMax: Int
+        public let fallPeriodLastFrameMin: Int
+        public let fallPeriodSecondFrame: Int
+        public let fallPeriodSecondTargetSpeed: Double
+        public let freeGravityType: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case fallPeriodFirstFrameMax = "FallPeriodFirstFrameMax"
             case fallPeriodFirstFrameMin = "FallPeriodFirstFrameMin"
@@ -315,27 +315,27 @@ extension Dualie {
 }
 
 extension Dualie {
-    struct WeaponParameter: Codable {
-        let type: String
-        let inkConsume: Double
-        let jumpDegBiasDecreaseStartFrame: Int?
-        let jumpDegBiasEndFrame: Double?
-        let jumpDegBiasMax: Double?
-        let jumpDegSwerve: Double
-        let lapOverDegSwerve: Double
-        let lapOverRepeatFrame: Double?
-        let moveSpeed: Double?
-        let preDelayFrameSquidShot: Int?
-        let postDelayFrame: Int?
-        let repeatFrame: Int?
-        let shotGuideFrame: Int?
-        let standDegBiasDecrease: Double?
-        let standDegBiasKf: Double?
-        let standDegBiasMax: Double?
-        let standDegBiasMin: Double?
-        let standDegSwerve: Double
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let inkConsume: Double
+        public let jumpDegBiasDecreaseStartFrame: Int?
+        public let jumpDegBiasEndFrame: Double?
+        public let jumpDegBiasMax: Double?
+        public let jumpDegSwerve: Double
+        public let lapOverDegSwerve: Double
+        public let lapOverRepeatFrame: Double?
+        public let moveSpeed: Double?
+        public let preDelayFrameSquidShot: Int?
+        public let postDelayFrame: Int?
+        public let repeatFrame: Int?
+        public let shotGuideFrame: Int?
+        public let standDegBiasDecrease: Double?
+        public let standDegBiasKf: Double?
+        public let standDegBiasMax: Double?
+        public let standDegBiasMin: Double?
+        public let standDegSwerve: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case inkConsume = "InkConsume"
             case jumpDegBiasDecreaseStartFrame = "Jump_DegBiasDecreaseStartFrame"
@@ -359,11 +359,11 @@ extension Dualie {
 }
 
 extension Dualie {
-    struct SpawnBulletAdditionMovePlayerParameter: Codable {
-        let type: String
-        let zRate: Double
+    public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public let type: String
+        public let zRate: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case zRate = "ZRate"
         }

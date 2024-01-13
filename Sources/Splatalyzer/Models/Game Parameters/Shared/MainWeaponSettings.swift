@@ -7,18 +7,18 @@
 
 import Foundation
 
-struct MainWeaponSettings: Codable {
-    let type: String
-    let overwriteConsumeRtMainHigh: Double?
-    let overwriteConsumeRtMainLow: Double?
-    let overwriteConsumeRtMainMid: Double?
-    let overwriteMoveVelRtShotHigh: Double?
-    let overwriteMoveVelRtShotLow: Double?
-    let overwriteMoveVelRtShotMid: Double?
-    let weaponAccType: WeaponAccType?
-    let weaponSpeedType: WeaponSpeedType?
+public struct MainWeaponSettings: Codable {
+    public let type: String
+    public let overwriteConsumeRtMainHigh: Double?
+    public let overwriteConsumeRtMainLow: Double?
+    public let overwriteConsumeRtMainMid: Double?
+    public let overwriteMoveVelRtShotHigh: Double?
+    public let overwriteMoveVelRtShotLow: Double?
+    public let overwriteMoveVelRtShotMid: Double?
+    public let weaponAccType: WeaponAccType?
+    public let weaponSpeedType: WeaponSpeedType?
 
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case type = "$type"
         case overwriteConsumeRtMainHigh = "Overwrite_ConsumeRt_Main_High"
         case overwriteConsumeRtMainLow = "Overwrite_ConsumeRt_Main_Low"
@@ -30,27 +30,27 @@ struct MainWeaponSettings: Codable {
         case weaponSpeedType = "WeaponSpeedType"
     }
     
-    enum WeaponAccType: String, Codable {
+    public enum WeaponAccType: String, Codable {
         case fast = "Fast"
         case mid = "Mid"
     }
     
-    func getOverwrites() -> MainOverwrites {
+    public func getOverwrites() -> MainOverwrites {
         return MainOverwrites(settings: self)
     }
 }
 
-enum WeaponSpeedType: String, Codable {
+public enum WeaponSpeedType: String, Codable {
     case slow = "Slow"
     case mid = "Mid"
     case fast = "Fast"
 }
 
-struct MainOverwrites: Overwritable {
-    let consumeRtMain: HighMidLow?
-    let moveVelRtShot: HighMidLow?
+public struct MainOverwrites: Overwritable {
+    public let consumeRtMain: HighMidLow?
+    public let moveVelRtShot: HighMidLow?
     
-    init(settings: MainWeaponSettings) {
+    public init(settings: MainWeaponSettings) {
         self.consumeRtMain = HighMidLow(
             high: settings.overwriteConsumeRtMainHigh,
             mid: settings.overwriteConsumeRtMainMid,
@@ -62,12 +62,12 @@ struct MainOverwrites: Overwritable {
             low: settings.overwriteMoveVelRtShotLow)
     }
     
-    init() {
+    public init() {
         self.consumeRtMain = nil
         self.moveVelRtShot = nil
     }
     
-    func value(for key: AbilityValue) -> HighMidLow? {
+    public func value(for key: AbilityValue) -> HighMidLow? {
         if key == .consumeRtMain {
             return self.consumeRtMain
             

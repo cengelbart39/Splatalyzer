@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum SubRowId: String, Codable {
+public enum SubRowId: String, CaseIterable, Codable {
     case squidBeakon = "Beacon"
     
     case curlingBomb = "Bomb_Curling"
@@ -55,4 +55,12 @@ enum SubRowId: String, Codable {
     
     case inkMine = "Trap"
     case inkMineMission = "Trap_Mission"
+}
+
+extension SubRowId {
+    static public func versusIds() -> [SubRowId] {
+        return SubRowId.allCases.filter {
+            !$0.rawValue.contains("Coop") && !$0.rawValue.contains("Mission") && !$0.rawValue.contains("SalmonBuddy") && !$0.rawValue.contains("Hero") && !$0.rawValue.contains("Rival")
+        }
+    }
 }

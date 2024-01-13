@@ -7,12 +7,12 @@
 
 import Foundation
 
-protocol WeaponDatable {
+public protocol WeaponDatable {
     var overwrites: any Overwritable { get }
     
     func damage(for type: DamageType) -> Any?
 }
 
-protocol Overwritable {
+public protocol Overwritable {
     func value(for key: AbilityValue) -> HighMidLow?
 }

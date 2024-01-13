@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum InkConsumeType: CaseIterable {
+public enum InkConsumeType: CaseIterable {
     case normal
     case swing
     case slosh

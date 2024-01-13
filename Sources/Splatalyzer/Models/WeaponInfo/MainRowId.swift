@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum MainRowId: String, Codable {
+public enum MainRowId: String, CaseIterable, Codable {
     // MARK: Blasters
     case grizzcoBlaster = "Blaster_Bear_Coop"
     
@@ -36,7 +36,7 @@ enum MainRowId: String, Codable {
     case blasterMsn = "Blaster_Middle_Msn"
     
     case sblast92 = "Blaster_Precision_00"
-    case sBlast91 = "Blaster_Precision_01"
+    case sblast91 = "Blaster_Precision_01"
     case sblast92Coop = "Blaster_Precision_Coop"
     
     case blasterRivalLv1 = "Blaster_RivalLv1_00"
@@ -347,4 +347,12 @@ enum MainRowId: String, Codable {
     case reeflux450 = "Stringer_Short_00"
     case reeflux450Deco = "Stringer_Short_01"
     case reeflux450Coop = "Stringer_Short_Coop"
+}
+
+extension MainRowId {
+    static public func versusIds() -> [MainRowId] {
+        return MainRowId.allCases.filter {
+            !$0.rawValue.contains("Coop") && !$0.rawValue.contains("Msn") && !$0.rawValue.contains("AMB") && !$0.rawValue.contains("Rival")
+        }
+    }
 }

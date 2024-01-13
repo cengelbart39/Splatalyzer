@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct BRBulletAdditionMovePlayerSplashNearestParameter: Codable {
-    let type: String
-    let xRate: Double
-    let yPlusRate: Double
-    let zRate: Double
+public struct BRBulletAdditionMovePlayerSplashNearestParameter: Codable {
+    public let type: String
+    public let xRate: Double
+    public let yPlusRate: Double
+    public let zRate: Double
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case type = "$type"
         case xRate = "XRate"
         case yPlusRate = "YPlusRate"

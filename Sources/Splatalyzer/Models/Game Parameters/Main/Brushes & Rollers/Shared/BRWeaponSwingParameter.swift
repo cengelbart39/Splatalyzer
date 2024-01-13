@@ -7,27 +7,27 @@
 
 import Foundation
 
-struct BRWeaponSwingParameter: Codable {
-    let type: String
-    let guideParam: GuideParameter?
-    let inkConsume: Double
-    let inkConsumeRateDepeletion: Double?
-    let inkRecoveryStop: Int
-    let subWeaponSquidDelayFrm: Int?
-    let swingFrame: Int
-    let swingMoveSpeed: Double
+public struct BRWeaponSwingParameter: Codable {
+    public let type: String
+    public let guideParam: GuideParameter?
+    public let inkConsume: Double
+    public let inkConsumeRateDepeletion: Double?
+    public let inkRecoveryStop: Int
+    public let subWeaponSquidDelayFrm: Int?
+    public let swingFrame: Int
+    public let swingMoveSpeed: Double
     
-    struct GuideParameter: Codable {
-        let frame: Int?
-        let widthScale: Double
+    public struct GuideParameter: Codable {
+        public let frame: Int?
+        public let widthScale: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case frame = "Frame"
             case widthScale = "WidthScale"
         }
     }
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case type = "$type"
         case guideParam = "GuideParam"
         case inkConsume = "InkConsume"

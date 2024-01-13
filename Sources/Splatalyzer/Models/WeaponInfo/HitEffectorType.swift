@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum HitEffectorType: String, Codable {
+public enum HitEffectorType: String, Codable {
     case blaster = "Blaster"
     case blasterExtraBombCore = "Blaster_ExtraBombCore"
     case blasterExtraBombCoreWeak = "Blaster_ExtraBombCoreWeak"

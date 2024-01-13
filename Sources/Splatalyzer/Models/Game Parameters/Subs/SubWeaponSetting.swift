@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct SubWeaponSetting: Codable {
-    let type: String
-    let subInkSaveLv: Int?
+public struct SubWeaponSetting: Codable {
+    public let type: String
+    public let subInkSaveLv: Int?
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case type = "$type"
         case subInkSaveLv = "SubInkSaveLv"
     }

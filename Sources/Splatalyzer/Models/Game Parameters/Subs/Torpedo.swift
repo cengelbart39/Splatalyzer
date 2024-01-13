@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct Torpedo: SubParametable {
-    let blastParamChase: BlastParameter
-    let blastParamThrow: BlastParameter
-    let moveParam: MoveParameter
-    let splashNearest: SplashNearest
-    let subWeaponSetting: SubWeaponSetting
-    let weaponParam: WeaponParameter
-    let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
+public struct Torpedo: SubParametable {
+    public let blastParamChase: BlastParameter
+    public let blastParamThrow: BlastParameter
+    public let moveParam: MoveParameter
+    public let splashNearest: SplashNearest
+    public let subWeaponSetting: SubWeaponSetting
+    public let weaponParam: WeaponParameter
+    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case blastParamChase = "BlastParamChase"
         case blastParamThrow = "BlastParamThrow"
         case moveParam = "MoveParam"
@@ -26,16 +26,16 @@ struct Torpedo: SubParametable {
         case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
     }
     
-    struct BlastParameter: Codable {
-        let type: String
-        let distanceDamage: [DistanceDamage]
-        let knockBackParam: KnockbackParameter
-        let paintOffsetY: Double?
-        let paintRadius: Double
-        let splashAroundParam: SplashAroundParameter
-        let splashBlastParam: SplashBlastParameter?
+    public struct BlastParameter: Codable {
+        public let type: String
+        public let distanceDamage: [DistanceDamage]
+        public let knockBackParam: KnockbackParameter
+        public let paintOffsetY: Double?
+        public let paintRadius: Double
+        public let splashAroundParam: SplashAroundParameter
+        public let splashBlastParam: SplashBlastParameter?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case distanceDamage = "DistanceDamage"
             case knockBackParam = "KnockBackParam"
@@ -45,14 +45,14 @@ struct Torpedo: SubParametable {
             case splashBlastParam = "SplashBlastParam"
         }
         
-        struct SplashBlastParameter: Codable {
-            let crossPaintCheckLength: Double
-            let crossPaintRadius: Double
-            let distanceDamage: [DistanceDamage]
-            let knockBackParam: KnockbackParameter
-            let paintRadius: Double
+        public struct SplashBlastParameter: Codable {
+            public let crossPaintCheckLength: Double
+            public let crossPaintRadius: Double
+            public let distanceDamage: [DistanceDamage]
+            public let knockBackParam: KnockbackParameter
+            public let paintRadius: Double
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case crossPaintCheckLength = "CrossPaintCheckLength"
                 case crossPaintRadius = "CrossPaintRadius"
                 case distanceDamage = "DistanceDamage"
@@ -62,28 +62,28 @@ struct Torpedo: SubParametable {
         }
     }
     
-    struct MoveParameter: Codable {
-        let type: String
-        let burstFrame: Int
-        let collisionSESpanFrame: Int
-        let collisionSEVelDotGroundNrm: Double
-        let findCollisionStartRadiusRate: Double
-        let findSpawnSplashAroundParam: SplashAroundParameter
-        let flyRotateAirResist: Double
-        let groundPositionDeg50AirResist: Double
-        let groundPositionHorizonAirResist: Double
-        let groundRotateDeg50AirResist: Double
-        let groundRotateHorizonAirResist: Double
-        let guideHitCollisionType: String
-        let guideRadius: Double
-        let hitVerticalWallReboundMaxRate: Double
-        let spawnRotateRoll: Double
-        let spawnSpeedY: Double
-        let spawnSpeedYWorldMin: Double
-        let spawnSpeedZSpecUp: HighMidLow
-        let warningSERestFrame: Int
+    public struct MoveParameter: Codable {
+        public let type: String
+        public let burstFrame: Int
+        public let collisionSESpanFrame: Int
+        public let collisionSEVelDotGroundNrm: Double
+        public let findCollisionStartRadiusRate: Double
+        public let findSpawnSplashAroundParam: SplashAroundParameter
+        public let flyRotateAirResist: Double
+        public let groundPositionDeg50AirResist: Double
+        public let groundPositionHorizonAirResist: Double
+        public let groundRotateDeg50AirResist: Double
+        public let groundRotateHorizonAirResist: Double
+        public let guideHitCollisionType: String
+        public let guideRadius: Double
+        public let hitVerticalWallReboundMaxRate: Double
+        public let spawnRotateRoll: Double
+        public let spawnSpeedY: Double
+        public let spawnSpeedYWorldMin: Double
+        public let spawnSpeedZSpecUp: HighMidLow
+        public let warningSERestFrame: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case burstFrame = "BurstFrame"
             case collisionSESpanFrame = "CollisionSESpanFrame"
@@ -106,33 +106,33 @@ struct Torpedo: SubParametable {
         }
     }
     
-    struct SplashNearest: Codable {
-        let type: String
+    public struct SplashNearest: Codable {
+        public let type: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
         }
     }
     
-    struct WeaponParameter: Codable {
-        let type: String
-        let inkConsume: Double
-        let inkRecoverStop: Int
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let inkConsume: Double
+        public let inkRecoverStop: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case inkConsume = "InkConsume"
             case inkRecoverStop = "InkRecoverStop"
         }
     }
     
-    struct SpawnBulletAdditionMovePlayerParameter: Codable {
-        let type: String
-        let xRate: Double
-        let yMax: Double
-        let yPlusRate: Double
+    public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public let type: String
+        public let xRate: Double
+        public let yMax: Double
+        public let yPlusRate: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case xRate = "XRate"
             case yMax = "YMax"
@@ -140,7 +140,7 @@ struct Torpedo: SubParametable {
         }
     }
     
-    func getOverwrites(_ playerInfo: PlayerParameters? = nil) -> SubOverwrites {
+    public func getOverwrites(_ playerInfo: PlayerParameters? = nil) -> SubOverwrites {
         return SubOverwrites(
             spawnSpeedZSpecUp: self.moveParam.spawnSpeedZSpecUp,
             periodFirst: nil,

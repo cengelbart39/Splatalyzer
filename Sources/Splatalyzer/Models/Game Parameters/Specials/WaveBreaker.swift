@@ -7,54 +7,54 @@
 
 import Foundation
 
-struct WaveBreaker: SpecialParametable {
-    let bulletInformImpactControlForGeyserParam: BulletInformImpactControlForGeyserParameter
-    let bulletParam: BulletParameter
+public struct WaveBreaker: SpecialParametable {
+    public let bulletInformImpactControlForGeyserParam: BulletInformImpactControlForGeyserParameter
+    public let bulletParam: BulletParameter
     
-    let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
-    let weaponParam: WeaponParameter
+    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
+    public let weaponParam: WeaponParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case bulletInformImpactControlForGeyserParam = "spl__BulletInformImpactControlForGeyserParam"
         case bulletParam = "spl__BulletSpShockSonarParam"
         case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
         case weaponParam = "spl__WeaponSpShockSonarParam"
     }
     
-    struct BulletInformImpactControlForGeyserParameter: Codable {
-        let type: String
-        let addSpeedPerImpact: Double
+    public struct BulletInformImpactControlForGeyserParameter: Codable {
+        public let type: String
+        public let addSpeedPerImpact: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case addSpeedPerImpact = "AddSpeedPerImpact"
         }
     }
     
-    struct BulletParameter: Codable {
-        let type: String
-        let generatorParam: GeneratorParameter
-        let waveParam: WaveParameter
+    public struct BulletParameter: Codable {
+        public let type: String
+        public let generatorParam: GeneratorParameter
+        public let waveParam: WaveParameter
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case generatorParam = "GeneratorParam"
             case waveParam = "WaveParam"
         }
         
-        struct GeneratorParameter: Codable {
-            let headColRadius: Double
-            let hitDamage: Int
-            let hitDamageInterval: Double
-            let hitKnockback: Int
-            let markingFrame: Int
-            let moveParam: MoveParameter
-            let poleColHeight: Double
-            let sphereAnimCurve: RateData
-            let sphereAnimRadius: Double
-            let waveEmitFrameArray: [Int]
+        public struct GeneratorParameter: Codable {
+            public let headColRadius: Double
+            public let hitDamage: Int
+            public let hitDamageInterval: Double
+            public let hitKnockback: Int
+            public let markingFrame: Int
+            public let moveParam: MoveParameter
+            public let poleColHeight: Double
+            public let sphereAnimCurve: RateData
+            public let sphereAnimRadius: Double
+            public let waveEmitFrameArray: [Int]
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case headColRadius = "HeadColRadius"
                 case hitDamage = "HitDamage"
                 case hitDamageInterval = "HitDamageInterval"
@@ -67,15 +67,15 @@ struct WaveBreaker: SpecialParametable {
                 case waveEmitFrameArray = "WaveEmitFrameArray"
             }
             
-            struct MoveParameter: Codable {
-                let flyGravity: Double
-                let flyPositionAirResist: Double
-                let guideHitCollisionType: String
-                let spawnSpeedY: Double
-                let spawnSpeedYWorldMin: Double
-                let spawnSpeedZSpecUp: HighMidLow
+            public struct MoveParameter: Codable {
+                public let flyGravity: Double
+                public let flyPositionAirResist: Double
+                public let guideHitCollisionType: String
+                public let spawnSpeedY: Double
+                public let spawnSpeedYWorldMin: Double
+                public let spawnSpeedZSpecUp: HighMidLow
                 
-                enum CodingKeys: String, CodingKey {
+                public enum CodingKeys: String, CodingKey {
                     case flyGravity = "FlyGravity"
                     case flyPositionAirResist = "FlyPositionAirResist"
                     case guideHitCollisionType = "GuideHitCollisionType"
@@ -86,14 +86,14 @@ struct WaveBreaker: SpecialParametable {
             }
         }
         
-        struct WaveParameter: Codable {
-            let damage: Int
-            let damageYMax: Double
-            let damageYMin: Double
-            let maxFrame: HighMidLow
-            let maxRadius: HighMidLow
+        public struct WaveParameter: Codable {
+            public let damage: Int
+            public let damageYMax: Double
+            public let damageYMin: Double
+            public let maxFrame: HighMidLow
+            public let maxRadius: HighMidLow
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case damage = "Damage"
                 case damageYMax = "DamageYMax"
                 case damageYMin = "DamageYMin"
@@ -103,13 +103,13 @@ struct WaveBreaker: SpecialParametable {
         }
     }
     
-    struct SpawnBulletAdditionMovePlayerParameter: Codable {
-        let type: String
-        let xRate: Double
-        let yPlusRate: Double
-        let zRate: Double
+    public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public let type: String
+        public let xRate: Double
+        public let yPlusRate: Double
+        public let zRate: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case xRate = "XRate"
             case yPlusRate = "YPlusRate"
@@ -117,19 +117,19 @@ struct WaveBreaker: SpecialParametable {
         }
     }
     
-    struct WeaponParameter: Codable {
-        let type: String
-        let shotParam: EmptyStruct
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let shotParam: EmptyStruct
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case shotParam = "ShotParam"
         }
         
-        struct EmptyStruct: Codable { }
+        public struct EmptyStruct: Codable { }
     }
     
-    func getOverwrites() -> SpecialOverwrites {
+    public func getOverwrites() -> SpecialOverwrites {
         return SpecialOverwrites(
             chargeRateAutoPerFrame: nil,
             crossPaintCheckLength: nil,

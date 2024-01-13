@@ -7,25 +7,25 @@
 
 import Foundation
 
-struct Charger: Codable {
-    let collisionParam: CollisionParameter
-    let damageParam: DamageParameter
-    let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
-    let mainWeaponSetting: MainWeaponSettings
-    let moveParam: MoveParameter
-    let paintParam: PaintParameter
-    let splashPaintParam: SplashPaintParameter
-    let splashSpawnParam: SplashSpawnParameter
-    let splashWallHitParam: SplashWallHitParameter
-    let wallDropCollisionPaintParam: WallDropCollisionPaintParameter
-    let wallDropMoveParam: WallDropMoveParameter
-    let weaponKeepChargeParam: KeepChargeParameter?
-    let weaponDivideChargerParam: DivideChargerParameter?
-    let weaponParam: WeaponParameter
-    let weaponScopeParam: ScopeParameter?
-    let weaponChargerGuideShapeParam: GuideShapeParameter?
+public struct Charger: Codable {
+    public let collisionParam: CollisionParameter
+    public let damageParam: DamageParameter
+    public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
+    public let mainWeaponSetting: MainWeaponSettings
+    public let moveParam: MoveParameter
+    public let paintParam: PaintParameter
+    public let splashPaintParam: SplashPaintParameter
+    public let splashSpawnParam: SplashSpawnParameter
+    public let splashWallHitParam: SplashWallHitParameter
+    public let wallDropCollisionPaintParam: WallDropCollisionPaintParameter
+    public let wallDropMoveParam: WallDropMoveParameter
+    public let weaponKeepChargeParam: KeepChargeParameter?
+    public let weaponDivideChargerParam: DivideChargerParameter?
+    public let weaponParam: WeaponParameter
+    public let weaponScopeParam: ScopeParameter?
+    public let weaponChargerGuideShapeParam: GuideShapeParameter?
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case collisionParam = "CollisionParam"
         case damageParam = "DamageParam"
         case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
@@ -46,14 +46,14 @@ struct Charger: Codable {
 }
 
 extension Charger {
-    struct CollisionParameter: Codable {
-        let type: String
-        let endRadiusForField: Double
-        let endRadiusForPlayer: Double
-        let initRadiusForField: Double
-        let initRadiusForPlayer: Double
+    public struct CollisionParameter: Codable {
+        public let type: String
+        public let endRadiusForField: Double
+        public let endRadiusForPlayer: Double
+        public let initRadiusForField: Double
+        public let initRadiusForPlayer: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case endRadiusForField = "EndRadiusForField"
             case endRadiusForPlayer = "EndRadiusForPlayer"
@@ -64,13 +64,13 @@ extension Charger {
 }
 
 extension Charger {
-    struct DamageParameter: Codable {
-        let type: String
-        let valueFullCharge: Int
-        let valueMaxCharge: Int
-        let valueMinCharge: Int
+    public struct DamageParameter: Codable {
+        public let type: String
+        public let valueFullCharge: Int
+        public let valueMaxCharge: Int
+        public let valueMinCharge: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case valueFullCharge = "ValueFullCharge"
             case valueMaxCharge = "ValueMaxCharge"
@@ -80,17 +80,17 @@ extension Charger {
 }
 
 extension Charger {
-    struct MoveParameter: Codable {
-        let type: String
-        let distanceFullCharge: Double
-        let distanceMaxCharge: Double
-        let distanceMinCharge: Double
-        let spawnSpeedFullCharge: Double
-        let spawnSpeedMaxCharge: Double
-        let spawnSpeedMinCharge: Double
-        let throughFullCharge: Bool?
+    public struct MoveParameter: Codable {
+        public let type: String
+        public let distanceFullCharge: Double
+        public let distanceMaxCharge: Double
+        public let distanceMinCharge: Double
+        public let spawnSpeedFullCharge: Double
+        public let spawnSpeedMaxCharge: Double
+        public let spawnSpeedMinCharge: Double
+        public let throughFullCharge: Bool?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case distanceFullCharge = "DistanceFullCharge"
             case distanceMaxCharge = "DistanceMaxCharge"
@@ -104,13 +104,13 @@ extension Charger {
 }
 
 extension Charger {
-    struct PaintParameter: Codable {
-        let type: String
-        let radiusFullCharge: Double
-        let radiusMaxCharge: Double
-        let radiusMinCharge: Double
+    public struct PaintParameter: Codable {
+        public let type: String
+        public let radiusFullCharge: Double
+        public let radiusMaxCharge: Double
+        public let radiusMinCharge: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case radiusFullCharge = "RadiusFullCharge"
             case radiusMaxCharge = "RadiusMaxCharge"
@@ -120,20 +120,20 @@ extension Charger {
 }
 
 extension Charger {
-    struct SplashPaintParameter: Codable {
-        let type: String
-        let depthHalfFullCharge: Double
-        let depthHalfMaxCharge: Double
-        let depthHalfMinCharge: Double
-        let lastSplashRateFullCharge: Double?
-        let lastSplashRateMaxCharge: Double?
-        let lastSplashRateMinCharge: Double?
-        let radiusSpawnNearest: Double
-        let widthHalfFullCharge: Double
-        let widthHalfMaxCharge: Double
-        let widthHalfMinCharge: Double
+    public struct SplashPaintParameter: Codable {
+        public let type: String
+        public let depthHalfFullCharge: Double
+        public let depthHalfMaxCharge: Double
+        public let depthHalfMinCharge: Double
+        public let lastSplashRateFullCharge: Double?
+        public let lastSplashRateMaxCharge: Double?
+        public let lastSplashRateMinCharge: Double?
+        public let radiusSpawnNearest: Double
+        public let widthHalfFullCharge: Double
+        public let widthHalfMaxCharge: Double
+        public let widthHalfMinCharge: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case depthHalfFullCharge = "DepthHalfFullCharge"
             case depthHalfMaxCharge = "DepthHalfMaxCharge"
@@ -150,16 +150,16 @@ extension Charger {
 }
 
 extension Charger {
-    struct SplashSpawnParameter: Codable {
-        let type: String
-        let onTopRateFullCharge: Double
-        let onTopRateMaxCharge: Double
-        let onTopRateMinCharge: Double
-        let skipNum: Int?
-        let spawnNearestChargeRate: Double?
-        let spawnNearestMaxOffsetXZ: Double?
+    public struct SplashSpawnParameter: Codable {
+        public let type: String
+        public let onTopRateFullCharge: Double
+        public let onTopRateMaxCharge: Double
+        public let onTopRateMinCharge: Double
+        public let skipNum: Int?
+        public let spawnNearestChargeRate: Double?
+        public let spawnNearestMaxOffsetXZ: Double?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case onTopRateFullCharge = "OnTopRateFullCharge"
             case onTopRateMaxCharge = "OnTopRateMaxCharge"
@@ -172,13 +172,13 @@ extension Charger {
 }
 
 extension Charger {
-    struct SplashWallHitParameter: Codable {
-        let type: String
-        let spawnParam: SpawnParameter?
-        let wallDropCollisionPaintParam: WallDropCollisionPaintParameter
-        let wallDropMoveParam: WallDropMoveParameter
+    public struct SplashWallHitParameter: Codable {
+        public let type: String
+        public let spawnParam: SpawnParameter?
+        public let wallDropCollisionPaintParam: WallDropCollisionPaintParameter
+        public let wallDropMoveParam: WallDropMoveParameter
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case spawnParam = "SpawnParam"
             case wallDropCollisionPaintParam = "WallDropCollisionPaintParam"
@@ -188,14 +188,14 @@ extension Charger {
 }
 
 extension Charger.SplashWallHitParameter {
-    struct SpawnParameter: Codable {
-        let betweenDistance: Double?
-        let firstDistance: Double?
-        let numMax: Int?
-        let numMinChange: Int?
-        let spawnMaxChargeFrame: Int?
+    public struct SpawnParameter: Codable {
+        public let betweenDistance: Double?
+        public let firstDistance: Double?
+        public let numMax: Int?
+        public let numMinChange: Int?
+        public let spawnMaxChargeFrame: Int?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case betweenDistance = "BetweenDistance"
             case firstDistance = "FirstDistance"
             case numMax = "NumMax"
@@ -206,17 +206,17 @@ extension Charger.SplashWallHitParameter {
 }
 
 extension Charger {
-    struct WallDropCollisionPaintParameter: Codable {
-        let type: String?
-        let paintRadiusFall: Double
-        let paintRadiusFallMaxCharge: Double
-        let paintRadiusFallMinCharge: Double
-        let paintRadiusGround: Double?
-        let paintRadiusShock: Double
-        let paintRadiusShockMaxCharge: Double
-        let paintRadiusShockMinCharge: Double
+    public struct WallDropCollisionPaintParameter: Codable {
+        public let type: String?
+        public let paintRadiusFall: Double
+        public let paintRadiusFallMaxCharge: Double
+        public let paintRadiusFallMinCharge: Double
+        public let paintRadiusGround: Double?
+        public let paintRadiusShock: Double
+        public let paintRadiusShockMaxCharge: Double
+        public let paintRadiusShockMinCharge: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case paintRadiusFall = "PaintRadiusFall"
             case paintRadiusFallMaxCharge = "PaintRadiusFallMaxCharge"
@@ -228,14 +228,14 @@ extension Charger {
         }
     }
     
-    struct WallDropMoveParameter: Codable {
-        let type: String?
-        let fallPeriodFirstFrameMin: Int
-        let fallPeriodFirstTargetSpeed: Double
-        let fallPeriodLastFrameMax: Int
-        let fallPeriodSecondTargetSpeed: Double
+    public struct WallDropMoveParameter: Codable {
+        public let type: String?
+        public let fallPeriodFirstFrameMin: Int
+        public let fallPeriodFirstTargetSpeed: Double
+        public let fallPeriodLastFrameMax: Int
+        public let fallPeriodSecondTargetSpeed: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case fallPeriodFirstFrameMin = "FallPeriodFirstFrameMin"
             case fallPeriodFirstTargetSpeed = "FallPeriodFirstTargetSpeed"
@@ -246,16 +246,16 @@ extension Charger {
 }
 
 extension Charger {
-    struct KeepChargeParameter: Codable {
-        let type: String
-        let enableKeepChargeAnytime: Bool?
-        let enableKeepChargeTransCancel: Bool?
-        let keepChargeFullFrame: Int
-        let keepChargePreDelayFrame: Int
-        let keepChargePreDelayFramePre: Int
-        let muzzleLocalPos: XYZData
+    public struct KeepChargeParameter: Codable {
+        public let type: String
+        public let enableKeepChargeAnytime: Bool?
+        public let enableKeepChargeTransCancel: Bool?
+        public let keepChargeFullFrame: Int
+        public let keepChargePreDelayFrame: Int
+        public let keepChargePreDelayFramePre: Int
+        public let muzzleLocalPos: XYZData
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case enableKeepChargeAnytime = "EnableKeepChargeAnytime"
             case enableKeepChargeTransCancel = "EnableKeepChargeTransCancel"
@@ -266,12 +266,12 @@ extension Charger {
         }
     }
     
-    struct DivideChargerParameter: Codable {
-        let type: String
-        let fullChargeDivideNum: Int
-        let muzzleLocalPos: XYZData
+    public struct DivideChargerParameter: Codable {
+        public let type: String
+        public let fullChargeDivideNum: Int
+        public let muzzleLocalPos: XYZData
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case fullChargeDivideNum = "FullChargeDivideNum"
             case muzzleLocalPos = "MuzzleLocalPos"
@@ -280,21 +280,21 @@ extension Charger {
 }
 
 extension Charger {
-    struct WeaponParameter: Codable {
-        let type: String
-        let airChargeRateByInkEmpty: Int?
-        let chargeFrameFullCharge: Int?
-        let chargeFrameMinCharge: Int?
-        let freezeFrameFullCharge: Int
-        let freezeFrameMinCharge: Int
-        let inkConsumeFullCharge: Double
-        let inkConsumeMinCharge: Double
-        let inkEmptyChargeTimes: Int?
-        let jumpHeightFullCharge: Double
-        let moveJumpDownBias: Double
-        let moveSpeedFullCharge: Double
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let airChargeRateByInkEmpty: Int?
+        public let chargeFrameFullCharge: Int?
+        public let chargeFrameMinCharge: Int?
+        public let freezeFrameFullCharge: Int
+        public let freezeFrameMinCharge: Int
+        public let inkConsumeFullCharge: Double
+        public let inkConsumeMinCharge: Double
+        public let inkEmptyChargeTimes: Int?
+        public let jumpHeightFullCharge: Double
+        public let moveJumpDownBias: Double
+        public let moveSpeedFullCharge: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case airChargeRateByInkEmpty = "AirChargeRateByInkEmpty"
             case chargeFrameFullCharge = "ChargeFrameFullCharge"
@@ -312,20 +312,20 @@ extension Charger {
 }
 
 extension Charger {
-    struct ScopeParameter: Codable {
-        let type: String
-        let cameraFovy: Double?
+    public struct ScopeParameter: Codable {
+        public let type: String
+        public let cameraFovy: Double?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case cameraFovy = "CameraFovy"
         }
     }
     
-    struct GuideShapeParameter: Codable {
-        let type: String
+    public struct GuideShapeParameter: Codable {
+        public let type: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
         }
     }

@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct DamageEffectStat {
-    let id = UUID()
-    let type: DamageType
-    let baseValue: Double
-    let effectValue: Double
-    let distance: Double?
-    let distanceArr: [Double]
-    let subWeapon: SubRowId
+public struct DamageEffectStat {
+    public let id = UUID()
+    public let type: DamageType
+    public let baseValue: Double
+    public let effectValue: Double
+    public let distance: Double?
+    public let distanceArr: [Double]
+    public let subWeapon: SubWeapon
 }
 
 extension Array where Element == DamageEffectStat {

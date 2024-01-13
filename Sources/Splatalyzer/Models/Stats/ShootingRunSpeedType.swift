@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ShootingRunSpeedType {
+public enum ShootingRunSpeedType {
     case moveSpeed
     case moveSpeedCharge
     case moveSpeedFullCharge

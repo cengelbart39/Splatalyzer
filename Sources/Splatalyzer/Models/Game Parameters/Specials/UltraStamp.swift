@@ -7,20 +7,20 @@
 
 import Foundation
 
-struct UltraStamp: SpecialParametable {
-    let swingBigBlastParam: SwingBlastParam
-    let swingBulletWallParam: SwingBulletWallParameter
-    let swingParam: SwingParameter
-    let swingSmallBlastParam: SwingBlastParam
-    let swingWallDropCollisionPaintParam: SwingWallDropCollisionPaintParameter
-    let swingWallDropMoveParam: SwingWallDropMoveParameter
-    let throwBlastParam: ThrowBlastParameter
-    let throwMoveParam: ThrowMoveParameter
+public struct UltraStamp: SpecialParametable {
+    public let swingBigBlastParam: SwingBlastParam
+    public let swingBulletWallParam: SwingBulletWallParameter
+    public let swingParam: SwingParameter
+    public let swingSmallBlastParam: SwingBlastParam
+    public let swingWallDropCollisionPaintParam: SwingWallDropCollisionPaintParameter
+    public let swingWallDropMoveParam: SwingWallDropMoveParameter
+    public let throwBlastParam: ThrowBlastParameter
+    public let throwMoveParam: ThrowMoveParameter
     
-    let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
-    let weaponParam: WeaponParameter
+    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
+    public let weaponParam: WeaponParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case swingBigBlastParam = "SwingBigBlastParam"
         case swingBulletWallParam = "SwingBulletWallParam"
         case swingParam = "SwingParam"
@@ -33,18 +33,18 @@ struct UltraStamp: SpecialParametable {
         case weaponParam = "spl__WeaponSpUltraStampParam"
     }
     
-    struct SwingBlastParam: Codable {
-        let type: String
-        let crossPaintCheckLength: Double
-        let crossPaintRadius: Double
-        let damageAttackerPriority: Bool
-        let damageOffsetY: Double
-        let distanceDamage: [DistanceDamage]
-        let knockBackParam: KnockbackParameter
-        let paintOffsetY: Double
-        let paintRadius: Double
+    public struct SwingBlastParam: Codable {
+        public let type: String
+        public let crossPaintCheckLength: Double
+        public let crossPaintRadius: Double
+        public let damageAttackerPriority: Bool
+        public let damageOffsetY: Double
+        public let distanceDamage: [DistanceDamage]
+        public let knockBackParam: KnockbackParameter
+        public let paintOffsetY: Double
+        public let paintRadius: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case crossPaintCheckLength = "CrossPaintCheckLength"
             case crossPaintRadius = "CrossPaintRadius"
@@ -57,46 +57,46 @@ struct UltraStamp: SpecialParametable {
         }
     }
     
-    struct SwingBulletWallParameter: Codable {
-        let type: String
+    public struct SwingBulletWallParameter: Codable {
+        public let type: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
         }
     }
     
-    struct SwingParameter: Codable {
-        let type: String
-        let defiladeHandSideOffsetLength: Double
-        let stateSwingUpLateFrame: Int
+    public struct SwingParameter: Codable {
+        public let type: String
+        public let defiladeHandSideOffsetLength: Double
+        public let stateSwingUpLateFrame: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case defiladeHandSideOffsetLength = "DefiladeHandSideOffsetLength"
             case stateSwingUpLateFrame = "StateSwingUpLateFrame"
         }
     }
     
-    struct SwingWallDropCollisionPaintParameter: Codable {
-        let type: String
-        let paintRadiusGround: Double
+    public struct SwingWallDropCollisionPaintParameter: Codable {
+        public let type: String
+        public let paintRadiusGround: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case paintRadiusGround = "PaintRadiusGround"
         }
     }
     
-    struct SwingWallDropMoveParameter: Codable {
-        let type: String
-        let fallPeriodFirstFrameMax: Int
-        let fallPeriodFirstFrameMin: Int
-        let fallPeriodLastFrameMax: Int
-        let fallPeriodLastFrameMin: Int
-        let fallPeriodSecondFrame: Int
-        let fallPeriodSecondTargetSpeed: Double
+    public struct SwingWallDropMoveParameter: Codable {
+        public let type: String
+        public let fallPeriodFirstFrameMax: Int
+        public let fallPeriodFirstFrameMin: Int
+        public let fallPeriodLastFrameMax: Int
+        public let fallPeriodLastFrameMin: Int
+        public let fallPeriodSecondFrame: Int
+        public let fallPeriodSecondTargetSpeed: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case fallPeriodFirstFrameMax = "FallPeriodFirstFrameMax"
             case fallPeriodFirstFrameMin = "FallPeriodFirstFrameMin"
@@ -107,15 +107,15 @@ struct UltraStamp: SpecialParametable {
         }
     }
     
-    struct ThrowBlastParameter: Codable {
-        let type: String
-        let crossPaintCheckLength: Double
-        let crosSPaintRadius: Double
-        let distanceDamage: [DistanceDamage]
-        let knockBackParma: KnockbackParameter
-        let paintRadius: Double
+    public struct ThrowBlastParameter: Codable {
+        public let type: String
+        public let crossPaintCheckLength: Double
+        public let crosSPaintRadius: Double
+        public let distanceDamage: [DistanceDamage]
+        public let knockBackParma: KnockbackParameter
+        public let paintRadius: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case crossPaintCheckLength = "CrossPaintCheckLength"
             case crosSPaintRadius = "CrossPaintRadius"
@@ -125,19 +125,19 @@ struct UltraStamp: SpecialParametable {
         }
     }
     
-    struct ThrowMoveParameter: Codable {
-        let type: String
-        let directAccel: Int
-        let directDamageValue: Int
-        let flyGravity: Double
-        let flyPositionAirResist: Double
-        let guideHitCollisionType: String
-        let guideRadius: Double
-        let spawnSpeedY: Double
-        let spawnSpeedYWorldMin: Double
-        let spawnSpeedZSpecUp: HighMidLow
+    public struct ThrowMoveParameter: Codable {
+        public let type: String
+        public let directAccel: Int
+        public let directDamageValue: Int
+        public let flyGravity: Double
+        public let flyPositionAirResist: Double
+        public let guideHitCollisionType: String
+        public let guideRadius: Double
+        public let spawnSpeedY: Double
+        public let spawnSpeedYWorldMin: Double
+        public let spawnSpeedZSpecUp: HighMidLow
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case directAccel = "DirectAccel"
             case directDamageValue = "DirectDamageValue"
@@ -151,13 +151,13 @@ struct UltraStamp: SpecialParametable {
         }
     }
     
-    struct SpawnBulletAdditionMovePlayerParameter: Codable {
-        let type: String
-        let xRate: Double
-        let yPlusRate: Double
-        let zRate: Double
+    public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public let type: String
+        public let xRate: Double
+        public let yPlusRate: Double
+        public let zRate: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case xRate = "XRate"
             case yPlusRate = "YPlusRate"
@@ -165,15 +165,15 @@ struct UltraStamp: SpecialParametable {
         }
     }
     
-    struct WeaponParameter: Codable {
-        let type: String
-        let bangDownSmallTurnLimitAngleDeg: Double
-        let bangDownVelLimitY: Double
-        let holdSwingKnockBackParam: KnockbackParameter
-        let specialTotalFrame: HighMidLow
-        let velLimitNoPaint: Double
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let bangDownSmallTurnLimitAngleDeg: Double
+        public let bangDownVelLimitY: Double
+        public let holdSwingKnockBackParam: KnockbackParameter
+        public let specialTotalFrame: HighMidLow
+        public let velLimitNoPaint: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case bangDownSmallTurnLimitAngleDeg = "BangDownSmall_TurnLimitAngleDeg"
             case bangDownVelLimitY = "BangDown_VelLimitY"
@@ -183,7 +183,7 @@ struct UltraStamp: SpecialParametable {
         }
     }
     
-    func getOverwrites() -> SpecialOverwrites {
+    public func getOverwrites() -> SpecialOverwrites {
         return SpecialOverwrites(
             chargeRateAutoPerFrame: nil,
             crossPaintCheckLength: nil,

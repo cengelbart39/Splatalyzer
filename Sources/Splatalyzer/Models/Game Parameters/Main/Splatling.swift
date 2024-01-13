@@ -7,35 +7,35 @@
 
 import Foundation
 
-struct Splatling: Codable {
-    let collisionParam: CollisionParameter
-    let damageParam: DamageParameter
-    let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
-    let mainWeaponSetting: MainWeaponSettings
-    let moveParam: MoveParameter
-    let paintParam: PaintParameter
-    let splashPaintParam: SplashPaintParameter
-    let splashSpawnParam: SplashSpawnParameter
+public struct Splatling: Codable {
+    public let collisionParam: CollisionParameter
+    public let damageParam: DamageParameter
+    public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
+    public let mainWeaponSetting: MainWeaponSettings
+    public let moveParam: MoveParameter
+    public let paintParam: PaintParameter
+    public let splashPaintParam: SplashPaintParameter
+    public let splashSpawnParam: SplashSpawnParameter
     
-    let variableDamageParam: DamageParameter?
-    let variableMoveParam: MoveParameter?
-    let variablePaintParam: PaintParameter?
-    let variableShotParam: VariableShotParameter?
-    let variableSplashPaintParam: SplashPaintParameter?
-    let variableSplashSpawnParam: SplashSpawnParameter?
+    public let variableDamageParam: DamageParameter?
+    public let variableMoveParam: MoveParameter?
+    public let variablePaintParam: PaintParameter?
+    public let variableShotParam: VariableShotParameter?
+    public let variableSplashPaintParam: SplashPaintParameter?
+    public let variableSplashSpawnParam: SplashSpawnParameter?
     
-    let wallDropCollisionPaintParam: WallDropCollisionPaintParameter
-    let wallDropMoveParam: WallDropMoveParameter
+    public let wallDropCollisionPaintParam: WallDropCollisionPaintParameter
+    public let wallDropMoveParam: WallDropMoveParameter
     
-    let weaponFullChargeParam: FullChargeParameter?
-    let weaponKeepChargeParam: KeepChargeParameter?
+    public let weaponFullChargeParam: FullChargeParameter?
+    public let weaponKeepChargeParam: KeepChargeParameter?
     
-    let weaponParam: WeaponParameter
+    public let weaponParam: WeaponParameter
     
-    let bulletShooterTailLengthParam: BulletShooterTailLengthParameter
-    let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
+    public let bulletShooterTailLengthParam: BulletShooterTailLengthParameter
+    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case collisionParam = "CollisionParam"
         case damageParam = "DamageParam"
         case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
@@ -61,16 +61,16 @@ struct Splatling: Codable {
 }
 
 extension Splatling {
-    struct CollisionParameter: Codable {
-        let type: String
-        let changeFrameForField: Int
-        let endRadiusForField: Double
-        let endRadiusForPlayer: Double
-        let friendThroughFrameForPlayer: Int
-        let initRadiusForField: Double
-        let initRadiusForPlayer: Double
+    public struct CollisionParameter: Codable {
+        public let type: String
+        public let changeFrameForField: Int
+        public let endRadiusForField: Double
+        public let endRadiusForPlayer: Double
+        public let friendThroughFrameForPlayer: Int
+        public let initRadiusForField: Double
+        public let initRadiusForPlayer: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case changeFrameForField = "ChangeFrameForField"
             case endRadiusForField = "EndRadiusForField"
@@ -81,15 +81,15 @@ extension Splatling {
         }
     }
     
-    struct DamageParameter: Codable {
-        let type: String
-        let reduceEndFrame: Int
-        let reduceStartFrame: Int
-        let valueFullChargeMax: Int
-        let valueMax: Int
-        let valueMin: Int
+    public struct DamageParameter: Codable {
+        public let type: String
+        public let reduceEndFrame: Int
+        public let reduceStartFrame: Int
+        public let valueFullChargeMax: Int
+        public let valueMax: Int
+        public let valueMin: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case reduceEndFrame = "ReduceEndFrame"
             case reduceStartFrame = "ReduceStartFrame"
@@ -99,16 +99,16 @@ extension Splatling {
         }
     }
     
-    struct MoveParameter: Codable {
-        let type: String
-        let goStraightStateEndMaxSpeed: Double
-        let goStraightToBrakeStateFrame: Int
-        let spawnSpeed: Double
-        let spawnSpeedFirstLandAndSecond: Double
-        let spawnSpeedRandomBias: Double
-        let spawnSpeedRandomRate: Double
+    public struct MoveParameter: Codable {
+        public let type: String
+        public let goStraightStateEndMaxSpeed: Double
+        public let goStraightToBrakeStateFrame: Int
+        public let spawnSpeed: Double
+        public let spawnSpeedFirstLandAndSecond: Double
+        public let spawnSpeedRandomBias: Double
+        public let spawnSpeedRandomRate: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case goStraightStateEndMaxSpeed = "GoStraightStateEndMaxSpeed"
             case goStraightToBrakeStateFrame = "GoStraightToBrakeStateFrame"
@@ -119,22 +119,22 @@ extension Splatling {
         }
     }
 
-    struct PaintParameter: Codable {
-        let type: String
-        let depthScaleMax: Double
-        let depthScaleMaxBreakFree: Double
-        let depthScaleMin: Double
-        let depthScaleMinBreakFree: Double
-        let distanceFar: Double?
-        let distanceMiddle: Double
-        let distanceNear: Double?
-        let heightUseDepthScaleMaxBreakFree: Double
-        let heightUseDepthScaleMinBreakFree: Double?
-        let widthHalfFar: Double
-        let widthHalfMiddle: Double
-        let widthHalfNear: Double
+    public struct PaintParameter: Codable {
+        public let type: String
+        public let depthScaleMax: Double
+        public let depthScaleMaxBreakFree: Double
+        public let depthScaleMin: Double
+        public let depthScaleMinBreakFree: Double
+        public let distanceFar: Double?
+        public let distanceMiddle: Double
+        public let distanceNear: Double?
+        public let heightUseDepthScaleMaxBreakFree: Double
+        public let heightUseDepthScaleMinBreakFree: Double?
+        public let widthHalfFar: Double
+        public let widthHalfMiddle: Double
+        public let widthHalfNear: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case depthScaleMax = "DepthScaleMax"
             case depthScaleMaxBreakFree = "DepthScaleMaxBreakFree"
@@ -151,16 +151,16 @@ extension Splatling {
         }
     }
     
-    struct SplashPaintParameter: Codable {
-        let type: String
-        let depthMaxDropHeight: Double?
-        let depthMinDropHeight: Double?
-        let depthScaleMax: Double
-        let depthScaleMin: Double
-        let widthHalf: Double
-        let widthHalfNearest: Double
+    public struct SplashPaintParameter: Codable {
+        public let type: String
+        public let depthMaxDropHeight: Double?
+        public let depthMinDropHeight: Double?
+        public let depthScaleMax: Double
+        public let depthScaleMin: Double
+        public let widthHalf: Double
+        public let widthHalfNearest: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case depthMaxDropHeight = "DepthMaxDropHeight"
             case depthMinDropHeight = "DepthMinDropHeight"
@@ -171,15 +171,15 @@ extension Splatling {
         }
     }
 
-    struct SplashSpawnParameter: Codable {
-        let type: String
-        let forceSpawnNearestAddNumArray: [Int]?
-        let spawnBetweenLength: Double
-        let spawnNearestLength: Double?
-        let spawnNum: Double
-        let splitNum: Int
+    public struct SplashSpawnParameter: Codable {
+        public let type: String
+        public let forceSpawnNearestAddNumArray: [Int]?
+        public let spawnBetweenLength: Double
+        public let spawnNearestLength: Double?
+        public let spawnNum: Double
+        public let splitNum: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case forceSpawnNearestAddNumArray = "ForceSpawnNearestAddNumArray"
             case spawnBetweenLength = "SpawnBetweenLength"
@@ -189,21 +189,21 @@ extension Splatling {
         }
     }
 
-    struct VariableShotParameter: Codable {
-        let type: String
-        let jumpDegBiasDecreaseStartFrame: Int
-        let jumpDegBiasEndFrame: Int
-        let jumpDegBiasMax: Double
-        let jumpDegSwerve: Double
-        let moveSpeed: Double
-        let pitchDegBias: Double
-        let pitchDegSwerve: Double
-        let repeatFrame: Int
-        let standDegBiasMax: Double
-        let standDegSwerve: Double
-        let variableInterpolatedFrame: Int
+    public struct VariableShotParameter: Codable {
+        public let type: String
+        public let jumpDegBiasDecreaseStartFrame: Int
+        public let jumpDegBiasEndFrame: Int
+        public let jumpDegBiasMax: Double
+        public let jumpDegSwerve: Double
+        public let moveSpeed: Double
+        public let pitchDegBias: Double
+        public let pitchDegSwerve: Double
+        public let repeatFrame: Int
+        public let standDegBiasMax: Double
+        public let standDegSwerve: Double
+        public let variableInterpolatedFrame: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case jumpDegBiasDecreaseStartFrame = "Jump_DegBiasDecreaseStartFrame"
             case jumpDegBiasEndFrame = "Jump_DegBiasEndFrame"
@@ -219,13 +219,13 @@ extension Splatling {
         }
     }
     
-    struct WallDropCollisionPaintParameter: Codable {
-        let type: String
-        let paintRadiusFall: Double
-        let paintRadiusGround: Double
-        let paintRadiusShock: Double
+    public struct WallDropCollisionPaintParameter: Codable {
+        public let type: String
+        public let paintRadiusFall: Double
+        public let paintRadiusGround: Double
+        public let paintRadiusShock: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case paintRadiusFall = "PaintRadiusFall"
             case paintRadiusGround = "PaintRadiusGround"
@@ -233,17 +233,17 @@ extension Splatling {
         }
     }
     
-    struct WallDropMoveParameter: Codable {
-        let type: String
-        let fallPeriodFirstFrameMax: Int
-        let fallPeriodFirstFrameMin: Int
-        let fallPeriodFirstTargetSpeed: Double
-        let fallPeriodLastFrameMax: Int
-        let fallPeriodLastFrameMin: Int
-        let fallPeriodSecondFrame: Int
-        let fallPeriodSecondTargetSpeed: Double
+    public struct WallDropMoveParameter: Codable {
+        public let type: String
+        public let fallPeriodFirstFrameMax: Int
+        public let fallPeriodFirstFrameMin: Int
+        public let fallPeriodFirstTargetSpeed: Double
+        public let fallPeriodLastFrameMax: Int
+        public let fallPeriodLastFrameMin: Int
+        public let fallPeriodSecondFrame: Int
+        public let fallPeriodSecondTargetSpeed: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case fallPeriodFirstFrameMax = "FallPeriodFirstFrameMax"
             case fallPeriodFirstFrameMin = "FallPeriodFirstFrameMin"
@@ -255,26 +255,26 @@ extension Splatling {
         }
     }
     
-    struct FullChargeParameter: Codable {
-        let type: String
-        let maxShootingFrameSecond: Int
-        let repeatFrame: Int
+    public struct FullChargeParameter: Codable {
+        public let type: String
+        public let maxShootingFrameSecond: Int
+        public let repeatFrame: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case maxShootingFrameSecond = "MaxShootingFrame_Second"
             case repeatFrame = "RepeatFrame"
         }
     }
 
-    struct KeepChargeParameter: Codable {
-        let type: String
-        let enableKeepChargeAnytime: Bool
-        let keepChargeFullFrame: Int
-        let keepChargePreDelayFrame: Int
-        let keepChargePreDelayFramePre: Int
+    public struct KeepChargeParameter: Codable {
+        public let type: String
+        public let enableKeepChargeAnytime: Bool
+        public let keepChargeFullFrame: Int
+        public let keepChargePreDelayFrame: Int
+        public let keepChargePreDelayFramePre: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case enableKeepChargeAnytime = "EnableKeepChargeAnytime"
             case keepChargeFullFrame = "KeepChargeFullFrame"
@@ -283,37 +283,37 @@ extension Splatling {
         }
     }
 
-    struct WeaponParameter: Codable {
-        let type: String
-        let burstAimMoveFrame: Int?
-        let chargeFrameFirst: Int?
-        let chargeFrameSecond: Int?
-        let enableRecharge: Bool?
-        let inkConsume: Double
-        let inkEmptyChargeTimes: Int?
-        let inkRecoverStop: Int
-        let jumpGndCharge: Double?
-        let jumpDegBiasDecreaseStartFrame: Int
-        let jumpDegBiasEndFrame: Int
-        let jumpDegBiasMax: Double
-        let jumpDegSwerve: Double
-        let maxShootingFrameFirst: Int?
-        let maxShootingFrameSecond: Int?
-        let moveSpeed: Double
-        let moveSpeedCharge: Double?
-        let pitchDegBias: Double
-        let pitchDegSwerve: Double
-        let postDelayFrame: Int
-        let preDelayFrameSquidShot: Int
-        let repeatFrame: Int
-        let shotGuideFrame: Int
-        let standDegBiasMax: Double
-        let standDegBiasMin: Double
-        let standDegSwerve: Double
-        let velGndBiasCharge: Double
-        let velGndDownRtCharge: Double
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let burstAimMoveFrame: Int?
+        public let chargeFrameFirst: Int?
+        public let chargeFrameSecond: Int?
+        public let enableRecharge: Bool?
+        public let inkConsume: Double
+        public let inkEmptyChargeTimes: Int?
+        public let inkRecoverStop: Int
+        public let jumpGndCharge: Double?
+        public let jumpDegBiasDecreaseStartFrame: Int
+        public let jumpDegBiasEndFrame: Int
+        public let jumpDegBiasMax: Double
+        public let jumpDegSwerve: Double
+        public let maxShootingFrameFirst: Int?
+        public let maxShootingFrameSecond: Int?
+        public let moveSpeed: Double
+        public let moveSpeedCharge: Double?
+        public let pitchDegBias: Double
+        public let pitchDegSwerve: Double
+        public let postDelayFrame: Int
+        public let preDelayFrameSquidShot: Int
+        public let repeatFrame: Int
+        public let shotGuideFrame: Int
+        public let standDegBiasMax: Double
+        public let standDegBiasMin: Double
+        public let standDegSwerve: Double
+        public let velGndBiasCharge: Double
+        public let velGndDownRtCharge: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case burstAimMoveFrame = "BurstAimMoveFrame"
             case chargeFrameFirst = "ChargeFrame_First"
@@ -345,20 +345,20 @@ extension Splatling {
         }
     }
 
-    struct BulletShooterTailLengthParameter: Codable {
-        let type: String
-        let maxLengthFrame: Int
+    public struct BulletShooterTailLengthParameter: Codable {
+        public let type: String
+        public let maxLengthFrame: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case maxLengthFrame = "MaxLengthFrame"
         }
     }
     
-    struct SpawnBulletAdditionMovePlayerParameter: Codable {
-        let type: String
+    public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public let type: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
         }
     }

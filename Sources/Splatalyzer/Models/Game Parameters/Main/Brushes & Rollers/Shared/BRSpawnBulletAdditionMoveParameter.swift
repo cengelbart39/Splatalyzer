@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct BRSpawnBulletAdditionMoveParameter: Codable {
-    let type: String
-    let zRate: Double
+public struct BRSpawnBulletAdditionMoveParameter: Codable {
+    public let type: String
+    public let zRate: Double
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case type = "$type"
         case zRate = "ZRate"
     }

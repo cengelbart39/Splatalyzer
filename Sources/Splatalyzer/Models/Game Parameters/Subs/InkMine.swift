@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct InkMine: SubParametable {
-    let areaParam: AreaParameter
-    let blastParam: BlastParameter
-    let moveParam: MoveParameter
-    let subWeaponSetting: SubWeaponSetting
-    let weaponParam: WeaponParameter
+public struct InkMine: SubParametable {
+    public let areaParam: AreaParameter
+    public let blastParam: BlastParameter
+    public let moveParam: MoveParameter
+    public let subWeaponSetting: SubWeaponSetting
+    public let weaponParam: WeaponParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case areaParam = "AreaParam"
         case blastParam = "BlastParam"
         case moveParam = "MoveParam"
@@ -22,14 +22,14 @@ struct InkMine: SubParametable {
         case weaponParam = "WeaponParam"
     }
     
-    struct AreaParameter: Codable {
-        let type: String
-        let areaOffsetY: Double
-        let distance: HighMidLow
-        let frame: Int
-        let markingFrameSubSpec: HighMidLow
+    public struct AreaParameter: Codable {
+        public let type: String
+        public let areaOffsetY: Double
+        public let distance: HighMidLow
+        public let frame: Int
+        public let markingFrameSubSpec: HighMidLow
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case areaOffsetY = "AreaOffsetY"
             case distance = "Distance"
@@ -38,19 +38,19 @@ struct InkMine: SubParametable {
         }
     }
     
-    struct BlastParameter: Codable {
-        let type: String
-        let crossPaintCheckLength: Double
-        let crossPaintRadius: Double
-        let damageOffsetY: Double
-        let distanceDamage: [DistanceDamage]
-        let knockBackParam: KnockbackParameter
-        let paintOffsetY: Double
-        let paintRadius: Double
-        let planeDamage: [DistanceDamage]
-        let subSpecialSpecUpList: [SubSpecialSpecUpList]
+    public struct BlastParameter: Codable {
+        public let type: String
+        public let crossPaintCheckLength: Double
+        public let crossPaintRadius: Double
+        public let damageOffsetY: Double
+        public let distanceDamage: [DistanceDamage]
+        public let knockBackParam: KnockbackParameter
+        public let paintOffsetY: Double
+        public let paintRadius: Double
+        public let planeDamage: [DistanceDamage]
+        public let subSpecialSpecUpList: [SubSpecialSpecUpList]
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case crossPaintCheckLength = "CrossPaintCheckLength"
             case crossPaintRadius = "CrossPaintRadius"
@@ -64,15 +64,15 @@ struct InkMine: SubParametable {
         }
     }
     
-    struct MoveParameter: Codable {
-        let type: String
-        let guideRadius: Double
-        let maxPlaceNum: Int
-        let placePaintRadius: Double
-        let sensorRadius: HighMidLow
-        let spawnSpeedZSpecUp: HighMidLow
+    public struct MoveParameter: Codable {
+        public let type: String
+        public let guideRadius: Double
+        public let maxPlaceNum: Int
+        public let placePaintRadius: Double
+        public let sensorRadius: HighMidLow
+        public let spawnSpeedZSpecUp: HighMidLow
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case guideRadius = "GuideRadius"
             case maxPlaceNum = "MaxPlaceNum"
@@ -82,29 +82,29 @@ struct InkMine: SubParametable {
         }
     }
     
-    struct WeaponParameter: Codable {
-        let type: String
-        let inkConsume: Double
-        let inkRecoverStop: Int
-        let knockBackParam: KnockBackParam
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let inkConsume: Double
+        public let inkRecoverStop: Int
+        public let knockBackParam: KnockBackParam
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case inkConsume = "InkConsume"
             case inkRecoverStop = "InkRecoverStop"
             case knockBackParam = "KnockBackParam"
         }
         
-        struct KnockBackParam: Codable {
-            let impactValue: Double
+        public struct KnockBackParam: Codable {
+            public let impactValue: Double
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case impactValue = "ImpactValue"
             }
         }
     }
     
-    func getOverwrites(_ playerInfo: PlayerParameters? = nil) -> SubOverwrites {
+    public func getOverwrites(_ playerInfo: PlayerParameters? = nil) -> SubOverwrites {
         return SubOverwrites(
             spawnSpeedZSpecUp: self.moveParam.spawnSpeedZSpecUp,
             periodFirst: nil,

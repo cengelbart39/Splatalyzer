@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct APEffect {
-    let baseEffect: Double
-    let effect: Double
+public struct APEffect {
+    public let baseEffect: Double
+    public let effect: Double
     
-    init(
+    public init(
         for value: AbilityValue,
         in values: AbilityValues,
         of ap: Int,
@@ -42,11 +42,11 @@ struct APEffect {
         self.effect = result
     }
     
-    func baseEffectToDamage() -> Double {
+    public func baseEffectToDamage() -> Double {
         return baseEffect * 100 - 0.05
     }
     
-    func effectToDamage() -> Double {
+    public func effectToDamage() -> Double {
         return effect * 100 - 0.05
     }
 }

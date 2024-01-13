@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct BRBodyParameter: Codable {
-    let type: String
-    let collisionParam: CollisionParameter
-    let damage: Int
-    let paintParam: PaintParameter
-    let sideParam: SideParameter
+public struct BRBodyParameter: Codable {
+    public let type: String
+    public let collisionParam: CollisionParameter
+    public let damage: Int
+    public let paintParam: PaintParameter
+    public let sideParam: SideParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case type = "$type"
         case collisionParam = "CollisionParam"
         case damage = "Damage"
@@ -24,15 +24,15 @@ struct BRBodyParameter: Codable {
 }
 
 extension BRBodyParameter {
-    struct CollisionParameter: Codable {
-        let downRayCastLength: Double?
-        let knockBackDefeat: Bool?
-        let knockBackOpponent: BRKnockBack
-        let knockBackRollerPlayerDamageOff: BRKnockBack
-        let knockBackRollerPlayerDamageOn: BRKnockBack
-        let widthHalf: Double
+    public struct CollisionParameter: Codable {
+        public let downRayCastLength: Double?
+        public let knockBackDefeat: Bool?
+        public let knockBackOpponent: BRKnockBack
+        public let knockBackRollerPlayerDamageOff: BRKnockBack
+        public let knockBackRollerPlayerDamageOn: BRKnockBack
+        public let widthHalf: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case downRayCastLength = "DownRayCastLength"
             case knockBackDefeat = "KnockBackDefeat"
             case knockBackOpponent = "KnockBackOpponent"
@@ -42,15 +42,15 @@ extension BRBodyParameter {
         }
     }
     
-    struct PaintParameter: Codable {
-        let depth: Double?
-        let speedMax: Double
-        let speedMin: Double?
-        let widthAddWallCut: Double?
-        let widthHalfMax: Double
-        let widthHalfMin: Double?
+    public struct PaintParameter: Codable {
+        public let depth: Double?
+        public let speedMax: Double
+        public let speedMin: Double?
+        public let widthAddWallCut: Double?
+        public let widthHalfMax: Double
+        public let widthHalfMin: Double?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case depth = "Depth"
             case speedMax = "SpeedMax"
             case speedMin = "SpeedMin"
@@ -60,11 +60,11 @@ extension BRBodyParameter {
         }
     }
     
-    struct SideParameter: Codable {
-        let checkLength: Double
-        let radius: Double
+    public struct SideParameter: Codable {
+        public let checkLength: Double
+        public let radius: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case checkLength = "CheckLength"
             case radius = "Radius"
         }

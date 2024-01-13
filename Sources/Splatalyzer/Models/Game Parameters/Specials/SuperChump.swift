@@ -7,35 +7,35 @@
 
 import Foundation
 
-struct SuperChump: SpecialParametable {
-    let iceParam: IceParameter
-    let pipeParam: PipeParameter
-    let weaponParam: WeaponParameter
+public struct SuperChump: SpecialParametable {
+    public let iceParam: IceParameter
+    public let pipeParam: PipeParameter
+    public let weaponParam: WeaponParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case iceParam = "IceParam"
         case pipeParam = "PipeParam"
         case weaponParam = "WeaponParam"
     }
     
-    struct IceParameter: Codable {
-        let type: String
-        let blastParam: BlastParameter
-        let burstFrame: Int
-        let collisionRadius: Double
-        let flyingFrame: Int
-        let groundOffsetY: Double
-        let hitPoint: Int
-        let initialScale: Double
-        let paintRadius: Double
-        let rotateDegRatePerFrame: Double
-        let scaleResetFrame: Int
-        let spawnRotateDegMax: Double
-        let spawnRotateDegMin: Double
-        let warningAnimRestFrame: Int
-        let warningSERestFrame: Int
+    public struct IceParameter: Codable {
+        public let type: String
+        public let blastParam: BlastParameter
+        public let burstFrame: Int
+        public let collisionRadius: Double
+        public let flyingFrame: Int
+        public let groundOffsetY: Double
+        public let hitPoint: Int
+        public let initialScale: Double
+        public let paintRadius: Double
+        public let rotateDegRatePerFrame: Double
+        public let scaleResetFrame: Int
+        public let spawnRotateDegMax: Double
+        public let spawnRotateDegMin: Double
+        public let warningAnimRestFrame: Int
+        public let warningSERestFrame: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case blastParam = "BlastParam"
             case burstFrame = "BurstFrame"
@@ -53,19 +53,19 @@ struct SuperChump: SpecialParametable {
             case warningSERestFrame = "WarningSERestFrame"
         }
         
-        struct BlastParameter: Codable {
-            let crossPaintCheckLength: Double
-            let crossPaintRadius: Double
-            let damageOffsetY: Double
-            let distanceDamage: [DistanceDamage]
-            let knockBackParam: KnockbackParameter
-            let paintHeight: Double
-            let paintOffsetY: Double
-            let paintRadius: Double
-            let splashAroundParam: SplashAroundParameter
-            let subSpecialSpecUpList: [SubSpecialSpecUpList]
+        public struct BlastParameter: Codable {
+            public let crossPaintCheckLength: Double
+            public let crossPaintRadius: Double
+            public let damageOffsetY: Double
+            public let distanceDamage: [DistanceDamage]
+            public let knockBackParam: KnockbackParameter
+            public let paintHeight: Double
+            public let paintOffsetY: Double
+            public let paintRadius: Double
+            public let splashAroundParam: SplashAroundParameter
+            public let subSpecialSpecUpList: [SubSpecialSpecUpList]
             
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case crossPaintCheckLength = "CrossPaintCheckLength"
                 case crossPaintRadius = "CrossPaintRadius"
                 case damageOffsetY = "DamageOffsetY"
@@ -80,13 +80,13 @@ struct SuperChump: SpecialParametable {
         }
     }
     
-    struct PipeParameter: Codable {
-        let type: String
-        let depthRadius: Double
-        let minBetweenDistance: Double
-        let targetCenterBias: Double
+    public struct PipeParameter: Codable {
+        public let type: String
+        public let depthRadius: Double
+        public let minBetweenDistance: Double
+        public let targetCenterBias: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case depthRadius = "DepthRadius"
             case minBetweenDistance = "MinBetweenDistance"
@@ -94,18 +94,18 @@ struct SuperChump: SpecialParametable {
         }
     }
     
-    struct WeaponParameter: Codable {
-        let type: String
-        let specialTotalFrame: Int
-        let targetCenterBias: Double
-        let targetCenterDistanceMax: Double
-        let targetCenterDistanceMin: Double
-        let targetCenterRadius: Double
-        let targetHeightCheckSpanFrame: Int
-        let useDistanceMinCameraDownRate: Double
-        let useDistanceMinCameraUpRate: Double
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let specialTotalFrame: Int
+        public let targetCenterBias: Double
+        public let targetCenterDistanceMax: Double
+        public let targetCenterDistanceMin: Double
+        public let targetCenterRadius: Double
+        public let targetHeightCheckSpanFrame: Int
+        public let useDistanceMinCameraDownRate: Double
+        public let useDistanceMinCameraUpRate: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case specialTotalFrame = "SpecialTotalFrame"
             case targetCenterBias = "TargetCenterBias"
@@ -118,7 +118,7 @@ struct SuperChump: SpecialParametable {
         }
     }
     
-    func getOverwrites() -> SpecialOverwrites {
+    public func getOverwrites() -> SpecialOverwrites {
         return SpecialOverwrites(
             chargeRateAutoPerFrame: nil,
             crossPaintCheckLength: self.iceParam.blastParam.subSpecialSpecUpList[safe: 1]?.value,

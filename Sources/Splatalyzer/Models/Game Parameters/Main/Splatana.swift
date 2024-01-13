@@ -7,19 +7,19 @@
 
 import Foundation
 
-struct Splatana: Codable {
-    let bulletSaberHorizontalParam: BulletParameter
-    let bulletSaberSlashHorizontalParam: BulletSlashParameter
+public struct Splatana: Codable {
+    public let bulletSaberHorizontalParam: BulletParameter
+    public let bulletSaberSlashHorizontalParam: BulletSlashParameter
     
-    let bulletSaberSlashVerticalParam: BulletSlashParameter
-    let bulletSaberVerticalParam: BulletParameter
+    public let bulletSaberSlashVerticalParam: BulletSlashParameter
+    public let bulletSaberVerticalParam: BulletParameter
     
-    let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter?
-    let mainWeaponSetting: MainWeaponSettings
+    public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter?
+    public let mainWeaponSetting: MainWeaponSettings
     
-    let weaponSaberParam: WeaponParameter
+    public let weaponSaberParam: WeaponParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case bulletSaberHorizontalParam = "BulletSaberHorizontalParam"
         case bulletSaberSlashHorizontalParam = "BulletSaberSlashHorizontalParam"
         case bulletSaberSlashVerticalParam = "BulletSaberSlashVerticalParam"
@@ -31,18 +31,18 @@ struct Splatana: Codable {
 }
 
 extension Splatana {
-    struct BulletParameter: Codable {
-        let type: String
-        let burstParam: BurstParameter
-        let collisionParam: CollisionParameter
-        let damageParam: DamageParameter
-        let moveParam: MoveParameter
-        let paintParam: PaintParameter?
-        let splashPaintParam: SplashPaintParameter?
-        let splashSpawnParam: SplashSpawnParameter
-        let wallDropPaintParam: WallDropPaintParameter?
+    public struct BulletParameter: Codable {
+        public let type: String
+        public let burstParam: BurstParameter
+        public let collisionParam: CollisionParameter
+        public let damageParam: DamageParameter
+        public let moveParam: MoveParameter
+        public let paintParam: PaintParameter?
+        public let splashPaintParam: SplashPaintParameter?
+        public let splashSpawnParam: SplashSpawnParameter
+        public let wallDropPaintParam: WallDropPaintParameter?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case burstParam = "BurstParam"
             case collisionParam = "CollisionParam"
@@ -57,14 +57,14 @@ extension Splatana {
 }
 
 extension Splatana.BulletParameter {
-    struct BurstParameter: Codable {
-        let burstFrame: Int
-        let isEmitSplash: Bool?
-        let splashColRadius: Double?
-        let splashDrawRadius: Double?
-        let splashPaintRadius: Double
+    public struct BurstParameter: Codable {
+        public let burstFrame: Int
+        public let isEmitSplash: Bool?
+        public let splashColRadius: Double?
+        public let splashDrawRadius: Double?
+        public let splashPaintRadius: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case burstFrame = "BurstFrame"
             case isEmitSplash = "IsEmitSplash"
             case splashColRadius = "SplashColRadius"
@@ -73,41 +73,41 @@ extension Splatana.BulletParameter {
         }
     }
     
-    struct CollisionParameter: Codable {
-        let coreIndex: Int
-        let offsetArray: [XYZData]
-        let paramArray: [ParameterItem]
+    public struct CollisionParameter: Codable {
+        public let coreIndex: Int
+        public let offsetArray: [XYZData]
+        public let paramArray: [ParameterItem]
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case coreIndex = "CoreIndex"
             case offsetArray = "OffsetArray"
             case paramArray = "ParamArray"
         }
     }
     
-    struct DamageParameter: Codable {
-        let hasGuard: Bool?
-        let hitDamage: Int
+    public struct DamageParameter: Codable {
+        public let hasGuard: Bool?
+        public let hitDamage: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case hasGuard = "HasGuard"
             case hitDamage = "HitDamage"
         }
     }
     
-    struct MoveParameter: Codable {
-        let brakeAirResist: Double?
-        let brakeGravity: Double
-        let brakeToFreeStartFrame: Int?
-        let brakeToFreeVelocityXZ: Double?
-        let brakeToFreeVelocityY: Double?
-        let freeAirResist: Double?
-        let freeGravity: Double
-        let goStraightStateEndMaxSpeed: Double?
-        let goStraightToBrakeStartFrame: Int
-        let spawnSpeed: Double
+    public struct MoveParameter: Codable {
+        public let brakeAirResist: Double?
+        public let brakeGravity: Double
+        public let brakeToFreeStartFrame: Int?
+        public let brakeToFreeVelocityXZ: Double?
+        public let brakeToFreeVelocityY: Double?
+        public let freeAirResist: Double?
+        public let freeGravity: Double
+        public let goStraightStateEndMaxSpeed: Double?
+        public let goStraightToBrakeStartFrame: Int
+        public let spawnSpeed: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case brakeAirResist = "BrakeAirResist"
             case brakeGravity = "BrakeGravity"
             case brakeToFreeStartFrame = "BrakeToFreeStateFrame"
@@ -121,14 +121,14 @@ extension Splatana.BulletParameter {
         }
     }
     
-    struct PaintParameter: Codable {
-        let castPaintDistance: Double?
-        let depthScaleMax: Double?
-        let depthScaleMin: Double?
-        let paintDegreeMax: Double?
-        let widthHalf: Double
+    public struct PaintParameter: Codable {
+        public let castPaintDistance: Double?
+        public let depthScaleMax: Double?
+        public let depthScaleMin: Double?
+        public let paintDegreeMax: Double?
+        public let widthHalf: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case castPaintDistance = "CastPaintDistance"
             case depthScaleMax = "DepthScaleMax"
             case depthScaleMin = "DepthScaleMin"
@@ -137,13 +137,13 @@ extension Splatana.BulletParameter {
         }
     }
     
-    struct SplashPaintParameter: Codable {
-        let depthScaleMax: Double?
-        let depthScaleMin: Double?
-        let widthHalf: Double
-        let widthHalfNearest: Double?
+    public struct SplashPaintParameter: Codable {
+        public let depthScaleMax: Double?
+        public let depthScaleMin: Double?
+        public let widthHalf: Double
+        public let widthHalfNearest: Double?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case depthScaleMax = "DepthScaleMax"
             case depthScaleMin = "DepthScaleMin"
             case widthHalf = "WidthHalf"
@@ -151,13 +151,13 @@ extension Splatana.BulletParameter {
         }
     }
     
-    struct SplashSpawnParameter: Codable {
-        let dropInterval: Double
-        let nearestLen: Double?
-        let splashNumMax: Int
-        let splitNum: Int?
+    public struct SplashSpawnParameter: Codable {
+        public let dropInterval: Double
+        public let nearestLen: Double?
+        public let splashNumMax: Int
+        public let splitNum: Int?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case dropInterval = "DropInterval"
             case nearestLen = "NearestLen"
             case splashNumMax = "SplashNumMax"
@@ -165,26 +165,26 @@ extension Splatana.BulletParameter {
         }
     }
     
-    struct WallDropPaintParameter: Codable {
-        let paintRadiusShock: Double
+    public struct WallDropPaintParameter: Codable {
+        public let paintRadiusShock: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case paintRadiusShock = "PaintRadiusShock"
         }
     }
 }
 
 extension Splatana.BulletParameter.CollisionParameter {
-    struct ParameterItem: Codable {
-        let chargeFrameForField: Int?
-        let chargeFrameForPlayer: Int?
-        let endRadiusForField: Double
-        let endRadiusForPlayer: Double
-        let friendThroughFrameForPlayer: Int?
-        let initRadiusForField: Double
-        let initRadiusForPlayer: Double
+    public struct ParameterItem: Codable {
+        public let chargeFrameForField: Int?
+        public let chargeFrameForPlayer: Int?
+        public let endRadiusForField: Double
+        public let endRadiusForPlayer: Double
+        public let friendThroughFrameForPlayer: Int?
+        public let initRadiusForField: Double
+        public let initRadiusForPlayer: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case chargeFrameForField = "ChangeFrameForField"
             case chargeFrameForPlayer = "ChangeFrameForPlayer"
             case endRadiusForField = "EndRadiusForField"
@@ -197,13 +197,13 @@ extension Splatana.BulletParameter.CollisionParameter {
 }
 
 extension Splatana {
-    struct BulletSlashParameter: Codable {
-        let type: String
-        let damageParam: DamageParameter
-        let moveParam: MoveParameter
-        let shapeParam: ShapeParameter
+    public struct BulletSlashParameter: Codable {
+        public let type: String
+        public let damageParam: DamageParameter
+        public let moveParam: MoveParameter
+        public let shapeParam: ShapeParameter
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case damageParam = "DamageParam"
             case moveParam = "MoveParam"
@@ -213,35 +213,35 @@ extension Splatana {
 }
 
 extension Splatana.BulletSlashParameter {
-    struct DamageParameter: Codable {
-        let accelForCastle: Double?
-        let damageValue: Int
-        let isPenetrate: Bool?
+    public struct DamageParameter: Codable {
+        public let accelForCastle: Double?
+        public let damageValue: Int
+        public let isPenetrate: Bool?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case accelForCastle = "AccelForCastle"
             case damageValue = "DamageValue"
             case isPenetrate = "IsPenetrate"
         }
     }
     
-    struct MoveParameter: Codable {
-        let aliveFrame: Int
+    public struct MoveParameter: Codable {
+        public let aliveFrame: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case aliveFrame = "AliveFrame"
         }
     }
     
-    struct ShapeParameter: Codable {
-        let boxCenter: XYZData
-        let boxHalfExtents: XYZData
-        let cylinderCenterA: XYZData?
-        let cylinderCenterB: XYZData?
-        let cylinderRadius: Double?
-        let hasCylinderShape: Bool?
+    public struct ShapeParameter: Codable {
+        public let boxCenter: XYZData
+        public let boxHalfExtents: XYZData
+        public let cylinderCenterA: XYZData?
+        public let cylinderCenterB: XYZData?
+        public let cylinderRadius: Double?
+        public let hasCylinderShape: Bool?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case boxCenter = "BoxCenter"
             case boxHalfExtents = "BoxHalfExtents"
             case cylinderCenterA = "CylinderCenterA"
@@ -253,16 +253,16 @@ extension Splatana.BulletSlashParameter {
 }
 
 extension Splatana {
-    struct WeaponParameter: Codable {
-        let type: String
-        let chargeKeepParam: ChargeKeepParameter?
-        let chargeParam: ChargeParameter
-        let footSplashPaintParam: FootSplashPaintParameter
-        let isEnableChargeKeep: Bool?
-        let shotGuideParam: ShotGuideParameter
-        let swingParam: SwingParameter
+    public struct WeaponParameter: Codable {
+        public let type: String
+        public let chargeKeepParam: ChargeKeepParameter?
+        public let chargeParam: ChargeParameter
+        public let footSplashPaintParam: FootSplashPaintParameter
+        public let isEnableChargeKeep: Bool?
+        public let shotGuideParam: ShotGuideParameter
+        public let swingParam: SwingParameter
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case chargeKeepParam = "ChargeKeepParam"
             case chargeParam = "ChargeParam"
@@ -275,24 +275,24 @@ extension Splatana {
 }
 
 extension Splatana.WeaponParameter {
-    struct ChargeKeepParameter: Codable {
-        let keepChargePreDelayFrame: Int
+    public struct ChargeKeepParameter: Codable {
+        public let keepChargePreDelayFrame: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case keepChargePreDelayFrame = "KeepChargePreDelayFrame"
         }
     }
     
-    struct ChargeParameter: Codable {
-        let airChargeRateByInkEmpty: Int?
-        let chargeFrameFullCharge: Int
-        let chargeFrameMinCharge: Int
-        let inkConsumeFullCharge: Double
-        let inkConsumeMinCharge: Double
-        let inkRecoverStop: Int
-        let moveSpeedFullCharge: Double?
+    public struct ChargeParameter: Codable {
+        public let airChargeRateByInkEmpty: Int?
+        public let chargeFrameFullCharge: Int
+        public let chargeFrameMinCharge: Int
+        public let inkConsumeFullCharge: Double
+        public let inkConsumeMinCharge: Double
+        public let inkRecoverStop: Int
+        public let moveSpeedFullCharge: Double?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case airChargeRateByInkEmpty = "AirChargeRateByInkEmpty"
             case chargeFrameFullCharge = "ChargeFrameFullCharge"
             case chargeFrameMinCharge = "ChargeFrameMinCharge"
@@ -303,15 +303,15 @@ extension Splatana.WeaponParameter {
         }
     }
     
-    struct FootSplashPaintParameter: Codable {
-        let depthMaxDropHeight: Double?
-        let depthMinDropHeight: Double?
-        let depthScaleMax: Double
-        let depthScaleMin: Double?
-        let widthHalf: Double?
-        let widthHalfNearest: Double
+    public struct FootSplashPaintParameter: Codable {
+        public let depthMaxDropHeight: Double?
+        public let depthMinDropHeight: Double?
+        public let depthScaleMax: Double
+        public let depthScaleMin: Double?
+        public let widthHalf: Double?
+        public let widthHalfNearest: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case depthMaxDropHeight = "DepthMaxDropHeight"
             case depthMinDropHeight = "DepthMinDropHeight"
             case depthScaleMax = "DepthScaleMax"
@@ -321,13 +321,13 @@ extension Splatana.WeaponParameter {
         }
     }
     
-    struct ShotGuideParameter: Codable {
-        let horizontalSightFrame: Int
-        let horizontalSphereIndex: Int
-        let verticalSightFrame: Int
-        let verticalSphereIndex: Int
+    public struct ShotGuideParameter: Codable {
+        public let horizontalSightFrame: Int
+        public let horizontalSphereIndex: Int
+        public let verticalSightFrame: Int
+        public let verticalSphereIndex: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case horizontalSightFrame = "HorizontalSightFrame"
             case horizontalSphereIndex = "HorizontalSphereIndex"
             case verticalSightFrame = "VerticalSightFrame"
@@ -335,38 +335,38 @@ extension Splatana.WeaponParameter {
         }
     }
     
-    struct SwingParameter: Codable {
-        let chargeMoveVelLimit: Double
-        let chargeSwingASFrame: Int?
-        let chargeSwingFrame: Int
-        let chargeSwingPostDelayFrame: Int
-        let chargeSwingShotBulletFrame: Int
-        let chargeSwingShotSlashFrame: Int
-        let chargeSwingStepShotBulletFrame: Int
-        let chargeSwingStepShotSlashFrame: Int
-        let inkConsume: Double
-        let inkRecoverStop: Int
-        let inkRecoverStop_ChargeSwing: Int
-        let isEnableStep: Bool?
-        let isShotEnable: Bool?
-        let reserveAcceptFrame: Int
-        let shotBulletOffset_L: XYZData?
-        let shotBulletOffset_R: XYZData?
-        let shotBulletOffset_Vertical: XYZData?
-        let shotSlashOffset_L: XYZData?
-        let shotSlashOffset_R: XYZData?
-        let shotSlashOffset_Vertical: XYZData?
-        let sideStepParam: SideStepParameter
-        let stepStartStickHistoryFrame: Int?
-        let stepStartStickThresholdY: Double?
-        let weakSwingASFrame: Int
-        let weakSwingFrame: Int
-        let weakSwingMoveVelLimit: Double
-        let weakSwingPostDelayFrame: Int
-        let weakSwingShotBulletFrame: Int
-        let weakSwingShotSlashFrame: Int
+    public struct SwingParameter: Codable {
+        public let chargeMoveVelLimit: Double
+        public let chargeSwingASFrame: Int?
+        public let chargeSwingFrame: Int
+        public let chargeSwingPostDelayFrame: Int
+        public let chargeSwingShotBulletFrame: Int
+        public let chargeSwingShotSlashFrame: Int
+        public let chargeSwingStepShotBulletFrame: Int
+        public let chargeSwingStepShotSlashFrame: Int
+        public let inkConsume: Double
+        public let inkRecoverStop: Int
+        public let inkRecoverStop_ChargeSwing: Int
+        public let isEnableStep: Bool?
+        public let isShotEnable: Bool?
+        public let reserveAcceptFrame: Int
+        public let shotBulletOffset_L: XYZData?
+        public let shotBulletOffset_R: XYZData?
+        public let shotBulletOffset_Vertical: XYZData?
+        public let shotSlashOffset_L: XYZData?
+        public let shotSlashOffset_R: XYZData?
+        public let shotSlashOffset_Vertical: XYZData?
+        public let sideStepParam: SideStepParameter
+        public let stepStartStickHistoryFrame: Int?
+        public let stepStartStickThresholdY: Double?
+        public let weakSwingASFrame: Int
+        public let weakSwingFrame: Int
+        public let weakSwingMoveVelLimit: Double
+        public let weakSwingPostDelayFrame: Int
+        public let weakSwingShotBulletFrame: Int
+        public let weakSwingShotSlashFrame: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case chargeMoveVelLimit = "ChargeMoveVelLimit"
             case chargeSwingASFrame = "ChargeSwingASFrame"
             case chargeSwingFrame = "ChargeSwingFrame"
@@ -401,32 +401,32 @@ extension Splatana.WeaponParameter {
 }
 
 extension Splatana.WeaponParameter.SwingParameter {
-    struct SideStepParameter: Codable {
-        let chargeFrame: Int
-        let inkConsume: Double?
-        let inkRecoverStop: Int?
-        let inputReqAcceptFrame: Int?
-        let moveDist: Double
-        let moveFrame: Int
-        let moveStepKd: Double
-        let repeatCnt: Int?
-        let slipMoveDistAir: Double?
-        let slipMoveDistGnd: Double?
-        let slipMoveFrame: Int?
-        let timeScale: Double?
-        let timeScaleFrm: Int?
-        let unrelaxFrameMove: Int?
-        let unrelaxFrameMoveLast: Int
-        let unrelaxFrameNoSideStep: Int?
-        let unrelaxFrameNoSideStepLast: Int
-        let unrelaxFrameNoSquid: Int?
-        let unrelaxFrameNoSquidLast: Int
-        let unrelaxFrameNoWeapon: Int?
-        let unrelaxFrameNoWeaponLast: Int
-        let unrelaxFrameOneMuzzle: Int?
-        let unrelaxFrameOneMuzzleLast: Int?
+    public struct SideStepParameter: Codable {
+        public let chargeFrame: Int
+        public let inkConsume: Double?
+        public let inkRecoverStop: Int?
+        public let inputReqAcceptFrame: Int?
+        public let moveDist: Double
+        public let moveFrame: Int
+        public let moveStepKd: Double
+        public let repeatCnt: Int?
+        public let slipMoveDistAir: Double?
+        public let slipMoveDistGnd: Double?
+        public let slipMoveFrame: Int?
+        public let timeScale: Double?
+        public let timeScaleFrm: Int?
+        public let unrelaxFrameMove: Int?
+        public let unrelaxFrameMoveLast: Int
+        public let unrelaxFrameNoSideStep: Int?
+        public let unrelaxFrameNoSideStepLast: Int
+        public let unrelaxFrameNoSquid: Int?
+        public let unrelaxFrameNoSquidLast: Int
+        public let unrelaxFrameNoWeapon: Int?
+        public let unrelaxFrameNoWeaponLast: Int
+        public let unrelaxFrameOneMuzzle: Int?
+        public let unrelaxFrameOneMuzzleLast: Int?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case chargeFrame = "ChargeFrame"
             case inkConsume = "InkConsume"
             case inkRecoverStop = "InkRecoverStop"

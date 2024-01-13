@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum DamageRateInfo: String, Codable {
+public enum DamageRateInfo: String, Codable {
     case blaster = "Blaster"
     case blasterKillOneShot = "Blaster_KillOneShot"
     case blasterMiddle = "Blaster_BlasterMiddle"

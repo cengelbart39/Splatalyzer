@@ -8,11 +8,11 @@
 import Foundation
 
 extension Slosher {
-    struct UnitGroupParameter: Codable {
-        let type: String
-        let unit: [UnitParameter]
+    public struct UnitGroupParameter: Codable {
+        public let type: String
+        public let unit: [UnitParameter]
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case unit = "Unit"
         }
@@ -20,43 +20,43 @@ extension Slosher {
 }
 
 extension Slosher.UnitGroupParameter {
-    struct UnitParameter: Codable {
-        let addSpawnSpeedYRateByXZ: Double
-        let afterOffsetDelayFrame: Int
-        let afterOffsetSpawnSpeed: Double
+    public struct UnitParameter: Codable {
+        public let addSpawnSpeedYRateByXZ: Double
+        public let afterOffsetDelayFrame: Int
+        public let afterOffsetSpawnSpeed: Double
         
-        let afterPaintParam: AfterPaintParameter
-        let afterWallDropCollisionPaintPrm: AfterWallDropCollisionPaintParameter
-        let afterWallDropMoveParam: AfterWallDropMoveParameter
+        public let afterPaintParam: AfterPaintParameter
+        public let afterWallDropCollisionPaintPrm: AfterWallDropCollisionPaintParameter
+        public let afterWallDropMoveParam: AfterWallDropMoveParameter
         
-        let baseRotateYDegree: Double
-        let bulletNum: Int
+        public let baseRotateYDegree: Double
+        public let bulletNum: Int
         
-        let collisionParam: CollisionParameter
-        let damageParam: DamageParameter
-        let drawSizeParam: DrawSizeParameter
+        public let collisionParam: CollisionParameter
+        public let damageParam: DamageParameter
+        public let drawSizeParam: DrawSizeParameter
         
-        let hitEffectBigOrderNum: [Int]
+        public let hitEffectBigOrderNum: [Int]
         
-        let moveParam: MoveParameter
-        let paintParam: PaintParameter
+        public let moveParam: MoveParameter
+        public let paintParam: PaintParameter
         
-        let randomRotateYBias: Double
-        let randomRotateYDegree: Double
-        let randomRotateYOffOrderNum: [Int]
+        public let randomRotateYBias: Double
+        public let randomRotateYDegree: Double
+        public let randomRotateYOffOrderNum: [Int]
         
-        let spawnSpeedAir: Double
-        let spawnSpeedGround: Double
+        public let spawnSpeedAir: Double
+        public let spawnSpeedGround: Double
         
-        let splashAndSplashWallHitSpawnParam: SplashAndSplashWallHitSpawnParameter
-        let splashSlosherHitParam: [SplashHitParameter]
+        public let splashAndSplashWallHitSpawnParam: SplashAndSplashWallHitSpawnParameter
+        public let splashSlosherHitParam: [SplashHitParameter]
         
-        let unitDelayFrame: Int
+        public let unitDelayFrame: Int
         
-        let wallDropCollisionPaintParam: WallDropCollisionPaintParameter
-        let wallDropMoveParam: WallDropMoveParameter
+        public let wallDropCollisionPaintParam: WallDropCollisionPaintParameter
+        public let wallDropMoveParam: WallDropMoveParameter
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case addSpawnSpeedYRateByXZ = "AddSpawnSpeedYRateByXZ"
             case afterOffsetDelayFrame = "AfterOffsetDelayFrame"
             case afterOffsetSpawnSpeed = "AfterOffsetSpawnSpeed"
@@ -86,18 +86,18 @@ extension Slosher.UnitGroupParameter {
 }
 
 extension Slosher.UnitGroupParameter.UnitParameter {
-    struct AfterPaintParameter: Codable {
-        let depthScaleFar: Double
-        let depthScaleNear: Double
-        let distanceXZFar: Double
-        let distanceXZNear: Double
-        let scaleEndFallDistance: Double
-        let scaleStartFallDistance: Double
-        let widthDepthScaleFall: Double
-        let widthHalfFar: Double
-        let widthHalfNear: Double
+    public struct AfterPaintParameter: Codable {
+        public let depthScaleFar: Double
+        public let depthScaleNear: Double
+        public let distanceXZFar: Double
+        public let distanceXZNear: Double
+        public let scaleEndFallDistance: Double
+        public let scaleStartFallDistance: Double
+        public let widthDepthScaleFall: Double
+        public let widthHalfFar: Double
+        public let widthHalfNear: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case depthScaleFar = "DepthScaleFar"
             case depthScaleNear = "DepthScaleNear"
             case distanceXZFar = "DistanceXZFar"
@@ -110,13 +110,13 @@ extension Slosher.UnitGroupParameter.UnitParameter {
         }
     }
     
-    struct AfterWallDropCollisionPaintParameter: Codable {
-        let fallPeriodFirstSecondTargetAlp: Double
-        let paintRadiusFall: Double
-        let paintRadiusGround: Double
-        let paintRadiusShock: Double
+    public struct AfterWallDropCollisionPaintParameter: Codable {
+        public let fallPeriodFirstSecondTargetAlp: Double
+        public let paintRadiusFall: Double
+        public let paintRadiusGround: Double
+        public let paintRadiusShock: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case fallPeriodFirstSecondTargetAlp = "FallPeriodFirstSecondTargetAlp"
             case paintRadiusFall = "PaintRadiusFall"
             case paintRadiusGround = "PaintRadiusGround"
@@ -124,17 +124,17 @@ extension Slosher.UnitGroupParameter.UnitParameter {
         }
     }
     
-    struct AfterWallDropMoveParameter: Codable {
-        let fallPeriodFirstFrameMax: Int
-        let fallPeriodFirstFrameMin: Int
-        let fallPeriodFirstTargetSpeed: Double
-        let fallPeriodLastFrameMax: Int
-        let fallPeriodLastFrameMin: Int
-        let fallPeriodSecondFrame: Int
-        let fallPeriodSecondTargetSpeed: Double
-        let freeGravityType: String
+    public struct AfterWallDropMoveParameter: Codable {
+        public let fallPeriodFirstFrameMax: Int
+        public let fallPeriodFirstFrameMin: Int
+        public let fallPeriodFirstTargetSpeed: Double
+        public let fallPeriodLastFrameMax: Int
+        public let fallPeriodLastFrameMin: Int
+        public let fallPeriodSecondFrame: Int
+        public let fallPeriodSecondTargetSpeed: Double
+        public let freeGravityType: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case fallPeriodFirstFrameMax = "FallPeriodFirstFrameMax"
             case fallPeriodFirstFrameMin = "FallPeriodFirstFrameMin"
             case fallPeriodFirstTargetSpeed = "FallPeriodFirstTargetSpeed"
@@ -146,20 +146,20 @@ extension Slosher.UnitGroupParameter.UnitParameter {
         }
     }
     
-    struct CollisionParameter: Codable {
-        let afterOffsetEndRadiusForField: Double
-        let afterOffsetEndRadiusForPlayer: Double
-        let afterOffsetInitRadiusForField: Double
-        let afterOffsetInitRadiusForPlayer: Double
-        let changeFrameForField: Int
-        let changeFrameForPlayer: Int
-        let endRadiusForField: Double
-        let endRadiusForPlayer: Double
-        let friendThroughFrameForPlayer: Int
-        let initRadiusForField: Double
-        let initRadiusForPlayer: Double
+    public struct CollisionParameter: Codable {
+        public let afterOffsetEndRadiusForField: Double
+        public let afterOffsetEndRadiusForPlayer: Double
+        public let afterOffsetInitRadiusForField: Double
+        public let afterOffsetInitRadiusForPlayer: Double
+        public let changeFrameForField: Int
+        public let changeFrameForPlayer: Int
+        public let endRadiusForField: Double
+        public let endRadiusForPlayer: Double
+        public let friendThroughFrameForPlayer: Int
+        public let initRadiusForField: Double
+        public let initRadiusForPlayer: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case afterOffsetEndRadiusForField = "AfterOffsetEndRadiusForField"
             case afterOffsetEndRadiusForPlayer = "AfterOffsetEndRadiusForPlayer"
             case afterOffsetInitRadiusForField = "AfterOffsetInitRadiusForField"
@@ -174,14 +174,14 @@ extension Slosher.UnitGroupParameter.UnitParameter {
         }
     }
     
-    struct DamageParameter: Codable {
-        let groupNum: Int
-        let reduceEndFallDistance: Double
-        let reduceStartFallDistance: Double
-        let valueMax: Double
-        let valueMin: Double
+    public struct DamageParameter: Codable {
+        public let groupNum: Int
+        public let reduceEndFallDistance: Double
+        public let reduceStartFallDistance: Double
+        public let valueMax: Double
+        public let valueMin: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case groupNum = "GroupNum"
             case reduceEndFallDistance = "ReduceEndFallDistance"
             case reduceStartFallDistance = "ReduceStartFallDistance"
@@ -190,19 +190,19 @@ extension Slosher.UnitGroupParameter.UnitParameter {
         }
     }
     
-    struct DrawSizeParameter: Codable {
-        let afterOffsetEndRadius: Double
-        let afterOffsetInitRadius: Double
-        let changeFrame: Int
-        let endRadius: Double
-        let initRadius: Double
-        let tailId: Int
-        let tailLengthMax: Double
-        let tailLengthMaxLastTail: Double
-        let tailLengthMin: Double
-        let tailSolidFrame: Int
+    public struct DrawSizeParameter: Codable {
+        public let afterOffsetEndRadius: Double
+        public let afterOffsetInitRadius: Double
+        public let changeFrame: Int
+        public let endRadius: Double
+        public let initRadius: Double
+        public let tailId: Int
+        public let tailLengthMax: Double
+        public let tailLengthMaxLastTail: Double
+        public let tailLengthMin: Double
+        public let tailSolidFrame: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case afterOffsetEndRadius = "AfterOffsetEndRadius"
             case afterOffsetInitRadius = "AfterOffsetInitRadius"
             case changeFrame = "ChangeFrame"
@@ -216,19 +216,19 @@ extension Slosher.UnitGroupParameter.UnitParameter {
         }
     }
     
-    struct MoveParameter: Codable {
-        let brakeAirResist: Double
-        let brakeGravity: Double
-        let brakeToFreeStateFrame: Int
-        let brakeToFreeVelocityXZ: Double
-        let brakeToFreeVelocityY: Double
-        let freeAirResist: Double
-        let freeGravity: Double
-        let goStraightStateEndMaxSpeed: Double
-        let goStraightToBrakeStateFrame: Int
-        let spawnSpeed: Double
+    public struct MoveParameter: Codable {
+        public let brakeAirResist: Double
+        public let brakeGravity: Double
+        public let brakeToFreeStateFrame: Int
+        public let brakeToFreeVelocityXZ: Double
+        public let brakeToFreeVelocityY: Double
+        public let freeAirResist: Double
+        public let freeGravity: Double
+        public let goStraightStateEndMaxSpeed: Double
+        public let goStraightToBrakeStateFrame: Int
+        public let spawnSpeed: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case brakeAirResist = "BrakeAirResist"
             case brakeGravity = "BrakeGravity"
             case brakeToFreeStateFrame = "BrakeToFreeStateFrame"
@@ -242,18 +242,18 @@ extension Slosher.UnitGroupParameter.UnitParameter {
         }
     }
     
-    struct PaintParameter: Codable {
-        let depthScaleFar: Double
-        let depthScaleNear: Double
-        let distanceXZFar: Double
-        let distanceXZNear: Double
-        let scaleEndFallDistance: Double
-        let scaleStartFallDistance: Double
-        let widthDepthScaleFall: Double
-        let widthHalfFar: Double
-        let widthHalfNear: Double
+    public struct PaintParameter: Codable {
+        public let depthScaleFar: Double
+        public let depthScaleNear: Double
+        public let distanceXZFar: Double
+        public let distanceXZNear: Double
+        public let scaleEndFallDistance: Double
+        public let scaleStartFallDistance: Double
+        public let widthDepthScaleFall: Double
+        public let widthHalfFar: Double
+        public let widthHalfNear: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case depthScaleFar = "DepthScaleFar"
             case depthScaleNear = "DepthScaleNear"
             case distanceXZFar = "DistanceXZFar"
@@ -266,21 +266,20 @@ extension Slosher.UnitGroupParameter.UnitParameter {
         }
     }
     
-    struct SplashAndSplashWallHitSpawnParameter: Codable {
-        let combination: [SplashHitSpawnCombination]?
-        let splashParam: [SplashHitSpawnSplashParameter]?
+    public struct SplashAndSplashWallHitSpawnParameter: Codable {
+        public let combination: [SplashHitSpawnCombination]?
+        public let splashParam: [SplashHitSpawnSplashParameter]?
     }
 }
 
 extension Slosher.UnitGroupParameter.UnitParameter.SplashAndSplashWallHitSpawnParameter {
-    
-    struct SplashHitSpawnCombination: Codable {
-        let orderNum: Int
-        let splashArrayOrderNum: Int
-        let splashWallHitArrayOrderNum: Int
-        let totalNum: Int
+    public struct SplashHitSpawnCombination: Codable {
+        public let orderNum: Int
+        public let splashArrayOrderNum: Int
+        public let splashWallHitArrayOrderNum: Int
+        public let totalNum: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case orderNum = "OrderNum"
             case splashArrayOrderNum = "SplashArrayOrderNum"
             case splashWallHitArrayOrderNum = "SplashWallHitArrayOrderNum"
@@ -288,11 +287,11 @@ extension Slosher.UnitGroupParameter.UnitParameter.SplashAndSplashWallHitSpawnPa
         }
     }
     
-    struct SplashHitSpawnSplashParameter: Codable {
-        let drawSizeCollisionPaintParam: DrawSizeCollisionPaintParameter
-        let spawnParam: SpawnParameter
+    public struct SplashHitSpawnSplashParameter: Codable {
+        public let drawSizeCollisionPaintParam: DrawSizeCollisionPaintParameter
+        public let spawnParam: SpawnParameter
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case drawSizeCollisionPaintParam = "DrawSizeCollisionPaintParam"
             case spawnParam = "SpawnParam"
         }
@@ -300,14 +299,13 @@ extension Slosher.UnitGroupParameter.UnitParameter.SplashAndSplashWallHitSpawnPa
 }
 
 extension Slosher.UnitGroupParameter.UnitParameter.SplashAndSplashWallHitSpawnParameter.SplashHitSpawnSplashParameter {
-    
-    struct DrawSizeCollisionPaintParameter: Codable {
-        let collisionParam: Slosher.CollisionParameter
-        let drawRadius: Double
-        let paintDepthScale: Double
-        let paintWidthHalf: Double
+    public struct DrawSizeCollisionPaintParameter: Codable {
+        public let collisionParam: Slosher.CollisionParameter
+        public let drawRadius: Double
+        public let paintDepthScale: Double
+        public let paintWidthHalf: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case collisionParam = "CollisionParam"
             case drawRadius = "DrawRadius"
             case paintDepthScale = "PaintDepthScale"
@@ -315,14 +313,14 @@ extension Slosher.UnitGroupParameter.UnitParameter.SplashAndSplashWallHitSpawnPa
         }
     }
     
-    struct SpawnParameter: Codable {
-        let changeFrameForField: Int
-        let changeFrameForPlayer: Int
-        let endRadiusForField: Double
-        let endRadiusForPlayer: Double
-        let friendThroughFrameForPlayer: Int
-        let initRadiusForField: Double
-        let initRadiusForPlayer: Double
+    public struct SpawnParameter: Codable {
+        public let changeFrameForField: Int
+        public let changeFrameForPlayer: Int
+        public let endRadiusForField: Double
+        public let endRadiusForPlayer: Double
+        public let friendThroughFrameForPlayer: Int
+        public let initRadiusForField: Double
+        public let initRadiusForPlayer: Double
         
         enum CodingKeys: String, CodingKey {
             case changeFrameForField = "ChangeFrameForField"
@@ -336,41 +334,15 @@ extension Slosher.UnitGroupParameter.UnitParameter.SplashAndSplashWallHitSpawnPa
     }
 }
 
-//struct SlosherSplashHitSpawnSplashWallHitParameter: Codable {
-//    let spawnParam: SpawnParameter
-//    let wallDropCollisionPaintParameter: SlosherUnitWallDropCollisionPaintParameter
-//    let wallDropMoveParameter: SlosherUnitWallDropMoveParameter
-//    
-//    enum CodingKeys: String, CodingKey {
-//        case spawnParam = "SpawnParam"
-//        case wallDropCollisionPaintParameter = "WallDropCollisionPaintParam"
-//        case wallDropMoveParameter = "WallDropMoveParam"
-//    }
-//    
-//    struct SpawnParameter: Codable {
-//        let betweenDistance: Double
-//        let distanceXZRate: Double
-//        let firstDistance: Double
-//        let velocityMinusYRate: Double
-//        
-//        enum CodingKeys: String, CodingKey {
-//            case betweenDistance = "BetweenDistance"
-//            case distanceXZRate = "DistanceXZRate"
-//            case firstDistance = "FirstDistance"
-//            case velocityMinusYRate = "VelocityMinusYRate"
-//        }
-//    }
-//}
-
 extension Slosher.UnitGroupParameter.UnitParameter {
-    struct SplashHitParameter: Codable {
-        let collisionRadius: Double
-        let drawRadius: Double
-        let paintRadiusRatePerWidthHalf: Double
-        let spawnOffsetHitByPlayer: Double
-        let spawnOffsetY: Double
+    public struct SplashHitParameter: Codable {
+        public let collisionRadius: Double
+        public let drawRadius: Double
+        public let paintRadiusRatePerWidthHalf: Double
+        public let spawnOffsetHitByPlayer: Double
+        public let spawnOffsetY: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case collisionRadius = "CollisionRadius"
             case drawRadius = "DrawRadius"
             case paintRadiusRatePerWidthHalf = "PaintRadiusRatePerWidthHalf"
@@ -379,13 +351,13 @@ extension Slosher.UnitGroupParameter.UnitParameter {
         }
     }
     
-    struct WallDropCollisionPaintParameter: Codable {
-        let fallPeriodFirstSecondTargetAlp: Double
-        let paintRadiusFall: Double
-        let paintRadiusGround: Double
-        let paintRadiusShock: Double
+    public struct WallDropCollisionPaintParameter: Codable {
+        public let fallPeriodFirstSecondTargetAlp: Double
+        public let paintRadiusFall: Double
+        public let paintRadiusGround: Double
+        public let paintRadiusShock: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case fallPeriodFirstSecondTargetAlp = "FallPeriodFirstSecondTargetAlp"
             case paintRadiusFall = "PaintRadiusFall"
             case paintRadiusGround = "PaintRadiusGround"
@@ -393,17 +365,17 @@ extension Slosher.UnitGroupParameter.UnitParameter {
         }
     }
     
-    struct WallDropMoveParameter: Codable {
-        let fallPeriodFirstFrameMax: Int
-        let fallPeriodFirstFrameMin: Int
-        let fallPeriodFirstTargetSpeed: Double
-        let fallPeriodLastFrameMax: Int
-        let fallPeriodLastFrameMin: Int
-        let fallPeriodSecondFrame: Int
-        let fallPeriodSecondTargetSpeed: Double
-        let freeGravityType: String
+    public struct WallDropMoveParameter: Codable {
+        public let fallPeriodFirstFrameMax: Int
+        public let fallPeriodFirstFrameMin: Int
+        public let fallPeriodFirstTargetSpeed: Double
+        public let fallPeriodLastFrameMax: Int
+        public let fallPeriodLastFrameMin: Int
+        public let fallPeriodSecondFrame: Int
+        public let fallPeriodSecondTargetSpeed: Double
+        public let freeGravityType: String
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case fallPeriodFirstFrameMax = "FallPeriodFirstFrameMax"
             case fallPeriodFirstFrameMin = "FallPeriodFirstFrameMin"
             case fallPeriodFirstTargetSpeed = "FallPeriodFirstTargetSpeed"

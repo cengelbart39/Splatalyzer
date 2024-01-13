@@ -7,19 +7,19 @@
 
 import Foundation
 
-struct Brella: Codable {
-    let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
-    let mainWeaponSetting: MainWeaponSettings
+public struct Brella: Codable {
+    public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
+    public let mainWeaponSetting: MainWeaponSettings
     
-    let bulletShelterCanopyParam: BulletCanopyParameter
-    let bulletShelterShotgunParam: BulletShotgunParameter
+    public let bulletShelterCanopyParam: BulletCanopyParameter
+    public let bulletShelterShotgunParam: BulletShotgunParameter
     
-    let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
+    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
     
-    let weaponShelterCanopyParam: CanopyParameter
-    let weaponShelterShotgunParam: ShotgunParameter
+    public let weaponShelterCanopyParam: CanopyParameter
+    public let weaponShelterShotgunParam: ShotgunParameter
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
         case mainWeaponSetting = "MainWeaponSetting"
         case bulletShelterCanopyParam = "spl__BulletShelterCanopyParam"
@@ -31,31 +31,31 @@ struct Brella: Codable {
 }
 
 extension Brella {
-    struct BulletCanopyParameter: Codable {
-        let type: String
-        let canopyAttackedDamageRate: Double?
-        let canopyColRadius: Double?
-        let canopyCureHPPerFrame: Int?
-        let canopyDamage: Int?
-        let canopyFrame: Int?
-        let canopyGravity: Double
-        let canopyHP: Int?
-        let canopyHitOtherCanopyDamage: Int?
-        let canopyHitOtherCanopyVolume: Int?
-        let canopyHitShieldAttackDamage: Int?
-        let canopyHitShieldReceiveDamage: Int?
-        let canopyInitSpeed: Double?
-        let canopyMoveKnockBackSideStepRate: Double?
-        let canopyNakedFrame: Int?
-        let canopyPaintRadius: Double?
-        let canopySpeedAirAddScaleXZ: Double
-        let canopySpeedGroundAddScale: Double
-        let footSplashPaintRadius: Double?
-        let footSplashShapeCastOffset: Double
-        let footSplashSpanFrame: Int?
-        let footSplashWaitFrame: Int?
+    public struct BulletCanopyParameter: Codable {
+        public let type: String
+        public let canopyAttackedDamageRate: Double?
+        public let canopyColRadius: Double?
+        public let canopyCureHPPerFrame: Int?
+        public let canopyDamage: Int?
+        public let canopyFrame: Int?
+        public let canopyGravity: Double
+        public let canopyHP: Int?
+        public let canopyHitOtherCanopyDamage: Int?
+        public let canopyHitOtherCanopyVolume: Int?
+        public let canopyHitShieldAttackDamage: Int?
+        public let canopyHitShieldReceiveDamage: Int?
+        public let canopyInitSpeed: Double?
+        public let canopyMoveKnockBackSideStepRate: Double?
+        public let canopyNakedFrame: Int?
+        public let canopyPaintRadius: Double?
+        public let canopySpeedAirAddScaleXZ: Double
+        public let canopySpeedGroundAddScale: Double
+        public let footSplashPaintRadius: Double?
+        public let footSplashShapeCastOffset: Double
+        public let footSplashSpanFrame: Int?
+        public let footSplashWaitFrame: Int?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case canopyAttackedDamageRate = "CanopyAttackedDamageRate"
             case canopyColRadius = "CanopyColRadius"
@@ -83,17 +83,17 @@ extension Brella {
 }
 
 extension Brella {
-    struct BulletShotgunParameter: Codable {
-        let type: String
-        let damageEffectiveTotalMax: Int
-        let groupParams: [GroupParameter]
-        let shotgunWallDropCollisionParam: WallDropCollisionParameter?
-        let shotgunWallDropMoveParam: WallDropMoveParameter
-        let splashParam: SplashParameter
-        let splashWallDropCollisionParam: SplashWallDropCollisionParameter
-        let splashWallDropMoveParam: SplashWallDropMoveParameter
+    public struct BulletShotgunParameter: Codable {
+        public let type: String
+        public let damageEffectiveTotalMax: Int
+        public let groupParams: [GroupParameter]
+        public let shotgunWallDropCollisionParam: WallDropCollisionParameter?
+        public let shotgunWallDropMoveParam: WallDropMoveParameter
+        public let splashParam: SplashParameter
+        public let splashWallDropCollisionParam: SplashWallDropCollisionParameter
+        public let splashWallDropMoveParam: SplashWallDropMoveParameter
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case damageEffectiveTotalMax = "DamageEffectiveTotalMax"
             case groupParams = "GroupParams"
@@ -107,21 +107,21 @@ extension Brella {
 }
 
 extension Brella.BulletShotgunParameter {
-    struct GroupParameter: Codable {
-        let addDegree: Double?
-        let collisionParam: CollisionParameter?
-        let damageParam: GroupDamageParameter
-        let drawRadius: Double?
-        let horizontalDegree: Double
-        let horizontalOffset: Double
-        let initVelRandom: Double?
-        let moveParam: GroupMoveParameter
-        let paintParam: GroupPaintParameter?
-        let totalNum: Int
-        let verticalDegree: Double
-        let verticalOffset: Double
+    public struct GroupParameter: Codable {
+        public let addDegree: Double?
+        public let collisionParam: CollisionParameter?
+        public let damageParam: GroupDamageParameter
+        public let drawRadius: Double?
+        public let horizontalDegree: Double
+        public let horizontalOffset: Double
+        public let initVelRandom: Double?
+        public let moveParam: GroupMoveParameter
+        public let paintParam: GroupPaintParameter?
+        public let totalNum: Int
+        public let verticalDegree: Double
+        public let verticalOffset: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case addDegree = "AddDegree"
             case collisionParam = "CollisionParam"
             case damageParam = "DamageParam"
@@ -137,22 +137,22 @@ extension Brella.BulletShotgunParameter {
         }
     }
     
-    struct WallDropCollisionParameter: Codable {
-        let paintRadiusShock: Double
+    public struct WallDropCollisionParameter: Codable {
+        public let paintRadiusShock: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case paintRadiusShock = "PaintRadiusShock"
         }
     }
     
-    struct WallDropMoveParameter: Codable {
-        let fallPeriodFirstFrameMax: Int
-        let fallPeriodFirstFrameMin: Int
-        let fallPeriodFirstTargetSpeed: Double
-        let fallPeriodLastFrameMax: Int
-        let fallPeriodLastFrameMin: Int
+    public struct WallDropMoveParameter: Codable {
+        public let fallPeriodFirstFrameMax: Int
+        public let fallPeriodFirstFrameMin: Int
+        public let fallPeriodFirstTargetSpeed: Double
+        public let fallPeriodLastFrameMax: Int
+        public let fallPeriodLastFrameMin: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case fallPeriodFirstFrameMax = "FallPeriodFirstFrameMax"
             case fallPeriodFirstFrameMin = "FallPeriodFirstFrameMin"
             case fallPeriodFirstTargetSpeed = "FallPeriodFirstTargetSpeed"
@@ -161,15 +161,15 @@ extension Brella.BulletShotgunParameter {
         }
     }
     
-    struct SplashParameter: Codable {
-        let createSplashLength: Double?
-        let createSplashNum: Int?
-        let splashPaintDepthScaleFullActive: Double
-        let splashPaintDepthScaleOneActive: Double
-        let splashPaintWidthFullActive: Double
-        let splashPaintWidthOneActive: Double
+    public struct SplashParameter: Codable {
+        public let createSplashLength: Double?
+        public let createSplashNum: Int?
+        public let splashPaintDepthScaleFullActive: Double
+        public let splashPaintDepthScaleOneActive: Double
+        public let splashPaintWidthFullActive: Double
+        public let splashPaintWidthOneActive: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case createSplashLength = "CreateSplashLength"
             case createSplashNum = "CreateSplashNum"
             case splashPaintDepthScaleFullActive = "SplashPaintDepthScaleFullActive"
@@ -179,27 +179,27 @@ extension Brella.BulletShotgunParameter {
         }
     }
     
-    struct SplashWallDropCollisionParameter: Codable {
-        let paintRadiusFall: Double
-        let paintRadiusGround: Double
-        let paintRadiusShock: Double
+    public struct SplashWallDropCollisionParameter: Codable {
+        public let paintRadiusFall: Double
+        public let paintRadiusGround: Double
+        public let paintRadiusShock: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case paintRadiusFall = "PaintRadiusFall"
             case paintRadiusGround = "PaintRadiusGround"
             case paintRadiusShock = "PaintRadiusShock"
         }
     }
     
-    struct SplashWallDropMoveParameter: Codable {
-        let fallPeriodFirstFrameMax: Int
-        let fallPeriodFirstTargetSpeed: Double
-        let fallPeriodLastFrameMax: Int
-        let fallPeriodLastFrameMin: Int
-        let fallPeriodSecondFrame: Int
-        let fallPeriodSecondTargetSpeed: Double
+    public struct SplashWallDropMoveParameter: Codable {
+        public let fallPeriodFirstFrameMax: Int
+        public let fallPeriodFirstTargetSpeed: Double
+        public let fallPeriodLastFrameMax: Int
+        public let fallPeriodLastFrameMin: Int
+        public let fallPeriodSecondFrame: Int
+        public let fallPeriodSecondTargetSpeed: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case fallPeriodFirstFrameMax = "FallPeriodFirstFrameMax"
             case fallPeriodFirstTargetSpeed = "FallPeriodFirstTargetSpeed"
             case fallPeriodLastFrameMax = "FallPeriodLastFrameMax"
@@ -211,13 +211,13 @@ extension Brella.BulletShotgunParameter {
 }
 
 extension Brella.BulletShotgunParameter.GroupParameter {
-    struct CollisionParameter: Codable {
-        let endRadiusForField: Double
-        let endRadiusForPlayer: Double
-        let initRadiusForField: Double
-        let initRadiusForPlayer: Double
+    public struct CollisionParameter: Codable {
+        public let endRadiusForField: Double
+        public let endRadiusForPlayer: Double
+        public let initRadiusForField: Double
+        public let initRadiusForPlayer: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case endRadiusForField = "EndRadiusForField"
             case endRadiusForPlayer = "EndRadiusForPlayer"
             case initRadiusForField = "InitRadiusForField"
@@ -225,13 +225,13 @@ extension Brella.BulletShotgunParameter.GroupParameter {
         }
     }
     
-    struct GroupDamageParameter: Codable {
-        let reduceEndFrame: Int?
-        let reduceStartFrame: Int?
-        let valueMax: Int
-        let valueMin: Int
+    public struct GroupDamageParameter: Codable {
+        public let reduceEndFrame: Int?
+        public let reduceStartFrame: Int?
+        public let valueMax: Int
+        public let valueMin: Int
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case reduceEndFrame = "ReduceEndFrame"
             case reduceStartFrame = "ReduceStartFrame"
             case valueMax = "ValueMax"
@@ -239,13 +239,13 @@ extension Brella.BulletShotgunParameter.GroupParameter {
         }
     }
     
-    struct GroupMoveParameter: Codable {
-        let brakeGravity: Double?
-        let goStraightStateEndMaxSpeed: Double
-        let goStraightToBrakeStateFrame: Int
-        let spawnSpeed: Double?
+    public struct GroupMoveParameter: Codable {
+        public let brakeGravity: Double?
+        public let goStraightStateEndMaxSpeed: Double
+        public let goStraightToBrakeStateFrame: Int
+        public let spawnSpeed: Double?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case brakeGravity = "BrakeGravity"
             case goStraightStateEndMaxSpeed = "GoStraightStateEndMaxSpeed"
             case goStraightToBrakeStateFrame = "GoStraightToBrakeStateFrame"
@@ -253,13 +253,13 @@ extension Brella.BulletShotgunParameter.GroupParameter {
         }
     }
     
-    struct GroupPaintParameter: Codable {
-        let distanceNear: Double?
-        let widthHalfFar: Double?
-        let widthHalfMiddle: Double?
-        let widthHalfNear: Double?
+    public struct GroupPaintParameter: Codable {
+        public let distanceNear: Double?
+        public let widthHalfFar: Double?
+        public let widthHalfMiddle: Double?
+        public let widthHalfNear: Double?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case distanceNear = "DistanceNear"
             case widthHalfFar = "WidthHalfFar"
             case widthHalfMiddle = "WidthHalfMiddle"
@@ -269,11 +269,11 @@ extension Brella.BulletShotgunParameter.GroupParameter {
 }
 
 extension Brella {
-    struct SpawnBulletAdditionMovePlayerParameter: Codable {
-        let type: String
-        let zRate: Double
+    public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public let type: String
+        public let zRate: Double
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case zRate = "ZRate"
         }
@@ -281,26 +281,26 @@ extension Brella {
 }
 
 extension Brella {
-    struct CanopyParameter: Codable {
-        let type: String
-        let canopyChargeFrame: Int?
-        let canopyDirXZDiffDegH: Double?
-        let canopyDirXZDiffDegL: Double?
-        let canopyDirXZRotDegBias: Double?
-        let canopyDirXZRotDegH: Double?
-        let canopyDirXZRotDegL: Double?
-        let canopyNakedFrame: Int?
-        let canopyOpenEndBias: Double?
-        let canopyOpenEndOffset: Double
-        let canopyOpenFrame: Int?
-        let canopyOpenStartOffset: Double
-        let canopyShotFrame: Int?
-        let inkConsumeUmbrella: Double
-        let isAlwaysNaked: Bool?
-        let isCanopyShot: Bool?
-        let isRecoverCanopyByKill: Bool?
+    public struct CanopyParameter: Codable {
+        public let type: String
+        public let canopyChargeFrame: Int?
+        public let canopyDirXZDiffDegH: Double?
+        public let canopyDirXZDiffDegL: Double?
+        public let canopyDirXZRotDegBias: Double?
+        public let canopyDirXZRotDegH: Double?
+        public let canopyDirXZRotDegL: Double?
+        public let canopyNakedFrame: Int?
+        public let canopyOpenEndBias: Double?
+        public let canopyOpenEndOffset: Double
+        public let canopyOpenFrame: Int?
+        public let canopyOpenStartOffset: Double
+        public let canopyShotFrame: Int?
+        public let inkConsumeUmbrella: Double
+        public let isAlwaysNaked: Bool?
+        public let isCanopyShot: Bool?
+        public let isRecoverCanopyByKill: Bool?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case canopyChargeFrame = "CanopyChargeFrame"
             case canopyDirXZDiffDegH = "CanopyDirXZ_DiffDeg_H"
@@ -323,23 +323,23 @@ extension Brella {
 }
 
 extension Brella {
-    struct ShotgunParameter: Codable {
-        let type: String
-        let inkConsume: Double?
-        let inkRecoverStop: Int?
-        let inkRecoverStopCharge: Int?
-        let jumpGndCharge: Double
-        let moveSpeed: Double
-        let moveSpeedCharge: Double
-        let postDelayFrameMain: Int?
-        let postDelayFrameMoveLmt: Int?
-        let postNoShotReqFrame: Int?
-        let preDelayFrameHumanMain: Int?
-        let preDelayFrameSquidMain: Int?
-        let repeatFrame: Int
-        let shotGuideFrame: Int?
+    public struct ShotgunParameter: Codable {
+        public let type: String
+        public let inkConsume: Double?
+        public let inkRecoverStop: Int?
+        public let inkRecoverStopCharge: Int?
+        public let jumpGndCharge: Double
+        public let moveSpeed: Double
+        public let moveSpeedCharge: Double
+        public let postDelayFrameMain: Int?
+        public let postDelayFrameMoveLmt: Int?
+        public let postNoShotReqFrame: Int?
+        public let preDelayFrameHumanMain: Int?
+        public let preDelayFrameSquidMain: Int?
+        public let repeatFrame: Int
+        public let shotGuideFrame: Int?
         
-        enum CodingKeys: String, CodingKey {
+        public enum CodingKeys: String, CodingKey {
             case type = "$type"
             case inkConsume = "InkConsume"
             case inkRecoverStop = "InkRecoverStop"
