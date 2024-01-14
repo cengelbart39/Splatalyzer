@@ -7,7 +7,8 @@
 
 import Foundation
 
-public struct BuildStats {
+public struct BuildStats: Equatable {
+    public let mainWeapon: MainWeapon
     public let subWeapon: SubWeapon
     public let specialWeapon: SpecialWeapon
     public let brellaCanopyHp: Int?
@@ -87,8 +88,8 @@ public struct BuildStats {
     ) {
         let ap = gearBuild.toAbilityPoints(ldeIntensity: ldeIntensity, usingTacticooler: usingTacticooler)
         
+        self.mainWeapon = mainInfo.mainWeaponId
         self.subWeapon = mainInfo.subWeapon
-        
         self.specialWeapon = mainInfo.specialWeapon
         
         self.brellaCanopyHp = mainInfo.canopyHP != nil ? mainInfo.canopyHP! / 10 : nil
@@ -163,11 +164,11 @@ public struct BuildStats {
         
         self.squidSurgeChargeFrame = StatHelper.squidSurgeChargeFrames(ap: ap, values: abilityValues, mainInfo: mainInfo)
         
-        self.pointSensorMarkedSeconds = StatHelper.markedSeconds(ap: ap, values: abilityValues, mainInfo: mainInfo, subInfo: pointSensorInfo)
+        self.pointSensorMarkedSeconds = StatHelper.subMarkedSeconds(ap: ap, values: abilityValues, mainInfo: mainInfo, subInfo: pointSensorInfo)
         
-        self.inkMineMarkedSeconds = StatHelper.markedSeconds(ap: ap, values: abilityValues, mainInfo: mainInfo, subInfo: inkMineInfo)
+        self.inkMineMarkedSeconds = StatHelper.inkMineMarkedSeconds(ap: ap, values: abilityValues, mainInfo: mainInfo, inkMine: inkMineInfo)
         
-        self.angleShooterMarkedSeconds = StatHelper.markedSeconds(ap: ap, values: abilityValues, mainInfo: mainInfo, subInfo: angleShooterInfo)
+        self.angleShooterMarkedSeconds = StatHelper.subMarkedSeconds(ap: ap, values: abilityValues, mainInfo: mainInfo, subInfo: angleShooterInfo)
         
         self.toxicMistMovementReduction = StatHelper.toxicMistMovementReduction(ap: ap, values: abilityValues, mainInfo: mainInfo)
         

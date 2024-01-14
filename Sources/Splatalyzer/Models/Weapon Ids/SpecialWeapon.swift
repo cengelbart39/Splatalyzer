@@ -36,11 +36,27 @@ public enum SpecialWeapon: String, CaseIterable {
     
     #if os(macOS)
     var image: NSImage? {
-        return NSImage(named: self.rawValue)
+        guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
+            return nil
+        }
+        
+        guard let data = try? Data(contentsOf: url) else {
+            return nil
+        }
+        
+        return NSImage(data: data)
     }
     #else
     var image: UIImage? {
-        return UIImage(named: self.rawValue)
+        guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
+            return nil
+        }
+        
+        guard let data = try? Data(contentsOf: url) else {
+            return nil
+        }
+        
+        return UIImage(data: data)
     }
     #endif
     

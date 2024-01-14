@@ -13,7 +13,7 @@ protocol JSONServicable {
 
 struct JSONService: JSONServicable {
     func decode<T: Codable>(_ type: T.Type, from file: String) throws -> T {
-        guard let url = Bundle.main.url(forResource: file, withExtension: "json", subdirectory: "Splatalyzer") else {
+        guard let url = Bundle.module.url(forResource: file, withExtension: "json") else {
             throw JSONError.invalidUrl(file)
         }
         

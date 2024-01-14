@@ -720,7 +720,7 @@ public struct StatHelper {
             value: ceil(apEffect.effect))
     }
     
-    public static func markedSeconds(
+    public static func subMarkedSeconds(
         ap: AbilityPoints,
         values: AbilityValues,
         mainInfo: MainWeaponData,
@@ -740,6 +740,33 @@ public struct StatHelper {
             in: values,
             of: 0,
             weapon: subInfo)
+        
+        return AbilityStat(
+            baseValue: (subEffect.baseEffect * mainEffect.baseEffect).framesToSeconds(),
+            modifiedBy: [sru],
+            value: (subEffect.baseEffect * mainEffect.effect).framesToSeconds())
+    }
+    
+    public static func inkMineMarkedSeconds(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        mainInfo: MainWeaponData,
+        inkMine: SubWeaponData
+    ) -> AbilityStat {
+        let sru = Ability.subResistanceUp
+        let sruAp = ap[sru] ?? 0
+        
+        let mainEffect = APEffect(
+            for: .markingTimeRtTrap,
+            in: values,
+            of: sruAp,
+            weapon: mainInfo)
+        
+        let subEffect = APEffect(
+            for: .markingFrameSubSpec,
+            in: values,
+            of: 0,
+            weapon: inkMine)
         
         return AbilityStat(
             baseValue: (subEffect.baseEffect * mainEffect.baseEffect).framesToSeconds(),
@@ -1359,5 +1386,17 @@ public struct StatHelper {
             low: overwrites?.low ?? value?.low ?? 0.0)
         
         return effect
+    }
+    
+    public static func lerpN(_ x: Double, _ y: Double) -> Double {
+        if x == 0 || x == 1 {
+            return x
+            
+        } else if round(x * 1000) / 1000 == 0.5 {
+            return x
+            
+        } else {
+            return exp(-1 * ((log(x) * log(y)) / log(2)))
+        }
     }
 }

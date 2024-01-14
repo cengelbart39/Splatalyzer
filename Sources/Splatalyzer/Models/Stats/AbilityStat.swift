@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct AbilityStat {
+public struct AbilityStat: Equatable {
     public let baseValue: Double
     public let modifiedBy: [Ability]
     public let value: Double

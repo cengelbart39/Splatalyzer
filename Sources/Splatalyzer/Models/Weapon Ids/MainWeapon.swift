@@ -13,7 +13,7 @@ import UIKit
 
 import Foundation
 
-public enum MainWeapon: String, CaseIterable {
+public enum MainWeapon: String, CaseIterable, Identifiable {
     // MARK: Blasters
     case rapidBlasterPro = "Blaster_LightLong_00"
     case rapidBlasterProDeco = "Blaster_LightLong_01"
@@ -146,7 +146,7 @@ public enum MainWeapon: String, CaseIterable {
     case reeflux450 = "Stringer_Short_00"
     case reeflux450Deco = "Stringer_Short_01"
     
-    public var type: WeaponType {
+    public var type: WeaponClass {
         switch self {
         case .rapidBlasterPro, .rapidBlasterProDeco, .clashBlaster, .clashBlasterNeo, .rapidBlaster, .rapidBlasterDeco, .rangeBlaster, .blaster, .customBlaster, .sblast91, .sblast92, .lunaBlaster, .lunaBlasterNeo:
             return .blaster
@@ -183,13 +183,25 @@ public enum MainWeapon: String, CaseIterable {
         }
     }
     
+    public var id: UUID {
+        return UUID()
+    }
+    
     #if os(macOS)
     public var image: NSImage? {
         return NSImage(named: "Path_Wst_\(self.rawValue).png")
     }
     #else
     public var image: UIImage? {
-        return UIImage(named: "Path_Wst_\(self.rawValue).png")
+        guard let url = Bundle.module.url(forResource: "Path_Wst_\(self.rawValue)", withExtension: "png") else {
+            return nil
+        }
+        
+        guard let data = try? Data(contentsOf: url) else {
+            return nil
+        }
+        
+        return UIImage(data: data)
     }
     #endif
     
@@ -197,18 +209,49 @@ public enum MainWeapon: String, CaseIterable {
         let split = self.rawValue.split(separator: "_")
         return String(split[0] + split[1])
     }
+    
+    static func getWeapons(for type: WeaponClass) -> [MainWeapon] {
+        return MainWeapon.allCases.filter { $0.type == type }
+            .sorted(by: { $0.rawValue < $1.rawValue })
+    }
 }
 
-public enum WeaponType {
-    case blaster
-    case brush
-    case charger
-    case dualie
-    case roller
-    case splatana
-    case brella
-    case shooter
-    case slosher
-    case splatling
-    case stringer
+public enum WeaponClass: String, CaseIterable {
+    case blaster = "Blasters"
+    case brush = "Brushes"
+    case charger = "Chargers"
+    case dualie = "Dualies"
+    case roller = "Rollers"
+    case splatana = "Splatanas"
+    case brella = "Brellas"
+    case shooter = "Shooters"
+    case slosher = "Sloshers"
+    case splatling = "Splatlings"
+    case stringer = "Stringers"
+    
+    #if os(macOS)
+    public var image: NSImage? {
+        guard let url = Bundle.main.url(forResource: self.rawValue, withExtension: "png") else {
+            return nil
+        }
+        
+        guard let data = try? Data(contentsOf: url) else {
+            return nil
+        }
+        
+        return NSImage(data: data)
+    }
+    #else
+    public var image: UIImage? {
+        guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
+            return nil
+        }
+        
+        guard let data = try? Data(contentsOf: url) else {
+            return nil
+        }
+        
+        return UIImage(data: data)
+    }
+    #endif
 }

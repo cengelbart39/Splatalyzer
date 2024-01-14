@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct DamageStat {
+public struct DamageStat: Equatable {
     public let id = UUID()
     public let type: DamageType
     public let value: Double

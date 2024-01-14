@@ -34,7 +34,7 @@ public struct SubOverwrites: Overwritable {
             return self.markingFrameSubSpec
             
         case .subSpecUpParam, .subVelocity:
-            return self.subSpecUpParam?.subSpecUpParam
+            return self.subSpecUpParam?.subSpecUpParam ?? self.spawnSpeedZSpecUp
             
         case .subFirstPhaseDuration:
             return self.periodFirst

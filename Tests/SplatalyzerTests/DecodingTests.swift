@@ -24,6 +24,8 @@ final class DecodingTests: XCTestCase {
     }
     
     func test_AbilityValues_decode_noThrows() {
+        let image = Ability.abilityDoubler.image
+        
         let service = JSONServiceForTests()
         XCTAssertNoThrow(try service.decode(AbilityValues.self, from: "ability-values"))
     }

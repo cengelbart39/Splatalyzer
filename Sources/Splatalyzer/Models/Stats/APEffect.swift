@@ -29,11 +29,11 @@ public struct APEffect {
         
         let slope = Double(mid - low) / Double(high - low)
         
-        let basePercentage = min(3.3 * 0 - 0.027 * pow(Double(ap), 2), 100)
-        let percentage = min(3.3 * Double(ap) - 0.027 * pow(Double(ap), 2), 100)
+        let basePercentage = min(3.3 * 0 - 0.027 * pow(Double(ap), 2), 100) / 100.0
+        let percentage = min(3.3 * Double(ap) - 0.027 * pow(Double(ap), 2), 100) / 100.0
         
-        let lerpNBase = exp((log(slope) * log(basePercentage)) / log(2))
-        let lerpN = exp((log(slope) * log(percentage)) / log(2))
+        let lerpNBase = StatHelper.lerpN(slope, basePercentage)
+        let lerpN = StatHelper.lerpN(slope, percentage)
         
         let baseResult = low + (high - low) * lerpNBase
         let result = low + (high - low) * lerpN

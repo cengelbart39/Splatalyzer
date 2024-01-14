@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct GearBuild {
+public struct GearBuild: Equatable {
     public var headgear: GearPiece
     public var clothes: GearPiece
     public var shoes: GearPiece
@@ -79,7 +79,8 @@ public struct GearBuild {
     }
 }
 
-public struct GearPiece {
+public struct GearPiece: Equatable, Identifiable {
+    public var id = UUID()
     public var main: Ability
     public var sub1: Ability
     public var sub2: Ability

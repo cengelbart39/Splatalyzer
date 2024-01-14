@@ -109,7 +109,7 @@ public struct InkMine: SubParametable {
             spawnSpeedZSpecUp: self.moveParam.spawnSpeedZSpecUp,
             periodFirst: nil,
             periodSecond: nil,
-            markingFrameSubSpec: nil,
+            markingFrameSubSpec: self.areaParam.markingFrameSubSpec,
             sensorRadius: self.moveParam.sensorRadius,
             explosionRadius: self.areaParam.distance,
             maxHp: nil,
