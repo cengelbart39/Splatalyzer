@@ -43,6 +43,7 @@ public struct BuildStats: Equatable {
     public let quickRespawnTime: AbilityStat
     public let quickRespawnTimeSplattedByRP: AbilityStat
     public let superJumpGroundFrames: AbilityStat
+    public let superJumpTimeTotal: AbilityStat
     public let shotSpreadAir: AbilityStat?
     public let shotSpreadGround: Double?
     public let shotAutofireSpreadAir: AbilityStat?
@@ -152,6 +153,8 @@ public struct BuildStats: Equatable {
         self.quickRespawnTimeSplattedByRP = StatHelper.respawnTime(ap: ap, values: abilityValues, gearBuild: gearBuild, mainInfo: mainInfo, splatedByRP: true, hasTacticooler: usingTacticooler)
         
         self.superJumpGroundFrames = StatHelper.superJumpGroundFrames(ap: ap, values: abilityValues, mainInfo: mainInfo)
+        
+        self.superJumpTimeTotal = StatHelper.superJumpTimeTotal(ap: ap, values: abilityValues, mainInfo: mainInfo)
         
         self.shotSpreadAir = StatHelper.shotSpreadAir(ap: ap, values: abilityValues, mainInfo: mainInfo)
         

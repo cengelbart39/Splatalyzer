@@ -43,24 +43,6 @@ public final class Splatalyzer {
             allSubData[sub] = subData
         }
         
-        let angleShooterData = try self.getSubWeaponData(
-            weapon: .angleShooter,
-            service: service,
-            infoSub: weaponInfoSub,
-            playerInfo: playerParams.parameters)
-        
-        let inkMineData = try self.getSubWeaponData(
-            weapon: .inkMine,
-            service: service,
-            infoSub: weaponInfoSub,
-            playerInfo: playerParams.parameters)
-        
-        let pointSensorData = try self.getSubWeaponData(
-            weapon: .pointSensor,
-            service: service,
-            infoSub: weaponInfoSub,
-            playerInfo: playerParams.parameters)
-        
         let specialData = try self.getSpecialData(
             weapon: mainData.specialWeapon,
             service: service,

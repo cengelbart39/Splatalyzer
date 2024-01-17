@@ -638,6 +638,33 @@ public struct StatHelper {
             value: ceil(apEffect.effect))
     }
     
+    public static func superJumpTimeTotal(
+        ap: AbilityPoints,
+        values: AbilityValues,
+        mainInfo: MainWeaponData
+    ) -> AbilityStat {
+        let ability = Ability.quickSuperJump
+        
+        let qsjAp = ap[ability] ?? 0
+        
+        let charge = APEffect(
+            for: .superJumpChargeFrm,
+            in: values,
+            of: qsjAp,
+            weapon: mainInfo)
+        
+        let move = APEffect(
+            for: .superJumpMoveFrm,
+            in: values,
+            of: qsjAp,
+            weapon: mainInfo)
+        
+        return AbilityStat(
+            baseValue: (ceil(charge.baseEffect) + ceil(move.baseEffect)).framesToSeconds(),
+            modifiedBy: [.quickSuperJump],
+            value: (ceil(charge.effect) + ceil(move.effect)).framesToSeconds())
+    }
+    
     public static func superJumpTotalFrames(
         _ ap: AbilityPoints,
         _ values: AbilityValues,
