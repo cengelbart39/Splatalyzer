@@ -605,7 +605,7 @@ public struct StatHelper {
             of: qrAp,
             weapon: mainInfo)
         
-        let ownRPExtraFrames = splatedByRP ? 68.0 : 0.0
+        let ownRPExtraFrames = hasRP ? 68.0 : 0.0
         let splattedByExtraFrames = splatedByRP ? 45.0 : 0.0
         let respawnChaseFrame = 150.0
         let fasterRespawn = 60.0
