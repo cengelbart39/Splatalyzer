@@ -58,11 +58,9 @@ public struct HighMidLow: Codable {
     public init?(_ arr: [Double]) {
         if arr.count != 3 { return nil }
         
-        let sorted = arr.sorted(by: {$0 < $1})
-        
-        self.low = sorted[0]
-        self.mid = sorted[1]
-        self.high = sorted[2]
+        self.high = arr[0]
+        self.mid = arr[1]
+        self.low = arr[2]
     }
     
     func hasEffect() -> Bool {

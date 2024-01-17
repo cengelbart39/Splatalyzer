@@ -274,6 +274,9 @@ public struct SubWeaponData: WeaponDatable {
         case .splash:
             return self.splashBlastParam
             
+        case .direct:
+            return self.directDamage.toDouble()
+            
         default:
             return nil
         }

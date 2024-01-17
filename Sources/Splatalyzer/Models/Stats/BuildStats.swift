@@ -23,7 +23,7 @@ public struct BuildStats: Equatable {
     public let fullInkTankOptions: [InkTankOption]
     public let mainDamages: [DamageStat]
     public let specialDamages: [DamageStat]
-    public let subDefenseDamages: [DamageEffectStat]
+    public let subDefenseDamages: [SubWeapon : [DamageEffectStat]]
     public let mainWhiteInkSeconds: Double?
     public let subWhiteInkSeconds: Double
     public let subInkConsumptionPercentage: AbilityStat
@@ -41,7 +41,7 @@ public struct BuildStats: Equatable {
     public let enemyInkDamageLimit: AbilityStat
     public let framesBeforeDamageInEnemyInk: AbilityStat
     public let quickRespawnTime: AbilityStat
-    public let quickRespawnTimeSplatteByRP: AbilityStat
+    public let quickRespawnTimeSplattedByRP: AbilityStat
     public let superJumpGroundFrames: AbilityStat
     public let shotSpreadAir: AbilityStat?
     public let shotSpreadGround: Double?
@@ -76,10 +76,7 @@ public struct BuildStats: Equatable {
     
     public init(
         mainInfo: MainWeaponData,
-        subInfo: SubWeaponData,
-        angleShooterInfo: SubWeaponData,
-        inkMineInfo: SubWeaponData,
-        pointSensorInfo: SubWeaponData,
+        allSubInfo: [SubWeapon : SubWeaponData],
         specialInfo: SpecialWeaponData,
         gearBuild: GearBuild,
         abilityValues: AbilityValues,
@@ -87,6 +84,8 @@ public struct BuildStats: Equatable {
         usingTacticooler: Bool
     ) {
         let ap = gearBuild.toAbilityPoints(ldeIntensity: ldeIntensity, usingTacticooler: usingTacticooler)
+        
+        let subInfo = allSubInfo[mainInfo.subWeapon]!
         
         self.mainWeapon = mainInfo.mainWeaponId
         self.subWeapon = mainInfo.subWeapon
@@ -114,7 +113,7 @@ public struct BuildStats: Equatable {
 
         self.specialDamages = StatHelper.specialDamages(specialInfo: specialInfo)
         
-        self.subDefenseDamages = StatHelper.subDefenseDamages(ap: ap, abilities: abilityValues, subInfo: subInfo)
+        self.subDefenseDamages = StatHelper.subDefenseDamages(ap: ap, abilities: abilityValues, subData: allSubInfo)
         
         self.mainWhiteInkSeconds = mainInfo.inkRecoverStop.framesToSeconds() ?? nil
         
@@ -150,7 +149,7 @@ public struct BuildStats: Equatable {
         
         self.quickRespawnTime = StatHelper.respawnTime(ap: ap, values: abilityValues, gearBuild: gearBuild, mainInfo: mainInfo, splatedByRP: false, hasTacticooler: usingTacticooler)
         
-        self.quickRespawnTimeSplatteByRP = StatHelper.respawnTime(ap: ap, values: abilityValues, gearBuild: gearBuild, mainInfo: mainInfo, splatedByRP: true, hasTacticooler: usingTacticooler)
+        self.quickRespawnTimeSplattedByRP = StatHelper.respawnTime(ap: ap, values: abilityValues, gearBuild: gearBuild, mainInfo: mainInfo, splatedByRP: true, hasTacticooler: usingTacticooler)
         
         self.superJumpGroundFrames = StatHelper.superJumpGroundFrames(ap: ap, values: abilityValues, mainInfo: mainInfo)
         
@@ -164,11 +163,11 @@ public struct BuildStats: Equatable {
         
         self.squidSurgeChargeFrame = StatHelper.squidSurgeChargeFrames(ap: ap, values: abilityValues, mainInfo: mainInfo)
         
-        self.pointSensorMarkedSeconds = StatHelper.subMarkedSeconds(ap: ap, values: abilityValues, mainInfo: mainInfo, subInfo: pointSensorInfo)
+        self.pointSensorMarkedSeconds = StatHelper.subMarkedSeconds(ap: ap, values: abilityValues, mainInfo: mainInfo, subInfo: allSubInfo[.pointSensor]!)
         
-        self.inkMineMarkedSeconds = StatHelper.inkMineMarkedSeconds(ap: ap, values: abilityValues, mainInfo: mainInfo, inkMine: inkMineInfo)
+        self.inkMineMarkedSeconds = StatHelper.inkMineMarkedSeconds(ap: ap, values: abilityValues, mainInfo: mainInfo, inkMine: allSubInfo[.inkMine]!)
         
-        self.angleShooterMarkedSeconds = StatHelper.subMarkedSeconds(ap: ap, values: abilityValues, mainInfo: mainInfo, subInfo: angleShooterInfo)
+        self.angleShooterMarkedSeconds = StatHelper.subMarkedSeconds(ap: ap, values: abilityValues, mainInfo: mainInfo, subInfo: allSubInfo[.angleShooter]!)
         
         self.toxicMistMovementReduction = StatHelper.toxicMistMovementReduction(ap: ap, values: abilityValues, mainInfo: mainInfo)
         

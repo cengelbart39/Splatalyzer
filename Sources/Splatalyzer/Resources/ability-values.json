@@ -141,7 +141,7 @@
   ],
   "OpInk_DamagePerFrame": [
     0.0015,
-    0.00225,
+    0.0022,
     0.003
   ],
   "OpInk_JumpVel": [
@@ -195,9 +195,9 @@
     138
   ],
   "WallJumpChargeFrm": [
-    0,
-    0,
-    0
+    5,
+    18,
+    45
   ],
   "ReduceJumpSwerveRate": [
     1,

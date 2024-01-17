@@ -22,10 +22,8 @@ public struct AbilityValues: Codable {
                     debugDescription: "Invalid key '\(stringKey)'"
                 )
             }
-            
-            let sorted = value.sorted(by: {$0 < $1})
-            
-            guard let hml = HighMidLow(sorted) else {
+                        
+            guard let hml = HighMidLow(value) else {
                 throw DecodingError.dataCorruptedError(
                     in: container, 
                     debugDescription: "\(value) for '\(stringKey)' does not have 3 elements."

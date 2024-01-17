@@ -29,7 +29,7 @@ public struct APEffect {
         
         let slope = Double(mid - low) / Double(high - low)
         
-        let basePercentage = min(3.3 * 0 - 0.027 * pow(Double(ap), 2), 100) / 100.0
+        let basePercentage = min(3.3 * 0 - 0.027 * pow(0, 2), 100) / 100.0
         let percentage = min(3.3 * Double(ap) - 0.027 * pow(Double(ap), 2), 100) / 100.0
         
         let lerpNBase = StatHelper.lerpN(slope, basePercentage)
@@ -43,7 +43,7 @@ public struct APEffect {
     }
     
     public func baseEffectToDamage() -> Double {
-        return baseEffect * 100 - 0.05
+        return baseEffect * 100
     }
     
     public func effectToDamage() -> Double {

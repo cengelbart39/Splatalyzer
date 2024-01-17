@@ -58,6 +58,7 @@ enum AbilitySpecialEffect {
             return [
                 AbilityEffectValue(29, of: .swimSpeedUp, boostsBeyond: false),
                 AbilityEffectValue(29, of: .runSpeedUp, boostsBeyond: false),
+                AbilityEffectValue(57, of: .inkResistanceUp, boostsBeyond: true),
                 AbilityEffectValue(57, of: .quickRespawn, boostsBeyond: true),
                 AbilityEffectValue(57, of: .quickSuperJump, boostsBeyond: true),
                 AbilityEffectValue(57, of: .specialSaver, boostsBeyond: true),

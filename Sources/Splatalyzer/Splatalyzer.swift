@@ -31,11 +31,17 @@ public final class Splatalyzer {
             service: service,
             mainInfo: weaponInfoMain)
         
-        let subData = try self.getSubWeaponData(
-            weapon: mainData.subWeapon,
-            service: service,
-            infoSub: weaponInfoSub,
-            playerInfo: playerParams.parameters)
+        var allSubData = [SubWeapon : SubWeaponData]()
+        
+        for sub in SubWeapon.allCases {
+            let subData = try self.getSubWeaponData(
+                weapon: sub,
+                service: service,
+                infoSub: weaponInfoSub,
+                playerInfo: playerParams.parameters)
+            
+            allSubData[sub] = subData
+        }
         
         let angleShooterData = try self.getSubWeaponData(
             weapon: .angleShooter,
@@ -64,10 +70,7 @@ public final class Splatalyzer {
         
         let stats = BuildStats(
             mainInfo: mainData,
-            subInfo: subData,
-            angleShooterInfo: angleShooterData,
-            inkMineInfo: inkMineData,
-            pointSensorInfo: pointSensorData,
+            allSubInfo: allSubData,
             specialInfo: specialData,
             gearBuild: gearBuild,
             abilityValues: abilityValues,

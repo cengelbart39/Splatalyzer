@@ -17,7 +17,7 @@ public struct SubWeaponConsume {
         _ mainInfo: MainWeaponData,
         _ subInfo: SubWeaponData
     ) {
-        let issAp = ap[.inkSaverMain] ?? 0
+        let issAp = ap[.inkSaverSub] ?? 0
         
         let apEffect = APEffect(
             for: AbilityValue.getSubConsumeLevel(for: subInfo.subLevelSave),
@@ -30,6 +30,6 @@ public struct SubWeaponConsume {
         let inkTankSize = mainInfo.mainWeaponId == .splattershotJr || mainInfo.mainWeaponId == .customSplattershotJr ? 1.1 : 1
         
         self.inkConsume = inkConsumeAfterISS
-        self.maxSubsFromFullInkTank = Int(ceil(inkTankSize / inkConsumeAfterISS))
+        self.maxSubsFromFullInkTank = Int(floor(inkTankSize / inkConsumeAfterISS))
     }
 }

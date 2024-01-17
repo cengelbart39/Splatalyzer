@@ -218,96 +218,117 @@ public struct StatHelper {
     public static func subDefenseDamages(
         ap: AbilityPoints,
         abilities: AbilityValues,
-        subInfo: SubWeaponData
-    ) -> [DamageEffectStat] {
+        subData: [SubWeapon : SubWeaponData]
+    ) -> [SubWeapon : [DamageEffectStat]] {
         let sruAp = ap[.subResistanceUp] ?? 0
         
-        var result = [DamageEffectStat]()
+        var result = [SubWeapon : [DamageEffectStat]]()
         
-        for type in DamageType.allCases {
-            let value = subInfo.damage(for: type)
+        for (weapon, data) in subData {
             
-            if let value = value as? Double {
-                let stat = DamageEffectStat(
-                    type: type,
-                    baseValue: value / 10,
-                    effectValue: StatHelper.subDamageValue(
-                        ap: sruAp,
-                        abilities: abilities,
-                        baseValue: value / 10,
-                        subInfo: subInfo
-                    ),
-                    distance: 0,
-                    distanceArr: [],
-                    subWeapon: subInfo.id)
+            var weaponResults = [DamageEffectStat]()
+            
+            for type in DamageType.allCases {
+                let value = data.damage(for: type)
                 
-                result.append(stat)
-                
-            } else if let value = value as? [DistanceDamage] {
-                var localResults = [DamageEffectStat]()
-                
-                for subValue in value {
+                if let value = value as? Double {
                     let stat = DamageEffectStat(
                         type: type,
-                        baseValue: Double(subValue.damage) / 10,
+                        baseValue: value / 10,
                         effectValue: StatHelper.subDamageValue(
                             ap: sruAp,
                             abilities: abilities,
-                            baseValue: Double(subValue.damage) / 10,
-                            subInfo: subInfo
+                            baseValue: value / 10,
+                            subInfo: data
                         ),
-                        distance: subValue.distance,
-                        distanceArr: [],
-                        subWeapon: subInfo.id)
-                    
-                    localResults.append(stat)
-                }
-                
-                if subInfo.id == .burstBomb {
-                    let stat = DamageEffectStat(
-                        type: type,
-                        baseValue: localResults.sumBaseValue(),
-                        effectValue: localResults.sumBaseValue(),
                         distance: 0,
                         distanceArr: [],
-                        subWeapon: subInfo.id)
+                        subWeapon: weapon)
                     
-                    localResults.insert(stat, at: 0)
+                    weaponResults.append(stat)
                     
-                } else if subInfo.id == .fizzyBomb || subInfo.id == .curlingBomb {
+                } else if let value = value as? [DistanceDamage] {
+                    var localResults = [DamageEffectStat]()
                     
-                    let allSorted = localResults.sorted(by: { $0.baseValue < $1.baseValue })
+                    for subValue in value {
+                        let stat = DamageEffectStat(
+                            type: type,
+                            baseValue: Double(subValue.damage) / 10,
+                            effectValue: StatHelper.subDamageValue(
+                                ap: sruAp,
+                                abilities: abilities,
+                                baseValue: Double(subValue.damage) / 10,
+                                subInfo: data
+                            ),
+                            distance: subValue.distance,
+                            distanceArr: [],
+                            subWeapon: weapon)
+                        
+                        localResults.append(stat)
+                    }
                     
-                    let firstHalf = Array(allSorted[0..<allSorted.count/2])
-                    let secondHalf = Array(allSorted[allSorted.count/2 ... allSorted.count])
+                    if weapon == .burstBomb {
+                        let stat = DamageEffectStat(
+                            type: type,
+                            baseValue: localResults.sumBaseValue(),
+                            effectValue: localResults.sumBaseValue(),
+                            distance: 0,
+                            distanceArr: [],
+                            subWeapon: weapon)
+                        
+                        localResults.insert(stat, at: 0)
+                        
+                    } else if weapon == .fizzyBomb || weapon == .curlingBomb {
+                        
+                        let allSorted = localResults.sorted(by: { $0.baseValue < $1.baseValue })
+                        
+                        if !allSorted.isEmpty {
+                            let firstHalf = Array(allSorted[0..<allSorted.count/2])
+                            let secondHalf = Array(allSorted[allSorted.count/2 ..< allSorted.count])
+                            
+                            let stat1 = DamageEffectStat(
+                                type: type,
+                                baseValue: secondHalf.first!.baseValue,
+                                effectValue: secondHalf.first!.effectValue,
+                                distance: nil,
+                                distanceArr: [
+                                    secondHalf.minDistance(),
+                                    secondHalf.maxDistance()
+                                ],
+                                subWeapon: weapon)
+                            
+                            let stat2 = DamageEffectStat(
+                                type: type,
+                                baseValue: firstHalf.first!.baseValue,
+                                effectValue: firstHalf.first!.effectValue,
+                                distance: nil,
+                                distanceArr: [
+                                    firstHalf.minDistance(),
+                                    firstHalf.maxDistance()
+                                ],
+                                subWeapon: weapon)
+                            
+                            for item in firstHalf {
+                                let index = localResults.firstIndex(of: item)!
+                                localResults.remove(at: index)
+                            }
+                            
+                            for item in secondHalf {
+                                let index = localResults.firstIndex(of: item)!
+                                localResults.remove(at: index)
+                            }
+                            
+                            localResults.append(contentsOf: [stat1, stat2])
+                        }
+                    }
                     
-                    let stat1 = DamageEffectStat(
-                        type: type,
-                        baseValue: secondHalf.first!.baseValue,
-                        effectValue: secondHalf.first!.effectValue,
-                        distance: nil,
-                        distanceArr: [
-                            secondHalf.minDistance(),
-                            secondHalf.maxDistance()
-                        ],
-                        subWeapon: subInfo.id)
-                    
-                    let stat2 = DamageEffectStat(
-                        type: type,
-                        baseValue: firstHalf.first!.baseValue,
-                        effectValue: firstHalf.first!.effectValue,
-                        distance: nil,
-                        distanceArr: [
-                            firstHalf.minDistance(),
-                            firstHalf.maxDistance()
-                        ],
-                        subWeapon: subInfo.id)
-                    
-                    result.append(contentsOf: [stat1, stat2])
+                    weaponResults.append(contentsOf: localResults)
                 }
             }
+            
+            result[weapon] = weaponResults.filter { !($0.baseValue == 0 && $0.effectValue == 0 && $0.distance == 0) }
         }
-        
+            
         return result
     }
     
@@ -530,9 +551,9 @@ public struct StatHelper {
             weapon: mainInfo)
         
         return AbilityStat(
-            baseValue: apEffect.baseEffectToDamage() * 60,
+            baseValue: apEffect.baseEffectToDamage(),
             modifiedBy: [iru],
-            value: apEffect.effectToDamage() * 60)
+            value: apEffect.effectToDamage())
     }
     
     public static func framesBeforeDamageInEnemyInk(
@@ -584,15 +605,16 @@ public struct StatHelper {
             of: qrAp,
             weapon: mainInfo)
         
-        let ownRPExtraFrames = hasRP ? 68.0 : 0.0
-        let splattedByExtraFrames = hasRP ? 45.0 : 0.0
+        let ownRPExtraFrames = splatedByRP ? 68.0 : 0.0
+        let splattedByExtraFrames = splatedByRP ? 45.0 : 0.0
         let respawnChaseFrame = 150.0
         let fasterRespawn = 60.0
         
         return AbilityStat(
-            baseValue: respawnChaseFrame + chase.baseEffect + splattedByExtraFrames + around.baseEffect - fasterRespawn,
+            baseValue: (respawnChaseFrame + chase.baseEffect + splattedByExtraFrames + around.baseEffect - fasterRespawn).framesToSeconds(),
             modifiedBy: [qr, .respawnPunisher],
-            value: respawnChaseFrame + chase.effect + around.effect + splattedByExtraFrames + ownRPExtraFrames - fasterRespawn)
+            value: (respawnChaseFrame + chase.effect + around.effect + splattedByExtraFrames + ownRPExtraFrames - fasterRespawn).framesToSeconds()
+        )
     }
     
     public static func superJumpGroundFrames(
@@ -1392,7 +1414,7 @@ public struct StatHelper {
         if x == 0 || x == 1 {
             return x
             
-        } else if round(x * 1000) / 1000 == 0.5 {
+        } else if round(y * 1000) / 1000 == 0.5 {
             return x
             
         } else {
