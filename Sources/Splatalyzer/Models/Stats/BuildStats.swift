@@ -20,7 +20,7 @@ public struct BuildStats: Equatable {
     public let specialPoint: AbilityStat
     public let specialLost: AbilityStat
     public let specialLostSplattedByRP: AbilityStat
-    public let fullInkTankOptions: [InkTankOption]
+    public let fullInkTankOptions: [Int : [InkTankOption]]
     public let mainDamages: [DamageStat]
     public let specialDamages: [DamageStat]
     public let subDefenseDamages: [SubWeapon : [DamageEffectStat]]
@@ -63,10 +63,11 @@ public struct BuildStats: Equatable {
     public let subHp: AbilityStat?
     public let specialDuration: AbilityStat?
     public let specialDamageDistance: AbilityStat?
+    public let specialPaintRadius: AbilityStat?
     public let specialFieldHp: AbilityStat?
     public let specialDeviceHp: AbilityStat?
     public let specialHookInkConsumption: AbilityStat?
-    public let specialInkConsumptionPerSecond: AbilityStat?
+    public let specialHookInkConsumptionPerSecond: AbilityStat?
     public let specialReticleRadius: AbilityStat?
     public let specialThrowDistance: AbilityStat?
     public let specialMoveSpeed: AbilityStat?
@@ -194,13 +195,15 @@ public struct BuildStats: Equatable {
         
         self.specialDamageDistance = StatHelper.specialDamageDistance(ap: ap, values: abilityValues, specialInfo: specialInfo)
         
+        self.specialPaintRadius = StatHelper.specialPaintRadius(ap: ap, values: abilityValues, specialInfo: specialInfo)
+        
         self.specialFieldHp = StatHelper.specialFieldHp(ap: ap, values: abilityValues, specialInfo: specialInfo)
         
         self.specialDeviceHp = StatHelper.specialDeviceHp(ap: ap, values: abilityValues, specialInfo: specialInfo)
         
         self.specialHookInkConsumption = StatHelper.specialHookInkConsumption(ap: ap, values: abilityValues, specialInfo: specialInfo)
         
-        self.specialInkConsumptionPerSecond = StatHelper.specialInkConsumptionPerSecond(ap: ap, values: abilityValues, specialInfo: specialInfo)
+        self.specialHookInkConsumptionPerSecond = StatHelper.specialHookInkConsumptionPerSecond(ap: ap, values: abilityValues, specialInfo: specialInfo)
         
         self.specialReticleRadius = StatHelper.specialReticleRadius(ap: ap, values: abilityValues, specialInfo: specialInfo)
         

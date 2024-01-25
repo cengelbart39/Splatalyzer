@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct InkTankOption: Equatable {
+public struct InkTankOption: Equatable, Identifiable {
     public let id = UUID()
     public let subsFromFullInkTank: Int
     public let type: InkConsumeType

@@ -44,6 +44,17 @@ public enum WeaponSpeedType: String, Codable {
     case slow = "Slow"
     case mid = "Mid"
     case fast = "Fast"
+    
+    var display: String {
+        switch self {
+        case .slow:
+            return "Heavy"
+        case .mid:
+            return "Normal"
+        case .fast:
+            return "Light"
+        }
+    }
 }
 
 public struct MainOverwrites: Overwritable {

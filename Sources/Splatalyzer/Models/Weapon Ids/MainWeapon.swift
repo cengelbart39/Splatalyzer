@@ -189,7 +189,15 @@ public enum MainWeapon: String, CaseIterable, Identifiable {
     
     #if os(macOS)
     public var image: NSImage? {
-        return NSImage(named: "Path_Wst_\(self.rawValue).png")
+        guard let url = Bundle.module.url(forResource: "Path_Wst_\(self.rawValue)", withExtension: "png") else {
+            return nil
+        }
+        
+        guard let data = try? Data(contentsOf: url) else {
+            return nil
+        }
+        
+        return NSImage(data: data)
     }
     #else
     public var image: UIImage? {

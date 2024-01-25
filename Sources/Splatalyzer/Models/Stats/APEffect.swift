@@ -43,10 +43,10 @@ public struct APEffect {
     }
     
     public func baseEffectToDamage() -> Double {
-        return baseEffect * 100
+        return (baseEffect * 100).cutToDecimalPlaces(3)
     }
     
     public func effectToDamage() -> Double {
-        return effect * 100 - 0.05
+        return (effect * 100 - 0.05).cutToDecimalPlaces(3)
     }
 }

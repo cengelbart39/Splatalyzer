@@ -34,7 +34,9 @@ public struct StatHelper {
         return AbilityStat(
             baseValue: Double(mainInfo.specialPoints),
             modifiedBy: [ability],
-            value: ceil(Double(mainInfo.specialPoints) / apEffect.effect)
+            value: ceil(Double(mainInfo.specialPoints) / apEffect.effect),
+            unit: .points,
+            title: "Points to Special"
         )
     }
     
@@ -66,12 +68,14 @@ public struct StatHelper {
             modifiedBy: [.specialSaver, .respawnPunisher],
             value: StatHelper.specialSavedAfterDeath(
                 apEffect.effect - splattedPenalty - extraSpecialLost
-            )
+            ),
+            unit: .percentage,
+            title: "Special Lost When Splatted\(splattedByRP ? " With RP" : "")"
         )
     }
     
     public static func specialSavedAfterDeath(_ x: Double) -> Double {
-        return (1 - x) * 100.0
+        return ((1 - x) * 100.0).cutToDecimalPlaces()
     }
     
     public static func fullInkTankOptions(
@@ -79,8 +83,8 @@ public struct StatHelper {
         abilities: AbilityValues,
         mainInfo: MainWeaponData,
         subInfo: SubWeaponData
-    ) -> [InkTankOption] {
-        var result = [InkTankOption]()
+    ) -> [Int : [InkTankOption]] {
+        var result = [Int : [InkTankOption]]()
         
         let subConsume = SubWeaponConsume(ap, abilities, mainInfo, subInfo)
         
@@ -100,9 +104,14 @@ public struct StatHelper {
                     let option = InkTankOption(
                         subsFromFullInkTank: fromFullInkTank,
                         type: type,
-                        value: value)
+                        value: value.roundToDecimalPlaces())
                     
-                    result.append(option)
+                    if result[fromFullInkTank] == nil {
+                        result[fromFullInkTank] = [option]
+                        
+                    } else {
+                        result[fromFullInkTank]!.append(option)
+                    }
                     
                 } else {
                     continue
@@ -120,7 +129,7 @@ public struct StatHelper {
             if let subValue = mainInfo.damage(for: type) as? Double {
                 
                 let stat = DamageStat(
-                    type: type,
+                    type: type == .distance ? .splash : type,
                     value: subValue / 10,
                     distance: nil,
                     shotsToSplat: StatHelper.shotsToSplat(
@@ -137,7 +146,7 @@ public struct StatHelper {
                 
                 for item in arr {
                     let stat = DamageStat(
-                        type: type,
+                        type: type == .distance ? .splash : type,
                         value: Double(item.damage) / 10,
                         distance: item.distance,
                         shotsToSplat: nil,
@@ -378,14 +387,17 @@ public struct StatHelper {
         let subConsume = SubWeaponConsume(ap, abilities, mainInfo, subInfo)
         
         return AbilityStat(
-            baseValue: (subInfo.inkConsume * 100) / mainInfo.inkTankSize,
+            baseValue: ((subInfo.inkConsume * 100) / mainInfo.inkTankSize).roundToDecimalPlaces(),
             modifiedBy: [.inkSaverSub],
-            value: (subConsume.inkConsume * 100) / mainInfo.inkTankSize)
+            value: ((subConsume.inkConsume * 100) / mainInfo.inkTankSize).roundToDecimalPlaces(),
+            unit: .percentage,
+            title: "Ink Tank Consumption"
+        )
     }
     
     public static func inkRecoverySeconds(
         effectKey: AbilityValue,
-    ap: AbilityPoints,
+        ap: AbilityPoints,
         abilities: AbilityValues,
         mainInfo: MainWeaponData
     ) -> AbilityStat {
@@ -400,9 +412,11 @@ public struct StatHelper {
             weapon: mainInfo)
         
         return AbilityStat(
-            baseValue: (apEffect.baseEffect * mainInfo.inkTankSize) .framesToSeconds(),
+            baseValue: (apEffect.baseEffect * mainInfo.inkTankSize).framesToSeconds().cutToDecimalPlaces(3),
             modifiedBy: [.inkRecoveryUp],
-            value: (apEffect.effect * mainInfo.inkTankSize) .framesToSeconds()
+            value: (apEffect.effect * mainInfo.inkTankSize).framesToSeconds().cutToDecimalPlaces(3),
+            unit: .seconds,
+            title: effectKey == .inkRecoverFrmStealth ? "Ink Tank Recovery Time (Squid Form)" : "Ink Tank Recovery Time (Humanoid Form)"
         )
     }
     
@@ -422,9 +436,12 @@ public struct StatHelper {
             weapon: mainInfo)
         
         return AbilityStat(
-            baseValue: apEffect.baseEffect * 10,
+            baseValue: (apEffect.baseEffect * 10).cutToDecimalPlaces(3),
             modifiedBy: [ability],
-            value: apEffect.effect * 10)
+            value: (apEffect.effect * 10).cutToDecimalPlaces(3),
+            unit: .unitsPerFrame,
+            title: "Run Speed"
+        )
     }
     
     public static func shootingRunSpeed(
@@ -445,9 +462,12 @@ public struct StatHelper {
                 weapon: mainInfo)
             
             return AbilityStat(
-                baseValue: moveSpeed * apEffect.baseEffect * 10,
+                baseValue: (moveSpeed * apEffect.baseEffect * 10).cutToDecimalPlaces(3),
                 modifiedBy: [.runSpeedUp],
-                value: moveSpeed * apEffect.effect * 10)
+                value: (moveSpeed * apEffect.effect * 10).cutToDecimalPlaces(3),
+                unit: .unitsPerFrame,
+                title: "Run Speed While Shooting"
+            )
             
         } else {
             return nil
@@ -475,9 +495,12 @@ public struct StatHelper {
         let ninjaSquidMultiplier = gearBuild.hasAbility(.ninjaSquid) ? 0.9 : 1
         
         return AbilityStat(
-            baseValue: apEffect.baseEffect * 10,
+            baseValue: (apEffect.baseEffect * 10).cutToDecimalPlaces(3),
             modifiedBy: [.swimSpeedUp, .ninjaSquid],
-            value: apEffect.effect * 10 * ninjaSquidMultiplier)
+            value: (apEffect.effect * 10 * ninjaSquidMultiplier).cutToDecimalPlaces(3),
+            unit: .unitsPerFrame,
+            title: "Swim Speed"
+        )
     }
     
     public static func swimSpeedWithRainmaker(
@@ -491,9 +514,12 @@ public struct StatHelper {
         let rainmakerSpeedPenalty = 0.8
         
         return AbilityStat(
-            baseValue: withoutRM.baseValue * rainmakerSpeedPenalty,
+            baseValue: (withoutRM.baseValue * rainmakerSpeedPenalty).cutToDecimalPlaces(3),
             modifiedBy: withoutRM.modifiedBy,
-            value: withoutRM.value * rainmakerSpeedPenalty)
+            value: (withoutRM.value * rainmakerSpeedPenalty).cutToDecimalPlaces(3),
+            unit: .unitsPerFrame,
+            title: "Swim Speed While Holding Rainmaker"
+        )
     }
     
     public static func runSpeedInEnemyInk(
@@ -511,9 +537,12 @@ public struct StatHelper {
             weapon: mainInfo)
         
         return AbilityStat(
-            baseValue: apEffect.baseEffect * 10,
+            baseValue: (apEffect.baseEffect * 10).cutToDecimalPlaces(3),
             modifiedBy: [iru],
-            value: apEffect.effect * 10)
+            value: (apEffect.effect * 10).cutToDecimalPlaces(3),
+            unit: .unitsPerFrame,
+            title: "Run Speed In Enemy Ink"
+        )
     }
     
     public static func damageInEnemyInkPerSecond(
@@ -533,7 +562,10 @@ public struct StatHelper {
         return AbilityStat(
             baseValue: apEffect.baseEffectToDamage() * 60,
             modifiedBy: [iru],
-            value: apEffect.effectToDamage() * 60)
+            value: apEffect.effectToDamage() * 60,
+            unit: .hp,
+            title: "Damage In Enemy Ink"
+        )
     }
     
     public static func enemyInkDamageLimit(
@@ -553,7 +585,10 @@ public struct StatHelper {
         return AbilityStat(
             baseValue: apEffect.baseEffectToDamage(),
             modifiedBy: [iru],
-            value: apEffect.effectToDamage())
+            value: apEffect.effectToDamage(),
+            unit: .hp,
+            title: "Max Damage from Enemy Ink"
+        )
     }
     
     public static func framesBeforeDamageInEnemyInk(
@@ -573,7 +608,10 @@ public struct StatHelper {
         return AbilityStat(
             baseValue: ceil(apEffect.baseEffect),
             modifiedBy: [iru],
-            value: ceil(apEffect.effect))
+            value: ceil(apEffect.effect),
+            unit: .frames,
+            title: "Frames Before Damage In Enemy Ink"
+        )
     }
     
     public static func respawnTime(
@@ -613,7 +651,9 @@ public struct StatHelper {
         return AbilityStat(
             baseValue: (respawnChaseFrame + chase.baseEffect + splattedByExtraFrames + around.baseEffect - fasterRespawn).framesToSeconds(),
             modifiedBy: [qr, .respawnPunisher],
-            value: (respawnChaseFrame + chase.effect + around.effect + splattedByExtraFrames + ownRPExtraFrames - fasterRespawn).framesToSeconds()
+            value: (respawnChaseFrame + chase.effect + around.effect + splattedByExtraFrames + ownRPExtraFrames - fasterRespawn).framesToSeconds(),
+            unit: .seconds,
+            title: splatedByRP ? "Quick Respawn Time When Splatted by RP" : "Quick Respawn Time"
         )
     }
     
@@ -635,7 +675,10 @@ public struct StatHelper {
         return AbilityStat(
             baseValue: ceil(apEffect.baseEffect),
             modifiedBy: [.quickSuperJump],
-            value: ceil(apEffect.effect))
+            value: ceil(apEffect.effect),
+            unit: .frames,
+            title: "Super Jump Vulnerable Frames"
+        )
     }
     
     public static func superJumpTimeTotal(
@@ -662,7 +705,10 @@ public struct StatHelper {
         return AbilityStat(
             baseValue: (ceil(charge.baseEffect) + ceil(move.baseEffect)).framesToSeconds(),
             modifiedBy: [.quickSuperJump],
-            value: (ceil(charge.effect) + ceil(move.effect)).framesToSeconds())
+            value: (ceil(charge.effect) + ceil(move.effect)).framesToSeconds(),
+            unit: .seconds,
+            title: "Total Super Jump Time"
+        )
     }
     
     public static func superJumpTotalFrames(
@@ -689,7 +735,10 @@ public struct StatHelper {
         return AbilityStat(
             baseValue: (ceil(charge.baseEffect) + ceil(move.baseEffect)).framesToSeconds(),
             modifiedBy: [.quickSuperJump],
-            value: (ceil(charge.effect) + ceil(move.effect)).framesToSeconds())
+            value: (ceil(charge.effect) + ceil(move.effect)).framesToSeconds(),
+            unit: .frames,
+            title: "Super Jump Vulnerable Frames"
+        )
     }
     
     public static func shotSpreadAir(
@@ -715,9 +764,12 @@ public struct StatHelper {
         let reducedExtraSpeed = extraSpeed * (1 - apEffect.effect)
         
         return AbilityStat(
-            baseValue: jumpSpread,
+            baseValue: jumpSpread.roundToDecimalPlaces(),
             modifiedBy: [ability],
-            value: reducedExtraSpeed + groundSpread)
+            value: (reducedExtraSpeed + groundSpread).roundToDecimalPlaces(),
+            unit: .degrees,
+            title: "Shot Spread While Jumping"
+        )
     }
     
     public static func shotAutofireSpreadAir(
@@ -743,9 +795,12 @@ public struct StatHelper {
         let reducedExtraSpeed = extraSpeed * (1 - apEffect.effect)
         
         return AbilityStat(
-            baseValue: jumpSpread,
+            baseValue: jumpSpread.roundToDecimalPlaces(),
             modifiedBy: [ability],
-            value: reducedExtraSpeed + groundSpread)
+            value: (reducedExtraSpeed + groundSpread).roundToDecimalPlaces(),
+            unit: .degrees,
+            title: "Secondary Mode Spread While Jumping"
+        )
     }
     
     public static func squidSurgeChargeFrames(
@@ -766,7 +821,10 @@ public struct StatHelper {
         return AbilityStat(
             baseValue: ceil(apEffect.baseEffect),
             modifiedBy: [ability],
-            value: ceil(apEffect.effect))
+            value: ceil(apEffect.effect),
+            unit: .degrees,
+            title: "Squid Surge Charge To Full"
+        )
     }
     
     public static func subMarkedSeconds(
@@ -793,7 +851,10 @@ public struct StatHelper {
         return AbilityStat(
             baseValue: (subEffect.baseEffect * mainEffect.baseEffect).framesToSeconds(),
             modifiedBy: [sru],
-            value: (subEffect.baseEffect * mainEffect.effect).framesToSeconds())
+            value: (subEffect.baseEffect * mainEffect.effect).framesToSeconds(),
+            unit: .seconds,
+            title: "\(subInfo.id.rawValue) Tracking Time"
+        )
     }
     
     public static func inkMineMarkedSeconds(
@@ -820,7 +881,10 @@ public struct StatHelper {
         return AbilityStat(
             baseValue: (subEffect.baseEffect * mainEffect.baseEffect).framesToSeconds(),
             modifiedBy: [sru],
-            value: (subEffect.baseEffect * mainEffect.effect).framesToSeconds())
+            value: (subEffect.baseEffect * mainEffect.effect).framesToSeconds(),
+            unit: .seconds,
+            title: "\(inkMine.id.rawValue) Tracking Seconds"
+        )
     }
     
     public static func toxicMistMovementReduction(
@@ -838,9 +902,12 @@ public struct StatHelper {
             weapon: mainInfo)
         
         return AbilityStat(
-            baseValue: apEffect.baseEffect * 100,
+            baseValue: (apEffect.baseEffect * 100).roundToDecimalPlaces(),
             modifiedBy: [sru],
-            value: apEffect.effect * 100)
+            value: (apEffect.effect * 100).roundToDecimalPlaces(),
+            unit: .percentage,
+            title: "\(SubWeapon.toxicMist.rawValue) Movement Reduction"
+        )
     }
     
     public static func quickSuperJumpBoost(
@@ -863,7 +930,10 @@ public struct StatHelper {
         return AbilityStat(
             baseValue: baseCalc,
             modifiedBy: [spu],
-            value: effectCalc)
+            value: effectCalc,
+            unit: .ap,
+            title: "Quick Super Jump Boost"
+        )
     }
     
     public static func quickSuperJumpValue(
@@ -905,9 +975,12 @@ public struct StatHelper {
             weapon: subInfo)
         
         return AbilityStat(
-            baseValue: apEffect.baseEffect,
+            baseValue: apEffect.baseEffect.roundToDecimalPlaces(3),
             modifiedBy: [spu],
-            value: apEffect.effect)
+            value: apEffect.effect.roundToDecimalPlaces(3),
+            unit: .unitsPerFrame,
+            title: "Velocity (Decides Range)"
+        )
     }
     
     public static func subPhaseDuration(
@@ -937,7 +1010,10 @@ public struct StatHelper {
         return AbilityStat(
             baseValue: apEffect.baseEffect.framesToSeconds(),
             modifiedBy: [spu],
-            value: apEffect.effect.framesToSeconds())
+            value: apEffect.effect.framesToSeconds(),
+            unit: .seconds,
+            title: first ? "Full Power Phase Duration" : "Mid-Phase Duration"
+        )
     }
     
     public static func subMarkingSeconds(
@@ -963,7 +1039,10 @@ public struct StatHelper {
         return AbilityStat(
             baseValue: apEffect.baseEffect.framesToSeconds(),
             modifiedBy: [spu],
-            value: apEffect.effect.framesToSeconds())
+            value: apEffect.effect.framesToSeconds(),
+            unit: .seconds,
+            title: "Marking Duration"
+        )
     }
     
     public static func subMarkingRadius(
@@ -989,7 +1068,10 @@ public struct StatHelper {
         return AbilityStat(
             baseValue: apEffect.baseEffect,
             modifiedBy: [spu],
-            value: apEffect.effect)
+            value: apEffect.effect,
+            unit: .radius,
+            title: "Marking Radius"
+        )
     }
     
     public static func subExplosionRadius(
@@ -1015,7 +1097,10 @@ public struct StatHelper {
         return AbilityStat(
             baseValue: apEffect.baseEffect,
             modifiedBy: [spu],
-            value: apEffect.effect)
+            value: apEffect.effect,
+            unit: .radius,
+            title: "Explosion Radius"
+        )
     }
     
     public static func subHp(
@@ -1039,9 +1124,12 @@ public struct StatHelper {
             weapon: subInfo)
         
         return AbilityStat(
-            baseValue: apEffect.baseEffect / 10,
+            baseValue: (apEffect.baseEffect / 10).roundToDecimalPlaces(1),
             modifiedBy: [spu],
-            value: apEffect.effect / 10)
+            value: (apEffect.effect / 10).roundToDecimalPlaces(1),
+            unit: .hp,
+            title: "Durability"
+        )
     }
     
     public static func specialDuration(
@@ -1067,7 +1155,10 @@ public struct StatHelper {
         return AbilityStat(
             baseValue: apEffect.baseEffect.framesToSeconds(),
             modifiedBy: [spu],
-            value: apEffect.effect.framesToSeconds())
+            value: apEffect.effect.framesToSeconds(),
+            unit: .seconds,
+            title: "\(specialInfo.id.rawValue) Duration"
+        )
     }
     
     public static func specialDamageDistance(
@@ -1091,15 +1182,18 @@ public struct StatHelper {
             weapon: specialInfo)
         
         return AbilityStat(
-            baseValue: apEffect.baseEffect,
+            baseValue: apEffect.baseEffect.roundToDecimalPlaces(4),
             modifiedBy: [spu],
-            value: apEffect.effect)
+            value: apEffect.effect.roundToDecimalPlaces(4),
+            unit: .damage,
+            title: "\(specialInfo.id.rawValue) Damage Distance"
+        )
     }
     
     public static func specialPaintRadius(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ specialInfo: SpecialWeaponData
+        ap: AbilityPoints,
+        values: AbilityValues,
+        specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
         let hml = abilityValues(for: .specialPaintRadius, in: values, weapon: specialInfo)
         
@@ -1117,9 +1211,12 @@ public struct StatHelper {
             weapon: specialInfo)
         
         return AbilityStat(
-            baseValue: apEffect.baseEffect,
+            baseValue: apEffect.baseEffect.roundToDecimalPlaces(4),
             modifiedBy: [spu],
-            value: apEffect.effect)
+            value: apEffect.effect.roundToDecimalPlaces(4),
+            unit: .radius,
+            title: "\(specialInfo.id.rawValue) Paint Radius"
+        )
     }
     
     public static func specialFieldHp(
@@ -1145,7 +1242,10 @@ public struct StatHelper {
         return AbilityStat(
             baseValue: round(apEffect.baseEffect / 10),
             modifiedBy: [spu],
-            value: round(apEffect.effect / 10))
+            value: round(apEffect.effect / 10),
+            unit: .hp,
+            title: "\(specialInfo.id.rawValue) Shield Durability"
+        )
     }
     
     public static func specialDeviceHp(
@@ -1171,7 +1271,10 @@ public struct StatHelper {
         return AbilityStat(
             baseValue: round(apEffect.baseEffect / 10),
             modifiedBy: [spu],
-            value: round(apEffect.effect / 10))
+            value: round(apEffect.effect / 10),
+            unit: .hp,
+            title: "\(specialInfo.id.rawValue) Device Durability"
+        )
     }
     
     public static func specialHookInkConsumption(
@@ -1197,12 +1300,15 @@ public struct StatHelper {
         let zipcasterInkTankSize = 1.5
         
         return AbilityStat(
-            baseValue: (apEffect.baseEffect * 100) / zipcasterInkTankSize,
+            baseValue: ((apEffect.baseEffect * 100) / zipcasterInkTankSize).roundToDecimalPlaces(),
             modifiedBy: [spu],
-            value: (apEffect.effect * 100) / zipcasterInkTankSize)
+            value: ((apEffect.effect * 100) / zipcasterInkTankSize).roundToDecimalPlaces(),
+            unit: .percentage,
+            title: "\(specialInfo.id.rawValue) Hook Ink Consumption"
+        )
     }
     
-    public static func specialInkConsumptionPerSecond(
+    public static func specialHookInkConsumptionPerSecond(
         ap: AbilityPoints,
         values: AbilityValues,
         specialInfo: SpecialWeaponData
@@ -1225,9 +1331,12 @@ public struct StatHelper {
         let zipcasterInkTankSize = 1.5
         
         return AbilityStat(
-            baseValue: (apEffect.baseEffect * 100) / zipcasterInkTankSize,
+            baseValue: ((apEffect.baseEffect * 100) / zipcasterInkTankSize).roundToDecimalPlaces(),
             modifiedBy: [spu],
-            value: (apEffect.effect * 100) / zipcasterInkTankSize)
+            value: ((apEffect.effect * 100) / zipcasterInkTankSize).roundToDecimalPlaces(),
+            unit: .percentage,
+            title: "\(specialInfo.id.rawValue) Hook Ink Consumption Per Second"
+        )
     }
     
     public static func specialReticleRadius(
@@ -1251,9 +1360,12 @@ public struct StatHelper {
             weapon: specialInfo)
                 
         return AbilityStat(
-            baseValue: apEffect.baseEffect,
+            baseValue: apEffect.baseEffect.roundToDecimalPlaces(),
             modifiedBy: [spu],
-            value: apEffect.effect)
+            value: apEffect.effect.roundToDecimalPlaces(),
+            unit: .radius,
+            title: "\(specialInfo.id.rawValue) Reticle Radius"
+        )
     }
     
     public static func specialThrowDistance(
@@ -1277,9 +1389,12 @@ public struct StatHelper {
             weapon: specialInfo)
                 
         return AbilityStat(
-            baseValue: apEffect.baseEffect,
+            baseValue: apEffect.baseEffect.roundToDecimalPlaces(),
             modifiedBy: [spu],
-            value: apEffect.effect)
+            value: apEffect.effect.roundToDecimalPlaces(),
+            unit: .distance,
+            title: "\(specialInfo.id.rawValue) Throw Distance"
+        )
     }
     
     public static func specialMoveSpeed(
@@ -1303,9 +1418,12 @@ public struct StatHelper {
             weapon: specialInfo)
                 
         return AbilityStat(
-            baseValue: apEffect.baseEffect,
+            baseValue: apEffect.baseEffect.roundToDecimalPlaces(4),
             modifiedBy: [spu],
-            value: apEffect.effect)
+            value: apEffect.effect.roundToDecimalPlaces(4),
+            unit: .unitsPerFrame,
+            title: "\(specialInfo.id.rawValue) Movement Speed"
+        )
     }
     
     public static func specialAutoChargeRate(
@@ -1329,9 +1447,12 @@ public struct StatHelper {
             weapon: specialInfo)
                 
         return AbilityStat(
-            baseValue: apEffect.baseEffect * 100,
+            baseValue: (apEffect.baseEffect * 100).roundToDecimalPlaces(),
             modifiedBy: [spu],
-            value: apEffect.effect * 100)
+            value: (apEffect.effect * 100).roundToDecimalPlaces(),
+            unit: .none,
+            title: "Special Auto Charge Rate"
+        )
     }
     
     public static func specialMaxRadius(
@@ -1355,9 +1476,12 @@ public struct StatHelper {
             weapon: specialInfo)
                 
         return AbilityStat(
-            baseValue: apEffect.baseEffect,
+            baseValue: apEffect.baseEffect.roundToDecimalPlaces(),
             modifiedBy: [spu],
-            value: apEffect.effect)
+            value: apEffect.effect.roundToDecimalPlaces(),
+            unit: .radius,
+            title: "\(specialInfo.id.rawValue) Max Radius"
+        )
     }
     
     public static func specialRadiusRange(
@@ -1389,9 +1513,12 @@ public struct StatHelper {
             weapon: specialInfo)
                 
         return AbilityStat(
-            baseValue: minEffect.baseEffect - maxEffect.baseEffect,
+            baseValue: minEffect.baseEffect.roundToDecimalPlaces() - maxEffect.baseEffect.roundToDecimalPlaces(),
             modifiedBy: [spu],
-            value: minEffect.effect - maxEffect.effect)
+            value: minEffect.effect.roundToDecimalPlaces() - maxEffect.effect.roundToDecimalPlaces(),
+            unit: .radius,
+            title: "\(specialInfo.id.rawValue) Radius Range"
+        )
     }
     
     public static func specialPowerUpDuration(
@@ -1417,7 +1544,10 @@ public struct StatHelper {
         return AbilityStat(
             baseValue: apEffect.baseEffect,
             modifiedBy: [spu],
-            value: apEffect.effect)
+            value: apEffect.effect,
+            unit: .none,
+            title: "Special Power Up Duration"
+        )
     }
     
     public static func abilityValues(

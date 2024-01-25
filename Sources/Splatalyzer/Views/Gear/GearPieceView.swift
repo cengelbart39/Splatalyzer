@@ -7,12 +7,14 @@
 
 import SwiftUI
 
-struct GearPieceView: View {
-    @Binding var gearPiece: GearPiece
+public struct GearPieceView: View {
+    @Binding public var gearPiece: GearPiece
+        
+    public init(gearPiece: Binding<GearPiece>) {
+        self._gearPiece = gearPiece
+    }
     
-    @State var presentCover = false
-    
-    var body: some View {
+    public var body: some View {
         HStack() {
             AbilityView(ability: $gearPiece.main, isMain: true, restriction: gearPiece.slot)
 
@@ -24,9 +26,3 @@ struct GearPieceView: View {
         }
     }
 }
-
-#Preview {
-    GearPieceView(gearPiece: .constant(GearPiece(for: .headgearOnly)))
-}
-
-

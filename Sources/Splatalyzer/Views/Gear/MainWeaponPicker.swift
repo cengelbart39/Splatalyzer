@@ -7,10 +7,14 @@
 
 import SwiftUI
 
-struct MainWeaponPicker: View {
-    @Binding var mainWeapon: MainWeapon
+public struct MainWeaponPicker: View {
+    @Binding public var mainWeapon: MainWeapon
     
-    var body: some View {
+    public init(mainWeapon: Binding<MainWeapon>) {
+        self._mainWeapon = mainWeapon
+    }
+    
+    public var body: some View {
         Menu {
             ForEach(WeaponClass.allCases, id: \.self) { type in
                 Menu {
@@ -20,7 +24,13 @@ struct MainWeaponPicker: View {
                         }, label: {
                             Label(
                                 title: { Text(weapon.rawValue) },
-                                icon: { Image(uiImage: weapon.image ?? UIImage())}
+                                icon: {
+                                    #if os(macOS)
+                                    Image(nsImage: weapon.image ?? NSImage())
+                                    #else
+                                    Image(uiImage: weapon.image ?? UIImage())
+                                    #endif
+                                }
                             )
                         })
 
@@ -28,7 +38,13 @@ struct MainWeaponPicker: View {
                 } label: {
                     Label(
                         title: { Text(type.rawValue) },
-                        icon: { Image(uiImage: type.image ?? UIImage())}
+                        icon: {
+                            #if os(macOS)
+                            Image(nsImage: type.image ?? NSImage())
+                            #else
+                            Image(uiImage: type.image ?? UIImage())
+                            #endif
+                        }
                     )
                 }
             }
@@ -36,10 +52,17 @@ struct MainWeaponPicker: View {
             Label(
                 title: { Text(mainWeapon.rawValue) },
                 icon: {
+                    #if os(macOS)
+                    Image(nsImage: mainWeapon.image ?? NSImage())
+//                        .resizable()
+//                        .scaledToFit()
+//                        .frame(width: 50, height: 50)
+                    #else
                     Image(uiImage: mainWeapon.image ?? UIImage())
                         .resizable()
                         .scaledToFit()
                         .frame(width: 50, height: 50)
+                    #endif
                 }
                 
             )

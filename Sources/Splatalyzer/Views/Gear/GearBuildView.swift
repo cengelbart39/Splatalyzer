@@ -7,11 +7,15 @@
 
 import SwiftUI
 
-struct GearBuildView: View {
+public struct GearBuildView: View {
     
-    @Binding var gearBuild: GearBuild
+    @Binding public var gearBuild: GearBuild
     
-    var body: some View {
+    public init(gearBuild: Binding<GearBuild>) {
+        self._gearBuild = gearBuild
+    }
+    
+    public var body: some View {
         VStack {
             GearPieceView(gearPiece: $gearBuild.headgear)
             
@@ -20,8 +24,4 @@ struct GearBuildView: View {
             GearPieceView(gearPiece: $gearBuild.shoes)
         }
     }
-}
-
-#Preview {
-    GearBuildView(gearBuild: .constant(GearBuild()))
 }

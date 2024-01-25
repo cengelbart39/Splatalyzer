@@ -7,12 +7,15 @@
 
 import Foundation
 
-protocol JSONServicable {
+public protocol JSONServicable {
     func decode<T: Codable>(_ type: T.Type, from file: String) throws -> T
 }
 
-struct JSONService: JSONServicable {
-    func decode<T: Codable>(_ type: T.Type, from file: String) throws -> T {
+public struct JSONService: JSONServicable {
+    
+    public init() { }
+    
+    public func decode<T: Codable>(_ type: T.Type, from file: String) throws -> T {
         guard let url = Bundle.module.url(forResource: file, withExtension: "json") else {
             throw JSONError.invalidUrl(file)
         }
@@ -48,12 +51,12 @@ struct JSONService: JSONServicable {
     }
 }
 
-enum JSONError: Error, LocalizedError {
+public enum JSONError: Error, LocalizedError {
     case invalidUrl(String)
     case invalidData(String, String)
     case decode(String)
     
-    var errorDescription: String? {
+    public var errorDescription: String? {
         switch self {
         case .invalidUrl(let file):
             return NSLocalizedString("Failed to locate '\(file)' in bundle.", comment: "")

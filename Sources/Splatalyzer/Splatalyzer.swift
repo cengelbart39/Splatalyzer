@@ -1,13 +1,70 @@
 // The Swift Programming Language
 // https://docs.swift.org/swift-book
 
-public final class Splatalyzer {
+import Foundation
+import Observation
+
+public final class Splatalyzer: ObservableObject {
+    @Published public var stats: BuildStats? = nil
+    @Published public var gearBuild = GearBuild()
+    @Published public var mainWeapon = MainWeapon.allCases.first!
+    @Published public var ldeIntensity = 0
+    @Published public var usingTacticooler = false
+    
+    private var weaponInfoMain: WeaponInfoMain? = nil
+    private var weaponInfoSub: WeaponInfoSub? = nil
+    private var weaponInfoSpecial: WeaponInfoSpecial? = nil
+    private var playerParams: PlayerParameters? = nil
+    private var subData = [SubWeapon : SubWeaponData]()
+    
+    public init() { }
+    
+    public func updateStats(for weapon: MainWeapon) throws {
+        DispatchQueue.main.async {
+            self.mainWeapon = weapon
+        }
+        
+        try self.analyze()
+    }
+    
+    public func updateStats(for gearBuild: GearBuild) throws {
+        DispatchQueue.main.async {
+            self.gearBuild = gearBuild
+        }
+        
+        try self.analyze()
+    }
+    
+    public func updateStats(for ldeIntensity: Int) throws {
+        DispatchQueue.main.async {
+            self.ldeIntensity = ldeIntensity
+        }
+        
+        try self.analyze()
+    }
+    
+    public func updateStats(for tacticooler: Bool) throws {
+        DispatchQueue.main.async {
+            self.usingTacticooler = tacticooler
+        }
+        
+        try self.analyze()
+    }
+    
+    public func analyze() throws {
+        try self.analyze(
+            mainWeapon: self.mainWeapon,
+            gearBuild: self.gearBuild,
+            ldeIntensity: self.ldeIntensity,
+            usingTacticooler: self.usingTacticooler)
+    }
+    
     public func analyze(
         mainWeapon: MainWeapon,
         gearBuild: GearBuild,
         ldeIntensity: Int,
         usingTacticooler: Bool
-    ) throws -> BuildStats {
+    ) throws {
         guard gearBuild.isValid() else {
             throw SplatalyzerError.invalidGearConfig
         }
@@ -18,48 +75,71 @@ public final class Splatalyzer {
         
         let service = JSONService()
         
-        let weaponInfoMain = try service.decode(WeaponInfoMain.self, from: "WeaponInfoMain")
+        if weaponInfoMain == nil {
+            let weaponInfoMain = try service.decode(WeaponInfoMain.self, from: "WeaponInfoMain")
+            
+            self.weaponInfoMain = weaponInfoMain
+        }
         
-        let weaponInfoSub = try service.decode(WeaponInfoSub.self, from: "WeaponInfoSub")
+        if weaponInfoSub == nil {
+            let weaponInfoSub = try service.decode(WeaponInfoSub.self, from: "WeaponInfoSub")
+            
+            self.weaponInfoSub = weaponInfoSub
+        }
         
-        let weaponInfoSpecial = try service.decode(WeaponInfoSpecial.self, from: "WeaponInfoSpecial")
+        if weaponInfoSpecial == nil {
+            let weaponInfoSpecial = try service.decode(WeaponInfoSpecial.self, from: "WeaponInfoSpecial")
+            
+            self.weaponInfoSpecial = weaponInfoSpecial
+        }
         
-        let playerParams = try service.decode(PlayerGameParameters.self, from: "SplPlayer.game__GameParameterTable")
+        if playerParams == nil {
+            let playerParams = try service.decode(PlayerGameParameters.self, from: "SplPlayer.game__GameParameterTable")
+            
+            self.playerParams = playerParams.parameters
+        }
         
         let mainData = try self.getMainWeaponData(
             weapon: mainWeapon,
             service: service,
-            mainInfo: weaponInfoMain)
+            mainInfo: self.weaponInfoMain!)
         
-        var allSubData = [SubWeapon : SubWeaponData]()
         
-        for sub in SubWeapon.allCases {
-            let subData = try self.getSubWeaponData(
-                weapon: sub,
-                service: service,
-                infoSub: weaponInfoSub,
-                playerInfo: playerParams.parameters)
+        if subData.isEmpty {
+            var allSubData = [SubWeapon : SubWeaponData]()
             
-            allSubData[sub] = subData
+            for sub in SubWeapon.allCases {
+                let subData = try self.getSubWeaponData(
+                    weapon: sub,
+                    service: service,
+                    infoSub: weaponInfoSub!,
+                    playerInfo: playerParams!)
+                
+                allSubData[sub] = subData
+            }
+            
+            self.subData = allSubData
         }
         
         let specialData = try self.getSpecialData(
             weapon: mainData.specialWeapon,
             service: service,
-            infoSpecial: weaponInfoSpecial)
+            infoSpecial: weaponInfoSpecial!)
         
         let abilityValues = try service.decode(AbilityValues.self, from: "ability-values")
         
         let stats = BuildStats(
             mainInfo: mainData,
-            allSubInfo: allSubData,
+            allSubInfo: self.subData,
             specialInfo: specialData,
             gearBuild: gearBuild,
             abilityValues: abilityValues,
             ldeIntensity: ldeIntensity,
             usingTacticooler: usingTacticooler)
         
-        return stats
+        DispatchQueue.main.async {
+            self.stats = stats
+        }
     }
     
     private func getMainWeaponData(
