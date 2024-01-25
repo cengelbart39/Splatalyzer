@@ -104,10 +104,10 @@
       "Jump_DegSwerve": 4.0,
       "MoveSpeed": 0.05,
       "PitchDegBias": 0.2,
-      "PitchDegSwerve": 0.5,
+      "PitchDegSwerve": 0.75,
       "RepeatFrame": 5,
       "Stand_DegBiasMax": 0.4,
-      "Stand_DegSwerve": 1.0,
+      "Stand_DegSwerve": 1.5,
       "VariableInterpolatedFrame": 10
     },
     "VariableSplashPaintParam": {

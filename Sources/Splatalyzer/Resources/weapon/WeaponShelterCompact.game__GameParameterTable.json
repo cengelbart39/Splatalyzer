@@ -176,7 +176,7 @@
       "InkConsume": 0.04,
       "InkRecoverStop": 40,
       "InkRecoverStopCharge": 30,
-      "JumpGndCharge": 0.08,
+      "JumpGndCharge": 0.1,
       "MoveSpeed": 0.072,
       "MoveSpeedCharge": 0.072,
       "RepeatFrame": 26

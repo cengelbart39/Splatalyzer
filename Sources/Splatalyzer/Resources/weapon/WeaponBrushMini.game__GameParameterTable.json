@@ -236,12 +236,12 @@
     },
     "WeaponRollParam": {
       "$type": "spl__WeaponBrushRollParam",
-      "InkConsumeMaxPerFrame": 0.00135,
-      "InkConsumeMinPerFrame": 0.00135,
+      "InkConsumeMaxPerFrame": 0.00125,
+      "InkConsumeMinPerFrame": 0.00125,
       "NoOpInkEffect": true,
-      "SpeedInkConsumeMax": 0.192,
-      "SpeedInkConsumeMin": 0.192,
-      "SpeedNormal": 0.192,
+      "SpeedInkConsumeMax": 0.198,
+      "SpeedInkConsumeMin": 0.198,
+      "SpeedNormal": 0.198,
       "SwingRepeatFrame": 6,
       "ToPaintFrame": 12.0
     },

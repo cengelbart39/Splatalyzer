@@ -12,6 +12,36 @@
         "HitDamageInterval": 0.5,
         "HitKnockback": 400,
         "MarkingFrame": 45,
+        "MarkingGroundFrameRadiusRatio": [
+          {
+            "Frame": 4,
+            "Ratio": 0.19
+          },
+          {
+            "Frame": 10,
+            "Ratio": 0.4
+          },
+          {
+            "Frame": 18,
+            "Ratio": 0.615
+          },
+          {
+            "Frame": 27,
+            "Ratio": 0.615
+          },
+          {
+            "Frame": 37,
+            "Ratio": 0.615
+          },
+          {
+            "Frame": 47,
+            "Ratio": 0.615
+          },
+          {
+            "Frame": 57,
+            "Ratio": 0.615
+          }
+        ],
         "MoveParam": {
           "FlyGravity": 0.009,
           "FlyPositionAirResist": 0.001,

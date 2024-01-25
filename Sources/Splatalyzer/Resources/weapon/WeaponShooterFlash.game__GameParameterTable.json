@@ -95,9 +95,9 @@
     },
     "VariableSplashSpawnParam": {
       "$type": "spl__BulletSplashShooterSpawnParam",
-      "SpawnBetweenLength": 6.5,
+      "SpawnBetweenLength": 8.67,
       "SpawnNearestLength": 1.2,
-      "SpawnNum": 2.0,
+      "SpawnNum": 1.5,
       "SplitNum": 5
     },
     "VariableWeaponParam": {
@@ -137,7 +137,7 @@
     "WeaponParam": {
       "$type": "spl__WeaponShooterParam",
       "BurstAimMoveFrame": 20,
-      "InkConsume": 0.022,
+      "InkConsume": 0.024,
       "Jump_DegBiasDecreaseStartFrame": 25,
       "Jump_DegBiasEndFrame": 70,
       "Jump_DegBiasMax": 0.4,

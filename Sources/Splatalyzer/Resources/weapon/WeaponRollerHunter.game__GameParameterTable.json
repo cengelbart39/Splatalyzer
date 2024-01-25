@@ -447,7 +447,7 @@
     "WeaponVerticalSwingParam": {
       "$type": "spl__WeaponRollerSwingParam",
       "InkConsume": 0.12,
-      "InkRecoverStop": 70,
+      "InkRecoverStop": 65,
       "SwingFrame": 42,
       "SwingMoveSpeed": 0.08
     },
@@ -477,7 +477,7 @@
           "DamageMaxValue": 1500,
           "DamageMinDistance": 10.96923,
           "DamageMinValue": 300,
-          "Degree": 12.0,
+          "Degree": 15.0,
           "DepletionDamageRate": 0.25,
           "FinalDamageMinValue": 300,
           "InsideDistanceXZ": 1.2

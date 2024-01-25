@@ -13,8 +13,8 @@
       "$type": "spl__BulletShooterDamageParam",
       "ReduceEndFrame": 24,
       "ReduceStartFrame": 8,
-      "ValueMax": 280,
-      "ValueMin": 140
+      "ValueMax": 300,
+      "ValueMin": 150
     },
     "MainEffectiveRangeUpParam": {
       "$type": "spl__PlayerGearSkillParam_MainEffectiveRangeUp"

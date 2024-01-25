@@ -363,7 +363,7 @@
           "DamageMaxValue": 1800,
           "DamageMinDistance": 17.4,
           "DamageMinValue": 400,
-          "Degree": 12.0,
+          "Degree": 14.5,
           "DepletionDamageRate": 0.25,
           "FinalDamageMinValue": 400,
           "InsideDistanceXZ": 1.2

@@ -284,8 +284,8 @@
         "WidthHalf": 1.8
       },
       "SplashPaintParam": {
-        "WidthHalf": 2.0,
-        "WidthHalfNearest": 1.792
+        "WidthHalf": 1.8,
+        "WidthHalfNearest": 1.613
       },
       "SplashSpawnParam": {
         "DropInterval": 2.0,

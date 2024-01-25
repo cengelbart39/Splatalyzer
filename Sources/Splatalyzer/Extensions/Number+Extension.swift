@@ -19,11 +19,10 @@ extension Double {
     }
     
     func format() -> String {
-        let stringValue = String(self)
-
         if self == Double(Int(self)) {
             // If the value is an integer, just return the integer part
             return String(Int(self))
+            
         } else {
             // For non-integer values, format with a maximum of 8 fraction digits
             let formatter = NumberFormatter()
@@ -38,7 +37,7 @@ extension Double {
         formatter.maximumFractionDigits = n
         
         let str = formatter.string(from: NSNumber(value: self))!
-        return Double(NumberFormatter().number(from: str)!)
+        return Double(truncating: NumberFormatter().number(from: str)!)
     }
     
     func roundToDecimalPlaces(_ n: Double = 2) -> Double {
