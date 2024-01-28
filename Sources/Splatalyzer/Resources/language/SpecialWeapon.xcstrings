@@ -9,6 +9,18 @@
             "state" : "translated",
             "value" : "Ink Vac"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aspiratinta"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aspiratinta"
+          }
         }
       }
     },
@@ -19,6 +31,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kraken Royale"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calamar imperial"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calamar imperial"
           }
         }
       }
@@ -31,6 +55,18 @@
             "state" : "translated",
             "value" : "Crab Tank"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cangrejobot"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cangrejobot"
+          }
         }
       }
     },
@@ -41,6 +77,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Splattercolor Screen"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muro marmoleado"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pantintalla"
           }
         }
       }
@@ -53,6 +101,18 @@
             "state" : "translated",
             "value" : "Tacticooler"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dispensabebidas"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dispensabebidas"
+          }
         }
       }
     },
@@ -63,6 +123,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Super Chump"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Multiseñuelos"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Multiseñuelos"
           }
         }
       }
@@ -75,6 +147,18 @@
             "state" : "translated",
             "value" : "Big Bubbler"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Megaburbuja"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Megaburbuja"
+          }
         }
       }
     },
@@ -85,6 +169,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ink Storm"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atormentador"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atormentador"
           }
         }
       }
@@ -97,6 +193,18 @@
             "state" : "translated",
             "value" : "Inkjet"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Propulsor"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Propulsor"
+          }
         }
       }
     },
@@ -107,6 +215,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Killer Wail 5.1"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berreón 5.1"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tintófono 5.1"
           }
         }
       }
@@ -119,6 +239,18 @@
             "state" : "translated",
             "value" : "Tenta Missiles"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lanzamisiles"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lanzamisiles"
+          }
         }
       }
     },
@@ -129,6 +261,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Booyah Bomb"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bola genializante"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bola genializante"
           }
         }
       }
@@ -141,6 +285,18 @@
             "state" : "translated",
             "value" : "Triple Splashdown"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clavado triple"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Puñetazos explosivos"
+          }
         }
       }
     },
@@ -151,6 +307,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wave Breaker"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Emiteondas"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Emiteondas"
           }
         }
       }
@@ -163,6 +331,18 @@
             "state" : "translated",
             "value" : "Reefslider"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flotiburón"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flotiburón"
+          }
         }
       }
     },
@@ -173,6 +353,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zipcaster"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gancho tentacular"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gancho tentacular"
           }
         }
       }
@@ -185,6 +377,18 @@
             "state" : "translated",
             "value" : "Triple Inkstrike"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tornado triple"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tornado triple"
+          }
         }
       }
     },
@@ -196,6 +400,18 @@
             "state" : "translated",
             "value" : "Trizooka"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cañón triple"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tintazuca triple"
+          }
         }
       }
     },
@@ -206,6 +422,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ultra Stamp"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ultraselladora"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ultraselladora"
           }
         }
       }

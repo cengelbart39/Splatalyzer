@@ -9,6 +9,18 @@
             "state" : "translated",
             "value" : "Intensify Action"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agilidad extra"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agilidad extra"
+          }
         }
       }
     },
@@ -19,6 +31,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Comeback"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remonte"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remontada"
           }
         }
       }
@@ -31,6 +55,18 @@
             "state" : "translated",
             "value" : "Haunt"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resentimiento"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Represalia"
+          }
         }
       }
     },
@@ -41,6 +77,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Last-Ditch Effort"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Último recurso"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sprint final"
           }
         }
       }
@@ -53,6 +101,18 @@
             "state" : "translated",
             "value" : "Respawn Punisher"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Castigo póstumo"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Castigo póstumo"
+          }
         }
       }
     },
@@ -63,6 +123,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ability Doubler"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Duplicador"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Duplicador"
           }
         }
       }
@@ -75,6 +147,18 @@
             "state" : "translated",
             "value" : "Run Speed Up"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Carrera acelerada"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supercarrera"
+          }
         }
       }
     },
@@ -85,6 +169,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ink Recovery Up"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mejor recarga tinta"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recarga rápida"
           }
         }
       }
@@ -97,6 +193,18 @@
             "state" : "translated",
             "value" : "Quick Super Jump"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supersalto rápido"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supersalto rápido"
+          }
         }
       }
     },
@@ -107,6 +215,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ink Saver (Main)"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ahorro tinta (ppal.)"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tintahorro (ppal.)"
           }
         }
       }
@@ -119,6 +239,18 @@
             "state" : "translated",
             "value" : "Tenacity"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tenacidad"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ventaja"
+          }
         }
       }
     },
@@ -129,6 +261,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Object Shredder"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demolición"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demolición"
           }
         }
       }
@@ -141,6 +285,18 @@
             "state" : "translated",
             "value" : "Ink Resistance Up"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impermeabilidad"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impermeabilidad"
+          }
         }
       }
     },
@@ -151,6 +307,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Special Saver"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ahorro especial"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reducción especial"
           }
         }
       }
@@ -163,6 +331,18 @@
             "state" : "translated",
             "value" : "Quick Respawn"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regeneración rápida"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retorno exprés"
+          }
         }
       }
     },
@@ -173,6 +353,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Drop Roller"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aterrizaje rodante"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Amortiguador"
           }
         }
       }
@@ -185,6 +377,18 @@
             "state" : "translated",
             "value" : "Special Charge Up"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recarga especial"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recarga especial"
+          }
         }
       }
     },
@@ -195,6 +399,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Special Power Up"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mejora especial"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Superarma especial"
           }
         }
       }
@@ -207,6 +423,18 @@
             "state" : "translated",
             "value" : "Swim Speed Up"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nado acelerado"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Superbuceo"
+          }
         }
       }
     },
@@ -217,6 +445,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ninja Squid"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ninjalamar"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ninjalamar"
           }
         }
       }
@@ -229,6 +469,18 @@
             "state" : "translated",
             "value" : "Opening Gambit"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acelerón de salida"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acelerón de salida"
+          }
         }
       }
     },
@@ -239,6 +491,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sub Resistance Up"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resistencia secundaria"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resistencia secundaria"
           }
         }
       }
@@ -251,6 +515,18 @@
             "state" : "translated",
             "value" : "Ink Saver (Sub)"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ahorro tinta (sec.)"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tintahorro (sec.)"
+          }
         }
       }
     },
@@ -261,6 +537,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sub Power Up"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mejora secundaria"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Superarma secundaria"
           }
         }
       }
@@ -273,6 +561,18 @@
             "state" : "translated",
             "value" : "Stealth Jump"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supersalto invisible"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supersalto invisible"
+          }
         }
       }
     },
@@ -283,6 +583,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Thermal Ink"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tinta rastreadora"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Señuelo"
           }
         }
       }
