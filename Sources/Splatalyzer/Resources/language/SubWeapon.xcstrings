@@ -45,6 +45,12 @@
             "state" : "translated",
             "value" : "Trasferitore"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Springschotel"
+          }
         }
       }
     },
@@ -91,6 +97,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bomba curling"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Curlingbom"
           }
         }
       }
@@ -139,6 +151,12 @@
             "state" : "translated",
             "value" : "Bomba a gassosa"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bomblikje"
+          }
         }
       }
     },
@@ -185,6 +203,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Granata"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ballonbom"
           }
         }
       }
@@ -233,6 +257,12 @@
             "state" : "translated",
             "value" : "Robo-bomba"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Robobom"
+          }
         }
       }
     },
@@ -279,6 +309,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bomba splash"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klodderbom"
           }
         }
       }
@@ -327,6 +363,12 @@
             "state" : "translated",
             "value" : "Appiccibomba"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kleefbom"
+          }
         }
       }
     },
@@ -373,6 +415,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Torpedinatore"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Torpedobom"
           }
         }
       }
@@ -421,6 +469,12 @@
             "state" : "translated",
             "value" : "Sparalinee"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketskogel"
+          }
         }
       }
     },
@@ -467,6 +521,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cimice"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detector"
           }
         }
       }
@@ -515,6 +575,12 @@
             "state" : "translated",
             "value" : "Nebbia tossica"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gifmist"
+          }
         }
       }
     },
@@ -561,6 +627,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Muro di colore"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inktgordijn"
           }
         }
       }
@@ -609,6 +681,12 @@
             "state" : "translated",
             "value" : "Spruzzatore"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inktsprinkler"
+          }
         }
       }
     },
@@ -655,6 +733,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mina"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inktmijn"
           }
         }
       }

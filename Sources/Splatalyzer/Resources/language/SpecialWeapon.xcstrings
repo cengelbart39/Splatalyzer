@@ -45,6 +45,12 @@
             "state" : "translated",
             "value" : "Vampinchiostro"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inktdief"
+          }
         }
       }
     },
@@ -91,6 +97,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kraken reale"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Monstermorfose"
           }
         }
       }
@@ -139,6 +151,12 @@
             "state" : "translated",
             "value" : "Granchio armato"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krabbentank"
+          }
         }
       }
     },
@@ -185,6 +203,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cortina ingannevole"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PLED-scherm"
           }
         }
       }
@@ -233,6 +257,12 @@
             "state" : "translated",
             "value" : "Rinfrigorente"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reddingsbar"
+          }
         }
       }
     },
@@ -279,6 +309,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Diversivo esplosivo"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voorschutter"
           }
         }
       }
@@ -327,6 +363,12 @@
             "state" : "translated",
             "value" : "Gran bolla scudo"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Joekelschild"
+          }
         }
       }
     },
@@ -373,6 +415,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pioggia di colore"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spetterbui"
           }
         }
       }
@@ -421,6 +469,12 @@
             "state" : "translated",
             "value" : "Jet splat"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inktjet"
+          }
         }
       }
     },
@@ -467,6 +521,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tintofono 5.1"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Megalofoon 5.1"
           }
         }
       }
@@ -515,6 +575,12 @@
             "state" : "translated",
             "value" : "Lanciarazzi"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spetterraketten"
+          }
         }
       }
     },
@@ -561,6 +627,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Granbotto"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coole bom"
           }
         }
       }
@@ -609,6 +681,12 @@
             "state" : "translated",
             "value" : "Triplo vernischianto"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ultralanding"
+          }
         }
       }
     },
@@ -655,6 +733,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sonar esplosivo"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Golfbeker"
           }
         }
       }
@@ -703,6 +787,12 @@
             "state" : "translated",
             "value" : "Motosqualo"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opblaashaai"
+          }
         }
       }
     },
@@ -749,6 +839,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Molluscatto"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tentakabel"
           }
         }
       }
@@ -797,6 +893,12 @@
             "state" : "translated",
             "value" : "Triplo tornado"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tri-tornado"
+          }
         }
       }
     },
@@ -844,6 +946,12 @@
             "state" : "translated",
             "value" : "Ultraturbinator"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trizooka"
+          }
         }
       }
     },
@@ -890,6 +998,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mega timbro"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ultrastempel"
           }
         }
       }

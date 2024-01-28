@@ -45,6 +45,12 @@
             "state" : "translated",
             "value" : "Blaster"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blasters"
+          }
         }
       }
     },
@@ -91,6 +97,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pennelli"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kwasten"
           }
         }
       }
@@ -139,6 +151,12 @@
             "state" : "translated",
             "value" : "Armi a carica"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laders"
+          }
         }
       }
     },
@@ -185,6 +203,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Repolper"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dubbelknallers"
           }
         }
       }
@@ -233,6 +257,12 @@
             "state" : "translated",
             "value" : "Rulli"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rollers"
+          }
         }
       }
     },
@@ -279,6 +309,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lame"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zwiepers"
           }
         }
       }
@@ -327,6 +363,12 @@
             "state" : "translated",
             "value" : "Sparasole"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plenzers"
+          }
         }
       }
     },
@@ -373,6 +415,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Armi a ripetizione"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spetters"
           }
         }
       }
@@ -421,6 +469,12 @@
             "state" : "translated",
             "value" : "Secchiostri"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Morsers"
+          }
         }
       }
     },
@@ -468,6 +522,12 @@
             "state" : "translated",
             "value" : "Splatling"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spetlingen"
+          }
         }
       }
     },
@@ -514,6 +574,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Calamarchi"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spanners"
           }
         }
       }

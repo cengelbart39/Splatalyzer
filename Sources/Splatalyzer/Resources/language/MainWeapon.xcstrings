@@ -45,6 +45,12 @@
             "state" : "translated",
             "value" : "Blaster rapido"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flitsblaster"
+          }
         }
       }
     },
@@ -91,6 +97,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Blaster rapido DX"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flitsblaster Deco"
           }
         }
       }
@@ -139,6 +151,12 @@
             "state" : "translated",
             "value" : "Blaster élite"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flitsblaster Pro"
+          }
         }
       }
     },
@@ -185,6 +203,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Blaster élite DX"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flitsblaster Pro Deco"
           }
         }
       }
@@ -233,6 +257,12 @@
             "state" : "translated",
             "value" : "Blaster da mischia"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Knalblaster"
+          }
         }
       }
     },
@@ -279,6 +309,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Blaster da mischia Neo"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Knalblaster Neo"
           }
         }
       }
@@ -327,6 +363,12 @@
             "state" : "translated",
             "value" : "Blaster a distanza"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teleblaster"
+          }
         }
       }
     },
@@ -373,6 +415,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Blaster"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klodderblaster"
           }
         }
       }
@@ -421,6 +469,12 @@
             "state" : "translated",
             "value" : "Blaster CM"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gemodde Klodderblaster"
+          }
         }
       }
     },
@@ -467,6 +521,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "S-BLAST92"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S-BLAST '92"
           }
         }
       }
@@ -515,6 +575,12 @@
             "state" : "translated",
             "value" : "S-BLAST91"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S-BLAST '91"
+          }
         }
       }
     },
@@ -561,6 +627,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Blaster lunar"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lunablaster"
           }
         }
       }
@@ -609,6 +681,12 @@
             "state" : "translated",
             "value" : "Blaster lunar Neo"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lunablaster Neo"
+          }
         }
       }
     },
@@ -655,6 +733,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tonnoretto"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kwistkwast"
           }
         }
       }
@@ -703,6 +787,12 @@
             "state" : "translated",
             "value" : "Tonnoretto master"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kwistkwast Nouveau"
+          }
         }
       }
     },
@@ -749,6 +839,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Calamaravaggio"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inktkwast"
           }
         }
       }
@@ -797,6 +893,12 @@
             "state" : "translated",
             "value" : "Calamaravaggio master"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inktkwast Nouveau"
+          }
         }
       }
     },
@@ -843,6 +945,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tinturicchio"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Octokwast"
           }
         }
       }
@@ -891,6 +999,12 @@
             "state" : "translated",
             "value" : "Tinturicchio master"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Octokwast Nouveau"
+          }
         }
       }
     },
@@ -937,6 +1051,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tintubator"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spetbuizer"
           }
         }
       }
@@ -985,6 +1105,12 @@
             "state" : "translated",
             "value" : "Tintubator CM"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gemodde Spetbuizer"
+          }
         }
       }
     },
@@ -1031,6 +1157,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bimbamboom 14-I"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bamboem 14-A"
           }
         }
       }
@@ -1079,6 +1211,12 @@
             "state" : "translated",
             "value" : "Tinter a carica 4K"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-liter 4K"
+          }
         }
       }
     },
@@ -1125,6 +1263,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tinter con mirino 4K"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-liter 4K met vizier"
           }
         }
       }
@@ -1173,6 +1317,12 @@
             "state" : "translated",
             "value" : "Splatter a carica"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bloplader"
+          }
         }
       }
     },
@@ -1219,6 +1369,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Splatter a carica logo"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zekkofin Bloplader"
           }
         }
       }
@@ -1267,6 +1423,12 @@
             "state" : "translated",
             "value" : "Splatter con mirino"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schelpschutter"
+          }
         }
       }
     },
@@ -1313,6 +1475,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Splatter con mirino logo"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zekkofin Schelpschutter"
           }
         }
       }
@@ -1361,6 +1529,12 @@
             "state" : "translated",
             "value" : "Lapis cecchino 5H"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schotlood 5H"
+          }
         }
       }
     },
@@ -1407,6 +1581,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lapis cecchino 5B"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schotlood 5B"
           }
         }
       }
@@ -1455,6 +1635,12 @@
             "state" : "translated",
             "value" : "Kalamarapid α"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Octopoets"
+          }
         }
       }
     },
@@ -1501,6 +1687,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sweeper duplo"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dubbelplonzers"
           }
         }
       }
@@ -1549,6 +1741,12 @@
             "state" : "translated",
             "value" : "Sweeper duplo CM"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gemodde Dubbelplonzers"
+          }
         }
       }
     },
@@ -1595,6 +1793,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kelvin duplo 525"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kelvin 525"
           }
         }
       }
@@ -1643,6 +1847,12 @@
             "state" : "translated",
             "value" : "Repolper duplo"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dubbelknallers"
+          }
         }
       }
     },
@@ -1689,6 +1899,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Repolper duplo logo"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enperry Dubbelknallers"
           }
         }
       }
@@ -1737,6 +1953,12 @@
             "state" : "translated",
             "value" : "Ripolpella duplo"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dubbelspatters"
+          }
         }
       }
     },
@@ -1783,6 +2005,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ripolpella duplo master"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dubbelspatters Nouveau"
           }
         }
       }
@@ -1831,6 +2059,12 @@
             "state" : "translated",
             "value" : "Moscarpino duplo nero"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quadhoppers Zwart"
+          }
         }
       }
     },
@@ -1877,6 +2111,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Moscarpino duplo bianco"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quadhoppers Wit"
           }
         }
       }
@@ -1925,6 +2165,12 @@
             "state" : "translated",
             "value" : "Rullo di carbonio"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Carbonroller"
+          }
         }
       }
     },
@@ -1971,6 +2217,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rullo di carbonio DX"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Carbonroller Deco"
           }
         }
       }
@@ -2019,6 +2271,12 @@
             "state" : "translated",
             "value" : "Rullo dinamo"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dynamoroller"
+          }
         }
       }
     },
@@ -2065,6 +2323,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rullo dinamo dorato"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gouden Dynamoroller"
           }
         }
       }
@@ -2113,6 +2377,12 @@
             "state" : "translated",
             "value" : "Flexi-rullo"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flexroller"
+          }
         }
       }
     },
@@ -2159,6 +2429,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rullo splat"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klodderroller"
           }
         }
       }
@@ -2207,6 +2483,12 @@
             "state" : "translated",
             "value" : "Rullo splat logo"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krak-On Klodderroller"
+          }
         }
       }
     },
@@ -2253,6 +2535,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ampiorullo"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Breedroller"
           }
         }
       }
@@ -2301,6 +2589,12 @@
             "state" : "translated",
             "value" : "Ampiorullo Express"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Breedroller Impuls"
+          }
         }
       }
     },
@@ -2347,6 +2641,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tergilama"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wisserbladzwieper"
           }
         }
       }
@@ -2395,6 +2695,12 @@
             "state" : "translated",
             "value" : "Tergilama DX"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wisserbladzwieper Deco"
+          }
         }
       }
     },
@@ -2441,6 +2747,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Splattalama"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stempelzwieper"
           }
         }
       }
@@ -2489,6 +2801,12 @@
             "state" : "translated",
             "value" : "Splattalama Neo"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stempelzwieper Neo"
+          }
         }
       }
     },
@@ -2535,6 +2853,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bombrello"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paraplenzer"
           }
         }
       }
@@ -2583,6 +2907,12 @@
             "state" : "translated",
             "value" : "Bombrello Solerra"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sorella Paraplenzer"
+          }
         }
       }
     },
@@ -2629,6 +2959,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sparasole"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plenzer"
           }
         }
       }
@@ -2677,6 +3013,12 @@
             "state" : "translated",
             "value" : "Sparasole Solerra"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sorella Plenzer"
+          }
         }
       }
     },
@@ -2723,6 +3065,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sparatenda"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kampeerplenzer"
           }
         }
       }
@@ -2771,6 +3119,12 @@
             "state" : "translated",
             "value" : "Sparatenda Solerra"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sorella Kampeerplenzer"
+          }
         }
       }
     },
@@ -2817,6 +3171,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aerografo"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kladderwerper"
           }
         }
       }
@@ -2865,6 +3225,12 @@
             "state" : "translated",
             "value" : "Aerografo élite"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kladderwerper Pro"
+          }
         }
       }
     },
@@ -2911,6 +3277,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Splasher élite"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Superspetter Pro"
           }
         }
       }
@@ -2959,6 +3331,12 @@
             "state" : "translated",
             "value" : "Splasher élite logo"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forge Superspetter Pro"
+          }
         }
       }
     },
@@ -3005,6 +3383,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sparacolore recluta"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Superspetter jr."
           }
         }
       }
@@ -3053,6 +3437,12 @@
             "state" : "translated",
             "value" : "Sparacolore logo"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gemodde Superspetter jr."
+          }
         }
       }
     },
@@ -3099,6 +3489,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Strizzer"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Floeper"
           }
         }
       }
@@ -3147,6 +3543,12 @@
             "state" : "translated",
             "value" : "Strizzer B"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foil Floeper"
+          }
         }
       }
     },
@@ -3193,6 +3595,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Calibro 2000"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".52 Kaliter"
           }
         }
       }
@@ -3241,6 +3649,12 @@
             "state" : "translated",
             "value" : "Calibro 3000"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".96 Kaliter"
+          }
         }
       }
     },
@@ -3287,6 +3701,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Calibro 3000 DX"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".96 Kaliter Deco"
           }
         }
       }
@@ -3335,6 +3755,12 @@
             "state" : "translated",
             "value" : "Sweeper"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Straalplonzer"
+          }
         }
       }
     },
@@ -3381,6 +3807,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sweeper CM"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gemodde Straalplonzer"
           }
         }
       }
@@ -3429,6 +3861,12 @@
             "state" : "translated",
             "value" : "Splasher"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Superspetter"
+          }
         }
       }
     },
@@ -3475,6 +3913,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Splasher logo"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tentatek Superspetter"
           }
         }
       }
@@ -3523,6 +3967,12 @@
             "state" : "translated",
             "value" : "Pistola élite replica"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heldenspetter (replica)"
+          }
         }
       }
     },
@@ -3569,6 +4019,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Marker d'assalto"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spetterspuit"
           }
         }
       }
@@ -3617,6 +4073,12 @@
             "state" : "translated",
             "value" : "Marker d'assalto Neo"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spetterspuit Neo"
+          }
         }
       }
     },
@@ -3663,6 +4125,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Splasher Nova"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Superspetter Nova"
           }
         }
       }
@@ -3711,6 +4179,12 @@
             "state" : "translated",
             "value" : "Splasher Nova Annak"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annaki Superspetter Nova"
+          }
         }
       }
     },
@@ -3757,6 +4231,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "N-ZAP85"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N-ZAP '85"
           }
         }
       }
@@ -3805,6 +4285,12 @@
             "state" : "translated",
             "value" : "N-ZAP89"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N-ZAP '89"
+          }
         }
       }
     },
@@ -3851,6 +4337,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Marker"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spettertuit"
           }
         }
       }
@@ -3899,6 +4391,12 @@
             "state" : "translated",
             "value" : "Marker Neo"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spettertuit Neo"
+          }
         }
       }
     },
@@ -3945,6 +4443,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Triplete"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "H-3 Langsnuit"
           }
         }
       }
@@ -3993,6 +4497,12 @@
             "state" : "translated",
             "value" : "Triplete D"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "H-3 Langsnuit D"
+          }
         }
       }
     },
@@ -4039,6 +4549,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Triplete compatto"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L-3 Stompsnuit"
           }
         }
       }
@@ -4087,6 +4603,12 @@
             "state" : "translated",
             "value" : "Triplete compatto D"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L-3 Stompsnuit D"
+          }
         }
       }
     },
@@ -4133,6 +4655,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Secchiostro vasca"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spatkuip"
           }
         }
       }
@@ -4181,6 +4709,12 @@
             "state" : "translated",
             "value" : "Secchiostro vasca DX"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spatkuip Deco"
+          }
         }
       }
     },
@@ -4227,6 +4761,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Secchiostro triplo"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Triomorser"
           }
         }
       }
@@ -4275,6 +4815,12 @@
             "state" : "translated",
             "value" : "Secchiostro triplo master"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Triomorser Nouveau"
+          }
         }
       }
     },
@@ -4321,6 +4867,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Secchiapavimenti"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wringmorser"
           }
         }
       }
@@ -4369,6 +4921,12 @@
             "state" : "translated",
             "value" : "Secchiostro centrifuga"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klotstrommel"
+          }
         }
       }
     },
@@ -4415,6 +4973,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Secchiostro centrifuga Neo"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klotstrommel Neo"
           }
         }
       }
@@ -4463,6 +5027,12 @@
             "state" : "translated",
             "value" : "Secchiostro"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Morser"
+          }
         }
       }
     },
@@ -4509,6 +5079,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Secchiostro DX"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Morser Deco"
           }
         }
       }
@@ -4557,6 +5133,12 @@
             "state" : "translated",
             "value" : "Termosecchiostro"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kliederkachel"
+          }
         }
       }
     },
@@ -4603,6 +5185,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tetrapenna"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stylospetling"
           }
         }
       }
@@ -4651,6 +5239,12 @@
             "state" : "translated",
             "value" : "Tetrapenna master"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stylospetling Nouveau"
+          }
         }
       }
     },
@@ -4697,6 +5291,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Idrante"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blusling"
           }
         }
       }
@@ -4745,6 +5345,12 @@
             "state" : "translated",
             "value" : "Splatling a pennarelli"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Examinator"
+          }
         }
       }
     },
@@ -4791,6 +5397,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mini splatling"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mini-Spetling"
           }
         }
       }
@@ -4839,6 +5451,12 @@
             "state" : "translated",
             "value" : "Mini splatling logo"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zink Mini-Spetling"
+          }
         }
       }
     },
@@ -4882,6 +5500,12 @@
           }
         },
         "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nautilus 47"
+          }
+        },
+        "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nautilus 47"
@@ -4933,6 +5557,12 @@
             "state" : "translated",
             "value" : "Splatling a tanica"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spetling"
+          }
         }
       }
     },
@@ -4979,6 +5609,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Splatling a tanica DX"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spetling Deco"
           }
         }
       }
@@ -5027,6 +5663,12 @@
             "state" : "translated",
             "value" : "Tri-calamarco"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Triospanner"
+          }
         }
       }
     },
@@ -5073,6 +5715,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tri-calamarco Maremont"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inkline Triospanner"
           }
         }
       }
@@ -5121,6 +5769,12 @@
             "state" : "translated",
             "value" : "ARCO-RAL 450"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "RIF-LEX 450"
+          }
         }
       }
     },
@@ -5167,6 +5821,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ARCO-RAL 450 DX"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "RIF-LEX 450 Deco"
           }
         }
       }
