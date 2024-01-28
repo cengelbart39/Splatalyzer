@@ -4,6 +4,12 @@
     "Blaster_Light_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turbo-Blaster"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27,6 +33,12 @@
     "Blaster_Light_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turbo-Blaster Deko"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -50,6 +62,12 @@
     "Blaster_LightLong_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turbo-Blaster Plus"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -73,6 +91,12 @@
     "Blaster_LightLong_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turbo-Blaster Plus Deko"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -96,6 +120,12 @@
     "Blaster_LightShort_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kontra-Blaster"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -119,6 +149,12 @@
     "Blaster_LightShort_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kontra-Blaster Neo"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -142,6 +178,12 @@
     "Blaster_Long_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fern-Blaster"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -165,6 +207,12 @@
     "Blaster_Middle_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blaster"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -188,6 +236,12 @@
     "Blaster_Middle_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blaster SE"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -211,6 +265,12 @@
     "Blaster_Precision_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S-BLAST92"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -234,6 +294,12 @@
     "Blaster_Precision_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S-BLAST91"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -257,6 +323,12 @@
     "Blaster_Short_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luna-Blaster"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -280,6 +352,12 @@
     "Blaster_Short_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luna-Blaster Neo"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -303,6 +381,12 @@
     "Brush_Heavy_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fächerfärber"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -326,6 +410,12 @@
     "Brush_Heavy_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fächerfärber Fresco"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -349,6 +439,12 @@
     "Brush_Mini_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quasto"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -372,6 +468,12 @@
     "Brush_Mini_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quasto Fresco"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -395,6 +497,12 @@
     "Brush_Normal_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalligraf"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -418,6 +526,12 @@
     "Brush_Normal_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalligraf Fresco"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -441,6 +555,12 @@
     "Charger_Keeper_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "T-Tuber"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -464,6 +584,12 @@
     "Charger_Keeper_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "T-Tuber SE"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -487,6 +613,12 @@
     "Charger_Light_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klotzer 14-A"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -510,6 +642,12 @@
     "Charger_Long_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-liter 4K"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -533,6 +671,12 @@
     "Charger_LongScope_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ziel-E-liter 4K"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -556,6 +700,12 @@
     "Charger_Normal_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klecks-Konzentrator"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -579,6 +729,12 @@
     "Charger_Normal_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zekkori-Klecks-Konzentrator"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -602,6 +758,12 @@
     "Charger_NormalScope_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ziel-Konzentrator"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -625,6 +787,12 @@
     "Charger_NormalScope_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zekkori-Ziel-Konzentrator"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -648,6 +816,12 @@
     "Charger_Pencil_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "R-BLR/5H"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -671,6 +845,12 @@
     "Charger_Pencil_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "R-BLR/5B"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -694,6 +874,12 @@
     "Charger_Quick_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sepiator α"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -717,6 +903,12 @@
     "Maneuver_Dual_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dual-Platscher"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -740,6 +932,12 @@
     "Maneuver_Dual_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dual-Platscher SE"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -763,6 +961,12 @@
     "Maneuver_Gallon_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kelvin 525"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -786,6 +990,12 @@
     "Maneuver_Normal_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klecks-Doppler"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -809,6 +1019,12 @@
     "Maneuver_Normal_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enperry-Klecks-Doppler"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -832,6 +1048,12 @@
     "Maneuver_Short_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sprenkler"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -855,6 +1077,12 @@
     "Maneuver_Short_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sprenkler Fresco"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -878,6 +1106,12 @@
     "Maneuver_Stepper_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quadhopper Noir"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -901,6 +1135,12 @@
     "Maneuver_Stepper_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quadhopper Blanc"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -924,6 +1164,12 @@
     "Roller_Compact_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Karbonroller"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -947,6 +1193,12 @@
     "Roller_Compact_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Karbonroller Deko"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -970,6 +1222,12 @@
     "Roller_Heavy_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dynaroller"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -993,6 +1251,12 @@
     "Roller_Heavy_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dynaroller Tesla"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1016,6 +1280,12 @@
     "Roller_Hunter_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flex-Roller"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1039,6 +1309,12 @@
     "Roller_Normal_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klecksroller"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1062,6 +1338,12 @@
     "Roller_Normal_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Medusa-Klecksroller"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1085,6 +1367,12 @@
     "Roller_Wide_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Breitroller"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1108,6 +1396,12 @@
     "Roller_Wide_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Breitroller Express"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1131,6 +1425,12 @@
     "Saber_Lite_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wischer-Splatana"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1154,6 +1454,12 @@
     "Saber_Lite_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wischer-Splatana Deko"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1177,6 +1483,12 @@
     "Saber_Normal_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stempel-Splatana"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1200,6 +1512,12 @@
     "Saber_Normal_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stempel-Splatana Neo"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1223,6 +1541,12 @@
     "Shelter_Compact_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "UnderCover"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1246,6 +1570,12 @@
     "Shelter_Compact_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sorella-UnderCover"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1269,6 +1599,12 @@
     "Shelter_Normal_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Parapluviator"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1292,6 +1628,12 @@
     "Shelter_Normal_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sorella-Parapluviator"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1315,6 +1657,12 @@
     "Shelter_Wide_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Camp-Pluviator"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1338,6 +1686,12 @@
     "Shelter_Wide_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sorella-Camp-Pluviator"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1361,6 +1715,12 @@
     "Shooter_Blaze_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Airbrush MG"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1384,6 +1744,12 @@
     "Shooter_Blaze_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Airbrush RG"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1407,6 +1773,12 @@
     "Shooter_Expert_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profi-Kleckser"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1430,6 +1802,12 @@
     "Shooter_Expert_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Focus-Profi-Kleckser"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1453,6 +1831,12 @@
     "Shooter_First_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Junior-Kleckser"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1476,6 +1860,12 @@
     "Shooter_First_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Junior-Kleckser Plus"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1499,6 +1889,12 @@
     "Shooter_Flash_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quetscher"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1522,6 +1918,12 @@
     "Shooter_Flash_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quetscher Fol"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1545,6 +1947,12 @@
     "Shooter_Gravity_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".52 Gallon"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1568,6 +1976,12 @@
     "Shooter_Heavy_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".96 Gallon"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1591,6 +2005,12 @@
     "Shooter_Heavy_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".96 Gallon Deko"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1614,6 +2034,12 @@
     "Shooter_Long_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Platscher"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1637,6 +2063,12 @@
     "Shooter_Long_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Platscher SE"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1660,6 +2092,12 @@
     "Shooter_Normal_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kleckser"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1683,6 +2121,12 @@
     "Shooter_Normal_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tentatek-Kleckser"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1706,6 +2150,12 @@
     "Shooter_Normal_H" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heldenwaffe Replik"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1729,6 +2179,12 @@
     "Shooter_Precision_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fein-Disperser"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1752,6 +2208,12 @@
     "Shooter_Precision_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fein-Disperser Neo"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1775,6 +2237,12 @@
     "Shooter_QuickLong_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kosmo-Kleckser"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1798,6 +2266,12 @@
     "Shooter_QuickLong_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annaki-Kosmo-Kleckser"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1821,6 +2295,12 @@
     "Shooter_QuickMiddle_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N-ZAP85"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1844,6 +2324,12 @@
     "Shooter_QuickMiddle_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N-ZAP89"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1867,6 +2353,12 @@
     "Shooter_Short_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disperser"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1890,6 +2382,12 @@
     "Shooter_Short_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disperser Neo"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1913,6 +2411,12 @@
     "Shooter_TripleMiddle_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S3 Tintenwerfer"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1936,6 +2440,12 @@
     "Shooter_TripleMiddle_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S3 Tintenwerfer D"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1959,6 +2469,12 @@
     "Shooter_TripleQuick_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L3 Tintenwerfer"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1982,6 +2498,12 @@
     "Shooter_TripleQuick_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L3 Tintenwerfer D"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2005,6 +2527,12 @@
     "Slosher_Bathtub_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wannen-Schwapper"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2028,6 +2556,12 @@
     "Slosher_Bathtub_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wannen-Schwapper Deko"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2051,6 +2585,12 @@
     "Slosher_Diffusion_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3R-Schwapper"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2074,6 +2614,12 @@
     "Slosher_Diffusion_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3R-Schwapper Fresco"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2097,6 +2643,12 @@
     "Slosher_Double_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schwappwascher"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2120,6 +2672,12 @@
     "Slosher_Launcher_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trommel-Schwapper"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2143,6 +2701,12 @@
     "Slosher_Launcher_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trommel-Schwapper Neo"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2166,6 +2730,12 @@
     "Slosher_Strong_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schwapper"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2189,6 +2759,12 @@
     "Slosher_Strong_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schwapper Deko"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2212,6 +2788,12 @@
     "Slosher_Washtub_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Knall-Schwapper"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2235,6 +2817,12 @@
     "Spinner_Downpour_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kuli-Splatling"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2258,6 +2846,12 @@
     "Spinner_Downpour_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kuli-Splatling Fresco"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2281,6 +2875,12 @@
     "Spinner_Hyper_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hydrant"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2304,6 +2904,12 @@
     "Spinner_HyperShort_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kartuschierer"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2327,6 +2933,12 @@
     "Spinner_Quick_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klecks-Splatling"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2350,6 +2962,12 @@
     "Spinner_Quick_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sagitron-Klecks-Splatling"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2373,6 +2991,12 @@
     "Spinner_Serein_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nautilus 47"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2396,6 +3020,12 @@
     "Spinner_Standard_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splatling"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2419,6 +3049,12 @@
     "Spinner_Standard_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splatling Deko"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2442,6 +3078,12 @@
     "Stringer_Normal_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tri-Stringer"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2465,6 +3107,12 @@
     "Stringer_Normal_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alpomar-Tri-Stringer"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2488,6 +3136,12 @@
     "Stringer_Short_00" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LACT-450"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2511,6 +3165,12 @@
     "Stringer_Short_01" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LACT-450 Deko"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",

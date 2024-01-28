@@ -4,6 +4,12 @@
     "Action_Up" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Action +"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27,6 +33,12 @@
     "ComeBack" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rückkehr"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -50,6 +62,12 @@
     "DeathMarking" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vergeltung"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -73,6 +91,12 @@
     "EndAllUp" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Endspurt"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -96,6 +120,12 @@
     "Exorcist" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heimsuchung"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -119,6 +149,12 @@
     "ExSkillDouble" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Effektdoppelung"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -142,6 +178,12 @@
     "HumanMove_Up" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lauftempo +"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -165,6 +207,12 @@
     "InkRecovery_Up" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regeneration +"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -188,6 +236,12 @@
     "JumpTime_Save" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supersprung +"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -211,6 +265,12 @@
     "MainInk_Save" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hauptverbrauch"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -234,6 +294,12 @@
     "MinorityUp" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zähigkeit"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -257,6 +323,12 @@
     "ObjectEffect_Up" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zerstörer"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -280,6 +352,12 @@
     "OpInkEffect_Reduction" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tintentoleranz +"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -303,6 +381,12 @@
     "RespawnSpecialGauge_Save" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spezialabzug -"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -326,6 +410,12 @@
     "RespawnTime_Save" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schnelle Rückkehr"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -349,6 +439,12 @@
     "SomersaultLanding" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tricklandung"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -372,6 +468,12 @@
     "SpecialIncrease_Up" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spezialladezeit +"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -395,6 +497,12 @@
     "SpecialSpec_Up" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spezialstärke +"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -418,6 +526,12 @@
     "SquidMove_Up" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schwimmtempo +"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -441,6 +555,12 @@
     "SquidMoveSpatter_Reduction" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tintenfisch-Ninja"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -464,6 +584,12 @@
     "StartAllUp" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Startvorteil"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -487,6 +613,12 @@
     "SubEffect_Reduction" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sekundärschutz +"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -510,6 +642,12 @@
     "SubInk_Save" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sekundärverbrauch"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -533,6 +671,12 @@
     "SubSpec_Up" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sekundärstärke +"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -556,6 +700,12 @@
     "SuperJumpSign_Hide" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sprunginfiltration"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -579,6 +729,12 @@
     "ThermalInk" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Markierfarbe"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",

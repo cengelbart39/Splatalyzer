@@ -4,6 +4,12 @@
     "Beacon" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sprungboje"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27,6 +33,12 @@
     "Bomb_Curling" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Curling-Bombe"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -50,6 +62,12 @@
     "Bomb_Fizzy" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sprudel-Bombe"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -73,6 +91,12 @@
     "Bomb_Quick" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insta-Bombe"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -96,6 +120,12 @@
     "Bomb_Robot" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Robo-Bombe"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -119,6 +149,12 @@
     "Bomb_Splash" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klecks-Bombe"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -142,6 +178,12 @@
     "Bomb_Suction" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haftbombe"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -165,6 +207,12 @@
     "Bomb_Torpedo" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Torpedo"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -188,6 +236,12 @@
     "LineMarker" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Winkelmarker"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -211,6 +265,12 @@
     "PointSensor" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detektor"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -234,6 +294,12 @@
     "PoisonMist" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sepitox-Nebel"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -257,6 +323,12 @@
     "Shield" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tintenwall"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -280,6 +352,12 @@
     "Sprinkler" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sprinkler"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -303,6 +381,12 @@
     "Trap" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tintenmine"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",

@@ -4,6 +4,12 @@
     "SpBlower" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tintegrator"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -27,6 +33,12 @@
     "SpCastle" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tintentyrann"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -50,6 +62,12 @@
     "SpChariot" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krabbenpanzer"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -73,6 +91,12 @@
     "SpChimney" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unsichtbarriere"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -96,6 +120,12 @@
     "SpEnergyStand" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tranktank"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -119,6 +149,12 @@
     "SpFirework" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bluffbomber"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -142,6 +178,12 @@
     "SpGreatBarrier" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kugelschild Pro"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -165,6 +207,12 @@
     "SpInkStorm" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tintenschauer"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -188,6 +236,12 @@
     "SpJetpack" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tintendüser"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -211,6 +265,12 @@
     "SpMicroLaser" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heulboje 5.1"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -234,6 +294,12 @@
     "SpMultiMissile" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schwarmraketen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -257,6 +323,12 @@
     "SpNiceBall" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cool-Kugel"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -280,6 +352,12 @@
     "SpPogo" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tri-Tintenschock"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -303,6 +381,12 @@
     "SpShockSonar" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schauerwelle"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -326,6 +410,12 @@
     "SpSkewer" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haihammer"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -349,6 +439,12 @@
     "SpSuperHook" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haftsprung"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -372,6 +468,12 @@
     "SpTripleTornado" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tri-Tintferno"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -395,6 +497,12 @@
     "SpUltraShot" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trizooka"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -418,6 +526,12 @@
     "SpUltraStamp" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ultra-Stempel"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
