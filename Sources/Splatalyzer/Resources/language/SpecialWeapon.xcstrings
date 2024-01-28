@@ -1,10 +1,10 @@
 {
-  "sourceLanguage" : "en-US",
+  "sourceLanguage" : "en",
   "strings" : {
     "SpBlower" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ink Vac"
@@ -15,7 +15,7 @@
     "SpCastle" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kraken Royale"
@@ -26,7 +26,7 @@
     "SpChariot" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Crab Tank"
@@ -37,7 +37,7 @@
     "SpChimney" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Splattercolor Screen"
@@ -48,7 +48,7 @@
     "SpEnergyStand" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tacticooler"
@@ -59,7 +59,7 @@
     "SpFirework" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Super Chump"
@@ -70,7 +70,7 @@
     "SpGreatBarrier" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Big Bubbler"
@@ -81,7 +81,7 @@
     "SpInkStorm" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ink Storm"
@@ -92,7 +92,7 @@
     "SpJetpack" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Inkjet"
@@ -103,7 +103,7 @@
     "SpMicroLaser" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Killer Wail 5.1"
@@ -114,7 +114,7 @@
     "SpMultiMissile" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tenta Missiles"
@@ -125,7 +125,7 @@
     "SpNiceBall" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Booyah Bomb"
@@ -136,7 +136,7 @@
     "SpPogo" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Triple Splashdown"
@@ -147,7 +147,7 @@
     "SpShockSonar" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wave Breaker"
@@ -158,7 +158,7 @@
     "SpSkewer" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reefslider"
@@ -169,7 +169,7 @@
     "SpSuperHook" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zipcaster"
@@ -180,7 +180,7 @@
     "SpTripleTornado" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Triple Inkstrike"
@@ -191,7 +191,7 @@
     "SpUltraShot" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Trizooka"
@@ -202,7 +202,7 @@
     "SpUltraStamp" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ultra Stamp"

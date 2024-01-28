@@ -1,10 +1,10 @@
 {
-  "sourceLanguage" : "en-US",
+  "sourceLanguage" : "en",
   "strings" : {
     "Blaster" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Blasters"
@@ -15,7 +15,7 @@
     "Brush" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Brushes"
@@ -26,7 +26,7 @@
     "Charger" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chargers"
@@ -37,7 +37,7 @@
     "Maneuver" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dualies"
@@ -48,7 +48,7 @@
     "Roller" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rollers"
@@ -59,7 +59,7 @@
     "Saber" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Splatanas"
@@ -70,7 +70,7 @@
     "Shelter" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Brellas"
@@ -81,7 +81,7 @@
     "Shooter" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Shooters"
@@ -92,7 +92,7 @@
     "Slosher" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sloshers"
@@ -103,7 +103,7 @@
     "Spinner" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Splatlings"
@@ -114,7 +114,7 @@
     "Stringer" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stringers"

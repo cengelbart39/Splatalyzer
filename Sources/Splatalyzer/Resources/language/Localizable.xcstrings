@@ -1,5 +1,5 @@
 {
-  "sourceLanguage" : "en-US",
+  "sourceLanguage" : "en",
   "strings" : {
     "" : {
 
@@ -7,7 +7,7 @@
     "%@ Damage" : {
       "comment" : "Refers to the damage done by the Special Weapon.",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ Damage"
@@ -18,7 +18,7 @@
     "%@ Damage Distance" : {
       "comment" : "Refers to the damage done by a special weapon over some specified distance.",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ Distance Damage"
@@ -29,7 +29,7 @@
     "%@ Device Durability" : {
       "comment" : "Refers to the durability of the Big Bubbler device.",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ Device Durability"
@@ -40,7 +40,7 @@
     "%@ Duration" : {
       "comment" : "Refers to the duration of certain special weapons.",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ Duration"
@@ -50,7 +50,7 @@
     },
     "%@ hit to splat!" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ hit to splat!"
@@ -60,7 +60,7 @@
     },
     "%@ hits to splat!" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ hits to splat!"
@@ -71,7 +71,7 @@
     "%@ Hook Ink Consumption" : {
       "comment" : "Refers to the ink consumption of the Zipcaster hook.",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ Hook Ink Consumption"
@@ -82,7 +82,7 @@
     "%@ Hook Ink Consumption Per Second" : {
       "comment" : "Refers to the ink consumption of the Zipcaster special while idling.",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ Hook Ink Consumption Per Second"
@@ -93,7 +93,7 @@
     "%@ Max Radius" : {
       "comment" : "Refers to the maximum radius of the Big Bubbler or Wave Breaker special.",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ Max Radius"
@@ -104,7 +104,7 @@
     "%@ Movement Reduction" : {
       "comment" : "Refers to the movement reduction effect of Toxic Mist.",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ Movement Reduction"
@@ -115,7 +115,7 @@
     "%@ Movement Speed" : {
       "comment" : "Refers to the player's movement speed while using certain specials.",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ Movement Speed"
@@ -126,7 +126,7 @@
     "%@ Paint Radius" : {
       "comment" : "Refers to the painting radius of certain specials.",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ Paint Radius"
@@ -137,7 +137,7 @@
     "%@ Radius Range" : {
       "comment" : "Refers to the maximum and minimum radius of the Big Bubbler special.",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ Radius Range"
@@ -148,7 +148,7 @@
     "%@ Reticle Radius" : {
       "comment" : "Refers to the reticle radius of the Tenta Missile special.",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ Reticle Radius"
@@ -159,7 +159,7 @@
     "%@ Shield Durability" : {
       "comment" : "Refers to the durability of the Big Bubbler shield.",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ Shield Durability"
@@ -170,7 +170,7 @@
     "%@ Throw Distance" : {
       "comment" : "Refers to the throwing distance of the Splattercolor Screen special.",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ Throw Distance"
@@ -181,7 +181,7 @@
     "%@ Tracking Seconds" : {
       "comment" : "Refers to the tracking time of the Ink Mien sub.",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ Tracking Seconds"
@@ -192,7 +192,7 @@
     "%@ Tracking Time" : {
       "comment" : "Refers to the marking seconds of the Angle Shooter, Point Sensor sub, or the build's sub weapon.",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ Tracking Time"
@@ -203,7 +203,7 @@
     "%@-%@" : {
       "comment" : "Represents a distance range, i.e. 4-7",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "%1$@-%2$@"
@@ -213,7 +213,7 @@
     },
     "%@, %@, and %@ tracking times are calculated against an oponent with 0 AP of %@." : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "%1$@, %2$@, and %3$@ tracking times are calculated against an oponent with 0 AP of %4$@."
@@ -223,7 +223,7 @@
     },
     "%lld Sub Used" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "variations" : {
             "plural" : {
               "one" : {
@@ -246,7 +246,7 @@
     "0% (+0 AP)" : {
       "comment" : "LDE Intensity 0",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "0% (+0 AP)"
@@ -257,7 +257,7 @@
     "4.76% (+0 AP)" : {
       "comment" : "LDE Intensity 1",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "4.76% (+0 AP)"
@@ -268,7 +268,7 @@
     "9.52% (+1 AP)" : {
       "comment" : "LDE Intensity 2",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "9.52% (+1 AP)"
@@ -279,7 +279,7 @@
     "14.29% (+2 AP)" : {
       "comment" : "LDE Intensity 3",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "14.29% (+2 AP)"
@@ -290,7 +290,7 @@
     "19.05% (+3 AP)" : {
       "comment" : "LDE Intensity 4",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "19.05% (+3 AP)"
@@ -301,7 +301,7 @@
     "23.81% (+4 AP)" : {
       "comment" : "LDE Intensity 5",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "23.81% (+4 AP)"
@@ -312,7 +312,7 @@
     "28.57% (+5 AP)" : {
       "comment" : "LDE Intensity 6",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "28.57% (+5 AP)"
@@ -323,7 +323,7 @@
     "33.33% (+6 AP)" : {
       "comment" : "LDE Intensity 7",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "33.33% (+6 AP)"
@@ -334,7 +334,7 @@
     "38.10% (+6 AP)" : {
       "comment" : "LDE Intensity 8",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "38.10% (+6 AP)"
@@ -345,7 +345,7 @@
     "42.86% (+7 AP)" : {
       "comment" : "LDE Intensity 9",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "42.86% (+7 AP)"
@@ -356,7 +356,7 @@
     "47.62% (+8 AP)" : {
       "comment" : "LDE Intensity 10",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "47.62% (+8 AP)"
@@ -367,7 +367,7 @@
     "52.38% (+9 AP)" : {
       "comment" : "LDE Intensity 11",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "52.38% (+9 AP)"
@@ -378,7 +378,7 @@
     "57.14% (+10 AP)" : {
       "comment" : "LDE Intensity 12",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "57.14% (+10 AP)"
@@ -389,7 +389,7 @@
     "61.90% (+11 AP)" : {
       "comment" : "LDE Intensity 13",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "61.90% (+11 AP)"
@@ -400,7 +400,7 @@
     "66.67% (+12 AP)" : {
       "comment" : "LDE Intensity 14",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "66.67% (+12 AP)"
@@ -411,7 +411,7 @@
     "71.43% (+12 AP)" : {
       "comment" : "LDE Intensity 15",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "71.43% (+12 AP)"
@@ -422,7 +422,7 @@
     "76.19% (+13 AP)" : {
       "comment" : "LDE Intensity 16",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "76.19% (+13 AP)"
@@ -433,7 +433,7 @@
     "80.95% (+14 AP)" : {
       "comment" : "LDE Intensity 17",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "80.95% (+14 AP)"
@@ -444,7 +444,7 @@
     "85.71% (+15 AP)" : {
       "comment" : "LDE Intensity 18",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "85.71% (+15 AP)"
@@ -455,7 +455,7 @@
     "90.48% (+16 AP)" : {
       "comment" : "LDE Intensity 19",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "90.48% (+16 AP)"
@@ -466,7 +466,7 @@
     "95.24% (+17 AP)" : {
       "comment" : "LDE Intensity 20",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "95.24% (+17 AP)"
@@ -477,7 +477,7 @@
     "100% (+18 AP)" : {
       "comment" : "LDE Intensity 21",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "100% (+18 AP)"
@@ -487,7 +487,7 @@
     },
     "Actions Per Ink Tank" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Actions Per Ink Tank"
@@ -498,7 +498,7 @@
     "Base" : {
       "comment" : "Refers to a base effect before any gear abilities.",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Base"
@@ -509,7 +509,7 @@
     "Build" : {
       "comment" : "Refers to a gear build. Used in reference to the effect caused by gear abilities.",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Build"
@@ -520,7 +520,7 @@
     "Canopy Durability" : {
       "comment" : "Refers to a Brella's shield durability.",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Canopy Durability"
@@ -530,7 +530,7 @@
     },
     "Charge Time To Full" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Charge Time To Full"
@@ -540,7 +540,7 @@
     },
     "Damage" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Damage"
@@ -550,7 +550,7 @@
     },
     "Damage In Enemy Ink" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Damage In Enemy Ink"
@@ -560,7 +560,7 @@
     },
     "Distance" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Distance"
@@ -570,7 +570,7 @@
     },
     "Durability" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Durability"
@@ -580,7 +580,7 @@
     },
     "Effect" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Effect"
@@ -590,7 +590,7 @@
     },
     "Error: A Last-Ditch Effort intensity was passed in that was outside of the 0-21 range." : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Error: A Last-Ditch Effort intensity was passed in that was outside of the 0-21 range."
@@ -600,7 +600,7 @@
     },
     "Error: The gear build configuration is invalid." : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Error: The gear build configuration is invalid."
@@ -610,7 +610,7 @@
     },
     "Explosion Radius" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Explosion Radius"
@@ -620,7 +620,7 @@
     },
     "Failed to load (file) in bundle: (descr)" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Failed to load (file) in bundle: (descr)"
@@ -630,7 +630,7 @@
     },
     "Failed to locate '(file)' in bundle." : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Failed to locate '(file)' in bundle."
@@ -640,7 +640,7 @@
     },
     "Frames Before Damage In Enemy Ink" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Frames Before Damage In Enemy Ink"
@@ -650,7 +650,7 @@
     },
     "Full Power Phase Duration" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Full Power Phase Duration"
@@ -660,7 +660,7 @@
     },
     "Ink Tank Consumption" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ink Tank Consumption"
@@ -670,7 +670,7 @@
     },
     "Ink Tank Recovery Time (Humanoid Form)" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ink Tank Recovery Time (Humanoid Form)"
@@ -680,7 +680,7 @@
     },
     "Ink Tank Recovery Time (Squid Form)" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ink Tank Recovery Time (Squid Form)"
@@ -691,7 +691,7 @@
     "LDE Intensity" : {
       "comment" : "LDE = Last Ditch Error",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "LDE Intensity"
@@ -701,7 +701,7 @@
     },
     "Main Weapon Damage" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Main Weapon Damage"
@@ -711,7 +711,7 @@
     },
     "Marking Duration" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Marking Duration"
@@ -721,7 +721,7 @@
     },
     "Marking Radius" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Marking Radius"
@@ -731,7 +731,7 @@
     },
     "Max Charge Hold Time" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Max Charge Hold Time"
@@ -741,7 +741,7 @@
     },
     "Max Damage from Enemy Ink" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Max Damage from Enemy Ink"
@@ -751,7 +751,7 @@
     },
     "Mid-Phase Duration" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mid-Phase Duration"
@@ -761,7 +761,7 @@
     },
     "Miscellaneous" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Miscellaneous"
@@ -771,7 +771,7 @@
     },
     "Movement" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Movement"
@@ -781,7 +781,7 @@
     },
     "No Ink Recovery Time After Usage" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "No Ink Recovery Time After Usage"
@@ -791,7 +791,7 @@
     },
     "Points to Special" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Points to Special"
@@ -801,7 +801,7 @@
     },
     "Quick Respawn Time" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Quick Respawn Time"
@@ -812,7 +812,7 @@
     "Quick Respawn Time When Splatted by RP" : {
       "comment" : "Refers to Respawn Punisher effect",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Quick Respawn Time When Splatted by RP"
@@ -822,7 +822,7 @@
     },
     "Quick Super Jump Boost" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Quick Super Jump Boost"
@@ -832,7 +832,7 @@
     },
     "Run Speed" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Run Speed"
@@ -842,7 +842,7 @@
     },
     "Run Speed In Enemy Ink" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Run Speed In Enemy Ink"
@@ -852,7 +852,7 @@
     },
     "Run Speed While Shooting" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Run Speed While Shooting"
@@ -862,7 +862,7 @@
     },
     "Secondary Mode Spread on the Ground" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Secondary Mode Spread on the Ground"
@@ -872,7 +872,7 @@
     },
     "Secondary Mode Spread While Jumping" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Secondary Mode Spread While Jumping"
@@ -882,7 +882,7 @@
     },
     "Shot Spread on the Ground" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Shot Spread on the Ground"
@@ -892,7 +892,7 @@
     },
     "Shot Spread While Jumping" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Shot Spread While Jumping"
@@ -902,7 +902,7 @@
     },
     "Special Auto Charge Rate" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Special Auto Charge Rate"
@@ -912,7 +912,7 @@
     },
     "Special Lost When Splatted" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Special Lost When Splatted"
@@ -923,7 +923,7 @@
     "Special Lost When Splatted With RP" : {
       "comment" : "Refers to Respawn Punisher",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Special Lost When Splatted With RP"
@@ -933,7 +933,7 @@
     },
     "Special Power Up Duration" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Special Power Up Duration"
@@ -943,7 +943,7 @@
     },
     "Squid Surge Charge To Full" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Squid Surge Charge To Full"
@@ -953,7 +953,7 @@
     },
     "Sub Weapon Damage Defense" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sub Weapon Damage Defense"
@@ -963,7 +963,7 @@
     },
     "Sub Weapon Effect Defense" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sub Weapon Effect Defense"
@@ -973,7 +973,7 @@
     },
     "Super Jump Vulnerable Frames" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Super Jump Vulnerable Frames"
@@ -983,7 +983,7 @@
     },
     "Swim Speed" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Swim Speed"
@@ -993,7 +993,7 @@
     },
     "Swim Speed While Holding The Rainmaker" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Swim Speed While Holding The Rainmaker"
@@ -1003,7 +1003,7 @@
     },
     "Total Super Jump Time" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Total Super Jump Time"
@@ -1013,7 +1013,7 @@
     },
     "Velocity (Decides Range)" : {
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Velocity (Decides Range)"
@@ -1024,7 +1024,7 @@
     "Weight" : {
       "comment" : "Refers to the weight class of a main weapon.",
       "localizations" : {
-        "en-US" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Weight"
