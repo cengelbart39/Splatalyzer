@@ -46,6 +46,12 @@
             "value" : "Trasferitore"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ジャンプビーコン"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -103,6 +109,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bomba curling"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カーリングボム"
           }
         },
         "nl" : {
@@ -164,6 +176,12 @@
             "value" : "Bomba a gassosa"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "タンサンボム"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -221,6 +239,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Granata"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "クイックボム"
           }
         },
         "nl" : {
@@ -282,6 +306,12 @@
             "value" : "Robo-bomba"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ロボットボム"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -339,6 +369,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bomba splash"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スプラッシュボム"
           }
         },
         "nl" : {
@@ -400,6 +436,12 @@
             "value" : "Appiccibomba"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キューバンボム"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -457,6 +499,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Torpedinatore"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "トーピード"
           }
         },
         "nl" : {
@@ -518,6 +566,12 @@
             "value" : "Sparalinee"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ラインマーカー"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -575,6 +629,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cimice"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ポイントセンサー"
           }
         },
         "nl" : {
@@ -636,6 +696,12 @@
             "value" : "Nebbia tossica"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ポイズンミスト"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -693,6 +759,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Muro di colore"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スプラッシュシールド"
           }
         },
         "nl" : {
@@ -754,6 +826,12 @@
             "value" : "Spruzzatore"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スプリンクラー"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -811,6 +889,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mina"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "トラップ"
           }
         },
         "nl" : {

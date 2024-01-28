@@ -46,6 +46,12 @@
             "value" : "Blaster"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ブラスター"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -103,6 +109,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pennelli"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "フデ"
           }
         },
         "nl" : {
@@ -164,6 +176,12 @@
             "value" : "Armi a carica"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "チャージャー"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -221,6 +239,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Repolper"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "マニューバー"
           }
         },
         "nl" : {
@@ -282,6 +306,12 @@
             "value" : "Rulli"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ローラー"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -339,6 +369,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lame"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ワイパー"
           }
         },
         "nl" : {
@@ -400,6 +436,12 @@
             "value" : "Sparasole"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "シェルター"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -457,6 +499,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Armi a ripetizione"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "シューター"
           }
         },
         "nl" : {
@@ -518,6 +566,12 @@
             "value" : "Secchiostri"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スロッシャー"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -577,6 +631,12 @@
             "value" : "Splatling"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スピナー"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -634,6 +694,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Calamarchi"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ストリンガー"
           }
         },
         "nl" : {

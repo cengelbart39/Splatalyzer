@@ -46,6 +46,12 @@
             "value" : "Vampinchiostro"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キューインキ"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -103,6 +109,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kraken reale"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "テイオウイカ"
           }
         },
         "nl" : {
@@ -164,6 +176,12 @@
             "value" : "Granchio armato"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カニタンク"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -221,6 +239,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cortina ingannevole"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スミナガシート"
           }
         },
         "nl" : {
@@ -282,6 +306,12 @@
             "value" : "Rinfrigorente"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "エナジースタンド"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -339,6 +369,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Diversivo esplosivo"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "デコイチラシ"
           }
         },
         "nl" : {
@@ -400,6 +436,12 @@
             "value" : "Gran bolla scudo"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "グレートバリア"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -457,6 +499,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pioggia di colore"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アメフラシ"
           }
         },
         "nl" : {
@@ -518,6 +566,12 @@
             "value" : "Jet splat"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ジェットパック"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -575,6 +629,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tintofono 5.1"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "メガホンレーザー5.1ch"
           }
         },
         "nl" : {
@@ -636,6 +696,12 @@
             "value" : "Lanciarazzi"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "マルチミサイル"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -693,6 +759,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Granbotto"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ナイスダマ"
           }
         },
         "nl" : {
@@ -754,6 +826,12 @@
             "value" : "Triplo vernischianto"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ウルトラチャクチ"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -811,6 +889,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sonar esplosivo"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ホップソナー"
           }
         },
         "nl" : {
@@ -872,6 +956,12 @@
             "value" : "Motosqualo"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サメライド"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -929,6 +1019,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Molluscatto"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ショクワンダー"
           }
         },
         "nl" : {
@@ -990,6 +1086,12 @@
             "value" : "Triplo tornado"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "トリプルトルネード"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1049,6 +1151,12 @@
             "value" : "Ultraturbinator"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ウルトラショット"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1106,6 +1214,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mega timbro"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ウルトラハンコ"
           }
         },
         "nl" : {
