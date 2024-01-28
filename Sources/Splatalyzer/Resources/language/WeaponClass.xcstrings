@@ -52,6 +52,12 @@
             "value" : "ブラスター"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "블래스터"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -62,6 +68,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Бластеры"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "爆破枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "爆破槍"
           }
         }
       }
@@ -117,6 +135,12 @@
             "value" : "フデ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "붓"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -127,6 +151,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Кисти"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "画笔"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "畫筆"
           }
         }
       }
@@ -182,6 +218,12 @@
             "value" : "チャージャー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차저"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -192,6 +234,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Нагнетатели"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "蓄力狙击枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "蓄力狙擊槍"
           }
         }
       }
@@ -247,6 +301,12 @@
             "value" : "マニューバー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "머누버"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -257,6 +317,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Спуртометы"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "机动枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "機動槍"
           }
         }
       }
@@ -312,6 +384,12 @@
             "value" : "ローラー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "롤러"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -322,6 +400,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Валики"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "滚筒"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "滾筒"
           }
         }
       }
@@ -377,6 +467,12 @@
             "value" : "ワイパー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "와이퍼"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -387,6 +483,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Сплат-катаны"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刮水刀"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刮水刀"
           }
         }
       }
@@ -442,6 +550,12 @@
             "value" : "シェルター"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "셸터"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -452,6 +566,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Сплат-зонты"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "防空伞"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "防空傘"
           }
         }
       }
@@ -507,6 +633,12 @@
             "value" : "シューター"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "슈터"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -517,6 +649,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Краскоматы"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "射击枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "射擊槍"
           }
         }
       }
@@ -572,6 +716,12 @@
             "value" : "スロッシャー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "슬로셔"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -582,6 +732,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ведроганы"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "泼桶"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "潑桶"
           }
         }
       }
@@ -637,6 +799,12 @@
             "value" : "スピナー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스피너"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -647,6 +815,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Брызгометы"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "旋转枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "旋轉槍"
           }
         }
       }
@@ -702,6 +882,12 @@
             "value" : "ストリンガー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스트링거"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -712,6 +898,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Тетиваторы"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "猎鱼弓"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "獵魚弓"
           }
         }
       }

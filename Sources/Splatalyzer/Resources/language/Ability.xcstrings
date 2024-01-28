@@ -52,6 +52,12 @@
             "value" : "アクション強化"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "액션 강화"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -62,6 +68,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ультраудар"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "行动强化"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "行動強化"
           }
         }
       }
@@ -117,6 +135,12 @@
             "value" : "カムバック"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "컴백"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -127,6 +151,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ответный удар"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "回归"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "回歸"
           }
         }
       }
@@ -182,6 +218,12 @@
             "value" : "リベンジ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "리벤지"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -192,6 +234,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Вендетта"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "复仇"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "復仇"
           }
         }
       }
@@ -247,6 +301,12 @@
             "value" : "\"ラストスパート"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "라스트 스퍼트"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -257,6 +317,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Финишный спурт"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最后冲刺"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最後衝刺"
           }
         }
       }
@@ -312,6 +384,12 @@
             "value" : "ラストスパート"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "부활 페널티 업"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -322,6 +400,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Кара"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提升复活惩罚"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提升復活懲罰"
           }
         }
       }
@@ -377,6 +467,12 @@
             "value" : "追加ギアパワー倍化"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "추가 기어 파워 2배"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -387,6 +483,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Дупликатор"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "追加装备能力增倍"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "追加裝備能力增倍"
           }
         }
       }
@@ -442,6 +550,12 @@
             "value" : "ヒト移動速度アップ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "인간 이동 속도 업"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -452,6 +566,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Спринтер"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提升人类移动速度"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提升人類移動速度"
           }
         }
       }
@@ -507,6 +633,12 @@
             "value" : "インク回復力アップ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "잉크 회복력 업"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -517,6 +649,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Быстрый баллон"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提升墨汁回复力"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提升墨汁回復力"
           }
         }
       }
@@ -572,6 +716,12 @@
             "value" : "スーパージャンプ時間短縮"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "슈퍼 점프 시간 단축"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -582,6 +732,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Суперпрыгун"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "缩短超级跳跃时间"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "縮短超級跳躍時間"
           }
         }
       }
@@ -637,6 +799,12 @@
             "value" : "インク効率アップ(メイン)"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "잉크 효율 업(메인)"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -647,6 +815,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Основной баллон X"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提升墨汁效率（主要武器）"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提升墨汁效率（主要武器）"
           }
         }
       }
@@ -702,6 +882,12 @@
             "value" : "逆境強化"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "역경 강화"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -712,6 +898,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Компенсатор"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "逆境强化"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "逆境強化"
           }
         }
       }
@@ -767,6 +965,12 @@
             "value" : "対物攻撃力アップ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오브젝트 공격력 업"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -777,6 +981,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Демонтажник"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提升对物体攻击力"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提升對物體攻擊力"
           }
         }
       }
@@ -832,6 +1048,12 @@
             "value" : "相手インク影響軽減"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "상대 잉크 영향 감소"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -842,6 +1064,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Краскостойкость"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "减轻对手墨汁影响"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "減輕對手墨汁影響"
           }
         }
       }
@@ -897,6 +1131,12 @@
             "value" : "スペシャル減少量ダウン"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스페셜 감소량 다운"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -907,6 +1147,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Особый резерв"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "降低特殊武器减少量"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "降低特殊武器減少量"
           }
         }
       }
@@ -962,6 +1214,12 @@
             "value" : "復活時間短縮"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "부활 시간 단축"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -972,6 +1230,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Феникс"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "缩短复活时间"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "縮短復活時間"
           }
         }
       }
@@ -1027,6 +1297,12 @@
             "value" : "受け身術"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "낙법"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1037,6 +1313,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Акробат"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "受身术"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "受身術"
           }
         }
       }
@@ -1092,6 +1380,12 @@
             "value" : "スペシャル増加量アップ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스페셜 증가량 업"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1102,6 +1396,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Особый насос"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提升特殊武器增加量"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提升特殊武器增加量"
           }
         }
       }
@@ -1157,6 +1463,12 @@
             "value" : "スペシャル性能アップ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스페셜 성능 업"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1167,6 +1479,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Особый подход"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提升特殊武器性能"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提升特殊武器性能"
           }
         }
       }
@@ -1222,6 +1546,12 @@
             "value" : "イカダッシュ速度アップ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "징어대시 속도 업"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1232,6 +1562,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Плавунец"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提升鱿鱼冲刺速度"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提升魷魚衝刺速度"
           }
         }
       }
@@ -1287,6 +1629,12 @@
             "value" : "イカニンジャ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "징어닌자"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1297,6 +1645,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Мимикрия"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "鱿鱼忍者"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "魷魚忍者"
           }
         }
       }
@@ -1352,6 +1712,12 @@
             "value" : "スタートダッシュ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스타트 대시"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1362,6 +1728,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Стартовый спурт"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最初冲刺"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最初衝刺"
           }
         }
       }
@@ -1417,6 +1795,12 @@
             "value" : "サブ影響軽減"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "서브 영향 감소"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1427,6 +1811,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Стойкость запаса"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "减轻次要武器影响"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "減輕次要武器影響"
           }
         }
       }
@@ -1482,6 +1878,12 @@
             "value" : "インク効率アップ(サブ)"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "잉크 효율 업(서브)"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1492,6 +1894,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Запасной баллон X"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提升墨汁效率（次要武器）"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提升墨汁效率（次要武器）"
           }
         }
       }
@@ -1547,6 +1961,12 @@
             "value" : "サブ性能アップ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "서브 성능 업"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1557,6 +1977,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Про-Запас"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提升次要武器性能"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提升次要武器性能"
           }
         }
       }
@@ -1612,6 +2044,12 @@
             "value" : "ステルスジャンプ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스텔스 점프"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1622,6 +2060,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Десант"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隐身跳跃"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隱身跳躍"
           }
         }
       }
@@ -1677,6 +2127,12 @@
             "value" : "サーマルインク"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "서멀 잉크"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1687,6 +2143,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Клеймо"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "热力墨汁"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "熱力墨汁"
           }
         }
       }

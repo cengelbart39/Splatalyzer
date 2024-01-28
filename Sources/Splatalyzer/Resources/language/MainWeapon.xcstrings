@@ -52,6 +52,12 @@
             "value" : "ラピッドブラスター"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "래피드 블래스터"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -62,6 +68,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Бластермат"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "快速爆破枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "快速爆破槍"
           }
         }
       }
@@ -117,6 +135,12 @@
             "value" : "ラピッドブラスターデコ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "래피드 블래스터 데코"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -127,6 +151,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Бластермат «Деко»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "快速爆破枪 装饰"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "快速爆破槍 裝飾"
           }
         }
       }
@@ -182,6 +218,12 @@
             "value" : "Rブラスターエリート"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "R 블래스터 엘리트"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -192,6 +234,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Бластермат ПРО"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "快速爆破枪 精英"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "快速爆破槍 精英"
           }
         }
       }
@@ -247,6 +301,12 @@
             "value" : "Rブラスターエリートデコ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "R 블래스터 엘리트 데코"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -257,6 +317,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Бластермат ПРО «Деко»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "快速爆破枪 精英装饰"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "快速爆破槍 精英裝飾"
           }
         }
       }
@@ -312,6 +384,12 @@
             "value" : "クラッシュブラスター"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "크래시 블래스터"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -322,6 +400,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Контрабластер"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "冲涂爆破枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "衝塗爆破槍"
           }
         }
       }
@@ -377,6 +467,12 @@
             "value" : "クラッシュブラスターネオ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "네오 크래시 블래스터"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -387,6 +483,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Контрабластер «Нео»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "冲涂爆破枪 新型"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "衝塗爆破槍 新型"
           }
         }
       }
@@ -442,6 +550,12 @@
             "value" : "ロングブラスター"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "롱 블래스터"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -452,6 +566,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Дальнобластер"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "远距爆破枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "遠距爆破槍"
           }
         }
       }
@@ -507,6 +633,12 @@
             "value" : "ホットブラスター"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "핫 블래스터"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -517,6 +649,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Бластер"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "火热爆破枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "火熱爆破槍"
           }
         }
       }
@@ -572,6 +716,12 @@
             "value" : "ホットブラスターカスタム"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "커스텀 핫 블래스터"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -582,6 +732,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Бластер «Понт»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "火热爆破枪 改装"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "火熱爆破槍 改裝"
           }
         }
       }
@@ -637,6 +799,12 @@
             "value" : "S-BLAST92"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S-BLAST92"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -647,6 +815,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "S-BLAST 92"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S-BLAST92"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S-BLAST92"
           }
         }
       }
@@ -702,6 +882,12 @@
             "value" : "S-BLAST91"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S-BLAST91"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -712,6 +898,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "S-BLAST 91"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S-BLAST91"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S-BLAST91"
           }
         }
       }
@@ -767,6 +965,12 @@
             "value" : "ノヴァブラスター"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "노바 블래스터"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -777,6 +981,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Лунобластер"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新星爆破枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新星爆破槍"
           }
         }
       }
@@ -832,6 +1048,12 @@
             "value" : "ノヴァブラスターネオ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "네오 노바 블래스터"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -842,6 +1064,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Лунобластер «Нео»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新星爆破枪 新型"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新星爆破槍 新型"
           }
         }
       }
@@ -897,6 +1131,12 @@
             "value" : "フィンセント"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "빈센트"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -907,6 +1147,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Веерокисть «Плюхассо»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "文森"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "文森"
           }
         }
       }
@@ -962,6 +1214,12 @@
             "value" : "フィンセント・ヒュー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "빈센트 휴"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -972,6 +1230,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Веерокисть «НуВо»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "文森·新艺术"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "文森‧新藝術"
           }
         }
       }
@@ -1027,6 +1297,12 @@
             "value" : "パブロ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "파블로"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1037,6 +1313,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Кисть"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "巴勃罗"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "巴勃羅"
           }
         }
       }
@@ -1092,6 +1380,12 @@
             "value" : "パブロ・ヒュー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "파블로 휴"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1102,6 +1396,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Кисть «НуВо»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "巴勃罗·新艺术"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "巴勃羅‧新藝術"
           }
         }
       }
@@ -1157,6 +1463,12 @@
             "value" : "ホクサイ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "호쿠사이"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1167,6 +1479,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Арт-кисть"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "北斋"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "北齋"
           }
         }
       }
@@ -1222,6 +1546,12 @@
             "value" : "ホクサイ・ヒュー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "호쿠사이 휴"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1232,6 +1562,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Арт-кисть «НуВо»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "北斋·新艺术"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "北齋‧新藝術"
           }
         }
       }
@@ -1287,6 +1629,12 @@
             "value" : "ソイチューバー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "소이 튜버"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1297,6 +1645,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Трубастер"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高压油管枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高壓油管槍"
           }
         }
       }
@@ -1352,6 +1712,12 @@
             "value" : "ソイチューバーカスタム"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "커스텀 소이 튜버"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1362,6 +1728,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Трубастер «Понт»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高压油管枪 改装"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高壓油管槍 改裝"
           }
         }
       }
@@ -1417,6 +1795,12 @@
             "value" : "14式竹筒銃・甲"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "14식 대나무 총 갑"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1427,6 +1811,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Бамбух 14-I"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "14式竹筒枪·甲"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "14式竹筒槍‧甲"
           }
         }
       }
@@ -1482,6 +1878,12 @@
             "value" : "リッター4K"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "리터 4K"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1492,6 +1894,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Э-литр 95"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "公升4K"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "公升4K"
           }
         }
       }
@@ -1547,6 +1961,12 @@
             "value" : "4Kスコープ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4K 스코프"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1557,6 +1977,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Снайп-э-литр 95"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4K准星枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4K準星槍"
           }
         }
       }
@@ -1612,6 +2044,12 @@
             "value" : "スプラチャージャー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스플랫 차저"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1622,6 +2060,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Сплатган"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉蓄力狙击枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉蓄力狙擊槍"
           }
         }
       }
@@ -1677,6 +2127,12 @@
             "value" : "スプラチャージャーコラボ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스플랫 차저 컬래버"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1687,6 +2143,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Сплатган «ЙожкоТюр»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉蓄力狙击枪 联名"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉蓄力狙擊槍 聯名"
           }
         }
       }
@@ -1742,6 +2210,12 @@
             "value" : "スプラスコープ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스플랫 스코프"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1752,6 +2226,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Снайпокрас"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉准星枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉準星槍"
           }
         }
       }
@@ -1807,6 +2293,12 @@
             "value" : "スプラスコープコラボ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스플랫 스코프 컬래버"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1817,6 +2309,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Снайпокрас «ЙожкоТюр»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉准星枪 联名"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉準星槍 聯名"
           }
         }
       }
@@ -1872,6 +2376,12 @@
             "value" : "R-PEN/5H"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "R-PEN/5H"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1882,6 +2392,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Патрондаш 5Т"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "R-PEN/5H"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "R-PEN/5H"
           }
         }
       }
@@ -1937,6 +2459,12 @@
             "value" : "R-PEN/5B"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "R-PEN/5B"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1947,6 +2475,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Патрондаш 5М"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "R-PEN/5B"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "R-PEN/5B"
           }
         }
       }
@@ -2002,6 +2542,12 @@
             "value" : "スクイックリンα"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스퀵 클린 α"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2012,6 +2558,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Стиратель"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "鱿快洁α"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "魷快潔α"
           }
         }
       }
@@ -2067,6 +2625,12 @@
             "value" : "デュアルスイーパー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "듀얼 스위퍼"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2077,6 +2641,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Спурт-плескари"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "双重清洁枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "雙重清潔槍"
           }
         }
       }
@@ -2132,6 +2708,12 @@
             "value" : "デュアルスイーパーカスタム"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "커스텀 듀얼 스위퍼"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2142,6 +2724,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Спурт-плескари «Понт»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "双重清洁枪 改装"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "雙重清潔槍 改裝"
           }
         }
       }
@@ -2197,6 +2791,12 @@
             "value" : "ケルビン525"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "켈빈 525"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2207,6 +2807,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Термоплюхи 525"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开尔文525"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開爾文525"
           }
         }
       }
@@ -2262,6 +2874,12 @@
             "value" : "スプラマニューバー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스플랫 머누버"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2272,6 +2890,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Спуртометы"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉机动枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉機動槍"
           }
         }
       }
@@ -2327,6 +2957,12 @@
             "value" : "スプラマニューバーコラボ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스플랫 머누버 컬래버"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2337,6 +2973,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Спуртометы «К.К.»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉机动枪 联名"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉機動槍 聯名"
           }
         }
       }
@@ -2392,6 +3040,12 @@
             "value" : "スパッタリー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스퍼터리"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2402,6 +3056,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Импрессиометы"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "溅镀枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "濺鍍槍"
           }
         }
       }
@@ -2457,6 +3123,12 @@
             "value" : "スパッタリー・ヒュー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스퍼터리 휴"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2467,6 +3139,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Импрессиометы «НуВо»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "溅镀枪·新艺术"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "濺鍍槍‧新藝術"
           }
         }
       }
@@ -2522,6 +3206,12 @@
             "value" : "クアッドホッパーブラック"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "블랙 쿼드 호퍼"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2532,6 +3222,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Черные спуртокроссы"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "四重弹跳手枪 黑"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "四重彈跳手槍 黑"
           }
         }
       }
@@ -2587,6 +3289,12 @@
             "value" : "クアッドホッパーホワイト"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "화이트 쿼드 호퍼"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2597,6 +3305,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Белые спуртокроссы"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "四重弹跳手枪 白"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "四重彈跳手槍 白"
           }
         }
       }
@@ -2652,6 +3372,12 @@
             "value" : "カーボンローラー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "카본 롤러"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2662,6 +3388,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Валик ЛАЙТ"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "碳纤维滚筒"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "碳纖維滾筒"
           }
         }
       }
@@ -2717,6 +3455,12 @@
             "value" : "カーボンローラーデコ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "카본 롤러 데코"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2727,6 +3471,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Валик ЛАЙТ «Деко»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "碳纤维滚筒 装饰"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "碳纖維滾筒 裝飾"
           }
         }
       }
@@ -2782,6 +3538,12 @@
             "value" : "ダイナモローラー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다이너모 롤러"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2792,6 +3554,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Мотовалик"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电动马达滚筒"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "動馬達滾筒"
           }
         }
       }
@@ -2847,6 +3621,12 @@
             "value" : "ダイナモローラーテスラ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "골드 다이너모 롤러"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2857,6 +3637,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Мотовалик VIP"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电动马达滚筒 高磁波"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "電動馬達滾筒 高磁波"
           }
         }
       }
@@ -2912,6 +3704,12 @@
             "value" : "ヴァリアブルローラー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "베리어블 롤러"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2922,6 +3720,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Омнивалик"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "可变式滚筒"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "可變式滾筒"
           }
         }
       }
@@ -2977,6 +3787,12 @@
             "value" : "スプラローラー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스플랫 롤러"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2987,6 +3803,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Сплат-валик"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉滚筒"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉滾筒"
           }
         }
       }
@@ -3042,6 +3870,12 @@
             "value" : "スプラローラーコラボ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스플랫 롤러 컬래버"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3052,6 +3886,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Сплат-валик «Кра-Кен»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉滚筒 联名"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉滾筒 聯名"
           }
         }
       }
@@ -3107,6 +3953,12 @@
             "value" : "ワイドローラー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "와이드 롤러"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3117,6 +3969,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Макси-валик"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "宽滚筒"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "寬滾筒"
           }
         }
       }
@@ -3172,6 +4036,12 @@
             "value" : "ワイドローラーコラボ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "와이드 롤러 컬래버"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3182,6 +4052,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Макси-валик «Экспресс»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "宽滚筒 联名"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "寬滾筒 聯名"
           }
         }
       }
@@ -3237,6 +4119,12 @@
             "value" : "ドライブワイパー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "드라이브 와이퍼"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3247,6 +4135,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cплат-дворник"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "雨刷刮水刀"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "雨刷刮水刀"
           }
         }
       }
@@ -3302,6 +4202,12 @@
             "value" : "ドライブワイパーデコ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "드라이브 와이퍼 데코"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3312,6 +4218,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cплат-дворник «Деко»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "雨刷刮水刀 装饰"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "雨刷刮水刀 裝飾"
           }
         }
       }
@@ -3367,6 +4285,12 @@
             "value" : "ジムワイパー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사무 와이퍼"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3377,6 +4301,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Сплат-печатель"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "工作刮水刀"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "工作刮水刀"
           }
         }
       }
@@ -3432,6 +4368,12 @@
             "value" : "ジムワイパー・ヒュー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사무 와이퍼 휴"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3442,6 +4384,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Сплат-печатель «Нео»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "工作刮水刀·新艺术"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "工作刮水刀‧新藝術"
           }
         }
       }
@@ -3497,6 +4451,12 @@
             "value" : "スパイガジェット"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스파이 가젯"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3507,6 +4467,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Шпионский зонт"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "特工配件"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "特務配件"
           }
         }
       }
@@ -3562,6 +4534,12 @@
             "value" : "スパイガジェットソレーラ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스파이 가젯 소렐라"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3572,6 +4550,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Шпионский зонт «Родиччи»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "特工配件 姐妹"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "特務配件 姐妹"
           }
         }
       }
@@ -3627,6 +4617,12 @@
             "value" : "パラシェルター"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "파라 셸터"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3637,6 +4633,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Сплат-зонт"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "遮阳防空伞"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "遮陽防空傘"
           }
         }
       }
@@ -3692,6 +4700,12 @@
             "value" : "パラシェルターソレーラ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "파라 셸터 소렐라"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3702,6 +4716,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Зонтган «Родиччи»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "遮阳防空伞 姐妹"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "遮陽防空傘 姐妹"
           }
         }
       }
@@ -3757,6 +4783,12 @@
             "value" : "キャンピングシェルター"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "캠핑 셸터"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3767,6 +4799,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Зонтент"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "露营防空伞"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "露營防空傘"
           }
         }
       }
@@ -3822,6 +4866,12 @@
             "value" : "キャンピングシェルターソレーラ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "캠핑 셸터 소렐라"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3832,6 +4882,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Зонтент «Родиччи»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "露营防空伞 姐妹"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "露營防空傘 姐妹"
           }
         }
       }
@@ -3887,6 +4949,12 @@
             "value" : "プロモデラーMG"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프로모델러 MG"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3897,6 +4965,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Аэроспрей"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "专业模型枪MG"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "專業模型槍MG"
           }
         }
       }
@@ -3952,6 +5032,12 @@
             "value" : "プロモデラーRG"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프로모델러 RG"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3962,6 +5048,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Аэроспрей ДЕЛЮКС"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "专业模型枪RG"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "專業模型槍RG"
           }
         }
       }
@@ -4017,6 +5115,12 @@
             "value" : "プライムシューター"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프라임 슈터"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4027,6 +5131,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Каплестрел ПРО"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顶尖射击枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "頂尖射擊槍"
           }
         }
       }
@@ -4082,6 +5198,12 @@
             "value" : "プライムシューターコラボ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프라임 슈터 컬래버"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4092,6 +5214,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Каплестрел ПРО «Блиц»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顶尖射击枪 联名"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "頂尖射擊槍 聯名"
           }
         }
       }
@@ -4147,6 +5281,12 @@
             "value" : "わかばシューター"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새싹 슈터"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4157,6 +5297,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Каплестрел-У"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新叶射击枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新葉射擊槍"
           }
         }
       }
@@ -4212,6 +5364,12 @@
             "value" : "もみじシューター"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "단풍 슈터"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4222,6 +5380,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Каплестрел-У 2.0"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "枫叶射击枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "楓葉射擊槍"
           }
         }
       }
@@ -4277,6 +5447,12 @@
             "value" : "ボトルガイザー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보틀 가이저"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4287,6 +5463,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Бутылятор"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开瓶喷泉枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開瓶噴泉槍"
           }
         }
       }
@@ -4342,6 +5530,12 @@
             "value" : "ボトルガイザーフォイル"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "포일 보틀 가이저"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4352,6 +5546,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Бутылятор «Блеск»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开瓶喷泉枪 金属箔"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開瓶噴泉槍 金屬箔"
           }
         }
       }
@@ -4407,6 +5613,12 @@
             "value" : ".52ガロン"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".52 갤런"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4417,6 +5629,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Струевик .52"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".52加仑"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".52加侖"
           }
         }
       }
@@ -4472,6 +5696,12 @@
             "value" : ".96ガロン"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".96 갤런"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4482,6 +5712,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Струевик .96"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".96加仑"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".96加侖"
           }
         }
       }
@@ -4537,6 +5779,12 @@
             "value" : ".96ガロンデコ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".96 갤런 데코"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4547,6 +5795,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Струевик .96 «Деко»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".96加仑 装饰"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".96加侖 裝飾"
           }
         }
       }
@@ -4602,6 +5862,12 @@
             "value" : "ジェットスイーパー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "제트 스위퍼"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4612,6 +5878,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Плескарь"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "喷射清洁枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "噴射清潔槍"
           }
         }
       }
@@ -4667,6 +5945,12 @@
             "value" : "ジェットスイーパーカスタム"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "커스텀 제트 스위퍼"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4677,6 +5961,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Плескарь «Понт»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "喷射清洁枪 改装"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "噴射清潔槍 改裝"
           }
         }
       }
@@ -4732,6 +6028,12 @@
             "value" : "スプラシューター"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스플랫 슈터"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4742,6 +6044,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Каплестрел"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉射击枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉射擊槍"
           }
         }
       }
@@ -4797,6 +6111,12 @@
             "value" : "スプラシューターコラボ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스플랫 슈터 컬래버"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4807,6 +6127,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Каплестрел «Щуччи»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉射击枪 联名"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉射擊槍 聯名"
           }
         }
       }
@@ -4862,6 +6194,12 @@
             "value" : "ヒーローシューター レプリカ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "히어로 슈터 레플리카"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4872,6 +6210,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Каплестрел героя (клон)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "英雄射击枪 复制"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "英雄射擊槍 複製"
           }
         }
       }
@@ -4927,6 +6277,12 @@
             "value" : "シャープマーカー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "샤프 마커"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4937,6 +6293,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Плюхомет"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "窄域标记枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "窄域標記槍"
           }
         }
       }
@@ -4992,6 +6360,12 @@
             "value" : "シャープマーカーネオ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "네오 샤프 마커"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5002,6 +6376,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Плюхомет «Нео»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "窄域标记枪 新型"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "窄域標記槍 新型"
           }
         }
       }
@@ -5057,6 +6443,12 @@
             "value" : "スペースシューター"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스페이스 슈터"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5067,6 +6459,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Каплестрел НОВА"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "太空射击枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "太空射擊槍"
           }
         }
       }
@@ -5122,6 +6526,12 @@
             "value" : "スペースシューターコラボ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스페이스 슈터 컬래버"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5132,6 +6542,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Каплестрел НОВА-ПАНК"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "太空射击枪 联名"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "太空射擊槍 聯名"
           }
         }
       }
@@ -5187,6 +6609,12 @@
             "value" : "N-ZAP85"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N-ZAP85"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5197,6 +6625,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "N-ZAP 85"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N-ZAP85"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N-ZAP85"
           }
         }
       }
@@ -5252,6 +6692,12 @@
             "value" : "N-ZAP89"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N-ZAP89"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5262,6 +6708,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "N-ZAP 89"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N-ZAP89"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N-ZAP89"
           }
         }
       }
@@ -5317,6 +6775,12 @@
             "value" : "ボールドマーカー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "볼드 마커"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5327,6 +6791,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Плюхотрон"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "广域标记枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "廣域標記槍"
           }
         }
       }
@@ -5382,6 +6858,12 @@
             "value" : "ボールドマーカーネオ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "네오 볼드 마커"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5392,6 +6874,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Плюхотрон «Нео»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "广域标记枪 新型"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "廣域標記槍 新型"
           }
         }
       }
@@ -5447,6 +6941,12 @@
             "value" : "H3リールガン"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "H3 릴 건"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5457,6 +6957,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Тяжелый каплетрон"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "H3卷管枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "H3捲管槍"
           }
         }
       }
@@ -5512,6 +7024,12 @@
             "value" : "H3リールガンD"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "H3 릴 건 D"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5522,6 +7040,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Тяжелый каплетрон 2.0"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "H3卷管枪D"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "H3捲管槍D"
           }
         }
       }
@@ -5577,6 +7107,12 @@
             "value" : "L3リールガン"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L3 릴 건"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5587,6 +7123,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Каплетрон-компакт"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L3卷管枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L3捲管槍"
           }
         }
       }
@@ -5642,6 +7190,12 @@
             "value" : "L3リールガンD"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L3 릴 건 D"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5652,6 +7206,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Каплетрон-компакт 2.0"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L3卷管枪D"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L3捲管槍D"
           }
         }
       }
@@ -5707,6 +7273,12 @@
             "value" : "オーバーフロッシャー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오버플로셔"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5717,6 +7289,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ваннаган"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "满溢泡澡泼桶"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "滿溢泡澡潑桶"
           }
         }
       }
@@ -5772,6 +7356,12 @@
             "value" : "オーバーフロッシャーデコ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오버플로셔 데코"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5782,6 +7372,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ваннаган «Деко»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "满溢泡澡泼桶 装饰"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "滿溢泡澡潑桶 裝飾"
           }
         }
       }
@@ -5837,6 +7439,12 @@
             "value" : "ヒッセン"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "물통"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5847,6 +7455,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ведроган 3 в 1"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "洗笔桶"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "洗筆桶"
           }
         }
       }
@@ -5902,6 +7522,12 @@
             "value" : "ヒッセン・ヒュー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "물통 휴"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5912,6 +7538,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ведроган 3 в 1 «НуВо»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "洗笔桶·新艺术\""
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "洗筆桶‧新藝術"
           }
         }
       }
@@ -5967,6 +7605,12 @@
             "value" : "モップリン"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "몹 링"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5977,6 +7621,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Отжиматель"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "墨瀑淋"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "墨瀑淋"
           }
         }
       }
@@ -6032,6 +7688,12 @@
             "value" : "スクリュースロッシャー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스크루 슬로셔"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6042,6 +7704,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Центрифугер"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "回旋泼桶"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "迴旋潑桶"
           }
         }
       }
@@ -6097,6 +7771,12 @@
             "value" : "スクリュースロッシャーネオ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "네오 스크루 슬로셔"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6107,6 +7787,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Центрифугер «Нео»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "回旋泼桶 新型"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "迴旋潑桶 新型"
           }
         }
       }
@@ -6162,6 +7854,12 @@
             "value" : "バケットスロッシャー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "버킷 슬로셔"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6172,6 +7870,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ведроган"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "飞溅泼桶"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "飛濺潑桶"
           }
         }
       }
@@ -6227,6 +7937,12 @@
             "value" : "バケットスロッシャーデコ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "버킷 슬로셔 데코"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6237,6 +7953,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ведроган «Деко»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "飞溅泼桶 装饰"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "飛濺潑桶 裝飾"
           }
         }
       }
@@ -6292,6 +8020,12 @@
             "value" : "エクスプロッシャー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "익스플로셔"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6302,6 +8036,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Шпарган"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "爆炸泼桶"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "爆炸潑桶"
           }
         }
       }
@@ -6357,6 +8103,12 @@
             "value" : "クーゲルシュライバー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "쿠겔 슈라이버"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6367,6 +8119,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Кугельшрайбер"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "圆珠笔"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "圓珠筆"
           }
         }
       }
@@ -6422,6 +8186,12 @@
             "value" : "クーゲルシュライバー・ヒュー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "쿠겔 슈라이버 휴"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6432,6 +8202,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Кугельшрайбер «НуВо»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "圆珠笔·新艺术"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "圓珠筆‧新藝術"
           }
         }
       }
@@ -6487,6 +8269,12 @@
             "value" : "ハイドラント"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "하이드런트"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6497,6 +8285,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Брызгомет «Горыныч»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "消防栓旋转枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "消防栓旋轉槍"
           }
         }
       }
@@ -6552,6 +8352,12 @@
             "value" : "イグザミナー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이그재미너"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6562,6 +8368,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Брызгомет XL «Корректор»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "审查者"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "審查者"
           }
         }
       }
@@ -6617,6 +8435,12 @@
             "value" : "スプラスピナー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스플랫 스피너"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6627,6 +8451,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Брызгомет-М"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉旋转枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉旋轉槍"
           }
         }
       }
@@ -6682,6 +8518,12 @@
             "value" : "スプラスピナーコラボ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스플랫 스피너 컬래버"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6692,6 +8534,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Брызгомет-М «Шпротус»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉旋转枪 联名"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉旋轉槍 聯名"
           }
         }
       }
@@ -6747,6 +8601,12 @@
             "value" : "ノーチラス47"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "노틸러스 47"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6757,6 +8617,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Наутилус-47"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "鹦鹉螺号47"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "鸚鵡螺號47"
           }
         }
       }
@@ -6812,6 +8684,12 @@
             "value" : "バレルスピナー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "배럴 스피너"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6822,6 +8700,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Брызгомет XL"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "桶装旋转枪"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "桶裝旋轉槍"
           }
         }
       }
@@ -6877,6 +8767,12 @@
             "value" : "バレルスピナーデコ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "배럴 스피너 데코"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6887,6 +8783,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Брызгомет XL «Деко»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "桶装旋转枪 装饰"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "桶裝旋轉槍 裝飾"
           }
         }
       }
@@ -6942,6 +8850,12 @@
             "value" : "トライストリンガー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "트라이 스트링거"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6952,6 +8866,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Тритиватор"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "三发猎鱼弓"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "三發獵魚弓"
           }
         }
       }
@@ -7007,6 +8933,12 @@
             "value" : "トライストリンガーコラボ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "트라이 스트링거 컬래버"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7017,6 +8949,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Тритиватор «Коллаб»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "三发猎鱼弓 联名"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "三發獵魚弓 聯名"
           }
         }
       }
@@ -7072,6 +9016,12 @@
             "value" : "LACT-450"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LACT-450"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7082,6 +9032,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "КО-РАЛЛ 450"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LACT-450"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LACT-450"
           }
         }
       }
@@ -7137,6 +9099,12 @@
             "value" : "LACT-450デコ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LACT-450 데코"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -7147,6 +9115,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "КО-РАЛЛ 450 «Деко»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LACT-450 装饰"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LACT-450 裝飾"
           }
         }
       }

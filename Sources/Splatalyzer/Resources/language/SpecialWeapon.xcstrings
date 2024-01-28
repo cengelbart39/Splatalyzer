@@ -52,6 +52,12 @@
             "value" : "キューインキ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "흡입기"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -62,6 +68,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Краскосос"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "吸墨机"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "吸墨機"
           }
         }
       }
@@ -117,6 +135,12 @@
             "value" : "テイオウイカ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "로열 크라켄"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -127,6 +151,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Тираннокракен"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "帝王鱿鱼"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "帝王魷魚"
           }
         }
       }
@@ -182,6 +218,12 @@
             "value" : "カニタンク"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "크랩 탱크"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -192,6 +234,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Кработанк"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "螃蟹坦克"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "螃蟹坦克"
           }
         }
       }
@@ -247,6 +301,12 @@
             "value" : "スミナガシート"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스플래터컬러 스크린"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -257,6 +317,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Заливной барьер"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "浮墨幕墙"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "浮墨幕牆"
           }
         }
       }
@@ -312,6 +384,12 @@
             "value" : "エナジースタンド"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "에너지 스탠드"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -322,6 +400,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Тоникулер"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "能量站"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "能量站"
           }
         }
       }
@@ -377,6 +467,12 @@
             "value" : "デコイチラシ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "디코이 캐넌"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -387,6 +483,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Суперпрыжатор"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "诱饵烟花"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "誘餌煙火"
           }
         }
       }
@@ -442,6 +550,12 @@
             "value" : "グレートバリア"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "그레이트 배리어"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -452,6 +566,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Шарощит"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "巨大防护罩"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "巨大防護罩"
           }
         }
       }
@@ -507,6 +633,12 @@
             "value" : "アメフラシ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "먹구름"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -517,6 +649,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Туча краски"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "墨雨云"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "墨雨雲"
           }
         }
       }
@@ -572,6 +716,12 @@
             "value" : "ジェットパック"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "제트 팩"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -582,6 +732,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Красколет"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "喷射背包"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "噴射背包"
           }
         }
       }
@@ -637,6 +799,12 @@
             "value" : "メガホンレーザー5.1ch"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메가폰 레이저 5.1ch"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -647,6 +815,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Мегалофон 5.1"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "喇叭镭射5.1ch"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "喇叭雷射5.1ch"
           }
         }
       }
@@ -702,6 +882,12 @@
             "value" : "マルチミサイル"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "멀티 미사일"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -712,6 +898,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Каракатница"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "多重导弹"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "多重導彈"
           }
         }
       }
@@ -767,6 +965,12 @@
             "value" : "ナイスダマ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "나이스옥"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -777,6 +981,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Йо-хо-плюхер"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "赞气弹"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "讚氣彈"
           }
         }
       }
@@ -832,6 +1048,12 @@
             "value" : "ウルトラチャクチ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "울트라 착지"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -842,6 +1064,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Тройной мегаплюх"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "终极着陆"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "終極著陸"
           }
         }
       }
@@ -897,6 +1131,12 @@
             "value" : "ホップソナー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "홉 소나"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -907,6 +1147,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Волноплюхер"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "弹跳声呐"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "彈跳聲納"
           }
         }
       }
@@ -962,6 +1214,12 @@
             "value" : "サメライド"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "샤크 라이드"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -972,6 +1230,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Мотокула"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "鲨鱼坐骑"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "鯊魚坐騎"
           }
         }
       }
@@ -1027,6 +1297,12 @@
             "value" : "ショクワンダー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "쇼크 원더"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1037,6 +1313,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Краскотрос"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "触手喷射"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "觸手噴射"
           }
         }
       }
@@ -1092,6 +1380,12 @@
             "value" : "トリプルトルネード"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "트리플 토네이도"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1102,6 +1396,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Тройной торнадо"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "三重龙卷风"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "三重龍捲風"
           }
         }
       }
@@ -1157,6 +1463,12 @@
             "value" : "ウルトラショット"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "울트라 샷"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1167,6 +1479,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Гранатомет «Трезубец»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "终极发射"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "終極發射"
           }
         }
       }
@@ -1222,6 +1546,12 @@
             "value" : "ウルトラハンコ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "울트라 스탬프"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1232,6 +1562,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Припечать"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "终极印章"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "終極印章"
           }
         }
       }

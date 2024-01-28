@@ -52,6 +52,12 @@
             "value" : "ジャンプビーコン"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "점프 비컨"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -62,6 +68,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Прыжковый маячок"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "跳跃信标"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "跳躍信標"
           }
         }
       }
@@ -117,6 +135,12 @@
             "value" : "カーリングボム"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "컬링 밤"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -127,6 +151,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Керлинг-бомба"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "冰壶炸弹"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "冰壺炸彈"
           }
         }
       }
@@ -182,6 +218,12 @@
             "value" : "タンサンボム"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "탄산 밤"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -192,6 +234,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Содовая бомба"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "碳酸炸弹"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "碳酸炸彈"
           }
         }
       }
@@ -247,6 +301,12 @@
             "value" : "クイックボム"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "퀵 밤"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -257,6 +317,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Разрывная бомба"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "快速炸弹"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "快速炸彈"
           }
         }
       }
@@ -312,6 +384,12 @@
             "value" : "ロボットボム"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "로봇 밤"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -322,6 +400,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Робобомба"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "机器人炸弹"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "機器人炸彈"
           }
         }
       }
@@ -377,6 +467,12 @@
             "value" : "スプラッシュボム"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스플래시 밤"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -387,6 +483,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Брызгающая бомба"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉炸弹"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉炸彈"
           }
         }
       }
@@ -442,6 +550,12 @@
             "value" : "キューバンボム"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "빨판 밤"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -452,6 +566,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Бомба на присоске"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "吸盘炸弹"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "吸盤炸彈"
           }
         }
       }
@@ -507,6 +633,12 @@
             "value" : "トーピード"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "토피도"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -517,6 +649,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Торпедная бомба"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "鱼雷"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "魚雷"
           }
         }
       }
@@ -572,6 +716,12 @@
             "value" : "ラインマーカー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "라인 마커"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -582,6 +732,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Углострел"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "标线器"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "標線器"
           }
         }
       }
@@ -637,6 +799,12 @@
             "value" : "ポイントセンサー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "포인트 센서"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -647,6 +815,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Маркер движения"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "定点侦测器"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "定點偵測器"
           }
         }
       }
@@ -702,6 +882,12 @@
             "value" : "ポイズンミスト"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "포이즌 미스트"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -712,6 +898,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Едкий туман"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "毒雾"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "毒霧"
           }
         }
       }
@@ -767,6 +965,12 @@
             "value" : "スプラッシュシールド"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스플래시 실드"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -777,6 +981,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Чернильный занавес"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉防护墙"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斯普拉防護牆"
           }
         }
       }
@@ -832,6 +1048,12 @@
             "value" : "スプリンクラー"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스프링클러"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -842,6 +1064,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Распылятор"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "洒墨器"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "灑墨器"
           }
         }
       }
@@ -897,6 +1131,12 @@
             "value" : "トラップ"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "트랩"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -907,6 +1147,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Мина"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "墨汁陷阱"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "墨汁陷阱"
           }
         }
       }
