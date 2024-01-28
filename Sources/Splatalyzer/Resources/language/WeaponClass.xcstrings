@@ -39,6 +39,12 @@
             "state" : "translated",
             "value" : "Blasters"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blaster"
+          }
         }
       }
     },
@@ -79,6 +85,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pinceaux"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pennelli"
           }
         }
       }
@@ -121,6 +133,12 @@
             "state" : "translated",
             "value" : "Fusils"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Armi a carica"
+          }
         }
       }
     },
@@ -161,6 +179,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Armes doubles"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Repolper"
           }
         }
       }
@@ -203,6 +227,12 @@
             "state" : "translated",
             "value" : "Rouleaux"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rulli"
+          }
         }
       }
     },
@@ -243,6 +273,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Éclatanas"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lame"
           }
         }
       }
@@ -285,6 +321,12 @@
             "state" : "translated",
             "value" : "Para-encres"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sparasole"
+          }
         }
       }
     },
@@ -325,6 +367,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lanceurs"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Armi a ripetizione"
           }
         }
       }
@@ -367,6 +415,12 @@
             "state" : "translated",
             "value" : "Seaux"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Secchiostri"
+          }
         }
       }
     },
@@ -408,6 +462,12 @@
             "state" : "translated",
             "value" : "Badigeonneurs"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splatling"
+          }
         }
       }
     },
@@ -448,6 +508,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Transperceurs"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calamarchi"
           }
         }
       }

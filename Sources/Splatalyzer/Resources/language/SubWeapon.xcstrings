@@ -39,6 +39,12 @@
             "state" : "translated",
             "value" : "Balise de saut"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trasferitore"
+          }
         }
       }
     },
@@ -79,6 +85,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bombe curling"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bomba curling"
           }
         }
       }
@@ -121,6 +133,12 @@
             "state" : "translated",
             "value" : "Bombe soda"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bomba a gassosa"
+          }
         }
       }
     },
@@ -161,6 +179,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bombe ballon"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Granata"
           }
         }
       }
@@ -203,6 +227,12 @@
             "state" : "translated",
             "value" : "Bombe robot"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Robo-bomba"
+          }
         }
       }
     },
@@ -243,6 +273,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bombe splash"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bomba splash"
           }
         }
       }
@@ -285,6 +321,12 @@
             "state" : "translated",
             "value" : "Bombe gluante"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appiccibomba"
+          }
         }
       }
     },
@@ -325,6 +367,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bentorpille"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Torpedinatore"
           }
         }
       }
@@ -367,6 +415,12 @@
             "state" : "translated",
             "value" : "Ricocheur"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sparalinee"
+          }
         }
       }
     },
@@ -407,6 +461,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Détecteur"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cimice"
           }
         }
       }
@@ -449,6 +509,12 @@
             "state" : "translated",
             "value" : "Brume toxique"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nebbia tossica"
+          }
         }
       }
     },
@@ -489,6 +555,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mur d'encre"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muro di colore"
           }
         }
       }
@@ -531,6 +603,12 @@
             "state" : "translated",
             "value" : "Fontaine"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spruzzatore"
+          }
         }
       }
     },
@@ -571,6 +649,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mine"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mina"
           }
         }
       }

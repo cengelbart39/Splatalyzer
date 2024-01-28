@@ -39,6 +39,12 @@
             "state" : "translated",
             "value" : "Feu de l'action"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Intensificazione"
+          }
         }
       }
     },
@@ -79,6 +85,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Come-back"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gran ritorno"
           }
         }
       }
@@ -121,6 +133,12 @@
             "state" : "translated",
             "value" : "Revanche"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rappresaglia"
+          }
         }
       }
     },
@@ -161,6 +179,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ultime sursaut"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splash finale"
           }
         }
       }
@@ -203,6 +227,12 @@
             "state" : "translated",
             "value" : "Retour perdant"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Castigo"
+          }
         }
       }
     },
@@ -243,6 +273,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bonus ×2"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Raddoppiatore"
           }
         }
       }
@@ -285,6 +321,12 @@
             "state" : "translated",
             "value" : "Course à pied"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velocità +"
+          }
         }
       }
     },
@@ -325,6 +367,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Levée d'encre"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recupero colore +"
           }
         }
       }
@@ -367,6 +415,12 @@
             "state" : "translated",
             "value" : "Aérodynamisme"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salti super e veloci"
+          }
         }
       }
     },
@@ -407,6 +461,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Encrémenteur (pr.)"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eco-colore princ."
           }
         }
       }
@@ -449,6 +509,12 @@
             "state" : "translated",
             "value" : "Justice"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tenacia"
+          }
         }
       }
     },
@@ -489,6 +555,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Démolition"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demolitore"
           }
         }
       }
@@ -531,6 +603,12 @@
             "state" : "translated",
             "value" : "Pieds au sec"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scarpe impermeabili"
+          }
         }
       }
     },
@@ -571,6 +649,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Baisse spéciale -"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riduzione speciale -"
           }
         }
       }
@@ -613,6 +697,12 @@
             "state" : "translated",
             "value" : "Sans temps morts"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il tempo è colore"
+          }
         }
       }
     },
@@ -653,6 +743,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Super roulade"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atterraggio stiloso"
           }
         }
       }
@@ -695,6 +791,12 @@
             "state" : "translated",
             "value" : "Jauge spéciale +"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ricarica speciale +"
+          }
         }
       }
     },
@@ -735,6 +837,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Arme spéciale +"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arma speciale +"
           }
         }
       }
@@ -777,6 +885,12 @@
             "state" : "translated",
             "value" : "Turbo-calamar"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velocità nuoto +"
+          }
         }
       }
     },
@@ -817,6 +931,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ninjalamar"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calamaro ninja"
           }
         }
       }
@@ -859,6 +979,12 @@
             "state" : "translated",
             "value" : "Chapeaux de roue"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Partenza a razzo"
+          }
         }
       }
     },
@@ -899,6 +1025,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Filtre à secondaires"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arma sec. impermeabile"
           }
         }
       }
@@ -941,6 +1073,12 @@
             "state" : "translated",
             "value" : "Encrémenteur (sec.)"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eco-colore second."
+          }
         }
       }
     },
@@ -981,6 +1119,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Arme secondaire +"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arma secondaria +"
           }
         }
       }
@@ -1023,6 +1167,12 @@
             "state" : "translated",
             "value" : "Réception réussie"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salto al buio"
+          }
         }
       }
     },
@@ -1063,6 +1213,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Encre thermique"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inchiostro termico"
           }
         }
       }

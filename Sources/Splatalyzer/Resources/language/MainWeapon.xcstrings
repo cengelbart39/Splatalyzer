@@ -39,6 +39,12 @@
             "state" : "translated",
             "value" : "Turboblaster"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blaster rapido"
+          }
         }
       }
     },
@@ -79,6 +85,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Turboblaster chic"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blaster rapido DX"
           }
         }
       }
@@ -121,6 +133,12 @@
             "state" : "translated",
             "value" : "Turboblaster pro"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blaster élite"
+          }
         }
       }
     },
@@ -161,6 +179,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Turboblaster pro chic"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blaster élite DX"
           }
         }
       }
@@ -203,6 +227,12 @@
             "state" : "translated",
             "value" : "Rafablaster"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blaster da mischia"
+          }
         }
       }
     },
@@ -243,6 +273,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rafablaster Néo"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blaster da mischia Neo"
           }
         }
       }
@@ -285,6 +321,12 @@
             "state" : "translated",
             "value" : "Éclablaster XL"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blaster a distanza"
+          }
         }
       }
     },
@@ -325,6 +367,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Éclablaster"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blaster"
           }
         }
       }
@@ -367,6 +415,12 @@
             "state" : "translated",
             "value" : "Éclablaster modifié"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blaster CM"
+          }
         }
       }
     },
@@ -407,6 +461,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "S-Blaster '92"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S-BLAST92"
           }
         }
       }
@@ -449,6 +509,12 @@
             "state" : "translated",
             "value" : "S-Blaster '91"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S-BLAST91"
+          }
         }
       }
     },
@@ -489,6 +555,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Proxiblaster"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blaster lunar"
           }
         }
       }
@@ -531,6 +603,12 @@
             "state" : "translated",
             "value" : "Proxiblaster Néo"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blaster lunar Neo"
+          }
         }
       }
     },
@@ -571,6 +649,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Épinceau écaïe"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tonnoretto"
           }
         }
       }
@@ -613,6 +697,12 @@
             "state" : "translated",
             "value" : "Épinceau écaïe nuancé"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tonnoretto master"
+          }
         }
       }
     },
@@ -653,6 +743,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Épinceau"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calamaravaggio"
           }
         }
       }
@@ -695,6 +791,12 @@
             "state" : "translated",
             "value" : "Épinceau nuancé"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calamaravaggio master"
+          }
         }
       }
     },
@@ -735,6 +837,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Épinceau brosse"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tinturicchio"
           }
         }
       }
@@ -777,6 +885,12 @@
             "state" : "translated",
             "value" : "Épinceau brosse nuancé"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tinturicchio master"
+          }
         }
       }
     },
@@ -817,6 +931,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Détubeur"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tintubator"
           }
         }
       }
@@ -859,6 +979,12 @@
             "state" : "translated",
             "value" : "Détubeur modifié"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tintubator CM"
+          }
         }
       }
     },
@@ -899,6 +1025,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bimbamboum Mk I"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bimbamboom 14-I"
           }
         }
       }
@@ -941,6 +1073,12 @@
             "state" : "translated",
             "value" : "Extraceur +"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tinter a carica 4K"
+          }
         }
       }
     },
@@ -981,6 +1119,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Extraceur + zoom"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tinter con mirino 4K"
           }
         }
       }
@@ -1023,6 +1167,12 @@
             "state" : "translated",
             "value" : "Concentraceur"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splatter a carica"
+          }
         }
       }
     },
@@ -1063,6 +1213,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Concentraceur E+F"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splatter a carica logo"
           }
         }
       }
@@ -1105,6 +1261,12 @@
             "state" : "translated",
             "value" : "Concentraceur zoom"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splatter con mirino"
+          }
         }
       }
     },
@@ -1145,6 +1307,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Concentraceur zoom E+F"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splatter con mirino logo"
           }
         }
       }
@@ -1187,6 +1355,12 @@
             "state" : "translated",
             "value" : "Crayon X - 5H"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lapis cecchino 5H"
+          }
         }
       }
     },
@@ -1227,6 +1401,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Crayon X - 5B"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lapis cecchino 5B"
           }
         }
       }
@@ -1269,6 +1449,12 @@
             "state" : "translated",
             "value" : "Décap'express Alpha"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalamarapid α"
+          }
         }
       }
     },
@@ -1309,6 +1495,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Double nettoyeur"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sweeper duplo"
           }
         }
       }
@@ -1351,6 +1543,12 @@
             "state" : "translated",
             "value" : "Double nettoyeur modifié"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sweeper duplo CM"
+          }
         }
       }
     },
@@ -1391,6 +1589,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Double Kelvin 525"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kelvin duplo 525"
           }
         }
       }
@@ -1433,6 +1637,12 @@
             "state" : "translated",
             "value" : "Double encreur"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Repolper duplo"
+          }
         }
       }
     },
@@ -1473,6 +1683,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Double encreur griffé"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Repolper duplo logo"
           }
         }
       }
@@ -1515,6 +1731,12 @@
             "state" : "translated",
             "value" : "Double moucheteur"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ripolpella duplo"
+          }
         }
       }
     },
@@ -1555,6 +1777,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Double moucheteur nuancé"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ripolpella duplo master"
           }
         }
       }
@@ -1597,6 +1825,12 @@
             "state" : "translated",
             "value" : "Double voltigeur noir"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moscarpino duplo nero"
+          }
         }
       }
     },
@@ -1637,6 +1871,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Double voltigeur blanc"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moscarpino duplo bianco"
           }
         }
       }
@@ -1679,6 +1919,12 @@
             "state" : "translated",
             "value" : "Rouleau carbone"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rullo di carbonio"
+          }
         }
       }
     },
@@ -1719,6 +1965,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rouleau carbone chic"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rullo di carbonio DX"
           }
         }
       }
@@ -1761,6 +2013,12 @@
             "state" : "translated",
             "value" : "Dynamo-rouleau"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rullo dinamo"
+          }
         }
       }
     },
@@ -1801,6 +2059,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dynamo-rouleau tesla"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rullo dinamo dorato"
           }
         }
       }
@@ -1843,6 +2107,12 @@
             "state" : "translated",
             "value" : "Flexi-rouleau"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flexi-rullo"
+          }
         }
       }
     },
@@ -1883,6 +2153,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rouleau"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rullo splat"
           }
         }
       }
@@ -1925,6 +2201,12 @@
             "state" : "translated",
             "value" : "Rouleau griffé"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rullo splat logo"
+          }
         }
       }
     },
@@ -1965,6 +2247,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rouleau large"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ampiorullo"
           }
         }
       }
@@ -2007,6 +2295,12 @@
             "state" : "translated",
             "value" : "Rouleau large Xpress"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ampiorullo Express"
+          }
         }
       }
     },
@@ -2047,6 +2341,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Éclatana Doto"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tergilama"
           }
         }
       }
@@ -2089,6 +2389,12 @@
             "state" : "translated",
             "value" : "Éclatana Doto chic"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tergilama DX"
+          }
         }
       }
     },
@@ -2129,6 +2435,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Éclatana d'estampe"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splattalama"
           }
         }
       }
@@ -2171,6 +2483,12 @@
             "state" : "translated",
             "value" : "Éclatana d'estampe Néo"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splattalama Neo"
+          }
         }
       }
     },
@@ -2211,6 +2529,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Para-encre espion"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bombrello"
           }
         }
       }
@@ -2253,6 +2577,12 @@
             "state" : "translated",
             "value" : "Para-encre espion Sorella"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bombrello Solerra"
+          }
         }
       }
     },
@@ -2293,6 +2623,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Para-encre"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sparasole"
           }
         }
       }
@@ -2335,6 +2671,12 @@
             "state" : "translated",
             "value" : "Para-encre Sorella"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sparasole Solerra"
+          }
         }
       }
     },
@@ -2375,6 +2717,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Para-encre XL"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sparatenda"
           }
         }
       }
@@ -2417,6 +2765,12 @@
             "state" : "translated",
             "value" : "Para-encre XL Sorella"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sparatenda Solerra"
+          }
         }
       }
     },
@@ -2457,6 +2811,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aérogun"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aerografo"
           }
         }
       }
@@ -2499,6 +2859,12 @@
             "state" : "translated",
             "value" : "Aérogun premium"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aerografo élite"
+          }
         }
       }
     },
@@ -2539,6 +2905,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Liquidateur pro"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splasher élite"
           }
         }
       }
@@ -2581,6 +2953,12 @@
             "state" : "translated",
             "value" : "Liquidateur pro griffé"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splasher élite logo"
+          }
         }
       }
     },
@@ -2621,6 +2999,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Liquidateur Jr."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sparacolore recluta"
           }
         }
       }
@@ -2663,6 +3047,12 @@
             "state" : "translated",
             "value" : "Liquidateur Sr."
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sparacolore logo"
+          }
         }
       }
     },
@@ -2703,6 +3093,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Compresseur"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Strizzer"
           }
         }
       }
@@ -2745,6 +3141,12 @@
             "state" : "translated",
             "value" : "Compresseur alu"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Strizzer B"
+          }
         }
       }
     },
@@ -2785,6 +3187,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Calibre 2000"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calibro 2000"
           }
         }
       }
@@ -2827,6 +3235,12 @@
             "state" : "translated",
             "value" : "Calibre 3000"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calibro 3000"
+          }
         }
       }
     },
@@ -2867,6 +3281,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Calibre 3000 chic"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calibro 3000 DX"
           }
         }
       }
@@ -2909,6 +3329,12 @@
             "state" : "translated",
             "value" : "Nettoyeur XL"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sweeper"
+          }
         }
       }
     },
@@ -2949,6 +3375,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nettoyeur XL modifié"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sweeper CM"
           }
         }
       }
@@ -2991,6 +3423,12 @@
             "state" : "translated",
             "value" : "Liquidateur"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splasher"
+          }
         }
       }
     },
@@ -3031,6 +3469,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Liquidateur griffé"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splasher logo"
           }
         }
       }
@@ -3073,6 +3517,12 @@
             "state" : "translated",
             "value" : "Lanceur héroïque (réplique)"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pistola élite replica"
+          }
         }
       }
     },
@@ -3113,6 +3563,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Marqueur léger"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marker d'assalto"
           }
         }
       }
@@ -3155,6 +3611,12 @@
             "state" : "translated",
             "value" : "Marqueur léger Néo"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marker d'assalto Neo"
+          }
         }
       }
     },
@@ -3195,6 +3657,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lanceur spatial"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splasher Nova"
           }
         }
       }
@@ -3237,6 +3705,12 @@
             "state" : "translated",
             "value" : "Lanceur spatial Aroz"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splasher Nova Annak"
+          }
         }
       }
     },
@@ -3277,6 +3751,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "N-ZAP 85"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N-ZAP85"
           }
         }
       }
@@ -3319,6 +3799,12 @@
             "state" : "translated",
             "value" : "N-ZAP 89"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N-ZAP89"
+          }
         }
       }
     },
@@ -3359,6 +3845,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Marqueur lourd"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marker"
           }
         }
       }
@@ -3401,6 +3893,12 @@
             "state" : "translated",
             "value" : "Marqueur lourd Néo"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marker Neo"
+          }
         }
       }
     },
@@ -3441,6 +3939,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Arroseur lourd"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Triplete"
           }
         }
       }
@@ -3483,6 +3987,12 @@
             "state" : "translated",
             "value" : "Arroseur lourd Cétacé"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Triplete D"
+          }
         }
       }
     },
@@ -3523,6 +4033,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Arroseur léger"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Triplete compatto"
           }
         }
       }
@@ -3565,6 +4081,12 @@
             "state" : "translated",
             "value" : "Arroseur léger Cétacé"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Triplete compatto D"
+          }
         }
       }
     },
@@ -3605,6 +4127,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bassineur"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Secchiostro vasca"
           }
         }
       }
@@ -3647,6 +4175,12 @@
             "state" : "translated",
             "value" : "Bassineur chic"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Secchiostro vasca DX"
+          }
         }
       }
     },
@@ -3687,6 +4221,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dépoteur"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Secchiostro triplo"
           }
         }
       }
@@ -3729,6 +4269,12 @@
             "state" : "translated",
             "value" : "Dépoteur nuancé"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Secchiostro triplo master"
+          }
         }
       }
     },
@@ -3769,6 +4315,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Seau S-Horreur"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Secchiapavimenti"
           }
         }
       }
@@ -3811,6 +4363,12 @@
             "state" : "translated",
             "value" : "Encrifugeur"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Secchiostro centrifuga"
+          }
         }
       }
     },
@@ -3851,6 +4409,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Encrifugeur Néo"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Secchiostro centrifuga Neo"
           }
         }
       }
@@ -3893,6 +4457,12 @@
             "state" : "translated",
             "value" : "Seauceur"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Secchiostro"
+          }
         }
       }
     },
@@ -3933,6 +4503,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Seauceur chic"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Secchiostro DX"
           }
         }
       }
@@ -3975,6 +4551,12 @@
             "state" : "translated",
             "value" : "Détoneur"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Termosecchiostro"
+          }
         }
       }
     },
@@ -4015,6 +4597,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Badigeonneur stylo"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tetrapenna"
           }
         }
       }
@@ -4057,6 +4645,12 @@
             "state" : "translated",
             "value" : "Badigeonneur stylo nuancé"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tetrapenna master"
+          }
         }
       }
     },
@@ -4097,6 +4691,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Exteinteur"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idrante"
           }
         }
       }
@@ -4139,6 +4739,12 @@
             "state" : "translated",
             "value" : "Correcteur"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splatling a pennarelli"
+          }
         }
       }
     },
@@ -4179,6 +4785,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Badigeonneur XS"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mini splatling"
           }
         }
       }
@@ -4221,6 +4833,12 @@
             "state" : "translated",
             "value" : "Badigeonneur XS griffé"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mini splatling logo"
+          }
         }
       }
     },
@@ -4258,6 +4876,12 @@
           }
         },
         "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nautilus 47"
+          }
+        },
+        "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nautilus 47"
@@ -4303,6 +4927,12 @@
             "state" : "translated",
             "value" : "Badigeonneur"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splatling a tanica"
+          }
         }
       }
     },
@@ -4343,6 +4973,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Badigeonneur chic"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splatling a tanica DX"
           }
         }
       }
@@ -4385,6 +5021,12 @@
             "state" : "translated",
             "value" : "Trisperceur"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tri-calamarco"
+          }
         }
       }
     },
@@ -4425,6 +5067,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Trisperceur Abysma"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tri-calamarco Maremont"
           }
         }
       }
@@ -4467,6 +5115,12 @@
             "state" : "translated",
             "value" : "Coralux 450"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ARCO-RAL 450"
+          }
         }
       }
     },
@@ -4507,6 +5161,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Coralux 450 chic"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ARCO-RAL 450 DX"
           }
         }
       }

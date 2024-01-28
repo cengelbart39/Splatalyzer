@@ -39,6 +39,12 @@
             "state" : "translated",
             "value" : "Aspirencre"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vampinchiostro"
+          }
         }
       }
     },
@@ -79,6 +85,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kraken royal"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kraken reale"
           }
         }
       }
@@ -121,6 +133,12 @@
             "state" : "translated",
             "value" : "Crabe d'assaut"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Granchio armato"
+          }
         }
       }
     },
@@ -161,6 +179,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Barrière barbouillée"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cortina ingannevole"
           }
         }
       }
@@ -203,6 +227,12 @@
             "state" : "translated",
             "value" : "Districool"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rinfrigorente"
+          }
         }
       }
     },
@@ -243,6 +273,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Multi-leurres"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diversivo esplosivo"
           }
         }
       }
@@ -285,6 +321,12 @@
             "state" : "translated",
             "value" : "Super bouclier"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gran bolla scudo"
+          }
         }
       }
     },
@@ -325,6 +367,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pluie d'encre"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pioggia di colore"
           }
         }
       }
@@ -367,6 +415,12 @@
             "state" : "translated",
             "value" : "Chromo-jet"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jet splat"
+          }
         }
       }
     },
@@ -407,6 +461,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Haut-perceur 5.1"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tintofono 5.1"
           }
         }
       }
@@ -449,6 +509,12 @@
             "state" : "translated",
             "value" : "Multi-missile"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lanciarazzi"
+          }
         }
       }
     },
@@ -489,6 +555,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jolizator"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Granbotto"
           }
         }
       }
@@ -531,6 +603,12 @@
             "state" : "translated",
             "value" : "Triple choc chromatique"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Triplo vernischianto"
+          }
         }
       }
     },
@@ -571,6 +649,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sonar paf"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonar esplosivo"
           }
         }
       }
@@ -613,6 +697,12 @@
             "state" : "translated",
             "value" : "Cavalsquale"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Motosqualo"
+          }
         }
       }
     },
@@ -653,6 +743,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Super Mollusque"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Molluscatto"
           }
         }
       }
@@ -695,6 +791,12 @@
             "state" : "translated",
             "value" : "Trimissile tornade"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Triplo tornado"
+          }
         }
       }
     },
@@ -736,6 +838,12 @@
             "state" : "translated",
             "value" : "Lance-rafales"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ultraturbinator"
+          }
         }
       }
     },
@@ -776,6 +884,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ultra-tamponneur"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mega timbro"
           }
         }
       }
