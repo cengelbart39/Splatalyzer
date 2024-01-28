@@ -51,6 +51,12 @@
             "state" : "translated",
             "value" : "Springschotel"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Прыжковый маячок"
+          }
         }
       }
     },
@@ -103,6 +109,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Curlingbom"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Керлинг-бомба"
           }
         }
       }
@@ -157,6 +169,12 @@
             "state" : "translated",
             "value" : "Bomblikje"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Содовая бомба"
+          }
         }
       }
     },
@@ -209,6 +227,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ballonbom"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Разрывная бомба"
           }
         }
       }
@@ -263,6 +287,12 @@
             "state" : "translated",
             "value" : "Robobom"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Робобомба"
+          }
         }
       }
     },
@@ -315,6 +345,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Klodderbom"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Брызгающая бомба"
           }
         }
       }
@@ -369,6 +405,12 @@
             "state" : "translated",
             "value" : "Kleefbom"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бомба на присоске"
+          }
         }
       }
     },
@@ -421,6 +463,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Torpedobom"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Торпедная бомба"
           }
         }
       }
@@ -475,6 +523,12 @@
             "state" : "translated",
             "value" : "Ketskogel"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Углострел"
+          }
         }
       }
     },
@@ -527,6 +581,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Detector"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Маркер движения"
           }
         }
       }
@@ -581,6 +641,12 @@
             "state" : "translated",
             "value" : "Gifmist"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Едкий туман"
+          }
         }
       }
     },
@@ -633,6 +699,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Inktgordijn"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чернильный занавес"
           }
         }
       }
@@ -687,6 +759,12 @@
             "state" : "translated",
             "value" : "Inktsprinkler"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Распылятор"
+          }
         }
       }
     },
@@ -739,6 +817,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Inktmijn"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мина"
           }
         }
       }

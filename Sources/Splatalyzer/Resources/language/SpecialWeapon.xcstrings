@@ -51,6 +51,12 @@
             "state" : "translated",
             "value" : "Inktdief"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Краскосос"
+          }
         }
       }
     },
@@ -103,6 +109,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Monstermorfose"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тираннокракен"
           }
         }
       }
@@ -157,6 +169,12 @@
             "state" : "translated",
             "value" : "Krabbentank"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Кработанк"
+          }
         }
       }
     },
@@ -209,6 +227,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "PLED-scherm"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Заливной барьер"
           }
         }
       }
@@ -263,6 +287,12 @@
             "state" : "translated",
             "value" : "Reddingsbar"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тоникулер"
+          }
         }
       }
     },
@@ -315,6 +345,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Voorschutter"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Суперпрыжатор"
           }
         }
       }
@@ -369,6 +405,12 @@
             "state" : "translated",
             "value" : "Joekelschild"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Шарощит"
+          }
         }
       }
     },
@@ -421,6 +463,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spetterbui"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Туча краски"
           }
         }
       }
@@ -475,6 +523,12 @@
             "state" : "translated",
             "value" : "Inktjet"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Красколет"
+          }
         }
       }
     },
@@ -527,6 +581,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Megalofoon 5.1"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мегалофон 5.1"
           }
         }
       }
@@ -581,6 +641,12 @@
             "state" : "translated",
             "value" : "Spetterraketten"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Каракатница"
+          }
         }
       }
     },
@@ -633,6 +699,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Coole bom"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Йо-хо-плюхер"
           }
         }
       }
@@ -687,6 +759,12 @@
             "state" : "translated",
             "value" : "Ultralanding"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тройной мегаплюх"
+          }
         }
       }
     },
@@ -739,6 +817,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Golfbeker"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Волноплюхер"
           }
         }
       }
@@ -793,6 +877,12 @@
             "state" : "translated",
             "value" : "Opblaashaai"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мотокула"
+          }
         }
       }
     },
@@ -845,6 +935,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tentakabel"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Краскотрос"
           }
         }
       }
@@ -899,6 +995,12 @@
             "state" : "translated",
             "value" : "Tri-tornado"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тройной торнадо"
+          }
         }
       }
     },
@@ -952,6 +1054,12 @@
             "state" : "translated",
             "value" : "Trizooka"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Гранатомет «Трезубец»"
+          }
         }
       }
     },
@@ -1004,6 +1112,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ultrastempel"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Припечать"
           }
         }
       }

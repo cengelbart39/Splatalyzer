@@ -51,6 +51,12 @@
             "state" : "translated",
             "value" : "Blasters"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бластеры"
+          }
         }
       }
     },
@@ -103,6 +109,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kwasten"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Кисти"
           }
         }
       }
@@ -157,6 +169,12 @@
             "state" : "translated",
             "value" : "Laders"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нагнетатели"
+          }
         }
       }
     },
@@ -209,6 +227,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dubbelknallers"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Спуртометы"
           }
         }
       }
@@ -263,6 +287,12 @@
             "state" : "translated",
             "value" : "Rollers"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Валики"
+          }
         }
       }
     },
@@ -315,6 +345,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zwiepers"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сплат-катаны"
           }
         }
       }
@@ -369,6 +405,12 @@
             "state" : "translated",
             "value" : "Plenzers"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сплат-зонты"
+          }
         }
       }
     },
@@ -421,6 +463,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spetters"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Краскоматы"
           }
         }
       }
@@ -475,6 +523,12 @@
             "state" : "translated",
             "value" : "Morsers"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ведроганы"
+          }
         }
       }
     },
@@ -528,6 +582,12 @@
             "state" : "translated",
             "value" : "Spetlingen"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Брызгометы"
+          }
         }
       }
     },
@@ -580,6 +640,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spanners"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тетиваторы"
           }
         }
       }

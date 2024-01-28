@@ -51,6 +51,12 @@
             "state" : "translated",
             "value" : "Actie-assistentie"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ультраудар"
+          }
         }
       }
     },
@@ -103,6 +109,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Opfrisser"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ответный удар"
           }
         }
       }
@@ -157,6 +169,12 @@
             "state" : "translated",
             "value" : "Revanche"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вендетта"
+          }
         }
       }
     },
@@ -209,6 +227,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Eindsprint"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Финишный спурт"
           }
         }
       }
@@ -263,6 +287,12 @@
             "state" : "translated",
             "value" : "Repercussie"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Кара"
+          }
         }
       }
     },
@@ -315,6 +345,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Verdubbelaar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дупликатор"
           }
         }
       }
@@ -369,6 +405,12 @@
             "state" : "translated",
             "value" : "Hardloper"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Спринтер"
+          }
         }
       }
     },
@@ -421,6 +463,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Inktvulling"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Быстрый баллон"
           }
         }
       }
@@ -475,6 +523,12 @@
             "state" : "translated",
             "value" : "Turbosprong"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Суперпрыгун"
+          }
         }
       }
     },
@@ -527,6 +581,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hoofdspaarder"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Основной баллон X"
           }
         }
       }
@@ -581,6 +641,12 @@
             "state" : "translated",
             "value" : "Volharding"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Компенсатор"
+          }
         }
       }
     },
@@ -633,6 +699,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sloper"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Демонтажник"
           }
         }
       }
@@ -687,6 +759,12 @@
             "state" : "translated",
             "value" : "Inkttolerantie"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Краскостойкость"
+          }
         }
       }
     },
@@ -739,6 +817,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Speciaalspaarder"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Особый резерв"
           }
         }
       }
@@ -793,6 +877,12 @@
             "state" : "translated",
             "value" : "Comeback"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Феникс"
+          }
         }
       }
     },
@@ -845,6 +935,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rolmodel"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Акробат"
           }
         }
       }
@@ -899,6 +995,12 @@
             "state" : "translated",
             "value" : "Speciaallader"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Особый насос"
+          }
         }
       }
     },
@@ -951,6 +1053,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Specialist"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Особый подход"
           }
         }
       }
@@ -1005,6 +1113,12 @@
             "state" : "translated",
             "value" : "Zwemdiploma"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Плавунец"
+          }
         }
       }
     },
@@ -1057,6 +1171,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ninja-inktvis"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мимикрия"
           }
         }
       }
@@ -1111,6 +1231,12 @@
             "state" : "translated",
             "value" : "Vliegende start"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Стартовый спурт"
+          }
         }
       }
     },
@@ -1163,6 +1289,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Subdemper"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Стойкость запаса"
           }
         }
       }
@@ -1217,6 +1349,12 @@
             "state" : "translated",
             "value" : "Subspaarder"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Запасной баллон X"
+          }
         }
       }
     },
@@ -1269,6 +1407,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Subtopper"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Про-Запас"
           }
         }
       }
@@ -1323,6 +1467,12 @@
             "state" : "translated",
             "value" : "Sluipsprong"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Десант"
+          }
         }
       }
     },
@@ -1375,6 +1525,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Markeerstift"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Клеймо"
           }
         }
       }

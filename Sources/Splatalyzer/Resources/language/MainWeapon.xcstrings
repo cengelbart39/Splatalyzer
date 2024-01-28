@@ -51,6 +51,12 @@
             "state" : "translated",
             "value" : "Flitsblaster"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бластермат"
+          }
         }
       }
     },
@@ -103,6 +109,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Flitsblaster Deco"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бластермат «Деко»"
           }
         }
       }
@@ -157,6 +169,12 @@
             "state" : "translated",
             "value" : "Flitsblaster Pro"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бластермат ПРО"
+          }
         }
       }
     },
@@ -209,6 +227,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Flitsblaster Pro Deco"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бластермат ПРО «Деко»"
           }
         }
       }
@@ -263,6 +287,12 @@
             "state" : "translated",
             "value" : "Knalblaster"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Контрабластер"
+          }
         }
       }
     },
@@ -315,6 +345,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Knalblaster Neo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Контрабластер «Нео»"
           }
         }
       }
@@ -369,6 +405,12 @@
             "state" : "translated",
             "value" : "Teleblaster"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дальнобластер"
+          }
         }
       }
     },
@@ -421,6 +463,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Klodderblaster"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бластер"
           }
         }
       }
@@ -475,6 +523,12 @@
             "state" : "translated",
             "value" : "Gemodde Klodderblaster"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бластер «Понт»"
+          }
         }
       }
     },
@@ -527,6 +581,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "S-BLAST '92"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S-BLAST 92"
           }
         }
       }
@@ -581,6 +641,12 @@
             "state" : "translated",
             "value" : "S-BLAST '91"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S-BLAST 91"
+          }
         }
       }
     },
@@ -633,6 +699,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lunablaster"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Лунобластер"
           }
         }
       }
@@ -687,6 +759,12 @@
             "state" : "translated",
             "value" : "Lunablaster Neo"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Лунобластер «Нео»"
+          }
         }
       }
     },
@@ -739,6 +817,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kwistkwast"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Веерокисть «Плюхассо»"
           }
         }
       }
@@ -793,6 +877,12 @@
             "state" : "translated",
             "value" : "Kwistkwast Nouveau"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Веерокисть «НуВо»"
+          }
         }
       }
     },
@@ -845,6 +935,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Inktkwast"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Кисть"
           }
         }
       }
@@ -899,6 +995,12 @@
             "state" : "translated",
             "value" : "Inktkwast Nouveau"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Кисть «НуВо»"
+          }
         }
       }
     },
@@ -951,6 +1053,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Octokwast"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Арт-кисть"
           }
         }
       }
@@ -1005,6 +1113,12 @@
             "state" : "translated",
             "value" : "Octokwast Nouveau"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Арт-кисть «НуВо»"
+          }
         }
       }
     },
@@ -1057,6 +1171,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spetbuizer"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Трубастер"
           }
         }
       }
@@ -1111,6 +1231,12 @@
             "state" : "translated",
             "value" : "Gemodde Spetbuizer"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Трубастер «Понт»"
+          }
         }
       }
     },
@@ -1163,6 +1289,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bamboem 14-A"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бамбух 14-I"
           }
         }
       }
@@ -1217,6 +1349,12 @@
             "state" : "translated",
             "value" : "E-liter 4K"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Э-литр 95"
+          }
         }
       }
     },
@@ -1269,6 +1407,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "E-liter 4K met vizier"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Снайп-э-литр 95"
           }
         }
       }
@@ -1323,6 +1467,12 @@
             "state" : "translated",
             "value" : "Bloplader"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сплатган"
+          }
         }
       }
     },
@@ -1375,6 +1525,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zekkofin Bloplader"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сплатган «ЙожкоТюр»"
           }
         }
       }
@@ -1429,6 +1585,12 @@
             "state" : "translated",
             "value" : "Schelpschutter"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Снайпокрас"
+          }
         }
       }
     },
@@ -1481,6 +1643,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zekkofin Schelpschutter"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Снайпокрас «ЙожкоТюр»"
           }
         }
       }
@@ -1535,6 +1703,12 @@
             "state" : "translated",
             "value" : "Schotlood 5H"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Патрондаш 5Т"
+          }
         }
       }
     },
@@ -1587,6 +1761,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Schotlood 5B"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Патрондаш 5М"
           }
         }
       }
@@ -1641,6 +1821,12 @@
             "state" : "translated",
             "value" : "Octopoets"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Стиратель"
+          }
         }
       }
     },
@@ -1693,6 +1879,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dubbelplonzers"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Спурт-плескари"
           }
         }
       }
@@ -1747,6 +1939,12 @@
             "state" : "translated",
             "value" : "Gemodde Dubbelplonzers"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Спурт-плескари «Понт»"
+          }
         }
       }
     },
@@ -1799,6 +1997,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kelvin 525"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Термоплюхи 525"
           }
         }
       }
@@ -1853,6 +2057,12 @@
             "state" : "translated",
             "value" : "Dubbelknallers"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Спуртометы"
+          }
         }
       }
     },
@@ -1905,6 +2115,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Enperry Dubbelknallers"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Спуртометы «К.К.»"
           }
         }
       }
@@ -1959,6 +2175,12 @@
             "state" : "translated",
             "value" : "Dubbelspatters"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Импрессиометы"
+          }
         }
       }
     },
@@ -2011,6 +2233,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dubbelspatters Nouveau"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Импрессиометы «НуВо»"
           }
         }
       }
@@ -2065,6 +2293,12 @@
             "state" : "translated",
             "value" : "Quadhoppers Zwart"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Черные спуртокроссы"
+          }
         }
       }
     },
@@ -2117,6 +2351,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Quadhoppers Wit"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Белые спуртокроссы"
           }
         }
       }
@@ -2171,6 +2411,12 @@
             "state" : "translated",
             "value" : "Carbonroller"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Валик ЛАЙТ"
+          }
         }
       }
     },
@@ -2223,6 +2469,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Carbonroller Deco"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Валик ЛАЙТ «Деко»"
           }
         }
       }
@@ -2277,6 +2529,12 @@
             "state" : "translated",
             "value" : "Dynamoroller"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мотовалик"
+          }
         }
       }
     },
@@ -2329,6 +2587,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gouden Dynamoroller"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мотовалик VIP"
           }
         }
       }
@@ -2383,6 +2647,12 @@
             "state" : "translated",
             "value" : "Flexroller"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Омнивалик"
+          }
         }
       }
     },
@@ -2435,6 +2705,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Klodderroller"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сплат-валик"
           }
         }
       }
@@ -2489,6 +2765,12 @@
             "state" : "translated",
             "value" : "Krak-On Klodderroller"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сплат-валик «Кра-Кен»"
+          }
         }
       }
     },
@@ -2541,6 +2823,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Breedroller"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Макси-валик"
           }
         }
       }
@@ -2595,6 +2883,12 @@
             "state" : "translated",
             "value" : "Breedroller Impuls"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Макси-валик «Экспресс»"
+          }
         }
       }
     },
@@ -2647,6 +2941,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wisserbladzwieper"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cплат-дворник"
           }
         }
       }
@@ -2701,6 +3001,12 @@
             "state" : "translated",
             "value" : "Wisserbladzwieper Deco"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cплат-дворник «Деко»"
+          }
         }
       }
     },
@@ -2753,6 +3059,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stempelzwieper"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сплат-печатель"
           }
         }
       }
@@ -2807,6 +3119,12 @@
             "state" : "translated",
             "value" : "Stempelzwieper Neo"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сплат-печатель «Нео»"
+          }
         }
       }
     },
@@ -2859,6 +3177,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Paraplenzer"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Шпионский зонт"
           }
         }
       }
@@ -2913,6 +3237,12 @@
             "state" : "translated",
             "value" : "Sorella Paraplenzer"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Шпионский зонт «Родиччи»"
+          }
         }
       }
     },
@@ -2965,6 +3295,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Plenzer"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сплат-зонт"
           }
         }
       }
@@ -3019,6 +3355,12 @@
             "state" : "translated",
             "value" : "Sorella Plenzer"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Зонтган «Родиччи»"
+          }
         }
       }
     },
@@ -3071,6 +3413,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kampeerplenzer"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Зонтент"
           }
         }
       }
@@ -3125,6 +3473,12 @@
             "state" : "translated",
             "value" : "Sorella Kampeerplenzer"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Зонтент «Родиччи»"
+          }
         }
       }
     },
@@ -3177,6 +3531,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kladderwerper"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Аэроспрей"
           }
         }
       }
@@ -3231,6 +3591,12 @@
             "state" : "translated",
             "value" : "Kladderwerper Pro"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Аэроспрей ДЕЛЮКС"
+          }
         }
       }
     },
@@ -3283,6 +3649,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Superspetter Pro"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Каплестрел ПРО"
           }
         }
       }
@@ -3337,6 +3709,12 @@
             "state" : "translated",
             "value" : "Forge Superspetter Pro"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Каплестрел ПРО «Блиц»"
+          }
         }
       }
     },
@@ -3389,6 +3767,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Superspetter jr."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Каплестрел-У"
           }
         }
       }
@@ -3443,6 +3827,12 @@
             "state" : "translated",
             "value" : "Gemodde Superspetter jr."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Каплестрел-У 2.0"
+          }
         }
       }
     },
@@ -3495,6 +3885,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Floeper"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бутылятор"
           }
         }
       }
@@ -3549,6 +3945,12 @@
             "state" : "translated",
             "value" : "Foil Floeper"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бутылятор «Блеск»"
+          }
         }
       }
     },
@@ -3601,6 +4003,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : ".52 Kaliter"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Струевик .52"
           }
         }
       }
@@ -3655,6 +4063,12 @@
             "state" : "translated",
             "value" : ".96 Kaliter"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Струевик .96"
+          }
         }
       }
     },
@@ -3707,6 +4121,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : ".96 Kaliter Deco"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Струевик .96 «Деко»"
           }
         }
       }
@@ -3761,6 +4181,12 @@
             "state" : "translated",
             "value" : "Straalplonzer"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Плескарь"
+          }
         }
       }
     },
@@ -3813,6 +4239,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gemodde Straalplonzer"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Плескарь «Понт»"
           }
         }
       }
@@ -3867,6 +4299,12 @@
             "state" : "translated",
             "value" : "Superspetter"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Каплестрел"
+          }
         }
       }
     },
@@ -3919,6 +4357,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tentatek Superspetter"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Каплестрел «Щуччи»"
           }
         }
       }
@@ -3973,6 +4417,12 @@
             "state" : "translated",
             "value" : "Heldenspetter (replica)"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Каплестрел героя (клон)"
+          }
         }
       }
     },
@@ -4025,6 +4475,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spetterspuit"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Плюхомет"
           }
         }
       }
@@ -4079,6 +4535,12 @@
             "state" : "translated",
             "value" : "Spetterspuit Neo"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Плюхомет «Нео»"
+          }
         }
       }
     },
@@ -4131,6 +4593,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Superspetter Nova"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Каплестрел НОВА"
           }
         }
       }
@@ -4185,6 +4653,12 @@
             "state" : "translated",
             "value" : "Annaki Superspetter Nova"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Каплестрел НОВА-ПАНК"
+          }
         }
       }
     },
@@ -4237,6 +4711,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "N-ZAP '85"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N-ZAP 85"
           }
         }
       }
@@ -4291,6 +4771,12 @@
             "state" : "translated",
             "value" : "N-ZAP '89"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N-ZAP 89"
+          }
         }
       }
     },
@@ -4343,6 +4829,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spettertuit"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Плюхотрон"
           }
         }
       }
@@ -4397,6 +4889,12 @@
             "state" : "translated",
             "value" : "Spettertuit Neo"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Плюхотрон «Нео»"
+          }
         }
       }
     },
@@ -4449,6 +4947,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "H-3 Langsnuit"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тяжелый каплетрон"
           }
         }
       }
@@ -4503,6 +5007,12 @@
             "state" : "translated",
             "value" : "H-3 Langsnuit D"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тяжелый каплетрон 2.0"
+          }
         }
       }
     },
@@ -4555,6 +5065,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "L-3 Stompsnuit"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Каплетрон-компакт"
           }
         }
       }
@@ -4609,6 +5125,12 @@
             "state" : "translated",
             "value" : "L-3 Stompsnuit D"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Каплетрон-компакт 2.0"
+          }
         }
       }
     },
@@ -4661,6 +5183,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spatkuip"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваннаган"
           }
         }
       }
@@ -4715,6 +5243,12 @@
             "state" : "translated",
             "value" : "Spatkuip Deco"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваннаган «Деко»"
+          }
         }
       }
     },
@@ -4767,6 +5301,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Triomorser"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ведроган 3 в 1"
           }
         }
       }
@@ -4821,6 +5361,12 @@
             "state" : "translated",
             "value" : "Triomorser Nouveau"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ведроган 3 в 1 «НуВо»"
+          }
         }
       }
     },
@@ -4873,6 +5419,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wringmorser"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отжиматель"
           }
         }
       }
@@ -4927,6 +5479,12 @@
             "state" : "translated",
             "value" : "Klotstrommel"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Центрифугер"
+          }
         }
       }
     },
@@ -4979,6 +5537,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Klotstrommel Neo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Центрифугер «Нео»"
           }
         }
       }
@@ -5033,6 +5597,12 @@
             "state" : "translated",
             "value" : "Morser"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ведроган"
+          }
         }
       }
     },
@@ -5085,6 +5655,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Morser Deco"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ведроган «Деко»"
           }
         }
       }
@@ -5139,6 +5715,12 @@
             "state" : "translated",
             "value" : "Kliederkachel"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Шпарган"
+          }
         }
       }
     },
@@ -5191,6 +5773,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stylospetling"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Кугельшрайбер"
           }
         }
       }
@@ -5245,6 +5833,12 @@
             "state" : "translated",
             "value" : "Stylospetling Nouveau"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Кугельшрайбер «НуВо»"
+          }
         }
       }
     },
@@ -5297,6 +5891,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Blusling"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Брызгомет «Горыныч»"
           }
         }
       }
@@ -5351,6 +5951,12 @@
             "state" : "translated",
             "value" : "Examinator"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Брызгомет XL «Корректор»"
+          }
         }
       }
     },
@@ -5403,6 +6009,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mini-Spetling"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Брызгомет-М"
           }
         }
       }
@@ -5457,6 +6069,12 @@
             "state" : "translated",
             "value" : "Zink Mini-Spetling"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Брызгомет-М «Шпротус»"
+          }
         }
       }
     },
@@ -5509,6 +6127,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nautilus 47"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Наутилус-47"
           }
         }
       }
@@ -5563,6 +6187,12 @@
             "state" : "translated",
             "value" : "Spetling"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Брызгомет XL"
+          }
         }
       }
     },
@@ -5615,6 +6245,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spetling Deco"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Брызгомет XL «Деко»"
           }
         }
       }
@@ -5669,6 +6305,12 @@
             "state" : "translated",
             "value" : "Triospanner"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тритиватор"
+          }
         }
       }
     },
@@ -5721,6 +6363,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Inkline Triospanner"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тритиватор «Коллаб»"
           }
         }
       }
@@ -5775,6 +6423,12 @@
             "state" : "translated",
             "value" : "RIF-LEX 450"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "КО-РАЛЛ 450"
+          }
         }
       }
     },
@@ -5827,6 +6481,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "RIF-LEX 450 Deco"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "КО-РАЛЛ 450 «Деко»"
           }
         }
       }
