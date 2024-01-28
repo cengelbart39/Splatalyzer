@@ -10,7 +10,7 @@ import XCTest
 
 final class SplatlingDecodingTests: XCTestCase {
 
-    let service = JSONServiceForTests()
+    let service = JSONService()
 
     func test_BallpointSplatling_decode_noThrows() {
         let fileName = "WeaponSpinnerDownpour.game__GameParameterTable"

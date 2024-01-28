@@ -10,7 +10,7 @@ import XCTest
 
 final class SplatanaDecodingTests: XCTestCase {
     
-    let service = JSONServiceForTests()
+    let service = JSONService()
     
     func test_GrizzcoSplatana_decode_noThrows() {
         let fileName = "WeaponSaberBear_Coop.game__GameParameterTable"

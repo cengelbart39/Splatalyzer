@@ -10,7 +10,7 @@ import XCTest
 
 final class RollerDecodingTests: XCTestCase {
 
-    let service = JSONServiceForTests()
+    let service = JSONService()
 
     func test_BigSwigRoller_decode_noThrows() {
         let fileName = "WeaponRollerWide.game__GameParameterTable"

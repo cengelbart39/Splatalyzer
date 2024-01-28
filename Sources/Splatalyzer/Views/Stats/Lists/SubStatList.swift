@@ -24,7 +24,7 @@ struct SubStatList: View {
                 HStack {
                     Label(
                         title: {
-                            Text(subStats.weapon.rawValue)
+                            Text(subStats.weapon.localized)
                                 .font(.title3)
                             
                         }, icon: {
@@ -57,7 +57,7 @@ struct SubStatList: View {
                     AbilityStatCard(stat: subStats.inkConsumptionPercentage)
                     
                     DoubleStatCard(
-                        title: "No Ink Recovery Time After Usage",
+                        title: String(localized: "No Ink Recovery Time After Usage"),
                         value: subStats.whiteInkSeconds,
                         unit: .seconds)
                     

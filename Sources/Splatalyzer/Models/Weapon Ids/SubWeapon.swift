@@ -55,6 +55,10 @@ public enum SubWeapon: String, CaseIterable {
     }
     #endif
     
+    public var localized: String {
+        return NSLocalizedString(self.rawValue, tableName: "SubWeapon",  bundle: Bundle.module, comment: "")
+    }
+    
     func fileName() -> String {
         if self.rawValue.contains("_") {
             let subSplit = self.rawValue.split(separator: "_")

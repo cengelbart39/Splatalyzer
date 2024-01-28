@@ -16,7 +16,7 @@ import Foundation
 public typealias AbilityPoints = [Ability : Int]
 
 /// Special attributes for gear that effect the player and/oror weapons
-public enum Ability: String, CaseIterable {
+public enum Ability: String, CaseIterable, Codable {
     /// A unassigned ability
     case none = "Unknown"
     
@@ -102,7 +102,7 @@ public enum Ability: String, CaseIterable {
     case stealthJump = "SuperJumpSign_Hide"
     
     /// Whether an ability is restricted as a primary ability to headgear, clothes, shoes, or not-at-all
-    var restriction: AbilityRestriction {
+    public var restriction: AbilityRestriction {
         switch self {
         // Head Only
         case .comeback, .lastDitchEffort, .openingGambit, .tenacity:
@@ -124,7 +124,7 @@ public enum Ability: String, CaseIterable {
     
     /// The ability chunks required for an ability, that isn't itself.
     /// Only applicable for primary-only abilities with a restriction, excluding Ability Doubler.
-    var components: [Ability] {
+    public var components: [Ability] {
         switch self {
         // Head
         case .comeback:
@@ -168,7 +168,7 @@ public enum Ability: String, CaseIterable {
     }
     
     #if os(macOS)
-    var image: NSImage? {
+    public var image: NSImage? {
         guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
             return nil
         }
@@ -180,7 +180,7 @@ public enum Ability: String, CaseIterable {
         return NSImage(data: data)
     }
     #else
-    var image: UIImage? {
+    public var image: UIImage? {
         guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
             return nil
         }
@@ -192,9 +192,13 @@ public enum Ability: String, CaseIterable {
         return UIImage(data: data)
     }
     #endif
+    
+    public var localized: String {
+        return NSLocalizedString(self.rawValue, tableName: "Ability", bundle: Bundle.module, comment: "")
+    }
 }
 
-extension Ability {
+public extension Ability {
     /// Abilities that can be used on headgear
     static let headgearAbilities = Ability.allCases.filter {
         $0.restriction == .headgearOnly || $0.restriction == .none

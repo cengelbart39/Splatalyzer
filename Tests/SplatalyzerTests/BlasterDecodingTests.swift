@@ -10,7 +10,7 @@ import XCTest
 
 final class BlasterDecodingTests: XCTestCase {
     
-    let service = JSONServiceForTests()
+    let service = JSONService()
 
     func test_Blaster_decode_noThrows() {
         let fileName = "WeaponBlasterMiddle.game__GameParameterTable"

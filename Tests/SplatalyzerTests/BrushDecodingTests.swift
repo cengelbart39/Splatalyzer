@@ -10,7 +10,7 @@ import XCTest
 
 final class BrushDecodingTests: XCTestCase {
 
-    let service = JSONServiceForTests()
+    let service = JSONService()
 
     func test_Inkbrush_decode_noThrows() {
         let fileName = "WeaponBrushMini.game__GameParameterTable"

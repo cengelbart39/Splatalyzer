@@ -10,7 +10,7 @@ import XCTest
 
 final class SpecialDecodingTests: XCTestCase {
 
-    let service = JSONServiceForTests()
+    let service = JSONService()
     
     func test_BigBubbler_decode_noThrows() {
         let fileName = "WeaponSpGreatBarrier.game__GameParameterTable"

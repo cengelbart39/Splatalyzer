@@ -36,7 +36,7 @@ public struct StatHelper {
             modifiedBy: [ability],
             value: ceil(Double(mainInfo.specialPoints) / apEffect.effect),
             unit: .points,
-            title: "Points to Special"
+            title: String(localized: "Points to Special")
         )
     }
     
@@ -70,7 +70,9 @@ public struct StatHelper {
                 apEffect.effect - splattedPenalty - extraSpecialLost
             ),
             unit: .percentage,
-            title: "Special Lost When Splatted\(splattedByRP ? " With RP" : "")"
+            title: splattedByRP ?
+                String(localized: "Special Lost When Splatted With RP", comment: "Refers to Respawn Punisher") :
+                String(localized: "Special Lost When Splatted")
         )
     }
     
@@ -391,7 +393,7 @@ public struct StatHelper {
             modifiedBy: [.inkSaverSub],
             value: ((subConsume.inkConsume * 100) / mainInfo.inkTankSize).roundToDecimalPlaces(),
             unit: .percentage,
-            title: "Ink Tank Consumption"
+            title: String(localized: "Ink Tank Consumption")
         )
     }
     
@@ -416,7 +418,7 @@ public struct StatHelper {
             modifiedBy: [.inkRecoveryUp],
             value: (apEffect.effect * mainInfo.inkTankSize).framesToSeconds().cutToDecimalPlaces(3),
             unit: .seconds,
-            title: effectKey == .inkRecoverFrmStealth ? "Ink Tank Recovery Time (Squid Form)" : "Ink Tank Recovery Time (Humanoid Form)"
+            title: effectKey == .inkRecoverFrmStealth ? String(localized: "Ink Tank Recovery Time (Squid Form)") : String(localized: "Ink Tank Recovery Time (Humanoid Form)")
         )
     }
     
@@ -440,7 +442,7 @@ public struct StatHelper {
             modifiedBy: [ability],
             value: (apEffect.effect * 10).cutToDecimalPlaces(3),
             unit: .unitsPerFrame,
-            title: "Run Speed"
+            title: String(localized: "Run Speed")
         )
     }
     
@@ -466,7 +468,7 @@ public struct StatHelper {
                 modifiedBy: [.runSpeedUp],
                 value: (moveSpeed * apEffect.effect * 10).cutToDecimalPlaces(3),
                 unit: .unitsPerFrame,
-                title: "Run Speed While Shooting"
+                title: String(localized: "Run Speed While Shooting")
             )
             
         } else {
@@ -499,7 +501,7 @@ public struct StatHelper {
             modifiedBy: [.swimSpeedUp, .ninjaSquid],
             value: (apEffect.effect * 10 * ninjaSquidMultiplier).cutToDecimalPlaces(3),
             unit: .unitsPerFrame,
-            title: "Swim Speed"
+            title: String(localized: "Swim Speed")
         )
     }
     
@@ -518,7 +520,7 @@ public struct StatHelper {
             modifiedBy: withoutRM.modifiedBy,
             value: (withoutRM.value * rainmakerSpeedPenalty).cutToDecimalPlaces(3),
             unit: .unitsPerFrame,
-            title: "Swim Speed While Holding Rainmaker"
+            title: String(localized: "Swim Speed While Holding The Rainmaker")
         )
     }
     
@@ -541,7 +543,7 @@ public struct StatHelper {
             modifiedBy: [iru],
             value: (apEffect.effect * 10).cutToDecimalPlaces(3),
             unit: .unitsPerFrame,
-            title: "Run Speed In Enemy Ink"
+            title: String(localized: "Run Speed In Enemy Ink")
         )
     }
     
@@ -564,7 +566,7 @@ public struct StatHelper {
             modifiedBy: [iru],
             value: apEffect.effectToDamage() * 60,
             unit: .hp,
-            title: "Damage In Enemy Ink"
+            title: String(localized: "Damage In Enemy Ink")
         )
     }
     
@@ -587,7 +589,7 @@ public struct StatHelper {
             modifiedBy: [iru],
             value: apEffect.effectToDamage(),
             unit: .hp,
-            title: "Max Damage from Enemy Ink"
+            title: String(localized: "Max Damage from Enemy Ink")
         )
     }
     
@@ -610,7 +612,7 @@ public struct StatHelper {
             modifiedBy: [iru],
             value: ceil(apEffect.effect),
             unit: .frames,
-            title: "Frames Before Damage In Enemy Ink"
+            title: String(localized: "Frames Before Damage In Enemy Ink")
         )
     }
     
@@ -653,7 +655,7 @@ public struct StatHelper {
             modifiedBy: [qr, .respawnPunisher],
             value: (respawnChaseFrame + chase.effect + around.effect + splattedByExtraFrames + ownRPExtraFrames - fasterRespawn).framesToSeconds(),
             unit: .seconds,
-            title: splatedByRP ? "Quick Respawn Time When Splatted by RP" : "Quick Respawn Time"
+            title: splatedByRP ? String(localized: "Quick Respawn Time When Splatted by RP", comment: "Refers to Respawn Punisher effect") : String(localized: "Quick Respawn Time")
         )
     }
     
@@ -677,7 +679,7 @@ public struct StatHelper {
             modifiedBy: [.quickSuperJump],
             value: ceil(apEffect.effect),
             unit: .frames,
-            title: "Super Jump Vulnerable Frames"
+            title: String(localized: "Super Jump Vulnerable Frames")
         )
     }
     
@@ -707,7 +709,7 @@ public struct StatHelper {
             modifiedBy: [.quickSuperJump],
             value: (ceil(charge.effect) + ceil(move.effect)).framesToSeconds(),
             unit: .seconds,
-            title: "Total Super Jump Time"
+            title: String(localized: "Total Super Jump Time")
         )
     }
     
@@ -737,7 +739,7 @@ public struct StatHelper {
             modifiedBy: [.quickSuperJump],
             value: (ceil(charge.effect) + ceil(move.effect)).framesToSeconds(),
             unit: .frames,
-            title: "Super Jump Vulnerable Frames"
+            title: String(localized: "Super Jump Vulnerable Frames")
         )
     }
     
@@ -768,7 +770,7 @@ public struct StatHelper {
             modifiedBy: [ability],
             value: (reducedExtraSpeed + groundSpread).roundToDecimalPlaces(),
             unit: .degrees,
-            title: "Shot Spread While Jumping"
+            title: String(localized: "Shot Spread While Jumping")
         )
     }
     
@@ -799,7 +801,7 @@ public struct StatHelper {
             modifiedBy: [ability],
             value: (reducedExtraSpeed + groundSpread).roundToDecimalPlaces(),
             unit: .degrees,
-            title: "Secondary Mode Spread While Jumping"
+            title: String(localized: "Secondary Mode Spread While Jumping")
         )
     }
     
@@ -823,7 +825,7 @@ public struct StatHelper {
             modifiedBy: [ability],
             value: ceil(apEffect.effect),
             unit: .degrees,
-            title: "Squid Surge Charge To Full"
+            title: String(localized: "Squid Surge Charge To Full")
         )
     }
     
@@ -853,7 +855,7 @@ public struct StatHelper {
             modifiedBy: [sru],
             value: (subEffect.baseEffect * mainEffect.effect).framesToSeconds(),
             unit: .seconds,
-            title: "\(subInfo.id.rawValue) Tracking Time"
+            title: String(localized: "\(subInfo.id.rawValue) Tracking Time", comment: "Refers to the marking seconds of the Angle Shooter, Point Sensor sub, or the build's sub weapon.")
         )
     }
     
@@ -883,7 +885,7 @@ public struct StatHelper {
             modifiedBy: [sru],
             value: (subEffect.baseEffect * mainEffect.effect).framesToSeconds(),
             unit: .seconds,
-            title: "\(inkMine.id.rawValue) Tracking Seconds"
+            title: String(localized: "\(inkMine.id.rawValue) Tracking Seconds", comment: "Refers to the tracking time of the Ink Mien sub.")
         )
     }
     
@@ -906,7 +908,7 @@ public struct StatHelper {
             modifiedBy: [sru],
             value: (apEffect.effect * 100).roundToDecimalPlaces(),
             unit: .percentage,
-            title: "\(SubWeapon.toxicMist.rawValue) Movement Reduction"
+            title: String(localized: "\(SubWeapon.toxicMist.rawValue) Movement Reduction", comment: "Refers to the movement reduction effect of Toxic Mist.")
         )
     }
     
@@ -932,7 +934,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: effectCalc,
             unit: .ap,
-            title: "Quick Super Jump Boost"
+            title: String(localized: "Quick Super Jump Boost")
         )
     }
     
@@ -979,7 +981,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: apEffect.effect.roundToDecimalPlaces(3),
             unit: .unitsPerFrame,
-            title: "Velocity (Decides Range)"
+            title: String(localized: "Velocity (Decides Range)")
         )
     }
     
@@ -1012,7 +1014,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: apEffect.effect.framesToSeconds(),
             unit: .seconds,
-            title: first ? "Full Power Phase Duration" : "Mid-Phase Duration"
+            title: first ? String(localized: "Full Power Phase Duration") : String(localized: "Mid-Phase Duration")
         )
     }
     
@@ -1041,7 +1043,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: apEffect.effect.framesToSeconds(),
             unit: .seconds,
-            title: "Marking Duration"
+            title: String(localized: "Marking Duration")
         )
     }
     
@@ -1070,7 +1072,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: apEffect.effect,
             unit: .radius,
-            title: "Marking Radius"
+            title: String(localized: "Marking Radius")
         )
     }
     
@@ -1099,7 +1101,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: apEffect.effect,
             unit: .radius,
-            title: "Explosion Radius"
+            title: String(localized: "Explosion Radius")
         )
     }
     
@@ -1128,7 +1130,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: (apEffect.effect / 10).roundToDecimalPlaces(1),
             unit: .hp,
-            title: "Durability"
+            title: String(localized: "Durability")
         )
     }
     
@@ -1157,7 +1159,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: apEffect.effect.framesToSeconds(),
             unit: .seconds,
-            title: "\(specialInfo.id.rawValue) Duration"
+            title: String(localized: "\(specialInfo.id.rawValue) Duration", comment: "Refers to the duration of certain special weapons.")
         )
     }
     
@@ -1186,7 +1188,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: apEffect.effect.roundToDecimalPlaces(4),
             unit: .damage,
-            title: "\(specialInfo.id.rawValue) Damage Distance"
+            title: String(localized: "\(specialInfo.id.rawValue) Damage Distance", comment: "Refers to the damage done by a special weapon over some specified distance.")
         )
     }
     
@@ -1215,7 +1217,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: apEffect.effect.roundToDecimalPlaces(4),
             unit: .radius,
-            title: "\(specialInfo.id.rawValue) Paint Radius"
+            title: String(localized: "\(specialInfo.id.rawValue) Paint Radius", comment: "Refers to the painting radius of certain specials.")
         )
     }
     
@@ -1244,7 +1246,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: round(apEffect.effect / 10),
             unit: .hp,
-            title: "\(specialInfo.id.rawValue) Shield Durability"
+            title: String(localized: "\(specialInfo.id.rawValue) Shield Durability", comment: "Refers to the durability of the Big Bubbler shield.")
         )
     }
     
@@ -1273,7 +1275,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: round(apEffect.effect / 10),
             unit: .hp,
-            title: "\(specialInfo.id.rawValue) Device Durability"
+            title: String(localized: "\(specialInfo.id.rawValue) Device Durability", comment: "Refers to the durability of the Big Bubbler device.")
         )
     }
     
@@ -1304,7 +1306,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: ((apEffect.effect * 100) / zipcasterInkTankSize).roundToDecimalPlaces(),
             unit: .percentage,
-            title: "\(specialInfo.id.rawValue) Hook Ink Consumption"
+            title: String(localized: "\(specialInfo.id.rawValue) Hook Ink Consumption", comment: "Refers to the ink consumption of the Zipcaster hook.")
         )
     }
     
@@ -1335,7 +1337,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: ((apEffect.effect * 100) / zipcasterInkTankSize).roundToDecimalPlaces(),
             unit: .percentage,
-            title: "\(specialInfo.id.rawValue) Hook Ink Consumption Per Second"
+            title: String(localized: "\(specialInfo.id.rawValue) Hook Ink Consumption Per Second", comment: "Refers to the ink consumption of the Zipcaster special while idling.")
         )
     }
     
@@ -1364,7 +1366,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: apEffect.effect.roundToDecimalPlaces(),
             unit: .radius,
-            title: "\(specialInfo.id.rawValue) Reticle Radius"
+            title: String(localized: "\(specialInfo.id.rawValue) Reticle Radius", comment: "Refers to the reticle radius of the Tenta Missile special.")
         )
     }
     
@@ -1393,7 +1395,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: apEffect.effect.roundToDecimalPlaces(),
             unit: .distance,
-            title: "\(specialInfo.id.rawValue) Throw Distance"
+            title: String(localized: "\(specialInfo.id.rawValue) Throw Distance", comment: "Refers to the throwing distance of the Splattercolor Screen special.")
         )
     }
     
@@ -1422,7 +1424,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: apEffect.effect.roundToDecimalPlaces(4),
             unit: .unitsPerFrame,
-            title: "\(specialInfo.id.rawValue) Movement Speed"
+            title: String(localized: "\(specialInfo.id.rawValue) Movement Speed", comment: "Refers to the player's movement speed while using certain specials.")
         )
     }
     
@@ -1451,7 +1453,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: (apEffect.effect * 100).roundToDecimalPlaces(),
             unit: .none,
-            title: "Special Auto Charge Rate"
+            title: String(localized: "Special Auto Charge Rate")
         )
     }
     
@@ -1480,7 +1482,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: apEffect.effect.roundToDecimalPlaces(),
             unit: .radius,
-            title: "\(specialInfo.id.rawValue) Max Radius"
+            title: String(localized: "\(specialInfo.id.rawValue) Max Radius", comment: "Refers to the maximum radius of the Big Bubbler or Wave Breaker special.")
         )
     }
     
@@ -1517,7 +1519,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: minEffect.effect.roundToDecimalPlaces() - maxEffect.effect.roundToDecimalPlaces(),
             unit: .radius,
-            title: "\(specialInfo.id.rawValue) Radius Range"
+            title: String(localized: "\(specialInfo.id.rawValue) Radius Range", comment: "Refers to the maximum and minimum radius of the Big Bubbler special.")
         )
     }
     
@@ -1546,7 +1548,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: apEffect.effect,
             unit: .none,
-            title: "Special Power Up Duration"
+            title: String(localized: "Special Power Up Duration")
         )
     }
     

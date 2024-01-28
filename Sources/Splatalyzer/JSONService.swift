@@ -11,11 +11,11 @@ public protocol JSONServicable {
     func decode<T: Codable>(_ type: T.Type, from file: String) throws -> T
 }
 
-public struct JSONService: JSONServicable {
+public struct JSONService {
     
     public init() { }
     
-    public func decode<T: Codable>(_ type: T.Type, from file: String) throws -> T {
+    public func decode<T: Decodable>(_ type: T.Type, from file: String) throws -> T {
         guard let url = Bundle.module.url(forResource: file, withExtension: "json") else {
             throw JSONError.invalidUrl(file)
         }
@@ -62,7 +62,7 @@ public enum JSONError: Error, LocalizedError {
             return NSLocalizedString("Failed to locate '\(file)' in bundle.", comment: "")
             
         case .invalidData(let file, let descr):
-            return NSLocalizedString("Failed to load '\(file)' in bundle: \(descr)", comment: "")
+            return NSLocalizedString("Failed to load \(file) in bundle: \(descr)", comment: "")
             
         case .decode(let string):
             return string

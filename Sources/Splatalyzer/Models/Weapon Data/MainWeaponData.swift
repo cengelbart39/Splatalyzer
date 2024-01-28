@@ -72,6 +72,7 @@ public struct MainWeaponData: WeaponDatable {
     public let inkConsumeSwing: Double?
     public let inkConsumeChargeFullCharge: Double?
     
+    /// Determines the ink tank size based on which main weapon is being represented
     public var inkTankSize: Double {
         if self.mainWeaponId == .splattershotJr || self.mainWeaponId == .customSplattershotJr {
             

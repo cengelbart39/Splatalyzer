@@ -1,0 +1,58 @@
+//
+//  File.swift
+//  
+//
+//  Created by Christopher Engelbart on 1/27/24.
+//
+
+import Foundation
+
+#if os(macOS)
+import AppKit
+#else
+import UIKit
+#endif
+
+public enum WeaponClass: String, CaseIterable {
+    case blaster = "Blaster"
+    case brush = "Brush"
+    case charger = "Charger"
+    case dualie = "Maneuver"
+    case roller = "Roller"
+    case splatana = "Saber"
+    case brella = "Shelter"
+    case shooter = "Shooter"
+    case slosher = "Slosher"
+    case splatling = "Spinner"
+    case stringer = "Stringer"
+    
+    #if os(macOS)
+    public var image: NSImage? {
+        guard let url = Bundle.main.url(forResource: self.rawValue, withExtension: "png") else {
+            return nil
+        }
+        
+        guard let data = try? Data(contentsOf: url) else {
+            return nil
+        }
+        
+        return NSImage(data: data)
+    }
+    #else
+    public var image: UIImage? {
+        guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
+            return nil
+        }
+        
+        guard let data = try? Data(contentsOf: url) else {
+            return nil
+        }
+        
+        return UIImage(data: data)
+    }
+    #endif
+    
+    public var localized: String {
+        return NSLocalizedString(self.rawValue, tableName: "WeaponClass",  bundle: Bundle.module, comment: "")
+    }
+}

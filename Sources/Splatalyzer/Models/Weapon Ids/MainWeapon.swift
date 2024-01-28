@@ -213,53 +213,18 @@ public enum MainWeapon: String, CaseIterable, Identifiable {
     }
     #endif
     
+    public var localized: String {
+        return NSLocalizedString(self.rawValue, tableName: "MainWeapon",  bundle: Bundle.module, comment: "")
+    }
+    
     func fileName() -> String {
         let split = self.rawValue.split(separator: "_")
         return String(split[0] + split[1])
     }
     
-    static func getWeapons(for type: WeaponClass) -> [MainWeapon] {
-        return MainWeapon.allCases.filter { $0.type == type }
+    public static func getWeapons(of type: WeaponClass) -> [MainWeapon] {
+        return MainWeapon.allCases
+            .filter { $0.type == type }
             .sorted(by: { $0.rawValue < $1.rawValue })
     }
-}
-
-public enum WeaponClass: String, CaseIterable {
-    case blaster = "Blasters"
-    case brush = "Brushes"
-    case charger = "Chargers"
-    case dualie = "Dualies"
-    case roller = "Rollers"
-    case splatana = "Splatanas"
-    case brella = "Brellas"
-    case shooter = "Shooters"
-    case slosher = "Sloshers"
-    case splatling = "Splatlings"
-    case stringer = "Stringers"
-    
-    #if os(macOS)
-    public var image: NSImage? {
-        guard let url = Bundle.main.url(forResource: self.rawValue, withExtension: "png") else {
-            return nil
-        }
-        
-        guard let data = try? Data(contentsOf: url) else {
-            return nil
-        }
-        
-        return NSImage(data: data)
-    }
-    #else
-    public var image: UIImage? {
-        guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
-            return nil
-        }
-        
-        guard let data = try? Data(contentsOf: url) else {
-            return nil
-        }
-        
-        return UIImage(data: data)
-    }
-    #endif
 }

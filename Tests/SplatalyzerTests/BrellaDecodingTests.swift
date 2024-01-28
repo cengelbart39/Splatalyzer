@@ -10,7 +10,7 @@ import XCTest
 
 final class BrellaDecodingTests: XCTestCase {
 
-    let service = JSONServiceForTests()
+    let service = JSONService()
     
     func test_GrizzcoBrella_decode_noThrows() {
         let fileName = "WeaponShelterBear_Coop.game__GameParameterTable"

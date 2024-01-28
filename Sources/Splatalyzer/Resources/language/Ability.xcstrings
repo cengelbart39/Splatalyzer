@@ -1,0 +1,292 @@
+{
+  "sourceLanguage" : "en-US",
+  "strings" : {
+    "Action_Up" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Intensify Action"
+          }
+        }
+      }
+    },
+    "ComeBack" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comeback"
+          }
+        }
+      }
+    },
+    "DeathMarking" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haunt"
+          }
+        }
+      }
+    },
+    "EndAllUp" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last-Ditch Effort"
+          }
+        }
+      }
+    },
+    "Exorcist" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Respawn Punisher"
+          }
+        }
+      }
+    },
+    "ExSkillDouble" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ability Doubler"
+          }
+        }
+      }
+    },
+    "HumanMove_Up" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Run Speed Up"
+          }
+        }
+      }
+    },
+    "InkRecovery_Up" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ink Recovery Up"
+          }
+        }
+      }
+    },
+    "JumpTime_Save" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quick Super Jump"
+          }
+        }
+      }
+    },
+    "MainInk_Save" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ink Saver (Main)"
+          }
+        }
+      }
+    },
+    "MinorityUp" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tenacity"
+          }
+        }
+      }
+    },
+    "ObjectEffect_Up" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Object Shredder"
+          }
+        }
+      }
+    },
+    "OpInkEffect_Reduction" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ink Resistance Up"
+          }
+        }
+      }
+    },
+    "RespawnSpecialGauge_Save" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Special Saver"
+          }
+        }
+      }
+    },
+    "RespawnTime_Save" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quick Respawn"
+          }
+        }
+      }
+    },
+    "SomersaultLanding" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drop Roller"
+          }
+        }
+      }
+    },
+    "SpecialIncrease_Up" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Special Charge Up"
+          }
+        }
+      }
+    },
+    "SpecialSpec_Up" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Special Power Up"
+          }
+        }
+      }
+    },
+    "SquidMove_Up" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swim Speed Up"
+          }
+        }
+      }
+    },
+    "SquidMoveSpatter_Reduction" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ninja Squid"
+          }
+        }
+      }
+    },
+    "StartAllUp" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opening Gambit"
+          }
+        }
+      }
+    },
+    "SubEffect_Reduction" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sub Resistance Up"
+          }
+        }
+      }
+    },
+    "SubInk_Save" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ink Saver (Sub)"
+          }
+        }
+      }
+    },
+    "SubSpec_Up" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sub Power Up"
+          }
+        }
+      }
+    },
+    "SuperJumpSign_Hide" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stealth Jump"
+          }
+        }
+      }
+    },
+    "ThermalInk" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thermal Ink"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

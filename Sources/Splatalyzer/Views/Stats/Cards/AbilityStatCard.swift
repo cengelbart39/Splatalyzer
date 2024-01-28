@@ -25,7 +25,7 @@ struct AbilityStatCard: View {
                         
                         VStack(alignment: .leading, spacing: 0) {
                             
-                            Text("Base")
+                            Text("Base", comment: "Refers to a base effect before any gear abilities.")
                                 .font(.headline.weight(.semibold))
                                 .padding(.bottom, -10)
                                 .foregroundStyle(.secondary)
@@ -57,7 +57,7 @@ struct AbilityStatCard: View {
                         if stat.baseValue != stat.value {
                             VStack(alignment: .leading, spacing: 0) {
                                 
-                                Text("Build")
+                                Text("Build", comment: "Refers to a gear build. Used in reference to the effect caused by gear abilities.")
                                     .font(.headline.weight(.semibold))
                                     .padding(.bottom, -10)
                                     .foregroundStyle(.secondary)

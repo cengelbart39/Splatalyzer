@@ -10,7 +10,7 @@ import XCTest
 
 final class ChargerDecodingTests: XCTestCase {
 
-    let service = JSONServiceForTests()
+    let service = JSONService()
 
     func test_Bamboozler14_decode_noThrows() {
         let fileName = "WeaponChargerLight.game__GameParameterTable"

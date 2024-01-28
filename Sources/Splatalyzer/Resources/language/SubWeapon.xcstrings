@@ -1,0 +1,160 @@
+{
+  "sourceLanguage" : "en-US",
+  "strings" : {
+    "Beacon" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Squid Beakon"
+          }
+        }
+      }
+    },
+    "Bomb_Curling" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Curling Bomb"
+          }
+        }
+      }
+    },
+    "Bomb_Fizzy" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fizzy Bomb"
+          }
+        }
+      }
+    },
+    "Bomb_Quick" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Burst Bomb"
+          }
+        }
+      }
+    },
+    "Bomb_Robot" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Autobomb"
+          }
+        }
+      }
+    },
+    "Bomb_Splash" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splat Bomb"
+          }
+        }
+      }
+    },
+    "Bomb_Suction" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suction Bomb"
+          }
+        }
+      }
+    },
+    "Bomb_Torpedo" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Torpedo"
+          }
+        }
+      }
+    },
+    "LineMarker" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Angle Shooter"
+          }
+        }
+      }
+    },
+    "PointSensor" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Point Sensor"
+          }
+        }
+      }
+    },
+    "PoisonMist" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toxic Mist"
+          }
+        }
+      }
+    },
+    "Shield" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splash Wall"
+          }
+        }
+      }
+    },
+    "Sprinkler" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sprinkler"
+          }
+        }
+      }
+    },
+    "Trap" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ink Mine"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

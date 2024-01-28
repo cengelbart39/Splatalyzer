@@ -10,7 +10,7 @@ import XCTest
 
 final class SubDecodingTests: XCTestCase {
 
-    let service = JSONServiceForTests()
+    let service = JSONService()
     
     func test_AngleShooter_decode_noThrows() {
         let fileName = "WeaponLineMarker.game__GameParameterTable"

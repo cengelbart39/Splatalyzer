@@ -1,0 +1,1216 @@
+{
+  "sourceLanguage" : "en-US",
+  "strings" : {
+    "Blaster_Light_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rapid Blaster"
+          }
+        }
+      }
+    },
+    "Blaster_Light_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rapid Blaster Deco"
+          }
+        }
+      }
+    },
+    "Blaster_LightLong_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rapid Blaster Pro"
+          }
+        }
+      }
+    },
+    "Blaster_LightLong_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rapid Blaster Pro Deco"
+          }
+        }
+      }
+    },
+    "Blaster_LightShort_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clash Blaster"
+          }
+        }
+      }
+    },
+    "Blaster_LightShort_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clash Blaster Neo"
+          }
+        }
+      }
+    },
+    "Blaster_Long_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Range Blaster"
+          }
+        }
+      }
+    },
+    "Blaster_Middle_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blaster"
+          }
+        }
+      }
+    },
+    "Blaster_Middle_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Custom Blaster"
+          }
+        }
+      }
+    },
+    "Blaster_Precision_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S-BLAST '92"
+          }
+        }
+      }
+    },
+    "Blaster_Precision_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S-BLAST '91"
+          }
+        }
+      }
+    },
+    "Blaster_Short_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luna Blaster"
+          }
+        }
+      }
+    },
+    "Blaster_Short_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luna Blaster Neo"
+          }
+        }
+      }
+    },
+    "Brush_Heavy_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Painbrush"
+          }
+        }
+      }
+    },
+    "Brush_Heavy_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Painbrush Nouveau"
+          }
+        }
+      }
+    },
+    "Brush_Mini_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inkbrush"
+          }
+        }
+      }
+    },
+    "Brush_Mini_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inkbrush Nouveau"
+          }
+        }
+      }
+    },
+    "Brush_Normal_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Octobrush"
+          }
+        }
+      }
+    },
+    "Brush_Normal_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Octobrush Nouveau"
+          }
+        }
+      }
+    },
+    "Charger_Keeper_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Goo Tuber"
+          }
+        }
+      }
+    },
+    "Charger_Keeper_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Custom Goo Tuber"
+          }
+        }
+      }
+    },
+    "Charger_Light_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bamboozler 14 Mk I"
+          }
+        }
+      }
+    },
+    "Charger_Long_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-liter 4K"
+          }
+        }
+      }
+    },
+    "Charger_LongScope_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-liter 4K Scope"
+          }
+        }
+      }
+    },
+    "Charger_Normal_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splat Charger"
+          }
+        }
+      }
+    },
+    "Charger_Normal_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Z+F Splat Charger"
+          }
+        }
+      }
+    },
+    "Charger_NormalScope_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splatterscope"
+          }
+        }
+      }
+    },
+    "Charger_NormalScope_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Z+F Splatterscope"
+          }
+        }
+      }
+    },
+    "Charger_Pencil_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Snipewriter 5H"
+          }
+        }
+      }
+    },
+    "Charger_Pencil_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Snipewriter 5B"
+          }
+        }
+      }
+    },
+    "Charger_Quick_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Classic Squiffer"
+          }
+        }
+      }
+    },
+    "Maneuver_Dual_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dualie Squelchers"
+          }
+        }
+      }
+    },
+    "Maneuver_Dual_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Custom Dualie Squelchers"
+          }
+        }
+      }
+    },
+    "Maneuver_Gallon_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Glooga Dualies"
+          }
+        }
+      }
+    },
+    "Maneuver_Normal_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splat Dualies"
+          }
+        }
+      }
+    },
+    "Maneuver_Normal_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enperry Splat Dualies"
+          }
+        }
+      }
+    },
+    "Maneuver_Short_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dapple Dualies"
+          }
+        }
+      }
+    },
+    "Maneuver_Short_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dapple Dualies Nouveau"
+          }
+        }
+      }
+    },
+    "Maneuver_Stepper_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dark Tetra Dualies"
+          }
+        }
+      }
+    },
+    "Maneuver_Stepper_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Light Tetra Dualies"
+          }
+        }
+      }
+    },
+    "Roller_Compact_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Carbon Roller"
+          }
+        }
+      }
+    },
+    "Roller_Compact_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Carbon Roller Deco"
+          }
+        }
+      }
+    },
+    "Roller_Heavy_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dynamo Roller"
+          }
+        }
+      }
+    },
+    "Roller_Heavy_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gold Dynamo Roller"
+          }
+        }
+      }
+    },
+    "Roller_Hunter_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flingza Roller"
+          }
+        }
+      }
+    },
+    "Roller_Normal_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splat Roller"
+          }
+        }
+      }
+    },
+    "Roller_Normal_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krak-On Splat Roller"
+          }
+        }
+      }
+    },
+    "Roller_Wide_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Big Swig Roller"
+          }
+        }
+      }
+    },
+    "Roller_Wide_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Big Swig Roller Express"
+          }
+        }
+      }
+    },
+    "Saber_Lite_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splatana Wiper"
+          }
+        }
+      }
+    },
+    "Saber_Lite_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splatana Wiper Deco"
+          }
+        }
+      }
+    },
+    "Saber_Normal_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splatana Stamper"
+          }
+        }
+      }
+    },
+    "Saber_Normal_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neo Splatana Stamper"
+          }
+        }
+      }
+    },
+    "Shelter_Compact_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Undercover Brella"
+          }
+        }
+      }
+    },
+    "Shelter_Compact_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Undercover Sorella Brella"
+          }
+        }
+      }
+    },
+    "Shelter_Normal_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splat Brella"
+          }
+        }
+      }
+    },
+    "Shelter_Normal_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sorella Brella"
+          }
+        }
+      }
+    },
+    "Shelter_Wide_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tenta Brella"
+          }
+        }
+      }
+    },
+    "Shelter_Wide_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tenta Sorella Brella"
+          }
+        }
+      }
+    },
+    "Shooter_Blaze_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aerospray MG"
+          }
+        }
+      }
+    },
+    "Shooter_Blaze_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aerospray RG"
+          }
+        }
+      }
+    },
+    "Shooter_Expert_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splattershot Pro"
+          }
+        }
+      }
+    },
+    "Shooter_Expert_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forge Splattershot Pro"
+          }
+        }
+      }
+    },
+    "Shooter_First_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splattershot Jr."
+          }
+        }
+      }
+    },
+    "Shooter_First_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Custom Splattershot Jr."
+          }
+        }
+      }
+    },
+    "Shooter_Flash_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Squeezer"
+          }
+        }
+      }
+    },
+    "Shooter_Flash_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foil Squeezer"
+          }
+        }
+      }
+    },
+    "Shooter_Gravity_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".52 Gal"
+          }
+        }
+      }
+    },
+    "Shooter_Heavy_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".96 Gal"
+          }
+        }
+      }
+    },
+    "Shooter_Heavy_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".96 Gal Deco"
+          }
+        }
+      }
+    },
+    "Shooter_Long_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jet Squelcher"
+          }
+        }
+      }
+    },
+    "Shooter_Long_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Custom Jet Squelcher"
+          }
+        }
+      }
+    },
+    "Shooter_Normal_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splattershot"
+          }
+        }
+      }
+    },
+    "Shooter_Normal_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tentatek Splattershot"
+          }
+        }
+      }
+    },
+    "Shooter_Normal_H" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hero Shot Replica"
+          }
+        }
+      }
+    },
+    "Shooter_Precision_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splash-o-matic"
+          }
+        }
+      }
+    },
+    "Shooter_Precision_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neo Splash-o-matic"
+          }
+        }
+      }
+    },
+    "Shooter_QuickLong_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splattershot Nova"
+          }
+        }
+      }
+    },
+    "Shooter_QuickLong_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annaki Splattershot Nova"
+          }
+        }
+      }
+    },
+    "Shooter_QuickMiddle_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N-ZAP '85"
+          }
+        }
+      }
+    },
+    "Shooter_QuickMiddle_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N-ZAP '89"
+          }
+        }
+      }
+    },
+    "Shooter_Short_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sploosh-o-matic"
+          }
+        }
+      }
+    },
+    "Shooter_Short_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neo Sploosh-o-matic"
+          }
+        }
+      }
+    },
+    "Shooter_TripleMiddle_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "H-3 Nozzlenose"
+          }
+        }
+      }
+    },
+    "Shooter_TripleMiddle_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "H-3 Nozzlenose D"
+          }
+        }
+      }
+    },
+    "Shooter_TripleQuick_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L-3 Nozzlenose"
+          }
+        }
+      }
+    },
+    "Shooter_TripleQuick_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L-3 Nozzlenose D"
+          }
+        }
+      }
+    },
+    "Slosher_Bathtub_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bloblobber"
+          }
+        }
+      }
+    },
+    "Slosher_Bathtub_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bloblobber Deco"
+          }
+        }
+      }
+    },
+    "Slosher_Diffusion_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tri-Slosher"
+          }
+        }
+      }
+    },
+    "Slosher_Diffusion_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tri-Slosher Nouveau"
+          }
+        }
+      }
+    },
+    "Slosher_Double_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dread Wringer"
+          }
+        }
+      }
+    },
+    "Slosher_Launcher_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sloshing Machine"
+          }
+        }
+      }
+    },
+    "Slosher_Launcher_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sloshing Machine Neo"
+          }
+        }
+      }
+    },
+    "Slosher_Strong_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slosher"
+          }
+        }
+      }
+    },
+    "Slosher_Strong_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slosher Deco"
+          }
+        }
+      }
+    },
+    "Slosher_Washtub_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Explosher"
+          }
+        }
+      }
+    },
+    "Spinner_Downpour_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ballpoint Splatling"
+          }
+        }
+      }
+    },
+    "Spinner_Downpour_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ballpoint Splatling Nouveau"
+          }
+        }
+      }
+    },
+    "Spinner_Hyper_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hydra Splatling"
+          }
+        }
+      }
+    },
+    "Spinner_HyperShort_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heavy Edit Splatling"
+          }
+        }
+      }
+    },
+    "Spinner_Quick_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mini Splatling"
+          }
+        }
+      }
+    },
+    "Spinner_Quick_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zink Mini Splatling"
+          }
+        }
+      }
+    },
+    "Spinner_Serein_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nautilus 47"
+          }
+        }
+      }
+    },
+    "Spinner_Standard_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heavy Splatling"
+          }
+        }
+      }
+    },
+    "Spinner_Standard_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heavy Splatling Deco"
+          }
+        }
+      }
+    },
+    "Stringer_Normal_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tri-Stringer"
+          }
+        }
+      }
+    },
+    "Stringer_Normal_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inkline Tri-Stringer"
+          }
+        }
+      }
+    },
+    "Stringer_Short_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "REEF-LUX 450"
+          }
+        }
+      }
+    },
+    "Stringer_Short_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en-US" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "REEF-LUX 450"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

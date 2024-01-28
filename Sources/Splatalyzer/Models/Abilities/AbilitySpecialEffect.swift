@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum AbilitySpecialEffect {
+public enum AbilitySpecialEffect {
     case dropRoller
     
     case openingGambit

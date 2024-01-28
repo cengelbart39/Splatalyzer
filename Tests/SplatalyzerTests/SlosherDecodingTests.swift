@@ -10,7 +10,7 @@ import XCTest
 
 final class SlosherDecodingTests: XCTestCase {
 
-    let service = JSONServiceForTests()
+    let service = JSONService()
     
     func test_Bloblobber_decode_noThrows() {
         let fileName = "WeaponSlosherBathtub.game__GameParameterTable"

@@ -29,7 +29,7 @@ struct DamageEffectStatCard: View {
                         
                     } else if stat.distanceArr.count == 2 {
                         let arr = stat.distanceArr
-                        Text("\(arr[0].format())-\(arr[1].format())")
+                        Text("\(arr[0].format())-\(arr[1].format())", comment: "Represents a distance range, i.e. 4-7")
                             .font(.title)
                             .fontDesign(.rounded)
                     }

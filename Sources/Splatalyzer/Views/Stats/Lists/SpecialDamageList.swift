@@ -24,7 +24,7 @@ struct SpecialDamageList: View {
                 }
             }, label: {
                 HStack {
-                    Text("\(specialWeapon.rawValue) Damage")
+                    Text("\(specialWeapon.localized) Damage", comment: "Refers to the damage done by the Special Weapon.")
                         .font(.title3)
                     
                     Spacer()

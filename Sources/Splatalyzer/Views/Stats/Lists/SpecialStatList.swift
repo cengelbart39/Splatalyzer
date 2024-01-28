@@ -24,7 +24,7 @@ struct SpecialStatList: View {
                 HStack {
                     Label(
                         title: {
-                            Text(specialStats.weapon.rawValue)
+                            Text(specialStats.weapon.localized)
                                 .font(.title3)
                             
                         }, icon: {

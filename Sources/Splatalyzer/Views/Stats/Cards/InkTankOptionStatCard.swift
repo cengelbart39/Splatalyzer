@@ -13,9 +13,7 @@ struct InkTankOptionStatCard: View {
     var options: [InkTankOption]
     
     var body: some View {
-        let title = subs == 1 ? "Sub Used" : "Sub Used"
-        
-        GroupBox("\(subs) \(title)") {
+        GroupBox("\(subs) Sub Used") {
             HStack {
                 Spacer()
 

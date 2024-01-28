@@ -25,7 +25,7 @@ struct MainStatList: View {
                 HStack {
                     Label(
                         title: {
-                            Text(mainStats.weapon.rawValue)
+                            Text(mainStats.weapon.localized)
                                 .font(.title3)
                             
                         }, icon: {
@@ -61,7 +61,7 @@ struct MainStatList: View {
                     
                     if let shotSpreadGround = mainStats.shotSpreadGround {
                         DoubleStatCard(
-                            title: "Shot Spread on the Ground",
+                            title: String(localized: "Shot Spread on the Ground"),
                             value: shotSpreadGround,
                             unit: .degrees)
                     }
@@ -72,35 +72,35 @@ struct MainStatList: View {
                     
                     if let shotAutofireSpreadGround = mainStats.shotAutofireSpreadGround {
                         DoubleStatCard(
-                            title: "Secondary Mode Spread on the Ground",
+                            title: String(localized: "Secondary Mode Spread on the Ground"),
                             value: shotAutofireSpreadGround,
                             unit: .degrees)
                     }
                     
                     if let whiteInkSeconds = mainStats.whiteInkSeconds {
                         DoubleStatCard(
-                            title: "No Ink Recovery Time After Usage",
+                            title: String(localized: "No Ink Recovery Time After Usage"),
                             value: whiteInkSeconds,
                             unit: .seconds)
                     }
                     
                     if let brellaCanopyHp = mainStats.brellaCanopyHp.toDouble() {
                         DoubleStatCard(
-                            title: "Canopy Durability",
+                            title: String(localized: "Canopy Durability", comment: "Refers to a Brella's shield durability."),
                             value: brellaCanopyHp,
                             unit: .hp)
                     }
                     
                     if let fullChargeSeconds = mainStats.fullChargeSeconds {
                         DoubleStatCard(
-                            title: "Charge Time To Full",
+                            title: String(localized: "Charge Time To Full"),
                             value: fullChargeSeconds,
                             unit: .seconds)
                     }
                     
                     if let maxChargeSeconds = mainStats.maxChargeSeconds {
                         DoubleStatCard(
-                            title: "Max Charge Hold Time",
+                            title: String(localized: "Max Charge Hold Time"),
                             value: maxChargeSeconds,
                             unit: .seconds)
                     }

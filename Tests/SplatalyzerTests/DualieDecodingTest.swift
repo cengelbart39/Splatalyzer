@@ -10,7 +10,7 @@ import XCTest
 
 final class DualieDecodingTest: XCTestCase {
 
-    let service = JSONServiceForTests()
+    let service = JSONService()
     
     func test_DappleDualies_decode_noThrows() {
         let fileName = "WeaponManeuverShort.game__GameParameterTable"

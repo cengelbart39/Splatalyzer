@@ -18,4 +18,8 @@ public enum InkConsumeType: String, CaseIterable {
     case splatlingCharge = "Full Charges"
     case shieldLaunch = "Shield Launches"
     case dualieRoll = "Dodge Rolls"
+    
+    var localized: String {
+        return NSLocalizedString(self.rawValue, comment: "")
+    }
 }

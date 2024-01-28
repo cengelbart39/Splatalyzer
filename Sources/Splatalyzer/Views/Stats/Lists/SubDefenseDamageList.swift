@@ -65,7 +65,7 @@ struct SubDefenseDamageItem: View {
             }, label: {
                 HStack {
                     Label {
-                        Text(key.rawValue)
+                        Text(key.localized)
                             .font(.title3)
                         
                     } icon: {

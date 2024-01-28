@@ -37,7 +37,9 @@ struct MovementStatList: View {
             
             if !self.isCollapsed {
                 LazyVStack(spacing: 10) {
-                    StringStatCard(title: "Weight", value: movementStats.speedType.display)
+                    StringStatCard(
+                        title: String(localized: "Weight", comment: "Refers to the weight class of a main weapon."),
+                        value: movementStats.speedType.display)
                     
                     AbilityStatCard(stat: movementStats.swimSpeed)
                     

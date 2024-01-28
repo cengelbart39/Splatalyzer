@@ -18,12 +18,12 @@ public struct MainWeaponPicker: View {
         Menu {
             ForEach(WeaponClass.allCases, id: \.self) { type in
                 Menu {
-                    ForEach(MainWeapon.getWeapons(for: type), id: \.self) { weapon in
+                    ForEach(MainWeapon.getWeapons(of: type), id: \.self) { weapon in
                         Button(action: {
                             self.mainWeapon = weapon
                         }, label: {
                             Label(
-                                title: { Text(weapon.rawValue) },
+                                title: { Text(weapon.localized) },
                                 icon: {
                                     #if os(macOS)
                                     Image(nsImage: weapon.image ?? NSImage())
@@ -37,7 +37,7 @@ public struct MainWeaponPicker: View {
                     }
                 } label: {
                     Label(
-                        title: { Text(type.rawValue) },
+                        title: { Text(type.localized) },
                         icon: {
                             #if os(macOS)
                             Image(nsImage: type.image ?? NSImage())
@@ -50,7 +50,7 @@ public struct MainWeaponPicker: View {
             }
         } label : {
             Label(
-                title: { Text(mainWeapon.rawValue) },
+                title: { Text(mainWeapon.localized) },
                 icon: {
                     #if os(macOS)
                     Image(nsImage: mainWeapon.image ?? NSImage())

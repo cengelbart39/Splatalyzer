@@ -144,7 +144,7 @@ public final class Splatalyzer: ObservableObject {
     
     private func getMainWeaponData(
         weapon: MainWeapon,
-        service: JSONServicable,
+        service: JSONService,
         mainInfo: WeaponInfoMain
     ) throws -> MainWeaponData {
         switch weapon.type {
@@ -273,7 +273,7 @@ public final class Splatalyzer: ObservableObject {
     
     private func getSubWeaponData(
         weapon: SubWeapon,
-        service: JSONServicable,
+        service: JSONService,
         infoSub: WeaponInfoSub,
         playerInfo: PlayerParameters
     ) throws -> SubWeaponData {
@@ -408,7 +408,7 @@ public final class Splatalyzer: ObservableObject {
     
     private func getSpecialData(
         weapon: SpecialWeapon,
-        service: JSONServicable,
+        service: JSONService,
         infoSpecial: WeaponInfoSpecial
     ) throws -> SpecialWeaponData {
         switch weapon {
@@ -578,7 +578,17 @@ public final class Splatalyzer: ObservableObject {
     }
 }
 
-public enum SplatalyzerError: Error {
+public enum SplatalyzerError: Error, LocalizedError {
     case invalidGearConfig
     case invalidLDEIntensity
+    
+    public var errorDescription: String? {
+        switch self {
+        case .invalidGearConfig:
+            return NSLocalizedString("Error: The gear build configuration is invalid.", comment: "")
+            
+        case .invalidLDEIntensity:
+            return NSLocalizedString("Error: A Last-Ditch Effort intensity was passed in that was outside of the 0-21 range.", comment: "")
+        }
+    }
 }

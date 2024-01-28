@@ -60,6 +60,10 @@ public enum SpecialWeapon: String, CaseIterable {
     }
     #endif
     
+    public var localized: String {
+        return NSLocalizedString(self.rawValue, tableName: "SpecialWeapon",  bundle: Bundle.module, comment: "")
+    }
+    
     func fileName() -> String {
         return self.rawValue
     }

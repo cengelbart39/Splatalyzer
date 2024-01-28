@@ -63,6 +63,10 @@ public enum DamageType: String, CaseIterable {
             return .main
         }
     }
+    
+    var localized: String {
+        return NSLocalizedString(self.rawValue, comment: "")
+    }
 }
 
 enum DamageWeaponType {

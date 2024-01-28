@@ -10,7 +10,7 @@ import XCTest
 
 final class ShooterDecodingTests: XCTestCase {
 
-    let service = JSONServiceForTests()
+    let service = JSONService()
 
     func test_52Gal_noThrows() {
         let fileName = "WeaponShooterGravity.game__GameParameterTable"
