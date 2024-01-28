@@ -27,6 +27,18 @@
             "state" : "translated",
             "value" : "Devastador exprés"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turboblasteur"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turboblaster"
+          }
         }
       }
     },
@@ -55,6 +67,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Devastador exprés DX"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turboblasteur chic"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turboblaster chic"
           }
         }
       }
@@ -85,6 +109,18 @@
             "state" : "translated",
             "value" : "Superdevastador"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turboblasteur pro"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turboblaster pro"
+          }
         }
       }
     },
@@ -113,6 +149,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Superdevastador DX"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turboblasteur pro chic"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turboblaster pro chic"
           }
         }
       }
@@ -143,6 +191,18 @@
             "state" : "translated",
             "value" : "Turbodevastador"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rafalblasteur"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rafablaster"
+          }
         }
       }
     },
@@ -171,6 +231,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Turbodevastador neo"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rafalblasteur néo"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rafablaster Néo"
           }
         }
       }
@@ -201,6 +273,18 @@
             "state" : "translated",
             "value" : "Teledevastador"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Éclablasteur LP"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Éclablaster XL"
+          }
         }
       }
     },
@@ -229,6 +313,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Devastador"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Éclablasteur"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Éclablaster"
           }
         }
       }
@@ -259,6 +355,18 @@
             "state" : "translated",
             "value" : "Devastador SP"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Éclablasteur modifié"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Éclablaster modifié"
+          }
         }
       }
     },
@@ -287,6 +395,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "D-VAST 92"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S-Blasteur '92"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S-Blaster '92"
           }
         }
       }
@@ -317,6 +437,18 @@
             "state" : "translated",
             "value" : "D-VAST 91"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S-Blasteur '91"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S-Blaster '91"
+          }
         }
       }
     },
@@ -345,6 +477,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ultradevastador"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Proxiblasteur"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Proxiblaster"
           }
         }
       }
@@ -375,6 +519,18 @@
             "state" : "translated",
             "value" : "Ultradevastador neo"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Proxiblasteur néo"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Proxiblaster Néo"
+          }
         }
       }
     },
@@ -403,6 +559,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Brocha abanico"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Épinceau écaïe"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Épinceau écaïe"
           }
         }
       }
@@ -433,6 +601,18 @@
             "state" : "translated",
             "value" : "Brocha abanico maestra"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Épinceau écaïe nuancé"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Épinceau écaïe nuancé"
+          }
         }
       }
     },
@@ -461,6 +641,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pincel"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Épinceau"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Épinceau"
           }
         }
       }
@@ -491,6 +683,18 @@
             "state" : "translated",
             "value" : "Pincel maestro"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Épinceau nuancé"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Épinceau nuancé"
+          }
         }
       }
     },
@@ -519,6 +723,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Brocha"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Épinceau brosse"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Épinceau brosse"
           }
         }
       }
@@ -549,6 +765,18 @@
             "state" : "translated",
             "value" : "Brocha maestra"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Épinceau brosse nuancé"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Épinceau brosse nuancé"
+          }
         }
       }
     },
@@ -577,6 +805,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tubofusil"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Détubeur"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Détubeur"
           }
         }
       }
@@ -607,6 +847,18 @@
             "state" : "translated",
             "value" : "Tubofusil SP"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Détubeur modifié"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Détubeur modifié"
+          }
         }
       }
     },
@@ -635,6 +887,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bambufusil 14-I"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bimbamboum Mk I"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bimbamboum Mk I"
           }
         }
       }
@@ -665,6 +929,18 @@
             "state" : "translated",
             "value" : "Entintador 4K"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "X-traceur +"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extraceur +"
+          }
         }
       }
     },
@@ -693,6 +969,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Telentintador 4K"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "X-traceur + zoom"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extraceur + zoom"
           }
         }
       }
@@ -723,6 +1011,18 @@
             "state" : "translated",
             "value" : "Cargatintas"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Concentraceur"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Concentraceur"
+          }
         }
       }
     },
@@ -751,6 +1051,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cargatintas Ezkkor"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Concentraceur E+A"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Concentraceur E+F"
           }
         }
       }
@@ -781,6 +1093,18 @@
             "state" : "translated",
             "value" : "Cargatintas con mira"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Concentraceur zoom"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Concentraceur zoom"
+          }
         }
       }
     },
@@ -809,6 +1133,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cargatintas con mira Ezkkor"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Concentraceur zoom E+A"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Concentraceur zoom E+F"
           }
         }
       }
@@ -839,6 +1175,18 @@
             "state" : "translated",
             "value" : "Cargaminas 5H"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crayon X - 5H"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crayon X - 5H"
+          }
         }
       }
     },
@@ -867,6 +1215,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cargaminas 5B"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crayon X - 5B"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crayon X - 5B"
           }
         }
       }
@@ -897,6 +1257,18 @@
             "state" : "translated",
             "value" : "Kalarrapid α"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lignizateur alpha"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Décap'express Alpha"
+          }
         }
       }
     },
@@ -925,6 +1297,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Barredora dual"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double nettoyeur"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double nettoyeur"
           }
         }
       }
@@ -955,6 +1339,18 @@
             "state" : "translated",
             "value" : "Barredora dual SP"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double nettoyeur modifié"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double nettoyeur modifié"
+          }
         }
       }
     },
@@ -983,6 +1379,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fundidora 525 dual"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double Kelvin 525"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double Kelvin 525"
           }
         }
       }
@@ -1013,6 +1421,18 @@
             "state" : "translated",
             "value" : "Difusor dual"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double encreur"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double encreur"
+          }
         }
       }
     },
@@ -1041,6 +1461,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Difusor dual B"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double encreur DUX"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double encreur griffé"
           }
         }
       }
@@ -1071,6 +1503,18 @@
             "state" : "translated",
             "value" : "Atomizador dual"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double moucheteur"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double moucheteur"
+          }
         }
       }
     },
@@ -1099,6 +1543,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Atomizador dual maestro"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double moucheteur nuancé"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double moucheteur nuancé"
           }
         }
       }
@@ -1129,6 +1585,18 @@
             "state" : "translated",
             "value" : "Motatrónic dual negro"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double voltigeur noir"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double voltigeur noir"
+          }
         }
       }
     },
@@ -1157,6 +1625,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Motatrónic dual blanco"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double voltigeur blanc"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double voltigeur blanc"
           }
         }
       }
@@ -1187,6 +1667,18 @@
             "state" : "translated",
             "value" : "Rodillo de carbono"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rouleau carbone"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rouleau carbone"
+          }
         }
       }
     },
@@ -1215,6 +1707,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rodillo de carbono DX"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rouleau carbone chic"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rouleau carbone chic"
           }
         }
       }
@@ -1245,6 +1749,18 @@
             "state" : "translated",
             "value" : "Dinamorrodillo"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dynamo-rouleau"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dynamo-rouleau"
+          }
         }
       }
     },
@@ -1273,6 +1789,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dinamorrodillo T"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dynamo-rouleau pro"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dynamo-rouleau tesla"
           }
         }
       }
@@ -1303,6 +1831,18 @@
             "state" : "translated",
             "value" : "Rodillo versátil"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flexi-rouleau"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flexi-rouleau"
+          }
         }
       }
     },
@@ -1331,6 +1871,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rodillo básico"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rouleau"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rouleau"
           }
         }
       }
@@ -1361,6 +1913,18 @@
             "state" : "translated",
             "value" : "Rodillo básico B"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rouleau Krakeurs"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rouleau griffé"
+          }
         }
       }
     },
@@ -1389,6 +1953,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rodillo mágnum"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rouleau large"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rouleau large"
           }
         }
       }
@@ -1419,6 +1995,18 @@
             "state" : "translated",
             "value" : "Rodillo mágnum B"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rouleau large Xpress"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rouleau large Xpress"
+          }
         }
       }
     },
@@ -1447,6 +2035,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Azotintador brisa"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Éclatana Doto"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Éclatana Doto"
           }
         }
       }
@@ -1477,6 +2077,18 @@
             "state" : "translated",
             "value" : "Azotintador brisa DX"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Éclatana Doto chic"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Éclatana Doto chic"
+          }
         }
       }
     },
@@ -1505,6 +2117,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Azotintador pro"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Éclatana d'estampe"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Éclatana d'estampe"
           }
         }
       }
@@ -1535,6 +2159,18 @@
             "state" : "translated",
             "value" : "Azotintador pro maestro"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Éclatana d'estampe néo"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Éclatana d'estampe Néo"
+          }
         }
       }
     },
@@ -1563,6 +2199,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Paratintas clásico"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para-encre espion"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para-encre espion"
           }
         }
       }
@@ -1593,6 +2241,18 @@
             "state" : "translated",
             "value" : "Paratintas clásico B"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para-encre espion Sorella"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para-encre espion Sorella"
+          }
         }
       }
     },
@@ -1621,6 +2281,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Paratintas"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para-encre"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para-encre"
           }
         }
       }
@@ -1651,6 +2323,18 @@
             "state" : "translated",
             "value" : "Paratintas B"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para-encre Sorella"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para-encre Sorella"
+          }
         }
       }
     },
@@ -1679,6 +2363,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Paratintas maxi"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Méga para-encre"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para-encre XL"
           }
         }
       }
@@ -1709,6 +2405,18 @@
             "state" : "translated",
             "value" : "Paratintas maxi B"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Méga para-encre Sorella"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para-encre XL Sorella"
+          }
         }
       }
     },
@@ -1737,6 +2445,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aerógrafo pro"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pouche-pouche"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aérogun"
           }
         }
       }
@@ -1767,6 +2487,18 @@
             "state" : "translated",
             "value" : "Aerógrafo plus"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pouche-pouche premium"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aérogun premium"
+          }
         }
       }
     },
@@ -1795,6 +2527,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lanzatintas plus"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liquéficateur pro"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liquidateur pro"
           }
         }
       }
@@ -1825,6 +2569,18 @@
             "state" : "translated",
             "value" : "Lanzatintas plus B"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liquéficateur pro Fosia"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liquidateur pro griffé"
+          }
         }
       }
     },
@@ -1853,6 +2609,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lanzatintas novato"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liquéficateur ultra"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liquidateur Jr."
           }
         }
       }
@@ -1883,6 +2651,18 @@
             "state" : "translated",
             "value" : "Lanzatintas novato B"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liquéficateur ultra modifié"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liquidateur Sr."
+          }
         }
       }
     },
@@ -1911,6 +2691,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tintopresor"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compresseur"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compresseur"
           }
         }
       }
@@ -1941,6 +2733,18 @@
             "state" : "translated",
             "value" : "Tintopresor B"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compresseur aluminium"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compresseur alu"
+          }
         }
       }
     },
@@ -1969,6 +2773,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Salpicadora 2000"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calibre 2000"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calibre 2000"
           }
         }
       }
@@ -1999,6 +2815,18 @@
             "state" : "translated",
             "value" : "Salpicadora 3000"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calibre 3000"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calibre 3000"
+          }
         }
       }
     },
@@ -2027,6 +2855,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Salpicadora 3000 DX"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calibre 3000 chic"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calibre 3000 chic"
           }
         }
       }
@@ -2057,6 +2897,18 @@
             "state" : "translated",
             "value" : "Megabarredora"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Méganettoyeur"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nettoyeur XL"
+          }
         }
       }
     },
@@ -2085,6 +2937,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Megabarredora SP"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Méganettoyeur modifié"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nettoyeur XL modifié"
           }
         }
       }
@@ -2115,6 +2979,18 @@
             "state" : "translated",
             "value" : "Lanzatintas"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liquéficateur"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liquidateur"
+          }
         }
       }
     },
@@ -2143,6 +3019,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lanzatintas B"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liquéficateur Tentatek"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liquidateur griffé"
           }
         }
       }
@@ -2173,6 +3061,18 @@
             "state" : "translated",
             "value" : "Pistola de élite (réplica)"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liquéfi. héroïque (rép.)"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lanceur héroïque (réplique)"
+          }
         }
       }
     },
@@ -2201,6 +3101,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Marcador fino"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marqueur léger"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marqueur léger"
           }
         }
       }
@@ -2231,6 +3143,18 @@
             "state" : "translated",
             "value" : "Marcador fino neo"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marqueur léger néo"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marqueur léger Néo"
+          }
         }
       }
     },
@@ -2259,6 +3183,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lanzatintas espacial"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lanceur spatial"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lanceur spatial"
           }
         }
       }
@@ -2289,6 +3225,18 @@
             "state" : "translated",
             "value" : "Lanzatintas espacial B"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lanceur spatial Aroz"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lanceur spatial Aroz"
+          }
         }
       }
     },
@@ -2314,6 +3262,18 @@
           }
         },
         "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N-ZAP 85"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N-ZAP 85"
+          }
+        },
+        "fr-FR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "N-ZAP 85"
@@ -2347,6 +3307,18 @@
             "state" : "translated",
             "value" : "N-ZAP 89"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N-ZAP 89"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N-ZAP 89"
+          }
         }
       }
     },
@@ -2375,6 +3347,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Marcador"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marqueur lourd"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marqueur lourd"
           }
         }
       }
@@ -2405,6 +3389,18 @@
             "state" : "translated",
             "value" : "Marcador neo"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marqueur lourd néo"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marqueur lourd Néo"
+          }
         }
       }
     },
@@ -2433,6 +3429,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tintambor pesado"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arroseur lourd"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arroseur lourd"
           }
         }
       }
@@ -2463,6 +3471,18 @@
             "state" : "translated",
             "value" : "Tintambor pesado D"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arroseur lourd requin"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arroseur lourd Cétacé"
+          }
         }
       }
     },
@@ -2491,6 +3511,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tintambor ligero"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arroseur léger"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arroseur léger"
           }
         }
       }
@@ -2521,6 +3553,18 @@
             "state" : "translated",
             "value" : "Tintambor ligero D"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arroseur léger requin"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arroseur léger Cétacé"
+          }
         }
       }
     },
@@ -2549,6 +3593,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Derramatic baño"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bassineur"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bassineur"
           }
         }
       }
@@ -2579,6 +3635,18 @@
             "state" : "translated",
             "value" : "Derramatic baño DX"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bassineur chic"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bassineur chic"
+          }
         }
       }
     },
@@ -2607,6 +3675,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Derramatic triple"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seauceur trio"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dépoteur"
           }
         }
       }
@@ -2637,6 +3717,18 @@
             "state" : "translated",
             "value" : "Derramatic triple maestro"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seauceur nuancé"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dépoteur nuancé"
+          }
         }
       }
     },
@@ -2665,6 +3757,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Friegamatic"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seau S-Horreur"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seau S-Horreur"
           }
         }
       }
@@ -2695,6 +3799,18 @@
             "state" : "translated",
             "value" : "Derramatic centrífugo"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encrifugeur"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encrifugeur"
+          }
         }
       }
     },
@@ -2723,6 +3839,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Derramatic centrífugo neo"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encrifugeur néo"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encrifugeur Néo"
           }
         }
       }
@@ -2753,6 +3881,18 @@
             "state" : "translated",
             "value" : "Derramatic"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seauceur"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seauceur"
+          }
         }
       }
     },
@@ -2781,6 +3921,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Derramatic DX"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seauceur chic"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seauceur chic"
           }
         }
       }
@@ -2811,6 +3963,18 @@
             "state" : "translated",
             "value" : "Derramatic turbo"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Détoneur"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Détoneur"
+          }
         }
       }
     },
@@ -2839,6 +4003,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ametrallógrafo"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Badigeonneur stylo"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Badigeonneur stylo"
           }
         }
       }
@@ -2869,6 +4045,18 @@
             "state" : "translated",
             "value" : "Ametrallógrafo maestro"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Badigeonneur stylo nuancé"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Badigeonneur stylo nuancé"
+          }
         }
       }
     },
@@ -2897,6 +4085,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Extintador"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exteinteur"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exteinteur"
           }
         }
       }
@@ -2927,6 +4127,18 @@
             "state" : "translated",
             "value" : "Corrigetintas"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Correcteur"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Correcteur"
+          }
         }
       }
     },
@@ -2955,6 +4167,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tintralladora ligera"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Badigeonneur XP"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Badigeonneur XS"
           }
         }
       }
@@ -2985,6 +4209,18 @@
             "state" : "translated",
             "value" : "Tintralladora ligera B"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Badigeonneur XP Leviathus"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Badigeonneur XS griffé"
+          }
         }
       }
     },
@@ -3013,6 +4249,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Subtralladora 47"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nautilus 47"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nautilus 47"
           }
         }
       }
@@ -3043,6 +4291,18 @@
             "state" : "translated",
             "value" : "Tintralladora"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Badigeonneur"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Badigeonneur"
+          }
         }
       }
     },
@@ -3071,6 +4331,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tintralladora DX"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Badigeonneur chic"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Badigeonneur chic"
           }
         }
       }
@@ -3101,6 +4373,18 @@
             "state" : "translated",
             "value" : "Arcromatizador triple"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trisperceur"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trisperceur"
+          }
         }
       }
     },
@@ -3129,6 +4413,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Arcromatizador triple B"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trisperceur Abysma"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trisperceur Abysma"
           }
         }
       }
@@ -3159,6 +4455,18 @@
             "state" : "translated",
             "value" : "AR-CR0 450"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coralux 450"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coralux 450"
+          }
         }
       }
     },
@@ -3187,6 +4495,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "AR-CR0 450 DX"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coralux 450 chic"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coralux 450 chic"
           }
         }
       }

@@ -27,6 +27,18 @@
             "state" : "translated",
             "value" : "Devastadores"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blasteurs"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blasters"
+          }
         }
       }
     },
@@ -55,6 +67,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pinceles"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pinceaux"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pinceaux"
           }
         }
       }
@@ -85,6 +109,18 @@
             "state" : "translated",
             "value" : "Cargatintas"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fusils"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fusils"
+          }
         }
       }
     },
@@ -113,6 +149,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Armas duales"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Armes doubles"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Armes doubles"
           }
         }
       }
@@ -143,6 +191,18 @@
             "state" : "translated",
             "value" : "Rodillos"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rouleaux"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rouleaux"
+          }
         }
       }
     },
@@ -171,6 +231,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Azotintadores"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Éclatanas"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Éclatanas"
           }
         }
       }
@@ -201,6 +273,18 @@
             "state" : "translated",
             "value" : "Paratintas"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para-encres"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para-encres"
+          }
         }
       }
     },
@@ -229,6 +313,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lanzatintas"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lanceurs"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lanceurs"
           }
         }
       }
@@ -259,6 +355,18 @@
             "state" : "translated",
             "value" : "Derramatic"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seaux"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seaux"
+          }
         }
       }
     },
@@ -288,6 +396,18 @@
             "state" : "translated",
             "value" : "Tintralladoras"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Badigeonneurs"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Badigeonneurs"
+          }
         }
       }
     },
@@ -316,6 +436,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Arcromatizadores"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transperceurs"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transperceurs"
           }
         }
       }

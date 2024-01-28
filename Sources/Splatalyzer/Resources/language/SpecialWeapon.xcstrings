@@ -27,6 +27,18 @@
             "state" : "translated",
             "value" : "Aspiratinta"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aspirencre"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aspirencre"
+          }
         }
       }
     },
@@ -55,6 +67,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Calamar imperial"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kraken royal"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kraken royal"
           }
         }
       }
@@ -85,6 +109,18 @@
             "state" : "translated",
             "value" : "Cangrejobot"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crabe d'assaut"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crabe d'assaut"
+          }
         }
       }
     },
@@ -113,6 +149,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pantintalla"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Barrière barbouillée"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Barrière barbouillée"
           }
         }
       }
@@ -143,6 +191,18 @@
             "state" : "translated",
             "value" : "Dispensabebidas"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Districool"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Districool"
+          }
         }
       }
     },
@@ -171,6 +231,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Multiseñuelos"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Multi-leurres"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Multi-leurres"
           }
         }
       }
@@ -201,6 +273,18 @@
             "state" : "translated",
             "value" : "Megaburbuja"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Super bouclier"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Super bouclier"
+          }
         }
       }
     },
@@ -229,6 +313,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Atormentador"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pluie d'encre"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pluie d'encre"
           }
         }
       }
@@ -259,6 +355,18 @@
             "state" : "translated",
             "value" : "Propulsor"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chromo-jet"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chromo-jet"
+          }
         }
       }
     },
@@ -287,6 +395,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tintófono 5.1"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laser perçant 5.1"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haut-perceur 5.1"
           }
         }
       }
@@ -317,6 +437,18 @@
             "state" : "translated",
             "value" : "Lanzamisiles"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Multi-missile"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Multi-missile"
+          }
         }
       }
     },
@@ -345,6 +477,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bola genializante"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Excellinator"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jolizator"
           }
         }
       }
@@ -375,6 +519,18 @@
             "state" : "translated",
             "value" : "Puñetazos explosivos"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Triple choc chromatique"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Triple choc chromatique"
+          }
         }
       }
     },
@@ -403,6 +559,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Emiteondas"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonar paf"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonar paf"
           }
         }
       }
@@ -433,6 +601,18 @@
             "state" : "translated",
             "value" : "Flotiburón"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cavalsquale"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cavalsquale"
+          }
         }
       }
     },
@@ -461,6 +641,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gancho tentacular"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Super Mollusque"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Super Mollusque"
           }
         }
       }
@@ -491,6 +683,18 @@
             "state" : "translated",
             "value" : "Tornado triple"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trimissile tornade"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trimissile tornade"
+          }
         }
       }
     },
@@ -520,6 +724,18 @@
             "state" : "translated",
             "value" : "Tintazuca triple"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lance-tornades"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lance-rafales"
+          }
         }
       }
     },
@@ -548,6 +764,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ultraselladora"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ultra-étampeur"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ultra-tamponneur"
           }
         }
       }

@@ -27,6 +27,18 @@
             "state" : "translated",
             "value" : "Agilidad extra"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Feu de l'action"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Feu de l'action"
+          }
         }
       }
     },
@@ -55,6 +67,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Remontada"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retour"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Come-back"
           }
         }
       }
@@ -85,6 +109,18 @@
             "state" : "translated",
             "value" : "Represalia"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vengeance"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Revanche"
+          }
         }
       }
     },
@@ -113,6 +149,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sprint final"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ultime sursaut"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ultime sursaut"
           }
         }
       }
@@ -143,6 +191,18 @@
             "state" : "translated",
             "value" : "Castigo póstumo"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retour perdant"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retour perdant"
+          }
         }
       }
     },
@@ -171,6 +231,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Duplicador"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bonus ×2"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bonus ×2"
           }
         }
       }
@@ -201,6 +273,18 @@
             "state" : "translated",
             "value" : "Supercarrera"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Course à pied"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Course à pied"
+          }
         }
       }
     },
@@ -229,6 +313,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Recarga rápida"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Levée d'encre"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Levée d'encre"
           }
         }
       }
@@ -259,6 +355,18 @@
             "state" : "translated",
             "value" : "Supersalto rápido"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aérodynamisme"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aérodynamisme"
+          }
         }
       }
     },
@@ -287,6 +395,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tintahorro (ppal.)"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encrémenteur (pr.)"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encrémenteur (pr.)"
           }
         }
       }
@@ -317,6 +437,18 @@
             "state" : "translated",
             "value" : "Ventaja"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ténacité"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Justice"
+          }
         }
       }
     },
@@ -345,6 +477,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Demolición"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Démolition"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Démolition"
           }
         }
       }
@@ -375,6 +519,18 @@
             "state" : "translated",
             "value" : "Impermeabilidad"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Imperméabilité"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pieds au sec"
+          }
         }
       }
     },
@@ -403,6 +559,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reducción especial"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Baisse spéciale -"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Baisse spéciale -"
           }
         }
       }
@@ -433,6 +601,18 @@
             "state" : "translated",
             "value" : "Retorno exprés"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sans temps mort"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sans temps morts"
+          }
         }
       }
     },
@@ -461,6 +641,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Amortiguador"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Super roulade"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Super roulade"
           }
         }
       }
@@ -491,6 +683,18 @@
             "state" : "translated",
             "value" : "Recarga especial"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jauge spéciale +"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jauge spéciale +"
+          }
         }
       }
     },
@@ -519,6 +723,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Superarma especial"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arme spéciale +"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arme spéciale +"
           }
         }
       }
@@ -549,6 +765,18 @@
             "state" : "translated",
             "value" : "Superbuceo"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turbo-calmar"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turbo-calamar"
+          }
         }
       }
     },
@@ -574,6 +802,18 @@
           }
         },
         "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ninjalamar"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ninjalmar"
+          }
+        },
+        "fr-FR" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ninjalamar"
@@ -607,6 +847,18 @@
             "state" : "translated",
             "value" : "Acelerón de salida"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Départ toute allure"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chapeaux de roue"
+          }
         }
       }
     },
@@ -635,6 +887,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Resistencia secundaria"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filtre à secondaires"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filtre à secondaires"
           }
         }
       }
@@ -665,6 +929,18 @@
             "state" : "translated",
             "value" : "Tintahorro (sec.)"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encrémenteur (sec.)"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encrémenteur (sec.)"
+          }
         }
       }
     },
@@ -693,6 +969,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Superarma secundaria"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arme secondaire +"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arme secondaire +"
           }
         }
       }
@@ -723,6 +1011,18 @@
             "state" : "translated",
             "value" : "Supersalto invisible"
           }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Super saut invisible"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Réception réussie"
+          }
         }
       }
     },
@@ -751,6 +1051,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Señuelo"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encre thermique"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encre thermique"
           }
         }
       }
