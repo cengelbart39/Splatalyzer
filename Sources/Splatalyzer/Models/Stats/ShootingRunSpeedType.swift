@@ -7,6 +7,8 @@
 
 import Foundation
 
+/// Represents the type of run speed while shooting a weapon
+/// - SeeAlso: ``StatHelper/shootingRunSpeed(for:ap:abilities:mainInfo:)`` for how to use this Enum.
 public enum ShootingRunSpeedType {
     case moveSpeed
     case moveSpeedCharge

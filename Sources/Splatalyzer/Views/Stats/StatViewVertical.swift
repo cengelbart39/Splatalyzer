@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// A vertical display of of ``BuildSelector`` and Build Stats
 public struct StatViewVertical: View {
     
     @StateObject public var analyzer = Splatalyzer()
@@ -17,34 +18,10 @@ public struct StatViewVertical: View {
         GeometryReader { geo in
             ScrollView {
                 VStack {
-                    AbilitySelector()
+                    BuildSelector()
                     
                     if let stats = analyzer.stats {
-                        
-                        let mainStats = stats.mainWeaponStats()
-                        VStack {
-                            if mainStats.exists() {
-                                MainStatList(mainStats: mainStats)
-                            }
-                            
-                            SubStatList(subStats: stats.subStats())
-                            
-                            SpecialStatList(specialStats: stats.specialStats())
-                            
-                            SubDefenseStatList(defenseStats: stats.subDefenseStats())
-                            
-                            SubDefenseDamageList(defenseDamage: stats.subDefenseDamages)
-                            
-                            MainDamageList(mainDamages: stats.mainDamages.filtered())
-                            
-                            SpecialDamageList(specialWeapon: stats.specialWeapon, specialDamage: stats.specialDamages)
-                            
-                            InkTankOptionsList(options: stats.fullInkTankOptions)
-                            
-                            MovementStatList(movementStats: stats.movementStats())
-                            
-                            MiscStatList(miscStats: stats.miscStats())
-                        }
+                        BuildStatsView(stats: stats)
                     }
                 }
                 .padding(.horizontal)

@@ -7,28 +7,19 @@
 
 import SwiftUI
 
-struct LDEPicker: View {
+/// A picker to choose the Last-Ditch Effort Intensity
+///
+/// Disabled if the gear build doesn't have Last Ditch Effort
+public struct LDEPicker: View {
     
-    @EnvironmentObject var analyzer: Splatalyzer
+    @EnvironmentObject public var analyzer: Splatalyzer
     
-    var body: some View {
+    public var body: some View {
         HStack {
-            #if os(macOS)
-            Image(nsImage: Ability.lastDitchEffort.image ?? NSImage())
-                .resizable()
-                .scaledToFit()
+            ImageView(image: Ability.lastDitchEffort.image)
                 .padding(5)
                 .abilityBackground()
                 .frame(width: 60, height: 60)
-            #else
-            Image(uiImage: Ability.lastDitchEffort.image ?? UIImage())
-                .resizable()
-                .scaledToFit()
-                .padding(5)
-                .abilityBackground()
-                .frame(width: 60, height: 60)
-            #endif
-            
             
             Picker(String(localized: "LDE Intensity", comment: "LDE = Last Ditch Error"), selection: $analyzer.ldeIntensity) {
                 Text("0% (+0 AP)", comment: "LDE Intensity 0")

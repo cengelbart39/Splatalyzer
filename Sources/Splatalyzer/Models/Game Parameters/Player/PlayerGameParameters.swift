@@ -7,120 +7,131 @@
 
 import Foundation
 
-public struct PlayerParameters: Codable {
-    public let dieBlastParam: DieBlastParameter
+/// Represents the game parameter data of the Player from
+/// `SplPlayer.game__GameParameterTable.json`
+public struct Player: GameParametable {
     
-    public let playerLeagueInGameModifierParam: PlayerLeagueInGameModifierParameter
+    public var parameters: Parameters
     
-    public let constraintBidnableHelperParam: ConstraintBindableHelperParameter
+    public init(parameters: Parameters) {
+        self.parameters = parameters
+    }
     
-    public let coopBuildParam: CoopBuildParameter
-    public let coopBuildParamHumanMoveUp: CoopBuildParameterHumanMoveUp
-    public let coopBuildParamOpInkEffectReduction: CoopBuildParameterOpInkEffectReduction
-    public let coopBuildParamSquidMoveUp: CoopBuildParameterSquidMoveUp
-    
-    public let damageParam: DamageParameter
-    
-    public let displayItemGetHelperParam: DisplayItemGetHelperParameter
-    
-    public let inkRailPlayerParam: InkRailPlayerParameter
-    
-    public let playerAttractTargetParam: AttractTargetParameter
-    
-    public let playerBeaconSubSpecUpParam: BeaconSubSpecUpParameter
-    
-    public let playerCameraPeriscopeParam: CameraPeriscopeParameter
-    
-    public let playerCanolaShotParam: CanolaShotParameter
-    
-    public let playerEntryLiftParam: EntryLiftParameter
-    
-    public let skillActionSpecUpSquidParam: ActionSpecUpSquidSkillParameter
-    
-    public let skillHumanMoveUpParam: HumanMoveUpSkillParameter
-    
-    public let skillInkRecoveryUpParam: InkRecoveryUpSkillParameter
-    
-    public let skillMainInkSaveParam: MainInkSaveSkillParameter
-    
-    public let skillOpInkEffectReductionParam: OpInkEffectReductionSkillParameter
-    
-    public let skillRespawnSpecialGuageSaveParam: RespawnSpecialGuageSaveSkillParameter
-    
-    public let skillRespawnTimeSaveParam: RespawnTimeSaveSkillParameter
-    
-    public let skillSpecialIncreaseUpParam: SpecialIncreaseUpSkillParameter
-    
-    public let skillSquidMoveUpParam: SquidMoveUpSkillParameter
-    
-    public let skillSubEffectReductionParam: SubEffectReductionSkillParameter
-    
-    public let skillSubInkSaveParam: SubInkSaveSkillParameter
-    
-    public let skillSuperJumpTimeSave: SuperJumpTimeSaveSkillParameter
-    
-    public let playerGeyserParam: GeyserParameter
-    
-    public let playerGrindRailParam: GrindRailParameter
-    
-    public let playerJumpGimmickParam: JumpGimmickParameter
-    
-    public let playerMissionSearchAbilityParam: MissionSearchAbilityParameter
-    
-    public let playerMissionSkillParam: MissionSkillParameter
-    
-    public let playerPeriscopeParam: PeriscopeParameter
-    
-    public let playerPipelineParam: PipelineParameter
-    
-    public let playerVehicleSpectacleParam: VehicleSpectacleParameter
-    
-    public let playerThrowClamParma: ThrowClamParameter
-    
-    public let playerThrowGoldIkuraParam: ThrowGoldenIkuraParameter
-    
-    public enum CodingKeys: String, CodingKey {
-        case dieBlastParam = "DieBlastParam"
-        case playerLeagueInGameModifierParam = "PlayerLeagueInGameModifierParam"
-        case constraintBidnableHelperParam = "spl__ConstraintBindableHelperParam"
-        case coopBuildParam = "spl__CoopBuildParam"
-        case coopBuildParamHumanMoveUp = "spl__CoopBuildParam_HumanMoveUp"
-        case coopBuildParamOpInkEffectReduction = "spl__CoopBuildParam_OpInkEffectReduction"
-        case coopBuildParamSquidMoveUp = "spl__CoopBuildParam_SquidMoveUp"
-        case damageParam = "spl__DamageParam"
-        case displayItemGetHelperParam = "spl__DisplayItemGetHelperParam"
-        case inkRailPlayerParam = "spl__InkRailPlayerParam"
-        case playerAttractTargetParam = "spl__PlayerAttractTargetParam"
-        case playerBeaconSubSpecUpParam = "spl__PlayerBeaconSubSpecUpParam"
-        case playerCameraPeriscopeParam = "spl__PlayerCameraPeriscopeParam"
-        case playerCanolaShotParam = "spl__PlayerCanolaShotParam"
-        case playerEntryLiftParam = "spl__PlayerEntryLiftParam"
-        case skillActionSpecUpSquidParam = "spl__PlayerGearSkillParam_ActionSpecUp_Squid"
-        case skillHumanMoveUpParam = "spl__PlayerGearSkillParam_HumanMoveUp"
-        case skillInkRecoveryUpParam = "spl__PlayerGearSkillParam_InkRecoveryUp"
-        case skillMainInkSaveParam = "spl__PlayerGearSkillParam_MainInkSave"
-        case skillOpInkEffectReductionParam = "spl__PlayerGearSkillParam_OpInkEffectReduction"
-        case skillRespawnSpecialGuageSaveParam = "spl__PlayerGearSkillParam_RespawnSpecialGaugeSave"
-        case skillRespawnTimeSaveParam = "spl__PlayerGearSkillParam_RespawnTimeSave"
-        case skillSpecialIncreaseUpParam = "spl__PlayerGearSkillParam_SpecialIncreaseUp"
-        case skillSquidMoveUpParam = "spl__PlayerGearSkillParam_SquidMoveUp"
-        case skillSubEffectReductionParam = "spl__PlayerGearSkillParam_SubEffectReduction"
-        case skillSubInkSaveParam = "spl__PlayerGearSkillParam_SubInkSave"
-        case skillSuperJumpTimeSave = "spl__PlayerGearSkillParam_SuperJumpTimeSave"
-        case playerGeyserParam = "spl__PlayerGeyserParam"
-        case playerGrindRailParam = "spl__PlayerGrindRailParam"
-        case playerJumpGimmickParam = "spl__PlayerJumpGimmickParam"
-        case playerMissionSearchAbilityParam = "spl__PlayerMissionSearchAbilityParam"
-        case playerMissionSkillParam = "spl__PlayerMissionSkillParam"
-        case playerPeriscopeParam = "spl__PlayerPeriscopeParam"
-        case playerPipelineParam = "spl__PlayerPipelineParam"
-        case playerVehicleSpectacleParam = "spl__PlayerVehicleSpectacleParam"
-        case playerThrowClamParma = "spl__ThrowClamParam"
-        case playerThrowGoldIkuraParam = "spl__ThrowGoldenIkuraParam"
+    public struct Parameters: Codable {
+        public let dieBlastParam: DieBlastParameter
+        
+        public let playerLeagueInGameModifierParam: PlayerLeagueInGameModifierParameter
+        
+        public let constraintBidnableHelperParam: ConstraintBindableHelperParameter
+        
+        public let coopBuildParam: CoopBuildParameter
+        public let coopBuildParamHumanMoveUp: CoopBuildParameterHumanMoveUp
+        public let coopBuildParamOpInkEffectReduction: CoopBuildParameterOpInkEffectReduction
+        public let coopBuildParamSquidMoveUp: CoopBuildParameterSquidMoveUp
+        
+        public let damageParam: DamageParameter
+        
+        public let displayItemGetHelperParam: DisplayItemGetHelperParameter
+        
+        public let inkRailPlayerParam: InkRailPlayerParameter
+        
+        public let playerAttractTargetParam: AttractTargetParameter
+        
+        public let playerBeaconSubSpecUpParam: BeaconSubSpecUpParameter
+        
+        public let playerCameraPeriscopeParam: CameraPeriscopeParameter
+        
+        public let playerCanolaShotParam: CanolaShotParameter
+        
+        public let playerEntryLiftParam: EntryLiftParameter
+        
+        public let skillActionSpecUpSquidParam: ActionSpecUpSquidSkillParameter
+        
+        public let skillHumanMoveUpParam: HumanMoveUpSkillParameter
+        
+        public let skillInkRecoveryUpParam: InkRecoveryUpSkillParameter
+        
+        public let skillMainInkSaveParam: MainInkSaveSkillParameter
+        
+        public let skillOpInkEffectReductionParam: OpInkEffectReductionSkillParameter
+        
+        public let skillRespawnSpecialGuageSaveParam: RespawnSpecialGuageSaveSkillParameter
+        
+        public let skillRespawnTimeSaveParam: RespawnTimeSaveSkillParameter
+        
+        public let skillSpecialIncreaseUpParam: SpecialIncreaseUpSkillParameter
+        
+        public let skillSquidMoveUpParam: SquidMoveUpSkillParameter
+        
+        public let skillSubEffectReductionParam: SubEffectReductionSkillParameter
+        
+        public let skillSubInkSaveParam: SubInkSaveSkillParameter
+        
+        public let skillSuperJumpTimeSave: SuperJumpTimeSaveSkillParameter
+        
+        public let playerGeyserParam: GeyserParameter
+        
+        public let playerGrindRailParam: GrindRailParameter
+        
+        public let playerJumpGimmickParam: JumpGimmickParameter
+        
+        public let playerMissionSearchAbilityParam: MissionSearchAbilityParameter
+        
+        public let playerMissionSkillParam: MissionSkillParameter
+        
+        public let playerPeriscopeParam: PeriscopeParameter
+        
+        public let playerPipelineParam: PipelineParameter
+        
+        public let playerVehicleSpectacleParam: VehicleSpectacleParameter
+        
+        public let playerThrowClamParma: ThrowClamParameter
+        
+        public let playerThrowGoldIkuraParam: ThrowGoldenIkuraParameter
+        
+        public enum CodingKeys: String, CodingKey {
+            case dieBlastParam = "DieBlastParam"
+            case playerLeagueInGameModifierParam = "PlayerLeagueInGameModifierParam"
+            case constraintBidnableHelperParam = "spl__ConstraintBindableHelperParam"
+            case coopBuildParam = "spl__CoopBuildParam"
+            case coopBuildParamHumanMoveUp = "spl__CoopBuildParam_HumanMoveUp"
+            case coopBuildParamOpInkEffectReduction = "spl__CoopBuildParam_OpInkEffectReduction"
+            case coopBuildParamSquidMoveUp = "spl__CoopBuildParam_SquidMoveUp"
+            case damageParam = "spl__DamageParam"
+            case displayItemGetHelperParam = "spl__DisplayItemGetHelperParam"
+            case inkRailPlayerParam = "spl__InkRailPlayerParam"
+            case playerAttractTargetParam = "spl__PlayerAttractTargetParam"
+            case playerBeaconSubSpecUpParam = "spl__PlayerBeaconSubSpecUpParam"
+            case playerCameraPeriscopeParam = "spl__PlayerCameraPeriscopeParam"
+            case playerCanolaShotParam = "spl__PlayerCanolaShotParam"
+            case playerEntryLiftParam = "spl__PlayerEntryLiftParam"
+            case skillActionSpecUpSquidParam = "spl__PlayerGearSkillParam_ActionSpecUp_Squid"
+            case skillHumanMoveUpParam = "spl__PlayerGearSkillParam_HumanMoveUp"
+            case skillInkRecoveryUpParam = "spl__PlayerGearSkillParam_InkRecoveryUp"
+            case skillMainInkSaveParam = "spl__PlayerGearSkillParam_MainInkSave"
+            case skillOpInkEffectReductionParam = "spl__PlayerGearSkillParam_OpInkEffectReduction"
+            case skillRespawnSpecialGuageSaveParam = "spl__PlayerGearSkillParam_RespawnSpecialGaugeSave"
+            case skillRespawnTimeSaveParam = "spl__PlayerGearSkillParam_RespawnTimeSave"
+            case skillSpecialIncreaseUpParam = "spl__PlayerGearSkillParam_SpecialIncreaseUp"
+            case skillSquidMoveUpParam = "spl__PlayerGearSkillParam_SquidMoveUp"
+            case skillSubEffectReductionParam = "spl__PlayerGearSkillParam_SubEffectReduction"
+            case skillSubInkSaveParam = "spl__PlayerGearSkillParam_SubInkSave"
+            case skillSuperJumpTimeSave = "spl__PlayerGearSkillParam_SuperJumpTimeSave"
+            case playerGeyserParam = "spl__PlayerGeyserParam"
+            case playerGrindRailParam = "spl__PlayerGrindRailParam"
+            case playerJumpGimmickParam = "spl__PlayerJumpGimmickParam"
+            case playerMissionSearchAbilityParam = "spl__PlayerMissionSearchAbilityParam"
+            case playerMissionSkillParam = "spl__PlayerMissionSkillParam"
+            case playerPeriscopeParam = "spl__PlayerPeriscopeParam"
+            case playerPipelineParam = "spl__PlayerPipelineParam"
+            case playerVehicleSpectacleParam = "spl__PlayerVehicleSpectacleParam"
+            case playerThrowClamParma = "spl__ThrowClamParam"
+            case playerThrowGoldIkuraParam = "spl__ThrowGoldenIkuraParam"
+        }
     }
 }
 
-extension PlayerParameters {
+extension Player.Parameters {
     public struct DieBlastParameter: Codable {
         public let type: String
         public let collisionRadiusForPaint: Double
@@ -220,7 +231,7 @@ extension PlayerParameters {
     }
 }
 
-extension PlayerParameters.DamageParameter {
+extension Player.Parameters.DamageParameter {
     public struct DamagerReciever: Codable {
         public let damagerHistMaxSize: Int
         public let damageRateInfoCol: String
@@ -242,7 +253,7 @@ extension PlayerParameters.DamageParameter {
             case shotTargetLocatorName = "ShotTargetLocatorName"
         }
     }
-
+    
     public struct DamageSender: Codable {
         public let name: String
         public let refRigidBody: [String]
@@ -252,10 +263,10 @@ extension PlayerParameters.DamageParameter {
             case refRigidBody = "RefRigidBody"
         }
     }
-
+    
 }
- 
-extension PlayerParameters {
+
+extension Player.Parameters {
     public struct DisplayItemGetHelperParameter: Codable {
         public let type: String
         public let displayOffsetY: Double
@@ -285,7 +296,7 @@ extension PlayerParameters {
     }
 }
 
-extension PlayerParameters.InkRailPlayerParameter {
+extension Player.Parameters.InkRailPlayerParameter {
     public struct ModelDynamicsUnitParameter: Codable {
         public let airRes: Double
         public let connectionForce: Double
@@ -318,7 +329,7 @@ public struct BeaconSubSpecUpParameter: Codable {
     }
 }
 
-extension PlayerParameters {
+extension Player.Parameters {
     public struct AttractTargetParameter: Codable {
         public let type: String
         
@@ -358,7 +369,7 @@ extension PlayerParameters {
             case finishVel = "FinishVel"
         }
     }
-
+    
     public struct GeyserParameter: Codable {
         public let type: String
         public let bindToRoofMinSec: Double
@@ -492,7 +503,7 @@ extension PlayerParameters {
     }
 }
 
-extension PlayerParameters {
+extension Player.Parameters {
     public struct ActionSpecUpSquidSkillParameter: Codable {
         public let type: String
         public let wallJumpChargeFormHigh: Int
@@ -570,7 +581,7 @@ extension PlayerParameters {
             case type = "$type"
         }
     }
-
+    
     public struct SubEffectReductionSkillParameter: Codable {
         public let type: String
         public let damageRtBombLHigh: Double
@@ -582,7 +593,7 @@ extension PlayerParameters {
             case damageRtBombLMid = "DamageRt_BombL_Mid"
         }
     }
-
+    
     public struct SubInkSaveSkillParameter: Codable {
         public let type: String
         
@@ -590,7 +601,7 @@ extension PlayerParameters {
             case type = "$type"
         }
     }
-
+    
     public struct SuperJumpTimeSaveSkillParameter: Codable {
         public let type: String
         
@@ -600,7 +611,7 @@ extension PlayerParameters {
     }
 }
 
-extension PlayerParameters {
+extension Player.Parameters {
     public struct MissionSearchAbilityParameter: Codable {
         public let type: String
         public let markingForgetTime: Double
@@ -620,7 +631,7 @@ extension PlayerParameters {
     }
 }
 
-extension PlayerParameters.MissionSearchAbilityParameter {
+extension Player.Parameters.MissionSearchAbilityParameter {
     public struct RadiusParameter: Codable {
         public let strongRadius: Double
         public let weakRadius: Double
@@ -646,7 +657,7 @@ extension PlayerParameters.MissionSearchAbilityParameter {
     }
 }
 
-extension PlayerParameters.MissionSearchAbilityParameter.SightParameter {
+extension Player.Parameters.MissionSearchAbilityParameter.SightParameter {
     public struct ShapeHolderUnitParameter: Codable {
         public let name: String
         public let shapeHolderUnitParam: ShapeHolderParameter
@@ -670,7 +681,7 @@ extension PlayerParameters.MissionSearchAbilityParameter.SightParameter {
     }
 }
 
-extension PlayerParameters {
+extension Player.Parameters {
     public struct ThrowClamParameter: Codable {
         public let type: String
         public let additionalMoveParam: AdditionalMoveParameter
@@ -688,7 +699,7 @@ extension PlayerParameters {
     }
 }
 
-extension PlayerParameters.ThrowClamParameter {
+extension Player.Parameters.ThrowClamParameter {
     public struct BlastGachiParameter: Codable {
         public let crossPaintCheckLength: Double
         public let crossPaintRadius: Double
@@ -722,7 +733,7 @@ extension PlayerParameters.ThrowClamParameter {
     }
 }
 
-extension PlayerParameters {
+extension Player.Parameters {
     public struct ThrowGoldenIkuraParameter: Codable {
         public let type: String
         public let additionalMoveParam: AdditionalMoveParameter
@@ -742,7 +753,7 @@ extension PlayerParameters {
     }
 }
 
-extension PlayerParameters.ThrowGoldenIkuraParameter {
+extension Player.Parameters.ThrowGoldenIkuraParameter {
     public struct AttackParameter: Codable {
         public let blastParam: BlastParameter
         public let collisionRadius: Double
@@ -800,7 +811,7 @@ extension PlayerParameters.ThrowGoldenIkuraParameter {
     }
 }
 
-extension PlayerParameters.ThrowGoldenIkuraParameter.AttackParameter {
+extension Player.Parameters.ThrowGoldenIkuraParameter.AttackParameter {
     public struct BlastParameter: Codable {
         public let crossPaintCheckLength: Double
         public let crossPaintRadius: Double

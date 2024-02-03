@@ -7,91 +7,37 @@
 
 import SwiftUI
 
-struct SubStatList: View {
-    @Environment(\.colorScheme) var colorScheme
+/// Displays sub weapon statistics
+public struct SubStatList: View {
     
-    @State var isCollapsed = true
+    public var subStats: SubWeaponStats
     
-    var subStats: SubWeaponStats
-    
-    var body: some View {
-        VStack {
-            Button(action: {
-                withAnimation {
-                    self.isCollapsed.toggle()
-                }
-            }, label: {
-                HStack {
-                    Label(
-                        title: {
-                            Text(subStats.weapon.localized)
-                                .font(.title3)
-                            
-                        }, icon: {
-                            #if os(macOS)
-                            Image(nsImage: subStats.weapon.image ?? NSImage())
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 25)
-                            #else
-                            Image(uiImage: subStats.weapon.image ?? UIImage())
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 25)
-                            #endif
-                        }
-                    )
-                    
-                    Spacer()
-                    
-                    Image(systemName: isCollapsed ? "chevron.right" : "chevron.down")
-                        .font(.title3)
-                }
-                .bold()
-            })
-            .contentTransition(.symbolEffect(.replace))
-            .cardBackground(for: colorScheme)
-            
-            if !self.isCollapsed {
-                LazyVStack(spacing: 10) {
-                    AbilityStatCard(stat: subStats.inkConsumptionPercentage)
-                    
-                    DoubleStatCard(
-                        title: String(localized: "No Ink Recovery Time After Usage"),
-                        value: subStats.whiteInkSeconds,
-                        unit: .seconds)
-                    
-                    if let velocity = subStats.velocity {
-                        AbilityStatCard(stat: velocity)
-                    }
-                    
-                    if let firstPhaseDuration = subStats.firstPhaseDuration {
-                        AbilityStatCard(stat: firstPhaseDuration)
-                    }
-                    
-                    if let secondPhaseDuration = subStats.secondPhaseDuration {
-                        AbilityStatCard(stat: secondPhaseDuration)
-                    }
-                    
-                    if let markingTimeInSeconds = subStats.markingTimeInSeconds {
-                        AbilityStatCard(stat: markingTimeInSeconds)
-                    }
-                    
-                    if let markingRadius = subStats.markingRadius {
-                        AbilityStatCard(stat: markingRadius)
-                    }
-                    
-                    if let explosionRadius = subStats.explosionRadius {
-                        AbilityStatCard(stat: explosionRadius)
-                    }
-                    
-                    if let subHp = subStats.subHp {
-                        AbilityStatCard(stat: subHp)
-                    }
-                    
-                    if let quickSuperJumpBoost = subStats.quickSuperJumpBoost, subStats.weapon == .squidBeakon {
-                        AbilityStatCard(stat: quickSuperJumpBoost)
-                    }
+    public var body: some View {
+        StatList(title: subStats.weapon.localized, image: subStats.weapon.image) {
+            LazyVStack(spacing: 10) {
+                AbilityStatCard(stat: subStats.inkConsumptionPercentage)
+                
+                DoubleStatCard(
+                    title: String(localized: "No Ink Recovery Time After Usage"),
+                    value: subStats.whiteInkSeconds,
+                    unit: .seconds)
+                
+                AbilityStatCard(stat: subStats.velocity)
+                
+                AbilityStatCard(stat: subStats.firstPhaseDuration)
+                
+                AbilityStatCard(stat: subStats.secondPhaseDuration)
+                
+                AbilityStatCard(stat: subStats.markingTimeInSeconds)
+                
+                AbilityStatCard(stat: subStats.markingRadius)
+                
+                AbilityStatCard(stat: subStats.explosionRadius)
+                
+                AbilityStatCard(stat: subStats.subHp)
+                
+                if subStats.weapon == .squidBeakon {
+                    AbilityStatCard(stat: subStats.quickSuperJumpBoost)
                 }
             }
         }

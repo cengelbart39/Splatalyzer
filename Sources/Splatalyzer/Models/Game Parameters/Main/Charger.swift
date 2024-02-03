@@ -7,45 +7,59 @@
 
 import Foundation
 
-public struct Charger: Codable {
-    public let collisionParam: CollisionParameter
-    public let damageParam: DamageParameter
-    public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
-    public let mainWeaponSetting: MainWeaponSettings
-    public let moveParam: MoveParameter
-    public let paintParam: PaintParameter
-    public let splashPaintParam: SplashPaintParameter
-    public let splashSpawnParam: SplashSpawnParameter
-    public let splashWallHitParam: SplashWallHitParameter
-    public let wallDropCollisionPaintParam: WallDropCollisionPaintParameter
-    public let wallDropMoveParam: WallDropMoveParameter
-    public let weaponKeepChargeParam: KeepChargeParameter?
-    public let weaponDivideChargerParam: DivideChargerParameter?
-    public let weaponParam: WeaponParameter
-    public let weaponScopeParam: ScopeParameter?
-    public let weaponChargerGuideShapeParam: GuideShapeParameter?
+/// Represents the game parameter data of a main weapon in the
+/// Charger Class.
+///
+/// To see a representative `JSON` go to
+/// `Resources/weapon-json/` and find a file prefixed with
+/// `WeaponCharger`.
+public struct Charger: GameParametable {
+    public var parameters: Parameters
     
-    public enum CodingKeys: String, CodingKey {
-        case collisionParam = "CollisionParam"
-        case damageParam = "DamageParam"
-        case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
-        case mainWeaponSetting = "MainWeaponSetting"
-        case moveParam = "MoveParam"
-        case paintParam = "PaintParam"
-        case splashPaintParam = "SplashPaintParam"
-        case splashSpawnParam = "SplashSpawnParam"
-        case splashWallHitParam = "SplashWallHitParam"
-        case wallDropCollisionPaintParam = "WallDropCollisionPaintParam"
-        case wallDropMoveParam = "WallDropMoveParam"
-        case weaponKeepChargeParam = "WeaponKeepChargeParam"
-        case weaponDivideChargerParam = "WeaponDivideChargerParam"
-        case weaponParam = "WeaponParam"
-        case weaponScopeParam = "WeaponScopeParam"
-        case weaponChargerGuideShapeParam = "spl__WeaponChargerGuideShapeParam"
+    public init(parameters: Parameters) {
+        self.parameters = parameters
+    }
+    
+    public struct Parameters: Codable {
+        public let collisionParam: CollisionParameter
+        public let damageParam: DamageParameter
+        public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
+        public let mainWeaponSetting: MainWeaponSettings
+        public let moveParam: MoveParameter
+        public let paintParam: PaintParameter
+        public let splashPaintParam: SplashPaintParameter
+        public let splashSpawnParam: SplashSpawnParameter
+        public let splashWallHitParam: SplashWallHitParameter
+        public let wallDropCollisionPaintParam: WallDropCollisionPaintParameter
+        public let wallDropMoveParam: WallDropMoveParameter
+        public let weaponKeepChargeParam: KeepChargeParameter?
+        public let weaponDivideChargerParam: DivideChargerParameter?
+        public let weaponParam: WeaponParameter
+        public let weaponScopeParam: ScopeParameter?
+        public let weaponChargerGuideShapeParam: GuideShapeParameter?
+        
+        public enum CodingKeys: String, CodingKey {
+            case collisionParam = "CollisionParam"
+            case damageParam = "DamageParam"
+            case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
+            case mainWeaponSetting = "MainWeaponSetting"
+            case moveParam = "MoveParam"
+            case paintParam = "PaintParam"
+            case splashPaintParam = "SplashPaintParam"
+            case splashSpawnParam = "SplashSpawnParam"
+            case splashWallHitParam = "SplashWallHitParam"
+            case wallDropCollisionPaintParam = "WallDropCollisionPaintParam"
+            case wallDropMoveParam = "WallDropMoveParam"
+            case weaponKeepChargeParam = "WeaponKeepChargeParam"
+            case weaponDivideChargerParam = "WeaponDivideChargerParam"
+            case weaponParam = "WeaponParam"
+            case weaponScopeParam = "WeaponScopeParam"
+            case weaponChargerGuideShapeParam = "spl__WeaponChargerGuideShapeParam"
+        }
     }
 }
-
-extension Charger {
+    
+extension Charger.Parameters {
     public struct CollisionParameter: Codable {
         public let type: String
         public let endRadiusForField: Double
@@ -63,7 +77,7 @@ extension Charger {
     }
 }
 
-extension Charger {
+extension Charger.Parameters {
     public struct DamageParameter: Codable {
         public let type: String
         public let valueFullCharge: Int
@@ -79,7 +93,7 @@ extension Charger {
     }
 }
 
-extension Charger {
+extension Charger.Parameters {
     public struct MoveParameter: Codable {
         public let type: String
         public let distanceFullCharge: Double
@@ -103,7 +117,7 @@ extension Charger {
     }
 }
 
-extension Charger {
+extension Charger.Parameters {
     public struct PaintParameter: Codable {
         public let type: String
         public let radiusFullCharge: Double
@@ -119,7 +133,7 @@ extension Charger {
     }
 }
 
-extension Charger {
+extension Charger.Parameters {
     public struct SplashPaintParameter: Codable {
         public let type: String
         public let depthHalfFullCharge: Double
@@ -149,7 +163,7 @@ extension Charger {
     }
 }
 
-extension Charger {
+extension Charger.Parameters {
     public struct SplashSpawnParameter: Codable {
         public let type: String
         public let onTopRateFullCharge: Double
@@ -171,7 +185,7 @@ extension Charger {
     }
 }
 
-extension Charger {
+extension Charger.Parameters {
     public struct SplashWallHitParameter: Codable {
         public let type: String
         public let spawnParam: SpawnParameter?
@@ -187,7 +201,7 @@ extension Charger {
     }
 }
 
-extension Charger.SplashWallHitParameter {
+extension Charger.Parameters.SplashWallHitParameter {
     public struct SpawnParameter: Codable {
         public let betweenDistance: Double?
         public let firstDistance: Double?
@@ -205,7 +219,7 @@ extension Charger.SplashWallHitParameter {
     }
 }
 
-extension Charger {
+extension Charger.Parameters {
     public struct WallDropCollisionPaintParameter: Codable {
         public let type: String?
         public let paintRadiusFall: Double
@@ -245,7 +259,7 @@ extension Charger {
     }
 }
 
-extension Charger {
+extension Charger.Parameters {
     public struct KeepChargeParameter: Codable {
         public let type: String
         public let enableKeepChargeAnytime: Bool?
@@ -279,7 +293,7 @@ extension Charger {
     }
 }
 
-extension Charger {
+extension Charger.Parameters {
     public struct WeaponParameter: Codable {
         public let type: String
         public let airChargeRateByInkEmpty: Int?
@@ -311,7 +325,7 @@ extension Charger {
     }
 }
 
-extension Charger {
+extension Charger.Parameters {
     public struct ScopeParameter: Codable {
         public let type: String
         public let cameraFovy: Double?

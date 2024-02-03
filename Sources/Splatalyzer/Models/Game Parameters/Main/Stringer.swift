@@ -7,22 +7,36 @@
 
 import Foundation
 
-public struct Stringer: Codable {
-    public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
-    public let mainWeaponSetting: MainWeaponSettings
+/// Represents the game parameter data of a main weapon in the
+/// Stringer Class.
+///
+/// To see a representative `JSON` go to
+/// `Resources/weapon-json/` and find a file prefixed with
+/// `WeaponStringer`.
+public struct Stringer: GameParametable {
+    public var parameters: Parameters
     
-    public let bulletStringerParam: BulletParameter
-    public let weaponStringerParam: WeaponParameter
+    public init(parameters: Parameters) {
+        self.parameters = parameters
+    }
     
-    public enum CodingKeys: String, CodingKey {
-        case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
-        case mainWeaponSetting = "MainWeaponSetting"
-        case bulletStringerParam = "spl__BulletStringerParam"
-        case weaponStringerParam = "spl__WeaponStringerParam"
+    public struct Parameters: Codable {
+        public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
+        public let mainWeaponSetting: MainWeaponSettings
+        
+        public let bulletStringerParam: BulletParameter
+        public let weaponStringerParam: WeaponParameter
+        
+        public enum CodingKeys: String, CodingKey {
+            case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
+            case mainWeaponSetting = "MainWeaponSetting"
+            case bulletStringerParam = "spl__BulletStringerParam"
+            case weaponStringerParam = "spl__WeaponStringerParam"
+        }
     }
 }
 
-extension Stringer {
+extension Stringer.Parameters {
     public struct BulletParameter: Codable {
         public let type: String
         public let collisionParam: CollisionParameter
@@ -56,7 +70,7 @@ extension Stringer {
     }
 }
 
-extension Stringer.BulletParameter {
+extension Stringer.Parameters.BulletParameter {
     public struct CollisionParameter: Codable {
         public let changeFrameForField: Int?
         public let changeFrameForPlayer: Int?
@@ -274,7 +288,7 @@ extension Stringer.BulletParameter {
     }
 }
 
-extension Stringer.BulletParameter.DetonationParameter {
+extension Stringer.Parameters.BulletParameter.DetonationParameter {
     public struct BlastParameter: Codable {
         public let collisionRadiusForPaint: Double?
         public let crossPaintCheckLength: Double?
@@ -318,7 +332,7 @@ extension Stringer.BulletParameter.DetonationParameter {
     }
 }
 
-extension Stringer {
+extension Stringer.Parameters {
     public struct WeaponParameter: Codable {
         public let type: String
         public let chargeKeepParameter: ChargeKeepParameter
@@ -340,7 +354,7 @@ extension Stringer {
     }
 }
 
-extension Stringer.WeaponParameter {
+extension Stringer.Parameters.WeaponParameter {
     public struct ChargeKeepParameter: Codable {
         public let enableKeepChargeAnytime: Bool?
         public let enableKeepChargeTransCancel: Bool?
@@ -482,7 +496,7 @@ extension Stringer.WeaponParameter {
     }
 }
 
-extension Stringer.WeaponParameter.ShotParameter {
+extension Stringer.Parameters.WeaponParameter.ShotParameter {
     public struct DiffusionArrowParameter: Codable {
         public let shotAddDegH: Double
         public let shotAddDegV: Double

@@ -7,32 +7,43 @@
 
 import Foundation
 
-struct Splashdown: Codable {
-    let bulletBlastParam: BulletBlastParameter
+/// Represents the game parameters of the single-player exclusive Splashdown special weapon
+///
+/// See the JSON file `WeaponSpSuperLanding.game__GameParameterTable.json`.
+struct Splashdown: GameParametable {
+    var parameters: Parameters
     
-    enum CodingKeys: String, CodingKey {
-        case bulletBlastParam = "spl__BulletBlastParam"
+    init(parameters: Parameters) {
+        self.parameters = parameters
     }
     
-    struct BulletBlastParameter: Codable {
-        let type: String
-        let crossPaintCheckLength: Double
-        let crossPaintRadius: Double
-        let crossPaintTexture: String
-        let distanceDamage: [DistanceDamage]
-        let knockBackParam: KnockbackParameter
-        let paintRadius: Double
-        let paintTexture: String
+    struct Parameters: Codable {
+        let bulletBlastParam: BulletBlastParameter
         
         enum CodingKeys: String, CodingKey {
-            case type = "$type"
-            case crossPaintCheckLength = "CrossPaintCheckLength"
-            case crossPaintRadius = "CrossPaintRadius"
-            case crossPaintTexture = "CrossPaintTexture"
-            case distanceDamage = "DistanceDamage"
-            case knockBackParam = "KnockBackParam"
-            case paintRadius = "PaintRadius"
-            case paintTexture = "PaintTexture"
+            case bulletBlastParam = "spl__BulletBlastParam"
+        }
+        
+        struct BulletBlastParameter: Codable {
+            let type: String
+            let crossPaintCheckLength: Double
+            let crossPaintRadius: Double
+            let crossPaintTexture: String
+            let distanceDamage: [DistanceDamage]
+            let knockBackParam: KnockbackParameter
+            let paintRadius: Double
+            let paintTexture: String
+            
+            enum CodingKeys: String, CodingKey {
+                case type = "$type"
+                case crossPaintCheckLength = "CrossPaintCheckLength"
+                case crossPaintRadius = "CrossPaintRadius"
+                case crossPaintTexture = "CrossPaintTexture"
+                case distanceDamage = "DistanceDamage"
+                case knockBackParam = "KnockBackParam"
+                case paintRadius = "PaintRadius"
+                case paintTexture = "PaintTexture"
+            }
         }
     }
 }

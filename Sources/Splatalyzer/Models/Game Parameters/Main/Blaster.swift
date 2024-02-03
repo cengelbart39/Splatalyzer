@@ -7,67 +7,81 @@
 
 import Foundation
 
-public struct Blaster: Codable {
-    public let blastJumpParam: BlastParameter?
-    public let blastParam: BlastParameter
+/// Represents the game parameter data of a main weapon in the
+/// Blaster Class.
+///
+/// To see a representative `JSON` go to
+/// `Resources/weapon-json/` and find a file prefixed with
+/// `WeaponBlaster`.
+public struct Blaster: GameParametable {
+    public var parameters: Parameters
     
-    public let blasterBurstJumpParam: BurstParameter?
-    public let blasterBurstParam: BurstParameter
+    public init(parameters: Parameters) {
+        self.parameters = parameters
+    }
     
-    public let collisionParam: CollisionParameter
-    
-    public let damageJumpParam: DamageParameter?
-    public let damageParam: DamageParameter
-    
-    public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter?
-    public let mainWeaponSetting: MainWeaponSettings
-    
-    public let moveJumpParam: MoveParameter?
-    public let moveParam: MoveParameter
-    
-    public let paintParam: PaintParameter
-    
-    public let splashPaintParam: SplashPaintParameter
-    public let splashSpawnParam: SplashSpawnParameter
-    public let splashWallHitParam: SplashWallHitParameter
-    
-    public let wallDropCollisionPaintParam: WallDropCollisionPaintParameter
-    public let wallDropMoveParam: WallDropMoveParameter
-    
-    public let weaponParam: WeaponParameter
-    
-    public let skillActionSpecUpReduceJumpSwerveRate: ActionSpecUpReduceJumpSwerveRate?
-    
-    public let skillMainEffectUpRangeUp: MainEffectiveRangeUpSkill?
-    
-    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
-    
-    public enum CodingKeys: String, CodingKey {
-        case blastJumpParam = "BlastJumpParam"
-        case blastParam = "BlastParam"
-        case blasterBurstJumpParam = "BlasterBurstJumpParam"
-        case blasterBurstParam = "BlasterBurstParam"
-        case collisionParam = "CollisionParam"
-        case damageJumpParam = "DamageJumpParam"
-        case damageParam = "DamageParam"
-        case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
-        case mainWeaponSetting = "MainWeaponSetting"
-        case moveJumpParam = "MoveJumpParam"
-        case moveParam = "MoveParam"
-        case paintParam = "PaintParam"
-        case splashPaintParam = "SplashPaintParam"
-        case splashSpawnParam = "SplashSpawnParam"
-        case splashWallHitParam = "SplashWallHitParam"
-        case wallDropCollisionPaintParam = "WallDropCollisionPaintParam"
-        case wallDropMoveParam = "WallDropMoveParam"
-        case weaponParam = "WeaponParam"
-        case skillActionSpecUpReduceJumpSwerveRate = "spl__PlayerGearSkillParam_ActionSpecUp_ReduceJumpSwerveRate"
-        case skillMainEffectUpRangeUp = "spl__PlayerGearSkillParam_MainEffectiveRangeUp"
-        case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
+    public struct Parameters: Codable {
+        public let blastJumpParam: BlastParameter?
+        public let blastParam: BlastParameter
+        
+        public let blasterBurstJumpParam: BurstParameter?
+        public let blasterBurstParam: BurstParameter
+        
+        public let collisionParam: CollisionParameter
+        
+        public let damageJumpParam: DamageParameter?
+        public let damageParam: DamageParameter
+        
+        public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter?
+        public let mainWeaponSetting: MainWeaponSettings
+        
+        public let moveJumpParam: MoveParameter?
+        public let moveParam: MoveParameter
+        
+        public let paintParam: PaintParameter
+        
+        public let splashPaintParam: SplashPaintParameter
+        public let splashSpawnParam: SplashSpawnParameter
+        public let splashWallHitParam: SplashWallHitParameter
+        
+        public let wallDropCollisionPaintParam: WallDropCollisionPaintParameter
+        public let wallDropMoveParam: WallDropMoveParameter
+        
+        public let weaponParam: WeaponParameter
+        
+        public let skillActionSpecUpReduceJumpSwerveRate: ActionSpecUpReduceJumpSwerveRate?
+        
+        public let skillMainEffectUpRangeUp: MainEffectiveRangeUpSkill?
+        
+        public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
+        
+        public enum CodingKeys: String, CodingKey {
+            case blastJumpParam = "BlastJumpParam"
+            case blastParam = "BlastParam"
+            case blasterBurstJumpParam = "BlasterBurstJumpParam"
+            case blasterBurstParam = "BlasterBurstParam"
+            case collisionParam = "CollisionParam"
+            case damageJumpParam = "DamageJumpParam"
+            case damageParam = "DamageParam"
+            case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
+            case mainWeaponSetting = "MainWeaponSetting"
+            case moveJumpParam = "MoveJumpParam"
+            case moveParam = "MoveParam"
+            case paintParam = "PaintParam"
+            case splashPaintParam = "SplashPaintParam"
+            case splashSpawnParam = "SplashSpawnParam"
+            case splashWallHitParam = "SplashWallHitParam"
+            case wallDropCollisionPaintParam = "WallDropCollisionPaintParam"
+            case wallDropMoveParam = "WallDropMoveParam"
+            case weaponParam = "WeaponParam"
+            case skillActionSpecUpReduceJumpSwerveRate = "spl__PlayerGearSkillParam_ActionSpecUp_ReduceJumpSwerveRate"
+            case skillMainEffectUpRangeUp = "spl__PlayerGearSkillParam_MainEffectiveRangeUp"
+            case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
+        }
     }
 }
 
-extension Blaster {
+extension Blaster.Parameters {
     public struct BlastParameter: Codable {
         public let type: String
         public let crossPaintCheckLength: Double
@@ -131,7 +145,7 @@ extension Blaster {
     }
 }
 
-extension Blaster.BurstParameter {
+extension Blaster.Parameters.BurstParameter {
     public struct SplashWallDropPaintParameter: Codable {
         public let paintRadiusFall: Double
         public let paintRadiusGround: Double
@@ -145,7 +159,7 @@ extension Blaster.BurstParameter {
     }
 }
 
-extension Blaster {
+extension Blaster.Parameters {
     public struct CollisionParameter: Codable {
         public let type: String
         public let changeFrameForField: Int
@@ -273,7 +287,7 @@ extension Blaster {
     }
 }
 
-extension Blaster.SplashWallHitParameter {
+extension Blaster.Parameters.SplashWallHitParameter {
     public struct SpawnParameter: Codable {
         public let distanceXZRate: Double?
         public let firstDistance: Double
@@ -287,7 +301,7 @@ extension Blaster.SplashWallHitParameter {
     }
 }
 
-extension Blaster {
+extension Blaster.Parameters {
     public struct WallDropCollisionPaintParameter: Codable {
         public let type: String?
         public let fallPeriodFirstSecondTargetAlp: Double

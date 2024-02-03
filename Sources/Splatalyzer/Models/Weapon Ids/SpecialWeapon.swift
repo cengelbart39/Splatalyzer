@@ -13,6 +13,7 @@ import UIKit
 
 import Foundation
 
+/// Represents every Special Weapon
 public enum SpecialWeapon: String, CaseIterable {
     case inkVac = "SpBlower"
     case krakenRoyale = "SpCastle"
@@ -35,6 +36,8 @@ public enum SpecialWeapon: String, CaseIterable {
     case ultraStamp = "SpUltraStamp"
     
     #if os(macOS)
+    /// The image of the current special weapon
+    /// - Note: OSes other than `macOS` use `UIImage` instead.
     var image: NSImage? {
         guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
             return nil
@@ -47,6 +50,8 @@ public enum SpecialWeapon: String, CaseIterable {
         return NSImage(data: data)
     }
     #else
+    /// The image of the current special weapon
+    /// - Note: `macOS` use `NSImage` instead.
     var image: UIImage? {
         guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
             return nil
@@ -60,10 +65,12 @@ public enum SpecialWeapon: String, CaseIterable {
     }
     #endif
     
+    /// The localized name of the Special Weapon
     public var localized: String {
         return NSLocalizedString(self.rawValue, tableName: "SpecialWeapon",  bundle: Bundle.module, comment: "")
     }
     
+    /// Gets file name in relation to `.game__GameParameterTable.json` files for special weapons.
     func fileName() -> String {
         return self.rawValue
     }

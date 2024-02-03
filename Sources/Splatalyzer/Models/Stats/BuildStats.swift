@@ -7,75 +7,51 @@
 
 import Foundation
 
+/// Represents all stats for a``GearBuild``
 public struct BuildStats: Equatable {
-    public let mainWeapon: MainWeapon
-    public let subWeapon: SubWeapon
-    public let specialWeapon: SpecialWeapon
-    public let brellaCanopyHp: Int?
-    public let fullChargeSeconds: Double?
-    public let maxChargeHoldSeconds: Double?
-    public let speedType: WeaponSpeedType
+    /// Statistics about the Main Weapon
+    public let mainStats: MainWeaponStats
+    
+    /// Statistics about the Sub Weapon
+    public let subStats: SubWeaponStats
+    
+    /// Statistics about the Special Weapon
+    public let specialStats: SpecialWeaponStats
+    
+    /// Statistics about Sub Weapon Defense
+    public let subDefenseStats: SubDefenseStats
+    
+    /// Statistics about player Movement
+    public let moveStats: MovementStats
+    
+    /// Statistics that don't fall in any particular category
+    public let miscStats: MiscStats
+    
+    /// The number of main weapon shots per button press
     public let multiShots: Int?
     
-    public let specialPoint: AbilityStat
-    public let specialLost: AbilityStat
-    public let specialLostSplattedByRP: AbilityStat
+    /// The number of shots that can be taken after a number of sub weapon uses.
     public let fullInkTankOptions: [Int : [InkTankOption]]
-    public let mainDamages: [DamageStat]
-    public let specialDamages: [DamageStat]
-    public let subDefenseDamages: [SubWeapon : [DamageEffectStat]]
-    public let mainWhiteInkSeconds: Double?
-    public let subWhiteInkSeconds: Double
-    public let subInkConsumptionPercentage: AbilityStat
-    public let squidInkRecoverySeconds: AbilityStat
-    public let humanoidInkRecoverySeconds: AbilityStat
-    public let runSpeed: AbilityStat
-    public let shootingRunSpeed: AbilityStat?
-    public let shootingRunSpeedCharging: AbilityStat?
-    public let shootingRunSpeedFullCharge: AbilityStat?
-    public let shootingRunSpeedSecondaryMode: AbilityStat?
-    public let swimSpeed: AbilityStat
-    public let swimSpeedWithRainmaker: AbilityStat
-    public let runSpeedInEnemyInk: AbilityStat
-    public let damageInEnemyInkPerSecond: AbilityStat
-    public let enemyInkDamageLimit: AbilityStat
-    public let framesBeforeDamageInEnemyInk: AbilityStat
-    public let quickRespawnTime: AbilityStat
-    public let quickRespawnTimeSplattedByRP: AbilityStat
-    public let superJumpGroundFrames: AbilityStat
-    public let superJumpTimeTotal: AbilityStat
-    public let shotSpreadAir: AbilityStat?
-    public let shotSpreadGround: Double?
-    public let shotAutofireSpreadAir: AbilityStat?
-    public let shotAutofireSpreadGround: Double?
-    public let squidSurgeChargeFrame: AbilityStat
-    public let pointSensorMarkedSeconds: AbilityStat
-    public let inkMineMarkedSeconds: AbilityStat
-    public let angleShooterMarkedSeconds: AbilityStat
-    public let toxicMistMovementReduction: AbilityStat
-    public let quickSuperJumpBoost: AbilityStat?
-    public let subVelocity: AbilityStat?
-    public let subFirstPhaseDuration: AbilityStat?
-    public let subSecondPhaseDuration: AbilityStat?
-    public let subMarkedSeconds: AbilityStat?
-    public let subMarkedRadius: AbilityStat?
-    public let subExplosionRadius: AbilityStat?
-    public let subHp: AbilityStat?
-    public let specialDuration: AbilityStat?
-    public let specialDamageDistance: AbilityStat?
-    public let specialPaintRadius: AbilityStat?
-    public let specialFieldHp: AbilityStat?
-    public let specialDeviceHp: AbilityStat?
-    public let specialHookInkConsumption: AbilityStat?
-    public let specialHookInkConsumptionPerSecond: AbilityStat?
-    public let specialReticleRadius: AbilityStat?
-    public let specialThrowDistance: AbilityStat?
-    public let specialMoveSpeed: AbilityStat?
-    public let specialAutoChargeRate: AbilityStat?
-    public let specialMaxRadius: AbilityStat?
-    public let specialRadiusRange: AbilityStat?
-    public let specialPowerUpDuration: AbilityStat?
     
+    /// Damage done by the Main Weapon
+    public let mainDamages: [DamageStat]
+    
+    /// Damage done by the Special Weapon
+    public let specialDamages: [DamageStat]
+    
+    /// Damage done by every Sub Weapon. Keys refer to the specific sub weapon.
+    public let subDefenseDamages: [SubWeapon : [DamageEffectStat]]
+    
+    
+    /// Calculates stats for a ``GearBuild`` and weapon kit pair
+    /// - Parameters:
+    ///   - mainInfo: Information about the main weapon
+    ///   - allSubInfo: Information about every sub weapon
+    ///   - specialInfo: Information about the associated special weapon
+    ///   - gearBuild: The user's gear build
+    ///   - abilityValues: Decoded instance of ``AbilityValues``
+    ///   - ldeIntensity: The intensity of Last-Ditch Effort; a range from 0 to 21
+    ///   - usingTacticooler: Whether Tacticooler effects should be accounted for
     public init(
         mainInfo: MainWeaponData,
         allSubInfo: [SubWeapon : SubWeaponData],
@@ -89,25 +65,191 @@ public struct BuildStats: Equatable {
         
         let subInfo = allSubInfo[mainInfo.subWeapon]!
         
-        self.mainWeapon = mainInfo.mainWeaponId
-        self.subWeapon = mainInfo.subWeapon
-        self.specialWeapon = mainInfo.specialWeapon
+        self.mainStats = MainWeaponStats(
+            weapon: mainInfo.mainWeaponId,
+            
+            shotSpreadAir: StatHelper.shotSpreadAir(
+                ap: ap, values: abilityValues, mainInfo: mainInfo),
+            
+            shotSpreadGround: mainInfo.standDegSwerve,
+            
+            shotAutofireSpreadAir: StatHelper.shotAutofireSpreadAir(
+                ap: ap, values: abilityValues, mainInfo: mainInfo),
+            
+            shotAutofireSpreadGround: mainInfo.variableStandDegSwerve,
+            
+            whiteInkSeconds: mainInfo.inkRecoverStop.framesToSeconds() ?? nil,
+            
+            brellaCanopyHp: mainInfo.canopyHP != nil ? mainInfo.canopyHP! / 10 : nil,
+            
+            fullChargeSeconds: mainInfo.chargeFrameFullCharge.framesToSeconds(),
+            
+            maxChargeSeconds: mainInfo.keepChargeFullFrame.framesToSeconds()
+        )
         
-        self.brellaCanopyHp = mainInfo.canopyHP != nil ? mainInfo.canopyHP! / 10 : nil
+        self.subStats = SubWeaponStats(
+            weapon: mainInfo.subWeapon,
+            
+            inkConsumptionPercentage: StatHelper.subInkConsumptionPercentage(
+                ap: ap, abilities: abilityValues, mainInfo: mainInfo, subInfo: subInfo),
+            
+            whiteInkSeconds: subInfo.inkRecoverStop.framesToSeconds(),
+            
+            velocity: StatHelper.subVelocity(
+                ap: ap, values: abilityValues, subInfo: subInfo),
+            
+            firstPhaseDuration: StatHelper.subPhaseDuration(
+                ap: ap, values: abilityValues, subInfo: subInfo, first: true),
+            
+            secondPhaseDuration: StatHelper.subPhaseDuration(
+                ap: ap, values: abilityValues, subInfo: subInfo, first: false),
+            
+            markingTimeInSeconds: StatHelper.subMarkingSeconds(
+                ap: ap, values: abilityValues, subInfo: subInfo),
+            
+            markingRadius: StatHelper.subMarkingRadius(
+                ap: ap, values: abilityValues, subInfo: subInfo),
+            
+            explosionRadius: StatHelper.subExplosionRadius(
+                ap: ap, values: abilityValues, subInfo: subInfo),
+            
+            subHp: StatHelper.subHp(
+                ap: ap, values: abilityValues, subInfo: subInfo),
+            
+            quickSuperJumpBoost: StatHelper.quickSuperJumpBoost(
+                ap: ap, values: abilityValues, subInfo: subInfo)
+        )
         
-        self.fullChargeSeconds = mainInfo.chargeFrameFullCharge.framesToSeconds()
+        self.specialStats = SpecialWeaponStats(
+            weapon: mainInfo.specialWeapon,
+            
+            point: StatHelper.specialPoint(
+                ap: ap, values: abilityValues, mainInfo: mainInfo),
+            
+            lost: StatHelper.specialLost(
+                ap: ap, abilities: abilityValues, gearBuild: gearBuild, mainInfo: mainInfo),
+            
+            lostSplattedByRP: StatHelper.specialLost(
+                ap: ap, abilities: abilityValues, gearBuild: gearBuild, mainInfo: mainInfo, splattedByRP: true),
+            
+            duration: StatHelper.specialDuration(
+                ap: ap, values: abilityValues, specialInfo: specialInfo),
+            
+            damageDistance: StatHelper.specialDamageDistance(
+                ap: ap, values: abilityValues, specialInfo: specialInfo),
+            
+            paintRadius: StatHelper.specialPaintRadius(
+                ap: ap, values: abilityValues, specialInfo: specialInfo),
+            
+            fieldHp: StatHelper.specialFieldHp(
+                ap: ap, values: abilityValues, specialInfo: specialInfo),
+            
+            deviceHp: StatHelper.specialDeviceHp(
+                ap: ap, values: abilityValues, specialInfo: specialInfo),
+            
+            hookInkConsumption: StatHelper.specialHookInkConsumption(
+                ap: ap, values: abilityValues, specialInfo: specialInfo),
+            
+            hookInkConsumptionPerSecond: StatHelper.specialHookInkConsumptionPerSecond(
+                ap: ap, values: abilityValues, specialInfo: specialInfo),
+            
+            reticleRadius: StatHelper.specialReticleRadius(
+                ap: ap, values: abilityValues, specialInfo: specialInfo),
+            
+            throwDistance: StatHelper.specialThrowDistance(
+                ap: ap, values: abilityValues, specialInfo: specialInfo),
+            
+            moveSpeed: StatHelper.specialMoveSpeed(
+                ap: ap, values: abilityValues, specialInfo: specialInfo),
+            
+            autoChargeRate: StatHelper.specialAutoChargeRate(
+                ap: ap, values: abilityValues, specialInfo: specialInfo),
+            
+            maxRadius: StatHelper.specialMaxRadius(
+                ap: ap, values: abilityValues, specialInfo: specialInfo),
+            
+            radiusRange: StatHelper.specialRadiusRange(
+                ap: ap, values: abilityValues, specialInfo: specialInfo),
+            
+            powerUpDuration: StatHelper.specialPowerUpDuration(
+                ap: ap, values: abilityValues, specialInfo: specialInfo)
+        )
         
-        self.maxChargeHoldSeconds = mainInfo.keepChargeFullFrame.framesToSeconds()
+        self.subDefenseStats = SubDefenseStats(
+            toxicMistMovementReduction: StatHelper.toxicMistMovementReduction(
+                ap: ap, values: abilityValues, mainInfo: mainInfo),
+            
+            pointSensorMarkedSeconds: StatHelper.subMarkedSeconds(
+                ap: ap, values: abilityValues, mainInfo: mainInfo, subInfo: allSubInfo[.pointSensor]!),
+            
+            inkMineMarkedSeconds: StatHelper.inkMineMarkedSeconds(
+                ap: ap, values: abilityValues, mainInfo: mainInfo, inkMine: allSubInfo[.inkMine]!),
+            
+            angleShooterMarkedSeconds: StatHelper.subMarkedSeconds(
+                ap: ap, values: abilityValues, mainInfo: mainInfo, subInfo: allSubInfo[.angleShooter]!)
+        )
         
-        self.speedType = mainInfo.weaponSpeedType ?? .mid
+        self.moveStats = MovementStats(
+            speedType: mainInfo.weaponSpeedType ?? .mid,
+            
+            swimSpeed: StatHelper.swimSpeed(
+                ap: ap, values: abilityValues, gearBuild: gearBuild, mainInfo: mainInfo),
+            
+            swimSpeedWithRainmaker: StatHelper.swimSpeedWithRainmaker(
+                ap: ap, values: abilityValues, gearBuild: gearBuild, mainInfo: mainInfo),
+            
+            runSpeed: StatHelper.runSpeed(
+                ap: ap, abilities: abilityValues, mainInfo: mainInfo),
+            
+            shootingRunSpeed: StatHelper.shootingRunSpeed(
+                for: .moveSpeed, ap: ap, abilities: abilityValues, mainInfo: mainInfo),
+            
+            shootingRunSpeedCharging: StatHelper.shootingRunSpeed(
+                for: .moveSpeedCharge, ap: ap, abilities: abilityValues, mainInfo: mainInfo),
+            
+            shootingRunSpeedFullCharge: StatHelper.shootingRunSpeed(
+                for: .moveSpeedFullCharge, ap: ap, abilities: abilityValues, mainInfo: mainInfo),
+            
+            shootingRunSpeedSecondary: StatHelper.shootingRunSpeed(
+                for: .moveSpeedVariable, ap: ap, abilities: abilityValues, mainInfo: mainInfo),
+            
+            squidSurgeChargeFrames: StatHelper.squidSurgeChargeFrames(
+                ap: ap, values: abilityValues, mainInfo: mainInfo),
+            
+            runSpeedInEnemyInk: StatHelper.runSpeedInEnemyInk(
+                ap: ap, values: abilityValues, mainInfo: mainInfo),
+            
+            framesBeforeDamageInEnemyInk: StatHelper.framesBeforeDamageInEnemyInk(
+                ap: ap, values: abilityValues, mainInfo: mainInfo),
+            
+            damageInEnemyInkPerSecond: StatHelper.damageInEnemyInkPerSecond(
+                ap: ap, values: abilityValues, mainInfo: mainInfo),
+            
+            enemyInkDamageLimit: StatHelper.enemyInkDamageLimit(
+                ap: ap, values: abilityValues, mainInfo: mainInfo)
+        )
         
+        self.miscStats = MiscStats(
+            squidInkRecovery: StatHelper.inkRecoverySeconds(
+                effectKey: .inkRecoverFrmStealth, ap: ap, abilities: abilityValues, mainInfo: mainInfo),
+            
+            humanoidInkRecovery: StatHelper.inkRecoverySeconds(
+                effectKey: .inkRecoverFrmStd, ap: ap, abilities: abilityValues, mainInfo: mainInfo),
+            
+            quickRespawnTime: StatHelper.respawnTime(
+                ap: ap, values: abilityValues, gearBuild: gearBuild, mainInfo: mainInfo, splatedByRP: false, hasTacticooler: usingTacticooler),
+            
+            quickRespawnTimeRP: StatHelper.respawnTime(
+                ap: ap, values: abilityValues, gearBuild: gearBuild, mainInfo: mainInfo, splatedByRP: true, hasTacticooler: usingTacticooler),
+            
+            superJumpGroundFrames: StatHelper.superJumpGroundFrames(
+                ap: ap, values: abilityValues, mainInfo: mainInfo),
+            
+            superJumpTimeTotal: StatHelper.superJumpTimeTotal(
+                ap: ap, values: abilityValues, mainInfo: mainInfo)
+        )
+                        
         self.multiShots = StatHelper.multiShotDict[mainInfo.mainWeaponId]
-        
-        self.specialPoint = StatHelper.specialPoint(ap: ap, values: abilityValues, mainInfo: mainInfo)
-        
-        self.specialLost = StatHelper.specialLost(ap: ap, abilities: abilityValues, gearBuild: gearBuild, mainInfo: mainInfo)
-        
-        self.specialLostSplattedByRP = StatHelper.specialLost(ap: ap, abilities: abilityValues, gearBuild: gearBuild, mainInfo: mainInfo, splattedByRP: true)
         
         self.fullInkTankOptions = StatHelper.fullInkTankOptions(ap: ap, abilities: abilityValues, mainInfo: mainInfo, subInfo: subInfo)
         
@@ -116,107 +258,5 @@ public struct BuildStats: Equatable {
         self.specialDamages = StatHelper.specialDamages(specialInfo: specialInfo)
         
         self.subDefenseDamages = StatHelper.subDefenseDamages(ap: ap, abilities: abilityValues, subData: allSubInfo)
-        
-        self.mainWhiteInkSeconds = mainInfo.inkRecoverStop.framesToSeconds() ?? nil
-        
-        self.subWhiteInkSeconds = subInfo.inkRecoverStop.framesToSeconds()
-        
-        self.subInkConsumptionPercentage = StatHelper.subInkConsumptionPercentage(ap: ap, abilities: abilityValues, mainInfo: mainInfo, subInfo: subInfo)
-        
-        self.squidInkRecoverySeconds = StatHelper.inkRecoverySeconds(effectKey: .inkRecoverFrmStealth, ap: ap, abilities: abilityValues, mainInfo: mainInfo)
-        
-        self.humanoidInkRecoverySeconds = StatHelper.inkRecoverySeconds(effectKey: .inkRecoverFrmStd, ap: ap, abilities: abilityValues, mainInfo: mainInfo)
-        
-        self.runSpeed = StatHelper.runSpeed(ap: ap, abilities: abilityValues, mainInfo: mainInfo)
-        
-        self.shootingRunSpeed = StatHelper.shootingRunSpeed(for: .moveSpeed, ap: ap, abilities: abilityValues, mainInfo: mainInfo)
-        
-        self.shootingRunSpeedCharging = StatHelper.shootingRunSpeed(for: .moveSpeedCharge, ap: ap, abilities: abilityValues, mainInfo: mainInfo)
-        
-        self.shootingRunSpeedFullCharge = StatHelper.shootingRunSpeed(for: .moveSpeedFullCharge, ap: ap, abilities: abilityValues, mainInfo: mainInfo)
-        
-        self.shootingRunSpeedSecondaryMode = StatHelper.shootingRunSpeed(for: .moveSpeedVariable, ap: ap, abilities: abilityValues, mainInfo: mainInfo)
-        
-        self.swimSpeed = StatHelper.swimSpeed(ap: ap, values: abilityValues, gearBuild: gearBuild, mainInfo: mainInfo)
-        
-        self.swimSpeedWithRainmaker = StatHelper.swimSpeedWithRainmaker(ap: ap, values: abilityValues, gearBuild: gearBuild, mainInfo: mainInfo)
-        
-        self.runSpeedInEnemyInk = StatHelper.runSpeedInEnemyInk(ap: ap, values: abilityValues, mainInfo: mainInfo)
-        
-        self.damageInEnemyInkPerSecond = StatHelper.damageInEnemyInkPerSecond(ap: ap, values: abilityValues, mainInfo: mainInfo)
-        
-        self.enemyInkDamageLimit = StatHelper.enemyInkDamageLimit(ap: ap, values: abilityValues, mainInfo: mainInfo)
-        
-        self.framesBeforeDamageInEnemyInk = StatHelper.framesBeforeDamageInEnemyInk(ap: ap, values: abilityValues, mainInfo: mainInfo)
-        
-        self.quickRespawnTime = StatHelper.respawnTime(ap: ap, values: abilityValues, gearBuild: gearBuild, mainInfo: mainInfo, splatedByRP: false, hasTacticooler: usingTacticooler)
-        
-        self.quickRespawnTimeSplattedByRP = StatHelper.respawnTime(ap: ap, values: abilityValues, gearBuild: gearBuild, mainInfo: mainInfo, splatedByRP: true, hasTacticooler: usingTacticooler)
-        
-        self.superJumpGroundFrames = StatHelper.superJumpGroundFrames(ap: ap, values: abilityValues, mainInfo: mainInfo)
-        
-        self.superJumpTimeTotal = StatHelper.superJumpTimeTotal(ap: ap, values: abilityValues, mainInfo: mainInfo)
-        
-        self.shotSpreadAir = StatHelper.shotSpreadAir(ap: ap, values: abilityValues, mainInfo: mainInfo)
-        
-        self.shotSpreadGround = mainInfo.standDegSwerve
-        
-        self.shotAutofireSpreadAir = StatHelper.shotAutofireSpreadAir(ap: ap, values: abilityValues, mainInfo: mainInfo)
-        
-        self.shotAutofireSpreadGround = mainInfo.variableStandDegSwerve
-        
-        self.squidSurgeChargeFrame = StatHelper.squidSurgeChargeFrames(ap: ap, values: abilityValues, mainInfo: mainInfo)
-        
-        self.pointSensorMarkedSeconds = StatHelper.subMarkedSeconds(ap: ap, values: abilityValues, mainInfo: mainInfo, subInfo: allSubInfo[.pointSensor]!)
-        
-        self.inkMineMarkedSeconds = StatHelper.inkMineMarkedSeconds(ap: ap, values: abilityValues, mainInfo: mainInfo, inkMine: allSubInfo[.inkMine]!)
-        
-        self.angleShooterMarkedSeconds = StatHelper.subMarkedSeconds(ap: ap, values: abilityValues, mainInfo: mainInfo, subInfo: allSubInfo[.angleShooter]!)
-        
-        self.toxicMistMovementReduction = StatHelper.toxicMistMovementReduction(ap: ap, values: abilityValues, mainInfo: mainInfo)
-        
-        self.quickSuperJumpBoost = StatHelper.quickSuperJumpBoost(ap: ap, values: abilityValues, subInfo: subInfo)
-        
-        self.subVelocity = StatHelper.subVelocity(ap: ap, values: abilityValues, subInfo: subInfo)
-        
-        self.subFirstPhaseDuration = StatHelper.subPhaseDuration(ap: ap, values: abilityValues, subInfo: subInfo, first: true)
-        
-        self.subSecondPhaseDuration = StatHelper.subPhaseDuration(ap: ap, values: abilityValues, subInfo: subInfo, first: false)
-        
-        self.subMarkedSeconds = StatHelper.subMarkingSeconds(ap: ap, values: abilityValues, subInfo: subInfo)
-        
-        self.subMarkedRadius = StatHelper.subMarkingRadius(ap: ap, values: abilityValues, subInfo: subInfo)
-        
-        self.subExplosionRadius = StatHelper.subExplosionRadius(ap: ap, values: abilityValues, subInfo: subInfo)
-        
-        self.subHp = StatHelper.subHp(ap: ap, values: abilityValues, subInfo: subInfo)
-        
-        self.specialDuration = StatHelper.specialDuration(ap: ap, values: abilityValues, specialInfo: specialInfo)
-        
-        self.specialDamageDistance = StatHelper.specialDamageDistance(ap: ap, values: abilityValues, specialInfo: specialInfo)
-        
-        self.specialPaintRadius = StatHelper.specialPaintRadius(ap: ap, values: abilityValues, specialInfo: specialInfo)
-        
-        self.specialFieldHp = StatHelper.specialFieldHp(ap: ap, values: abilityValues, specialInfo: specialInfo)
-        
-        self.specialDeviceHp = StatHelper.specialDeviceHp(ap: ap, values: abilityValues, specialInfo: specialInfo)
-        
-        self.specialHookInkConsumption = StatHelper.specialHookInkConsumption(ap: ap, values: abilityValues, specialInfo: specialInfo)
-        
-        self.specialHookInkConsumptionPerSecond = StatHelper.specialHookInkConsumptionPerSecond(ap: ap, values: abilityValues, specialInfo: specialInfo)
-        
-        self.specialReticleRadius = StatHelper.specialReticleRadius(ap: ap, values: abilityValues, specialInfo: specialInfo)
-        
-        self.specialThrowDistance = StatHelper.specialThrowDistance(ap: ap, values: abilityValues, specialInfo: specialInfo)
-        
-        self.specialMoveSpeed = StatHelper.specialMoveSpeed(ap: ap, values: abilityValues, specialInfo: specialInfo)
-        
-        self.specialAutoChargeRate = StatHelper.specialAutoChargeRate(ap: ap, values: abilityValues, specialInfo: specialInfo)
-        
-        self.specialMaxRadius = StatHelper.specialMaxRadius(ap: ap, values: abilityValues, specialInfo: specialInfo)
-        
-        self.specialRadiusRange = StatHelper.specialRadiusRange(ap: ap, values: abilityValues, specialInfo: specialInfo)
-        
-        self.specialPowerUpDuration = StatHelper.specialPowerUpDuration(ap: ap, values: abilityValues, specialInfo: specialInfo)
     }
 }

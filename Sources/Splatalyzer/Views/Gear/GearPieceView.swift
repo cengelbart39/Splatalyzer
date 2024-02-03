@@ -7,7 +7,9 @@
 
 import SwiftUI
 
+/// A row of abilities, consiting of 1 main and 3 sub abilities.
 public struct GearPieceView: View {
+    /// The abilities of the gear piece
     @Binding public var gearPiece: GearPiece
         
     public init(gearPiece: Binding<GearPiece>) {

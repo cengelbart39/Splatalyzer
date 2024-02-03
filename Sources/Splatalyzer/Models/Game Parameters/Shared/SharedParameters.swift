@@ -21,7 +21,6 @@ public struct AdditionalMoveParameter: Codable {
     }
 }
 
-
 public struct DistanceDamage: Codable {
     public let damage: Int
     public let distance: Double
@@ -32,6 +31,7 @@ public struct DistanceDamage: Codable {
     }
 }
 
+/// Represents a set of values that have an upperbound, lowerbound, and median value
 public struct HighMidLow: Codable {
     public let high: Double?
     public let low: Double?
@@ -43,18 +43,21 @@ public struct HighMidLow: Codable {
         case mid = "Mid"
     }
     
+    /// Initializes all properties to `0`
     public init() {
         self.high = 0
         self.low = 0
         self.mid = 0
     }
     
+    /// Initializes properties with custom values
     public init(high: Double?, mid: Double?, low: Double?) {
         self.high = high
         self.low = low
         self.mid = mid
     }
     
+    /// Initializes using a 3-element `[Double]`; `nil` if has a different length
     public init?(_ arr: [Double]) {
         if arr.count != 3 { return nil }
         
@@ -63,6 +66,7 @@ public struct HighMidLow: Codable {
         self.low = arr[2]
     }
     
+    /// Determines if the instance has a meaningful effect
     func hasEffect() -> Bool {
         return high != mid || mid != low
     }

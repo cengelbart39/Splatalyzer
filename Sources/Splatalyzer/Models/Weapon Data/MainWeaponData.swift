@@ -9,7 +9,7 @@ import Foundation
 
 /// An object representing the necessary Main Weapon information for build analysis.
 ///
-/// Combines information from ``GameParametersContainer`` and ``WeaponInfoMain``
+/// Combines information from ``GameParametable``  and ``WeaponInfoMain``
 public struct MainWeaponData: WeaponDatable {
     public let specialPoints: Int
     public let mainWeaponId: MainWeapon
@@ -89,7 +89,7 @@ public struct MainWeaponData: WeaponDatable {
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
         - container: Weapon game parameters
      */
-    public init(weaponInfo: WeaponInfoMainItem, container: BlasterGameParameters) {
+    public init(weaponInfo: WeaponInfoMainItem, container: Blaster) {
         let gameParams = container.parameters
                 
         let damageValueDirect = gameParams.damageParam.valueMax == gameParams.damageParam.valueMin ? Double(gameParams.damageParam.valueMax) : nil
@@ -164,7 +164,7 @@ public struct MainWeaponData: WeaponDatable {
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
         - container: Weapon game parameters
      */
-    public init(weaponInfo: WeaponInfoMainItem, container: BrushGameParameters) {
+    public init(weaponInfo: WeaponInfoMainItem, container: Brush) {
         let gameParams = container.parameters
         
         self.mainWeaponId = MainWeapon(rawValue: weaponInfo.rowId.rawValue)!
@@ -239,7 +239,7 @@ public struct MainWeaponData: WeaponDatable {
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
         - container: Weapon game parameters
      */
-    public init(weaponInfo: WeaponInfoMainItem, container: ChargerGameParameters) {
+    public init(weaponInfo: WeaponInfoMainItem, container: Charger) {
         let gameParams = container.parameters
                 
         self.mainWeaponId = MainWeapon(rawValue: weaponInfo.rowId.rawValue)!
@@ -310,7 +310,7 @@ public struct MainWeaponData: WeaponDatable {
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
         - container: Weapon game parameters
      */
-    public init(weaponInfo: WeaponInfoMainItem, container: DualieGameParameters) {
+    public init(weaponInfo: WeaponInfoMainItem, container: Dualie) {
         let gameParams = container.parameters
                 
         let damageParamValueDirect = gameParams.damageParam.valueMax == gameParams.damageParam.valueMin ? Double(gameParams.damageParam.valueMax) : nil
@@ -384,7 +384,7 @@ public struct MainWeaponData: WeaponDatable {
      - weaponInfo: Weapon info from `WeaponInfoMain.json`
      - container: Weapon game parameters
      */
-    public init(weaponInfo: WeaponInfoMainItem, container: RollerGameParameters) {
+    public init(weaponInfo: WeaponInfoMainItem, container: Roller) {
         let gameParams = container.parameters
         
         self.mainWeaponId = MainWeapon(rawValue: weaponInfo.rowId.rawValue)!
@@ -467,7 +467,7 @@ public struct MainWeaponData: WeaponDatable {
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
         - container: Weapon game parameters
      */
-    public init(weaponInfo: WeaponInfoMainItem, container: SplatanaGameParameters) {
+    public init(weaponInfo: WeaponInfoMainItem, container: Splatana) {
         let gameParams = container.parameters
         
         self.mainWeaponId = MainWeapon(rawValue: weaponInfo.rowId.rawValue)!
@@ -537,7 +537,7 @@ public struct MainWeaponData: WeaponDatable {
      - weaponInfo: Weapon info from `WeaponInfoMain.json`
      - container: Weapon game parameters
      */
-    public init(weaponInfo: WeaponInfoMainItem, container: ShooterGameParameters) {
+    public init(weaponInfo: WeaponInfoMainItem, container: Shooter) {
         let gameParams = container.parameters
         
         let damageValueDirect = gameParams.damageParam.valueMax == gameParams.damageParam.valueMin ? Double(gameParams.damageParam.valueMax) : nil
@@ -612,7 +612,7 @@ public struct MainWeaponData: WeaponDatable {
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
         - container: Weapon game parameters
      */
-    public init(weaponInfo: WeaponInfoMainItem, container: BrellaGameParameters) {
+    public init(weaponInfo: WeaponInfoMainItem, container: Brella) {
         let gameParams = container.parameters
                 
         let inkConsumeShelterCanopy =
@@ -693,7 +693,7 @@ public struct MainWeaponData: WeaponDatable {
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
         - container: Weapon game parameters
      */
-    public init(weaponInfo: WeaponInfoMainItem, container: SlosherGameParameters) {
+    public init(weaponInfo: WeaponInfoMainItem, container: Slosher) {
         let gameParams = container.parameters
                 
         let damageDirectMax = gameParams.unitGroupParam.unit.first?.damageParam.valueMax
@@ -771,7 +771,7 @@ public struct MainWeaponData: WeaponDatable {
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
         - container: Weapon game parameters
      */
-    public init(weaponInfo: WeaponInfoMainItem, container: SplatlingGameParameters) {
+    public init(weaponInfo: WeaponInfoMainItem, container: Splatling) {
         let gameParams = container.parameters
         
         let damageDirect = gameParams.damageParam.valueMax == gameParams.damageParam.valueMin ? Double(gameParams.damageParam.valueMax) : nil
@@ -845,7 +845,7 @@ public struct MainWeaponData: WeaponDatable {
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
         - container: Weapon game parameters
      */
-    public init(weaponInfo: WeaponInfoMainItem, container: StringerGameParameters) {
+    public init(weaponInfo: WeaponInfoMainItem, container: Stringer) {
         let gameParams = container.parameters
             
         self.mainWeaponId = MainWeapon(rawValue: weaponInfo.rowId.rawValue)!
@@ -910,6 +910,9 @@ public struct MainWeaponData: WeaponDatable {
         self.inkConsumeChargeFullCharge = gameParams.weaponStringerParam.chargeParameter.inkConsumeFullCharge
     }
     
+    /// Gets the proper ink consumption propery for an ``InkConsumeType``
+    /// - Parameter type: A specified ink consumption type
+    /// - Returns: The correct ink consumption property; can return `nil` if the desired property doesn't exist.
     func inkConsume(for type: InkConsumeType) -> Double? {
         switch type {
         case .normal:
@@ -1035,6 +1038,9 @@ public struct MainWeaponData: WeaponDatable {
         }
     }
     
+    /// Returns the proper value for a specified ``ShootingRunSpeedType``
+    /// - Parameter type: A type of shooting run speed
+    /// - Returns: The associated property to `type`; can be `nil` if the property is `nil`
     public func shootingRunSpeed(for type: ShootingRunSpeedType) -> Double? {
         switch type {
         case .moveSpeed:

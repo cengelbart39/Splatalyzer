@@ -13,6 +13,18 @@ import UIKit
 
 import Foundation
 
+/// Represents the relationship between ``Ability`` and how much AP is provided.
+///
+/// This is for convenience for use in functions and 
+/// structures/classes. It commonly has an entry for every
+///  `Ability`, even if the associated value is `0`.
+///
+/// If we want to represent 5 AP of Ink Recovery Up for a given
+/// gear build:
+/// ```swift
+///var abilities = AbilityPoints()
+///abilities[.inkRecoveryUp] = 5
+/// ```
 public typealias AbilityPoints = [Ability : Int]
 
 /// Special attributes for gear that effect the player and/oror weapons
@@ -101,7 +113,7 @@ public enum Ability: String, CaseIterable, Codable {
     /// A shoes-exclusive ability that hides your Super Jump landing point from distant players
     case stealthJump = "SuperJumpSign_Hide"
     
-    /// Whether an ability is restricted as a primary ability to headgear, clothes, shoes, or not-at-all
+    /// Whether an ability is restricted as a primary ability to headgear, clothes, shoes, or not-at-all.
     public var restriction: AbilityRestriction {
         switch self {
         // Head Only
@@ -168,6 +180,9 @@ public enum Ability: String, CaseIterable, Codable {
     }
     
     #if os(macOS)
+    /// The icon for the ability used in-game.
+    ///
+    /// On OSes outside of macOS, `UIImage` is used instead.
     public var image: NSImage? {
         guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
             return nil
@@ -180,6 +195,9 @@ public enum Ability: String, CaseIterable, Codable {
         return NSImage(data: data)
     }
     #else
+    /// The icon for the ability used in-game.
+    ///
+    /// On  macOS, `NSImage` is used instead.
     public var image: UIImage? {
         guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
             return nil
@@ -193,31 +211,38 @@ public enum Ability: String, CaseIterable, Codable {
     }
     #endif
     
+    /// The localized version of the ability name.
+    ///
+    /// See `Ability.xcstrings` for all translations.
     public var localized: String {
         return NSLocalizedString(self.rawValue, tableName: "Ability", bundle: Bundle.module, comment: "")
     }
 }
 
 public extension Ability {
-    /// Abilities that can be used on headgear
+    /// An array of abilities that can only  be used on headgear
     static let headgearAbilities = Ability.allCases.filter {
         $0.restriction == .headgearOnly || $0.restriction == .none
     }
     
-    /// Abilities that can be used on clothes
+    /// An arrayof abilities that can only be used on clothes
     static let clothesAbilities = Ability.allCases.filter {
         $0.restriction == .clothesOnly || $0.restriction == .none
     }
     
-    /// Abilities that can be used on shoes
+    /// An array of abilities that can only be used on shoes
     static let shoesAbilities = Ability.allCases.filter {
         $0.restriction == .shoesOnly || $0.restriction == .none
     }
     
+    /// An array of abilities that have no restriction.
     static let nonRestrictedAbilities = Ability.allCases.filter {
         $0.restriction == .none
     }
     
+    /// Converts certain abilities to its equivalent ``AbilitySpecialEffect``
+    /// - Parameter intensity: Applicable only for Last-Ditch Effort; expects a number between 0 and 21.
+    /// - Returns: The applicable special effect; if there is none, return `nil`
     func toSpecialEffect(intensity: Int = 0) -> AbilitySpecialEffect? {
         if self == .dropRoller {
             return .dropRoller

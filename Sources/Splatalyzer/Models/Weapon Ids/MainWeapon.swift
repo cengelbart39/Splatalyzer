@@ -13,6 +13,7 @@ import UIKit
 
 import Foundation
 
+/// Represents every Main Weapon (including alternate kits).
 public enum MainWeapon: String, CaseIterable, Identifiable {
     // MARK: Blasters
     case rapidBlasterPro = "Blaster_LightLong_00"
@@ -146,6 +147,7 @@ public enum MainWeapon: String, CaseIterable, Identifiable {
     case reeflux450 = "Stringer_Short_00"
     case reeflux450Deco = "Stringer_Short_01"
     
+    /// The weapon class associated with the main weapon
     public var type: WeaponClass {
         switch self {
         case .rapidBlasterPro, .rapidBlasterProDeco, .clashBlaster, .clashBlasterNeo, .rapidBlaster, .rapidBlasterDeco, .rangeBlaster, .blaster, .customBlaster, .sblast91, .sblast92, .lunaBlaster, .lunaBlasterNeo:
@@ -188,6 +190,8 @@ public enum MainWeapon: String, CaseIterable, Identifiable {
     }
     
     #if os(macOS)
+    /// The image of the current main weapon
+    /// - Note: OSes other than `macOS` use `UIImage` instead
     public var image: NSImage? {
         guard let url = Bundle.module.url(forResource: "Path_Wst_\(self.rawValue)", withExtension: "png") else {
             return nil
@@ -200,6 +204,8 @@ public enum MainWeapon: String, CaseIterable, Identifiable {
         return NSImage(data: data)
     }
     #else
+    /// The image of the current main weapon
+    /// - Note: `macOS` use `NSImage` instead
     public var image: UIImage? {
         guard let url = Bundle.module.url(forResource: "Path_Wst_\(self.rawValue)", withExtension: "png") else {
             return nil
@@ -213,15 +219,27 @@ public enum MainWeapon: String, CaseIterable, Identifiable {
     }
     #endif
     
+    /// The localized name of the main weapon.
     public var localized: String {
         return NSLocalizedString(self.rawValue, tableName: "MainWeapon",  bundle: Bundle.module, comment: "")
     }
     
+    /// Converts the raw value into a file name in relation to `.game__GameParameterTable.json` files.
+    ///
+    /// Say we want to decode the game parameters of Rapid Blaster Pro. It's raw value is `Blaster_LightLong_00`.
+    ///
+    /// It's file is `WeaponBlasterLightLong.game__GameParameterTable.json`.
+    ///
+    /// This function outputs `BlasterLightLong`, ignoring the right-most side (`_00`) and removing the left underscore.
     func fileName() -> String {
         let split = self.rawValue.split(separator: "_")
         return String(split[0] + split[1])
     }
     
+    
+    /// Gets all main weapons of a ``WeaponClass``
+    /// - Parameter type: Some main weapon class
+    /// - Returns: All main weapons of `type`
     public static func getWeapons(of type: WeaponClass) -> [MainWeapon] {
         return MainWeapon.allCases
             .filter { $0.type == type }

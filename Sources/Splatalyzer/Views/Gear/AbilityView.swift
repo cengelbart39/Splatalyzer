@@ -7,14 +7,19 @@
 
 import SwiftUI
 
+/// A button that displays the an ability slot and enables modification.
 public struct AbilityView: View {
     
+    /// The ability displayed and modified
     @Binding public var ability: Ability
     
+    /// Whether the ability is a main ability
     public var isMain: Bool
     
+    /// The restriction applied to ability selection
     public var restriction: AbilityRestriction
     
+    /// Whether to present ``AbilityKeyboardView``
     @State public var showCover = false
     
     public init(ability: Binding<Ability>, isMain: Bool, restriction: AbilityRestriction) {
@@ -29,21 +34,10 @@ public struct AbilityView: View {
         Button(action: {
             showCover = true
         }, label: {
-            #if os(macOS)
-            Image(nsImage: ability.image ?? NSImage())
-                .resizable()
-                .scaledToFit()
+            ImageView(image: ability.image)
                 .padding(5)
                 .abilityBackground()
                 .frame(width: frame, height: frame)
-            #else
-            Image(uiImage: ability.image ?? UIImage())
-                .resizable()
-                .scaledToFit()
-                .padding(5)
-                .abilityBackground()
-                .frame(width: frame, height: frame)
-            #endif
         })
         .buttonStyle(.plain)
         .showAbilityKeyboard(isPresented: $showCover, onDismiss: {

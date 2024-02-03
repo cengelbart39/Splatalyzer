@@ -7,19 +7,9 @@
 
 import Foundation
 
-public struct SubDefenseStats {
+public struct SubDefenseStats: Equatable {
     public let toxicMistMovementReduction: AbilityStat
     public let pointSensorMarkedSeconds: AbilityStat
     public let inkMineMarkedSeconds: AbilityStat
     public let angleShooterMarkedSeconds: AbilityStat
-}
-
-extension BuildStats {
-    public func subDefenseStats() -> SubDefenseStats {
-        return SubDefenseStats(
-            toxicMistMovementReduction: self.toxicMistMovementReduction,
-            pointSensorMarkedSeconds: self.pointSensorMarkedSeconds,
-            inkMineMarkedSeconds: self.inkMineMarkedSeconds,
-            angleShooterMarkedSeconds: self.angleShooterMarkedSeconds)
-    }
 }

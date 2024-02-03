@@ -7,12 +7,16 @@
 
 import SwiftUI
 
-struct InkTankOptionStatCard: View {
+/// Displays information about an array of ``InkTankOption``
+public struct InkTankOptionStatCard: View {
     
-    var subs: Int
-    var options: [InkTankOption]
+    /// The number of uses of a sub weapon
+    public var subs: Int
     
-    var body: some View {
+    /// The number of shots that can be used after ``subs``
+    public var options: [InkTankOption]
+    
+    public var body: some View {
         GroupBox("\(subs) Sub Used") {
             HStack {
                 Spacer()

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct SubWeaponStats {
+public struct SubWeaponStats: Equatable {
     public let weapon: SubWeapon
     public let inkConsumptionPercentage: AbilityStat
     public let whiteInkSeconds: Double
@@ -19,21 +19,4 @@ public struct SubWeaponStats {
     public let explosionRadius: AbilityStat?
     public let subHp: AbilityStat?
     public let quickSuperJumpBoost: AbilityStat?
-}
-
-extension BuildStats {
-    public func subStats() -> SubWeaponStats {
-        return SubWeaponStats(
-            weapon: self.subWeapon,
-            inkConsumptionPercentage: self.subInkConsumptionPercentage,
-            whiteInkSeconds: self.subWhiteInkSeconds,
-            velocity: self.subVelocity,
-            firstPhaseDuration: self.subFirstPhaseDuration,
-            secondPhaseDuration: self.subSecondPhaseDuration,
-            markingTimeInSeconds: self.subMarkedSeconds,
-            markingRadius: self.subMarkedRadius,
-            explosionRadius: self.subExplosionRadius,
-            subHp: self.subHp,
-            quickSuperJumpBoost: self.quickSuperJumpBoost)
-    }
 }

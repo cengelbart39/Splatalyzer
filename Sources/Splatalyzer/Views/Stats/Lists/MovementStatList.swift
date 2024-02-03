@@ -7,73 +7,46 @@
 
 import SwiftUI
 
-struct MovementStatList: View {
-    @Environment(\.colorScheme) var colorScheme
+/// Displays Movement Stats
+public struct MovementStatList: View {
+
+    public var movementStats: MovementStats
     
-    @State var isCollapsed = true
-    
-    var movementStats: MovementStats
-    
-    var body: some View {
-        VStack {
-            Button(action: {
-                withAnimation {
-                    self.isCollapsed.toggle()
-                }
-            }, label: {
-                HStack {
-                    Text("Movement")
-                        .font(.title3)
-                    
-                    Spacer()
-                    
-                    Image(systemName: isCollapsed ? "chevron.right" : "chevron.down")
-                        .font(.title3)
-                }
-                .bold()
-            })
-            .contentTransition(.symbolEffect(.replace))
-            .cardBackground(for: colorScheme)
-            
-            if !self.isCollapsed {
-                LazyVStack(spacing: 10) {
-                    StringStatCard(
-                        title: String(localized: "Weight", comment: "Refers to the weight class of a main weapon."),
-                        value: movementStats.speedType.display)
-                    
-                    AbilityStatCard(stat: movementStats.swimSpeed)
-                    
-                    AbilityStatCard(stat: movementStats.swimSpeedWithRainmaker)
-                    
-                    AbilityStatCard(stat: movementStats.runSpeed)
-                    
-                    if let shootingRunSpeed = movementStats.shootingRunSpeed {
-                        AbilityStatCard(stat: shootingRunSpeed)
-                    }
-                    
-                    if let shootingRunSpeedCharging = movementStats.shootingRunSpeedCharging {
-                        AbilityStatCard(stat: shootingRunSpeedCharging)
-                    }
-                    
-                    if let shootingRunSpeedFullCharge = movementStats.shootingRunSpeedFullCharge {
-                        AbilityStatCard(stat: shootingRunSpeedFullCharge)
-                    }
-                    
-                    if let shootingRunSpeedSecondary = movementStats.shootingRunSpeedSecondary {
-                        AbilityStatCard(stat: shootingRunSpeedSecondary)
-                    }
-                    
-                    AbilityStatCard(stat: movementStats.squidSurgeChargeFrames)
-                    
-                    AbilityStatCard(stat: movementStats.runSpeedInEnemyInk)
-                    
-                    AbilityStatCard(stat: movementStats.framesBeforeDamageInEnemyInk)
-                    
-                    AbilityStatCard(stat: movementStats.damageInEnemyInkPerSecond)
-                    
-                    AbilityStatCard(stat: movementStats.enemyInkDamageLimit)
-                }
+    public var body: some View {
+        StatList(title: "Movement") {
+            LazyVStack(spacing: 10) {
+                StringStatCard(
+                    title: String(
+                        localized: "Weight",
+                        comment: "Refers to the weight class of a main weapon."
+                    ),
+                    value: movementStats.speedType.display)
+                
+                AbilityStatCard(stat: movementStats.swimSpeed)
+                
+                AbilityStatCard(stat: movementStats.swimSpeedWithRainmaker)
+                
+                AbilityStatCard(stat: movementStats.runSpeed)
+                
+                AbilityStatCard(stat: movementStats.shootingRunSpeed)
+                
+                AbilityStatCard(stat: movementStats.shootingRunSpeedCharging)
+                
+                AbilityStatCard(stat: movementStats.shootingRunSpeedFullCharge)
+                
+                AbilityStatCard(stat: movementStats.shootingRunSpeedSecondary)
+                
+                AbilityStatCard(stat: movementStats.squidSurgeChargeFrames)
+                
+                AbilityStatCard(stat: movementStats.runSpeedInEnemyInk)
+                
+                AbilityStatCard(stat: movementStats.framesBeforeDamageInEnemyInk)
+                
+                AbilityStatCard(stat: movementStats.damageInEnemyInkPerSecond)
+                
+                AbilityStatCard(stat: movementStats.enemyInkDamageLimit)
             }
+
         }
     }
 }

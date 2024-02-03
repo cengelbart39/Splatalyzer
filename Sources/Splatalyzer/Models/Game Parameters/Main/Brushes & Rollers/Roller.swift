@@ -7,40 +7,53 @@
 
 import Foundation
 
-public struct Roller: Codable {
-    public let bodyParam: BRBodyParameter
-    public let bulletAdditionMovePlayerSpalashNearestParam: BRBulletAdditionMovePlayerSplashNearestParameter
+/// Represents the game parameter data of a main weapon in the
+/// Roller Class.
+///
+/// To see a representative `JSON` go to
+/// `Resources/weapon-json/` and find a file prefixed with
+/// `WeaponRoller`.
+public struct Roller: GameParametable {
+    public var parameters: Parameters
     
-    public let knockBackByCanopyParam: KnockBackByCanopyParameter?
-    
-    public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
-    public let mainWeaponSetting: MainWeaponSettings
-    
-    public let verticalSwingUnitGroupParam: VerticalSwingUnitGroupParameter
-    public let weaponRollParam: BRWeaponRollParameter
-    public let weaponVerticalSwingParam: BRWeaponSwingParameter
-    public let weaponWideSwingParam: BRWeaponSwingParameter
-    public let wideSwingUnitGroupParam: WideSwingUnitGroupParameter
-    
-    public let spawnBulletAdditionMovePlayerParam: BRSpawnBulletAdditionMoveParameter
-    
-    public enum CodingKeys: String, CodingKey {
-        case bodyParam = "BodyParam"
-        case bulletAdditionMovePlayerSpalashNearestParam = "BulletAdditionMovePlayerSplashNearestParam"
-        case knockBackByCanopyParam = "KnockBackByCanopyParam"
-        case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
-        case mainWeaponSetting = "MainWeaponSetting"
-        case verticalSwingUnitGroupParam = "VerticalSwingUnitGroupParam"
-        case weaponRollParam = "WeaponRollParam"
-        case weaponVerticalSwingParam = "WeaponVerticalSwingParam"
-        case weaponWideSwingParam = "WeaponWideSwingParam"
-        case wideSwingUnitGroupParam = "WideSwingUnitGroupParam"
-        case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
+    public init(parameters: Parameters) {
+        self.parameters = parameters
     }
     
+    public struct Parameters: Codable {
+        public let bodyParam: BRBodyParameter
+        public let bulletAdditionMovePlayerSpalashNearestParam: BRBulletAdditionMovePlayerSplashNearestParameter
+        
+        public let knockBackByCanopyParam: KnockBackByCanopyParameter?
+        
+        public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
+        public let mainWeaponSetting: MainWeaponSettings
+        
+        public let verticalSwingUnitGroupParam: VerticalSwingUnitGroupParameter
+        public let weaponRollParam: BRWeaponRollParameter
+        public let weaponVerticalSwingParam: BRWeaponSwingParameter
+        public let weaponWideSwingParam: BRWeaponSwingParameter
+        public let wideSwingUnitGroupParam: WideSwingUnitGroupParameter
+        
+        public let spawnBulletAdditionMovePlayerParam: BRSpawnBulletAdditionMoveParameter
+        
+        public enum CodingKeys: String, CodingKey {
+            case bodyParam = "BodyParam"
+            case bulletAdditionMovePlayerSpalashNearestParam = "BulletAdditionMovePlayerSplashNearestParam"
+            case knockBackByCanopyParam = "KnockBackByCanopyParam"
+            case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
+            case mainWeaponSetting = "MainWeaponSetting"
+            case verticalSwingUnitGroupParam = "VerticalSwingUnitGroupParam"
+            case weaponRollParam = "WeaponRollParam"
+            case weaponVerticalSwingParam = "WeaponVerticalSwingParam"
+            case weaponWideSwingParam = "WeaponWideSwingParam"
+            case wideSwingUnitGroupParam = "WideSwingUnitGroupParam"
+            case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
+        }
+    }
 }
 
-extension Roller {
+extension Roller.Parameters {
     public struct KnockBackByCanopyParameter: Codable {
         public let type: String
         public let knockBackRollerPlayerDamageOff: BRKnockBack
@@ -90,7 +103,7 @@ extension Roller {
     }
 }
 
-extension Roller.VerticalSwingUnitGroupParameter {
+extension Roller.Parameters.VerticalSwingUnitGroupParameter {
     public struct SplashPaintParameter: Codable {
         public let depthScaleMax: Double
         public let depthScaleMin: Double

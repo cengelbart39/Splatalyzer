@@ -7,56 +7,72 @@
 
 import Foundation
 
-public struct Shooter: Codable {
-    public let collisionParam: CollisionParameter
-    public let damageParam: DamageParameter
+/// Represents the game parameter data of a main weapon in the
+/// Shooter Class.
+///
+/// To see a representative `JSON` go to
+/// `Resources/weapon-json/` and find a file prefixed with
+/// `WeaponShooter`.
+public struct Shooter: GameParametable {
+    public var parameters: Parameters
     
-    public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
-    public let mainWeaponSetting: MainWeaponSettings
-    
-    public let moveParam: MoveParameter
-    public let paintParam: PaintParameter
-    public let splashPaintParam: SplashPaintParameter
-    public let splashSpawnParam: SplashSpawnParameter
-    
-    public let variableCollisionParam: CollisionParameter?
-    public let variableDamageParam: DamageParameter?
-    public let variableMoveParam: MoveParameter?
-    public let variablePaintParam: PaintParameter?
-    public let variableSplashPaintParam: SplashPaintParameter?
-    public let variableSplashSpawnParam: SplashSpawnParameter?
-    public let variableWeaponParam: WeaponParameter?
-    
-    public let wallDropCollisionPaintParam: WallDropCollisionPaintParameter
-    public let wallDropMoveParam: WallDropMoveParameter
-    public let weaponParam: WeaponParameter
-    
-    public let actionSpecUpReduceJumpSwerveRate: ActionSpecUpParameter?
-    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
-    
-    public enum CodingKeys: String, CodingKey {
-        case collisionParam = "CollisionParam"
-        case damageParam = "DamageParam"
-        case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
-        case mainWeaponSetting = "MainWeaponSetting"
-        case moveParam = "MoveParam"
-        case paintParam = "PaintParam"
-        case splashPaintParam = "SplashPaintParam"
-        case splashSpawnParam = "SplashSpawnParam"
-        case variableCollisionParam = "VariableCollisionParam"
-        case variableDamageParam = "VariableDamageParam"
-        case variableMoveParam = "VariableMoveParam"
-        case variablePaintParam = "VariablePaintParam"
-        case variableSplashPaintParam = "VariableSplashPaintParam"
-        case variableSplashSpawnParam = "VariableSplashSpawnParam"
-        case variableWeaponParam = "VariableWeaponParam"
-        case wallDropCollisionPaintParam = "WallDropCollisionPaintParam"
-        case wallDropMoveParam = "WallDropMoveParam"
-        case weaponParam = "WeaponParam"
-        case actionSpecUpReduceJumpSwerveRate = "spl__PlayerGearSkillParam_ActionSpecUp_ReduceJumpSwerveRate"
-        case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
+    public init(parameters: Parameters) {
+        self.parameters = parameters
     }
+    
+    public struct Parameters: Codable {
+        public let collisionParam: CollisionParameter
+        public let damageParam: DamageParameter
+        
+        public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
+        public let mainWeaponSetting: MainWeaponSettings
+        
+        public let moveParam: MoveParameter
+        public let paintParam: PaintParameter
+        public let splashPaintParam: SplashPaintParameter
+        public let splashSpawnParam: SplashSpawnParameter
+        
+        public let variableCollisionParam: CollisionParameter?
+        public let variableDamageParam: DamageParameter?
+        public let variableMoveParam: MoveParameter?
+        public let variablePaintParam: PaintParameter?
+        public let variableSplashPaintParam: SplashPaintParameter?
+        public let variableSplashSpawnParam: SplashSpawnParameter?
+        public let variableWeaponParam: WeaponParameter?
+        
+        public let wallDropCollisionPaintParam: WallDropCollisionPaintParameter
+        public let wallDropMoveParam: WallDropMoveParameter
+        public let weaponParam: WeaponParameter
+        
+        public let actionSpecUpReduceJumpSwerveRate: ActionSpecUpParameter?
+        public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
+        
+        public enum CodingKeys: String, CodingKey {
+            case collisionParam = "CollisionParam"
+            case damageParam = "DamageParam"
+            case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
+            case mainWeaponSetting = "MainWeaponSetting"
+            case moveParam = "MoveParam"
+            case paintParam = "PaintParam"
+            case splashPaintParam = "SplashPaintParam"
+            case splashSpawnParam = "SplashSpawnParam"
+            case variableCollisionParam = "VariableCollisionParam"
+            case variableDamageParam = "VariableDamageParam"
+            case variableMoveParam = "VariableMoveParam"
+            case variablePaintParam = "VariablePaintParam"
+            case variableSplashPaintParam = "VariableSplashPaintParam"
+            case variableSplashSpawnParam = "VariableSplashSpawnParam"
+            case variableWeaponParam = "VariableWeaponParam"
+            case wallDropCollisionPaintParam = "WallDropCollisionPaintParam"
+            case wallDropMoveParam = "WallDropMoveParam"
+            case weaponParam = "WeaponParam"
+            case actionSpecUpReduceJumpSwerveRate = "spl__PlayerGearSkillParam_ActionSpecUp_ReduceJumpSwerveRate"
+            case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
+        }
+    }
+}
 
+extension Shooter.Parameters {
     public struct CollisionParameter: Codable {
         public let type: String
         public let changeFrameForField: Int?

@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Slosher {
+extension Slosher.Parameters {
     public struct UnitGroupParameter: Codable {
         public let type: String
         public let unit: [UnitParameter]
@@ -19,7 +19,7 @@ extension Slosher {
     }
 }
 
-extension Slosher.UnitGroupParameter {
+extension Slosher.Parameters.UnitGroupParameter {
     public struct UnitParameter: Codable {
         public let addSpawnSpeedYRateByXZ: Double
         public let afterOffsetDelayFrame: Int
@@ -85,7 +85,7 @@ extension Slosher.UnitGroupParameter {
     }
 }
 
-extension Slosher.UnitGroupParameter.UnitParameter {
+extension Slosher.Parameters.UnitGroupParameter.UnitParameter {
     public struct AfterPaintParameter: Codable {
         public let depthScaleFar: Double
         public let depthScaleNear: Double
@@ -272,7 +272,7 @@ extension Slosher.UnitGroupParameter.UnitParameter {
     }
 }
 
-extension Slosher.UnitGroupParameter.UnitParameter.SplashAndSplashWallHitSpawnParameter {
+extension Slosher.Parameters.UnitGroupParameter.UnitParameter.SplashAndSplashWallHitSpawnParameter {
     public struct SplashHitSpawnCombination: Codable {
         public let orderNum: Int
         public let splashArrayOrderNum: Int
@@ -298,9 +298,9 @@ extension Slosher.UnitGroupParameter.UnitParameter.SplashAndSplashWallHitSpawnPa
     }
 }
 
-extension Slosher.UnitGroupParameter.UnitParameter.SplashAndSplashWallHitSpawnParameter.SplashHitSpawnSplashParameter {
+extension Slosher.Parameters.UnitGroupParameter.UnitParameter.SplashAndSplashWallHitSpawnParameter.SplashHitSpawnSplashParameter {
     public struct DrawSizeCollisionPaintParameter: Codable {
-        public let collisionParam: Slosher.CollisionParameter
+        public let collisionParam: Slosher.Parameters.CollisionParameter
         public let drawRadius: Double
         public let paintDepthScale: Double
         public let paintWidthHalf: Double
@@ -334,7 +334,7 @@ extension Slosher.UnitGroupParameter.UnitParameter.SplashAndSplashWallHitSpawnPa
     }
 }
 
-extension Slosher.UnitGroupParameter.UnitParameter {
+extension Slosher.Parameters.UnitGroupParameter.UnitParameter {
     public struct SplashHitParameter: Codable {
         public let collisionRadius: Double
         public let drawRadius: Double

@@ -14,31 +14,31 @@ final class SplatlingDecodingTests: XCTestCase {
 
     func test_BallpointSplatling_decode_noThrows() {
         let fileName = "WeaponSpinnerDownpour.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SplatlingGameParameters.self, from: fileName))
+        XCTAssertNoThrow(try service.decode(Splatling.self, from: fileName))
     }
     
     func test_HeavyEditSplatling_decode_noThrows() {
         let fileName = "WeaponSpinnerHyperShort.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SplatlingGameParameters.self, from: fileName))
+        XCTAssertNoThrow(try service.decode(Splatling.self, from: fileName))
     }
     
     func test_HeavySplatling_decode_noThrows() {
         let fileName = "WeaponSpinnerStandard.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SplatlingGameParameters.self, from: fileName))
+        XCTAssertNoThrow(try service.decode(Splatling.self, from: fileName))
     }
 
     func test_HydraSplatling_decode_noThrows() {
         let fileName = "WeaponSpinnerHyper.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SplatlingGameParameters.self, from: fileName))
+        XCTAssertNoThrow(try service.decode(Splatling.self, from: fileName))
     }
     
     func test_MiniSplatling_decode_noThrows() {
         let fileName = "WeaponSpinnerQuick.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SplatlingGameParameters.self, from: fileName))
+        XCTAssertNoThrow(try service.decode(Splatling.self, from: fileName))
     }
     
     func test_Nautilus47_decode_noThrows() {
         let fileName = "WeaponSpinnerSerein.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(SplatlingGameParameters.self, from: fileName))
+        XCTAssertNoThrow(try service.decode(Splatling.self, from: fileName))
     }
 }

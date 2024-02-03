@@ -7,10 +7,20 @@
 
 import Foundation
 
+/// Represents the ink consumption of a sub weapon
 public struct SubWeaponConsume {
+    /// The ink consumption
     public let inkConsume: Double
+    
+    /// The number of subs used
     public let maxSubsFromFullInkTank: Int
     
+    /// Initializes and calculates an instance
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - SmainInfo: Information about the main weapon
+    ///   - subInfo: Information about the sub weapon
     public init(
         _ ap: AbilityPoints,
         _ abilities: AbilityValues,

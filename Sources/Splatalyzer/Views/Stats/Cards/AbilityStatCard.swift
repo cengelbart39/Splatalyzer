@@ -7,73 +7,43 @@
 
 import SwiftUI
 
-struct AbilityStatCard: View {
+/// Displays information in an ``AbilityStat``
+public struct AbilityStatCard: View {
     
     @Environment(\.colorScheme) var colorScheme
     
-    var stat: AbilityStat
+    public var stat: AbilityStat?
     
-    var body: some View {
-        ZStack {
-            GroupBox(stat.title) {
-                VStack(spacing: 0) {
-                    Spacer()
-                    
-                    HStack {
-                        
+    public var body: some View {
+        if let stat = stat {
+            ZStack {
+                GroupBox(stat.title) {
+                    VStack(spacing: 0) {
                         Spacer()
                         
-                        VStack(alignment: .leading, spacing: 0) {
+                        HStack {
                             
-                            Text("Base", comment: "Refers to a base effect before any gear abilities.")
-                                .font(.headline.weight(.semibold))
-                                .padding(.bottom, -10)
-                                .foregroundStyle(.secondary)
+                            Spacer()
                             
-                            if stat.unit.symbol.isEmpty {
-                                Text(stat.baseValue.format())
-                                    .font(.title)
-                                    .fontDesign(.rounded)
-                                
-                            } else if stat.unit == .degrees {
-                                Text(stat.baseValue.format() + "°")
-                                    .font(.title)
-                                    .fontDesign(.rounded)
-                                
-                            } else {
-                                Text(stat.baseValue.format())
-                                    .font(.title)
-                                    .fontDesign(.rounded)
-                                + Text(stat.unit.symbol.uppercased())
-                                    .foregroundStyle(.secondary)
-                                    .font(.headline)
-                            }
-                            
-                        }
-                        
-                        
-                        Spacer()
-                        
-                        if stat.baseValue != stat.value {
                             VStack(alignment: .leading, spacing: 0) {
                                 
-                                Text("Build", comment: "Refers to a gear build. Used in reference to the effect caused by gear abilities.")
+                                Text("Base", comment: "Refers to a base effect before any gear abilities.")
                                     .font(.headline.weight(.semibold))
                                     .padding(.bottom, -10)
                                     .foregroundStyle(.secondary)
                                 
                                 if stat.unit.symbol.isEmpty {
-                                    Text(stat.value.format())
+                                    Text(stat.baseValue.format())
                                         .font(.title)
                                         .fontDesign(.rounded)
                                     
                                 } else if stat.unit == .degrees {
-                                    Text(stat.value.format() + "°")
+                                    Text(stat.baseValue.format() + "°")
                                         .font(.title)
                                         .fontDesign(.rounded)
                                     
                                 } else {
-                                    Text(stat.value.format())
+                                    Text(stat.baseValue.format())
                                         .font(.title)
                                         .fontDesign(.rounded)
                                     + Text(stat.unit.symbol.uppercased())
@@ -83,44 +53,65 @@ struct AbilityStatCard: View {
                                 
                             }
                             
+                            
                             Spacer()
+                            
+                            if stat.baseValue != stat.value {
+                                VStack(alignment: .leading, spacing: 0) {
+                                    
+                                    Text("Build", comment: "Refers to a gear build. Used in reference to the effect caused by gear abilities.")
+                                        .font(.headline.weight(.semibold))
+                                        .padding(.bottom, -10)
+                                        .foregroundStyle(.secondary)
+                                    
+                                    if stat.unit.symbol.isEmpty {
+                                        Text(stat.value.format())
+                                            .font(.title)
+                                            .fontDesign(.rounded)
+                                        
+                                    } else if stat.unit == .degrees {
+                                        Text(stat.value.format() + "°")
+                                            .font(.title)
+                                            .fontDesign(.rounded)
+                                        
+                                    } else {
+                                        Text(stat.value.format())
+                                            .font(.title)
+                                            .fontDesign(.rounded)
+                                        + Text(stat.unit.symbol.uppercased())
+                                            .foregroundStyle(.secondary)
+                                            .font(.headline)
+                                    }
+                                    
+                                }
+                                
+                                Spacer()
+                            }
+                            
+                        }
+                        .padding(.bottom, 10)
+                        
+                        Spacer()
+                    }
+                }
+                
+                VStack {
+                    Spacer()
+                    
+                    HStack {
+                        ForEach(stat.modifiedBy, id: \.self) { ability in
+                            ImageView(image: ability.image)
+                                .padding(5)
+                                .abilityBackground()
+                                .frame(width: 35)
+                                .shadow(radius: colorScheme == .dark ? 5 : 0)
                         }
                         
+                        Spacer()
                     }
-                    .padding(.bottom, 10)
-                    
-                    Spacer()
                 }
+                .padding([.bottom, .leading], 10)
             }
-            
-            VStack {
-                Spacer()
-                
-                HStack {
-                    ForEach(stat.modifiedBy, id: \.self) { ability in
-                        #if os(macOS)
-                        Image(nsImage: ability.image ?? NSImage())
-                            .resizable()
-                            .scaledToFit()
-                            .padding(5)
-                            .abilityBackground()
-                            .frame(width: 35)
-                            .shadow(radius: colorScheme == .dark ? 5 : 0)
-                        #else
-                        Image(uiImage: ability.image ?? UIImage())
-                            .resizable()
-                            .scaledToFit()
-                            .padding(5)
-                            .abilityBackground()
-                            .frame(width: 35)
-                            .shadow(radius: colorScheme == .dark ? 5 : 0)
-                        #endif
-                    }
-                    
-                    Spacer()
-                }
-            }
-            .padding([.bottom, .leading], 10)
         }
     }
 }

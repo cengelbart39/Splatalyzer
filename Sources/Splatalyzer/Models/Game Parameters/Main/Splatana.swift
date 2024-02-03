@@ -7,30 +7,44 @@
 
 import Foundation
 
-public struct Splatana: Codable {
-    public let bulletSaberHorizontalParam: BulletParameter
-    public let bulletSaberSlashHorizontalParam: BulletSlashParameter
+/// Represents the game parameter data of a main weapon in the
+/// Splatana Class.
+///
+/// To see a representative `JSON` go to
+/// `Resources/weapon-json/` and find a file prefixed with
+/// `WeaponSaber`.
+public struct Splatana: GameParametable {
+    public var parameters: Parameters
     
-    public let bulletSaberSlashVerticalParam: BulletSlashParameter
-    public let bulletSaberVerticalParam: BulletParameter
+    public init(parameters: Parameters) {
+        self.parameters = parameters
+    }
     
-    public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter?
-    public let mainWeaponSetting: MainWeaponSettings
-    
-    public let weaponSaberParam: WeaponParameter
-    
-    public enum CodingKeys: String, CodingKey {
-        case bulletSaberHorizontalParam = "BulletSaberHorizontalParam"
-        case bulletSaberSlashHorizontalParam = "BulletSaberSlashHorizontalParam"
-        case bulletSaberSlashVerticalParam = "BulletSaberSlashVerticalParam"
-        case bulletSaberVerticalParam = "BulletSaberVerticalParam"
-        case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
-        case mainWeaponSetting = "MainWeaponSetting"
-        case weaponSaberParam = "spl__WeaponSaberParam"
+    public struct Parameters: Codable {
+        public let bulletSaberHorizontalParam: BulletParameter
+        public let bulletSaberSlashHorizontalParam: BulletSlashParameter
+        
+        public let bulletSaberSlashVerticalParam: BulletSlashParameter
+        public let bulletSaberVerticalParam: BulletParameter
+        
+        public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter?
+        public let mainWeaponSetting: MainWeaponSettings
+        
+        public let weaponSaberParam: WeaponParameter
+        
+        public enum CodingKeys: String, CodingKey {
+            case bulletSaberHorizontalParam = "BulletSaberHorizontalParam"
+            case bulletSaberSlashHorizontalParam = "BulletSaberSlashHorizontalParam"
+            case bulletSaberSlashVerticalParam = "BulletSaberSlashVerticalParam"
+            case bulletSaberVerticalParam = "BulletSaberVerticalParam"
+            case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
+            case mainWeaponSetting = "MainWeaponSetting"
+            case weaponSaberParam = "spl__WeaponSaberParam"
+        }
     }
 }
 
-extension Splatana {
+extension Splatana.Parameters {
     public struct BulletParameter: Codable {
         public let type: String
         public let burstParam: BurstParameter
@@ -56,7 +70,7 @@ extension Splatana {
     }
 }
 
-extension Splatana.BulletParameter {
+extension Splatana.Parameters.BulletParameter {
     public struct BurstParameter: Codable {
         public let burstFrame: Int
         public let isEmitSplash: Bool?
@@ -174,7 +188,7 @@ extension Splatana.BulletParameter {
     }
 }
 
-extension Splatana.BulletParameter.CollisionParameter {
+extension Splatana.Parameters.BulletParameter.CollisionParameter {
     public struct ParameterItem: Codable {
         public let chargeFrameForField: Int?
         public let chargeFrameForPlayer: Int?
@@ -196,7 +210,7 @@ extension Splatana.BulletParameter.CollisionParameter {
     }
 }
 
-extension Splatana {
+extension Splatana.Parameters {
     public struct BulletSlashParameter: Codable {
         public let type: String
         public let damageParam: DamageParameter
@@ -212,7 +226,7 @@ extension Splatana {
     }
 }
 
-extension Splatana.BulletSlashParameter {
+extension Splatana.Parameters.BulletSlashParameter {
     public struct DamageParameter: Codable {
         public let accelForCastle: Double?
         public let damageValue: Int
@@ -252,7 +266,7 @@ extension Splatana.BulletSlashParameter {
     }
 }
 
-extension Splatana {
+extension Splatana.Parameters {
     public struct WeaponParameter: Codable {
         public let type: String
         public let chargeKeepParam: ChargeKeepParameter?
@@ -274,7 +288,7 @@ extension Splatana {
     }
 }
 
-extension Splatana.WeaponParameter {
+extension Splatana.Parameters.WeaponParameter {
     public struct ChargeKeepParameter: Codable {
         public let keepChargePreDelayFrame: Int
         
@@ -400,7 +414,7 @@ extension Splatana.WeaponParameter {
     }
 }
 
-extension Splatana.WeaponParameter.SwingParameter {
+extension Splatana.Parameters.WeaponParameter.SwingParameter {
     public struct SideStepParameter: Codable {
         public let chargeFrame: Int
         public let inkConsume: Double?

@@ -4,6 +4,9 @@
     "" : {
 
     },
+    "(specialWeapon.localized) Damage" : {
+      "comment" : "Refers to the damage done by the Special Weapon."
+    },
     "%@ Damage" : {
       "comment" : "Refers to the damage done by the Special Weapon.",
       "localizations" : {
@@ -135,7 +138,7 @@
       }
     },
     "%@ Radius Range" : {
-      "comment" : "Refers to the maximum and minimum radius of the Big Bubbler special.",
+      "comment" : "Refers to the maximum and minimum radius of the certain specials.",
       "localizations" : {
         "en" : {
           "stringUnit" : {

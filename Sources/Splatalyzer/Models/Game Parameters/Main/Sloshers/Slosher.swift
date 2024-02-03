@@ -7,33 +7,47 @@
 
 import Foundation
 
-public struct Slosher: Codable {
-    public let blastParam: BlastParameter?
-    public let bounceGroupParam: BounceGroupParameter?
-    public let mainEffectiveRangeUp: MainEffectiveRangeUpParameter
-    public let mainWeaponSetting: MainWeaponSettings
-    public let nearestParam: NearestParameter
-    public let splashSlosherScatterParam: SplashScatterParameter?
-    public let splashSlosherSpiralParam: SplashSpiralParameter?
-    public let unitGroupParam: UnitGroupParameter
-    public let weaponParam: WeaponParameter
-    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
+/// Represents the game parameter data of a main weapon in the
+/// Slosher Class.
+///
+/// To see a representative `JSON` go to
+/// `Resources/weapon-json/` and find a file prefixed with
+/// `WeaponSlosher`.
+public struct Slosher: GameParametable {
+    public var parameters: Parameters
     
-    public enum CodingKeys: String, CodingKey {
-        case blastParam = "BlastParam"
-        case bounceGroupParam = "BounceGroupParam"
-        case mainEffectiveRangeUp = "MainEffectiveRangeUpParam"
-        case mainWeaponSetting = "MainWeaponSetting"
-        case nearestParam = "NearestParam"
-        case splashSlosherScatterParam = "SplashSlosherScatterParam"
-        case splashSlosherSpiralParam = "SplashSlosherSpiralParam"
-        case unitGroupParam = "UnitGroupParam"
-        case weaponParam = "WeaponParam"
-        case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
+    public init(parameters: Parameters) {
+        self.parameters = parameters
+    }
+    
+    public struct Parameters: Codable {
+        public let blastParam: BlastParameter?
+        public let bounceGroupParam: BounceGroupParameter?
+        public let mainEffectiveRangeUp: MainEffectiveRangeUpParameter
+        public let mainWeaponSetting: MainWeaponSettings
+        public let nearestParam: NearestParameter
+        public let splashSlosherScatterParam: SplashScatterParameter?
+        public let splashSlosherSpiralParam: SplashSpiralParameter?
+        public let unitGroupParam: UnitGroupParameter
+        public let weaponParam: WeaponParameter
+        public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
+        
+        public enum CodingKeys: String, CodingKey {
+            case blastParam = "BlastParam"
+            case bounceGroupParam = "BounceGroupParam"
+            case mainEffectiveRangeUp = "MainEffectiveRangeUpParam"
+            case mainWeaponSetting = "MainWeaponSetting"
+            case nearestParam = "NearestParam"
+            case splashSlosherScatterParam = "SplashSlosherScatterParam"
+            case splashSlosherSpiralParam = "SplashSlosherSpiralParam"
+            case unitGroupParam = "UnitGroupParam"
+            case weaponParam = "WeaponParam"
+            case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
+        }
     }
 }
 
-extension Slosher {
+extension Slosher.Parameters {
     public struct BlastParameter: Codable {
         public let type: String
         public let blastParam: BlastInnerParameter
@@ -53,7 +67,7 @@ extension Slosher {
     }
 }
 
-extension Slosher.BlastParameter {
+extension Slosher.Parameters.BlastParameter {
     public struct BlastInnerParameter: Codable {
         public let collisionRadiusForPaint: Double
         public let crossPaintCheckLength: Double
@@ -79,7 +93,7 @@ extension Slosher.BlastParameter {
     }
 }
 
-extension Slosher {
+extension Slosher.Parameters {
     public struct BounceGroupParameter: Codable {
         public let type: String
         public let bounceParam: [BounceParameter]
@@ -91,7 +105,7 @@ extension Slosher {
     }
 }
 
-extension Slosher.BounceGroupParameter {
+extension Slosher.Parameters.BounceGroupParameter {
     public struct BounceParameter: Codable {
         public let afterOffsetPaintRadiusFirstBnce: Double?
         public let bounceAfterMaxSpeed: Double?
@@ -107,7 +121,7 @@ extension Slosher.BounceGroupParameter {
     }
 }
 
-extension Slosher {
+extension Slosher.Parameters {
     public struct CollisionParameter: Codable {
         public let endRadiusForField: Double?
         public let endRadiusForPlayer: Double
@@ -123,7 +137,7 @@ extension Slosher {
     }
 }
 
-extension Slosher {
+extension Slosher.Parameters {
     public struct NearestParameter: Codable {
         public let type: String
         public let drawSizeCollisionPaintParam: DrawSizeCollisionPaintParameter
@@ -137,9 +151,9 @@ extension Slosher {
     }
 }
 
-extension Slosher.NearestParameter {
+extension Slosher.Parameters.NearestParameter {
     public struct DrawSizeCollisionPaintParameter: Codable {
-        public let collisionParam: Slosher.CollisionParameter?
+        public let collisionParam: Slosher.Parameters.CollisionParameter?
         public let paintDepthScale: Double
         public let paintWidthHalf: Double
         
@@ -151,10 +165,10 @@ extension Slosher.NearestParameter {
     }
 }
 
-extension Slosher {
+extension Slosher.Parameters {
     public struct SplashScatterParameter: Codable {
         public let type: String
-        public let collisionParam: Slosher.CollisionParameter
+        public let collisionParam: Slosher.Parameters.CollisionParameter
         public let paintRadius: Double
         public let spawnFirstFrame: Int
         public let spawnMaxDegree: Double
@@ -185,10 +199,10 @@ extension Slosher {
     }
 }
 
-extension Slosher {
+extension Slosher.Parameters {
     public struct SplashSpiralParameter: Codable {
         public let type: String
-        public let collisionParam: Slosher.CollisionParameter
+        public let collisionParam: Slosher.Parameters.CollisionParameter
         public let lifeFrame: Int
         public let roundSplitNum: Int
         public let sameTimeSpawnNum: Int
@@ -219,7 +233,7 @@ extension Slosher {
     }
 }
 
-extension Slosher {
+extension Slosher.Parameters {
     public struct WeaponParameter: Codable {
         public let type: String
         public let frameOffsetDegreeRate: Double?
@@ -253,7 +267,7 @@ extension Slosher {
     }
 }
 
-extension Slosher.WeaponParameter {
+extension Slosher.Parameters.WeaponParameter {
     public struct ShotGuide: Codable {
         public let bulletOrderNumInUnit: Int?
         public let frame: Int
@@ -267,7 +281,7 @@ extension Slosher.WeaponParameter {
     }
 }
 
-extension Slosher {
+extension Slosher.Parameters {
     public struct SpawnBulletAdditionMovePlayerParameter: Codable {
         public let type: String
         public let guideYMinusZero: Bool

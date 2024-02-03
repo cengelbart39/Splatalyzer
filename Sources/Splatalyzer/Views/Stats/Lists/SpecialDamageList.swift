@@ -7,41 +7,22 @@
 
 import SwiftUI
 
-struct SpecialDamageList: View {
+/// Displays damage done by the Special Weapon
+public struct SpecialDamageList: View {
     
-    @Environment(\.colorScheme) var colorScheme
+    /// The Special Wepaon in question
+    public var specialWeapon: SpecialWeapon
     
-    @State var isCollapsed = true
+    /// The damage done by the Special Weapon
+    public var specialDamage: [DamageStat]
     
-    var specialWeapon: SpecialWeapon
-    var specialDamage: [DamageStat]
-    
-    var body: some View {
-        VStack(alignment: .leading) {
-            Button(action: {
-                withAnimation {
-                    self.isCollapsed.toggle()
-                }
-            }, label: {
-                HStack {
-                    Text("\(specialWeapon.localized) Damage", comment: "Refers to the damage done by the Special Weapon.")
-                        .font(.title3)
-                    
-                    Spacer()
-                    
-                    Image(systemName: isCollapsed ? "chevron.right" : "chevron.down")
-                        .font(.title3)
-                }
-                .bold()
-            })
-            .contentTransition(.symbolEffect(.replace))
-            .cardBackground(for: colorScheme)
-
-            if !isCollapsed {
-                LazyVStack(spacing: 10) {
-                    ForEach(specialDamage, id: \.self) { stat in
-                        DamageStatCard(stat: stat)
-                    }
+    public var body: some View {
+        let title = NSLocalizedString("\(specialWeapon.localized) Damage", bundle: Bundle.module, comment: "Refers to the damage done by the Special Weapon.")
+        
+        StatList(title: title) {
+            LazyVStack(spacing: 10) {
+                ForEach(specialDamage, id: \.self) { stat in
+                    DamageStatCard(stat: stat)
                 }
             }
         }

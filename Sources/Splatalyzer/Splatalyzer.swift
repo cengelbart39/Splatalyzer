@@ -4,21 +4,31 @@
 import Foundation
 import Observation
 
+/// Class that enables the analysis of gear builds into statistics
 public final class Splatalyzer: ObservableObject {
+    
+    /// The stats produced by the class
     @Published public var stats: BuildStats? = nil
+    
+    /// The user's gear build
     @Published public var gearBuild = GearBuild()
+    
+    /// The selected main weapon
     @Published public var mainWeapon = MainWeapon.allCases.first!
+    
+    /// The selected Last-Ditch Effort Intensity
     @Published public var ldeIntensity = 0
+    
+    /// Whether Tacticooler effects should be considered in statistics
     @Published public var usingTacticooler = false
     
     private var weaponInfoMain: WeaponInfoMain? = nil
-    private var weaponInfoSub: WeaponInfoSub? = nil
-    private var weaponInfoSpecial: WeaponInfoSpecial? = nil
-    private var playerParams: PlayerParameters? = nil
+    private var playerParams: Player? = nil
     private var subData = [SubWeapon : SubWeaponData]()
     
     public init() { }
     
+    /// Update statstics after a change in ``MainWeapon``
     public func updateStats(for weapon: MainWeapon) throws {
         DispatchQueue.main.async {
             self.mainWeapon = weapon
@@ -27,6 +37,7 @@ public final class Splatalyzer: ObservableObject {
         try self.analyze()
     }
     
+    /// Update statstics after a change in ``GearBuild``
     public func updateStats(for gearBuild: GearBuild) throws {
         DispatchQueue.main.async {
             self.gearBuild = gearBuild
@@ -35,6 +46,7 @@ public final class Splatalyzer: ObservableObject {
         try self.analyze()
     }
     
+    /// Update statstics after a change in LDE intensity
     public func updateStats(for ldeIntensity: Int) throws {
         DispatchQueue.main.async {
             self.ldeIntensity = ldeIntensity
@@ -43,6 +55,7 @@ public final class Splatalyzer: ObservableObject {
         try self.analyze()
     }
     
+    /// Update statstics after a change in Tacticooler statis
     public func updateStats(for tacticooler: Bool) throws {
         DispatchQueue.main.async {
             self.usingTacticooler = tacticooler
@@ -51,6 +64,9 @@ public final class Splatalyzer: ObservableObject {
         try self.analyze()
     }
     
+    /// Convenience analysis function using class properties
+    /// - SeeAlso: This function is a convenience version of ``analyze(mainWeapon:gearBuild:ldeIntensity:usingTacticooler:)``
+    /// - Throws: Can throw ``SplatalyzerError`` or ``JSONError``
     public func analyze() throws {
         try self.analyze(
             mainWeapon: self.mainWeapon,
@@ -59,6 +75,13 @@ public final class Splatalyzer: ObservableObject {
             usingTacticooler: self.usingTacticooler)
     }
     
+    /// Analyzes the main weapon and gear build to produce build statistics.
+    /// - Parameters:
+    ///   - mainWeapon: The current main weapon
+    ///   - gearBuild: The current gear build
+    ///   - ldeIntensity: The current LDE intensity
+    ///   - usingTacticooler: Whether to consider Tacticooler effects in statistics
+    /// - Throws: Can throw ``SplatalyzerError`` or ``JSONError``
     public func analyze(
         mainWeapon: MainWeapon,
         gearBuild: GearBuild,
@@ -81,22 +104,10 @@ public final class Splatalyzer: ObservableObject {
             self.weaponInfoMain = weaponInfoMain
         }
         
-        if weaponInfoSub == nil {
-            let weaponInfoSub = try service.decode(WeaponInfoSub.self, from: "WeaponInfoSub")
-            
-            self.weaponInfoSub = weaponInfoSub
-        }
-        
-        if weaponInfoSpecial == nil {
-            let weaponInfoSpecial = try service.decode(WeaponInfoSpecial.self, from: "WeaponInfoSpecial")
-            
-            self.weaponInfoSpecial = weaponInfoSpecial
-        }
-        
         if playerParams == nil {
-            let playerParams = try service.decode(PlayerGameParameters.self, from: "SplPlayer.game__GameParameterTable")
+            let playerParams = try service.decode(Player.self, from: "SplPlayer.game__GameParameterTable")
             
-            self.playerParams = playerParams.parameters
+            self.playerParams = playerParams
         }
         
         let mainData = try self.getMainWeaponData(
@@ -112,7 +123,6 @@ public final class Splatalyzer: ObservableObject {
                 let subData = try self.getSubWeaponData(
                     weapon: sub,
                     service: service,
-                    infoSub: weaponInfoSub!,
                     playerInfo: playerParams!)
                 
                 allSubData[sub] = subData
@@ -123,8 +133,7 @@ public final class Splatalyzer: ObservableObject {
         
         let specialData = try self.getSpecialData(
             weapon: mainData.specialWeapon,
-            service: service,
-            infoSpecial: weaponInfoSpecial!)
+            service: service)
         
         let abilityValues = try service.decode(AbilityValues.self, from: "ability-values")
         
@@ -142,6 +151,13 @@ public final class Splatalyzer: ObservableObject {
         }
     }
     
+    /// Gets ``MainWeaponData`` for a specified ``MainWeapon``
+    /// - Parameters:
+    ///   - weapon: Current main weapon
+    ///   - service: A ``JSONService``
+    ///   - mainInfo: Information about all main weapons
+    /// - Returns: The associated `MainWeaponData`
+    /// - Throws: Can throw ``JSONError``
     private func getMainWeaponData(
         weapon: MainWeapon,
         service: JSONService,
@@ -150,7 +166,7 @@ public final class Splatalyzer: ObservableObject {
         switch weapon.type {
         case .blaster:
             let blaster = try service.decode(
-                BlasterGameParameters.self,
+                Blaster.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let infoItem = mainInfo.getItem(for: weapon)!
@@ -161,7 +177,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .brella:
             let brella = try service.decode(
-                BrellaGameParameters.self,
+                Brella.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let infoItem = mainInfo.getItem(for: weapon)!
@@ -172,7 +188,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .brush:
             let brush = try service.decode(
-                BrushGameParameters.self,
+                Brush.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let infoItem = mainInfo.getItem(for: weapon)!
@@ -183,7 +199,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .charger:
             let charger = try service.decode(
-                ChargerGameParameters.self,
+                Charger.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let infoItem = mainInfo.getItem(for: weapon)!
@@ -194,7 +210,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .dualie:
             let dualie = try service.decode(
-                DualieGameParameters.self,
+                Dualie.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let infoItem = mainInfo.getItem(for: weapon)!
@@ -205,7 +221,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .roller:
             let roller = try service.decode(
-                RollerGameParameters.self,
+                Roller.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let infoItem = mainInfo.getItem(for: weapon)!
@@ -216,7 +232,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .shooter:
             let shooter = try service.decode(
-                ShooterGameParameters.self,
+                Shooter.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let infoItem = mainInfo.getItem(for: weapon)!
@@ -227,7 +243,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .slosher:
             let slosher = try service.decode(
-                SlosherGameParameters.self,
+                Slosher.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let infoItem = mainInfo.getItem(for: weapon)!
@@ -238,7 +254,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .splatana:
             let splatana = try service.decode(
-                SplatanaGameParameters.self,
+                Splatana.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let infoItem = mainInfo.getItem(for: weapon)!
@@ -249,7 +265,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .splatling:
             let splatling = try service.decode(
-                SplatlingGameParameters.self,
+                Splatling.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let infoItem = mainInfo.getItem(for: weapon)!
@@ -260,7 +276,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .stringer:
             let stringer = try service.decode(
-                StringerGameParameters.self,
+                Stringer.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let infoItem = mainInfo.getItem(for: weapon)!
@@ -271,16 +287,22 @@ public final class Splatalyzer: ObservableObject {
         }
     }
     
+    /// Get ``SubWeaponData`` for a specified ``SubWeapon``
+    /// - Parameters:
+    ///   - weapon: Current sub weapon
+    ///   - service: A ``JSONService``
+    ///   - playerInfo: Player game parameters (only used for Squid Beacon)
+    /// - Returns: The associated `SubWeaponData`
+    /// - Throws: Can throw ``JSONError``
     private func getSubWeaponData(
         weapon: SubWeapon,
         service: JSONService,
-        infoSub: WeaponInfoSub,
-        playerInfo: PlayerParameters
+        playerInfo: Player
     ) throws -> SubWeaponData {
         switch weapon {
         case .angleShooter:
             let angleShooter = try service.decode(
-                AngleShooterGameParameters.self,
+                AngleShooter.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let subData = SubWeaponData(container: angleShooter)
@@ -289,7 +311,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .autobomb:
             let autobomb = try service.decode(
-                AutobombGameParameters.self,
+                Autobomb.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let subData = SubWeaponData(container: autobomb)
@@ -298,7 +320,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .burstBomb:
             let burstBomb = try service.decode(
-                BurstBombGameParameters.self,
+                BurstBomb.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let subData = SubWeaponData(container: burstBomb)
@@ -307,7 +329,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .curlingBomb:
             let curlingBomb = try service.decode(
-                CurlingBombGameParameters.self,
+                CurlingBomb.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let subData = SubWeaponData(container: curlingBomb)
@@ -316,7 +338,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .fizzyBomb:
             let fizzyBomb = try service.decode(
-                FizzyBombGameParameters.self,
+                FizzyBomb.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let subData = SubWeaponData(container: fizzyBomb)
@@ -325,7 +347,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .inkMine:
             let inkMine = try service.decode(
-                InkMineGameParameters.self,
+                InkMine.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let subData = SubWeaponData(container: inkMine)
@@ -334,7 +356,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .pointSensor:
             let pointSensor = try service.decode(
-                PointSensorGameParameters.self,
+                PointSensor.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let subData = SubWeaponData(container: pointSensor)
@@ -343,7 +365,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .splashWall:
             let splashWall = try service.decode(
-                SplashWallGameParameters.self,
+                SplashWall.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let subData = SubWeaponData(container: splashWall)
@@ -352,7 +374,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .splatBomb:
             let splatBomb = try service.decode(
-                SplatBombGameParameters.self,
+                SplatBomb.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let subData = SubWeaponData(container: splatBomb)
@@ -361,7 +383,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .sprinkler:
             let sprinkler = try service.decode(
-                SprinklerGameParameters.self,
+                Sprinkler.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let subData = SubWeaponData(container: sprinkler)
@@ -370,7 +392,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .squidBeakon:
             let squidBeakon = try service.decode(
-                SquidBeakonGameParameters.self,
+                SquidBeakon.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let subData = SubWeaponData(container: squidBeakon, playerInfo: playerInfo)
@@ -379,7 +401,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .suctionBomb:
             let suctionBomb = try service.decode(
-                SuctionBombGameParameters.self,
+                SuctionBomb.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let subData = SubWeaponData(container: suctionBomb)
@@ -388,7 +410,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .torpedo:
             let torpedo = try service.decode(
-                TorpedoGameParameters.self,
+                Torpedo.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let subData = SubWeaponData(container: torpedo)
@@ -397,7 +419,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .toxicMist:
             let toxicMist = try service.decode(
-                ToxicMistGameParameters.self,
+                ToxicMist.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let subData = SubWeaponData(container: toxicMist)
@@ -406,15 +428,21 @@ public final class Splatalyzer: ObservableObject {
         }
     }
     
+    /// Gets ``SpecialWeaponData`` for a specified ``SpecialWeapon``
+    /// - Parameters:
+    ///   - weapon: Current special weapon
+    ///   - service: A ``JSONService``
+    ///   - infoSpecial: Information about all special weapons
+    /// - Returns: The associated `SpecialWeaponData`
+    /// - Throws: Can throw ``JSONError``
     private func getSpecialData(
         weapon: SpecialWeapon,
-        service: JSONService,
-        infoSpecial: WeaponInfoSpecial
+        service: JSONService
     ) throws -> SpecialWeaponData {
         switch weapon {
         case .bigBubbler:
             let bigBubbler = try service.decode(
-                BigBubblerGameParameters.self, from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                BigBubbler.self, from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let specialData = SpecialWeaponData(container: bigBubbler)
             
@@ -422,7 +450,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .booyahBomb:
             let booyahBomb = try service.decode(
-                BooyahBombGameParameters.self, from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                BooyahBomb.self, from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let specialData = SpecialWeaponData(container: booyahBomb)
             
@@ -430,7 +458,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .crabTank:
             let crabTank = try service.decode(
-                CrabTankGameParameters.self, from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                CrabTank.self, from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let specialData = SpecialWeaponData(container: crabTank)
             
@@ -438,7 +466,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .inkStorm:
             let inkStorm = try service.decode(
-                InkStormGameParameters.self, from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                InkStorm.self, from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let specialData = SpecialWeaponData(container: inkStorm)
             
@@ -446,7 +474,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .inkVac:
             let inkVac = try service.decode(
-                InkVacGameParameters.self, from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                InkVac.self, from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let specialData = SpecialWeaponData(container: inkVac)
             
@@ -454,7 +482,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .inkjet:
             let inkjet = try service.decode(
-                InkjetGameParameters.self, from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                Inkjet.self, from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let specialData = SpecialWeaponData(container: inkjet)
             
@@ -462,7 +490,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .killerWail51:
             let killerWail51 = try service.decode(
-                KillerWail51GameParameters.self, from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                KillerWail51.self, from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let specialData = SpecialWeaponData(container: killerWail51)
             
@@ -470,7 +498,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .krakenRoyale:
             let krakenRoyale = try service.decode(
-                KrakenRoyaleGameParameters.self, from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                KrakenRoyale.self, from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let specialData = SpecialWeaponData(container: krakenRoyale)
             
@@ -478,7 +506,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .reefslider:
             let reefslider = try service.decode(
-                ReefsliderGameParameters.self,
+                Reefslider.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let specialData = SpecialWeaponData(container: reefslider)
@@ -487,7 +515,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .splattercolorScreen:
             let splattercolorScreen = try service.decode(
-                SplattercolorScreenGameParameters.self,
+                SplattercolorScreen.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let specialData = SpecialWeaponData(container: splattercolorScreen)
@@ -496,7 +524,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .superChump:
             let superChump = try service.decode(
-                SuperChumpGameParameters.self,
+                SuperChump.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let specialData = SpecialWeaponData(container: superChump)
@@ -505,7 +533,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .tacticooler:
             let tacticooler = try service.decode(
-                TacticoolerGameParameters.self,
+                Tacticooler.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let specialData = SpecialWeaponData(container: tacticooler)
@@ -514,7 +542,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .tentaMissiles:
             let tentaMissiles = try service.decode(
-                TentaMissilesGameParameters.self,
+                TentaMissiles.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let specialData = SpecialWeaponData(container: tentaMissiles)
@@ -523,7 +551,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .tripleInkstrike:
             let tripleInkstrike = try service.decode(
-                TripleInkstrikeGameParameters.self,
+                TripleInkstrike.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let specialData = SpecialWeaponData(container: tripleInkstrike)
@@ -532,7 +560,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .tripleSplashdown:
             let tripleSplashdown = try service.decode(
-                TripleSplashdownGameParameters.self,
+                TripleSplashdown.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let specialData = SpecialWeaponData(container: tripleSplashdown)
@@ -541,7 +569,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .trizooka:
             let trizooka = try service.decode(
-                TrizookaGameParameters.self,
+                Trizooka.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let specialData = SpecialWeaponData(container: trizooka)
@@ -550,7 +578,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .ultraStamp:
             let ultraStamp = try service.decode(
-                UltraStampGameParameters.self,
+                UltraStamp.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let specialData = SpecialWeaponData(container: ultraStamp)
@@ -559,7 +587,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .waveBreaker:
             let waveBreaker = try service.decode(
-                WaveBreakerGameParameters.self,
+                WaveBreaker.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let specialData = SpecialWeaponData(container: waveBreaker)
@@ -568,7 +596,7 @@ public final class Splatalyzer: ObservableObject {
             
         case .zipcaster:
             let zipcaster = try service.decode(
-                ZipcasterGameParameters.self,
+                Zipcaster.self,
                 from: "Weapon\(weapon.fileName()).game__GameParameterTable")
             
             let specialData = SpecialWeaponData(container: zipcaster)
@@ -578,8 +606,13 @@ public final class Splatalyzer: ObservableObject {
     }
 }
 
+/// Errors that can be thrown by the ``Splatalyzer`` class
 public enum SplatalyzerError: Error, LocalizedError {
+    
+    /// Gear abilities are configured in an invalid way
     case invalidGearConfig
+    
+    /// LDE intensity is not in `0...21`
     case invalidLDEIntensity
     
     public var errorDescription: String? {

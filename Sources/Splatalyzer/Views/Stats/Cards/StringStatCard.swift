@@ -7,11 +7,16 @@
 
 import SwiftUI
 
-struct StringStatCard: View {
-    var title: String
-    var value: String
+/// Displays statistical information stored as  `String`
+public struct StringStatCard: View {
     
-    var body: some View {
+    /// The statistic title
+    public var title: String
+    
+    /// The associated value
+    public var value: String
+    
+    public var body: some View {
         GroupBox(title) {
             VStack {
                 

@@ -7,14 +7,25 @@
 
 import Foundation
 
+/// Contains information about a build statistic
 public struct AbilityStat: Equatable {
+    /// The default value before any abilities
     public let baseValue: Double
+    
+    /// The ability or abilities that produce modify the statistic
     public let modifiedBy: [Ability]
+    
+    /// The build value accounting for abilities
     public let value: Double
+    
+    /// The unit of ``baseValue`` and ``value``
     public let unit: StatUnit
+    
+    /// The name of the statistic
     public let title: String
 }
 
+/// The unit of measurement used in ``AbilityStat``
 public enum StatUnit: CaseIterable {
     case percentage
     case seconds

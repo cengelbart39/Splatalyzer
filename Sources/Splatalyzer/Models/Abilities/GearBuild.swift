@@ -7,7 +7,10 @@
 
 import Foundation
 
-public struct GearBuild: Equatable {
+/// Represents a full gear build with 3 main abilities and 9 sub abilities across
+/// headgear, clothes, and shoes.
+public struct GearBuild: Equatable, Identifiable {
+    public var id = UUID()
     public var headgear: GearPiece
     public var clothes: GearPiece
     public var shoes: GearPiece
@@ -18,17 +21,25 @@ public struct GearBuild: Equatable {
         self.shoes = shoes
     }
     
+    /// Convenience initializer with all unknown abilities
     public init() {
         self.headgear = GearPiece(for: .headgearOnly)
         self.clothes = GearPiece(for: .clothesOnly)
         self.shoes = GearPiece(for: .shoesOnly)
     }
     
+    /// Checks if a gear build is valid by if restricted abilities are in the proper slots.
     public func isValid() -> Bool {
         return self.headgear.isValid() && self.clothes.isValid() && self.shoes.isValid()
     }
     
-    func toAbilityPoints(ldeIntensity: Int = 0, usingTacticooler: Bool) -> AbilityPoints {
+    /// Converts a `GearBuild` to its associated ``AbilityPoints``.
+    /// - Parameters:
+    ///   - ldeIntensity: A number between 0 and 21. If LDE is not in the gear build, it is assumed it is set to 0.
+    ///   - usingTacticooler: Flag for whether Tacticooler effects should be considered, since it temproarily adds ability effects.
+    /// - Returns: The equivalent AP for each ability.
+    public func toAbilityPoints(ldeIntensity: Int = 0, usingTacticooler: Bool) -> AbilityPoints {
+        // Merge AP of all gear pieces
         let apHead = self.headgear.toAbilityPoints()
         let apClothes = self.clothes.toAbilityPoints()
         let apShoes = self.shoes.toAbilityPoints()
@@ -39,6 +50,7 @@ public struct GearBuild: Equatable {
         
         let specialEffects = self.specialEffects(ldeIntensity, usingTacticooler)
         
+        // Convert special effects to AP
         for effect in specialEffects {
             for value in effect.values {
                 let currentAp = combinedAp[value.type] ?? 0
@@ -52,6 +64,11 @@ public struct GearBuild: Equatable {
         return combinedAp
     }
     
+    /// Gets ``AbilitySpecialEffect``s present in the `GearBuild`
+    /// - Parameters:
+    ///   - ldeIntensity: A number between 0 and 21. Only applied to headgear with LDE.
+    ///   - usingTacticooler: lag for whether Tacticooler effects should be considered, since it temproarily adds ability effects.
+    /// - Returns: All `AbilitySpecialEffect`s present in the build
     private func specialEffects(_ ldeIntensity: Int = 0, _ usingTacticooler: Bool) -> [AbilitySpecialEffect] {
         var effects = [AbilitySpecialEffect]()
         
@@ -74,11 +91,13 @@ public struct GearBuild: Equatable {
         return effects
     }
     
+    /// Checks whether a certain `Ability` is present in the build.
     public func hasAbility(_ ability: Ability) -> Bool {
         return self.headgear.hasAbility(ability) || self.clothes.hasAbility(ability) || self.shoes.hasAbility(ability)
     }
 }
 
+/// Represents the abilities of a single gear piece; 1 main and 3 subs.
 public struct GearPiece: Equatable, Identifiable {
     public var id = UUID()
     public var main: Ability
@@ -95,6 +114,7 @@ public struct GearPiece: Equatable, Identifiable {
         self.slot = slot
     }
     
+    /// Defaults abilities to `none` and applies the given restriction.
     public init(for slot: AbilityRestriction) {
         self.main = .none
         self.sub1 = .none
@@ -103,6 +123,12 @@ public struct GearPiece: Equatable, Identifiable {
         self.slot = slot
     }
     
+    /// Determines if gear piece is valid by checking main abilities.
+    ///
+    /// Checks against an array of headgear, clothes, and shoes abilities
+    /// (`static` properties of `Ability`).
+    ///
+    /// A gear piece, with no restriction is always invalid.
     public func isValid() -> Bool {
         switch self.slot {
         case .headgearOnly:
@@ -119,11 +145,14 @@ public struct GearPiece: Equatable, Identifiable {
         }
     }
     
-    func toArray() -> [Ability] {
+    /// Converts a `GearPiece` to an array in the format of
+    /// [main, sub1, sub2, sub3].
+    public func toArray() -> [Ability] {
         return [self.main, self.sub1, self.sub2, self.sub3]
     }
     
-    func toAbilityPoints() -> AbilityPoints {
+    /// Converts the current gear piece to AP.
+    public func toAbilityPoints() -> AbilityPoints {
         var result = AbilityPoints()
         
         let abilities = self.toArray()
@@ -146,10 +175,17 @@ public struct GearPiece: Equatable, Identifiable {
         return result
     }
     
-    func specialEffect(ldeIntensity: Int = 0) -> AbilitySpecialEffect? {
+    
+    /// Attempts to convert the main `Ability` to an ``AbilitySpecialEffect``
+    /// - Parameter ldeIntensity: A number in the range `0...21`
+    /// - Returns: An `AbilitySpecialEffect` only if ``main`` is
+    /// Drop Roller, Opening Gambit, Last-Ditch Effort or Comeback. Otherwise `nil`.
+    public func specialEffect(ldeIntensity: Int = 0) -> AbilitySpecialEffect? {
         return self.main.toSpecialEffect(intensity: ldeIntensity)
     }
     
+    /// Convience check for the presence of a certain ability in any
+    /// ability slot.
     public func hasAbility(_ ability: Ability) -> Bool {
         return self.main == ability || self.sub1 == ability || self.sub2 == ability || self.sub3 == ability
     }

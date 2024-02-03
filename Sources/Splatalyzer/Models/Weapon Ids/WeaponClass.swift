@@ -27,6 +27,8 @@ public enum WeaponClass: String, CaseIterable {
     case stringer = "Stringer"
     
     #if os(macOS)
+    /// The image of the weapon class
+    /// - Note: OSes other than `macOS` use `UIImage` instead.
     public var image: NSImage? {
         guard let url = Bundle.main.url(forResource: self.rawValue, withExtension: "png") else {
             return nil
@@ -39,6 +41,8 @@ public enum WeaponClass: String, CaseIterable {
         return NSImage(data: data)
     }
     #else
+    /// The image of the weapon class
+    /// - Note: `macOS` use `NSImage` instead.
     public var image: UIImage? {
         guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
             return nil
@@ -52,6 +56,7 @@ public enum WeaponClass: String, CaseIterable {
     }
     #endif
     
+    /// Localized version of the weapon class name
     public var localized: String {
         return NSLocalizedString(self.rawValue, tableName: "WeaponClass",  bundle: Bundle.module, comment: "")
     }

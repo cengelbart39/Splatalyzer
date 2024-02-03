@@ -7,14 +7,17 @@
 
 import Foundation
 
-public protocol JSONServicable {
-    func decode<T: Codable>(_ type: T.Type, from file: String) throws -> T
-}
-
+/// A service `struct` that decodes JSON resources from the module
 public struct JSONService {
     
     public init() { }
     
+    /// Decodes a specified JSON file
+    /// - Parameters:
+    ///   - type: The type to decode into
+    ///   - file: The JSON file
+    /// - Throws: Can throw a ``JSONError``
+    /// - Returns: Decoded JSON as type `T`
     public func decode<T: Decodable>(_ type: T.Type, from file: String) throws -> T {
         guard let url = Bundle.module.url(forResource: file, withExtension: "json") else {
             throw JSONError.invalidUrl(file)
@@ -51,9 +54,15 @@ public struct JSONService {
     }
 }
 
+/// Errors that can be thrown by ``JSONService``
 public enum JSONError: Error, LocalizedError {
+    /// The Bundle url is invalid
     case invalidUrl(String)
+    
+    /// The data in the url is invalid
     case invalidData(String, String)
+    
+    /// There is a `DecodingError`
     case decode(String)
     
     public var errorDescription: String? {

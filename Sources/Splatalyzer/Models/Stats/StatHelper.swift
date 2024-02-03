@@ -7,7 +7,11 @@
 
 import Foundation
 
+/// A structure that contains constants and functions to process and calculate stats for ``BuildStats``
 public struct StatHelper {
+    /// The number of shots that main weapons have on one button press
+    ///
+    /// Only main weapons that have more than 1 shot per button press are listed.
     public static let multiShotDict: [MainWeapon : Int] = [
         .l3Nozzlenose : 3,
         .l3NozzlenoseD : 3,
@@ -20,6 +24,13 @@ public struct StatHelper {
         .dreadWringer : 2
     ]
     
+    
+    /// Calculates the default and effect special point value for the main weapon.
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - mainInfo: Information about the Main Weapon
+    /// - Returns: The default and effect special point value
     public static func specialPoint(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -40,6 +51,14 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates and the default and build special lost value when splatted
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - gearBuild: The user's ``GearBuild``
+    ///   - mainInfo: Information about the Main Weapon
+    ///   - splattedByRP: Whether the player has been splatted by an enemy player with Respawn Punisher
+    /// - Returns: The default and build special lost value
     public static func specialLost(
         ap: AbilityPoints,
         abilities: AbilityValues,
@@ -76,10 +95,21 @@ public struct StatHelper {
         )
     }
     
+    /// Calculation and formatting for the percentage of the special guage saved after player death
+    /// - Parameter x: Special lost value
+    /// - Returns: Formatted  percentage value
     public static func specialSavedAfterDeath(_ x: Double) -> Double {
         return ((1 - x) * 100.0).cutToDecimalPlaces()
     }
     
+    /// Calculates how many shots of the main weapon can be performed after
+    /// using any number subs.
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - abilities: A decoded instance of ``AbilityValues``
+    ///   - mainInfo: Information about the Main Weapon
+    ///   - subInfo: Information about the associated sub weapon
+    /// - Returns: A dictionary with a key for every number of subs that can be used before ink depeletion and an array of how many shots can be taken
     public static func fullInkTankOptions(
         ap: AbilityPoints,
         abilities: AbilityValues,
@@ -124,6 +154,9 @@ public struct StatHelper {
         return result
     }
     
+    /// Calculates the damage done by the main weapon to enemy players
+    /// - Parameter mainInfo: Information about the main weapon
+    /// - Returns: Information about the damage done, type of damage, and the number of shots to splat
     public static func mainDamages(mainInfo: MainWeaponData) -> [DamageStat] {
         var result = [DamageStat]()
         
@@ -162,6 +195,9 @@ public struct StatHelper {
         return result
     }
     
+    /// Damage done by the associated special weapon
+    /// - Parameter specialInfo: Information about the special weapon
+    /// - Returns: Information about the damage done, type of damage, and the number of shots to splat
     public static func specialDamages(specialInfo: SpecialWeaponData) -> [DamageStat] {
         var result = [DamageStat]()
         
@@ -226,6 +262,12 @@ public struct StatHelper {
         return result
     }
     
+    /// Calculates the amount of damage done by every sub weapon in the game by default and with abilities.
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - abilities: A decoded instance of ``AbilityValues``
+    ///   - subData: ``SubWeaponData`` for every sub weapon
+    /// - Returns: A dictionary of every sub weapon and an array of the amount of damage done, type of damage, and the range of the attack.
     public static func subDefenseDamages(
         ap: AbilityPoints,
         abilities: AbilityValues,
@@ -343,6 +385,12 @@ public struct StatHelper {
         return result
     }
     
+    /// Calculates the number of shots it takes to splat for certain weapons.
+    /// - Parameters:
+    ///   - value: A damage value
+    ///   - type: The type of damage
+    ///   - multiShots: The number of shots per button press for a weapon according to ``multiShotDict``
+    /// - Returns: The number of shots it takes to splat an enemy player
     public static func shotsToSplat(
         for value: Double,
         of type: DamageType,
@@ -358,6 +406,14 @@ public struct StatHelper {
         }
     }
     
+    /// The amount of damage, if any, done by a specified sub weapon
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - abilities: A decoded instance of ``AbilityValues``
+    ///   - baseValue: The default amount of damage
+    ///   - subInfo: Information about a sub weapon
+    /// - Note: If a sub weapon does no damage, it will always default to 0 damage.
+    /// - Returns: The amount of damage accounting for active AP
     public static func subDamageValue(
         ap: Int,
         abilities: AbilityValues,
@@ -380,6 +436,13 @@ public struct StatHelper {
         }
     }
     
+    /// The percentage of the ink tank a sub weapon uses
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - abilities: A decoded instance of ``AbilityValues``
+    ///   - mainInfo: Information about the main weapon
+    ///   - subInfo: Information about the sub weapon
+    /// - Returns: The default and build ink tank consumption percentage
     public static func subInkConsumptionPercentage(
         ap: AbilityPoints,
         abilities: AbilityValues,
@@ -397,6 +460,14 @@ public struct StatHelper {
         )
     }
     
+    /// The ink tank recovery time in squid/octopus or humanoid form
+    /// - Parameters:
+    ///   - effectKey: An ``AbilityValue`` that helps initialize ``APEffect``
+    ///   - ap: The AP of the user's gear build
+    ///   - abilities: A decoded instance of ``AbilityValues``
+    ///   - mainInfo: Information about the main weapon
+    /// - Precondition: It is assumed that `effectKey` is either `.inkRecoverFrmStealth` or `.inkRecoverFrmStd`. This function was not designed to handle other values.
+    /// - Returns: The default and build ink tank recovery seconds
     public static func inkRecoverySeconds(
         effectKey: AbilityValue,
         ap: AbilityPoints,
@@ -422,6 +493,12 @@ public struct StatHelper {
         )
     }
     
+    /// The player's run speed
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - abilities: A decoded instance of ``AbilityValues``
+    ///   - mainInfo: Information about the main weapon
+    /// - Returns: The default and build run speed
     public static func runSpeed(
         ap: AbilityPoints,
         abilities: AbilityValues,
@@ -446,6 +523,13 @@ public struct StatHelper {
         )
     }
     
+    /// The player's run speed while shooting their main weapon
+    /// - Parameters:
+    ///   - type: A value of ``ShootingRunSpeedType`` to calculate for
+    ///   - ap: The AP of the user's gear build
+    ///   - abilities: A decoded instance of ``AbilityValues``
+    ///   - mainInfo: Information about the main weapon
+    /// - Returns: The default and build shooting run speed. Can be `nil` for weapons which don't support certain shooting run speed types.
     public static func shootingRunSpeed(
         for type: ShootingRunSpeedType,
         ap: AbilityPoints,
@@ -476,6 +560,15 @@ public struct StatHelper {
         }
     }
     
+    /// Calculates the player's swim speed
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - abilities: A decoded instance of ``AbilityValues``
+    ///   - gearBuild: The plauer's gear build
+    ///   - mainInfo: Information about the main weapon
+    /// - Returns: The default and build swim speed.
+    ///
+    /// This calculaton accounts for Swim Speed Up, Ninja Squid, and Main Weapon Weight.
     public static func swimSpeed(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -505,6 +598,14 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the player's swim speed while holding the Rainmaker
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - abilities: A decoded instance of ``AbilityValues``
+    ///   - gearBuild: The plauer's gear build
+    ///   - mainInfo: Information about the main weapon
+    /// - SeeAlso: This calculation relies on ``swimSpeed(ap:values:gearBuild:mainInfo:)`` as base for its return value
+    /// - Returns: The default and build swim speed while holding the Rainmaker.
     public static func swimSpeedWithRainmaker(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -524,6 +625,12 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates run speed while in enemy ink
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - abilities: A decoded instance of ``AbilityValues``
+    ///   - mainInfo: Information about the main weapon
+    /// - Returns: The default and build run speed in enemy ink
     public static func runSpeedInEnemyInk(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -547,6 +654,12 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the damage in enemy ink per second
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - abilities: A decoded instance of ``AbilityValues``
+    ///   - mainInfo: Information about the main weapon
+    /// - Returns: The default and build damage in enemy ink per second
     public static func damageInEnemyInkPerSecond(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -570,6 +683,12 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the upperbound for damage in enemy ink
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - abilities: A decoded instance of ``AbilityValues``
+    ///   - mainInfo: Information about the main weapon
+    /// - Returns: The default and build upperbound for damage in enemy ink
     public static func enemyInkDamageLimit(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -593,6 +712,12 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the frames before damage in enemy ink
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - abilities: A decoded instance of ``AbilityValues``
+    ///   - mainInfo: Information about the main weapon
+    /// - Returns: The default and build frames before damage in enemy ink
     public static func framesBeforeDamageInEnemyInk(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -616,6 +741,15 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the player's respawn time after being splatted
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - gearBuild: The player's gear build
+    ///   - mainInfo: Information about the main weapon
+    ///   - splatedByRP: Whether the player was splatted by an enemy player with Respawn Punisher
+    ///   - hasTacticooler: Whether Tacticooler effects should be considered
+    /// - Returns: The default and build respawn time with or without Respawn Punisher and Tacticooler
     public static func respawnTime(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -683,6 +817,12 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the total time it takes for a player to Super Jump.
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - mainInfo: Information about the main weapon
+    /// - Returns: The default and build total Super Jump time
     public static func superJumpTimeTotal(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -713,10 +853,16 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the number of Super Jump vulnerable frames
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - mainInfo: Information about the main weapon
+    /// - Returns: The default and build Super Jump vulnerable frames
     public static func superJumpTotalFrames(
-        _ ap: AbilityPoints,
-        _ values: AbilityValues,
-        _ mainInfo: MainWeaponData
+        ap: AbilityPoints,
+        values: AbilityValues,
+        mainInfo: MainWeaponData
     ) -> AbilityStat {
         let ability = Ability.quickSuperJump
         
@@ -743,6 +889,12 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the shot spread while the player is jumping
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - mainInfo: Information about the main weapon
+    /// - Returns: The default and build shot spread while jumping; can be `nil` if either `mainInfo.standDegSwerve` or `mainInfo.jumpDegSwerve` don't exist.
     public static func shotSpreadAir(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -774,6 +926,12 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the secondary mode shot spread while jumping
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - mainInfo: Information about the main weapon
+    /// - Returns: The default and build secondary mode shot spread while jumping; can be `nil` if either `mainInfo.variableStandDegSwerve` or `mainInfo.variableJumpDegSwerve` don't exist.
     public static func shotAutofireSpreadAir(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -805,6 +963,12 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the number of frames it takes to fully charge a Squid Surge
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - mainInfo: Information about the main weapon
+    /// - Returns: The default and build frames it takes to fully charge a Squid Surge.
     public static func squidSurgeChargeFrames(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -829,6 +993,14 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the number of seconds an enemy player is marked for by a sub weapon.
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - mainInfo: Information about the main weapon
+    ///   - subInfo: Information about Point Sensor or Angle Shooter
+    /// - Note: Only `SubWeaponData` for Angle Shooter or Point Sensor are expected to give meaningful results.
+    /// - Returns: The default and build number of seconds an enemy player is marked for.
     public static func subMarkedSeconds(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -859,6 +1031,14 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the number of seconds an enemy player is tracked for by the Ink Mine sub weapon.
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - mainInfo: Information about the main weapon
+    ///   - inkMine: Information about the Ink Mine sub weapon
+    /// - Precondition: Although the function can take any `SubWeaponData`, it expects it to be for Ink Mine to give a meaningful result.
+    /// - Returns: The default and build number of seconds an enemy player is marked for by the Ink Mine sub weapon.
     public static func inkMineMarkedSeconds(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -889,6 +1069,13 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the percentage in which Toxic Mist reduces enemy player movement speed
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - mainInfo: Information about the main weapon
+    /// - Returns: The default and build the percentage in which Toxic Mist reduces enemy player movement speed
+    /// - Note: Unlike ``subMarkingSeconds(ap:values:subInfo:)`` or ``inkMineMarkedSeconds(ap:values:mainInfo:inkMine:)``, it doesn't rely on `SubWeaponData` about Toxic Mist.
     public static func toxicMistMovementReduction(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -912,6 +1099,13 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the Quick Super Jump AP supplied to players jumping to a Squid Beakon.
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - subInfo: Information about the Squid Beakon sub weapon
+    /// - Important: Sub weapons other than the Squid Beakon, can produce non-`nil` results.
+    /// - Returns: Returns the Quick Super Jump AP supplied. Can be `nil` depending on if there is a meaningful effect supplied by the sub weapon.
     public static func quickSuperJumpBoost(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -938,6 +1132,12 @@ public struct StatHelper {
         )
     }
     
+    /// A calculation for Quick Super Jump AP
+    /// - Parameters:
+    ///   - multiplier: The effect provided by a sub weapon
+    ///   - ap: The AP of the user's gear build
+    /// - Note: The formula used in the function is taken from [sendou.ink](https://github.com/Sendouc/sendou.ink/blob/27f3fbdbceb61f36a6e927f0865456e1832bd0b4/app/features/build-analyzer/core/stats.ts#L1378).
+    /// - Returns: The Quick Super Jump AP
     public static func quickSuperJumpValue(
         for multiplier: HighMidLow,
         with ap: Int
@@ -948,7 +1148,7 @@ public struct StatHelper {
         
         // Lean: This is the base that is used with their weird formula (I didn't even bother renaming the vars and just used what my disassembler gave me)
 
-        // Variable names adapted for HighMidLow struct
+        // Splatalyzer: Adapted for HighMidLow struct and Swift
         let v7 = ((mid - low) / high - 17.8 / high) / ((17.8 / high) * (17.8 / high - 1))
         
         let v8 = (Double(ap) / high) * ((Double(ap) / high) * v7 + (1 - v7))
@@ -956,6 +1156,12 @@ public struct StatHelper {
         return floor(low + (high - low) * v8)
     }
     
+    /// Calculates the velocity of a sub weapon
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - subInfo: Information about a sub weapon
+    /// - Returns: The default and build sub velocity; can be `nil` for certian sub weapons.
     public static func subVelocity(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -985,6 +1191,13 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates phase duration for the Sprinkler sub weapon
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - subInfo: Information about a sub weapon
+    ///   - first: If `true`, calcualte for Full Power; if `false`, calculate for Mid-Phase
+    /// - Returns: The default and build phase duration. Can be `nil` for some sub weapons.
     public static func subPhaseDuration(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -1018,6 +1231,13 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the marking duration of the weapon kit's sub weapon
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - subInfo: Information about the kit's sub weapon
+    /// - Returns: The default and build marking duration. Can be `nil` depending on the sub weapon.
+    /// - Note: This applies to the sub weapon of the main weapon. There can be overlap with ``inkMineMarkedSeconds(ap:values:mainInfo:inkMine:)`` or ``subMarkedSeconds(ap:values:mainInfo:subInfo:)``.
     public static func subMarkingSeconds(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -1047,6 +1267,12 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the marking radius of the weapon kit's sub weapon.
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - subInfo: Information about the kit's sub weapon
+    /// - Returns: The default and build marking radius. Can be `nil` depending on the sub weapon.
     public static func subMarkingRadius(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -1076,6 +1302,12 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the explosion radius of the weapon kit's subw weapon
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - subInfo: Information about the kit's sub weapon
+    /// - Returns: The default and build sub explosion radius. Can be `nil` depending on the sub weapon.
     public static func subExplosionRadius(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -1105,6 +1337,12 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the durability of the weapon kit's sub weapon
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - subInfo: Information about the kit's sub weapon
+    /// - Returns: The default and build sub ddurability. Can be `nil` depending on the sub weapon.
     public static func subHp(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -1134,6 +1372,12 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the duration of the player's special.
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - specialInfo: Information about the player's special weapon
+    /// - Returns: The default and build special duration. Can return `nil` if there is no meaningful effect.
     public static func specialDuration(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -1163,6 +1407,12 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the damage done by the player's special weapon over some distance.
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - specialInfo: Information about the player's special weapon
+    /// - Returns: The default and build special damage over some distance. Can return `nil` if there is no meaningful effect.
     public static func specialDamageDistance(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -1192,6 +1442,12 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the paint radius of the player's special weapon.
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - specialInfo: Information about the player's special weapon
+    /// - Returns: The default and build special shield durability. Can return `nil` if there is no meaningful effect.
     public static func specialPaintRadius(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -1221,6 +1477,12 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the shield durability of the Big Bubbler special weapon.
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - specialInfo: Information about the player's special weapon
+    /// - Returns: The default and build shield durability. Can return `nil` if there is no meaningful effect  or not Big Bubbler.
     public static func specialFieldHp(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -1250,6 +1512,12 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the device durability of the Big Bubbler special weapon.
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - specialInfo: Information about the player's special weapon
+    /// - Returns: The default and build device durability. Can return `nil` if there is no meaningful effect  or not Big Bubbler.
     public static func specialDeviceHp(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -1279,6 +1547,12 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the Hook Ink Consumption of the Zipcaster special weapon
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - specialInfo: Information about the player's special weapon
+    /// - Returns: The default and build hook ink consumption. Can return `nil` if there is no meaningful effect or not Zipcaster.
     public static func specialHookInkConsumption(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -1310,6 +1584,12 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the Hook Ink Consumption per Second of the Zipcaster special weapon
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - specialInfo: Information about the player's special weapon
+    /// - Returns: The default and build hook ink consumption per second. Can return `nil` if there is no meaningful effect or not Zipcaster.
     public static func specialHookInkConsumptionPerSecond(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -1341,6 +1621,12 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the Reticle Radius of the Tenta Missile special weapon
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - specialInfo: Information about the player's special weapon
+    /// - Returns: The default and build reticle radius. Can return `nil` if there is no meaningful effect or not Tenta Missiles.
     public static func specialReticleRadius(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -1370,6 +1656,12 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the throw distance of the Splattercolor Screen special weapon
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - specialInfo: Information about the player's special weapon
+    /// - Returns: The default and build throw distance. Can return `nil` if there is no meaningful effect or not Splattercolor Screen.
     public static func specialThrowDistance(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -1399,6 +1691,12 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the move speed of the Splattercolor Screen special weapon
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - specialInfo: Information about the player's special weapon
+    /// - Returns: The default and build move speed. Can return `nil` if there is no meaningful effect or not Splattercolor Screen.
     public static func specialMoveSpeed(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -1428,6 +1726,12 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the auto charge rate of the Booyah Bomb special weapon
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - specialInfo: Information about the player's special weapon
+    /// - Returns: The default and build auto charge rate. Can return `nil` if there is no meaningful effect or not Booyah Bomb.
     public static func specialAutoChargeRate(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -1457,6 +1761,12 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the max radius of the Wave Breaker special weapon
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - specialInfo: Information about the player's special weapon
+    /// - Returns: The default and build auto charge rate. Can return `nil` if there is no meaningful effect or not Wave Breaker.
     public static func specialMaxRadius(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -1486,6 +1796,12 @@ public struct StatHelper {
         )
     }
     
+    /// Calculates the radius range (max and min) of certain special weapons
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - specialInfo: Information about the player's special weapon
+    /// - Returns: The default and build radius range. Can return `nil` if there is no meaningful effect.
     public static func specialRadiusRange(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -1519,10 +1835,16 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: minEffect.effect.roundToDecimalPlaces() - maxEffect.effect.roundToDecimalPlaces(),
             unit: .radius,
-            title: String(localized: "\(specialInfo.id.rawValue) Radius Range", comment: "Refers to the maximum and minimum radius of the Big Bubbler special.")
+            title: String(localized: "\(specialInfo.id.rawValue) Radius Range", comment: "Refers to the maximum and minimum radius of the certain specials.")
         )
     }
     
+    /// Calculates the duration of Special Power Up
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - specialInfo: Information about the player's special weapon
+    /// - Returns: The default and build SPU duration. Can return `nil` if there is no meaningful effect.
     public static func specialPowerUpDuration(
         ap: AbilityPoints,
         values: AbilityValues,
@@ -1552,6 +1874,12 @@ public struct StatHelper {
         )
     }
     
+    /// Determies the ``HighMidLow`` value used for an ``AbilityValue``
+    /// - Parameters:
+    ///   - value: A key in `values`
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - weapon: Source of weapon overwrites (if any)
+    /// - Returns: A ``HighMidLow`` for `value`; if overwrite and decoded value are both `nil` goes to 0.
     public static func abilityValues(
         for value: AbilityValue,
         in values: AbilityValues,
@@ -1559,12 +1887,12 @@ public struct StatHelper {
     ) -> HighMidLow {
         let overwrites = weapon.overwrites.value(for: value)
         
-        let value = values.dictionary[value]
+        let hml = values.dictionary[value]
         
         let effect =  HighMidLow(
-            high: overwrites?.high ?? value?.high ?? 0.0,
-            mid: overwrites?.mid ?? value?.mid ?? 0.0,
-            low: overwrites?.low ?? value?.low ?? 0.0)
+            high: overwrites?.high ?? hml?.high ?? 0.0,
+            mid: overwrites?.mid ?? hml?.mid ?? 0.0,
+            low: overwrites?.low ?? hml?.low ?? 0.0)
         
         return effect
     }

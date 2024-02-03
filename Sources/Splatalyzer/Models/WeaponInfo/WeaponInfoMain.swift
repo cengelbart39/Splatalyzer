@@ -7,9 +7,14 @@
 
 import Foundation
 
+/// Represents the contents of `WeaponInfoMain.json`
 public typealias WeaponInfoMain = [WeaponInfoMainItem]
 
 extension WeaponInfoMain {
+    
+    /// Gets the ``WeaponInfoMainItem`` that is associated with a ``MainWeapon``
+    /// - Parameter weapon: A specified main weapon
+    /// - Returns: The associated `WeaponInfoMainItem`; can return `nil` if a `MainWeapon` is not found.
     public func getItem(for weapon: MainWeapon) -> WeaponInfoMainItem? {
         for item in self {
             if item.rowId.rawValue == weapon.rawValue {
@@ -21,6 +26,7 @@ extension WeaponInfoMain {
     }
 }
 
+/// Represents a single item in ``WeaponInfoMain``
 public struct WeaponInfoMainItem: Codable, Identifiable {
     public let debugDispColumn: Int
     public let debugDispOrder: Int
@@ -129,6 +135,8 @@ extension WeaponInfoMainItem {
         case sprinkler = "Work/Gyml/Sprinkler.spl__WeaponInfoSub.gyml"
         case inkMine = "Work/Gyml/Trap.spl__WeaponInfoSub.gyml"
         
+        /// Converts a value to ``SubWeapon``
+        /// - Returns: The associated sub weapon; can return `nil` in the case of `.none`.
         public func toSubWeapon() -> SubWeapon? {
             switch self {
             case .squidBeakon:
@@ -205,6 +213,8 @@ extension WeaponInfoMainItem {
         case trizooka = "Work/Gyml/SpUltraShot.spl__WeaponInfoSpecial.gyml"
         case ultraStamp = "Work/Gyml/SpUltraStamp.spl__WeaponInfoSpecial.gyml"
         
+        /// Converts a value to ``SpecialWeapon``
+        /// - Returns: The associated special weapon; can return `nil` in the case of `.none`.
         public func toSpecialWeapon() -> SpecialWeapon? {
             switch self {
             case .inkVac:

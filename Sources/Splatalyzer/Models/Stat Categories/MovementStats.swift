@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct MovementStats {
+public struct MovementStats: Equatable {
     public let speedType: WeaponSpeedType
     public let swimSpeed: AbilityStat
     public let swimSpeedWithRainmaker: AbilityStat
@@ -21,23 +21,4 @@ public struct MovementStats {
     public let framesBeforeDamageInEnemyInk: AbilityStat
     public let damageInEnemyInkPerSecond: AbilityStat
     public let enemyInkDamageLimit: AbilityStat
-}
-
-extension BuildStats {
-    public func movementStats() -> MovementStats {
-        return MovementStats(
-            speedType: self.speedType,
-            swimSpeed: self.swimSpeed,
-            swimSpeedWithRainmaker: self.swimSpeedWithRainmaker,
-            runSpeed: self.runSpeed,
-            shootingRunSpeed: self.shootingRunSpeed,
-            shootingRunSpeedCharging: self.shootingRunSpeedCharging,
-            shootingRunSpeedFullCharge: self.shootingRunSpeedFullCharge,
-            shootingRunSpeedSecondary: self.shootingRunSpeedSecondaryMode,
-            squidSurgeChargeFrames: self.squidSurgeChargeFrame,
-            runSpeedInEnemyInk: self.runSpeedInEnemyInk,
-            framesBeforeDamageInEnemyInk: self.framesBeforeDamageInEnemyInk,
-            damageInEnemyInkPerSecond: self.damageInEnemyInkPerSecond,
-            enemyInkDamageLimit: self.enemyInkDamageLimit)
-    }
 }

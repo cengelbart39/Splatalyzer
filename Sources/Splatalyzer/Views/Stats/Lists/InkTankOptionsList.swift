@@ -7,40 +7,17 @@
 
 import SwiftUI
 
-struct InkTankOptionsList: View {
+/// Displays the Acrtions Per Ink Tank
+public struct InkTankOptionsList: View {
     
-    @Environment(\.colorScheme) var colorScheme
+    /// A dictionary containing the number of subs used and the number of shots remaining
+    public var options: [Int : [InkTankOption]]
     
-    @State var isCollapsed = true
-    
-    var options: [Int : [InkTankOption]]
-    
-    var body: some View {
-        VStack(alignment: .leading) {
-            Button(action: {
-                withAnimation {
-                    self.isCollapsed.toggle()
-                }
-            }, label: {
-                HStack {
-                    Text("Actions Per Ink Tank")
-                        .font(.title3)
-                    
-                    Spacer()
-                    
-                    Image(systemName: isCollapsed ? "chevron.right" : "chevron.down")
-                        .font(.title3)
-                }
-                .bold()
-            })
-            .contentTransition(.symbolEffect(.replace))
-            .cardBackground(for: colorScheme)
-            
-            if !isCollapsed {
-                LazyVStack(spacing: 10) {
-                    ForEach(Array(options.keys).sorted(by: { $0 < $1 }), id: \.self) { key in
-                        InkTankOptionStatCard(subs: key, options: options[key]!)
-                    }
+    public var body: some View {
+        StatList(title: "Actions Per Ink Tank") {
+            LazyVStack(spacing: 10) {
+                ForEach(Array(options.keys).sorted(by: { $0 < $1 }), id: \.self) { key in
+                    InkTankOptionStatCard(subs: key, options: options[key]!)
                 }
             }
         }

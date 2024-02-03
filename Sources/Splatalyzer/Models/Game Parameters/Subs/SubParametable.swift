@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Sets required properties for any Sub Weapon
 public protocol SubParametable: Codable {
     associatedtype MoveParameter
     associatedtype WeaponParameter
@@ -15,9 +16,14 @@ public protocol SubParametable: Codable {
     var subWeaponSetting: SubWeaponSetting { get }
     var weaponParam: WeaponParameter { get }
     
-    func getOverwrites(_ playerInfo: PlayerParameters?) -> SubOverwrites
+    
+    /// Isolates properties of  the sub weapon that can overwrite other properties
+    /// - Parameter playerInfo: Expected to be `nil` unless, computing overwrites for ``SquidBeakon``
+    /// - Returns: Overwrites for properties that exist
+    func getOverwrites(_ playerInfo: Player?) -> SubOverwrites
 }
 
+/// Represents values that can be overwritten with a sub weapon's properties
 public struct SubOverwrites: Overwritable {
     public let spawnSpeedZSpecUp: HighMidLow
     public let periodFirst: HighMidLow?

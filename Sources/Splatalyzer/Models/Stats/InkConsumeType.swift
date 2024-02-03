@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// The way in which ink is consumed
 public enum InkConsumeType: String, CaseIterable {
     case normal = "Shots"
     case swing = "Swings"
@@ -19,6 +20,7 @@ public enum InkConsumeType: String, CaseIterable {
     case shieldLaunch = "Shield Launches"
     case dualieRoll = "Dodge Rolls"
     
+    /// Localized version of raw value
     var localized: String {
         return NSLocalizedString(self.rawValue, comment: "")
     }

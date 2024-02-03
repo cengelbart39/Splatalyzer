@@ -7,10 +7,20 @@
 
 import Foundation
 
+/// The effect of AP on some ``AbilityValue``
 public struct APEffect {
+    /// The default effect before accounting for AP
     public let baseEffect: Double
+    
+    /// The effecy accounting for AP
     public let effect: Double
     
+    /// Initializes `APEffect` and calculates ``baseEffect`` and ``effect``
+    /// - Parameters:
+    ///   - value: A key of `AbilityValues`
+    ///   - values: A decoded instance of ``AbilityValues``
+    ///   - ap: The AP of some abilitity
+    ///   - weapon: A weapon with overwritable values
     public init(
         for value: AbilityValue,
         in values: AbilityValues,
@@ -42,10 +52,12 @@ public struct APEffect {
         self.effect = result
     }
     
+    /// Converts ``baseEffect`` to damage
     public func baseEffectToDamage() -> Double {
         return (baseEffect * 100).cutToDecimalPlaces(3)
     }
     
+    /// Converts ``effect`` to damage
     public func effectToDamage() -> Double {
         return (effect * 100 - 0.05).cutToDecimalPlaces(3)
     }

@@ -7,115 +7,48 @@
 
 import SwiftUI
 
-struct SpecialStatList: View {
-    @Environment(\.colorScheme) var colorScheme
+/// Displays Special Weapon statistics
+public struct SpecialStatList: View {
     
-    @State var isCollapsed = true
+    /// Stats about the special weapons
+    public var specialStats: SpecialWeaponStats
     
-    var specialStats: SpecialWeaponStats
-    
-    var body: some View {
-        VStack {
-            Button(action: {
-                withAnimation {
-                    self.isCollapsed.toggle()
-                }
-            }, label: {
-                HStack {
-                    Label(
-                        title: {
-                            Text(specialStats.weapon.localized)
-                                .font(.title3)
-                            
-                        }, icon: {
-                            #if os(macOS)
-                            Image(nsImage: specialStats.weapon.image ?? NSImage())
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 25)
-                            #else
-                            Image(uiImage: specialStats.weapon.image ?? UIImage())
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 25)
-                            #endif
-                        }
-                    )
-                    
-                    Spacer()
-                    
-                    Image(systemName: isCollapsed ? "chevron.right" : "chevron.down")
-                        .font(.title3)
-                }
-                .bold()
-            })
-            .contentTransition(.symbolEffect(.replace))
-            .cardBackground(for: colorScheme)
-            
-            if !self.isCollapsed {
-                LazyVStack(spacing: 10) {
-                    AbilityStatCard(stat: specialStats.point)
-                    
-                    AbilityStatCard(stat: specialStats.lost)
-                    
-                    AbilityStatCard(stat: specialStats.lostSplattedByRP)
+    public var body: some View {
+        StatList(title: specialStats.weapon.localized, image: specialStats.weapon.image) {
+            LazyVStack(spacing: 10) {
+                AbilityStatCard(stat: specialStats.point)
+                
+                AbilityStatCard(stat: specialStats.lost)
+                
+                AbilityStatCard(stat: specialStats.lostSplattedByRP)
 
-                    if let duration = specialStats.duration {
-                        AbilityStatCard(stat: duration)
-                    }
+                AbilityStatCard(stat: specialStats.duration)
 
-                    if let damageDistance = specialStats.damageDistance {
-                        AbilityStatCard(stat: damageDistance)
-                    }
-                    
-                    if let paintRadius = specialStats.paintRadius {
-                        AbilityStatCard(stat: paintRadius)
-                    }
-                    
-                    if let fieldHp = specialStats.fieldHp {
-                        AbilityStatCard(stat: fieldHp)
-                    }
-                    
-                    if let deviceHp = specialStats.deviceHp {
-                        AbilityStatCard(stat: deviceHp)
-                    }
-                    
-                    if let hookInkConsumption = specialStats.hookInkConsumption {
-                        AbilityStatCard(stat: hookInkConsumption)
-                    }
-                    
-                    if let hookInkConsumptionPerSecond = specialStats.hookInkConsumptionPerSecond {
-                        AbilityStatCard(stat: hookInkConsumptionPerSecond)
-                    }
-                    
-                    if let reticleRadius = specialStats.reticleRadius {
-                        AbilityStatCard(stat: reticleRadius)
-                    }
-                    
-                    if let throwDistance = specialStats.throwDistance {
-                        AbilityStatCard(stat: throwDistance)
-                    }
-                    
-                    if let moveSpeed = specialStats.moveSpeed {
-                        AbilityStatCard(stat: moveSpeed)
-                    }
-                    
-                    if let autoChargeRate = specialStats.autoChargeRate {
-                        AbilityStatCard(stat: autoChargeRate)
-                    }
-                    
-                    if let maxRadius = specialStats.maxRadius {
-                        AbilityStatCard(stat: maxRadius)
-                    }
-                    
-                    if let radiusRange = specialStats.radiusRange {
-                        AbilityStatCard(stat: radiusRange)
-                    }
-                    
-                    if let powerUpDuration = specialStats.powerUpDuration {
-                        AbilityStatCard(stat: powerUpDuration)
-                    }
-                }
+                AbilityStatCard(stat: specialStats.damageDistance)
+                
+                AbilityStatCard(stat: specialStats.paintRadius)
+                
+                AbilityStatCard(stat: specialStats.fieldHp)
+                
+                AbilityStatCard(stat: specialStats.deviceHp)
+                
+                AbilityStatCard(stat: specialStats.hookInkConsumption)
+                
+                AbilityStatCard(stat: specialStats.hookInkConsumptionPerSecond)
+                
+                AbilityStatCard(stat: specialStats.reticleRadius)
+                
+                AbilityStatCard(stat: specialStats.throwDistance)
+                
+                AbilityStatCard(stat: specialStats.moveSpeed)
+                
+                AbilityStatCard(stat: specialStats.autoChargeRate)
+                
+                AbilityStatCard(stat: specialStats.maxRadius)
+                
+                AbilityStatCard(stat: specialStats.radiusRange)
+                
+                AbilityStatCard(stat: specialStats.powerUpDuration)
             }
         }
     }

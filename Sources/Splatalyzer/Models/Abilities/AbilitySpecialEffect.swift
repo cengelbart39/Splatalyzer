@@ -7,18 +7,31 @@
 
 import Foundation
 
+/// Represents the AP provided by certain abilities, that provide AP from multiple other abilities.
+///
+/// For example, the Drop Roller ability provides AP of Swim Speed Up, Run Speed Up, and Ink Resistance Up.
 public enum AbilitySpecialEffect {
+    /// The effect provided by `Ability.dropRoller`
     case dropRoller
     
+    /// The effect provided by `Ability.openingGambit`
     case openingGambit
     
+    /// The effect provided by `Ability.lastDitchEffort`
     case lastDitchEffort(Int)
     
+    /// The effect provided by ``Ability.comeback`
     case comeBack
     
+    /// The effect provided by the Tacticooler ``SpecialWeapon``
     case tacticooler
     
-    var values: [AbilityEffectValue] {
+    /// The effect provided by each `AbilityEffectValue`
+    ///
+    /// Last-Ditch Effort calculates the AP-value by using the intensity. Other wise, values are hard-coded.
+    ///
+    /// See ``ldeIntensityToAp(_:)``.
+    public var values: [AbilityEffectValue] {
         switch self {
         case .dropRoller:
             return [
@@ -68,17 +81,27 @@ public enum AbilitySpecialEffect {
         }
     }
     
-    private func ldeIntensityToAp(_ intensity: Int) -> Int {
+    /// Converts Last-Ditch Effort Intensity to its AP-value.
+    /// - Parameter intensity: The intensity of Last-Ditch Effort; expects a number within the range `0...21`.
+    /// - Returns: The equivalent AP-value
+    public func ldeIntensityToAp(_ intensity: Int) -> Int {
         return Int(floor((18.0 / 21.0) * Double(intensity)))
     }
 }
 
-struct AbilityEffectValue {
-    let type: Ability
-    let ap: Int
-    let boostsBeyond: Bool
+/// Represents the amount of AP provided by an ``Ability`` and whether it exceeds the usual cap.
+public struct AbilityEffectValue {
+    /// The ability providing the effect
+    public let type: Ability
     
-    init(_ ap: Int, of type: Ability, boostsBeyond: Bool) {
+    /// The amount of AP for `type`
+    public let ap: Int
+    
+    /// Whether the Ability's effect exceeds the typical cap.
+    public let boostsBeyond: Bool
+    
+    /// Create an instance of `AbilityEffectValue`
+    public init(_ ap: Int, of type: Ability, boostsBeyond: Bool) {
         self.type = type
         self.ap = ap
         self.boostsBeyond = boostsBeyond

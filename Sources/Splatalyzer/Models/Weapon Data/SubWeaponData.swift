@@ -24,7 +24,7 @@ public struct SubWeaponData: WeaponDatable {
     /// - Parameters:
     ///   - container: `Beacon` game parameters
     ///   - playerInfo: Player game parameters
-    public init(container: SquidBeakonGameParameters, playerInfo: PlayerParameters) {
+    public init(container: SquidBeakon, playerInfo: Player) {
         let gameParams = container.parameters
         
         self.id = .squidBeakon
@@ -41,7 +41,7 @@ public struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `BombCurling` sub weapon
     /// - Parameter container: `BombCurling` game parameters
-    public init(container: CurlingBombGameParameters) {
+    public init(container: CurlingBomb) {
         let gameParams = container.parameters
         
         self.id = .curlingBomb
@@ -58,7 +58,7 @@ public struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `BombFizzy` sub weapon
     /// - Parameter container: `BombFizzy` game parameters
-    public init(container: FizzyBombGameParameters) {
+    public init(container: FizzyBomb) {
         let gameParams = container.parameters
         
         self.id = .fizzyBomb
@@ -75,7 +75,7 @@ public struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `BombQuick` sub weapon
     /// - Parameter container: `BombQuick` game parameters
-    public init(container: BurstBombGameParameters) {
+    public init(container: BurstBomb) {
         let gameParams = container.parameters
         
         self.id = .burstBomb
@@ -92,7 +92,7 @@ public struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `BombRobot` sub weapon
     /// - Parameter container: `BombRobot` game parameters
-    public init(container: AutobombGameParameters) {
+    public init(container: Autobomb) {
         let gameParams = container.parameters
         
         self.id = .autobomb
@@ -109,7 +109,7 @@ public struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `BombSplash` sub weapon
     /// - Parameter container: `BombSplash` game parameters
-    public init(container: SplatBombGameParameters) {
+    public init(container: SplatBomb) {
         let gameParams = container.parameters
         
         self.id = .splatBomb
@@ -126,7 +126,7 @@ public struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `BombSuction` sub weapon
     /// - Parameter container: `BombSuction` game parameters
-    public init(container: SuctionBombGameParameters) {
+    public init(container: SuctionBomb) {
         let gameParams = container.parameters
         
         self.id = .suctionBomb
@@ -143,7 +143,7 @@ public struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `BombTorpedo` sub weapon
     /// - Parameter container: `BombTorpedo` game parameters
-    public init(container: TorpedoGameParameters) {
+    public init(container: Torpedo) {
         let gameParams = container.parameters
         
         self.id = .torpedo
@@ -160,7 +160,7 @@ public struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `LineMarker` sub weapon
     /// - Parameter container: `LineMarker` game parameters
-    public init(container: AngleShooterGameParameters) {
+    public init(container: AngleShooter) {
         let gameParams = container.parameters
         
         self.id = .angleShooter
@@ -177,7 +177,7 @@ public struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `PointSensor` sub weapon
     /// - Parameter container: `PointSensor` game parameters
-    public init(container: PointSensorGameParameters) {
+    public init(container: PointSensor) {
         let gameParams = container.parameters
         
         self.id = .pointSensor
@@ -194,7 +194,7 @@ public struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `PoisonMist` sub weapon
     /// - Parameter container: `PoisonMist` game parameters
-    public init(container: ToxicMistGameParameters) {
+    public init(container: ToxicMist) {
         let gameParams = container.parameters
         
         self.id = .toxicMist
@@ -211,7 +211,7 @@ public struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `Shield` sub weapon
     /// - Parameter container: `Shield` game parameters
-    public init(container: SplashWallGameParameters) {
+    public init(container: SplashWall) {
         let gameParams = container.parameters
         
         self.id = .splashWall
@@ -228,7 +228,7 @@ public struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `Sprinkler` sub weapon
     /// - Parameter container: `Sprinkler` game parameters
-    public init(container: SprinklerGameParameters) {
+    public init(container: Sprinkler) {
         let gameParams = container.parameters
         
         self.id = .sprinkler
@@ -245,7 +245,7 @@ public struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `Trap` sub weapon
     /// - Parameter container: `Trap` game parameters
-    public init(container: InkMineGameParameters) {
+    public init(container: InkMine) {
         let gameParams = container.parameters
         
         self.id = .inkMine
@@ -282,6 +282,8 @@ public struct SubWeaponData: WeaponDatable {
         }
     }
     
+    /// Returns the ``AbilityValue`` associated with the represented ``SubWeapon``.
+    /// - Returns: The associated `AbilityValue`; can be `nil` since not all sub weapons have an associated `AbilityValue`.
     public func abilityValue() -> AbilityValue? {
         switch self.id {
         case .splatBomb, .suctionBomb, .curlingBomb, .autobomb, .inkMine, .torpedo:

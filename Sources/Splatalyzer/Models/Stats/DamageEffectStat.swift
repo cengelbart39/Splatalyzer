@@ -7,17 +7,35 @@
 
 import Foundation
 
+/// Represents a statistic regarding damage done by a weapon that can be affected by abilities
 public struct DamageEffectStat: Equatable, Identifiable, Hashable {
     public let id = UUID()
+    
+    /// The type of damage
     public let type: DamageType
+    
+    /// The amount of damage done by default
     public let baseValue: Double
+    
+    /// The amount of damage done when accounting for abilities
     public let effectValue: Double
+    
+    /// The range of the attack
+    ///
+    /// - Note: If this value exists, ``distanceArr`` will be empty. Conversely, this value won't exist if ``distanceArr`` is non-empty.
     public let distance: Double?
+    
+    /// The range of attack across a range
+    ///
+    /// - Note: If this value is non-empty, ``distance`` will not exist. The converse is also true.
     public let distanceArr: [Double]
+    
+    /// The sub weapon this stat applies to
     public let subWeapon: SubWeapon
 }
 
 extension Array where Element == DamageEffectStat {
+    /// Sums the `baseValue` damage across an array.
     func sumBaseValue() -> Double {
         var result = Double()
         
@@ -28,6 +46,7 @@ extension Array where Element == DamageEffectStat {
         return result
     }
     
+    /// Find the minimum `distance` value contained in an array
     func minDistance() -> Double {
         var result = self.first?.distance ?? 0
         
@@ -40,6 +59,7 @@ extension Array where Element == DamageEffectStat {
         return result
     }
     
+    /// Find the maximum `distance` value contained in an array
     func maxDistance() -> Double {
         var result = self.first?.distance ?? 0
         

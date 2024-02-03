@@ -7,14 +7,28 @@
 
 import Foundation
 
+/// Represents a statistic regarding damage done by a weapon unaffected by abilities
 public struct DamageStat: Equatable, Identifiable, Hashable {
     public let id = UUID()
+    
+    /// The type of damage
     public let type: DamageType
+    
+    /// The amount of damage
     public let value: Double
+    
+    /// The range of the attack
     public let distance: Double?
+    
+    /// The number of shots it takes to splat an opponent
     public var shotsToSplat: Double?
+    
+    /// The number of shots per button press
     public let multiShots: Int?
     
+    /// Formats ``multiShots`` into a String
+    ///
+    /// If an attack does 29 damage and there are 3 shots per button press, it will return "29 + 29 + 29"
     public func multiShotString() -> String {
         guard let multiShots = multiShots, multiShots > 1 else {
             return String()
@@ -37,6 +51,7 @@ public struct DamageStat: Equatable, Identifiable, Hashable {
 }
 
 extension Array where Element == DamageStat {
+    /// Sums of the damage across an array
     func sumValue() -> Double {
         var result = Double()
         
@@ -47,6 +62,9 @@ extension Array where Element == DamageStat {
         return result
     }
     
+    /// Filters certain values of `[DamageStat]`
+    ///
+    /// If `DamageStat` of type `.direct` and `.normalMax` both exist and have the same `value`, we will remove the `.normalMax` element
     func filtered() -> [DamageStat] {
         let directIndex = self.firstIndex(where: { $0.type == .direct })
         let normalMaxIndex = self.firstIndex(where: { $0.type == .normalMax })

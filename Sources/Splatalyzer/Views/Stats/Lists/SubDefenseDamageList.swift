@@ -7,96 +7,41 @@
 
 import SwiftUI
 
-struct SubDefenseDamageList: View {
-    @Environment(\.colorScheme) var colorScheme
+/// Displays damage done by every special weapon
+public struct SubDefenseDamageList: View {
     
-    @State var isCollapsed = true
+    /// Dictionary of sub weapons and their damage
+    public var defenseDamage: [SubWeapon : [DamageEffectStat]]
     
-    var defenseDamage: [SubWeapon : [DamageEffectStat]]
-    
-    var body: some View {
-        VStack(alignment: .leading) {
-            Button(action: {
-                withAnimation {
-                    self.isCollapsed.toggle()
-                }
-            }, label: {
-                HStack {
-                    Text("Sub Weapon Damage Defense")
-                        .font(.title3)
-                    
-                    Spacer()
-                    
-                    Image(systemName: isCollapsed ? "chevron.right" : "chevron.down")
-                        .font(.title3)
-                }
-                .bold()
-            })
-            .contentTransition(.symbolEffect(.replace))
-            .cardBackground(for: colorScheme)
-
-            if !isCollapsed {
-                ForEach(Array(defenseDamage.keys).sorted(by: { $0.rawValue < $1.rawValue }), id: \.self) { key in
-                    if !defenseDamage[key]!.isEmpty {
-                        SubDefenseDamageItem(key: key, values: defenseDamage[key]!)
-                            .padding(.horizontal)
-                    }
+    public var body: some View {
+        StatList(title: "Sub Weapon Damage Defense") {
+            let keys = Array(defenseDamage.keys).sorted(by: { $0.rawValue < $1.rawValue })
+            
+            ForEach(keys, id: \.self) { key in
+                if !defenseDamage[key]!.isEmpty {
+                    SubDefenseDamageItem(key: key, values: defenseDamage[key]!)
+                        .padding(.horizontal)
                 }
             }
         }
     }
 }
 
-struct SubDefenseDamageItem: View {
+/// Displays damage done by a specific special weapon
+/// - SeeAlso: An element of ``SubDefenseDamageList``
+public struct SubDefenseDamageItem: View {
+        
+    /// A specific sub weapon
+    public var key: SubWeapon
     
-    @Environment(\.colorScheme) var colorScheme
+    /// The damage done by a sub weapon
+    public var values: [DamageEffectStat]
     
-    var key: SubWeapon
-    var values: [DamageEffectStat]
-    
-    @State var isCollapsed = true
-    
-    var body: some View {
-        VStack {
-            Button(action: {
-                withAnimation {
-                    self.isCollapsed.toggle()
-                }
-            }, label: {
-                HStack {
-                    Label {
-                        Text(key.localized)
-                            .font(.title3)
-                        
-                    } icon: {
-                        #if os(macOS)
-                        Image(nsImage: key.image ?? NSImage())
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 25)
-                        #else
-                        Image(uiImage: key.image ?? UIImage())
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 25)
-                        #endif
-                    }
-                    
-                    Spacer()
-                    
-                    Image(systemName: isCollapsed ? "chevron.right" : "chevron.down")
-                        .font(.title3)
-                }
-                .bold()
-            })
-            .contentTransition(.symbolEffect(.replace))
-            .cardBackground(for: colorScheme)
-
-            if !isCollapsed {
-                LazyVStack(spacing: 10) {
-                    ForEach(values, id: \.self) { stat in
-                        DamageEffectStatCard(stat: stat)
-                    }
+    public var body: some View {
+        StatList(title: key.localized, image: key.image) {
+            LazyVStack(spacing: 10) {
+                ForEach(values, id: \.self) { stat in
+                    DamageEffectStatCard(stat: stat)
                 }
             }
         }

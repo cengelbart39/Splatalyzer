@@ -7,60 +7,74 @@
 
 import Foundation
 
-public struct Splatling: Codable {
-    public let collisionParam: CollisionParameter
-    public let damageParam: DamageParameter
-    public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
-    public let mainWeaponSetting: MainWeaponSettings
-    public let moveParam: MoveParameter
-    public let paintParam: PaintParameter
-    public let splashPaintParam: SplashPaintParameter
-    public let splashSpawnParam: SplashSpawnParameter
+/// Represents the game parameter data of a main weapon in the
+/// Splatling Class.
+///
+/// To see a representative `JSON` go to
+/// `Resources/weapon-json/` and find a file prefixed with
+/// `WeaponSpinner`.
+public struct Splatling: GameParametable {
+    public var parameters: Parameters
     
-    public let variableDamageParam: DamageParameter?
-    public let variableMoveParam: MoveParameter?
-    public let variablePaintParam: PaintParameter?
-    public let variableShotParam: VariableShotParameter?
-    public let variableSplashPaintParam: SplashPaintParameter?
-    public let variableSplashSpawnParam: SplashSpawnParameter?
+    public init(parameters: Parameters) {
+        self.parameters = parameters
+    }
     
-    public let wallDropCollisionPaintParam: WallDropCollisionPaintParameter
-    public let wallDropMoveParam: WallDropMoveParameter
-    
-    public let weaponFullChargeParam: FullChargeParameter?
-    public let weaponKeepChargeParam: KeepChargeParameter?
-    
-    public let weaponParam: WeaponParameter
-    
-    public let bulletShooterTailLengthParam: BulletShooterTailLengthParameter
-    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
-    
-    public enum CodingKeys: String, CodingKey {
-        case collisionParam = "CollisionParam"
-        case damageParam = "DamageParam"
-        case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
-        case mainWeaponSetting = "MainWeaponSetting"
-        case moveParam = "MoveParam"
-        case paintParam = "PaintParam"
-        case splashPaintParam = "SplashPaintParam"
-        case splashSpawnParam = "SplashSpawnParam"
-        case variableDamageParam = "VariableDamageParam"
-        case variableMoveParam = "VariableMoveParam"
-        case variablePaintParam = "VariablePaintParam"
-        case variableShotParam = "VariableShotParam"
-        case variableSplashPaintParam = "VariableSplashPaintParam"
-        case variableSplashSpawnParam = "VariableSplashSpawnParam"
-        case wallDropCollisionPaintParam = "WallDropCollisionPaintParam"
-        case wallDropMoveParam = "WallDropMoveParam"
-        case weaponFullChargeParam = "WeaponFullChargeParam"
-        case weaponKeepChargeParam = "WeaponKeepChargeParam"
-        case weaponParam = "WeaponParam"
-        case bulletShooterTailLengthParam = "spl__BulletShooterTailLengthParam"
-        case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
+    public struct Parameters: Codable {
+        public let collisionParam: CollisionParameter
+        public let damageParam: DamageParameter
+        public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
+        public let mainWeaponSetting: MainWeaponSettings
+        public let moveParam: MoveParameter
+        public let paintParam: PaintParameter
+        public let splashPaintParam: SplashPaintParameter
+        public let splashSpawnParam: SplashSpawnParameter
+        
+        public let variableDamageParam: DamageParameter?
+        public let variableMoveParam: MoveParameter?
+        public let variablePaintParam: PaintParameter?
+        public let variableShotParam: VariableShotParameter?
+        public let variableSplashPaintParam: SplashPaintParameter?
+        public let variableSplashSpawnParam: SplashSpawnParameter?
+        
+        public let wallDropCollisionPaintParam: WallDropCollisionPaintParameter
+        public let wallDropMoveParam: WallDropMoveParameter
+        
+        public let weaponFullChargeParam: FullChargeParameter?
+        public let weaponKeepChargeParam: KeepChargeParameter?
+        
+        public let weaponParam: WeaponParameter
+        
+        public let bulletShooterTailLengthParam: BulletShooterTailLengthParameter
+        public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
+        
+        public enum CodingKeys: String, CodingKey {
+            case collisionParam = "CollisionParam"
+            case damageParam = "DamageParam"
+            case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
+            case mainWeaponSetting = "MainWeaponSetting"
+            case moveParam = "MoveParam"
+            case paintParam = "PaintParam"
+            case splashPaintParam = "SplashPaintParam"
+            case splashSpawnParam = "SplashSpawnParam"
+            case variableDamageParam = "VariableDamageParam"
+            case variableMoveParam = "VariableMoveParam"
+            case variablePaintParam = "VariablePaintParam"
+            case variableShotParam = "VariableShotParam"
+            case variableSplashPaintParam = "VariableSplashPaintParam"
+            case variableSplashSpawnParam = "VariableSplashSpawnParam"
+            case wallDropCollisionPaintParam = "WallDropCollisionPaintParam"
+            case wallDropMoveParam = "WallDropMoveParam"
+            case weaponFullChargeParam = "WeaponFullChargeParam"
+            case weaponKeepChargeParam = "WeaponKeepChargeParam"
+            case weaponParam = "WeaponParam"
+            case bulletShooterTailLengthParam = "spl__BulletShooterTailLengthParam"
+            case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
+        }
     }
 }
 
-extension Splatling {
+extension Splatling.Parameters {
     public struct CollisionParameter: Codable {
         public let type: String
         public let changeFrameForField: Int

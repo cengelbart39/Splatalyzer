@@ -1,0 +1,34 @@
+//
+//  ImageView.swift
+//
+//
+//  Created by Christopher Engelbart on 2/3/24.
+//
+
+import SwiftUI
+
+/// A view that can display a `Image` from a `NSImage` or `UIImage` depending on OS.
+struct ImageView: View {
+    
+    #if os(macOS)
+    /// A `NSImage`
+    /// - Note: Other OSes uses `UIImage` instead
+    var image: NSImage?
+    #else
+    /// A `UIImage`
+    /// - Note: macOS uses `NSImage` instead
+    var image: UIImage?
+    #endif
+    
+    var body: some View {
+        #if os(macOS)
+        Image(nsImage: image ?? NSImage())
+            .resizable()
+            .scaledToFit()
+        #else
+        Image(uiImage: image ?? UIImage())
+            .resizable()
+            .scaledToFit()
+        #endif
+    }
+}

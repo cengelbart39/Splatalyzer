@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct SpecialWeaponStats {
+public struct SpecialWeaponStats: Equatable {
     public let weapon: SpecialWeapon
     public let point: AbilityStat
     public let lost: AbilityStat
@@ -26,28 +26,4 @@ public struct SpecialWeaponStats {
     public let maxRadius: AbilityStat?
     public let radiusRange: AbilityStat?
     public let powerUpDuration: AbilityStat?
-}
-
-extension BuildStats {
-    public func specialStats() -> SpecialWeaponStats {
-        return SpecialWeaponStats(
-            weapon: self.specialWeapon,
-            point: self.specialPoint,
-            lost: self.specialLost,
-            lostSplattedByRP: self.specialLostSplattedByRP,
-            duration: self.specialDuration,
-            damageDistance: self.specialDamageDistance,
-            paintRadius: self.specialPaintRadius,
-            fieldHp: self.specialFieldHp,
-            deviceHp: self.specialDeviceHp,
-            hookInkConsumption: self.specialHookInkConsumption,
-            hookInkConsumptionPerSecond: self.specialHookInkConsumptionPerSecond,
-            reticleRadius: self.specialReticleRadius,
-            throwDistance: self.specialThrowDistance,
-            moveSpeed: self.specialMoveSpeed,
-            autoChargeRate: self.specialAutoChargeRate,
-            maxRadius: self.specialMaxRadius,
-            radiusRange: self.specialRadiusRange,
-            powerUpDuration: self.specialPowerUpDuration)
-    }
 }

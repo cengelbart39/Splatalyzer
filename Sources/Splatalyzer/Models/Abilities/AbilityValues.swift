@@ -7,9 +7,47 @@
 
 import Foundation
 
+/// Represents the whole of `ability-values.json`.
+///
+/// This is the general structure of `ability-values.json`:
+/// ```json
+/// {
+///     "ConsumeRt_Main": [
+///         0.55,
+///         0.775,
+///         1
+///     ],
+///     "ConsumeRt_Sub_Lv0": [
+///         0.8,
+///         0.9,
+///         1
+///     ],
+///     ...
+/// }
+/// ```
+///
+/// This structure is decodead into `dictionary` as `[AbilityValue : HighMidLow]`.
 public struct AbilityValues: Codable {
+    
+    /// The ``AbilityValue`` and the associated triplet of `Double`s with a high, middle, and low value.
     public var dictionary: [AbilityValue : HighMidLow]
     
+    /// Inherited from `Decodable.init(from:)`.
+    ///
+    /// We cannot use a default initalizer for decoding.
+    ///
+    /// Despite ``AbilityValue`` being correctly keyed for
+    /// `ability-values.json`, the default decoder
+    /// initalizer will throw an error while decoding if we decode
+    /// as `[AbilityValue : [Double]]`.
+    ///
+    /// We have to manually loop through every entry in the
+    /// JSON file  as `[String : [Double]]` and try to
+    /// convert the key to `AbilityValue` and value to 
+    /// `HighMidLow`.
+    ///
+    /// We also add entries not found in `ability-values`.
+    /// These are used in ``StatHelper``.
     public init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         let stringDictionary = try container.decode([String : [Double]].self)
@@ -59,7 +97,7 @@ public struct AbilityValues: Codable {
     }
 }
 
-
+/// Represents every key in the `ability-values.json` file.
 public enum AbilityValue: String, Codable {
     case consumeRtMain = "ConsumeRt_Main"
     case consumeRtSubLv0 = "ConsumeRt_Sub_Lv0"
@@ -128,6 +166,21 @@ public enum AbilityValue: String, Codable {
     case specialMinRadius
     case specialPowerUpDuration
     
+    /// Fetch the associated Sub Consume Level ``AbilityValue`` for
+    /// a specified level.
+    ///
+    /// ``AbilityValue`` contains five sub consume levels:
+    /// - `.consumeRtSubLv0`
+    /// - `.consumeRtSubLv1`
+    /// - `.consumeRtSubLv2`
+    /// - `.consumeRtSubLv3`
+    /// - `.consumeRtSubLv4`
+    ///
+    /// Based on `lvl` it fetches the appropriate case.
+    ///
+    /// - Parameter lvl: The consumption level
+    /// - Returns: The appropriate consumption level. Expects 0 to 4, but 
+    /// any other values overflow to `.consumeRtSubLv4`.
     static func getSubConsumeLevel(for lvl: Int) -> AbilityValue {
         if lvl == 0 {
             return .consumeRtSubLv0
@@ -146,6 +199,18 @@ public enum AbilityValue: String, Codable {
         }
     }
     
+    /// Fetch the associated Human Move Velocity ``AbilityValue`` for
+    /// a specified ``WeaponSpeedType``.
+    ///
+    /// ``AbilityValue`` contains three human move velocities:
+    /// - `.moveVelHumanSlow` (Slow)
+    /// - `.moveVelHuman` (Normal)
+    /// - `.moveVelHumanFast` (Fast)
+    ///
+    /// Based on `lvl` it fetches the appropriate case.
+    ///
+    /// - Parameter speedType: The weapon speed type
+    /// - Returns: The appropriate human move velocity.
     static func getMoveVelHumanLvl(for speedType: WeaponSpeedType) -> AbilityValue {
         switch speedType {
         case .slow:
@@ -157,6 +222,19 @@ public enum AbilityValue: String, Codable {
         }
     }
     
+    /// Fetch the associated Squid/Octopus Form Move Velocity
+    /// ``AbilityValue`` for a specified ``WeaponSpeedType``.
+    ///
+    /// ``AbilityValue`` contains three squid/octopus  form move
+    /// velocities:
+    /// - `.moveVelStealthSlow` (Slow)
+    /// - `.moveVelStealth` (Normal)
+    /// - `.moveVelStealthFast` (Fast)
+    ///
+    /// Based on `lvl` it fetches the appropriate case.
+    ///
+    /// - Parameter speedType: The weapon speed type
+    /// - Returns: The appropriate squid/octopus form move velocity.
     static func getMoveVelStealthLvl(for speedType: WeaponSpeedType) -> AbilityValue {
         switch speedType {
         case .slow:

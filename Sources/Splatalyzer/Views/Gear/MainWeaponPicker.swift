@@ -7,7 +7,14 @@
 
 import SwiftUI
 
+/// A menu to choose a Main Weapon
+///
+/// The `Menu` is split into subcategories by ``WeaponClass``.
+///
+/// Then weapons in that class are displayed as `Button`s to update ``mainWeapon``.
 public struct MainWeaponPicker: View {
+    
+    /// The current main weapon
     @Binding public var mainWeapon: MainWeapon
     
     public init(mainWeapon: Binding<MainWeapon>) {
@@ -25,11 +32,7 @@ public struct MainWeaponPicker: View {
                             Label(
                                 title: { Text(weapon.localized) },
                                 icon: {
-                                    #if os(macOS)
-                                    Image(nsImage: weapon.image ?? NSImage())
-                                    #else
-                                    Image(uiImage: weapon.image ?? UIImage())
-                                    #endif
+                                    ImageView(image: weapon.image)
                                 }
                             )
                         })
@@ -39,11 +42,7 @@ public struct MainWeaponPicker: View {
                     Label(
                         title: { Text(type.localized) },
                         icon: {
-                            #if os(macOS)
-                            Image(nsImage: type.image ?? NSImage())
-                            #else
-                            Image(uiImage: type.image ?? UIImage())
-                            #endif
+                            ImageView(image: type.image)
                         }
                     )
                 }
@@ -52,19 +51,9 @@ public struct MainWeaponPicker: View {
             Label(
                 title: { Text(mainWeapon.localized) },
                 icon: {
-                    #if os(macOS)
-                    Image(nsImage: mainWeapon.image ?? NSImage())
-//                        .resizable()
-//                        .scaledToFit()
-//                        .frame(width: 50, height: 50)
-                    #else
-                    Image(uiImage: mainWeapon.image ?? UIImage())
-                        .resizable()
-                        .scaledToFit()
+                    ImageView(image: mainWeapon.image)
                         .frame(width: 50, height: 50)
-                    #endif
                 }
-                
             )
         }
     }

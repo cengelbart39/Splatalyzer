@@ -7,60 +7,71 @@
 
 import Foundation
 
-public struct SquidBeakon: SubParametable {
-    public let moveParam: MoveParameter
-    public let subWeaponSetting: SubWeaponSetting
-    public let weaponParam: WeaponParameter
+/// Represents the game parameters of the Squid Beakon sub weapon
+///
+/// See the JSON file `WeaponBeacon.game__GameParameterTable.json`
+public struct SquidBeakon: GameParametable {
+    public var parameters: Parameters
     
-    public enum CodingKeys: String, CodingKey {
-        case moveParam = "MoveParam"
-        case subWeaponSetting = "SubWeaponSetting"
-        case weaponParam = "WeaponParam"
+    public init(parameters: Parameters) {
+        self.parameters = parameters
     }
     
-    public struct MoveParameter: Codable {
-        public let type: String
-        public let guideRadius: Double
-        public let spawnSpeedZSpecUp: HighMidLow
+    public struct Parameters: SubParametable {
+        public let moveParam: MoveParameter
+        public let subWeaponSetting: SubWeaponSetting
+        public let weaponParam: WeaponParameter
         
         public enum CodingKeys: String, CodingKey {
-            case type = "$type"
-            case guideRadius = "GuideRadius"
-            case spawnSpeedZSpecUp = "SpawnSpeedZSpecUp"
-        }
-    }
-    
-    public struct WeaponParameter: Codable {
-        public let type: String
-        public let inkConsume: Double
-        public let inkRecoverStop: Int
-        public let knockBackParam: KnockBackParam
-        
-        public enum CodingKeys: String, CodingKey {
-            case type = "$type"
-            case inkConsume = "InkConsume"
-            case inkRecoverStop = "InkRecoverStop"
-            case knockBackParam = "KnockBackParam"
+            case moveParam = "MoveParam"
+            case subWeaponSetting = "SubWeaponSetting"
+            case weaponParam = "WeaponParam"
         }
         
-        public struct KnockBackParam: Codable {
-            public let impactValue: Double
+        public struct MoveParameter: Codable {
+            public let type: String
+            public let guideRadius: Double
+            public let spawnSpeedZSpecUp: HighMidLow
             
             public enum CodingKeys: String, CodingKey {
-                case impactValue = "ImpactValue"
+                case type = "$type"
+                case guideRadius = "GuideRadius"
+                case spawnSpeedZSpecUp = "SpawnSpeedZSpecUp"
             }
         }
-    }
-    
-    public func getOverwrites(_ playerInfo: PlayerParameters?) -> SubOverwrites {
-        return SubOverwrites(
-            spawnSpeedZSpecUp: self.moveParam.spawnSpeedZSpecUp,
-            periodFirst: nil,
-            periodSecond: nil,
-            markingFrameSubSpec: nil,
-            sensorRadius: nil,
-            explosionRadius: nil,
-            maxHp: nil,
-            subSpecUpParam: playerInfo?.playerBeaconSubSpecUpParam)
+        
+        public struct WeaponParameter: Codable {
+            public let type: String
+            public let inkConsume: Double
+            public let inkRecoverStop: Int
+            public let knockBackParam: KnockBackParam
+            
+            public enum CodingKeys: String, CodingKey {
+                case type = "$type"
+                case inkConsume = "InkConsume"
+                case inkRecoverStop = "InkRecoverStop"
+                case knockBackParam = "KnockBackParam"
+            }
+            
+            public struct KnockBackParam: Codable {
+                public let impactValue: Double
+                
+                public enum CodingKeys: String, CodingKey {
+                    case impactValue = "ImpactValue"
+                }
+            }
+        }
+        
+        public func getOverwrites(_ playerInfo: Player?) -> SubOverwrites {
+            return SubOverwrites(
+                spawnSpeedZSpecUp: self.moveParam.spawnSpeedZSpecUp,
+                periodFirst: nil,
+                periodSecond: nil,
+                markingFrameSubSpec: nil,
+                sensorRadius: nil,
+                explosionRadius: nil,
+                maxHp: nil,
+                subSpecUpParam: playerInfo?.parameters.playerBeaconSubSpecUpParam)
+        }
     }
 }

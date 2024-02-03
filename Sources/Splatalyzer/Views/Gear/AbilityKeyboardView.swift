@@ -7,12 +7,15 @@
 
 import SwiftUI
 
+/// A view that enables the selection of a gear ability
 public struct AbilityKeyboardView: View {
     
     @Environment(\.dismiss) var dismiss
     
+    /// The current ability
     @Binding public var currentAbility: Ability
     
+    /// Restricts options presented to the user
     public var restriction: AbilityRestriction
     
     public init(currentAbility: Binding<Ability>, restriction: AbilityRestriction) {
@@ -41,19 +44,9 @@ public struct AbilityKeyboardView: View {
                     dismiss()
                     
                 }, label: {
-                    #if os(macOS)
-                    Image(nsImage: ability.image ?? NSImage())
-                        .resizable()
-                        .scaledToFit()
+                    ImageView(image: ability.image)
                         .padding(5)
                         .abilityBackground()
-                    #else
-                    Image(uiImage: ability.image ?? UIImage())
-                        .resizable()
-                        .scaledToFit()
-                        .padding(5)
-                        .abilityBackground()
-                    #endif
                 })
                 .buttonStyle(.plain)
             }

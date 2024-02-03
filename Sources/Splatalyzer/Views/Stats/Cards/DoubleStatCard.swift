@@ -7,49 +7,57 @@
 
 import SwiftUI
 
-struct DoubleStatCard: View {
+/// Displays statistical information stored as `Double`
+public struct DoubleStatCard: View {
     
-    var title: String
-    var value: Double
-    var unit: StatUnit
+    /// The title of the statistic
+    public var title: String
     
-    var body: some View {
-        GroupBox(title) {
-            VStack {
-                
-                Spacer()
-                
-                HStack {
+    /// The value
+    public var value: Double?
+    
+    /// Unit of the statistic
+    public var unit: StatUnit
+    
+    public var body: some View {
+        if let value = value {
+            GroupBox(title) {
+                VStack {
                     
                     Spacer()
                     
-                    VStack(alignment: .leading, spacing: 0) {
+                    HStack {
                         
-                        Text("Base")
-                            .font(.headline.weight(.semibold))
-                            .padding(.bottom, -10)
-                            .foregroundStyle(.secondary)
+                        Spacer()
                         
-                        if unit.symbol.isEmpty {
-                            Text(value.format())
-                                .font(.title)
-                                .fontDesign(.rounded)
-                        } else {
-                            Text(value.format())
-                                .font(.title)
-                                .fontDesign(.rounded)
-                            + Text(unit.symbol.uppercased())
+                        VStack(alignment: .leading, spacing: 0) {
+                            
+                            Text("Base")
+                                .font(.headline.weight(.semibold))
+                                .padding(.bottom, -10)
                                 .foregroundStyle(.secondary)
-                                .font(.headline)
+                            
+                            if unit.symbol.isEmpty {
+                                Text(value.format())
+                                    .font(.title)
+                                    .fontDesign(.rounded)
+                            } else {
+                                Text(value.format())
+                                    .font(.title)
+                                    .fontDesign(.rounded)
+                                + Text(unit.symbol.uppercased())
+                                    .foregroundStyle(.secondary)
+                                    .font(.headline)
+                            }
+                            
                         }
+                        
+                        Spacer()
                         
                     }
                     
                     Spacer()
-                    
                 }
-                
-                Spacer()
             }
         }
     }

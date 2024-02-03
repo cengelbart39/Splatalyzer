@@ -7,30 +7,44 @@
 
 import Foundation
 
-public struct Brella: Codable {
-    public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
-    public let mainWeaponSetting: MainWeaponSettings
+/// Represents the game parameter data of a main weapon in the
+/// Brella Class.
+///
+/// To see a representative `JSON` go to
+/// `Resources/weapon-json/` and find a file prefixed with
+/// `WeaponShelter`.
+public struct Brella: GameParametable {
+    public var parameters: Parameters
     
-    public let bulletShelterCanopyParam: BulletCanopyParameter
-    public let bulletShelterShotgunParam: BulletShotgunParameter
+    public init(parameters: Parameters) {
+        self.parameters = parameters
+    }
     
-    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
-    
-    public let weaponShelterCanopyParam: CanopyParameter
-    public let weaponShelterShotgunParam: ShotgunParameter
-    
-    public enum CodingKeys: String, CodingKey {
-        case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
-        case mainWeaponSetting = "MainWeaponSetting"
-        case bulletShelterCanopyParam = "spl__BulletShelterCanopyParam"
-        case bulletShelterShotgunParam = "spl__BulletShelterShotgunParam"
-        case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
-        case weaponShelterCanopyParam = "spl__WeaponShelterCanopyParam"
-        case weaponShelterShotgunParam = "spl__WeaponShelterShotgunParam"
+    public struct Parameters: Codable {
+        public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
+        public let mainWeaponSetting: MainWeaponSettings
+        
+        public let bulletShelterCanopyParam: BulletCanopyParameter
+        public let bulletShelterShotgunParam: BulletShotgunParameter
+        
+        public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
+        
+        public let weaponShelterCanopyParam: CanopyParameter
+        public let weaponShelterShotgunParam: ShotgunParameter
+        
+        public enum CodingKeys: String, CodingKey {
+            case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
+            case mainWeaponSetting = "MainWeaponSetting"
+            case bulletShelterCanopyParam = "spl__BulletShelterCanopyParam"
+            case bulletShelterShotgunParam = "spl__BulletShelterShotgunParam"
+            case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
+            case weaponShelterCanopyParam = "spl__WeaponShelterCanopyParam"
+            case weaponShelterShotgunParam = "spl__WeaponShelterShotgunParam"
+        }
     }
 }
 
-extension Brella {
+extension Brella.Parameters {
     public struct BulletCanopyParameter: Codable {
         public let type: String
         public let canopyAttackedDamageRate: Double?
@@ -82,7 +96,7 @@ extension Brella {
     }
 }
 
-extension Brella {
+extension Brella.Parameters {
     public struct BulletShotgunParameter: Codable {
         public let type: String
         public let damageEffectiveTotalMax: Int
@@ -106,7 +120,7 @@ extension Brella {
     }
 }
 
-extension Brella.BulletShotgunParameter {
+extension Brella.Parameters.BulletShotgunParameter {
     public struct GroupParameter: Codable {
         public let addDegree: Double?
         public let collisionParam: CollisionParameter?
@@ -210,7 +224,7 @@ extension Brella.BulletShotgunParameter {
     }
 }
 
-extension Brella.BulletShotgunParameter.GroupParameter {
+extension Brella.Parameters.BulletShotgunParameter.GroupParameter {
     public struct CollisionParameter: Codable {
         public let endRadiusForField: Double
         public let endRadiusForPlayer: Double
@@ -268,7 +282,7 @@ extension Brella.BulletShotgunParameter.GroupParameter {
     }
 }
 
-extension Brella {
+extension Brella.Parameters {
     public struct SpawnBulletAdditionMovePlayerParameter: Codable {
         public let type: String
         public let zRate: Double
@@ -280,7 +294,7 @@ extension Brella {
     }
 }
 
-extension Brella {
+extension Brella.Parameters {
     public struct CanopyParameter: Codable {
         public let type: String
         public let canopyChargeFrame: Int?
@@ -322,7 +336,7 @@ extension Brella {
     }
 }
 
-extension Brella {
+extension Brella.Parameters {
     public struct ShotgunParameter: Codable {
         public let type: String
         public let inkConsume: Double?

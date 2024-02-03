@@ -1,5 +1,5 @@
 //
-//  AbilitySelector.swift
+//  BuildSelector.swift
 //
 //
 //  Created by Christopher Engelbart on 1/13/24.
@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-public struct AbilitySelector: View {
+/// Enables selection of main weapon, gear abilities, Last-Ditch Effort AP, and
+/// Tacticooler status.
+public struct BuildSelector: View {
     
     @EnvironmentObject public var analyzer: Splatalyzer
     
@@ -27,17 +29,8 @@ public struct AbilitySelector: View {
                 LDEPicker()
                 
                 HStack {
-                    #if os(macOS)
-                    Image(nsImage: SpecialWeapon.tacticooler.image ?? NSImage())
-                        .resizable()
-                        .scaledToFit()
+                    ImageView(image: SpecialWeapon.tacticooler.image)
                         .frame(width: 60, height: 60)
-                    #else
-                    Image(uiImage: SpecialWeapon.tacticooler.image ?? UIImage())
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 60, height: 60)
-                    #endif
                     
                     Toggle("", isOn: $analyzer.usingTacticooler)
                         .labelsHidden()
@@ -67,6 +60,6 @@ public struct AbilitySelector: View {
 }
 
 #Preview {
-    AbilitySelector()
+    BuildSelector()
         .environmentObject(Splatalyzer())
 }

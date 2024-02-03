@@ -7,40 +7,17 @@
 
 import SwiftUI
 
-struct MainDamageList: View {
+/// Displays the damage done by the Main Weapon
+public struct MainDamageList: View {
     
-    @Environment(\.colorScheme) var colorScheme
+    /// The damage done by the main weapon
+    public var mainDamages: [DamageStat]
     
-    @State var isCollapsed = true
-    
-    var mainDamages: [DamageStat]
-    
-    var body: some View {
-        VStack(alignment: .leading) {
-            Button(action: {
-                withAnimation {
-                    self.isCollapsed.toggle()
-                }
-            }, label: {
-                HStack {
-                    Text("Main Weapon Damage")
-                        .font(.title3)
-                    
-                    Spacer()
-                    
-                    Image(systemName: isCollapsed ? "chevron.right" : "chevron.down")
-                        .font(.title3)
-                }
-                .bold()
-            })
-            .contentTransition(.symbolEffect(.replace))
-            .cardBackground(for: colorScheme)
-
-            if !isCollapsed {
-                LazyVStack(spacing: 10) {
-                    ForEach(mainDamages, id: \.self) { stat in
-                        DamageStatCard(stat: stat)
-                    }
+    public var body: some View {
+        StatList(title: "Main Weapon Damage") {
+            LazyVStack(spacing: 10) {
+                ForEach(mainDamages, id: \.self) { stat in
+                    DamageStatCard(stat: stat)
                 }
             }
         }

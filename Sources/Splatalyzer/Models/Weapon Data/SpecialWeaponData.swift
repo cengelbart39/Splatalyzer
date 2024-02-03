@@ -26,7 +26,7 @@ public struct SpecialWeaponData: WeaponDatable {
     public let tickDamage: Int?
     public let waveDamage: Int?
     
-    public init(container: BigBubblerGameParameters) {
+    public init(container: BigBubbler) {
         let gameParams = container.parameters
         
         self.id = .bigBubbler
@@ -48,7 +48,7 @@ public struct SpecialWeaponData: WeaponDatable {
         self.waveDamage = nil
     }
     
-    public init(container: ReefsliderGameParameters) {
+    public init(container: Reefslider) {
         let gameParams = container.parameters
         
         self.id = .reefslider
@@ -70,7 +70,7 @@ public struct SpecialWeaponData: WeaponDatable {
         self.waveDamage = nil
     }
     
-    public init(container: InkVacGameParameters) {
+    public init(container: InkVac) {
         let gameParams = container.parameters
         
         self.id = .inkVac
@@ -92,7 +92,7 @@ public struct SpecialWeaponData: WeaponDatable {
         self.waveDamage = nil
     }
     
-    public init(container: KrakenRoyaleGameParameters) {
+    public init(container: KrakenRoyale) {
         let gameParams = container.parameters
         
         self.id = .krakenRoyale
@@ -114,7 +114,7 @@ public struct SpecialWeaponData: WeaponDatable {
         self.waveDamage = nil
     }
     
-    public init(container: CrabTankGameParameters) {
+    public init(container: CrabTank) {
         let gameParams = container.parameters
         
         var canon = [DistanceDamage(damage: 600, distance: 1)]
@@ -139,7 +139,7 @@ public struct SpecialWeaponData: WeaponDatable {
         self.waveDamage = nil
     }
     
-    public init(container: SplattercolorScreenGameParameters) {
+    public init(container: SplattercolorScreen) {
         let gameParams = container.parameters
         
         self.id = .splattercolorScreen
@@ -161,7 +161,7 @@ public struct SpecialWeaponData: WeaponDatable {
         self.waveDamage = nil
     }
     
-    public init(container: TacticoolerGameParameters) {
+    public init(container: Tacticooler) {
         let gameParams = container.parameters
         
         self.id = .tacticooler
@@ -183,7 +183,7 @@ public struct SpecialWeaponData: WeaponDatable {
         self.waveDamage = nil
     }
     
-    public init(container: SuperChumpGameParameters) {
+    public init(container: SuperChump) {
         let gameParams = container.parameters
         
         self.id = .superChump
@@ -205,7 +205,7 @@ public struct SpecialWeaponData: WeaponDatable {
         self.waveDamage = nil
     }
     
-    public init(container: InkStormGameParameters) {
+    public init(container: InkStorm) {
         let gameParams = container.parameters
         
         self.id = .inkStorm
@@ -227,7 +227,7 @@ public struct SpecialWeaponData: WeaponDatable {
         self.waveDamage = nil
     }
     
-    public init(container: InkjetGameParameters) {
+    public init(container: Inkjet) {
         let gameParams = container.parameters
         
         self.id = .inkjet
@@ -249,7 +249,7 @@ public struct SpecialWeaponData: WeaponDatable {
         self.waveDamage = nil
     }
     
-    public init(container: KillerWail51GameParameters) {
+    public init(container: KillerWail51) {
         let gameParams = container.parameters
         
         self.id = .killerWail51
@@ -271,7 +271,7 @@ public struct SpecialWeaponData: WeaponDatable {
         self.waveDamage = nil
     }
     
-    public init(container: TentaMissilesGameParameters) {
+    public init(container: TentaMissiles) {
         let gameParams = container.parameters
         
         self.id = .tentaMissiles
@@ -293,7 +293,7 @@ public struct SpecialWeaponData: WeaponDatable {
         self.waveDamage = nil
     }
     
-    public init(container: BooyahBombGameParameters) {
+    public init(container: BooyahBomb) {
         let gameParams = container.parameters
         
         self.id = .booyahBomb
@@ -315,7 +315,7 @@ public struct SpecialWeaponData: WeaponDatable {
         self.waveDamage = nil
     }
     
-    public init(container: TripleSplashdownGameParameters) {
+    public init(container: TripleSplashdown) {
         let gameParams = container.parameters
         
         self.id = .tripleSplashdown
@@ -337,7 +337,7 @@ public struct SpecialWeaponData: WeaponDatable {
         self.waveDamage = nil
     }
     
-    public init(container: WaveBreakerGameParameters) {
+    public init(container: WaveBreaker) {
         let gameParams = container.parameters
         
         self.id = .waveBreaker
@@ -359,7 +359,7 @@ public struct SpecialWeaponData: WeaponDatable {
         self.waveDamage = gameParams.bulletParam.waveParam.damage
     }
     
-    public init(container: ZipcasterGameParameters) {
+    public init(container: Zipcaster) {
         let gameParams = container.parameters
         
         self.id = .zipcaster
@@ -381,7 +381,7 @@ public struct SpecialWeaponData: WeaponDatable {
         self.waveDamage = nil
     }
     
-    public init(container: TripleInkstrikeGameParameters) {
+    public init(container: TripleInkstrike) {
         let gameParams = container.parameters
         
         self.id = .tripleInkstrike
@@ -403,7 +403,7 @@ public struct SpecialWeaponData: WeaponDatable {
         self.waveDamage = nil
     }
     
-    public init(container: TrizookaGameParameters) {
+    public init(container: Trizooka) {
         let gameParams = container.parameters
         
         self.id = .trizooka
@@ -425,7 +425,7 @@ public struct SpecialWeaponData: WeaponDatable {
         self.waveDamage = nil
     }
     
-    public init(container: UltraStampGameParameters) {
+    public init(container: UltraStamp) {
         let gameParams = container.parameters
         
         var swingDmg = [DistanceDamage(damage: 1000, distance: 0)]

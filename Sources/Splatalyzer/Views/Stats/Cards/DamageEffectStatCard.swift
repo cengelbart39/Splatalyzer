@@ -7,11 +7,12 @@
 
 import SwiftUI
 
-struct DamageEffectStatCard: View {
+/// Displays information in a ``DamageEffectStat``
+public struct DamageEffectStatCard: View {
     
-    var stat: DamageEffectStat
+    public var stat: DamageEffectStat
     
-    var body: some View {
+    public var body: some View {
         GroupBox(stat.type.rawValue) {
             HStack {
                 Spacer()

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// The type of damage done by a weapon
 public enum DamageType: String, CaseIterable {
     case turretMax = "Turret (Max)"
     case turretMin = "Turret (Min)"
@@ -51,6 +52,7 @@ public enum DamageType: String, CaseIterable {
     case secondaryModeMax = "Secondary Mode (Max)"
     case secondaryModeMin = "Secodnary Mode (Min)"
     
+    /// The weapon type that the damage is performed by
     var weaponType: DamageWeaponType {
         switch self {
         case .bombDirect, .bombNormal:
@@ -64,11 +66,14 @@ public enum DamageType: String, CaseIterable {
         }
     }
     
+    /// The localized version of the raw value
     var localized: String {
         return NSLocalizedString(self.rawValue, comment: "")
     }
 }
 
+/// The type of weapon that can perform certain damage
+/// - SeeAlso: ``DamageType`` for a use of `DamageWepaonType`
 enum DamageWeaponType {
     case main
     case sub

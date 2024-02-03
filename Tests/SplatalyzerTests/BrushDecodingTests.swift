@@ -14,16 +14,16 @@ final class BrushDecodingTests: XCTestCase {
 
     func test_Inkbrush_decode_noThrows() {
         let fileName = "WeaponBrushMini.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(BrushGameParameters.self, from: fileName))
+        XCTAssertNoThrow(try service.decode(Brush.self, from: fileName))
     }
     
     func test_Octobrush_decode_noThrows() {
         let fileName = "WeaponBrushNormal.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(BrushGameParameters.self, from: fileName))
+        XCTAssertNoThrow(try service.decode(Brush.self, from: fileName))
     }
     
     func test_Painbrush_decode_noThrows() {
         let fileName = "WeaponBrushHeavy.game__GameParameterTable"
-        XCTAssertNoThrow(try service.decode(BrushGameParameters.self, from: fileName))
+        XCTAssertNoThrow(try service.decode(Brush.self, from: fileName))
     }
 }

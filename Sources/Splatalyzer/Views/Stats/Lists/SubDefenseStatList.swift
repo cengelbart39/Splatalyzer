@@ -7,57 +7,36 @@
 
 import SwiftUI
 
-struct SubDefenseStatList: View {
-    @Environment(\.colorScheme) var colorScheme
+/// Displays Sub Weapon Effect statistics
+public struct SubDefenseStatList: View {
     
-    @State var isCollapsed = true
+    /// Sub Weapon Effect statistics
+    public var defenseStats: SubDefenseStats
     
-    var defenseStats: SubDefenseStats
-    
-    var body: some View {
-        VStack {
-            Button(action: {
-                withAnimation {
-                    self.isCollapsed.toggle()
-                }
-            }, label: {
-                HStack {
-                    Text("Sub Weapon Effect Defense")
-                        .font(.title3)
-                    
-                    Spacer()
-                    
-                    Image(systemName: isCollapsed ? "chevron.right" : "chevron.down")
-                        .font(.title3)
-                }
-                .bold()
-            })
-            .contentTransition(.symbolEffect(.replace))
-            .cardBackground(for: colorScheme)
-            
-            if !self.isCollapsed {
-                LazyVStack(spacing: 10) {
-                    AbilityStatCard(stat: defenseStats.toxicMistMovementReduction)
-                    
-                    AbilityStatCard(stat: defenseStats.pointSensorMarkedSeconds)
-                    
-                    AbilityStatCard(stat: defenseStats.inkMineMarkedSeconds)
-                    
-                    AbilityStatCard(stat: defenseStats.angleShooterMarkedSeconds)
-                    
-                    GroupBox {
-                        HStack {
-                            Spacer()
-                            
-                            Text("\(SubWeapon.pointSensor.rawValue), \(SubWeapon.inkMine.rawValue), and \(SubWeapon.angleShooter.rawValue) tracking times are calculated against an oponent with 0 AP of \(Ability.subResistanceUp.localized).")
-                                .font(.caption)
-                                .foregroundStyle(.secondary)
-                            
-                            Spacer()
-                        }
+    public var body: some View {
+        StatList(title: "Sub Weapon Effect Defense") {
+            LazyVStack(spacing: 10) {
+                AbilityStatCard(stat: defenseStats.toxicMistMovementReduction)
+                
+                AbilityStatCard(stat: defenseStats.pointSensorMarkedSeconds)
+                
+                AbilityStatCard(stat: defenseStats.inkMineMarkedSeconds)
+                
+                AbilityStatCard(stat: defenseStats.angleShooterMarkedSeconds)
+                
+                GroupBox {
+                    HStack {
+                        Spacer()
+                        
+                        Text("\(SubWeapon.pointSensor.rawValue), \(SubWeapon.inkMine.rawValue), and \(SubWeapon.angleShooter.rawValue) tracking times are calculated against an oponent with 0 AP of \(Ability.subResistanceUp.localized).")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                        
+                        Spacer()
                     }
                 }
             }
+
         }
     }
 }

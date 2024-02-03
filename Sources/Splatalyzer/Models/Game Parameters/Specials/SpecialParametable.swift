@@ -7,10 +7,15 @@
 
 import Foundation
 
+/// Sets required methods for any Special Weapon
 public protocol SpecialParametable: Codable {
+    
+    /// Isolates properties of the special weapon that can overwrite other properties
+    /// - Returns: Overwrites for properties that exist
     func getOverwrites() -> SpecialOverwrites
 }
 
+/// Represents values that can be overwritten with a special weapon's properties
 public struct SpecialOverwrites: Overwritable {
     public let chargeRateAutoPerFrame: HighMidLow?
     public let crossPaintCheckLength: HighMidLow?

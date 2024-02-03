@@ -7,58 +7,72 @@
 
 import Foundation
 
-public struct Dualie: Codable {
-    public let collisionLapOverParam: CollisionParameter?
-    public let collisionParam: CollisionParameter?
+/// Represents the game parameter data of a main weapon in the
+/// Dualie Class.
+///
+/// To see a representative `JSON` go to
+/// `Resources/weapon-json/` and find a file prefixed with
+/// `WeaponManeuver`.
+public struct Dualie: GameParametable {
+    public var parameters: Parameters
     
-    public let damageLapOverParam: DamageParameter?
-    public let damageParam: DamageParameter
+    public init(parameters: Parameters) {
+        self.parameters = parameters
+    }
     
-    public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter?
-    public let mainWeaponSetting: MainWeaponSettings?
-    
-    public let moveLapOverParam: MoveParameter?
-    public let moveParam: MoveParameter
-    
-    public let paintParam: PaintParameter?
-    
-    public let sideStepBlastParam: SideStepBlastParameter?
-    public let sideStepParam: SideStepParameter
-    
-    public let splashPaintParam: SplashPaintParameter?
-    public let splashSpawnLapOverParam: SplashSpawnParameter?
-    public let splashSpawnParam: SplashSpawnParameter
-    
-    public let wallDropCollisionPaintParam: WallDropCollisionPaintParameter?
-    public let wallDropMoveParam: WallDropMoveParameter?
-    
-    public let weaponParam: WeaponParameter
-    
-    public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter?
-    
-    public enum CodingKeys: String, CodingKey {
-        case collisionLapOverParam = "CollisionLapOverParam"
-        case collisionParam = "CollisionParam"
-        case damageLapOverParam = "DamageLapOverParam"
-        case damageParam = "DamageParam"
-        case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
-        case mainWeaponSetting = "MainWeaponSetting"
-        case moveLapOverParam = "MoveLapOverParam"
-        case moveParam = "MoveParam"
-        case paintParam = "PaintParam"
-        case sideStepBlastParam = "SideStepBlastParam"
-        case sideStepParam = "SideStepParam"
-        case splashPaintParam = "SplashPaintParam"
-        case splashSpawnLapOverParam = "SplashSpawnLapOverParam"
-        case splashSpawnParam = "SplashSpawnParam"
-        case wallDropCollisionPaintParam = "WallDropCollisionPaintParam"
-        case wallDropMoveParam = "WallDropMoveParam"
-        case weaponParam = "WeaponParam"
-        case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
+    public struct Parameters: Codable {
+        public let collisionLapOverParam: CollisionParameter?
+        public let collisionParam: CollisionParameter?
+        
+        public let damageLapOverParam: DamageParameter?
+        public let damageParam: DamageParameter
+        
+        public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter?
+        public let mainWeaponSetting: MainWeaponSettings?
+        
+        public let moveLapOverParam: MoveParameter?
+        public let moveParam: MoveParameter
+        
+        public let paintParam: PaintParameter?
+        
+        public let sideStepBlastParam: SideStepBlastParameter?
+        public let sideStepParam: SideStepParameter
+        
+        public let splashPaintParam: SplashPaintParameter?
+        public let splashSpawnLapOverParam: SplashSpawnParameter?
+        public let splashSpawnParam: SplashSpawnParameter
+        
+        public let wallDropCollisionPaintParam: WallDropCollisionPaintParameter?
+        public let wallDropMoveParam: WallDropMoveParameter?
+        
+        public let weaponParam: WeaponParameter
+        
+        public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter?
+        
+        public enum CodingKeys: String, CodingKey {
+            case collisionLapOverParam = "CollisionLapOverParam"
+            case collisionParam = "CollisionParam"
+            case damageLapOverParam = "DamageLapOverParam"
+            case damageParam = "DamageParam"
+            case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
+            case mainWeaponSetting = "MainWeaponSetting"
+            case moveLapOverParam = "MoveLapOverParam"
+            case moveParam = "MoveParam"
+            case paintParam = "PaintParam"
+            case sideStepBlastParam = "SideStepBlastParam"
+            case sideStepParam = "SideStepParam"
+            case splashPaintParam = "SplashPaintParam"
+            case splashSpawnLapOverParam = "SplashSpawnLapOverParam"
+            case splashSpawnParam = "SplashSpawnParam"
+            case wallDropCollisionPaintParam = "WallDropCollisionPaintParam"
+            case wallDropMoveParam = "WallDropMoveParam"
+            case weaponParam = "WeaponParam"
+            case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
+        }
     }
 }
 
-extension Dualie {
+extension Dualie.Parameters {
     public struct CollisionParameter: Codable {
         public let type: String
         public let changeFrameForField: Int
@@ -82,7 +96,7 @@ extension Dualie {
     }
 }
 
-extension Dualie {
+extension Dualie.Parameters {
     public struct DamageParameter: Codable {
         public let type: String
         public let reduceEndFrame: Int?
@@ -100,7 +114,7 @@ extension Dualie {
     }
 }
 
-extension Dualie {
+extension Dualie.Parameters {
     public struct MoveParameter: Codable {
         public let type: String
         public let freeGravity: Double?
@@ -118,7 +132,7 @@ extension Dualie {
     }
 }
 
-extension Dualie {
+extension Dualie.Parameters {
     public struct PaintParameter: Codable {
         public let type: String
         public let degreeUseDepthScaleMin: Double?
@@ -146,7 +160,7 @@ extension Dualie {
     }
 }
 
-extension Dualie {
+extension Dualie.Parameters {
     public struct SideStepBlastParameter: Codable {
         public let type: String
         public let crossPaintCheckLength: Double
@@ -168,7 +182,7 @@ extension Dualie {
     }
 }
 
-extension Dualie {
+extension Dualie.Parameters {
     public struct SideStepParameter: Codable {
         public let type: String
         public let chargeFrame: Int?
@@ -220,7 +234,7 @@ extension Dualie {
     }
 }
 
-extension Dualie.SideStepParameter {
+extension Dualie.Parameters.SideStepParameter {
     public struct SplashSlideParameter: Codable {
         public let moveLength: Double?
         public let paintWidthHalf: Double
@@ -232,7 +246,7 @@ extension Dualie.SideStepParameter {
     }
 }
 
-extension Dualie {
+extension Dualie.Parameters {
     public struct SplashPaintParameter: Codable {
         public let type: String
         public let depthMaxDropHeight: Double
@@ -252,7 +266,7 @@ extension Dualie {
     }
 }
 
-extension Dualie {
+extension Dualie.Parameters {
     public struct SplashSpawnParameter: Codable {
         public let type: String
         public let forceSpawnNearestAddNumArray: [Double]?
@@ -272,7 +286,7 @@ extension Dualie {
     }
 }
 
-extension Dualie {
+extension Dualie.Parameters {
     public struct WallDropCollisionPaintParameter: Codable {
         public let type: String
         public let paintRadiusFall: Double
@@ -288,7 +302,7 @@ extension Dualie {
     }
 }
 
-extension Dualie {
+extension Dualie.Parameters {
     public struct WallDropMoveParameter: Codable {
         public let type: String
         public let fallPeriodFirstFrameMax: Int
@@ -314,7 +328,7 @@ extension Dualie {
     }
 }
 
-extension Dualie {
+extension Dualie.Parameters {
     public struct WeaponParameter: Codable {
         public let type: String
         public let inkConsume: Double
@@ -358,7 +372,7 @@ extension Dualie {
     }
 }
 
-extension Dualie {
+extension Dualie.Parameters {
     public struct SpawnBulletAdditionMovePlayerParameter: Codable {
         public let type: String
         public let zRate: Double
