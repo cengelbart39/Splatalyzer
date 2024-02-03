@@ -13,7 +13,7 @@ public struct DamageStatCard: View {
     public var stat: DamageStat
     
     public var body: some View {
-        GroupBox(stat.type.rawValue) {
+        GroupBox(stat.type.localized) {
             HStack {
                 Spacer()
                 

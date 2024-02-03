@@ -9,48 +9,48 @@ import Foundation
 
 /// The type of damage done by a weapon
 public enum DamageType: String, CaseIterable {
-    case turretMax = "Turret (Max)"
-    case turretMin = "Turret (Min)"
-    case normalMaxFullCharge = "Normal (Full Charge)"
-    case normalMax = "Normal (Max)"
-    case normalMin = "Normal (Min)"
-    case direct = "Direct"
-    case directMax = "Direct (Max)"
-    case directMin = "Direct (Min)"
-    case directSecondaryMax = "Direct (Secondary Max)"
-    case directSecondaryMin = "Direct (Secondary Min)"
-    case fullCharge = "Full Charge"
-    case maxCharge = "Max Charge"
-    case tapShot = "Tap Shot"
-    case distance = "Distance"
-    case splash = "Splash Damage"
-    case bombDirect = "Bomb (Direct)"
-    case bombNormal = "Bomb (Splash)"
-    case splatanaVertical = "Splatana Vertical"
-    case splatanaVerticalDirect = "Splatana Vertical (Direct)"
-    case splatanaHorizontal = "Splatana Horizontal"
-    case splatanaHorizontalDirect = "Spaltana Horizontal (Direct)"
-    case splashMax = "Splash (Max)"
-    case splashMin = "Splash (Min)"
-    case splashVerticalMax = "Splash Vertical (Max)"
-    case splashVerticalMin = "Splash Vertical (Min)"
-    case splashHorizontalMax = "Splash Horizontal (Max)"
-    case splashHorizontalMin = "Splash Horizontal (Min)"
-    case rollOver = "Roll Over"
-    case wave = "Wave"
-    case specialMaxCharge = "Special (Max Charge)"
-    case specialMinCharge = "Special (Min Charge)"
-    case specialThrow = "Special Throw"
-    case specialThrowDirect = "Special Throw (Direct)"
-    case specialSwing = "Special Swing"
-    case specialCannon = "Special Cannon"
-    case specialBulletMax = "Special Bullet (Max)"
-    case specialBulletMin = "Special Bullet (Min)"
-    case specialBump = "Special Bump"
-    case specialJump = "Special Jump"
-    case specialTick = "Special Tick"
-    case secondaryModeMax = "Secondary Mode (Max)"
-    case secondaryModeMin = "Secodnary Mode (Min)"
+    case turretMax
+    case turretMin
+    case normalMaxFullCharge
+    case normalMax
+    case normalMin
+    case direct
+    case directMax
+    case directMin
+    case directSecondaryMax
+    case directSecondaryMin
+    case fullCharge
+    case maxCharge
+    case tapShot
+    case distance
+    case splash
+    case bombDirect
+    case bombNormal
+    case splatanaVertical
+    case splatanaVerticalDirect
+    case splatanaHorizontal
+    case splatanaHorizontalDirect
+    case splashMax
+    case splashMin
+    case splashVerticalMax
+    case splashVerticalMin
+    case splashHorizontalMax
+    case splashHorizontalMin
+    case rollOver
+    case wave
+    case specialMaxCharge
+    case specialMinCharge
+    case specialThrow
+    case specialThrowDirect
+    case specialSwing
+    case specialCannon
+    case specialBulletMax
+    case specialBulletMin
+    case specialBump
+    case specialJump
+    case specialTick
+    case secondaryModeMax
+    case secondaryModeMin
     
     /// The weapon type that the damage is performed by
     var weaponType: DamageWeaponType {
@@ -68,7 +68,7 @@ public enum DamageType: String, CaseIterable {
     
     /// The localized version of the raw value
     var localized: String {
-        return NSLocalizedString(self.rawValue, comment: "")
+        return NSLocalizedString(self.rawValue, tableName: "DamageType", bundle: Bundle.module, comment: "")
     }
 }
 

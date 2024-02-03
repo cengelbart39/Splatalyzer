@@ -9,19 +9,19 @@ import Foundation
 
 /// The way in which ink is consumed
 public enum InkConsumeType: String, CaseIterable {
-    case normal = "Shots"
-    case swing = "Swings"
-    case slosh = "Sloshes"
-    case verticalSwing = "Vertical Swings"
-    case horizontalSwing = "Horizontal Swings"
-    case tapShot = "Tap Shots"
-    case fullCharge = "Fully Charged Shots"
-    case splatlingCharge = "Full Charges"
-    case shieldLaunch = "Shield Launches"
-    case dualieRoll = "Dodge Rolls"
+    case normal
+    case swing
+    case slosh
+    case verticalSwing
+    case horizontalSwing
+    case tapShot
+    case fullCharge
+    case splatlingCharge
+    case shieldLaunch
+    case dualieRoll
     
     /// Localized version of raw value
     var localized: String {
-        return NSLocalizedString(self.rawValue, comment: "")
+        return NSLocalizedString(self.rawValue, tableName: "InkConsumeType", bundle: Bundle.module, comment: "")
     }
 }

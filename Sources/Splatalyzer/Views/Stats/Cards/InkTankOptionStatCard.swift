@@ -23,7 +23,7 @@ public struct InkTankOptionStatCard: View {
 
                 ForEach(options) { option in
                     VStack(alignment: .leading, spacing: 0) {
-                        Text(option.type.rawValue)
+                        Text(option.type.localized)
                             .font(.headline.weight(.semibold))
                             .padding(.bottom, -10)
                             .foregroundStyle(.secondary)
