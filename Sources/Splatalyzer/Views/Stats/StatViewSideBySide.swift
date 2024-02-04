@@ -10,7 +10,7 @@ import SwiftUI
 /// A side-by-side display of of ``BuildSelector`` and Build Stats
 public struct StatViewSideBySide: View {
     
-    @StateObject public var analyzer = Splatalyzer()
+    @StateObject public var analyzer = SplatalyzerViewModel()
     
     public init() { }
     

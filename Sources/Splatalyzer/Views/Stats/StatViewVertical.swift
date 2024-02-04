@@ -10,7 +10,7 @@ import SwiftUI
 /// A vertical display of of ``BuildSelector`` and Build Stats
 public struct StatViewVertical: View {
     
-    @StateObject public var analyzer = Splatalyzer()
+    @StateObject public var analyzer = SplatalyzerViewModel()
     
     public init() { }
     

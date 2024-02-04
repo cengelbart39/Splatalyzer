@@ -11,7 +11,7 @@ import SwiftUI
 /// Tacticooler status.
 public struct BuildSelector: View {
     
-    @EnvironmentObject public var analyzer: Splatalyzer
+    @EnvironmentObject public var analyzer: SplatalyzerViewModel
     
     public init() { }
     
@@ -61,5 +61,5 @@ public struct BuildSelector: View {
 
 #Preview {
     BuildSelector()
-        .environmentObject(Splatalyzer())
+        .environmentObject(SplatalyzerViewModel())
 }

@@ -13,6 +13,7 @@ import AppKit
 import UIKit
 #endif
 
+/// Represents the classes of Main Weapons
 public enum WeaponClass: String, CaseIterable {
     case blaster = "Blaster"
     case brush = "Brush"

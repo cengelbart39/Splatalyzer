@@ -40,6 +40,7 @@ public struct MainWeaponSettings: Codable {
     }
 }
 
+/// Represents the weight of a Main Weapon
 public enum WeaponSpeedType: String, Codable {
     case slow = "Slow"
     case mid = "Mid"
@@ -48,19 +49,27 @@ public enum WeaponSpeedType: String, Codable {
     var display: String {
         switch self {
         case .slow:
-            return "Heavy"
+            return String(localized: "Heavy", comment: "Refers to main weapon weight")
+            
         case .mid:
-            return "Normal"
+            return String(localized: "Normal", comment: "Refers to main weapon weight")
+            
         case .fast:
-            return "Light"
+            return String(localized: "Light", comment: "Refers to main weapon weight")
         }
     }
 }
 
+/// Represents properties that can be overwritten by the Main Weapon
 public struct MainOverwrites: Overwritable {
+    /// Overwrites Main Weapon ink consumption
     public let consumeRtMain: HighMidLow?
+    
+    /// Overwrites move speed while shooting the Main Weapon
     public let moveVelRtShot: HighMidLow?
     
+    /// Initializes with ``MainWeaponSettings``
+    /// - Parameter settings: Contains overwrite properties
     public init(settings: MainWeaponSettings) {
         self.consumeRtMain = HighMidLow(
             high: settings.overwriteConsumeRtMainHigh,
@@ -73,6 +82,7 @@ public struct MainOverwrites: Overwritable {
             low: settings.overwriteMoveVelRtShotLow)
     }
     
+    /// Initializer to set all properties to `nil`
     public init() {
         self.consumeRtMain = nil
         self.moveVelRtShot = nil

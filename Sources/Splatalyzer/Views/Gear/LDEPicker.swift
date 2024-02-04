@@ -12,7 +12,7 @@ import SwiftUI
 /// Disabled if the gear build doesn't have Last Ditch Effort
 public struct LDEPicker: View {
     
-    @EnvironmentObject public var analyzer: Splatalyzer
+    @EnvironmentObject public var analyzer: SplatalyzerViewModel
     
     public var body: some View {
         HStack {

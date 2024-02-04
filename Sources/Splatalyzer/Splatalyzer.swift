@@ -5,76 +5,8 @@ import Foundation
 import Observation
 
 /// Class that enables the analysis of gear builds into statistics
-public final class Splatalyzer: ObservableObject {
-    
-    /// The stats produced by the class
-    @Published public var stats: BuildStats? = nil
-    
-    /// The user's gear build
-    @Published public var gearBuild = GearBuild()
-    
-    /// The selected main weapon
-    @Published public var mainWeapon = MainWeapon.allCases.first!
-    
-    /// The selected Last-Ditch Effort Intensity
-    @Published public var ldeIntensity = 0
-    
-    /// Whether Tacticooler effects should be considered in statistics
-    @Published public var usingTacticooler = false
-    
-    private var weaponInfoMain: WeaponInfoMain? = nil
-    private var playerParams: Player? = nil
-    private var subData = [SubWeapon : SubWeaponData]()
-    
-    public init() { }
-    
-    /// Update statstics after a change in ``MainWeapon``
-    public func updateStats(for weapon: MainWeapon) throws {
-        DispatchQueue.main.async {
-            self.mainWeapon = weapon
-        }
-        
-        try self.analyze()
-    }
-    
-    /// Update statstics after a change in ``GearBuild``
-    public func updateStats(for gearBuild: GearBuild) throws {
-        DispatchQueue.main.async {
-            self.gearBuild = gearBuild
-        }
-        
-        try self.analyze()
-    }
-    
-    /// Update statstics after a change in LDE intensity
-    public func updateStats(for ldeIntensity: Int) throws {
-        DispatchQueue.main.async {
-            self.ldeIntensity = ldeIntensity
-        }
-        
-        try self.analyze()
-    }
-    
-    /// Update statstics after a change in Tacticooler statis
-    public func updateStats(for tacticooler: Bool) throws {
-        DispatchQueue.main.async {
-            self.usingTacticooler = tacticooler
-        }
-        
-        try self.analyze()
-    }
-    
-    /// Convenience analysis function using class properties
-    /// - SeeAlso: This function is a convenience version of ``analyze(mainWeapon:gearBuild:ldeIntensity:usingTacticooler:)``
-    /// - Throws: Can throw ``SplatalyzerError`` or ``JSONError``
-    public func analyze() throws {
-        try self.analyze(
-            mainWeapon: self.mainWeapon,
-            gearBuild: self.gearBuild,
-            ldeIntensity: self.ldeIntensity,
-            usingTacticooler: self.usingTacticooler)
-    }
-    
+public final class Splatalyzer {
+
     /// Analyzes the main weapon and gear build to produce build statistics.
     /// - Parameters:
     ///   - mainWeapon: The current main weapon
@@ -87,7 +19,7 @@ public final class Splatalyzer: ObservableObject {
         gearBuild: GearBuild,
         ldeIntensity: Int,
         usingTacticooler: Bool
-    ) throws {
+    ) throws -> BuildStats {
         guard gearBuild.isValid() else {
             throw SplatalyzerError.invalidGearConfig
         }
@@ -98,37 +30,24 @@ public final class Splatalyzer: ObservableObject {
         
         let service = JSONService()
         
-        if weaponInfoMain == nil {
-            let weaponInfoMain = try service.decode(WeaponInfoMain.self, from: "WeaponInfoMain")
-            
-            self.weaponInfoMain = weaponInfoMain
-        }
-        
-        if playerParams == nil {
-            let playerParams = try service.decode(Player.self, from: "SplPlayer.game__GameParameterTable")
-            
-            self.playerParams = playerParams
-        }
+        let weaponInfoMain = try service.decode(WeaponInfoMain.self, from: "WeaponInfoMain")
+    
+        let playerParams = try service.decode(Player.self, from: "SplPlayer.game__GameParameterTable")
         
         let mainData = try self.getMainWeaponData(
             weapon: mainWeapon,
             service: service,
-            mainInfo: self.weaponInfoMain!)
+            mainInfo: weaponInfoMain)
         
+        var allSubData = [SubWeapon : SubWeaponData]()
         
-        if subData.isEmpty {
-            var allSubData = [SubWeapon : SubWeaponData]()
+        for sub in SubWeapon.allCases {
+            let subData = try self.getSubWeaponData(
+                weapon: sub,
+                service: service,
+                playerInfo: playerParams)
             
-            for sub in SubWeapon.allCases {
-                let subData = try self.getSubWeaponData(
-                    weapon: sub,
-                    service: service,
-                    playerInfo: playerParams!)
-                
-                allSubData[sub] = subData
-            }
-            
-            self.subData = allSubData
+            allSubData[sub] = subData
         }
         
         let specialData = try self.getSpecialData(
@@ -139,16 +58,14 @@ public final class Splatalyzer: ObservableObject {
         
         let stats = BuildStats(
             mainInfo: mainData,
-            allSubInfo: self.subData,
+            allSubInfo: allSubData,
             specialInfo: specialData,
             gearBuild: gearBuild,
             abilityValues: abilityValues,
             ldeIntensity: ldeIntensity,
             usingTacticooler: usingTacticooler)
         
-        DispatchQueue.main.async {
-            self.stats = stats
-        }
+        return stats
     }
     
     /// Gets ``MainWeaponData`` for a specified ``MainWeapon``

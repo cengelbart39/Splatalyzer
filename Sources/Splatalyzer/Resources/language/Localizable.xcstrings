@@ -5,7 +5,15 @@
 
     },
     "(specialWeapon.localized) Damage" : {
-      "comment" : "Refers to the damage done by the Special Weapon."
+      "comment" : "Refers to the damage done by the Special Weapon.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(specialWeapon.localized) Damage"
+          }
+        }
+      }
     },
     "%@ Damage" : {
       "comment" : "Refers to the damage done by the Special Weapon.",
@@ -661,6 +669,17 @@
         }
       }
     },
+    "Heavy" : {
+      "comment" : "Refers to main weapon weight",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heavy"
+          }
+        }
+      }
+    },
     "Ink Tank Consumption" : {
       "localizations" : {
         "en" : {
@@ -698,6 +717,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "LDE Intensity"
+          }
+        }
+      }
+    },
+    "Light" : {
+      "comment" : "Refers to main weapon weight",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Light"
           }
         }
       }
@@ -788,6 +818,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No Ink Recovery Time After Usage"
+          }
+        }
+      }
+    },
+    "Normal" : {
+      "comment" : "Refers to main weapon weight",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Normal"
           }
         }
       }

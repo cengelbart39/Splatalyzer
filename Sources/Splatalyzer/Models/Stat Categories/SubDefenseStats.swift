@@ -7,9 +7,17 @@
 
 import Foundation
 
+/// Represents statistics about player defense to certain sub weapons
 public struct SubDefenseStats: Equatable {
+    /// Effect of Toxic Mist Movement Reduction
     public let toxicMistMovementReduction: AbilityStat
+    
+    /// Effect on Point Sensor Tracking Time
     public let pointSensorMarkedSeconds: AbilityStat
+    
+    /// Effect on Ink Mine tracking time
     public let inkMineMarkedSeconds: AbilityStat
+    
+    /// Effect on Angle Shooter tracking time
     public let angleShooterMarkedSeconds: AbilityStat
 }
