@@ -126,7 +126,7 @@ public struct GearPiece: Equatable, Identifiable {
     /// Determines if gear piece is valid by checking main abilities.
     ///
     /// Checks against an array of headgear, clothes, and shoes abilities
-    /// (`static` properties of `Ability`).
+    /// (`static` properties of ``Ability``).
     ///
     /// A gear piece, with no restriction is always invalid.
     public func isValid() -> Bool {

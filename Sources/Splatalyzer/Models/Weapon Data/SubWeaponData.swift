@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// An object representing the necessary Sub Weapon information for build analysis.
 public struct SubWeaponData: WeaponDatable {
     public let id: SubWeapon
     public let overwrites: Overwritable

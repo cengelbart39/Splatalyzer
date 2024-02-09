@@ -13,6 +13,10 @@ public struct MainDamageList: View {
     /// The damage done by the main weapon
     public var mainDamages: [DamageStat]
     
+    public init(mainDamages: [DamageStat]) {
+        self.mainDamages = mainDamages
+    }
+    
     public var body: some View {
         StatList(title: "Main Weapon Damage") {
             LazyVStack(spacing: 10) {

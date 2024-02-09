@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// An object representing the necessary Special Weapon information for build analysis.
 public struct SpecialWeaponData: WeaponDatable {
     public let id: SpecialWeapon
     public let armorHp: Int?

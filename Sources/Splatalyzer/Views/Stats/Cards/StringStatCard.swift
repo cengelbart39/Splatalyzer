@@ -16,6 +16,11 @@ public struct StringStatCard: View {
     /// The associated value
     public var value: String
     
+    public init(title: String, value: String) {
+        self.title = title
+        self.value = value
+    }
+    
     public var body: some View {
         GroupBox(title) {
             VStack {

@@ -48,4 +48,20 @@ public struct MovementStats: Equatable {
     
     /// The limit to the amount of damage enemy ink can cause to the player
     public let enemyInkDamageLimit: AbilityStat
+    
+    public init(speedType: WeaponSpeedType, swimSpeed: AbilityStat, swimSpeedWithRainmaker: AbilityStat, runSpeed: AbilityStat, shootingRunSpeed: AbilityStat?, shootingRunSpeedCharging: AbilityStat?, shootingRunSpeedFullCharge: AbilityStat?, shootingRunSpeedSecondary: AbilityStat?, squidSurgeChargeFrames: AbilityStat, runSpeedInEnemyInk: AbilityStat, framesBeforeDamageInEnemyInk: AbilityStat, damageInEnemyInkPerSecond: AbilityStat, enemyInkDamageLimit: AbilityStat) {
+        self.speedType = speedType
+        self.swimSpeed = swimSpeed
+        self.swimSpeedWithRainmaker = swimSpeedWithRainmaker
+        self.runSpeed = runSpeed
+        self.shootingRunSpeed = shootingRunSpeed
+        self.shootingRunSpeedCharging = shootingRunSpeedCharging
+        self.shootingRunSpeedFullCharge = shootingRunSpeedFullCharge
+        self.shootingRunSpeedSecondary = shootingRunSpeedSecondary
+        self.squidSurgeChargeFrames = squidSurgeChargeFrames
+        self.runSpeedInEnemyInk = runSpeedInEnemyInk
+        self.framesBeforeDamageInEnemyInk = framesBeforeDamageInEnemyInk
+        self.damageInEnemyInkPerSecond = damageInEnemyInkPerSecond
+        self.enemyInkDamageLimit = enemyInkDamageLimit
+    }
 }

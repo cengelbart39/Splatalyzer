@@ -12,6 +12,10 @@ public struct MiscStatList: View {
     
     public var miscStats: MiscStats
     
+    public init(miscStats: MiscStats) {
+        self.miscStats = miscStats
+    }
+    
     public var body: some View {
         StatList(title: "Miscellaneous") {
             LazyVStack(spacing: 10) {

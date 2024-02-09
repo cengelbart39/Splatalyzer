@@ -16,6 +16,11 @@ public struct InkTankOptionStatCard: View {
     /// The number of shots that can be used after ``subs``
     public var options: [InkTankOption]
     
+    public init(subs: Int, options: [InkTankOption]) {
+        self.subs = subs
+        self.options = options
+    }
+    
     public var body: some View {
         GroupBox("\(subs) Sub Used") {
             HStack {

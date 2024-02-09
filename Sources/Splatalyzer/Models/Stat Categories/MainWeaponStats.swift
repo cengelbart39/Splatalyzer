@@ -36,6 +36,18 @@ public struct MainWeaponStats: Equatable {
     /// Max Charge Hold Time
     public let maxChargeSeconds: Double?
     
+    public init(weapon: MainWeapon, shotSpreadAir: AbilityStat?, shotSpreadGround: Double?, shotAutofireSpreadAir: AbilityStat?, shotAutofireSpreadGround: Double?, whiteInkSeconds: Double?, brellaCanopyHp: Int?, fullChargeSeconds: Double?, maxChargeSeconds: Double?) {
+        self.weapon = weapon
+        self.shotSpreadAir = shotSpreadAir
+        self.shotSpreadGround = shotSpreadGround
+        self.shotAutofireSpreadAir = shotAutofireSpreadAir
+        self.shotAutofireSpreadGround = shotAutofireSpreadGround
+        self.whiteInkSeconds = whiteInkSeconds
+        self.brellaCanopyHp = brellaCanopyHp
+        self.fullChargeSeconds = fullChargeSeconds
+        self.maxChargeSeconds = maxChargeSeconds
+    }
+    
     /// Checks if any property (besides ``weapon`` exists).
     ///
     /// This structure, uniquely, may have all of its properties be `nil`.

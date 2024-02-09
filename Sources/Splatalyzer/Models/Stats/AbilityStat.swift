@@ -23,6 +23,14 @@ public struct AbilityStat: Equatable {
     
     /// The name of the statistic
     public let title: String
+    
+    public init(baseValue: Double, modifiedBy: [Ability], value: Double, unit: StatUnit, title: String) {
+        self.baseValue = baseValue
+        self.modifiedBy = modifiedBy
+        self.value = value
+        self.unit = unit
+        self.title = title
+    }
 }
 
 /// The unit of measurement used in ``AbilityStat``

@@ -26,4 +26,13 @@ public struct MiscStats: Equatable {
     
     /// The total amount of time it takes for a Super Jump to occur
     public let superJumpTimeTotal: AbilityStat
+    
+    public init(squidInkRecovery: AbilityStat, humanoidInkRecovery: AbilityStat, quickRespawnTime: AbilityStat, quickRespawnTimeRP: AbilityStat, superJumpGroundFrames: AbilityStat, superJumpTimeTotal: AbilityStat) {
+        self.squidInkRecovery = squidInkRecovery
+        self.humanoidInkRecovery = humanoidInkRecovery
+        self.quickRespawnTime = quickRespawnTime
+        self.quickRespawnTimeRP = quickRespawnTimeRP
+        self.superJumpGroundFrames = superJumpGroundFrames
+        self.superJumpTimeTotal = superJumpTimeTotal
+    }
 }

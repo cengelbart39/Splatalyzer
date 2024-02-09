@@ -13,6 +13,10 @@ public struct BuildStatsView: View {
     /// The current stats
     public var stats: BuildStats
     
+    public init(stats: BuildStats) {
+        self.stats = stats
+    }
+    
     public var body: some View {
         VStack {
             if stats.mainStats.exists() {

@@ -3,7 +3,9 @@
   <h1 align="center">Splatalyzer</h1>
 </p>
 
-Splatalyzer is a Swift package that enables the analysis of Splatoon 3 builds. It also provides structures representing main weapons, sub weapons, special weapons, gear builds, abilities and more. Along side this are SwiftUI views displaying his information and picking build characteristics.
+Splatalyzer is a Swift package that enables the analysis of Splatoon 3 builds. It also provides structures representing main weapons, sub weapons, special weapons, gear builds, abilities and more. 
+
+Along side this are SwiftUI views displaying this information and picking build characteristics.
 
 The package works locally, relying on resources included within the package.
 

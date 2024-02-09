@@ -12,6 +12,10 @@ public struct MovementStatList: View {
 
     public var movementStats: MovementStats
     
+    public init(movementStats: MovementStats) {
+        self.movementStats = movementStats
+    }
+    
     public var body: some View {
         StatList(title: "Movement") {
             LazyVStack(spacing: 10) {

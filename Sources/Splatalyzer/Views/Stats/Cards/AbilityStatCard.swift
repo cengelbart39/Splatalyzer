@@ -14,6 +14,10 @@ public struct AbilityStatCard: View {
     
     public var stat: AbilityStat?
     
+    public init(stat: AbilityStat?) {
+        self.stat = stat
+    }
+    
     public var body: some View {
         if let stat = stat {
             ZStack {

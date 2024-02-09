@@ -42,4 +42,18 @@ public struct SubWeaponStats: Equatable {
     
     /// Quick Super Jump Boost (Squid Beakon)
     public let quickSuperJumpBoost: AbilityStat?
+    
+    public init(weapon: SubWeapon, inkConsumptionPercentage: AbilityStat, whiteInkSeconds: Double, velocity: AbilityStat?, firstPhaseDuration: AbilityStat?, secondPhaseDuration: AbilityStat?, markingTimeInSeconds: AbilityStat?, markingRadius: AbilityStat?, explosionRadius: AbilityStat?, subHp: AbilityStat?, quickSuperJumpBoost: AbilityStat?) {
+        self.weapon = weapon
+        self.inkConsumptionPercentage = inkConsumptionPercentage
+        self.whiteInkSeconds = whiteInkSeconds
+        self.velocity = velocity
+        self.firstPhaseDuration = firstPhaseDuration
+        self.secondPhaseDuration = secondPhaseDuration
+        self.markingTimeInSeconds = markingTimeInSeconds
+        self.markingRadius = markingRadius
+        self.explosionRadius = explosionRadius
+        self.subHp = subHp
+        self.quickSuperJumpBoost = quickSuperJumpBoost
+    }
 }

@@ -13,6 +13,10 @@ public struct SubDefenseStatList: View {
     /// Sub Weapon Effect statistics
     public var defenseStats: SubDefenseStats
     
+    public init(defenseStats: SubDefenseStats) {
+        self.defenseStats = defenseStats
+    }
+    
     public var body: some View {
         StatList(title: "Sub Weapon Effect Defense") {
             LazyVStack(spacing: 10) {

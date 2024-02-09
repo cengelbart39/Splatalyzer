@@ -8,7 +8,8 @@
 import Foundation
 
 extension Collection {
-    subscript (safe index: Index) -> Element? {
+    /// Accesses an element of a `Collection` safely. If `index` doesn't exist, returns `nil`.
+    public subscript (safe index: Index) -> Element? {
         return indices.contains(index) ? self[index] : nil
     }
 }

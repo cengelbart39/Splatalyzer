@@ -12,6 +12,10 @@ public struct SubStatList: View {
     
     public var subStats: SubWeaponStats
     
+    public init(subStats: SubWeaponStats) {
+        self.subStats = subStats
+    }
+    
     public var body: some View {
         StatList(title: subStats.weapon.localized, image: subStats.weapon.image) {
             LazyVStack(spacing: 10) {

@@ -19,4 +19,10 @@ public struct InkTankOption: Equatable, Identifiable {
     
     /// The remaining shots the player can take
     public let value: Double
+    
+    public init(subsFromFullInkTank: Int, type: InkConsumeType, value: Double) {
+        self.subsFromFullInkTank = subsFromFullInkTank
+        self.type = type
+        self.value = value
+    }
 }

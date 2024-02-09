@@ -32,6 +32,15 @@ public struct DamageEffectStat: Equatable, Identifiable, Hashable {
     
     /// The sub weapon this stat applies to
     public let subWeapon: SubWeapon
+    
+    public init(type: DamageType, baseValue: Double, effectValue: Double, distance: Double?, distanceArr: [Double], subWeapon: SubWeapon) {
+        self.type = type
+        self.baseValue = baseValue
+        self.effectValue = effectValue
+        self.distance = distance
+        self.distanceArr = distanceArr
+        self.subWeapon = subWeapon
+    }
 }
 
 extension Array where Element == DamageEffectStat {

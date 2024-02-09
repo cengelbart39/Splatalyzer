@@ -13,6 +13,10 @@ public struct InkTankOptionsList: View {
     /// A dictionary containing the number of subs used and the number of shots remaining
     public var options: [Int : [InkTankOption]]
     
+    public init(options: [Int : [InkTankOption]]) {
+        self.options = options
+    }
+    
     public var body: some View {
         StatList(title: "Actions Per Ink Tank") {
             LazyVStack(spacing: 10) {

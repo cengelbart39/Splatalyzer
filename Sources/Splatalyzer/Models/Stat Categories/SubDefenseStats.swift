@@ -20,4 +20,11 @@ public struct SubDefenseStats: Equatable {
     
     /// Effect on Angle Shooter tracking time
     public let angleShooterMarkedSeconds: AbilityStat
+    
+    public init(toxicMistMovementReduction: AbilityStat, pointSensorMarkedSeconds: AbilityStat, inkMineMarkedSeconds: AbilityStat, angleShooterMarkedSeconds: AbilityStat) {
+        self.toxicMistMovementReduction = toxicMistMovementReduction
+        self.pointSensorMarkedSeconds = pointSensorMarkedSeconds
+        self.inkMineMarkedSeconds = inkMineMarkedSeconds
+        self.angleShooterMarkedSeconds = angleShooterMarkedSeconds
+    }
 }

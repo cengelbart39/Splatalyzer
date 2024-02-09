@@ -71,6 +71,7 @@ public struct AbilityValues: Codable {
             dictionary[key] = hml
         }
         
+        // Sub Weapon values
         dictionary[.markingFrameSubSpec] = HighMidLow()
         dictionary[.subSpecUpParam] = HighMidLow()
         dictionary[.subVelocity] = HighMidLow()
@@ -81,6 +82,7 @@ public struct AbilityValues: Codable {
         dictionary[.subExplosionRadius] = HighMidLow()
         dictionary[.subHp] = HighMidLow()
         
+        // Special weapon values
         dictionary[.specialDurationFrame] = HighMidLow()
         dictionary[.specialDamageDistance] = HighMidLow()
         dictionary[.specialPaintRadius] = HighMidLow()

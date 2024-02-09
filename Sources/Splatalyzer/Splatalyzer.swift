@@ -7,6 +7,8 @@ import Observation
 /// Class that enables the analysis of gear builds into statistics
 public final class Splatalyzer {
 
+    public init() { }
+    
     /// Analyzes the main weapon and gear build to produce build statistics.
     /// - Parameters:
     ///   - mainWeapon: The current main weapon

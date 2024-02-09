@@ -19,6 +19,12 @@ public struct DoubleStatCard: View {
     /// Unit of the statistic
     public var unit: StatUnit
     
+    public init(title: String, value: Double? = nil, unit: StatUnit) {
+        self.title = title
+        self.value = value
+        self.unit = unit
+    }
+    
     public var body: some View {
         if let value = value {
             GroupBox(title) {

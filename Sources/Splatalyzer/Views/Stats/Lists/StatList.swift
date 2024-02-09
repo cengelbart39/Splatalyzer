@@ -28,6 +28,20 @@ public struct StatList<Content: View>: View {
     /// View content displayed within the collapsable list
     public let content: Content
     
+    #if os(macOS)
+    public init(title: String, image: NSImage?, content: Content) {
+        self.title = title
+        self.image = image
+        self.content = content
+    }
+    #else
+    public init(title: String, image: UIImage?, content: Content) {
+        self.title = title
+        self.image = image
+        self.content = content
+    }
+    #endif
+    
     /// Whether the view is collapsed
     @State public var isCollapsed = true
     

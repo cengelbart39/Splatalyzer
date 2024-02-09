@@ -13,6 +13,10 @@ public struct MainStatList: View {
     /// Main Weapon statistics
     public var mainStats: MainWeaponStats
     
+    public init(mainStats: MainWeaponStats) {
+        self.mainStats = mainStats
+    }
+    
     public var body: some View {
         StatList(title: mainStats.weapon.localized, image: mainStats.weapon.image) {
             LazyVStack(spacing: 10) {

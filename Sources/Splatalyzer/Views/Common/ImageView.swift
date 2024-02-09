@@ -14,10 +14,18 @@ struct ImageView: View {
     /// A `NSImage`
     /// - Note: Other OSes uses `UIImage` instead
     var image: NSImage?
+    
+    public init(image: NSImage? = nil) {
+        self.image = image
+    }
     #else
     /// A `UIImage`
     /// - Note: macOS uses `NSImage` instead
     var image: UIImage?
+    
+    public init(image: UIImage? = nil) {
+        self.image = image
+    }
     #endif
     
     var body: some View {

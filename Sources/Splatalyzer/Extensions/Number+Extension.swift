@@ -7,17 +7,20 @@
 
 import Foundation
 
-extension Int {
+public extension Int {
+    /// Converts a number of frames to seconds
     func framesToSeconds() -> Double {
         return (Double(self) / 60).cutToDecimalPlaces(3)
     }
 }
 
-extension Double {
+public extension Double {
+    /// Converts a number of frames to seconds
     func framesToSeconds() -> Double {
         return (self / 60).cutToDecimalPlaces(3)
     }
     
+    /// Formats Doubles to displayed in `View`s
     func format() -> String {
         if self == Double(Int(self)) {
             // If the value is an integer, just return the integer part
@@ -32,6 +35,7 @@ extension Double {
         }
     }
     
+    /// Removes decimal places after the nth place.
     func cutToDecimalPlaces(_ n: Int = 2) -> Double {
         let formatter = NumberFormatter()
         formatter.maximumFractionDigits = n
@@ -40,18 +44,22 @@ extension Double {
         return Double(truncating: NumberFormatter().number(from: str)!)
     }
     
+    /// Rounds a double and then removes decimal places after the nth place
+    /// - SeeAlso: ``cutToDecimalPlaces(_:)``
     func roundToDecimalPlaces(_ n: Double = 2) -> Double {
         return ((self * pow(10, n)).rounded() / pow(10, n)).cutToDecimalPlaces(Int(n))
     }
 }
 
-extension Optional<Int> {
+public extension Optional<Int> {
+    /// Converts a number of frames to seconds if non-`nil`.
     func framesToSeconds() -> Double? {
         if self == nil { return nil }
         
         return (Double(self!) / 60).cutToDecimalPlaces(3)
     }
     
+    /// Converts to `Optional<Double>`
     func toDouble() -> Double? {
         if let num = self {
             return Double(num)

@@ -16,6 +16,11 @@ public struct SpecialDamageList: View {
     /// The damage done by the Special Weapon
     public var specialDamage: [DamageStat]
     
+    public init(specialWeapon: SpecialWeapon, specialDamage: [DamageStat]) {
+        self.specialWeapon = specialWeapon
+        self.specialDamage = specialDamage
+    }
+    
     public var body: some View {
         let title = NSLocalizedString("\(specialWeapon.localized) Damage", bundle: Bundle.module, comment: "Refers to the damage done by the Special Weapon.")
         

@@ -14,6 +14,8 @@ public struct LDEPicker: View {
     
     @EnvironmentObject public var analyzer: SplatalyzerViewModel
     
+    public init() { }
+    
     public var body: some View {
         HStack {
             ImageView(image: Ability.lastDitchEffort.image)

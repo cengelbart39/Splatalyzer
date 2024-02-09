@@ -12,6 +12,10 @@ public struct DamageEffectStatCard: View {
     
     public var stat: DamageEffectStat
     
+    public init(stat: DamageEffectStat) {
+        self.stat = stat
+    }
+    
     public var body: some View {
         GroupBox(stat.type.localized) {
             HStack {

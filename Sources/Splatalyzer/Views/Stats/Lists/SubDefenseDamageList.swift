@@ -13,6 +13,10 @@ public struct SubDefenseDamageList: View {
     /// Dictionary of sub weapons and their damage
     public var defenseDamage: [SubWeapon : [DamageEffectStat]]
     
+    public init(defenseDamage: [SubWeapon : [DamageEffectStat]]) {
+        self.defenseDamage = defenseDamage
+    }
+    
     public var body: some View {
         StatList(title: "Sub Weapon Damage Defense") {
             let keys = Array(defenseDamage.keys).sorted(by: { $0.rawValue < $1.rawValue })
@@ -36,6 +40,11 @@ public struct SubDefenseDamageItem: View {
     
     /// The damage done by a sub weapon
     public var values: [DamageEffectStat]
+    
+    public init(key: SubWeapon, values: [DamageEffectStat]) {
+        self.key = key
+        self.values = values
+    }
     
     public var body: some View {
         StatList(title: key.localized, image: key.image) {

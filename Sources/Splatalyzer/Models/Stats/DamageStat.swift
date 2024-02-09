@@ -26,6 +26,14 @@ public struct DamageStat: Equatable, Identifiable, Hashable {
     /// The number of shots per button press
     public let multiShots: Int?
     
+    public init(type: DamageType, value: Double, distance: Double?, shotsToSplat: Double? = nil, multiShots: Int?) {
+        self.type = type
+        self.value = value
+        self.distance = distance
+        self.shotsToSplat = shotsToSplat
+        self.multiShots = multiShots
+    }
+    
     /// Formats ``multiShots`` into a String
     ///
     /// If an attack does 29 damage and there are 3 shots per button press, it will return "29 + 29 + 29"
