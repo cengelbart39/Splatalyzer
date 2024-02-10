@@ -36,3 +36,7 @@ Then add it as a dependency to your target:
     .product(name: "Splatalyzer", package: "Splatalyzer"),
 ]),
 ```
+
+## Documention
+
+The documentation on the package can be found [here](https://cengelbart39.github.io/Splatalyzer/documentation/splatalyzer).
