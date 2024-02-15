@@ -14,7 +14,7 @@ import UIKit
 import Foundation
 
 /// Represents every Special Weapon
-public enum SpecialWeapon: String, CaseIterable {
+public enum SpecialWeapon: String, CaseIterable, Codable {
     case inkVac = "SpBlower"
     case krakenRoyale = "SpCastle"
     case crabTank = "SpChariot"
@@ -38,7 +38,7 @@ public enum SpecialWeapon: String, CaseIterable {
     #if os(macOS)
     /// The image of the current special weapon
     /// - Note: OSes other than `macOS` use `UIImage` instead.
-    var image: NSImage? {
+    public var image: NSImage? {
         guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
             return nil
         }
@@ -52,7 +52,7 @@ public enum SpecialWeapon: String, CaseIterable {
     #else
     /// The image of the current special weapon
     /// - Note: `macOS` use `NSImage` instead.
-    var image: UIImage? {
+    public var image: UIImage? {
         guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
             return nil
         }

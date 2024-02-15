@@ -22,9 +22,9 @@ public struct BuildSelector: View {
             VStack {
                 Spacer()
                 
-                MainWeaponPicker(mainWeapon: $analyzer.mainWeapon)
+                MainWeaponPicker(mainWeapon: $analyzer.build.mainWeapon)
                 
-                GearBuildView(gearBuild: $analyzer.gearBuild)
+                GearBuildView(gearBuild: $analyzer.build.gear)
                 
                 LDEPicker()
                 
@@ -32,7 +32,7 @@ public struct BuildSelector: View {
                     ImageView(image: SpecialWeapon.tacticooler.image)
                         .frame(width: 60, height: 60)
                     
-                    Toggle("", isOn: $analyzer.usingTacticooler)
+                    Toggle("", isOn: $analyzer.build.usingTacticooler)
                         .labelsHidden()
                 }
                 
@@ -44,16 +44,16 @@ public struct BuildSelector: View {
         .onAppear {
             try? analyzer.analyze()
         }
-        .onChange(of: analyzer.gearBuild) { _, newValue in
+        .onChange(of: analyzer.build.gear) { _, newValue in
             try? analyzer.updateStats(for: newValue)
         }
-        .onChange(of: analyzer.mainWeapon) { _, newValue in
+        .onChange(of: analyzer.build.mainWeapon) { _, newValue in
             try? analyzer.updateStats(for: newValue)
         }
-        .onChange(of: analyzer.ldeIntensity) { _, newValue in
+        .onChange(of: analyzer.build.ldeIntensity) { _, newValue in
             try? analyzer.updateStats(for: newValue)
         }
-        .onChange(of: analyzer.usingTacticooler) { _, newValue in
+        .onChange(of: analyzer.build.usingTacticooler) { _, newValue in
             try? analyzer.updateStats(for: newValue)
         }
     }

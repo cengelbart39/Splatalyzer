@@ -8,7 +8,7 @@
 import Foundation
 
 /// Represents all stats for a``GearBuild``
-public struct BuildStats: Equatable {
+public struct BuildStats: Codable, Equatable {
     /// Statistics about the Main Weapon
     public let mainStats: MainWeaponStats
     

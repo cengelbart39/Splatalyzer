@@ -16,17 +16,12 @@ public final class Splatalyzer {
     ///   - ldeIntensity: The current LDE intensity
     ///   - usingTacticooler: Whether to consider Tacticooler effects in statistics
     /// - Throws: Can throw ``SplatalyzerError`` or ``JSONError``
-    public func analyze(
-        mainWeapon: MainWeapon,
-        gearBuild: GearBuild,
-        ldeIntensity: Int,
-        usingTacticooler: Bool
-    ) throws -> BuildStats {
-        guard gearBuild.isValid() else {
+    public func analyze(_ build: BuildOptions) throws -> BuildStats {
+        guard build.isGearValid() else {
             throw SplatalyzerError.invalidGearConfig
         }
         
-        guard ldeIntensity >= 0 && ldeIntensity <= 21 else {
+        guard build.isLDEIntensityValid() else {
             throw SplatalyzerError.invalidLDEIntensity
         }
         
@@ -37,7 +32,7 @@ public final class Splatalyzer {
         let playerParams = try service.decode(Player.self, from: "SplPlayer.game__GameParameterTable")
         
         let mainData = try self.getMainWeaponData(
-            weapon: mainWeapon,
+            weapon: build.mainWeapon,
             service: service,
             mainInfo: weaponInfoMain)
         
@@ -62,10 +57,10 @@ public final class Splatalyzer {
             mainInfo: mainData,
             allSubInfo: allSubData,
             specialInfo: specialData,
-            gearBuild: gearBuild,
+            gearBuild: build.gear,
             abilityValues: abilityValues,
-            ldeIntensity: ldeIntensity,
-            usingTacticooler: usingTacticooler)
+            ldeIntensity: build.ldeIntensity,
+            usingTacticooler: build.usingTacticooler)
         
         return stats
     }

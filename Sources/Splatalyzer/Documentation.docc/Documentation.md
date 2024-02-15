@@ -21,6 +21,7 @@ Along side this are SwiftUI views displaying this information and picking build 
 @Links(visualStyle: list) {
     - <doc:GearAbility>
     - <doc:WeaponAnalysis>
+    - <doc:Localization>
 }
 
 ### Behind the Scenes
@@ -99,6 +100,7 @@ Learn more about how the package decodes and proccesses data.
 - ``GearPiece``
 
 ### Statistics
+- ``BuildOptions``
 - ``BuildStats``
 - ``StatHelper``
 - ``MainWeaponStats``

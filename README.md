@@ -40,3 +40,9 @@ Then add it as a dependency to your target:
 ## Documention
 
 The documentation on the package can be found [here](https://cengelbart39.github.io/Splatalyzer/documentation/splatalyzer).
+
+Information about package localization can also be found here.
+
+## Disclaimer
+
+Splatoon is a trademark and copyright of Nintendo 2014-2024. Splatalyzer is not affilated with Nintendo.

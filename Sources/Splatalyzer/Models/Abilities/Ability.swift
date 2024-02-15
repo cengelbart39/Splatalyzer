@@ -263,7 +263,7 @@ public extension Ability {
 }
 
 /// The geartype an ``Ability`` or ``GearPiece`` is restricted to
-public enum AbilityRestriction {
+public enum AbilityRestriction: Codable {
     case headgearOnly
     case clothesOnly
     case shoesOnly

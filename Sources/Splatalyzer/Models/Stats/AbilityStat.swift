@@ -8,7 +8,7 @@
 import Foundation
 
 /// Contains information about a build statistic
-public struct AbilityStat: Equatable {
+public struct AbilityStat: Codable, Equatable {
     /// The default value before any abilities
     public let baseValue: Double
     
@@ -34,7 +34,7 @@ public struct AbilityStat: Equatable {
 }
 
 /// The unit of measurement used in ``AbilityStat``
-public enum StatUnit: CaseIterable {
+public enum StatUnit: Codable, CaseIterable {
     case percentage
     case seconds
     case none

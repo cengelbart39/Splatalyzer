@@ -9,7 +9,7 @@ import Foundation
 
 /// Represents a full gear build with 3 main abilities and 9 sub abilities across
 /// headgear, clothes, and shoes.
-public struct GearBuild: Equatable, Identifiable {
+public struct GearBuild: Codable, Equatable, Identifiable {
     public var id = UUID()
     public var headgear: GearPiece
     public var clothes: GearPiece
@@ -98,7 +98,7 @@ public struct GearBuild: Equatable, Identifiable {
 }
 
 /// Represents the abilities of a single gear piece; 1 main and 3 subs.
-public struct GearPiece: Equatable, Identifiable {
+public struct GearPiece: Codable, Equatable, Identifiable {
     public var id = UUID()
     public var main: Ability
     public var sub1: Ability

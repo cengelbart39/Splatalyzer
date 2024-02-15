@@ -14,7 +14,7 @@ import UIKit
 import Foundation
 
 /// Represents every Sub Weapon
-public enum SubWeapon: String, CaseIterable {
+public enum SubWeapon: String, CaseIterable, Codable {
     case squidBeakon = "Beacon"
     case curlingBomb = "Bomb_Curling"
     case fizzyBomb = "Bomb_Fizzy"
@@ -33,7 +33,7 @@ public enum SubWeapon: String, CaseIterable {
     #if os(macOS)
     /// The image of the current sub weapon
     /// - Note: OSes other than `macOS` use `UIImage` instead.
-    var image: NSImage? {
+    public var image: NSImage? {
         guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
             return nil
         }
@@ -47,7 +47,7 @@ public enum SubWeapon: String, CaseIterable {
     #else
     /// The image of the current sub weapon
     /// - Note: `macOS` use `NSImage` instead.
-    var image: UIImage? {
+    public var image: UIImage? {
         guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
             return nil
         }

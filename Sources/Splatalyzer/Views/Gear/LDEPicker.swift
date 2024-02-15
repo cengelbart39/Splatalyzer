@@ -23,7 +23,7 @@ public struct LDEPicker: View {
                 .abilityBackground()
                 .frame(width: 60, height: 60)
             
-            Picker(String(localized: "LDE Intensity", comment: "LDE = Last Ditch Error"), selection: $analyzer.ldeIntensity) {
+            Picker(String(localized: "LDE Intensity", comment: "LDE = Last Ditch Error"), selection: $analyzer.build.ldeIntensity) {
                 Text("0% (+0 AP)", comment: "LDE Intensity 0")
                     .tag(0)
                 
@@ -90,11 +90,11 @@ public struct LDEPicker: View {
                 Text("100% (+18 AP)", comment: "LDE Intensity 21")
                     .tag(21)
             }
-            .disabled(!analyzer.gearBuild.hasAbility(.lastDitchEffort))
+            .disabled(!analyzer.build.hasAbility(.lastDitchEffort))
         }
-        .onChange(of: analyzer.gearBuild.hasAbility(.lastDitchEffort)) { oldValue, newValue in
+        .onChange(of: analyzer.build.hasAbility(.lastDitchEffort)) { oldValue, newValue in
             if oldValue && !newValue {
-                analyzer.ldeIntensity = 0
+                analyzer.build.ldeIntensity = 0
             }
         }
     }

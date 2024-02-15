@@ -8,7 +8,7 @@
 import Foundation
 
 /// The way in which ink is consumed
-public enum InkConsumeType: String, CaseIterable {
+public enum InkConsumeType: String, CaseIterable, Codable {
     case normal
     case swing
     case slosh

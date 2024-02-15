@@ -8,8 +8,8 @@
 import Foundation
 
 /// Represents how many more shots a player can take after using a number of sub weapons.
-public struct InkTankOption: Equatable, Identifiable {
-    public let id = UUID()
+public struct InkTankOption: Codable, Equatable, Identifiable {
+    public var id = UUID()
     
     /// The number of subs used by the player
     public let subsFromFullInkTank: Int

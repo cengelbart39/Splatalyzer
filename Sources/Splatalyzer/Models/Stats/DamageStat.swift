@@ -8,8 +8,8 @@
 import Foundation
 
 /// Represents a statistic regarding damage done by a weapon unaffected by abilities
-public struct DamageStat: Equatable, Identifiable, Hashable {
-    public let id = UUID()
+public struct DamageStat: Codable, Equatable, Identifiable, Hashable {
+    public var id = UUID()
     
     /// The type of damage
     public let type: DamageType
