@@ -4,28 +4,6 @@
     "" : {
 
     },
-    "(specialWeapon.localized) Damage" : {
-      "comment" : "Refers to the damage done by the Special Weapon.",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "(specialWeapon.localized) Damage"
-          }
-        }
-      }
-    },
-    "%@ Damage" : {
-      "comment" : "Refers to the damage done by the Special Weapon.",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ Damage"
-          }
-        }
-      }
-    },
     "%@ Damage Distance" : {
       "comment" : "Refers to the damage done by a special weapon over some specified distance.",
       "localizations" : {
@@ -55,26 +33,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ Duration"
-          }
-        }
-      }
-    },
-    "%@ hit to splat!" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ hit to splat!"
-          }
-        }
-      }
-    },
-    "%@ hits to splat!" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ hits to splat!"
           }
         }
       }
@@ -211,344 +169,6 @@
         }
       }
     },
-    "%@-%@" : {
-      "comment" : "Represents a distance range, i.e. 4-7",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@-%2$@"
-          }
-        }
-      }
-    },
-    "%@, %@, and %@ tracking times are calculated against an oponent with 0 AP of %@." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@, %2$@, and %3$@ tracking times are calculated against an oponent with 0 AP of %4$@."
-          }
-        }
-      }
-    },
-    "%lld Sub Used" : {
-      "localizations" : {
-        "en" : {
-          "variations" : {
-            "plural" : {
-              "one" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "%lld Sub Used"
-                }
-              },
-              "other" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "%lld Subs Used"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "0% (+0 AP)" : {
-      "comment" : "LDE Intensity 0",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "0% (+0 AP)"
-          }
-        }
-      }
-    },
-    "4.76% (+0 AP)" : {
-      "comment" : "LDE Intensity 1",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "4.76% (+0 AP)"
-          }
-        }
-      }
-    },
-    "9.52% (+1 AP)" : {
-      "comment" : "LDE Intensity 2",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "9.52% (+1 AP)"
-          }
-        }
-      }
-    },
-    "14.29% (+2 AP)" : {
-      "comment" : "LDE Intensity 3",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "14.29% (+2 AP)"
-          }
-        }
-      }
-    },
-    "19.05% (+3 AP)" : {
-      "comment" : "LDE Intensity 4",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "19.05% (+3 AP)"
-          }
-        }
-      }
-    },
-    "23.81% (+4 AP)" : {
-      "comment" : "LDE Intensity 5",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "23.81% (+4 AP)"
-          }
-        }
-      }
-    },
-    "28.57% (+5 AP)" : {
-      "comment" : "LDE Intensity 6",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "28.57% (+5 AP)"
-          }
-        }
-      }
-    },
-    "33.33% (+6 AP)" : {
-      "comment" : "LDE Intensity 7",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "33.33% (+6 AP)"
-          }
-        }
-      }
-    },
-    "38.10% (+6 AP)" : {
-      "comment" : "LDE Intensity 8",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "38.10% (+6 AP)"
-          }
-        }
-      }
-    },
-    "42.86% (+7 AP)" : {
-      "comment" : "LDE Intensity 9",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "42.86% (+7 AP)"
-          }
-        }
-      }
-    },
-    "47.62% (+8 AP)" : {
-      "comment" : "LDE Intensity 10",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "47.62% (+8 AP)"
-          }
-        }
-      }
-    },
-    "52.38% (+9 AP)" : {
-      "comment" : "LDE Intensity 11",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "52.38% (+9 AP)"
-          }
-        }
-      }
-    },
-    "57.14% (+10 AP)" : {
-      "comment" : "LDE Intensity 12",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "57.14% (+10 AP)"
-          }
-        }
-      }
-    },
-    "61.90% (+11 AP)" : {
-      "comment" : "LDE Intensity 13",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "61.90% (+11 AP)"
-          }
-        }
-      }
-    },
-    "66.67% (+12 AP)" : {
-      "comment" : "LDE Intensity 14",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "66.67% (+12 AP)"
-          }
-        }
-      }
-    },
-    "71.43% (+12 AP)" : {
-      "comment" : "LDE Intensity 15",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "71.43% (+12 AP)"
-          }
-        }
-      }
-    },
-    "76.19% (+13 AP)" : {
-      "comment" : "LDE Intensity 16",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "76.19% (+13 AP)"
-          }
-        }
-      }
-    },
-    "80.95% (+14 AP)" : {
-      "comment" : "LDE Intensity 17",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "80.95% (+14 AP)"
-          }
-        }
-      }
-    },
-    "85.71% (+15 AP)" : {
-      "comment" : "LDE Intensity 18",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "85.71% (+15 AP)"
-          }
-        }
-      }
-    },
-    "90.48% (+16 AP)" : {
-      "comment" : "LDE Intensity 19",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "90.48% (+16 AP)"
-          }
-        }
-      }
-    },
-    "95.24% (+17 AP)" : {
-      "comment" : "LDE Intensity 20",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "95.24% (+17 AP)"
-          }
-        }
-      }
-    },
-    "100% (+18 AP)" : {
-      "comment" : "LDE Intensity 21",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "100% (+18 AP)"
-          }
-        }
-      }
-    },
-    "Actions Per Ink Tank" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Actions Per Ink Tank"
-          }
-        }
-      }
-    },
-    "Base" : {
-      "comment" : "Refers to a base effect before any gear abilities.",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Base"
-          }
-        }
-      }
-    },
-    "Build" : {
-      "comment" : "Refers to a gear build. Used in reference to the effect caused by gear abilities.",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Build"
-          }
-        }
-      }
-    },
-    "Canopy Durability" : {
-      "comment" : "Refers to a Brella's shield durability.",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Canopy Durability"
-          }
-        }
-      }
-    },
-    "Charge Time To Full" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Charge Time To Full"
-          }
-        }
-      }
-    },
     "Damage" : {
       "localizations" : {
         "en" : {
@@ -585,16 +205,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Durability"
-          }
-        }
-      }
-    },
-    "Effect" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Effect"
           }
         }
       }
@@ -710,17 +320,6 @@
         }
       }
     },
-    "LDE Intensity" : {
-      "comment" : "LDE = Last Ditch Error",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "LDE Intensity"
-          }
-        }
-      }
-    },
     "Light" : {
       "comment" : "Refers to main weapon weight",
       "localizations" : {
@@ -728,16 +327,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Light"
-          }
-        }
-      }
-    },
-    "Main Weapon Damage" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Main Weapon Damage"
           }
         }
       }
@@ -762,16 +351,6 @@
         }
       }
     },
-    "Max Charge Hold Time" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Max Charge Hold Time"
-          }
-        }
-      }
-    },
     "Max Damage from Enemy Ink" : {
       "localizations" : {
         "en" : {
@@ -788,36 +367,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mid-Phase Duration"
-          }
-        }
-      }
-    },
-    "Miscellaneous" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Miscellaneous"
-          }
-        }
-      }
-    },
-    "Movement" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Movement"
-          }
-        }
-      }
-    },
-    "No Ink Recovery Time After Usage" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No Ink Recovery Time After Usage"
           }
         }
       }
@@ -904,32 +453,12 @@
         }
       }
     },
-    "Secondary Mode Spread on the Ground" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Secondary Mode Spread on the Ground"
-          }
-        }
-      }
-    },
     "Secondary Mode Spread While Jumping" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Secondary Mode Spread While Jumping"
-          }
-        }
-      }
-    },
-    "Shot Spread on the Ground" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shot Spread on the Ground"
           }
         }
       }
@@ -991,26 +520,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Squid Surge Charge To Full"
-          }
-        }
-      }
-    },
-    "Sub Weapon Damage Defense" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sub Weapon Damage Defense"
-          }
-        }
-      }
-    },
-    "Sub Weapon Effect Defense" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sub Weapon Effect Defense"
           }
         }
       }

@@ -21,7 +21,7 @@ public enum InkConsumeType: String, CaseIterable, Codable {
     case dualieRoll
     
     /// Localized version of raw value
-    var localized: String {
+    public var localized: String {
         return NSLocalizedString(self.rawValue, tableName: "InkConsumeType", bundle: Bundle.module, comment: "")
     }
 }

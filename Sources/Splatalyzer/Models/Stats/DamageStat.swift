@@ -58,7 +58,7 @@ public struct DamageStat: Codable, Equatable, Identifiable, Hashable {
     }
 }
 
-extension Array where Element == DamageStat {
+public extension Array where Element == DamageStat {
     /// Sums of the damage across an array
     func sumValue() -> Double {
         var result = Double()

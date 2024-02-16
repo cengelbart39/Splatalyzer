@@ -14,8 +14,6 @@ Gear building and analyzing for Splatoon 3.
 
 Splatalyzer is a Swift package that enables the analysis of Splatoon 3 builds. It also provides structures representing main weapons, sub weapons, special weapons, gear builds, abilities and more. 
 
-Along side this are SwiftUI views displaying this information and picking build characteristics.
-
 ### Essential
 
 @Links(visualStyle: list) {
@@ -37,47 +35,9 @@ Learn more about how the package decodes and proccesses data.
 
 ### Analysis
 - ``Splatalyzer/Splatalyzer``
-- ``SplatalyzerViewModel``
 - ``SplatalyzerError``
 - ``JSONService``
 - ``JSONError``
-
-
-### Ability & Gear Views
-- ``BuildSelector``
-- ``MainWeaponPicker``
-- ``GearBuildView``
-- ``GearPieceView``
-- ``AbilityView``
-- ``AbilityKeyboardView``
-- ``LDEPicker``
-
-### Stat Views
-- ``StatViewVertical``
-- ``StatViewSideBySide``
-- ``BuildStatsView``
-
-### Stat List Views
-- ``StatList``
-- ``MainStatList``
-- ``SubStatList``
-- ``SpecialStatList``
-- ``SubDefenseStatList``
-- ``MovementStatList``
-- ``MiscStatList``
-- ``InkTankOptionsList``
-- ``MainDamageList``
-- ``SpecialDamageList``
-- ``SubDefenseDamageList``
-- ``SubDefenseDamageItem``
-
-### Stat Card Views
-- ``AbilityStatCard``
-- ``DamageStatCard``
-- ``DamageEffectStatCard``
-- ``DoubleStatCard``
-- ``InkTankOptionStatCard``
-- ``StringStatCard``
 
 ### Weapons
 - ``MainWeapon``

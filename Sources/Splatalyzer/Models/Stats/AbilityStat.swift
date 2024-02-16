@@ -48,7 +48,7 @@ public enum StatUnit: Codable, CaseIterable {
     case distance
     case ap
     
-    var symbol: String {
+    public var symbol: String {
         switch self {
         case .percentage:
             return "%"

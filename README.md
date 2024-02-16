@@ -5,7 +5,7 @@
 
 Splatalyzer is a Swift package that enables the analysis of Splatoon 3 builds. It also provides structures representing main weapons, sub weapons, special weapons, gear builds, abilities and more. 
 
-Along side this are SwiftUI views displaying this information and picking build characteristics.
+Splatalyzer includes a companion package, SplatalyzerUI, that contains SwiftUI views for displaying weapon kits, gear builds, abilities, and build statistics.
 
 The package works locally, relying on resources included within the package.
 
@@ -20,6 +20,8 @@ Within a Xcode project, go to File > Add Package Dependecies and search for:
 ```text
 https://github.com/cengelbart39/Splatalyzer.git
 ```
+
+Then chose Splatalyzer or SplatalyzerUI.
 
 ### Swift Package
 
@@ -37,9 +39,17 @@ Then add it as a dependency to your target:
 ]),
 ```
 
+or 
+
+```swift
+.target(name: "<target>", dependencies: [
+    .product(name: "SplatalyzerUI", package: "SplatalyzerUI"),
+]),
+```
+
 ## Documention
 
-The documentation on the package can be found [here](https://cengelbart39.github.io/Splatalyzer/documentation/splatalyzer).
+The documentation on Splatalyzer can be found [here](https://cengelbart39.github.io/Splatalyzer/documentation/splatalyzer).
 
 Information about package localization can also be found here.
 

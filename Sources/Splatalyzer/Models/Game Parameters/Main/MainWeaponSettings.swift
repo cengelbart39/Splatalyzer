@@ -46,7 +46,7 @@ public enum WeaponSpeedType: String, Codable {
     case mid = "Mid"
     case fast = "Fast"
     
-    var display: String {
+    public var display: String {
         switch self {
         case .slow:
             return String(localized: "Heavy", comment: "Refers to main weapon weight")

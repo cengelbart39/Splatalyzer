@@ -53,7 +53,7 @@ public enum DamageType: String, CaseIterable, Codable {
     case secondaryModeMin
     
     /// The weapon type that the damage is performed by
-    var weaponType: DamageWeaponType {
+    public var weaponType: DamageWeaponType {
         switch self {
         case .bombDirect, .bombNormal:
             return .sub
@@ -67,14 +67,14 @@ public enum DamageType: String, CaseIterable, Codable {
     }
     
     /// The localized version of the raw value
-    var localized: String {
+    public var localized: String {
         return NSLocalizedString(self.rawValue, tableName: "DamageType", bundle: Bundle.module, comment: "")
     }
 }
 
 /// The type of weapon that can perform certain damage
 /// - SeeAlso: ``DamageType`` for a use of `DamageWepaonType`
-enum DamageWeaponType {
+public enum DamageWeaponType {
     case main
     case sub
     case special
