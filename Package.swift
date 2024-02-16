@@ -9,7 +9,11 @@ let package = Package(
     products: [
         .library(
             name: "Splatalyzer",
-            targets: ["Splatalyzer", "SplatalyzerUI"]),
+            targets: ["Splatalyzer"]),
+        
+        .library(
+            name: "SplatalyzerUI",
+            targets: ["SplatalyzerUI"]),
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
