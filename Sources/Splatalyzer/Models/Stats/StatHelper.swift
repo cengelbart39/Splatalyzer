@@ -1027,7 +1027,7 @@ public struct StatHelper {
             modifiedBy: [sru],
             value: (subEffect.baseEffect * mainEffect.effect).framesToSeconds(),
             unit: .seconds,
-            title: String(localized: "\(subInfo.id.rawValue) Tracking Time", comment: "Refers to the marking seconds of the Angle Shooter, Point Sensor sub, or the build's sub weapon.")
+            title: String(localized: "\(subInfo.id.localized) Tracking Time", comment: "Refers to the marking seconds of the Angle Shooter, Point Sensor sub, or the build's sub weapon.")
         )
     }
     
@@ -1065,7 +1065,7 @@ public struct StatHelper {
             modifiedBy: [sru],
             value: (subEffect.baseEffect * mainEffect.effect).framesToSeconds(),
             unit: .seconds,
-            title: String(localized: "\(inkMine.id.rawValue) Tracking Seconds", comment: "Refers to the tracking time of the Ink Mien sub.")
+            title: String(localized: "\(inkMine.id.localized) Tracking Seconds", comment: "Refers to the tracking time of the Ink Mien sub.")
         )
     }
     
@@ -1095,7 +1095,7 @@ public struct StatHelper {
             modifiedBy: [sru],
             value: (apEffect.effect * 100).roundToDecimalPlaces(),
             unit: .percentage,
-            title: String(localized: "\(SubWeapon.toxicMist.rawValue) Movement Reduction", comment: "Refers to the movement reduction effect of Toxic Mist.")
+            title: String(localized: "\(SubWeapon.toxicMist.localized) Movement Reduction", comment: "Refers to the movement reduction effect of Toxic Mist.")
         )
     }
     
@@ -1403,7 +1403,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: apEffect.effect.framesToSeconds(),
             unit: .seconds,
-            title: String(localized: "\(specialInfo.id.rawValue) Duration", comment: "Refers to the duration of certain special weapons.")
+            title: String(localized: "\(specialInfo.id.localized) Duration", comment: "Refers to the duration of certain special weapons.")
         )
     }
     
@@ -1438,7 +1438,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: apEffect.effect.roundToDecimalPlaces(4),
             unit: .damage,
-            title: String(localized: "\(specialInfo.id.rawValue) Damage Distance", comment: "Refers to the damage done by a special weapon over some specified distance.")
+            title: String(localized: "\(specialInfo.id.localized) Damage Distance", comment: "Refers to the damage done by a special weapon over some specified distance.")
         )
     }
     
@@ -1473,7 +1473,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: apEffect.effect.roundToDecimalPlaces(4),
             unit: .radius,
-            title: String(localized: "\(specialInfo.id.rawValue) Paint Radius", comment: "Refers to the painting radius of certain specials.")
+            title: String(localized: "\(specialInfo.id.localized) Paint Radius", comment: "Refers to the painting radius of certain specials.")
         )
     }
     
@@ -1508,7 +1508,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: round(apEffect.effect / 10),
             unit: .hp,
-            title: String(localized: "\(specialInfo.id.rawValue) Shield Durability", comment: "Refers to the durability of the Big Bubbler shield.")
+            title: String(localized: "\(specialInfo.id.localized) Shield Durability", comment: "Refers to the durability of the Big Bubbler shield.")
         )
     }
     
@@ -1543,7 +1543,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: round(apEffect.effect / 10),
             unit: .hp,
-            title: String(localized: "\(specialInfo.id.rawValue) Device Durability", comment: "Refers to the durability of the Big Bubbler device.")
+            title: String(localized: "\(specialInfo.id.localized) Device Durability", comment: "Refers to the durability of the Big Bubbler device.")
         )
     }
     
@@ -1580,7 +1580,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: ((apEffect.effect * 100) / zipcasterInkTankSize).roundToDecimalPlaces(),
             unit: .percentage,
-            title: String(localized: "\(specialInfo.id.rawValue) Hook Ink Consumption", comment: "Refers to the ink consumption of the Zipcaster hook.")
+            title: String(localized: "\(specialInfo.id.localized) Hook Ink Consumption", comment: "Refers to the ink consumption of the Zipcaster hook.")
         )
     }
     
@@ -1617,7 +1617,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: ((apEffect.effect * 100) / zipcasterInkTankSize).roundToDecimalPlaces(),
             unit: .percentage,
-            title: String(localized: "\(specialInfo.id.rawValue) Hook Ink Consumption Per Second", comment: "Refers to the ink consumption of the Zipcaster special while idling.")
+            title: String(localized: "\(specialInfo.id.localized) Hook Ink Consumption Per Second", comment: "Refers to the ink consumption of the Zipcaster special while idling.")
         )
     }
     
@@ -1652,7 +1652,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: apEffect.effect.roundToDecimalPlaces(),
             unit: .radius,
-            title: String(localized: "\(specialInfo.id.rawValue) Reticle Radius", comment: "Refers to the reticle radius of the Tenta Missile special.")
+            title: String(localized: "\(specialInfo.id.localized) Reticle Radius", comment: "Refers to the reticle radius of the Tenta Missile special.")
         )
     }
     
@@ -1687,7 +1687,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: apEffect.effect.roundToDecimalPlaces(),
             unit: .distance,
-            title: String(localized: "\(specialInfo.id.rawValue) Throw Distance", comment: "Refers to the throwing distance of the Splattercolor Screen special.")
+            title: String(localized: "\(specialInfo.id.localized) Throw Distance", comment: "Refers to the throwing distance of the Splattercolor Screen special.")
         )
     }
     
@@ -1722,7 +1722,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: apEffect.effect.roundToDecimalPlaces(4),
             unit: .unitsPerFrame,
-            title: String(localized: "\(specialInfo.id.rawValue) Movement Speed", comment: "Refers to the player's movement speed while using certain specials.")
+            title: String(localized: "\(specialInfo.id.localized) Movement Speed", comment: "Refers to the player's movement speed while using certain specials.")
         )
     }
     
@@ -1792,7 +1792,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: apEffect.effect.roundToDecimalPlaces(),
             unit: .radius,
-            title: String(localized: "\(specialInfo.id.rawValue) Max Radius", comment: "Refers to the maximum radius of the Big Bubbler or Wave Breaker special.")
+            title: String(localized: "\(specialInfo.id.localized) Max Radius", comment: "Refers to the maximum radius of the Big Bubbler or Wave Breaker special.")
         )
     }
     
@@ -1835,7 +1835,7 @@ public struct StatHelper {
             modifiedBy: [spu],
             value: minEffect.effect.roundToDecimalPlaces() - maxEffect.effect.roundToDecimalPlaces(),
             unit: .radius,
-            title: String(localized: "\(specialInfo.id.rawValue) Radius Range", comment: "Refers to the maximum and minimum radius of the certain specials.")
+            title: String(localized: "\(specialInfo.id.localized) Radius Range", comment: "Refers to the maximum and minimum radius of the certain specials.")
         )
     }
     
@@ -1889,12 +1889,22 @@ public struct StatHelper {
         
         let hml = values.dictionary[value]
         
-        let effect =  HighMidLow(
-            high: overwrites?.high ?? hml?.high ?? 0.0,
-            mid: overwrites?.mid ?? hml?.mid ?? 0.0,
-            low: overwrites?.low ?? hml?.low ?? 0.0)
-        
-        return effect
+        if overwrites?.high == -1 && overwrites?.mid == -1 && overwrites?.low == -1 {
+            
+            let effect =  HighMidLow(
+                high: hml?.high ?? 0.0,
+                mid: hml?.mid ?? 0.0,
+                low: hml?.low ?? 0.0)
+            
+            return effect
+        } else {
+            let effect =  HighMidLow(
+                high: overwrites?.high ?? hml?.high ?? 0.0,
+                mid: overwrites?.mid ?? hml?.mid ?? 0.0,
+                low: overwrites?.low ?? hml?.low ?? 0.0)
+            
+            return effect
+        }
     }
     
     public static func lerpN(_ x: Double, _ y: Double) -> Double {

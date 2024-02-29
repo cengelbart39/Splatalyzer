@@ -26,3 +26,21 @@ public struct InkTankOption: Codable, Equatable, Identifiable {
         self.value = value
     }
 }
+
+public extension Array where Element == InkTankOption {
+    func containsType(_ type: InkConsumeType) -> Bool {
+        return self.contains(where: { $0.type == type })
+    }
+}
+
+public extension Dictionary where Key == Int, Value == [InkTankOption] {
+    func contains(type: InkConsumeType) -> Bool {
+        for (_, values) in self {
+            if values.contains(where: { $0.type == type }) {
+                return true
+            }
+        }
+        
+        return false
+    }
+}

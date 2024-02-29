@@ -266,15 +266,15 @@ public enum MainRowId: String, CaseIterable, Codable {
     case splooshomaticCoop = "Shooter_Short_Coop"
     case splooshomaticMsn = "Shooter_Short_Msn"
     
-    case l3Nozzlenose = "Shooter_TripleMiddle_00"
-    case l3NozzlenoseD = "Shooter_TripleMiddle_01"
-    case l3NozzlenoseCoop = "Shooter_TripleMiddle_Coop"
-    case l3NozzlenoseMsn = "Shooter_TripleMiddle_Msn"
+    case h3Nozzlenose = "Shooter_TripleMiddle_00"
+    case h3NozzlenoseD = "Shooter_TripleMiddle_01"
+    case h3NozzlenoseCoop = "Shooter_TripleMiddle_Coop"
+    case h3NozzlenoseMsn = "Shooter_TripleMiddle_Msn"
     
-    case h3Nozzlenose = "Shooter_TripleQuick_00"
-    case h3NozzlenoseD = "Shooter_TripleQuick_01"
-    case h3NozzlenoseCoop = "Shooter_TripleQuick_Coop"
-    case h3NozzlenoseMsn = "Shooter_TripleQuick_Msn"
+    case l3Nozzlenose = "Shooter_TripleQuick_00"
+    case l3NozzlenoseD = "Shooter_TripleQuick_01"
+    case l3NozzlenoseCoop = "Shooter_TripleQuick_Coop"
+    case l3NozzlenoseMsn = "Shooter_TripleQuick_Msn"
     
     // MARK: Slosher
     case bloblobber = "Slosher_Bathtub_00"

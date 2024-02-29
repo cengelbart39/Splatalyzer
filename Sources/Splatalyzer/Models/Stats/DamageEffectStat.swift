@@ -80,4 +80,8 @@ extension Array where Element == DamageEffectStat {
         
         return result
     }
+    
+    func contains(type: DamageType) -> Bool {
+        return self.contains(where: { $0.type == type })
+    }
 }

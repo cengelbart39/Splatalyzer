@@ -719,11 +719,11 @@ public struct MainWeaponData: WeaponDatable {
         self.damageValueDirect = damageDirect
         self.damageValueDirectMax = damageDirect == nil ? damageDirectMax : nil
         self.damageValueDirectMin = damageDirect == nil ? damageDirectMin : nil
-        self.damageSecondaryValueDirectMax = isDreadWringer ? nil : gameParams.unitGroupParam.unit[1].damageParam.valueMax
-        self.damageSecondaryValueDirectMin = isDreadWringer ? nil : gameParams.unitGroupParam.unit[1].damageParam.valueMin
+        self.damageSecondaryValueDirectMax = isDreadWringer ? nil : gameParams.unitGroupParam.unit[safe: 1]?.damageParam.valueMax
+        self.damageSecondaryValueDirectMin = isDreadWringer ? nil : gameParams.unitGroupParam.unit[safe: 1]?.damageParam.valueMin
         self.damageLapOverValueMax = nil
         self.damageLapOverValueMin = nil
-        self.blastSplashDamage = isSloshingMachine ? gameParams.unitGroupParam.unit[1].damageParam.valueMax : nil
+        self.blastSplashDamage = isSloshingMachine ? gameParams.unitGroupParam.unit[safe: 1]?.damageParam.valueMax : nil
         self.blastDamageDistance = gameParams.blastParam?.blastParam.distanceDamage ?? []
         self.damageValueFullCharge = nil
         self.damageValueFullChargeMax = nil

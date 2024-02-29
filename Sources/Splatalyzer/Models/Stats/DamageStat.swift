@@ -90,4 +90,8 @@ public extension Array where Element == DamageStat {
             return self
         }
     }
+    
+    func contains(type: DamageType) -> Bool {
+        return self.contains(where: { $0.type == type })
+    }
 }

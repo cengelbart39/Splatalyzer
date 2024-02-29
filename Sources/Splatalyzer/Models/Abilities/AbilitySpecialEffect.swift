@@ -10,7 +10,7 @@ import Foundation
 /// Represents the AP provided by certain abilities, that provide AP from multiple other abilities.
 ///
 /// For example, the Drop Roller ability provides AP of Swim Speed Up, Run Speed Up, and Ink Resistance Up.
-public enum AbilitySpecialEffect {
+public enum AbilitySpecialEffect: Equatable {
     /// The effect provided by `Ability.dropRoller`
     case dropRoller
     

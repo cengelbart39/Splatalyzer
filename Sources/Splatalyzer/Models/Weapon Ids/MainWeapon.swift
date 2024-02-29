@@ -109,7 +109,7 @@ public enum MainWeapon: String, CaseIterable, Codable, Identifiable {
     case customJetSquelcher = "Shooter_Long_01"
     case splattershot = "Shooter_Normal_00"
     case tentatekSplattershot = "Shooter_Normal_01"
-    case heroShot = "Shooter_Normal_H"
+    case heroShotReplica = "Shooter_Normal_H"
     case splashomatic = "Shooter_Precision_00"
     case neoSplashomatic = "Shooter_Precision_01"
     case splattershotNova = "Shooter_QuickLong_00"
@@ -118,10 +118,10 @@ public enum MainWeapon: String, CaseIterable, Codable, Identifiable {
     case nzap89 = "Shooter_QuickMiddle_01"
     case splooshomatic = "Shooter_Short_00"
     case neoSplooshomatic = "Shooter_Short_01"
-    case l3Nozzlenose = "Shooter_TripleMiddle_00"
-    case l3NozzlenoseD = "Shooter_TripleMiddle_01"
-    case h3Nozzlenose = "Shooter_TripleQuick_00"
-    case h3NozzlenoseD = "Shooter_TripleQuick_01"
+    case h3Nozzlenose = "Shooter_TripleMiddle_00"
+    case h3NozzlenoseD = "Shooter_TripleMiddle_01"
+    case l3Nozzlenose = "Shooter_TripleQuick_00"
+    case l3NozzlenoseD = "Shooter_TripleQuick_01"
     
     // MARK: Sloshers
     case bloblobber = "Slosher_Bathtub_00"
@@ -176,7 +176,7 @@ public enum MainWeapon: String, CaseIterable, Codable, Identifiable {
         case .undercoverBrella, .undercoverSorellaBrella, .splatBrella, .sorellaBrella, .tentaBrella, .tentaSorellaBrella:
             return .brella
             
-        case .aerosprayMG, .aerosprayRG, .splattershotPro, .forgeSplattershotPro, .splattershotJr, .customSplattershotJr, .squeezer, .foilSqueezer, .gal52, .gal96, .gal96Deco, .jetSquelcher, .customJetSquelcher, .splattershot, .tentatekSplattershot, .heroShot, .splashomatic, .neoSplashomatic, .splattershotNova, .annakiSplattershotNova, .nzap85, .nzap89, .splooshomatic, .neoSplooshomatic, .l3Nozzlenose, .l3NozzlenoseD, .h3Nozzlenose, .h3NozzlenoseD:
+        case .aerosprayMG, .aerosprayRG, .splattershotPro, .forgeSplattershotPro, .splattershotJr, .customSplattershotJr, .squeezer, .foilSqueezer, .gal52, .gal96, .gal96Deco, .jetSquelcher, .customJetSquelcher, .splattershot, .tentatekSplattershot, .heroShotReplica, .splashomatic, .neoSplashomatic, .splattershotNova, .annakiSplattershotNova, .nzap85, .nzap89, .splooshomatic, .neoSplooshomatic, .l3Nozzlenose, .l3NozzlenoseD, .h3Nozzlenose, .h3NozzlenoseD:
             return .shooter
             
         case .bloblobber, .bloblobberDeco, .triSlosher, .triSlosherNouveau, .dreadWringer, .sloshingMachine, .sloshingMachineNeo, .slosher, .slosherDeco, .explosher:

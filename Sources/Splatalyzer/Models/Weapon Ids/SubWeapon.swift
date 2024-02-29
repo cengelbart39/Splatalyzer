@@ -15,20 +15,20 @@ import Foundation
 
 /// Represents every Sub Weapon
 public enum SubWeapon: String, CaseIterable, Codable {
-    case squidBeakon = "Beacon"
+    case angleShooter = "LineMarker"
+    case autobomb = "Bomb_Robot"
+    case burstBomb = "Bomb_Quick"
     case curlingBomb = "Bomb_Curling"
     case fizzyBomb = "Bomb_Fizzy"
-    case burstBomb = "Bomb_Quick"
-    case autobomb = "Bomb_Robot"
+    case inkMine = "Trap"
+    case pointSensor = "PointSensor"
+    case splashWall = "Shield"
     case splatBomb = "Bomb_Splash"
+    case squidBeakon = "Beacon"
+    case sprinkler = "Sprinkler"
     case suctionBomb = "Bomb_Suction"
     case torpedo = "Bomb_Torpedo"
-    case angleShooter = "LineMarker"
-    case pointSensor = "PointSensor"
     case toxicMist = "PoisonMist"
-    case splashWall = "Shield"
-    case sprinkler = "Sprinkler"
-    case inkMine = "Trap"
     
     #if os(macOS)
     /// The image of the current sub weapon

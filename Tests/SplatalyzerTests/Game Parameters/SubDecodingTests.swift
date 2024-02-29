@@ -66,7 +66,6 @@ final class SubDecodingTests: XCTestCase {
         let fileName = "WeaponBeacon.game__GameParameterTable"
         XCTAssertNoThrow(try service.decode(SquidBeakon.self, from: fileName))
     }
-
     
     func test_SuctionBomb_decode_noThrows() {
         let fileName = "WeaponBombSuction.game__GameParameterTable"

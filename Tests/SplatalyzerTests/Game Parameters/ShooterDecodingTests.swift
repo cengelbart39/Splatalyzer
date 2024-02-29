@@ -28,7 +28,7 @@ final class ShooterDecodingTests: XCTestCase {
     }
     
     func test_H3Nozzlenose_decode_noThrows() {
-        let fileName = "WeaponShooterTripleQuick.game__GameParameterTable"
+        let fileName = "WeaponShooterTripleMiddle.game__GameParameterTable"
         XCTAssertNoThrow(try service.decode(Shooter.self, from: fileName))
     }
     
@@ -38,7 +38,7 @@ final class ShooterDecodingTests: XCTestCase {
     }
     
     func test_L3Nozzlenose_decode_noThrows() {
-        let fileName = "WeaponShooterTripleMiddle.game__GameParameterTable"
+        let fileName = "WeaponShooterTripleQuick.game__GameParameterTable"
         XCTAssertNoThrow(try service.decode(Shooter.self, from: fileName))
     }
     

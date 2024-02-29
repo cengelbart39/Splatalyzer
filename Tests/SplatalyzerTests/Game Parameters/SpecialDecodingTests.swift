@@ -117,8 +117,6 @@ final class SpecialDecodingTests: XCTestCase {
         XCTAssertNoThrow(try service.decode(WaveBreaker.self, from: fileName))
     }
     
-
-    
     func test_Zipcaster_decode_noThrows() {
         let fileName = "WeaponSpSuperHook.game__GameParameterTable"
         XCTAssertNoThrow(try service.decode(Zipcaster.self, from: fileName))
