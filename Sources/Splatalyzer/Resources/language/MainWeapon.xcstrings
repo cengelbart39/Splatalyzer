@@ -1080,6 +1080,89 @@
         }
       }
     },
+    "Blaster_Short_O" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ordnung-Blaster Replik"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Order Blaster Replica"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lanzamotas orden réplica"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Devastador orden (réplica)"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blasteur d'Ordre (réplique)"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blaster d'Ordre (réplique)"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blaster Ordine replica"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オーダーブラスター レプリカ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오더 블래스터 레플리카"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ordeblaster (replica)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бластер Порядка (клон)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "秩序爆破枪 复制"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "秩序爆破槍 複製"
+          }
+        }
+      }
+    },
     "Brush_Heavy_00" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1578,6 +1661,89 @@
         }
       }
     },
+    "Brush_Normal_O" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ordnung-Kalligraf Replik"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Orderbrush Replica"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pincel caligrafía orden réplica"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brocha orden (réplica)"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pinceau d'Ordre (réplique)"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pinceau d'Ordre (réplique)"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pennello Ordine replica"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オーダーブラシ レプリカ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오더 브러시 레플리카"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ordekwast (replica)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Кисть Порядка (клон)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "秩序排刷 复制"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "秩序排刷 複製"
+          }
+        }
+      }
+    },
     "Charger_Keeper_00" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1910,6 +2076,89 @@
         }
       }
     },
+    "Charger_Long_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-liter 4K SE"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Custom E-liter 4K"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entintador 4K adaptado"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entintador 4K SP"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "X-traceur + modifié"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extraceur + modifié"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tinter con mirino 4K CM"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "リッター4Kカスタム"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "커스텀 리터 4K"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gemodde E-liter 4K"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Э-литр 95 «Понт»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "公升4K 改装"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "公升4K 改裝"
+          }
+        }
+      }
+    },
     "Charger_LongScope_00" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1989,6 +2238,89 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "4K準星槍"
+          }
+        }
+      }
+    },
+    "Charger_LongScope_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ziel-E-liter 4K SE"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Custom E-liter 4K Scope"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Telentintador 4K adaptado"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Telentintador 4K SP"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "X-traceur + zoom modifié"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extraceur + zoom modifié"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tinter a carica 4K CM"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4Kスコープカスタム"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "커스텀 4K 스코프"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gemodde E-liter 4K met vizier"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Снайп-э-литр 95 «Понт»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4K准星枪 改装"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4K準星槍 改裝"
           }
         }
       }
@@ -2155,6 +2487,89 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "斯普拉蓄力狙擊槍 聯名"
+          }
+        }
+      }
+    },
+    "Charger_Normal_O" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ordnung-Konzentrator Replik"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Order Charger Replica"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cargatintas orden réplica"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cargatintas orden (réplica)"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fusil d'Ordre (réplique)"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fusil d'Ordre (réplique)"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splatter Ordine replica"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オーダーチャージャー レプリカ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오더 차저 레플리카"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ordelader (replica)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сплатган Порядка (клон)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "秩序蓄力狙击枪 复制"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "秩序蓄力狙擊槍 複製"
           }
         }
       }
@@ -2574,6 +2989,89 @@
         }
       }
     },
+    "Charger_Quick_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sepiator β"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New Squiffer"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delineador Y"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalarrapid β"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lignizateur bêta"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Décap'express Bêta"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalamarapid β"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スクイックリンβ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스퀵 클린 β"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Octopoets Ultra"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Стиратель-II"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "鱿快洁β"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "魷快潔β"
+          }
+        }
+      }
+    },
     "Maneuver_Dual_00" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -2823,6 +3321,172 @@
         }
       }
     },
+    "Maneuver_Gallon_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kelvin 525 Deko"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Glooga Dualies Deco"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fundidora 525 dual chic"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fundidora 525 dual DX"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double Kelvin 525 chic"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double Kelvin 525 chic"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kelvin duplo 525 DX"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ケルビン525デコ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "켈빈 525 데코"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kelvin 525 Deco"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Термоплюхи 525 «Деко»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开尔文525 装饰"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開爾文525 裝飾"
+          }
+        }
+      }
+    },
+    "Maneuver_Long_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lösch-Doppler FW"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Douser Dualies FF"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extintor dual FF"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Extintor Dual FF"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double ignifugeur"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double ignifugeur"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Repolper estintori FF"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ガエンFF"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "소방 FF"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blusknallers BW"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Краскотушители 255"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "灭熄FF"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "滅熄FF"
+          }
+        }
+      }
+    },
     "Maneuver_Normal_00" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -2985,6 +3649,89 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "斯普拉機動槍 聯名"
+          }
+        }
+      }
+    },
+    "Maneuver_Normal_O" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ordnung-Doppler Replik"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Order Dualie Replicas"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Difusor dual orden réplica"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Difusor dual orden (réplica)"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arme double d'Ordre (réplique)"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arme double d'Ordre (réplique)"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Repolper Ordine replica"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オーダーマニューバー レプリカ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오더 머누버 레플리카"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ordeknallers (replica)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Спуртометы Порядка (кл.)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "秩序机动枪 复制"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "秩序機動槍 複製"
           }
         }
       }
@@ -3736,6 +4483,89 @@
         }
       }
     },
+    "Roller_Hunter_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flex-Roller Fol"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foil Flingza Roller"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rodillo versátil Foil"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rodillo versátil B"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flexi-rouleau aluminium"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flexi-rouleau alu"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flexi-rullo B"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ダイナモローラーテスラ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "포일 베리어블 롤러"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foil Flexroller"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Омнивалик «Блеск»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电动马达滚筒 高磁波"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "可變式滾筒 金屬箔"
+          }
+        }
+      }
+    },
     "Roller_Normal_00" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -3898,6 +4728,89 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "斯普拉滾筒 聯名"
+          }
+        }
+      }
+    },
+    "Roller_Normal_O" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ordnung-Roller Replik"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Order Roller Replica"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rodillo orden réplica"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rodillo orden (réplica)"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rouleau d'Ordre (réplique)"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rouleau d'Ordre (réplique)"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rullo Ordine replica"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オーダーローラー レプリカ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오더 롤러 레플리카"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Orderoller (replica)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Валик Порядка (клон)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "秩序滚筒 复制"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "秩序滾筒 複製"
           }
         }
       }
@@ -4323,19 +5236,19 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Stempel-Splatana Neo"
+            "value" : "Stempel-Splatana Fresco"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Neo Splatana Stamper"
+            "value" : "Splatana Stamper Nouveau"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Azotintador Pro neo"
+            "value" : "Azotintador Pro maestro"
           }
         },
         "es-ES" : {
@@ -4347,19 +5260,19 @@
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Éclatana d'estampe néo"
+            "value" : "Éclatana d'estampe nuancé"
           }
         },
         "fr-FR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Éclatana d'estampe Néo"
+            "value" : "Éclatana d'estampe nuancé"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Splattalama Neo"
+            "value" : "Splattalama master"
           }
         },
         "ja" : {
@@ -4377,13 +5290,13 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Stempelzwieper Neo"
+            "value" : "Stempelzwieper Nouveau"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Сплат-печатель «Нео»"
+            "value" : "Сплат-печатель «НуВо»"
           }
         },
         "zh-Hans" : {
@@ -4396,6 +5309,89 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "工作刮水刀‧新藝術"
+          }
+        }
+      }
+    },
+    "Saber_Normal_O" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ordnung-Splatana Replik"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Order Splatana Replica"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Azotintador orden réplica"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Azotintador orden (réplica)"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Éclatana d'Ordre (réplique)"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Éclatana d'Ordre (réplique)"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lama Ordine replica"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オーダーワイパー レプリカ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오더 와이퍼 레플리카"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ordezwieper (replica)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сплат-катана Порядка (кл.)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "秩序刮水刀 复制"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "秩序刮水刀 複製"
           }
         }
       }
@@ -4566,6 +5562,89 @@
         }
       }
     },
+    "Shelter_Focus_00" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bast-Pluviator 24-A"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recycled Brella 24 Mk I"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prototintas 24-I"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prototintas 24-I"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para-encre Ré-gen 24 Mk I"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para-encre Ré-gen 24 Mk I"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sparasole riciclo 24-I"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "24式張替傘・甲"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "24식 도돌이 우산 갑"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Protoplenzer 24-I"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ребут-зонтган М-1"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "24式可替换伞·甲"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "24式可替換傘‧甲"
+          }
+        }
+      }
+    },
     "Shelter_Normal_00" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -4728,6 +5807,89 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "遮陽防空傘 姐妹"
+          }
+        }
+      }
+    },
+    "Shelter_Normal_O" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ordnung-Pluviator Replik"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Order Brella Replica"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paratintas orden réplica"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paratintas orden (réplica)"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para-encre d'Ordre (réplique)"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para-encre d'Ordre (réplique)"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sparasole Ordine replica"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オーダーシェルター レプリカ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오더 셸터 레플리카"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ordeplenzer (replica)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Зонтган Порядка (клон)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "秩序防空伞 复制"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "秩序防空傘 複製"
           }
         }
       }
@@ -5645,6 +6807,89 @@
         }
       }
     },
+    "Shooter_Gravity_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".52 Gallon Deko"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".52 Gal Deco"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salpicadora 2000 chic"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salpicadora 2000 DX"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calibre 2000 chic"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calibre 2000 chic"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calibro 2000 DX"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".52ガロンデコ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".52 갤런 데코"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".52 Kaliter Deco"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Струевик .52 «Деко»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".52加仑 装饰"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".52加侖 裝飾"
+          }
+        }
+      }
+    },
     "Shooter_Heavy_00" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -6222,6 +7467,172 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "英雄射擊槍 複製"
+          }
+        }
+      }
+    },
+    "Shooter_Normal_O" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ordnung-Kleckser Replik"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Order Shot Replica"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rociador orden réplica"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lanzatintas orden (réplica)"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lanceur d'Ordre (réplique)"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lanceur d'Ordre (réplique)"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pistola Ordine replica"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オーダーシューター レプリカ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오더 슈터 레플리카"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ordespetter (replica)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Каплестрел Порядка (клон)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "秩序射击枪 复制"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "秩序射擊槍 複製"
+          }
+        }
+      }
+    },
+    "Shooter_Normal_Oct" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Okto-Kleckser Replik"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Octo Shot Replica"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rociador octariano réplica"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pistola octariana (réplica)"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lanceur octaling (réplique)"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lanceur Octaling (réplique)"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Octosplasher replica"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オクタシューター レプリカ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "옥타 슈터 레플리카"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Octospetter (replica)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Осьмострел (клон)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "章鱼射击枪 复制"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "章魚射擊槍 複製"
           }
         }
       }
@@ -7637,6 +9048,89 @@
         }
       }
     },
+    "Slosher_Double_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schwappwascher D"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dread Wringer D"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Friegamatic D"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Friegamatic D"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seau S-Horreur requin"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seau S-Horreur Cétacé"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Secchiapavimenti D"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "モップリンD"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "몹 링 D"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wringmorser D"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отжиматель 2.0"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "墨瀑淋D"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "墨瀑淋D"
+          }
+        }
+      }
+    },
     "Slosher_Launcher_00" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -7969,6 +9463,89 @@
         }
       }
     },
+    "Slosher_Strong_O" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ordnung-Schwapper Replik"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Order Slosher Replica"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Derramatic orden réplica"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Derramatic orden (réplica)"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seau d'Ordre (réplique)"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seau d'Ordre (réplique)"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Secchiostro Ordine replica"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オーダースロッシャー レプリカ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오더 슬로셔 레플리카"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ordemorser (replica)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ведроган Порядка (клон)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "秩序泼桶 复制"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "秩序潑桶 複製"
+          }
+        }
+      }
+    },
     "Slosher_Washtub_00" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -8048,6 +9625,89 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "爆炸潑桶"
+          }
+        }
+      }
+    },
+    "Slosher_Washtub_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Knall-Schwapper SE"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Custom Explosher"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Derramatic XP adaptado"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Derramatic turbo SP"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Détoneur modifié"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Détoneur modifié"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Termosecchiostro master"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "エクスプロッシャーカスタム"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "커스텀 익스플로셔"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gemodde Kliederkachel"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Шпарган «Понт»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "爆炸泼桶 改装"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "爆炸潑桶 改裝"
           }
         }
       }
@@ -8633,6 +10293,89 @@
         }
       }
     },
+    "Spinner_Serein_01" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nautilus 79"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nautilus 79"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nautilo 79"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Subtralladora 79"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nautilus 79"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nautilus 79"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nautilus 79"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ノーチラス79"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "노틸러스 79"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nautilus 79"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Наутилус-79"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "鹦鹉螺号79"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "鸚鵡螺號79"
+          }
+        }
+      }
+    },
     "Spinner_Standard_00" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -8799,6 +10542,89 @@
         }
       }
     },
+    "Spinner_Standard_O" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ordnung-Splatling Replik"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Order Splatling Replica"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Garabateador orden réplica"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tintralladora orden (réplica)"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Badigeonneur d'Ordre (réplique)"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Badigeonneur d'Ordre (réplique)"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splatling Ordine replica"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オーダースピナー レプリカ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오더 스피너 레플리카"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ordespetling (replica)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Брызгомет Порядка (клон)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "秩序旋转枪 复制"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "秩序旋轉槍 複製"
+          }
+        }
+      }
+    },
     "Stringer_Normal_00" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -8961,6 +10787,89 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "三發獵魚弓 聯名"
+          }
+        }
+      }
+    },
+    "Stringer_Normal_O" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ordnung-Stringer Replik"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Order Stringer Replica"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arcromatizador orden réplica"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arcromatizador orden (réplica)"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transperceur d'Ordre (réplique)"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transperceur d'Ordre (réplique)"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calamarco Ordine replica"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オーダーストリンガー レプリカ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오더 스트링거 레플리카"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ordespanner (replica)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тетиватор Порядка (клон)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "秩序猎鱼弓 复制"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "秩序獵魚弓 複製"
           }
         }
       }

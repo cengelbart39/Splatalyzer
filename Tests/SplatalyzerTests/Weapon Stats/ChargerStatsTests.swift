@@ -82,6 +82,36 @@ final class ChargerStatsTests: XCTestCase {
             XCTFail("E-Liter 4K: \(error.localizedDescription)")
         }
     }
+    
+    func test_Splatalyzer_analyze_customEliter4K_properties() {
+        self.options.mainWeapon = .customEliter4K
+        
+        do {
+            let stats = try self.analyzer.analyze(self.options)
+                        
+            let mainStats = stats.mainStats
+            XCTAssertEqual(mainStats.weapon, .customEliter4K)
+            XCTAssertNotNil(mainStats.fullChargeSeconds)
+            XCTAssertNotNil(mainStats.maxChargeSeconds)
+            
+            let moveStats = stats.moveStats
+            XCTAssertNotNil(moveStats.shootingRunSpeedFullCharge)
+
+            let inkTankOptions = stats.fullInkTankOptions
+            XCTAssertFalse(inkTankOptions.isEmpty)
+            XCTAssertTrue(inkTankOptions.contains(type: .tapShot))
+            XCTAssertTrue(inkTankOptions.contains(type: .fullCharge))
+
+            let mainDamages = stats.mainDamages
+            XCTAssertFalse(mainDamages.isEmpty)
+            XCTAssertTrue(mainDamages.contains(type: .fullCharge))
+            XCTAssertTrue(mainDamages.contains(type: .maxCharge))
+            
+        } catch {
+            XCTFail("E-Liter 4K: \(error.localizedDescription)")
+        }
+    }
+
 
     // MARK: - E-Liter 4K Scope
     func test_Splatalyzer_analyze_eliter4KScope_properties() {
@@ -112,6 +142,36 @@ final class ChargerStatsTests: XCTestCase {
             XCTFail("E-Liter 4K Scope: \(error.localizedDescription)")
         }
     }
+    
+    func test_Splatalyzer_analyze_customEliter4KScope_properties() {
+        self.options.mainWeapon = .customEliter4KScope
+        
+        do {
+            let stats = try self.analyzer.analyze(self.options)
+                        
+            let mainStats = stats.mainStats
+            XCTAssertEqual(mainStats.weapon, .customEliter4KScope)
+            XCTAssertNotNil(mainStats.fullChargeSeconds)
+            
+            let moveStats = stats.moveStats
+            XCTAssertNotNil(moveStats.shootingRunSpeedFullCharge)
+
+            let inkTankOptions = stats.fullInkTankOptions
+            XCTAssertFalse(inkTankOptions.isEmpty)
+            XCTAssertTrue(inkTankOptions.contains(type: .tapShot))
+            XCTAssertTrue(inkTankOptions.contains(type: .fullCharge))
+
+            let mainDamages = stats.mainDamages
+            XCTAssertFalse(mainDamages.isEmpty)
+            XCTAssertTrue(mainDamages.contains(type: .fullCharge))
+            XCTAssertTrue(mainDamages.contains(type: .maxCharge))
+            XCTAssertTrue(mainDamages.contains(type: .tapShot))
+            
+        } catch {
+            XCTFail("E-Liter 4K Scope: \(error.localizedDescription)")
+        }
+    }
+
     
     // MARK: - Goo Tuber
     func test_Splatalyzer_analyze_gooTuber_properties() {
@@ -291,6 +351,35 @@ final class ChargerStatsTests: XCTestCase {
             XCTFail("Z+F Splat Charger: \(error.localizedDescription)")
         }
     }
+    
+    func test_Splatalyzer_analyze_orderChargerReplica_properties() {
+        self.options.mainWeapon = .orderChargerReplica
+        
+        do {
+            let stats = try self.analyzer.analyze(self.options)
+                        
+            let mainStats = stats.mainStats
+            XCTAssertEqual(mainStats.weapon, .orderChargerReplica)
+            XCTAssertNotNil(mainStats.maxChargeSeconds)
+            
+            let moveStats = stats.moveStats
+            XCTAssertNotNil(moveStats.shootingRunSpeedFullCharge)
+
+            let inkTankOptions = stats.fullInkTankOptions
+            XCTAssertFalse(inkTankOptions.isEmpty)
+            XCTAssertTrue(inkTankOptions.contains(type: .tapShot))
+            XCTAssertTrue(inkTankOptions.contains(type: .fullCharge))
+
+            let mainDamages = stats.mainDamages
+            XCTAssertFalse(mainDamages.isEmpty)
+            XCTAssertTrue(mainDamages.contains(type: .fullCharge))
+            XCTAssertTrue(mainDamages.contains(type: .maxCharge))
+            XCTAssertTrue(mainDamages.contains(type: .tapShot))
+            
+        } catch {
+            XCTFail("Splat Charger: \(error.localizedDescription)")
+        }
+    }
 
     // MARK: - Splatterscope
     func test_Splatalyzer_analyze_splatterscope_properties() {
@@ -381,5 +470,36 @@ final class ChargerStatsTests: XCTestCase {
             XCTFail("Classic Squiffer: \(error.localizedDescription)")
         }
     }
+    
+    func test_Splatalyzer_analyze_newSquiffer_properties() {
+        self.options.mainWeapon = .newSquiffer
+        
+        do {
+            let stats = try self.analyzer.analyze(self.options)
+                        
+            let mainStats = stats.mainStats
+            XCTAssertEqual(mainStats.weapon, .newSquiffer)
+            XCTAssertNotNil(mainStats.fullChargeSeconds)
+            XCTAssertNotNil(mainStats.maxChargeSeconds)
+
+            let moveStats = stats.moveStats
+            XCTAssertNotNil(moveStats.shootingRunSpeedFullCharge)
+
+            let inkTankOptions = stats.fullInkTankOptions
+            XCTAssertFalse(inkTankOptions.isEmpty)
+            XCTAssertTrue(inkTankOptions.contains(type: .tapShot))
+            XCTAssertTrue(inkTankOptions.contains(type: .fullCharge))
+
+            let mainDamages = stats.mainDamages
+            XCTAssertFalse(mainDamages.isEmpty)
+            XCTAssertTrue(mainDamages.contains(type: .fullCharge))
+            XCTAssertTrue(mainDamages.contains(type: .maxCharge))
+            XCTAssertTrue(mainDamages.contains(type: .tapShot))
+            
+        } catch {
+            XCTFail("Classic Squiffer: \(error.localizedDescription)")
+        }
+    }
+
 
 }

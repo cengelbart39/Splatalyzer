@@ -60,11 +60,13 @@
     },
     "SplashSpawnParam": {
       "$type": "spl__BulletSplashShooterSpawnParam",
-      "ForceSpawnNearestAddNumArray": [],
+      "ForceSpawnNearestAddNumArray": [
+        3
+      ],
       "SpawnBetweenLength": 10.0,
       "SpawnNearestLength": 0.0,
       "SpawnNum": 1.6,
-      "SplitNum": 5
+      "SplitNum": 6
     },
     "WallDropCollisionPaintParam": {
       "$type": "spl__BulletWallDropCollisionPaintParam",

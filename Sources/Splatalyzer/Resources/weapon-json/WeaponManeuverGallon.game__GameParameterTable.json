@@ -50,9 +50,9 @@
       "DepthScaleMin": 1.31,
       "DepthScaleMinBreakFree": 1.12,
       "DistanceMiddle": 1.1,
-      "WidthHalfFar": 1.71,
-      "WidthHalfMiddle": 1.82,
-      "WidthHalfNear": 1.82
+      "WidthHalfFar": 1.88,
+      "WidthHalfMiddle": 2.0,
+      "WidthHalfNear": 2.0
     },
     "SideStepParam": {
       "$type": "spl__PlayerSideStepParam",

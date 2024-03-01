@@ -70,6 +70,33 @@ final class DualieDataTests: XCTestCase {
             XCTFail(error.localizedDescription)
         }
     }
+    
+    // MARK: - Douser Dualies FF
+    func test_DouserDualiesFF_properties() {
+        do {
+            let gameParams = try service.decode(Dualie.self, from: "WeaponManeuverLong.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .douserDualiesFF)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+                                                            
+            XCTAssertEqual(data.mainWeaponId, .douserDualiesFF)
+            XCTAssertEqual(data.subWeapon, .inkMine)
+            XCTAssertEqual(data.specialWeapon, .killerWail51)
+            XCTAssertNotNil(data.moveSpeed)
+            XCTAssertNotNil(data.damageValueMax)
+            XCTAssertNotNil(data.damageValueMin)
+            XCTAssertNotNil(data.damageLapOverValueMax)
+            XCTAssertNotNil(data.damageLapOverValueMin)
+            XCTAssertNotNil(data.jumpDegSwerve)
+            XCTAssertNotNil(data.standDegSwerve)
+            XCTAssertNotNil(data.inkConsume)
+            XCTAssertNotNil(data.inkConsumeSideStep)
+            
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
 
     // MARK: - Dualie Squelchers
     func test_DualieSquelchers_properties() {
@@ -146,6 +173,33 @@ final class DualieDataTests: XCTestCase {
             XCTFail(error.localizedDescription)
         }
     }
+    
+    func test_GloogaDualiesDeco_properties() {
+        do {
+            let gameParams = try service.decode(Dualie.self, from: "WeaponManeuverGallon.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .gloogaDualiesDeco)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+                                                                
+            XCTAssertEqual(data.mainWeaponId, .gloogaDualiesDeco)
+            XCTAssertEqual(data.subWeapon, .pointSensor)
+            XCTAssertEqual(data.specialWeapon, .trizooka)
+            XCTAssertNil(data.weaponSpeedType)
+            XCTAssertNotNil(data.moveSpeed)
+            XCTAssertNotNil(data.damageValueMax)
+            XCTAssertNotNil(data.damageValueMin)
+            XCTAssertNotNil(data.damageLapOverValueMax)
+            XCTAssertNotNil(data.damageLapOverValueMin)
+            XCTAssertNotNil(data.jumpDegSwerve)
+            XCTAssertNotNil(data.standDegSwerve)
+            XCTAssertNotNil(data.inkConsume)
+            XCTAssertNotNil(data.inkConsumeSideStep)
+            
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
 
     // MARK: - Splat Dualies
     func test_SplatDualies_properties() {
@@ -182,6 +236,30 @@ final class DualieDataTests: XCTestCase {
             XCTAssertEqual(data.mainWeaponId, .enperrySplatDualies)
             XCTAssertEqual(data.subWeapon, .curlingBomb)
             XCTAssertEqual(data.specialWeapon, .tripleSplashdown)
+            XCTAssertNil(data.weaponSpeedType)
+            XCTAssertNotNil(data.moveSpeed)
+            XCTAssertNotNil(data.damageValueMax)
+            XCTAssertNotNil(data.damageValueMin)
+            XCTAssertNotNil(data.jumpDegSwerve)
+            XCTAssertNotNil(data.standDegSwerve)
+            XCTAssertNotNil(data.inkConsume)
+            XCTAssertNotNil(data.inkConsumeSideStep)
+            
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+    
+    func test_OrderDualiesReplica_properties() {
+        do {
+            let gameParams = try service.decode(Dualie.self, from: "WeaponManeuverNormal.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .orderDualiesReplica)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+                             
+            XCTAssertEqual(data.mainWeaponId, .orderDualiesReplica)
+            XCTAssertEqual(data.subWeapon, .suctionBomb)
+            XCTAssertEqual(data.specialWeapon, .crabTank)
             XCTAssertNil(data.weaponSpeedType)
             XCTAssertNotNil(data.moveSpeed)
             XCTAssertNotNil(data.damageValueMax)

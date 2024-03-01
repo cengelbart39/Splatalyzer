@@ -124,6 +124,32 @@ final class BrushStatsTests: XCTestCase {
             XCTFail("Octobrush Nouveau: \(error.localizedDescription)")
         }
     }
+    
+    func test_Splatalyzer_analyze_orderbrushReplica_properties() {
+        self.options.mainWeapon = .orderbrushReplica
+        
+        do {
+            let stats = try self.analyzer.analyze(self.options)
+                                                
+            let mainStats = stats.mainStats
+            XCTAssertEqual(mainStats.weapon, .orderbrushReplica)
+            XCTAssertFalse(mainStats.exists())
+            
+            let inkTankOptions = stats.fullInkTankOptions
+            XCTAssertFalse(inkTankOptions.isEmpty)
+            XCTAssertTrue(inkTankOptions.contains(type: .swing))
+
+            let mainDamages = stats.mainDamages
+            XCTAssertFalse(mainDamages.isEmpty)
+            XCTAssertTrue(mainDamages.contains(type: .splashMax))
+            XCTAssertTrue(mainDamages.contains(type: .splashMin))
+            XCTAssertTrue(mainDamages.contains(type: .rollOver))
+            
+        } catch {
+            XCTFail("Octobrush: \(error.localizedDescription)")
+        }
+    }
+
 
     // MARK: - Painbrush
     func test_Splatalyzer_analyze_painbrush_properties() {

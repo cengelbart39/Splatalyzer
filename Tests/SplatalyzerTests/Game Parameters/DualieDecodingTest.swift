@@ -17,6 +17,11 @@ final class DualieDecodingTest: XCTestCase {
         XCTAssertNoThrow(try service.decode(Dualie.self, from: fileName))
     }
     
+    func test_DouserDualiesFF_decode_noThrows() {
+        let fileName = "WeaponManeuverLong.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(Dualie.self, from: fileName))
+    }
+    
     func test_DualieSquelchers_decode_noThrows() {
         let fileName = "WeaponManeuverDual.game__GameParameterTable"
         XCTAssertNoThrow(try service.decode(Dualie.self, from: fileName))

@@ -144,4 +144,32 @@ final class StringerStatsTests: XCTestCase {
         }
     }
 
+    func test_Splatalyzer_analyze_orderStringerReplica_properties() {
+        self.options.mainWeapon = .orderStringerReplica
+        
+        do {
+            let stats = try self.analyzer.analyze(self.options)
+
+            let mainStats = stats.mainStats
+            XCTAssertEqual(mainStats.weapon, .orderStringerReplica)
+            XCTAssertNotNil(mainStats.fullChargeSeconds)
+            XCTAssertNotNil(mainStats.maxChargeSeconds)
+
+            let moveStats = stats.moveStats
+            XCTAssertNotNil(moveStats.shootingRunSpeedFullCharge)
+            
+            let inkTankOptions = stats.fullInkTankOptions
+            XCTAssertFalse(inkTankOptions.isEmpty)
+            XCTAssertTrue(inkTankOptions.contains(type: .fullCharge))
+
+            let mainDamages = stats.mainDamages
+            XCTAssertFalse(mainDamages.isEmpty)
+            XCTAssertTrue(mainDamages.contains(type: .normalMax))
+            XCTAssertTrue(mainDamages.contains(type: .normalMin))
+            XCTAssertTrue(mainDamages.contains(type: .splash))
+            
+        } catch {
+            XCTFail("Tri-Stringer: \(error.localizedDescription)")
+        }
+    }
 }

@@ -96,9 +96,7 @@ final class GearBuildTests: XCTestCase {
         let build = GearBuild()
         
         let ap = build.toAbilityPoints(usingTacticooler: false)
-        
-        print(ap)
-        
+                
         XCTAssertEqual(ap[.none], 57)
     }
     

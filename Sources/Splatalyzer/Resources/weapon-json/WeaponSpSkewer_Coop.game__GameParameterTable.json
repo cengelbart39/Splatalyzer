@@ -12,7 +12,8 @@
     },
     "BulletParam": {
       "$type": "spl__BulletSpSkewerParam",
-      "DamageValue": 4000
+      "CollisionRadiusForPlayer": 1.2,
+      "DamageValue": 5000
     }
   }
 }

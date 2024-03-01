@@ -93,9 +93,7 @@ final class BrushDataTests: XCTestCase {
             let item = self.weaponInfo.getItem(for: .octobrushNouveau)!
             
             let data = MainWeaponData(weaponInfo: item, container: gameParams)
-            
-            print(data)
-            
+                        
             XCTAssertEqual(data.mainWeaponId, .octobrushNouveau)
             XCTAssertEqual(data.subWeapon, .squidBeakon)
             XCTAssertEqual(data.specialWeapon, .inkStorm)
@@ -109,6 +107,28 @@ final class BrushDataTests: XCTestCase {
             XCTFail(error.localizedDescription)
         }
     }
+    
+    func test_OrderbrushReplica_properties() {
+        do {
+            let gameParams = try service.decode(Brush.self, from: "WeaponBrushNormal.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .orderbrushReplica)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+            
+            XCTAssertEqual(data.mainWeaponId, .orderbrushReplica)
+            XCTAssertEqual(data.subWeapon, .suctionBomb)
+            XCTAssertEqual(data.specialWeapon, .zipcaster)
+            XCTAssertNil(data.weaponSpeedType)
+            XCTAssertNotNil(data.bodyDamage)
+            XCTAssertNotNil(data.swingUnitGroupDamageMin)
+            XCTAssertNotNil(data.swingUnitGroupDamageMax)
+            XCTAssertNotNil(data.inkConsumeWeaponSwing)
+            
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
     
     // MARK: - Painbrush
     func test_Painbrush_properties() {

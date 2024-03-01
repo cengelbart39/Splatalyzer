@@ -70,6 +70,31 @@ final class ChargerDataTests: XCTestCase {
             XCTFail(error.localizedDescription)
         }
     }
+    
+    func test_CustomEliter4K_properties() {
+        do {
+            let gameParams = try service.decode(Charger.self, from: "WeaponChargerLong.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .customEliter4K)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+                                                
+            XCTAssertEqual(data.mainWeaponId, .customEliter4K)
+            XCTAssertEqual(data.subWeapon, .squidBeakon)
+            XCTAssertEqual(data.specialWeapon, .krakenRoyale)
+            XCTAssertEqual(data.weaponSpeedType, .slow)
+            XCTAssertNotNil(data.moveSpeedFullCharge)
+            XCTAssertNotNil(data.damageValueFullCharge)
+            XCTAssertNotNil(data.damageValueMaxCharge)
+            XCTAssertNotNil(data.damageValueMinCharge)
+            XCTAssertNotNil(data.chargeFrameFullCharge)
+            XCTAssertNotNil(data.keepChargeFullFrame)
+            XCTAssertNotNil(data.inkConsumeFullCharge)
+            XCTAssertNotNil(data.inkConsumeMinCharge)
+            
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
 
     // MARK: - E-Liter 4K Scope
     func test_Eliter4KScope_properties() {
@@ -95,6 +120,31 @@ final class ChargerDataTests: XCTestCase {
             XCTFail(error.localizedDescription)
         }
     }
+    
+    func test_CustomEliter4KScope_properties() {
+        do {
+            let gameParams = try service.decode(Charger.self, from: "WeaponChargerLongScope.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .customEliter4KScope)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+                                    
+            XCTAssertEqual(data.mainWeaponId, .customEliter4KScope)
+            XCTAssertEqual(data.subWeapon, .squidBeakon)
+            XCTAssertEqual(data.specialWeapon, .krakenRoyale)
+            XCTAssertEqual(data.weaponSpeedType, .slow)
+            XCTAssertNotNil(data.moveSpeedFullCharge)
+            XCTAssertNotNil(data.damageValueFullCharge)
+            XCTAssertNotNil(data.damageValueMaxCharge)
+            XCTAssertNotNil(data.damageValueMinCharge)
+            XCTAssertNotNil(data.chargeFrameFullCharge)
+            XCTAssertNotNil(data.inkConsumeFullCharge)
+            XCTAssertNotNil(data.inkConsumeMinCharge)
+            
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
     
     // MARK: - Goo Tuber
     func test_GooTuber_properties() {
@@ -245,6 +295,31 @@ final class ChargerDataTests: XCTestCase {
         }
     }
     
+    func test_OrderChargerReplica_properties() {
+        do {
+            let gameParams = try service.decode(Charger.self, from: "WeaponChargerNormal.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .orderChargerReplica)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+            
+            XCTAssertEqual(data.mainWeaponId, .orderChargerReplica)
+            XCTAssertEqual(data.subWeapon, .splatBomb)
+            XCTAssertEqual(data.specialWeapon, .inkVac)
+            XCTAssertNil(data.weaponSpeedType)
+            XCTAssertNotNil(data.moveSpeedFullCharge)
+            XCTAssertNotNil(data.damageValueFullCharge)
+            XCTAssertNotNil(data.damageValueMaxCharge)
+            XCTAssertNotNil(data.damageValueMinCharge)
+            XCTAssertNotNil(data.keepChargeFullFrame)
+            XCTAssertNotNil(data.inkConsumeFullCharge)
+            XCTAssertNotNil(data.inkConsumeMinCharge)
+            
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
+    
     // MARK: - Splatterscope
     func test_Splatterscope_properties() {
         do {
@@ -319,4 +394,30 @@ final class ChargerDataTests: XCTestCase {
             XCTFail(error.localizedDescription)
         }
     }
+    
+    func test_NewSquiffer_properties() {
+        do {
+            let gameParams = try service.decode(Charger.self, from: "WeaponChargerQuick.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .newSquiffer)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+            
+            XCTAssertEqual(data.mainWeaponId, .newSquiffer)
+            XCTAssertEqual(data.subWeapon, .autobomb)
+            XCTAssertEqual(data.specialWeapon, .zipcaster)
+            XCTAssertNil(data.weaponSpeedType)
+            XCTAssertNotNil(data.moveSpeedFullCharge)
+            XCTAssertNotNil(data.damageValueFullCharge)
+            XCTAssertNotNil(data.damageValueMaxCharge)
+            XCTAssertNotNil(data.damageValueMinCharge)
+            XCTAssertNotNil(data.chargeFrameFullCharge)
+            XCTAssertNotNil(data.keepChargeFullFrame)
+            XCTAssertNotNil(data.inkConsumeFullCharge)
+            XCTAssertNotNil(data.inkConsumeMinCharge)
+            
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
 }

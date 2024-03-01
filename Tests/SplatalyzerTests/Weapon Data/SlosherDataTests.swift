@@ -89,6 +89,28 @@ final class SlosherDataTests: XCTestCase {
             XCTFail(error.localizedDescription)
         }
     }
+    
+    func test_DreadWringerD_properties() {
+        do {
+            let gameParams = try service.decode(Slosher.self, from: "WeaponSlosherDouble.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .dreadWringerD)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+            
+            XCTAssertEqual(data.mainWeaponId, .dreadWringerD)
+            XCTAssertEqual(data.subWeapon, .squidBeakon)
+            XCTAssertEqual(data.specialWeapon, .waveBreaker)
+            XCTAssertNil(data.weaponSpeedType)
+            XCTAssertNotNil(data.moveSpeed)
+            XCTAssertNotNil(data.damageValueDirectMax)
+            XCTAssertNotNil(data.damageValueDirectMin)
+            XCTAssertNotNil(data.inkRecoverStop)
+            XCTAssertNotNil(data.inkConsumeSlosher)
+
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
 
     // MARK: - Explosher
     func test_Explosher_properties() {
@@ -101,6 +123,27 @@ final class SlosherDataTests: XCTestCase {
             XCTAssertEqual(data.mainWeaponId, .explosher)
             XCTAssertEqual(data.subWeapon, .pointSensor)
             XCTAssertEqual(data.specialWeapon, .inkStorm)
+            XCTAssertEqual(data.weaponSpeedType, .slow)
+            XCTAssertNotNil(data.moveSpeed)
+            XCTAssertNotNil(data.damageValueDirect)
+            XCTAssertNotNil(data.inkRecoverStop)
+            XCTAssertNotNil(data.inkConsumeSlosher)
+
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+    
+    func test_CustomExplosher_properties() {
+        do {
+            let gameParams = try service.decode(Slosher.self, from: "WeaponSlosherWashtub.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .customExplosher)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+            
+            XCTAssertEqual(data.mainWeaponId, .customExplosher)
+            XCTAssertEqual(data.subWeapon, .splashWall)
+            XCTAssertEqual(data.specialWeapon, .tripleSplashdown)
             XCTAssertEqual(data.weaponSpeedType, .slow)
             XCTAssertNotNil(data.moveSpeed)
             XCTAssertNotNil(data.damageValueDirect)
@@ -147,6 +190,30 @@ final class SlosherDataTests: XCTestCase {
             XCTAssertEqual(data.mainWeaponId, .slosherDeco)
             XCTAssertEqual(data.subWeapon, .angleShooter)
             XCTAssertEqual(data.specialWeapon, .zipcaster)
+            XCTAssertNil(data.weaponSpeedType)
+            XCTAssertNotNil(data.moveSpeed)
+            XCTAssertNotNil(data.damageValueDirectMax)
+            XCTAssertNotNil(data.damageValueDirectMin)
+            XCTAssertNotNil(data.damageSecondaryValueDirectMax)
+            XCTAssertNotNil(data.damageSecondaryValueDirectMin)
+            XCTAssertNotNil(data.inkRecoverStop)
+            XCTAssertNotNil(data.inkConsumeSlosher)
+
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+    
+    func test_OrderSlosher_properties() {
+        do {
+            let gameParams = try service.decode(Slosher.self, from: "WeaponSlosherStrong.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .orderSlosherReplica)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+            
+            XCTAssertEqual(data.mainWeaponId, .orderSlosherReplica)
+            XCTAssertEqual(data.subWeapon, .splatBomb)
+            XCTAssertEqual(data.specialWeapon, .tripleInkstrike)
             XCTAssertNil(data.weaponSpeedType)
             XCTAssertNotNil(data.moveSpeed)
             XCTAssertNotNil(data.damageValueDirectMax)

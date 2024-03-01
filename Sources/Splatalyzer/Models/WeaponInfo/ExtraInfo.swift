@@ -29,6 +29,7 @@ public enum ExtraInfo: String, Codable {
     case saberChargeSlashPenetrate = "SaberChargeSlashPenetrate"
     case saberShot = "SaberShot"
     case saberSlash = "SaberSlash"
+    case sdSaber = "SdSaber"
     case shelterCanopy = "ShelterCanopy"
     case shockSonarWave = "ShockSonarWave"
     case shooterVariableRepeat = "ShooterVariableRepeat"

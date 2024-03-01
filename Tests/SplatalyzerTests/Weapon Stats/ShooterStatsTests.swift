@@ -52,6 +52,35 @@ final class ShooterStatsTests: XCTestCase {
         }
     }
     
+    func test_Splatalyzer_analyze_52GalDeco_properties() {
+        self.options.mainWeapon = .gal52Deco
+        
+        do {
+            let stats = try self.analyzer.analyze(self.options)
+
+            let mainStats = stats.mainStats
+            XCTAssertEqual(mainStats.weapon, .gal52Deco)
+            XCTAssertNotNil(mainStats.shotSpreadAir)
+            XCTAssertNotNil(mainStats.shotSpreadGround)
+            
+            let moveStats = stats.moveStats
+            XCTAssertNotNil(moveStats.shootingRunSpeed)
+            
+            let inkTankOptions = stats.fullInkTankOptions
+            XCTAssertFalse(inkTankOptions.isEmpty)
+            XCTAssertTrue(inkTankOptions.contains(type: .normal))
+            
+            let mainDamages = stats.mainDamages
+            XCTAssertFalse(mainDamages.isEmpty)
+            XCTAssertTrue(mainDamages.contains(type: .normalMax))
+            XCTAssertTrue(mainDamages.contains(type: .normalMin))
+            
+        } catch {
+            XCTFail(".52 Gal: \(error.localizedDescription)")
+        }
+    }
+
+    
     // MARK: - .96 Gal
     func test_Splatalyzer_analyze_96Gal_properties() {
         self.options.mainWeapon = .gal96
@@ -549,6 +578,63 @@ final class ShooterStatsTests: XCTestCase {
             XCTFail("Hero Shot Replica: \(error.localizedDescription)")
         }
     }
+    
+    func test_Splatalyzer_analyze_orderShotReplica_properties() {
+        self.options.mainWeapon = .orderShotReplica
+        
+        do {
+            let stats = try self.analyzer.analyze(self.options)
+
+            let mainStats = stats.mainStats
+            XCTAssertEqual(mainStats.weapon, .orderShotReplica)
+            XCTAssertNotNil(mainStats.shotSpreadAir)
+            XCTAssertNotNil(mainStats.shotSpreadGround)
+
+            let moveStats = stats.moveStats
+            XCTAssertNotNil(moveStats.shootingRunSpeed)
+
+            let inkTankOptions = stats.fullInkTankOptions
+            XCTAssertFalse(inkTankOptions.isEmpty)
+            XCTAssertTrue(inkTankOptions.contains(type: .normal))
+            
+            let mainDamages = stats.mainDamages
+            XCTAssertFalse(mainDamages.isEmpty)
+            XCTAssertTrue(mainDamages.contains(type: .normalMax))
+            XCTAssertTrue(mainDamages.contains(type: .normalMin))
+            
+        } catch {
+            XCTFail("Order Shot Replica: \(error.localizedDescription)")
+        }
+    }
+    
+    func test_Splatalyzer_analyze_octoShotReplica_properties() {
+        self.options.mainWeapon = .octoShotReplica
+        
+        do {
+            let stats = try self.analyzer.analyze(self.options)
+            
+            let mainStats = stats.mainStats
+            XCTAssertEqual(mainStats.weapon, .octoShotReplica)
+            XCTAssertNotNil(mainStats.shotSpreadAir)
+            XCTAssertNotNil(mainStats.shotSpreadGround)
+
+            let moveStats = stats.moveStats
+            XCTAssertNotNil(moveStats.shootingRunSpeed)
+
+            let inkTankOptions = stats.fullInkTankOptions
+            XCTAssertFalse(inkTankOptions.isEmpty)
+            XCTAssertTrue(inkTankOptions.contains(type: .normal))
+            
+            let mainDamages = stats.mainDamages
+            XCTAssertFalse(mainDamages.isEmpty)
+            XCTAssertTrue(mainDamages.contains(type: .normalMax))
+            XCTAssertTrue(mainDamages.contains(type: .normalMin))
+            
+        } catch {
+            XCTFail("Tentatek Splattershot: \(error.localizedDescription)")
+        }
+    }
+
 
     // MARK: - Splattershot Jr.
     func test_Splatalyzer_analyze_splattershotJr_properties() {

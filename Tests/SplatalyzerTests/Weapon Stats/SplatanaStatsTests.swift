@@ -51,14 +51,14 @@ final class SplatanaStatsTests: XCTestCase {
         }
     }
     
-    func test_Splatalyzer_analyze_neoSplatanaStamper_properties() {
-        self.options.mainWeapon = .neoSplatanaStamper
+    func test_Splatalyzer_analyze_splatanaStamperNouveau_properties() {
+        self.options.mainWeapon = .splatanaStamperNouveau
         
         do {
             let stats = try self.analyzer.analyze(self.options)
 
             let mainStats = stats.mainStats
-            XCTAssertEqual(mainStats.weapon, .neoSplatanaStamper)
+            XCTAssertEqual(mainStats.weapon, .splatanaStamperNouveau)
             XCTAssertFalse(mainStats.exists())
             
             let inkTankOptions = stats.fullInkTankOptions
@@ -74,9 +74,37 @@ final class SplatanaStatsTests: XCTestCase {
             XCTAssertTrue(mainDamages.contains(type: .splatanaHorizontalDirect))
             
         } catch {
-            XCTFail("Neo Splatana Stamper: \(error.localizedDescription)")
+            XCTFail("Splatana Stamper Nouveau: \(error.localizedDescription)")
         }
     }
+    
+    func test_Splatalyzer_analyze_orderSplatanaReplica_properties() {
+        self.options.mainWeapon = .orderSplatanaReplica
+        
+        do {
+            let stats = try self.analyzer.analyze(self.options)
+
+            let mainStats = stats.mainStats
+            XCTAssertEqual(mainStats.weapon, .orderSplatanaReplica)
+            XCTAssertFalse(mainStats.exists())
+            
+            let inkTankOptions = stats.fullInkTankOptions
+            XCTAssertFalse(inkTankOptions.isEmpty)
+            XCTAssertTrue(inkTankOptions.contains(type: .swing))
+            XCTAssertTrue(inkTankOptions.contains(type: .fullCharge))
+
+            let mainDamages = stats.mainDamages
+            XCTAssertFalse(mainDamages.isEmpty)
+            XCTAssertTrue(mainDamages.contains(type: .splatanaVertical))
+            XCTAssertTrue(mainDamages.contains(type: .splatanaVerticalDirect))
+            XCTAssertTrue(mainDamages.contains(type: .splatanaHorizontal))
+            XCTAssertTrue(mainDamages.contains(type: .splatanaHorizontalDirect))
+            
+        } catch {
+            XCTFail("Splatana Stamper: \(error.localizedDescription)")
+        }
+    }
+
 
     // MARK: - Splatana Wiper
     func test_Splatalyzer_analyze_splatanaWiper_properties() {

@@ -29,9 +29,7 @@ final class ShooterDataTests: XCTestCase {
             let item = self.weaponInfo.getItem(for: .gal52)!
             
             let data = MainWeaponData(weaponInfo: item, container: gameParams)
-             
-            print(data)
-            
+                         
             XCTAssertEqual(data.mainWeaponId, .gal52)
             XCTAssertEqual(data.subWeapon, .splashWall)
             XCTAssertEqual(data.specialWeapon, .killerWail51)
@@ -48,6 +46,30 @@ final class ShooterDataTests: XCTestCase {
         }
     }
     
+    func test_52GalDeco_properties() {
+        do {
+            let gameParams = try service.decode(Shooter.self, from: "WeaponShooterGravity.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .gal52Deco)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+                         
+            XCTAssertEqual(data.mainWeaponId, .gal52Deco)
+            XCTAssertEqual(data.subWeapon, .curlingBomb)
+            XCTAssertEqual(data.specialWeapon, .splattercolorScreen)
+            XCTAssertNil(data.weaponSpeedType)
+            XCTAssertNotNil(data.moveSpeed)
+            XCTAssertNotNil(data.damageValueMax)
+            XCTAssertNotNil(data.damageValueMin)
+            XCTAssertNotNil(data.jumpDegSwerve)
+            XCTAssertNotNil(data.standDegSwerve)
+            XCTAssertNotNil(data.inkConsume)
+
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
+    
     // MARK: - .96 Gal
     func test_96Gal_properties() {
         do {
@@ -55,9 +77,7 @@ final class ShooterDataTests: XCTestCase {
             let item = self.weaponInfo.getItem(for: .gal96)!
             
             let data = MainWeaponData(weaponInfo: item, container: gameParams)
-             
-            print(data)
-            
+                         
             XCTAssertEqual(data.mainWeaponId, .gal96)
             XCTAssertEqual(data.subWeapon, .sprinkler)
             XCTAssertEqual(data.specialWeapon, .inkVac)
@@ -80,9 +100,7 @@ final class ShooterDataTests: XCTestCase {
             let item = self.weaponInfo.getItem(for: .gal96Deco)!
             
             let data = MainWeaponData(weaponInfo: item, container: gameParams)
-             
-            print(data)
-            
+                         
             XCTAssertEqual(data.mainWeaponId, .gal96Deco)
             XCTAssertEqual(data.subWeapon, .splashWall)
             XCTAssertEqual(data.specialWeapon, .krakenRoyale)
@@ -106,9 +124,7 @@ final class ShooterDataTests: XCTestCase {
             let item = self.weaponInfo.getItem(for: .aerosprayMG)!
             
             let data = MainWeaponData(weaponInfo: item, container: gameParams)
-             
-            print(data)
-            
+                         
             XCTAssertEqual(data.mainWeaponId, .aerosprayMG)
             XCTAssertEqual(data.subWeapon, .fizzyBomb)
             XCTAssertEqual(data.specialWeapon, .reefslider)
@@ -439,7 +455,7 @@ final class ShooterDataTests: XCTestCase {
         }
     }
 
-    func test_HeroShot_properties() {
+    func test_HeroShotReplica_properties() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .heroShotReplica)!
@@ -461,6 +477,53 @@ final class ShooterDataTests: XCTestCase {
             XCTFail(error.localizedDescription)
         }
     }
+    
+    func test_OctoShotReplica_properties() {
+        do {
+            let gameParams = try service.decode(Shooter.self, from: "WeaponShooterNormal.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .octoShotReplica)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+            
+            XCTAssertEqual(data.mainWeaponId, .octoShotReplica)
+            XCTAssertEqual(data.subWeapon, .splatBomb)
+            XCTAssertEqual(data.specialWeapon, .tripleInkstrike)
+            XCTAssertNil(data.weaponSpeedType)
+            XCTAssertNotNil(data.moveSpeed)
+            XCTAssertNotNil(data.damageValueMax)
+            XCTAssertNotNil(data.damageValueMin)
+            XCTAssertNotNil(data.jumpDegSwerve)
+            XCTAssertNotNil(data.standDegSwerve)
+            XCTAssertNotNil(data.inkConsume)
+
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+    
+    func test_OrderShotReplica_properties() {
+        do {
+            let gameParams = try service.decode(Shooter.self, from: "WeaponShooterNormal.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .orderShotReplica)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+            
+            XCTAssertEqual(data.mainWeaponId, .orderShotReplica)
+            XCTAssertEqual(data.subWeapon, .suctionBomb)
+            XCTAssertEqual(data.specialWeapon, .trizooka)
+            XCTAssertNil(data.weaponSpeedType)
+            XCTAssertNotNil(data.moveSpeed)
+            XCTAssertNotNil(data.damageValueMax)
+            XCTAssertNotNil(data.damageValueMin)
+            XCTAssertNotNil(data.jumpDegSwerve)
+            XCTAssertNotNil(data.standDegSwerve)
+            XCTAssertNotNil(data.inkConsume)
+
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
 
     // MARK: - Splatershot Jr.
     func test_SplattershotJr_properties() {

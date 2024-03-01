@@ -116,4 +116,27 @@ final class StringerDataTests: XCTestCase {
         }
     }
 
+    func test_OrderStringerReplica_properties() {
+        do {
+            let gameParams = try service.decode(Stringer.self, from: "WeaponStringerNormal.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .orderStringerReplica)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+                        
+            XCTAssertEqual(data.mainWeaponId, .orderStringerReplica)
+            XCTAssertEqual(data.subWeapon, .toxicMist)
+            XCTAssertEqual(data.specialWeapon, .killerWail51)
+            XCTAssertNil(data.weaponSpeedType)
+            XCTAssertNotNil(data.moveSpeedFullCharge)
+            XCTAssertNotNil(data.damageValueMax)
+            XCTAssertNotNil(data.damageValueMin)
+            XCTAssertNotNil(data.chargeFrameFullCharge)
+            XCTAssertNotNil(data.keepChargeFullFrame)
+            XCTAssertNotNil(data.inkConsumeChargeFullCharge)
+
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
 }

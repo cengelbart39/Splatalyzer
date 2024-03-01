@@ -213,6 +213,37 @@ final class BlasterStatsTests: XCTestCase {
             XCTFail("Luna Blaster Neo: \(error.localizedDescription)")
         }
     }
+    
+    func test_Splatalyzer_analyze_orderBlasterReplica_properties() {
+        self.options.mainWeapon = .orderBlasterReplica
+        
+        do {
+            let stats = try self.analyzer.analyze(self.options)
+            
+            let mainStats = stats.mainStats
+            XCTAssertEqual(mainStats.weapon, .orderBlasterReplica)
+            XCTAssertNotNil(mainStats.shotSpreadAir)
+            XCTAssertNotNil(mainStats.shotSpreadGround)
+            XCTAssertNotNil(mainStats.whiteInkSeconds)
+
+            let moveStats = stats.moveStats
+            XCTAssertNotNil(moveStats.shootingRunSpeed)
+            
+            let inkTankOptions = stats.fullInkTankOptions
+            XCTAssertFalse(inkTankOptions.isEmpty)
+            XCTAssertTrue(inkTankOptions.contains(type: .normal))
+            
+            let mainDamages = stats.mainDamages
+            XCTAssertFalse(mainDamages.isEmpty)
+            XCTAssertTrue(mainDamages.contains(type: .normalMax))
+            XCTAssertTrue(mainDamages.contains(type: .direct))
+            XCTAssertTrue(mainDamages.contains(type: .splash))
+            
+        } catch {
+            XCTFail("Luna Blaster: \(error.localizedDescription)")
+        }
+    }
+
 
     // MARK: - Range Blaster
     func test_Splatalyzer_analyze_rangeBlaster_properties() {

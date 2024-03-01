@@ -96,8 +96,8 @@
         "FreezeFrameMidCharge": 15,
         "FreezeFrameMinCharge": 8,
         "InkConsumeFullCharge": 0.065,
-        "InkConsumeMidCharge": 0.04,
-        "InkConsumeMinCharge": 0.03,
+        "InkConsumeMidCharge": 0.0468,
+        "InkConsumeMinCharge": 0.035,
         "JumpHeightFullCharge": 0.07,
         "MoveSpeedFullCharge": 0.084,
         "PostDelayFrame": 10

@@ -193,6 +193,31 @@ final class RollerDataTests: XCTestCase {
             XCTFail(error.localizedDescription)
         }
     }
+    
+    func test_FoilFlingzaRoller_properties() {
+        do {
+            let gameParams = try service.decode(Roller.self, from: "WeaponRollerHunter.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .foilFlingzaRoller)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+                                          
+            XCTAssertEqual(data.mainWeaponId, .foilFlingzaRoller)
+            XCTAssertEqual(data.subWeapon, .suctionBomb)
+            XCTAssertEqual(data.specialWeapon, .splattercolorScreen)
+            XCTAssertNil(data.weaponSpeedType)
+            XCTAssertNotNil(data.bodyDamage)
+            XCTAssertNotNil(data.verticalSwingUnitGroupDamageMin)
+            XCTAssertNotNil(data.verticalSwingUnitGroupDamageMax)
+            XCTAssertNotNil(data.wideSwingUnitGroupDamageMin)
+            XCTAssertNotNil(data.wideSwingUnitGroupDamageMax)
+            XCTAssertNotNil(data.inkConsumeWeaponVerticalSwing)
+            XCTAssertNotNil(data.inkConsumeWeaponWideSwing)
+
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
 
     // MARK: - Splat Roller
     func test_SplatRoller_properties() {
@@ -225,9 +250,7 @@ final class RollerDataTests: XCTestCase {
             let item = self.weaponInfo.getItem(for: .krakOnSplatRoller)!
             
             let data = MainWeaponData(weaponInfo: item, container: gameParams)
-                              
-            print(data)
-            
+                                          
             XCTAssertEqual(data.mainWeaponId, .krakOnSplatRoller)
             XCTAssertEqual(data.subWeapon, .squidBeakon)
             XCTAssertEqual(data.specialWeapon, .krakenRoyale)
@@ -244,4 +267,29 @@ final class RollerDataTests: XCTestCase {
             XCTFail(error.localizedDescription)
         }
     }
+    
+    func test_OrderRollerReplica_properties() {
+        do {
+            let gameParams = try service.decode(Roller.self, from: "WeaponRollerNormal.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .orderRollerReplica)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+                                          
+            XCTAssertEqual(data.mainWeaponId, .orderRollerReplica)
+            XCTAssertEqual(data.subWeapon, .curlingBomb)
+            XCTAssertEqual(data.specialWeapon, .bigBubbler)
+            XCTAssertNil(data.weaponSpeedType)
+            XCTAssertNotNil(data.bodyDamage)
+            XCTAssertNotNil(data.verticalSwingUnitGroupDamageMin)
+            XCTAssertNotNil(data.verticalSwingUnitGroupDamageMax)
+            XCTAssertNotNil(data.wideSwingUnitGroupDamageMin)
+            XCTAssertNotNil(data.wideSwingUnitGroupDamageMax)
+            XCTAssertNotNil(data.inkConsumeWeaponVerticalSwing)
+            XCTAssertNotNil(data.inkConsumeWeaponWideSwing)
+
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
 }

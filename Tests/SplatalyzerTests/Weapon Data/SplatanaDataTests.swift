@@ -29,9 +29,7 @@ final class SplatanaDataTests: XCTestCase {
             let item = self.weaponInfo.getItem(for: .splatanaStamper)!
             
             let data = MainWeaponData(weaponInfo: item, container: gameParams)
-            
-            print(data)
-            
+                        
             XCTAssertEqual(data.mainWeaponId, .splatanaStamper)
             XCTAssertEqual(data.subWeapon, .burstBomb)
             XCTAssertEqual(data.specialWeapon, .zipcaster)
@@ -48,18 +46,39 @@ final class SplatanaDataTests: XCTestCase {
         }
     }
 
-    func test_NeoSplatanaStamper_properties() {
+    func test_SplatanaStamperNouveau_properties() {
         do {
             let gameParams = try service.decode(Splatana.self, from: "WeaponSaberNormal.game__GameParameterTable")
-            let item = self.weaponInfo.getItem(for: .neoSplatanaStamper)!
+            let item = self.weaponInfo.getItem(for: .splatanaStamperNouveau)!
             
             let data = MainWeaponData(weaponInfo: item, container: gameParams)
-            
-            print(data)
-            
-            XCTAssertEqual(data.mainWeaponId, .neoSplatanaStamper)
+                        
+            XCTAssertEqual(data.mainWeaponId, .splatanaStamperNouveau)
             XCTAssertEqual(data.subWeapon, .toxicMist)
             XCTAssertEqual(data.specialWeapon, .crabTank)
+            XCTAssertNil(data.weaponSpeedType)
+            XCTAssertNotNil(data.damageSplatanaVerticalDirect)
+            XCTAssertNotNil(data.damageSplatanaVertical)
+            XCTAssertNotNil(data.damageSplatanaHorizontalDirect)
+            XCTAssertNotNil(data.damageSplatanaHorizontal)
+            XCTAssertNotNil(data.inkConsumeSwing)
+            XCTAssertNotNil(data.inkConsumeChargeFullCharge)
+
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+    
+    func test_OrderSplatanaReplica_properties() {
+        do {
+            let gameParams = try service.decode(Splatana.self, from: "WeaponSaberNormal.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .orderSplatanaReplica)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+                        
+            XCTAssertEqual(data.mainWeaponId, .orderSplatanaReplica)
+            XCTAssertEqual(data.subWeapon, .burstBomb)
+            XCTAssertEqual(data.specialWeapon, .zipcaster)
             XCTAssertNil(data.weaponSpeedType)
             XCTAssertNotNil(data.damageSplatanaVerticalDirect)
             XCTAssertNotNil(data.damageSplatanaVertical)
@@ -80,9 +99,7 @@ final class SplatanaDataTests: XCTestCase {
             let item = self.weaponInfo.getItem(for: .splatanaWiper)!
             
             let data = MainWeaponData(weaponInfo: item, container: gameParams)
-            
-            print(data)
-            
+                        
             XCTAssertEqual(data.mainWeaponId, .splatanaWiper)
             XCTAssertEqual(data.subWeapon, .torpedo)
             XCTAssertEqual(data.specialWeapon, .ultraStamp)
@@ -105,9 +122,7 @@ final class SplatanaDataTests: XCTestCase {
             let item = self.weaponInfo.getItem(for: .splatanaWiperDeco)!
             
             let data = MainWeaponData(weaponInfo: item, container: gameParams)
-            
-            print(data)
-            
+                        
             XCTAssertEqual(data.mainWeaponId, .splatanaWiperDeco)
             XCTAssertEqual(data.subWeapon, .squidBeakon)
             XCTAssertEqual(data.specialWeapon, .tentaMissiles)

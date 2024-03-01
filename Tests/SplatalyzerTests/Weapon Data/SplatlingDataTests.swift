@@ -147,6 +147,31 @@ final class SplatlingDataTests: XCTestCase {
             XCTFail(error.localizedDescription)
         }
     }
+    
+    func test_OrderSplatlingReplica_properties() {
+        do {
+            let gameParams = try service.decode(Splatling.self, from: "WeaponSpinnerStandard.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .orderSplatlingReplica)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+            
+            XCTAssertEqual(data.mainWeaponId, .orderSplatlingReplica)
+            XCTAssertEqual(data.subWeapon, .sprinkler)
+            XCTAssertEqual(data.specialWeapon, .waveBreaker)
+            XCTAssertNil(data.weaponSpeedType)
+            XCTAssertNotNil(data.moveSpeed)
+            XCTAssertNotNil(data.damageValueMin)
+            XCTAssertNotNil(data.damageValueFullChargeMax)
+            XCTAssertNotNil(data.jumpDegSwerve)
+            XCTAssertNotNil(data.standDegSwerve)
+            XCTAssertNotNil(data.inkRecoverStop)
+            XCTAssertNotNil(data.inkConsumeFullChargeSplatling)
+
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
 
     // MARK: - Hydra Splatling
     func test_HydraSplatling_properties() {
@@ -236,6 +261,32 @@ final class SplatlingDataTests: XCTestCase {
             XCTAssertEqual(data.mainWeaponId, .nautilus47)
             XCTAssertEqual(data.subWeapon, .pointSensor)
             XCTAssertEqual(data.specialWeapon, .inkStorm)
+            XCTAssertNil(data.weaponSpeedType)
+            XCTAssertNotNil(data.moveSpeed)
+            XCTAssertNotNil(data.moveSpeedCharge)
+            XCTAssertNotNil(data.damageValueMin)
+            XCTAssertNotNil(data.damageValueFullChargeMax)
+            XCTAssertNotNil(data.keepChargeFullFrame)
+            XCTAssertNotNil(data.jumpDegSwerve)
+            XCTAssertNotNil(data.standDegSwerve)
+            XCTAssertNotNil(data.inkRecoverStop)
+            XCTAssertNotNil(data.inkConsumeFullChargeSplatling)
+
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
+    func test_Nautilus79_properties() {
+        do {
+            let gameParams = try service.decode(Splatling.self, from: "WeaponSpinnerSerein.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .nautilus79)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+            
+            XCTAssertEqual(data.mainWeaponId, .nautilus79)
+            XCTAssertEqual(data.subWeapon, .suctionBomb)
+            XCTAssertEqual(data.specialWeapon, .tripleSplashdown)
             XCTAssertNil(data.weaponSpeedType)
             XCTAssertNotNil(data.moveSpeed)
             XCTAssertNotNil(data.moveSpeedCharge)

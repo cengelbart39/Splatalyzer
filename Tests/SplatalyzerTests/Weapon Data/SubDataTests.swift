@@ -125,9 +125,7 @@ final class SubDataTests: XCTestCase {
             
             let data = SubWeaponData(container: gameParams)
             let overwrites = data.overwrites as! SubOverwrites
-            
-            print(data)
-            
+                        
             XCTAssertEqual(data.id, .splashWall)
             XCTAssertNotNil(overwrites.maxHp)
             

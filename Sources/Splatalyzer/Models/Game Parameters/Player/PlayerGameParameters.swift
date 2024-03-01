@@ -89,6 +89,8 @@ public struct Player: GameParametable {
         
         public let playerThrowGoldIkuraParam: ThrowGoldenIkuraParameter
         
+        public let playerThrowTenjinParam: ThrowTenjinParameter
+        
         public enum CodingKeys: String, CodingKey {
             case dieBlastParam = "DieBlastParam"
             case playerLeagueInGameModifierParam = "PlayerLeagueInGameModifierParam"
@@ -127,6 +129,7 @@ public struct Player: GameParametable {
             case playerVehicleSpectacleParam = "spl__PlayerVehicleSpectacleParam"
             case playerThrowClamParma = "spl__ThrowClamParam"
             case playerThrowGoldIkuraParam = "spl__ThrowGoldenIkuraParam"
+            case playerThrowTenjinParam = "spl__ThrowTenjinParam"
         }
     }
 }
@@ -833,6 +836,66 @@ extension Player.Parameters.ThrowGoldenIkuraParameter.AttackParameter {
             case paintOffsetY = "PaintOffsetY"
             case paintRadius = "PaintRadius"
             case splashAroundParam = "SplashAroundParam"
+        }
+    }
+}
+
+extension Player.Parameters {
+    public struct ThrowTenjinParameter: Codable {
+        public let type: String
+        public let additionalMoveParam: AdditionalMoveParameter
+        public let throwParam: ThrowParameter
+        
+        public enum CodingKeys: String, CodingKey {
+            case type = "$type"
+            case additionalMoveParam = "AdditionMoveParam"
+            case throwParam = "ThrowParam"
+        }
+    }
+}
+
+extension Player.Parameters.ThrowTenjinParameter {
+    public struct ThrowParameter: Codable {
+        public let blastParam: BlastParameter
+        public let guideHitCollisionType: String
+        public let hitWallPitchToPlane: Double
+        public let hitWallReboundResetFrame: Int
+        public let riseFrame: Int
+        public let spawnSpeedY: Double
+        public let spawnSpeedYWorldMin: Double
+        public let spawnSpeedZSpecUp: HighMidLow
+        public let waitRiseFrame: Int
+        
+        public enum CodingKeys: String, CodingKey {
+            case blastParam = "BlastParam"
+            case guideHitCollisionType = "GuideHitCollisionType"
+            case hitWallPitchToPlane = "HitWallPitchToPlane"
+            case hitWallReboundResetFrame = "HitWallReboundResetFrame"
+            case riseFrame = "RiseFrame"
+            case spawnSpeedY = "SpawnSpeedY"
+            case spawnSpeedYWorldMin = "SpawnSpeedYWorldMin"
+            case spawnSpeedZSpecUp = "SpawnSpeedZSpecUp"
+            case waitRiseFrame = "WaitRiseFrame"
+        }
+    }
+}
+
+extension Player.Parameters.ThrowTenjinParameter.ThrowParameter {
+    public struct BlastParameter: Codable {
+        public let crossPaintCheckLength: Double
+        public let distanceDamage: [DistanceDamage]
+        public let knockBackParam: KnockbackParameter
+        public let paintOffsetY: Double
+        public let paintRadius: Double
+        public let paintTexture: String
+        
+        public enum CodingKeys: String, CodingKey {
+            case crossPaintCheckLength = "CrossPaintCheckLength"
+            case distanceDamage = "DistanceDamage"
+            case knockBackParam = "KnockBackParam"
+            case paintOffsetY = "PaintOffsetY"
+            case paintRadius = "PaintRadius"
+            case paintTexture = "PaintTexture"
         }
     }
 }

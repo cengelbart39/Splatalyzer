@@ -35,6 +35,7 @@ public enum HitEffectorType: String, Codable {
     case roller = "Roller"
     case rollerNoDamage = "Roller_NoDamage"
     case saber = "Saber"
+    case saberCancelGround = "Saber_Cancel_Ground"
     case saberChargeShot = "Saber_ChargeShot"
     case saberChargeSlash = "Saber_ChargeSlash"
     case saberShot = "Saber_Shot"

@@ -10,7 +10,7 @@ import Foundation
 public enum MainRowId: String, CaseIterable, Codable {
     // MARK: Blasters
     case grizzcoBlaster = "Blaster_Bear_Coop"
-    
+        
     case rapidBlasterPro = "Blaster_LightLong_00"
     case rapidBlasterProDeco = "Blaster_LightLong_01"
     case rapidBlasterProCoop = "Blaster_LightLong_Coop"
@@ -44,8 +44,11 @@ public enum MainRowId: String, CaseIterable, Codable {
     
     case lunaBlaster = "Blaster_Short_00"
     case lunaBlasterNeo = "Blaster_Short_01"
+    case orderBlasterReplica = "Blaster_Short_O"
     case lunaBlasterCoop = "Blaster_Short_Coop"
     case lunaBlasterMsn = "Blaster_Short_Msn"
+    
+    case blasterSdodr = "Blaster_ExtraOne_Sdodr"
     
     // MARK: Brushes
     case painbrush = "Brush_Heavy_00"
@@ -59,11 +62,14 @@ public enum MainRowId: String, CaseIterable, Codable {
     
     case octobrush = "Brush_Normal_00"
     case octobrushNouveau = "Brush_Normal_01"
+    case orderbrushReplica = "Brush_Normal_O"
     case octobrushCoop = "Brush_Normal_Coop"
     case octobrushMsn = "Brush_Normal_Msn"
     
     case brushRivalLv1 = "Brush_RivalLv1_00"
     case brushRivalLv2 = "Brush_RivalLv2_00"
+    
+    case brushSdodr = "Brush_Sdodr"
     
     // MARK: Chargers
     case grizzcoCharger = "Charger_Bear_Coop"
@@ -78,9 +84,11 @@ public enum MainRowId: String, CaseIterable, Codable {
     case bamboozler14Mk1Msn = "Charger_Light_Msn"
     
     case eliter4KScope = "Charger_LongScope_00"
+    case customEliter4KScope = "Charger_LongScope_01"
     case eliter4KScopeMsn = "Charger_LongScope_Msn"
     
     case eliter4K = "Charger_Long_00"
+    case customEliter4K = "Charger_Long_01"
     case eliter4KAMB = "Charger_Long_00_AMB"
     case eliter4KCoop = "Charger_Long_Coop"
     case eliter4KMsn = "Charger_Long_Msn"
@@ -91,6 +99,7 @@ public enum MainRowId: String, CaseIterable, Codable {
     
     case splatCharger = "Charger_Normal_00"
     case zfSplatCharger = "Charger_Normal_01"
+    case orderChargerReplica = "Charger_Normal_O"
     case splatChargerCoop = "Charger_Normal_Coop"
     case splatChargerMsn = "Charger_Normal_Msn"
     
@@ -99,8 +108,11 @@ public enum MainRowId: String, CaseIterable, Codable {
     case snipewriter5HCoop = "Charger_Pencil_Coop"
     
     case classicSquiffer = "Charger_Quick_00"
+    case newSquiffer = "Charger_Quick_01"
     case classicSquifferCoop = "Charger_Quick_Coop"
     case classicSquifferMsn = "Charger_Quick_Msn"
+    
+    case chargerSdodr = "Charger_ExtraOne_Sdodr"
     
     // MARK: Free
     case free = "Free"
@@ -114,11 +126,16 @@ public enum MainRowId: String, CaseIterable, Codable {
     case dualieSquelchersMsn = "Maneuver_Dual_Msn"
     
     case gloogaDualies = "Maneuver_Gallon_00"
+    case gloogaDualiesDeco = "Maneuver_Gallon_01"
     case gloogaDualiesCoop = "Maneuver_Gallon_Coop"
     case gloogaDualiesMsn = "Maneuver_Gallon_Msn"
     
+    case douserDualiesFF = "Maneuver_Long_00"
+    case douserDualiesFFCoop = "Maneuver_Long_Coop"
+    
     case splatDualies = "Maneuver_Normal_00"
     case enperrySplatDualies = "Maneuver_Normal_01"
+    case orderDualiesReplica = "Maneuver_Normal_O"
     case splatDualiesCoop = "Maneuver_Normal_Coop"
     case splatDualiesMsn = "Maneuver_Normal_Msn"
     
@@ -135,6 +152,8 @@ public enum MainRowId: String, CaseIterable, Codable {
     case darkTetraDualiesCoop = "Maneuver_Stepper_Coop"
     case darkTetraDualiesMsn = "Maneuver_Stepper_Msn"
     
+    case dualiesSdodr = "Maneuver_Sdodr"
+    
     // MARK: Rollers
     case carbonRoller = "Roller_Compact_00"
     case carbonRollerDeco = "Roller_Compact_01"
@@ -147,11 +166,13 @@ public enum MainRowId: String, CaseIterable, Codable {
     case dynamoRollerMsn = "Roller_Heavy_Msn"
     
     case flingzaRoller = "Roller_Hunter_00"
+    case foilFlingzaRoller = "Roller_Hunter_01"
     case flingzaRollerCoop = "Roller_Hunter_Coop"
     case flingzaRollerMsn = "Roller_Hunter_Msn"
     
     case splatRoller = "Roller_Normal_00"
     case krakOnSplatRoller = "Roller_Normal_01"
+    case orderRollerReplica = "Roller_Normal_O"
     case splatRollerCoop = "Roller_Normal_Coop"
     case splatRollerMsn = "Roller_Normal_Msn"
     
@@ -162,6 +183,8 @@ public enum MainRowId: String, CaseIterable, Codable {
     case bigSwigRollerExpress = "Roller_Wide_01"
     case bigSwigRollerCoop = "Roller_Wide_Coop"
     
+    case rollerSdodr = "Roller_Sdodr"
+    
     // MARK: Splatanas
     case grizzcoSplatana = "Saber_Bear_Coop"
     
@@ -171,9 +194,12 @@ public enum MainRowId: String, CaseIterable, Codable {
     case splatanaWiperMsn = "Saber_Lite_Msn"
     
     case splatanaStamper = "Saber_Normal_00"
-    case neoSplatanaStamper = "Saber_Normal_01"
+    case splatanaStamperNouveau = "Saber_Normal_01"
+    case orderSplatanaReplica = "Saber_Normal_O"
     case splatanaStamperCoop = "Saber_Normal_Coop"
     case splatanaStamperMsn = "Saber_Normal_Msn"
+    
+    case splatanaSdodr = "Saber_Sdodr"
     
     // MARK: Brellas
     case grizzcoBrella = "Shelter_Bear_Coop"
@@ -183,8 +209,12 @@ public enum MainRowId: String, CaseIterable, Codable {
     case undercoverBrellaCoop = "Shelter_Compact_Coop"
     case undercoverBrellaMsn = "Shelter_Compact_Msn"
     
+    case recycledBrella24MkI = "Shelter_Focus_00"
+    case recycledBrella24MkICoop = "Shelter_Focus_Coop"
+    
     case splatBrella = "Shelter_Normal_00"
     case sorellaBrella = "Shelter_Normal_01"
+    case orderBrellaReplica = "Shelter_Normal_O"
     case splatBrellaCoop = "Shelter_Normal_Coop"
     case splatBrellaMsn = "Shelter_Normal_Msn"
     
@@ -195,6 +225,8 @@ public enum MainRowId: String, CaseIterable, Codable {
     case tentaSorellaBrella = "Shelter_Wide_01"
     case tentaBrellaCoop = "Shelter_Wide_Coop"
     case tentaBrellaMsn = "Shelter_Wide_Msn"
+    
+    case brellaSdodr = "Shelter_Sdodr"
     
     // MARK: Shooters
     case aerosprayMG = "Shooter_Blaze_00"
@@ -218,6 +250,7 @@ public enum MainRowId: String, CaseIterable, Codable {
     case squeezerMsn = "Shooter_Flash_Msn"
     
     case _52Gal = "Shooter_Gravity_00"
+    case _52GalDeco = "Shooter_Gravity_01"
     case _52GalCoop = "Shooter_Gravity_Coop"
     case _52GalMsn = "Shooter_Gravity_Msn"
     
@@ -240,6 +273,8 @@ public enum MainRowId: String, CaseIterable, Codable {
     case splattershotAMB2 = "Shooter_Normal_00_AMB_2"
     case tentatekSplattershot = "Shooter_Normal_01"
     case tentatekSplattershotAMB1 = "Shooter_Normal_01_AMB_1"
+    case orderShotReplica = "Shooter_Normal_O"
+    case octoShotReplica = "Shooter_Normal_Oct"
     case splattershotCoop = "Shooter_Normal_Coop"
     case heroShot = "Shooter_Normal_H"
     case splattershotMsn = "Shooter_Normal_Msn"
@@ -276,6 +311,9 @@ public enum MainRowId: String, CaseIterable, Codable {
     case l3NozzlenoseCoop = "Shooter_TripleQuick_Coop"
     case l3NozzlenoseMsn = "Shooter_TripleQuick_Msn"
     
+    case shooterSdodr1 = "Shooter_ExtraOne_Sdodr"
+    case shooterSdodr2 = "Shooter_ExtraTwo_Sdodr"
+    
     // MARK: Slosher
     case bloblobber = "Slosher_Bathtub_00"
     case bloblobberDeco = "Slosher_Bathtub_01"
@@ -290,6 +328,7 @@ public enum MainRowId: String, CaseIterable, Codable {
     case triSlosherMsn = "Slosher_Diffusion_Msn"
     
     case dreadWringer = "Slosher_Double_00"
+    case dreadWringerD = "Slosher_Double_01"
     case dreadWringerCoop = "Slosher_Double_Coop"
     
     case sloshingMachine = "Slosher_Launcher_00"
@@ -302,12 +341,16 @@ public enum MainRowId: String, CaseIterable, Codable {
     
     case slosher = "Slosher_Strong_00"
     case slosherDeco = "Slosher_Strong_01"
+    case orderSlosherReplica = "Slosher_Strong_O"
     case slosherCoop = "Slosher_Strong_Coop"
     case slosherMsn = "Slosher_Strong_Msn"
     
     case explosher = "Slosher_Washtub_00"
+    case customExplosher = "Slosher_Washtub_01"
     case explosherCoop = "Slosher_Washtub_Coop"
     case explosherMsn = "Slosher_Washtub_Msn"
+    
+    case slosherSdodr = "Slosher_Sdodr"
     
     // MARK: Splatlings
     case ballpointSplatling = "Spinner_Downpour_00"
@@ -328,25 +371,32 @@ public enum MainRowId: String, CaseIterable, Codable {
     case miniSplatlingMsn = "Spinner_Quick_Msn"
     
     case nautilus47 = "Spinner_Serein_00"
+    case nautilus79 = "Spinner_Serein_01"
     case nautilus47Coop = "Spinner_Serein_Coop"
     case nautilus47Msn = "Spinner_Serein_Msn"
     
     case heavySplatling = "Spinner_Standard_00"
     case heavySplatlingDeco = "Spinner_Standard_01"
+    case orderSplatlingReplica = "Spinner_Standard_O"
     case heavySplatlingCoop = "Spinner_Standard_Coop"
     case heavySplatlingMsn = "Spinner_Standard_Msn"
+    
+    case splatlingSdodr = "Spinner_Sdodr"
     
     // MARK: Stringer
     case grizzcoStringer = "Stringer_Bear_Coop"
     
     case triStringer = "Stringer_Normal_00"
     case inklineTriStringer = "Stringer_Normal_01"
+    case orderStringerReplica = "Stringer_Normal_O"
     case triStringerCoop = "Stringer_Normal_Coop"
     case triStringerMsn = "Stringer_Normal_Msn"
     
     case reeflux450 = "Stringer_Short_00"
     case reeflux450Deco = "Stringer_Short_01"
     case reeflux450Coop = "Stringer_Short_Coop"
+    
+    case stringerSdodr = "Stringer_Sdodr"
 }
 
 extension MainRowId {

@@ -12,6 +12,11 @@ final class BrellaDecodingTests: XCTestCase {
 
     let service = JSONService()
     
+    func test_RecycledBrella24_decode_noThrows() {
+        let fileName = "WeaponShelterFocus.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(Brella.self, from: fileName))
+    }
+    
     func test_SplatBrella_decode_noThrows() {
         let fileName = "WeaponShelterNormal.game__GameParameterTable"
         XCTAssertNoThrow(try service.decode(Brella.self, from: fileName))

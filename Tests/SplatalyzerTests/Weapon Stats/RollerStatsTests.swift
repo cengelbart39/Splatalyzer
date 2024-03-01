@@ -199,9 +199,7 @@ final class RollerStatsTests: XCTestCase {
         
         do {
             let stats = try self.analyzer.analyze(self.options)
-            
-            print(stats)
-                                    
+                                                
             let mainStats = stats.mainStats
             XCTAssertEqual(mainStats.weapon, .flingzaRoller)
             XCTAssertFalse(mainStats.exists())
@@ -223,6 +221,35 @@ final class RollerStatsTests: XCTestCase {
             XCTFail("Flingza Roller: \(error.localizedDescription)")
         }
     }
+    
+    func test_Splatalyzer_analyze_foilFlingzaRoller_properties() {
+        self.options.mainWeapon = .foilFlingzaRoller
+        
+        do {
+            let stats = try self.analyzer.analyze(self.options)
+                                                
+            let mainStats = stats.mainStats
+            XCTAssertEqual(mainStats.weapon, .foilFlingzaRoller)
+            XCTAssertFalse(mainStats.exists())
+
+            let inkTankOptions = stats.fullInkTankOptions
+            XCTAssertFalse(inkTankOptions.isEmpty)
+            XCTAssertTrue(inkTankOptions.contains(type: .verticalSwing))
+            XCTAssertTrue(inkTankOptions.contains(type: .horizontalSwing))
+
+            let mainDamages = stats.mainDamages
+            XCTAssertFalse(mainDamages.isEmpty)
+            XCTAssertTrue(mainDamages.contains(type: .splashVerticalMax))
+            XCTAssertTrue(mainDamages.contains(type: .splashVerticalMin))
+            XCTAssertTrue(mainDamages.contains(type: .splashHorizontalMax))
+            XCTAssertTrue(mainDamages.contains(type: .splashHorizontalMin))
+            XCTAssertTrue(mainDamages.contains(type: .rollOver))
+            
+        } catch {
+            XCTFail("Flingza Roller: \(error.localizedDescription)")
+        }
+    }
+
 
     // MARK: - Splat Roller
     func test_Splatalyzer_analyze_splatRoller_properties() {
@@ -280,5 +307,34 @@ final class RollerStatsTests: XCTestCase {
             XCTFail("Krak-On Splat Roller: \(error.localizedDescription)")
         }
     }
+    
+    func test_Splatalyzer_analyze_orderRollerReplica_properties() {
+        self.options.mainWeapon = .orderRollerReplica
+        
+        do {
+            let stats = try self.analyzer.analyze(self.options)
+                                                
+            let mainStats = stats.mainStats
+            XCTAssertEqual(mainStats.weapon, .orderRollerReplica)
+            XCTAssertFalse(mainStats.exists())
+
+            let inkTankOptions = stats.fullInkTankOptions
+            XCTAssertFalse(inkTankOptions.isEmpty)
+            XCTAssertTrue(inkTankOptions.contains(type: .verticalSwing))
+            XCTAssertTrue(inkTankOptions.contains(type: .horizontalSwing))
+
+            let mainDamages = stats.mainDamages
+            XCTAssertFalse(mainDamages.isEmpty)
+            XCTAssertTrue(mainDamages.contains(type: .splashVerticalMax))
+            XCTAssertTrue(mainDamages.contains(type: .splashVerticalMin))
+            XCTAssertTrue(mainDamages.contains(type: .splashHorizontalMax))
+            XCTAssertTrue(mainDamages.contains(type: .splashHorizontalMin))
+            XCTAssertTrue(mainDamages.contains(type: .rollOver))
+            
+        } catch {
+            XCTFail("Splat Roller: \(error.localizedDescription)")
+        }
+    }
+
 
 }

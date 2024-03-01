@@ -21,7 +21,8 @@ public struct StatHelper {
         .reeflux450Deco : 3,
         .bloblobber : 4,
         .bloblobberDeco : 4,
-        .dreadWringer : 2
+        .dreadWringer : 2,
+        .dreadWringerD : 2
     ]
     
     

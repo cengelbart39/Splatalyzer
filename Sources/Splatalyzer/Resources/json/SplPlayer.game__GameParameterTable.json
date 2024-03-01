@@ -478,6 +478,46 @@
           "Mid": 1.12
         }
       }
+    },
+    "spl__ThrowTenjinParam": {
+      "$type": "spl__ThrowTenjinParam",
+      "AdditionMoveParam": {
+        "XRate": 1.6,
+        "YMax": 0.32,
+        "YPlusRate": 4.0,
+        "ZRate": 2.0
+      },
+      "ThrowParam": {
+        "BlastParam": {
+          "CrossPaintCheckLength": 0.0,
+          "DistanceDamage": [
+            {
+              "Damage": 300,
+              "Distance": 5.2
+            }
+          ],
+          "KnockBackParam": {
+            "Accel": 470.0,
+            "Bias": 0.8,
+            "Distance": 9.0
+          },
+          "PaintOffsetY": -2.8,
+          "PaintRadius": 3.45,
+          "PaintTexture": "Bomb00Tenjin"
+        },
+        "GuideHitCollisionType": "EnemyOffFenceOn",
+        "HitWallPitchToPlane": 5.0,
+        "HitWallReboundResetFrame": 12,
+        "RiseFrame": 38,
+        "SpawnSpeedY": 0.24,
+        "SpawnSpeedYWorldMin": -0.4,
+        "SpawnSpeedZSpecUp": {
+          "High": 1.4,
+          "Low": 1.4,
+          "Mid": 1.4
+        },
+        "WaitRiseFrame": 22
+      }
     }
   }
 }

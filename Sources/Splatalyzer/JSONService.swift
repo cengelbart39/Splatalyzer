@@ -30,6 +30,7 @@ public struct JSONService {
                 return try JSONDecoder().decode(T.self, from: data)
                 
             } catch DecodingError.keyNotFound(let key, let context) {
+                print(context.codingPath)
                 throw JSONError.decode("Failed to decode '\(file)' due to missing key '\(key.stringValue)': \(context.debugDescription)")
                 
             } catch DecodingError.typeMismatch(_, let context) {

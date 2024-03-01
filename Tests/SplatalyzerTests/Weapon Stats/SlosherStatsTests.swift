@@ -109,6 +109,36 @@ final class SlosherStatsTests: XCTestCase {
             XCTFail("Dread Wringer: \(error.localizedDescription)")
         }
     }
+    
+    func test_Splatalyzer_analyze_dreadWringerD_properties() {
+        self.options.mainWeapon = .dreadWringerD
+        
+        do {
+            let stats = try self.analyzer.analyze(self.options)
+
+            let mainStats = stats.mainStats
+            XCTAssertEqual(mainStats.weapon, .dreadWringerD)
+            XCTAssertNotNil(mainStats.whiteInkSeconds)
+
+            let moveStats = stats.moveStats
+            XCTAssertNotNil(moveStats.shootingRunSpeed)
+            
+            XCTAssertNotNil(stats.multiShots)
+            
+            let inkTankOptions = stats.fullInkTankOptions
+            XCTAssertFalse(inkTankOptions.isEmpty)
+            XCTAssertTrue(inkTankOptions.contains(type: .slosh))
+            
+            let mainDamages = stats.mainDamages
+            XCTAssertFalse(mainDamages.isEmpty)
+            XCTAssertTrue(mainDamages.contains(type: .directMax))
+            XCTAssertTrue(mainDamages.contains(type: .directMin))
+            
+        } catch {
+            XCTFail("Dread Wringer: \(error.localizedDescription)")
+        }
+    }
+
 
     // MARK: - Explosher
     func test_Splatalyzer_analyze_explosher_properties() {
@@ -137,6 +167,34 @@ final class SlosherStatsTests: XCTestCase {
             XCTFail("Explosher: \(error.localizedDescription)")
         }
     }
+    
+    func test_Splatalyzer_analyze_customExplosher_properties() {
+        self.options.mainWeapon = .customExplosher
+        
+        do {
+            let stats = try self.analyzer.analyze(self.options)
+
+            let mainStats = stats.mainStats
+            XCTAssertEqual(mainStats.weapon, .customExplosher)
+            XCTAssertNotNil(mainStats.whiteInkSeconds)
+
+            let moveStats = stats.moveStats
+            XCTAssertNotNil(moveStats.shootingRunSpeed)
+                        
+            let inkTankOptions = stats.fullInkTankOptions
+            XCTAssertFalse(inkTankOptions.isEmpty)
+            XCTAssertTrue(inkTankOptions.contains(type: .slosh))
+            
+            let mainDamages = stats.mainDamages
+            XCTAssertFalse(mainDamages.isEmpty)
+            XCTAssertTrue(mainDamages.contains(type: .direct))
+            XCTAssertTrue(mainDamages.contains(type: .splash))
+            
+        } catch {
+            XCTFail("Explosher: \(error.localizedDescription)")
+        }
+    }
+
 
     // MARK: - Slosher
     func test_Splatalyzer_analyze_slosher_properties() {
@@ -196,6 +254,36 @@ final class SlosherStatsTests: XCTestCase {
             XCTFail("Slosher Deco: \(error.localizedDescription)")
         }
     }
+    
+    func test_Splatalyzer_analyze_orderSlosherReplica_properties() {
+        self.options.mainWeapon = .orderSlosherReplica
+        
+        do {
+            let stats = try self.analyzer.analyze(self.options)
+
+            let mainStats = stats.mainStats
+            XCTAssertEqual(mainStats.weapon, .orderSlosherReplica)
+            XCTAssertNotNil(mainStats.whiteInkSeconds)
+
+            let moveStats = stats.moveStats
+            XCTAssertNotNil(moveStats.shootingRunSpeed)
+                        
+            let inkTankOptions = stats.fullInkTankOptions
+            XCTAssertFalse(inkTankOptions.isEmpty)
+            XCTAssertTrue(inkTankOptions.contains(type: .slosh))
+            
+            let mainDamages = stats.mainDamages
+            XCTAssertFalse(mainDamages.isEmpty)
+            XCTAssertTrue(mainDamages.contains(type: .directMax))
+            XCTAssertTrue(mainDamages.contains(type: .directMin))
+            XCTAssertTrue(mainDamages.contains(type: .directSecondaryMax))
+            XCTAssertTrue(mainDamages.contains(type: .directSecondaryMin))
+            
+        } catch {
+            XCTFail("Slosher: \(error.localizedDescription)")
+        }
+    }
+
 
     // MARK: - Sloshing Machine
     func test_Splatalyzer_analyze_sloshingMachine_properties() {

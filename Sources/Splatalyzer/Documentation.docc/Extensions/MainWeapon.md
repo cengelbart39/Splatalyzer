@@ -14,8 +14,11 @@
 - ``aerosprayRG``
 - ``splattershot``
 - ``tentatekSplattershot``
-- ``heroShot``
+- ``heroShotReplica``
+- ``orderShotReplica``
+- ``octoShotReplica``
 - ``gal52``
+- ``gal52Deco``
 - ``nzap85``
 - ``nzap89``
 - ``splattershotPro``
@@ -38,20 +41,26 @@
 - ``carbonRollerDeco``
 - ``splatRoller``
 - ``krakOnSplatRoller``
+- ``orderRollerReplica``
 - ``dynamoRoller``
 - ``goldDynamoRoller``
 - ``flingzaRoller``
+- ``foilFlingzaRoller``
 - ``bigSwigRoller``
 - ``bigSwigRollerExpress``
 
 ### Chargers
 - ``classicSquiffer``
+- ``newSquiffer``
 - ``splatCharger``
 - ``zfSplatCharger``
+- ``orderChargerReplica``
 - ``splatterscope``
 - ``zfSplatterscope``
 - ``eliter4K``
+- ``customEliter4K``
 - ``eliter4KScope``
+- ``customEliter4KScope``
 - ``bamboozler14Mk1``
 - ``gooTuber``
 - ``customGooTuber``
@@ -61,6 +70,7 @@
 ### Sloshers
 - ``slosher``
 - ``slosherDeco``
+- ``orderSlosherReplica``
 - ``triSlosher``
 - ``triSlosherNouveau``
 - ``sloshingMachine``
@@ -68,17 +78,21 @@
 - ``bloblobber``
 - ``bloblobberDeco``
 - ``explosher``
+- ``customExplosher``
 - ``dreadWringer``
+- ``dreadWringerD``
 
 ### Splatlings
 - ``miniSplatling``
 - ``zinkMiniSplatling``
 - ``heavySplatling``
 - ``heavySplatlingDeco``
+- ``orderSplatlingReplica``
 - ``hydraSplatling``
 - ``ballpointSplatling``
 - ``ballpointSplatlingNouveau``
 - ``nautilus47``
+- ``nautilus79``
 - ``heavyEditSplatling``
 
 ### Dualies
@@ -86,23 +100,29 @@
 - ``dappleDualiesNouveau``
 - ``splatDualies``
 - ``enperrySplatDualies``
+- ``orderDualiesReplica``
 - ``gloogaDualies``
+- ``gloogaDualiesDeco``
 - ``dualieSquelchers``
 - ``customDualieSquelchers``
 - ``darkTetraDualies``
 - ``lightTetraDualies``
+- ``douserDualiesFF``
 
 ### Brellas
 - ``splatBrella``
 - ``sorellaBrella``
+- ``orderBrellaReplica``
 - ``tentaBrella``
 - ``tentaSorellaBrella``
 - ``undercoverBrella``
 - ``undercoverSorellaBrella``
+- ``recycledBrella24MkI``
 
 ### Blasters
 - ``lunaBlaster``
 - ``lunaBlasterNeo``
+- ``orderBlasterReplica``
 - ``blaster``
 - ``customBlaster``
 - ``rangeBlaster``
@@ -120,17 +140,20 @@
 - ``inkbrushNouveau``
 - ``octobrush``
 - ``octobrushNouveau``
+- ``orderbrushReplica``
 - ``painbrush``
 - ``painbrushNouveau``
 
 ### Stringers
 - ``triStringer``
 - ``inklineTriStringer``
+- ``orderStringerReplica``
 - ``reeflux450``
 - ``reeflux450Deco``
 
 ### Splatanas
 - ``splatanaStamper``
-- ``neoSplatanaStamper``
+- ``splatanaStamperNouveau``
+- ``orderSplatanaReplica``
 - ``splatanaWiper``
 - ``splatanaWiperDeco``

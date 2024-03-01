@@ -173,6 +173,36 @@ final class SplatlingStatsTests: XCTestCase {
             XCTFail("Heavy Splatling Deco: \(error.localizedDescription)")
         }
     }
+    
+    func test_Splatalyzer_analyze_orderSplatlingReplica_properties() {
+        self.options.mainWeapon = .orderSplatlingReplica
+        
+        do {
+            let stats = try self.analyzer.analyze(self.options)
+
+            let mainStats = stats.mainStats
+            XCTAssertEqual(mainStats.weapon, .orderSplatlingReplica)
+            XCTAssertNotNil(mainStats.shotSpreadAir)
+            XCTAssertNotNil(mainStats.shotSpreadGround)
+            XCTAssertNotNil(mainStats.whiteInkSeconds)
+            
+            let moveStats = stats.moveStats
+            XCTAssertNotNil(moveStats.shootingRunSpeed)
+
+            let inkTankOptions = stats.fullInkTankOptions
+            XCTAssertFalse(inkTankOptions.isEmpty)
+            XCTAssertTrue(inkTankOptions.contains(type: .splatlingCharge))
+
+            let mainDamages = stats.mainDamages
+            XCTAssertFalse(mainDamages.isEmpty)
+            XCTAssertTrue(mainDamages.contains(type: .normalMaxFullCharge))
+            XCTAssertTrue(mainDamages.contains(type: .normalMin))
+            
+        } catch {
+            XCTFail("Heavy Splatling: \(error.localizedDescription)")
+        }
+    }
+
 
     // MARK: - Hydra Splatling
     func test_Splatalyzer_analyze_hydraSplatling_properties() {
@@ -298,5 +328,35 @@ final class SplatlingStatsTests: XCTestCase {
         }
     }
 
+    func test_Splatalyzer_analyze_nautilus79_properties() {
+        self.options.mainWeapon = .nautilus79
+        
+        do {
+            let stats = try self.analyzer.analyze(self.options)
+
+            let mainStats = stats.mainStats
+            XCTAssertEqual(mainStats.weapon, .nautilus79)
+            XCTAssertNotNil(mainStats.shotSpreadAir)
+            XCTAssertNotNil(mainStats.shotSpreadGround)
+            XCTAssertNotNil(mainStats.whiteInkSeconds)
+            XCTAssertNotNil(mainStats.maxChargeSeconds)
+
+            let moveStats = stats.moveStats
+            XCTAssertNotNil(moveStats.shootingRunSpeed)
+            XCTAssertNotNil(moveStats.shootingRunSpeedCharging)
+
+            let inkTankOptions = stats.fullInkTankOptions
+            XCTAssertFalse(inkTankOptions.isEmpty)
+            XCTAssertTrue(inkTankOptions.contains(type: .splatlingCharge))
+
+            let mainDamages = stats.mainDamages
+            XCTAssertFalse(mainDamages.isEmpty)
+            XCTAssertTrue(mainDamages.contains(type: .normalMaxFullCharge))
+            XCTAssertTrue(mainDamages.contains(type: .normalMin))
+            
+        } catch {
+            XCTFail("Nautilus 47: \(error.localizedDescription)")
+        }
+    }
 
 }

@@ -158,9 +158,7 @@ final class SpecialDataTests: XCTestCase {
             
             let data = SpecialWeaponData(container: gameParams)
             let overwrites = data.overwrites as! SpecialOverwrites
-            
-            print(data)
-            
+                        
             XCTAssertEqual(data.id, .reefslider)
             XCTAssertFalse(data.distanceDamage.isEmpty)
             XCTAssertNotNil(overwrites.distanceDamageDistanceRate)
@@ -213,9 +211,7 @@ final class SpecialDataTests: XCTestCase {
             
             let data = SpecialWeaponData(container: gameParams)
             let overwrites = data.overwrites as! SpecialOverwrites
-            
-            print(data)
-            
+                        
             XCTAssertEqual(data.id, .tacticooler)
             XCTAssertNotNil(overwrites.powerUpFrame)
             
@@ -230,9 +226,7 @@ final class SpecialDataTests: XCTestCase {
             
             let data = SpecialWeaponData(container: gameParams)
             let overwrites = data.overwrites as! SpecialOverwrites
-            
-            print(data)
-            
+                        
             XCTAssertEqual(data.id, .tentaMissiles)
             XCTAssertFalse(data.distanceDamage.isEmpty)
             XCTAssertNotNil(overwrites.targetInCircleRadius)
@@ -263,9 +257,7 @@ final class SpecialDataTests: XCTestCase {
             
             let data = SpecialWeaponData(container: gameParams)
             let overwrites = data.overwrites as! SpecialOverwrites
-            
-            print(data)
-            
+                        
             XCTAssertEqual(data.id, .tripleSplashdown)
             XCTAssertFalse(data.distanceDamage.isEmpty)
             XCTAssertNotNil(overwrites.distanceDamageDistanceRate)
@@ -282,9 +274,7 @@ final class SpecialDataTests: XCTestCase {
             
             let data = SpecialWeaponData(container: gameParams)
             let overwrites = data.overwrites as! SpecialOverwrites
-            
-            print(data)
-            
+                        
             XCTAssertEqual(data.id, .trizooka)
             XCTAssertNotNil(data.directDamage)
             XCTAssertFalse(data.distanceDamage.isEmpty)

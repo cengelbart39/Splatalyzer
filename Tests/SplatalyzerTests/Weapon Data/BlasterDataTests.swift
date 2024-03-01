@@ -180,6 +180,33 @@ final class BlasterDataTests: XCTestCase {
         }
     }
     
+    func test_OrderBlasterReplica_properties() {
+        do {
+            let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterShort.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .orderBlasterReplica)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+                                    
+            XCTAssertEqual(data.mainWeaponId, .orderBlasterReplica)
+            XCTAssertEqual(data.subWeapon, .splatBomb)
+            XCTAssertEqual(data.specialWeapon, .zipcaster)
+            XCTAssertEqual(data.weaponSpeedType, .fast)
+            XCTAssertNotNil(data.moveSpeed)
+            XCTAssertNotNil(data.damageValueMax)
+            XCTAssertNotNil(data.damageValueDirect)
+            XCTAssertEqual(data.blastDamageDistance.count, 2)
+            XCTAssertNotNil(data.jumpDegSwerve)
+            XCTAssertNotNil(data.standDegSwerve)
+            XCTAssertNotNil(data.inkRecoverStop)
+            XCTAssertNotNil(data.inkConsume)
+
+            
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
+    
     // MARK: - Range Blaster
     func test_RangeBlaster_properties() {
         do {

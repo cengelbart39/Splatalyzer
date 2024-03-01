@@ -22,6 +22,30 @@ final class BrellaDataTests: XCTestCase {
         self.weaponInfo = nil
     }
 
+    // MARK: - Recycled Brella 24
+    func test_RecycledBrella24Mk1_properties() {
+        do {
+            let gameParams = try service.decode(Brella.self, from: "WeaponShelterFocus.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .recycledBrella24MkI)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+                        
+            XCTAssertEqual(data.mainWeaponId, .recycledBrella24MkI)
+            XCTAssertEqual(data.subWeapon, .angleShooter)
+            XCTAssertEqual(data.specialWeapon, .bigBubbler)
+            XCTAssertEqual(data.weaponSpeedType, .mid)
+            XCTAssertNotNil(data.moveSpeed)
+            XCTAssertNotNil(data.damageValueMax)
+            XCTAssertNotNil(data.canopyHP)
+            XCTAssertNotNil(data.inkConsumeUmbrellaShelterCanopy)
+            XCTAssertNotNil(data.inkConsumeWeaponShelterShotgun)
+            
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
+    
     // MARK: - Splat Brella
     func test_SplatBrella_properties() {
         do {
@@ -60,6 +84,26 @@ final class BrellaDataTests: XCTestCase {
             XCTFail(error.localizedDescription)
         }
     }
+    
+    func test_OrderBrellaReplica_properties() {
+        do {
+            let gameParams = try service.decode(Brella.self, from: "WeaponShelterNormal.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .orderBrellaReplica)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+            
+            XCTAssertEqual(data.mainWeaponId, .orderBrellaReplica)
+            XCTAssertEqual(data.subWeapon, .sprinkler)
+            XCTAssertEqual(data.specialWeapon, .tripleInkstrike)
+            XCTAssertNotNil(data.damageValueMax)
+            XCTAssertNotNil(data.inkConsumeUmbrellaShelterCanopy)
+            XCTAssertNotNil(data.inkConsumeWeaponShelterShotgun)
+            
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
     
     // MARK: - Tenta Brella
     func test_TentaBrella_properties() {

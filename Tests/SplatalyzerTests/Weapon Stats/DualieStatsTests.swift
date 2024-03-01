@@ -81,6 +81,39 @@ final class DualieStatsTests: XCTestCase {
             XCTFail("Dapple Dualies Nouveau: \(error.localizedDescription)")
         }
     }
+    
+    // MARK: - Douser Dualies FF
+    func test_Splatalyzer_analyze_douserDualiesFF_properties() {
+        self.options.mainWeapon = .douserDualiesFF
+        
+        do {
+            let stats = try self.analyzer.analyze(self.options)
+                                                
+            let mainStats = stats.mainStats
+            XCTAssertEqual(mainStats.weapon, .douserDualiesFF)
+            XCTAssertNotNil(mainStats.shotSpreadAir)
+            XCTAssertNotNil(mainStats.shotSpreadGround)
+            
+            let moveStats = stats.moveStats
+            XCTAssertNotNil(moveStats.shootingRunSpeed)
+
+            let inkTankOptions = stats.fullInkTankOptions
+            XCTAssertFalse(inkTankOptions.isEmpty)
+            XCTAssertTrue(inkTankOptions.contains(type: .normal))
+            XCTAssertTrue(inkTankOptions.contains(type: .dualieRoll))
+
+            let mainDamages = stats.mainDamages
+            XCTAssertFalse(mainDamages.isEmpty)
+            XCTAssertTrue(mainDamages.contains(type: .turretMax))
+            XCTAssertTrue(mainDamages.contains(type: .turretMin))
+            XCTAssertTrue(mainDamages.contains(type: .normalMax))
+            XCTAssertTrue(mainDamages.contains(type: .normalMin))
+            
+        } catch {
+            XCTFail("Dualie Squelchers: \(error.localizedDescription)")
+        }
+    }
+
 
     // MARK: - Dualie Squelchers
     func test_Splatalyzer_analyze_dualieSquelchers_properties() {
@@ -172,6 +205,37 @@ final class DualieStatsTests: XCTestCase {
             XCTFail("Glooga Dualies: \(error.localizedDescription)")
         }
     }
+    
+    func test_Splatalyzer_analyze_gloogaDualiesDeco_properties() {
+        self.options.mainWeapon = .gloogaDualiesDeco
+        
+        do {
+            let stats = try self.analyzer.analyze(self.options)
+                                    
+            let mainStats = stats.mainStats
+            XCTAssertEqual(mainStats.weapon, .gloogaDualiesDeco)
+            XCTAssertNotNil(mainStats.shotSpreadAir)
+            XCTAssertNotNil(mainStats.shotSpreadGround)
+            
+            let moveStats = stats.moveStats
+            XCTAssertNotNil(moveStats.shootingRunSpeed)
+
+            let inkTankOptions = stats.fullInkTankOptions
+            XCTAssertFalse(inkTankOptions.isEmpty)
+            XCTAssertTrue(inkTankOptions.contains(type: .normal))
+            XCTAssertTrue(inkTankOptions.contains(type: .dualieRoll))
+
+            let mainDamages = stats.mainDamages
+            XCTAssertFalse(mainDamages.isEmpty)
+            XCTAssertTrue(mainDamages.contains(type: .turretMax))
+            XCTAssertTrue(mainDamages.contains(type: .turretMin))
+            XCTAssertTrue(mainDamages.contains(type: .normalMax))
+            XCTAssertTrue(mainDamages.contains(type: .normalMin))
+            
+        } catch {
+            XCTFail("Glooga Dualies: \(error.localizedDescription)")
+        }
+    }
 
     // MARK: - Splat Dualies
     func test_Splatalyzer_analyze_splatDualies_properties() {
@@ -229,6 +293,35 @@ final class DualieStatsTests: XCTestCase {
             
         } catch {
             XCTFail("Enperry Splat Dualies: \(error.localizedDescription)")
+        }
+    }
+    
+    func test_Splatalyzer_analyze_orderDualiesReplica_properties() {
+        self.options.mainWeapon = .orderDualiesReplica
+        
+        do {
+            let stats = try self.analyzer.analyze(self.options)
+                                    
+            let mainStats = stats.mainStats
+            XCTAssertEqual(mainStats.weapon, .orderDualiesReplica)
+            XCTAssertNotNil(mainStats.shotSpreadAir)
+            XCTAssertNotNil(mainStats.shotSpreadGround)
+            
+            let moveStats = stats.moveStats
+            XCTAssertNotNil(moveStats.shootingRunSpeed)
+
+            let inkTankOptions = stats.fullInkTankOptions
+            XCTAssertFalse(inkTankOptions.isEmpty)
+            XCTAssertTrue(inkTankOptions.contains(type: .normal))
+            XCTAssertTrue(inkTankOptions.contains(type: .dualieRoll))
+
+            let mainDamages = stats.mainDamages
+            XCTAssertFalse(mainDamages.isEmpty)
+            XCTAssertTrue(mainDamages.contains(type: .normalMax))
+            XCTAssertTrue(mainDamages.contains(type: .normalMin))
+            
+        } catch {
+            XCTFail("Splat Dualies: \(error.localizedDescription)")
         }
     }
 
