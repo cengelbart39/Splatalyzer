@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build
-      run: xcodebuild -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -verbose | xcpretty
+      run: xcodebuild build-for-testing -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -verbose | xcpretty
     - name: General Tests
       run: xcodebuild test-without-building -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan 'Splatalyzer-Package' -verbose | xcpretty
     - name: Tests for English
