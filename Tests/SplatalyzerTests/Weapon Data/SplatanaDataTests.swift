@@ -23,7 +23,7 @@ final class SplatanaDataTests: XCTestCase {
     }
 
     // MARK: - Splatana Stamper
-    func test_SplatanaStamper_properties() {
+    func test_MainWeaponData_init_Splatana_splatanaStamper() {
         do {
             let gameParams = try service.decode(Splatana.self, from: "WeaponSaberNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .splatanaStamper)!
@@ -46,7 +46,7 @@ final class SplatanaDataTests: XCTestCase {
         }
     }
 
-    func test_SplatanaStamperNouveau_properties() {
+    func test_MainWeaponData_init_Splatana_splatanaStamperNouveau() {
         do {
             let gameParams = try service.decode(Splatana.self, from: "WeaponSaberNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .splatanaStamperNouveau)!
@@ -69,7 +69,7 @@ final class SplatanaDataTests: XCTestCase {
         }
     }
     
-    func test_OrderSplatanaReplica_properties() {
+    func test_MainWeaponData_init_Splatana_orderSplatanaReplica() {
         do {
             let gameParams = try service.decode(Splatana.self, from: "WeaponSaberNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .orderSplatanaReplica)!
@@ -93,7 +93,7 @@ final class SplatanaDataTests: XCTestCase {
     }
 
     // MARK: - Splatana Wiper
-    func test_SplatanaWiper_properties() {
+    func test_MainWeaponData_init_Splatana_splatanaWiper() {
         do {
             let gameParams = try service.decode(Splatana.self, from: "WeaponSaberLite.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .splatanaWiper)!
@@ -116,7 +116,7 @@ final class SplatanaDataTests: XCTestCase {
         }
     }
 
-    func test_SplatanaWiperDeco_properties() {
+    func test_MainWeaponData_init_Splatana_splatanaWiperDeco() {
         do {
             let gameParams = try service.decode(Splatana.self, from: "WeaponSaberLite.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .splatanaWiperDeco)!

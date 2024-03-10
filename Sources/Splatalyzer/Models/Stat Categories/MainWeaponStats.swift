@@ -48,6 +48,31 @@ public struct MainWeaponStats: Codable, Equatable {
         self.maxChargeSeconds = maxChargeSeconds
     }
     
+    public init(
+        weapon: MainWeapon,
+        ap: AbilityPoints,
+        values: AbilityValues,
+        data: MainWeaponData
+    ) {
+        self.weapon = weapon
+        
+        self.shotSpreadAir = StatHelper.shotSpreadAir(ap: ap, values: values, mainInfo: data)
+        
+        self.shotSpreadGround = data.standDegSwerve
+        
+        self.shotAutofireSpreadAir = StatHelper.shotAutofireSpreadAir(ap: ap, values: values, mainInfo: data)
+        
+        self.shotAutofireSpreadGround = data.variableStandDegSwerve
+        
+        self.whiteInkSeconds = data.inkRecoverStop?.framesToSeconds()
+        
+        self.brellaCanopyHp = data.canopyHP != nil ? data.canopyHP! / 10 : nil
+        
+        self.fullChargeSeconds = data.chargeFrameFullCharge?.framesToSeconds()
+        
+        self.maxChargeSeconds = data.keepChargeFullFrame?.framesToSeconds()
+    }
+    
     /// Checks if any property (besides ``weapon`` exists).
     ///
     /// This structure, uniquely, may have all of its properties be `nil`.

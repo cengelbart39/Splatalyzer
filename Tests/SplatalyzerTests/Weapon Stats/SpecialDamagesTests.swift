@@ -14,9 +14,7 @@ final class SpecialDamagesTests: XCTestCase {
 
     func test_StatHelper_specialDamages_bigBubbler() throws {
         
-        let gameParams = try service.decode(BigBubbler.self, from: "WeaponSpGreatBarrier.game__GameParameterTable")
-        
-        let data = SpecialWeaponData(container: gameParams)
+        let data = try TestHelper.getSpecialData(for: .bigBubbler)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -25,9 +23,7 @@ final class SpecialDamagesTests: XCTestCase {
 
     func test_StatHelper_specialDamages_booyahBomb() throws {
         
-        let gameParams = try service.decode(BooyahBomb.self, from: "WeaponSpNiceBall.game__GameParameterTable")
-        
-        let data = SpecialWeaponData(container: gameParams)
+        let data = try TestHelper.getSpecialData(for: .booyahBomb)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -36,10 +32,8 @@ final class SpecialDamagesTests: XCTestCase {
     }
     
     func test_StatHelper_specialDamages_crabTank() throws {
-        
-        let gameParams = try service.decode(CrabTank.self, from: "WeaponSpChariot.game__GameParameterTable")
-        
-        let data = SpecialWeaponData(container: gameParams)
+
+        let data = try TestHelper.getSpecialData(for: .crabTank)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -52,9 +46,7 @@ final class SpecialDamagesTests: XCTestCase {
     
     func test_StatHelper_specialDamages_inkStorm() throws {
         
-        let gameParams = try service.decode(InkStorm.self, from: "WeaponSpInkStorm.game__GameParameterTable")
-
-        let data = SpecialWeaponData(container: gameParams)
+        let data = try TestHelper.getSpecialData(for: .inkStorm)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -63,10 +55,8 @@ final class SpecialDamagesTests: XCTestCase {
     }
 
     func test_StatHelper_specialDamages_inkVac() throws {
-        
-        let gameParams = try service.decode(InkVac.self, from: "WeaponSpBlower.game__GameParameterTable")
-        
-        let data = SpecialWeaponData(container: gameParams)
+
+        let data =  try TestHelper.getSpecialData(for: .inkVac)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -76,10 +66,8 @@ final class SpecialDamagesTests: XCTestCase {
     }
     
     func test_StatHelper_specialDamages_inkjet() throws {
-        
-        let gameParams = try service.decode(Inkjet.self, from: "WeaponSpJetpack.game__GameParameterTable")
 
-        let data = SpecialWeaponData(container: gameParams)
+        let data =  try TestHelper.getSpecialData(for: .inkjet)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -88,10 +76,8 @@ final class SpecialDamagesTests: XCTestCase {
     }
     
     func test_StatHelper_specialDamages_killerWail51() throws {
-        
-        let gameParams = try service.decode(KillerWail51.self, from: "WeaponSpMicroLaser.game__GameParameterTable")
 
-        let data = SpecialWeaponData(container: gameParams)
+        let data =  try TestHelper.getSpecialData(for: .killerWail51)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -100,10 +86,8 @@ final class SpecialDamagesTests: XCTestCase {
     }
 
     func test_StatHelper_specialDamages_krakenRoyale() throws {
-        
-        let gameParams = try service.decode(KrakenRoyale.self, from: "WeaponSpCastle.game__GameParameterTable")
 
-        let data = SpecialWeaponData(container: gameParams)
+        let data =  try TestHelper.getSpecialData(for: .krakenRoyale)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -113,9 +97,7 @@ final class SpecialDamagesTests: XCTestCase {
     
     func test_StatHelper_specialDamages_reefslider() throws {
         
-        let gameParams = try service.decode(Reefslider.self, from: "WeaponSpSkewer.game__GameParameterTable")
-
-        let data = SpecialWeaponData(container: gameParams)
+        let data =  try TestHelper.getSpecialData(for: .reefslider)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -124,10 +106,8 @@ final class SpecialDamagesTests: XCTestCase {
     }
 
     func test_StatHelper_specialDamages_splattercolorScreen() throws {
-        
-        let gameParams = try service.decode(SplattercolorScreen.self, from: "WeaponSpChimney.game__GameParameterTable")
 
-        let data = SpecialWeaponData(container: gameParams)
+        let data =  try TestHelper.getSpecialData(for: .splattercolorScreen)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -136,9 +116,7 @@ final class SpecialDamagesTests: XCTestCase {
     
     func test_StatHelper_specialDamages_superChump() throws {
         
-        let gameParams = try service.decode(SuperChump.self, from: "WeaponSpFirework.game__GameParameterTable")
-        
-        let data = SpecialWeaponData(container: gameParams)
+        let data =  try TestHelper.getSpecialData(for: .superChump)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -147,10 +125,8 @@ final class SpecialDamagesTests: XCTestCase {
     }
     
     func test_StatHelper_specialDamages_tacticooler() throws {
-        
-        let gameParams = try service.decode(Tacticooler.self, from: "WeaponSpEnergyStand.game__GameParameterTable")
 
-        let data = SpecialWeaponData(container: gameParams)
+        let data =  try TestHelper.getSpecialData(for: .tacticooler)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -158,10 +134,8 @@ final class SpecialDamagesTests: XCTestCase {
     }
 
     func test_StatHelper_specialDamages_tentaMissiles() throws {
-        
-        let gameParams = try service.decode(TentaMissiles.self, from: "WeaponSpMultiMissile.game__GameParameterTable")
-        
-        let data = SpecialWeaponData(container: gameParams)
+
+        let data =  try TestHelper.getSpecialData(for: .tentaMissiles)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -170,10 +144,8 @@ final class SpecialDamagesTests: XCTestCase {
     }
     
     func test_StatHelper_specialDamages_tripleInkstrike() throws {
-        
-        let gameParams = try service.decode(TripleInkstrike.self, from: "WeaponSpTripleTornado.game__GameParameterTable")
 
-        let data = SpecialWeaponData(container: gameParams)
+        let data = try TestHelper.getSpecialData(for: .tripleInkstrike)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -181,10 +153,8 @@ final class SpecialDamagesTests: XCTestCase {
     }
 
     func test_StatHelper_specialDamages_tripleSplashdown() throws {
-        
-        let gameParams = try service.decode(TripleSplashdown.self, from: "WeaponSpPogo.game__GameParameterTable")
 
-        let data = SpecialWeaponData(container: gameParams)
+        let data =  try TestHelper.getSpecialData(for: .tripleSplashdown)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -193,10 +163,8 @@ final class SpecialDamagesTests: XCTestCase {
     }
     
     func test_StatHelper_specialDamages_trizooka() throws {
-        
-        let gameParams = try service.decode(Trizooka.self, from: "WeaponSpUltraShot.game__GameParameterTable")
 
-        let data = SpecialWeaponData(container: gameParams)
+        let data =  try TestHelper.getSpecialData(for: .trizooka)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -205,10 +173,8 @@ final class SpecialDamagesTests: XCTestCase {
     }
 
     func test_StatHelper_specialDamages_ultraStamp() throws {
-        
-        let gameParams = try service.decode(UltraStamp.self, from: "WeaponSpUltraStamp.game__GameParameterTable")
-        
-        let data = SpecialWeaponData(container: gameParams)
+
+        let data =  try TestHelper.getSpecialData(for: .ultraStamp)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -218,10 +184,8 @@ final class SpecialDamagesTests: XCTestCase {
     }
     
     func test_StatHelper_specialDamages_waveBreaker() throws {
-        
-        let gameParams = try service.decode(WaveBreaker.self, from: "WeaponSpShockSonar.game__GameParameterTable")
 
-        let data = SpecialWeaponData(container: gameParams)
+        let data = try TestHelper.getSpecialData(for: .waveBreaker)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -230,10 +194,8 @@ final class SpecialDamagesTests: XCTestCase {
     }
 
     func test_StatHelper_specialDamages_zipcaster() throws {
-        
-        let gameParams = try service.decode(Zipcaster.self, from: "WeaponSpSuperHook.game__GameParameterTable")
 
-        let data = SpecialWeaponData(container: gameParams)
+        let data =  try TestHelper.getSpecialData(for: .zipcaster)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         

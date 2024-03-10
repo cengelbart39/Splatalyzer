@@ -23,7 +23,7 @@ final class BlasterDataTests: XCTestCase {
     }
 
     // MARK: - Blaster
-    func test_Blaster_properties() {
+    func test_MainWeaponData_init_Blaster_blaster() {
         do {
             let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterMiddle.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .blaster)!
@@ -49,7 +49,7 @@ final class BlasterDataTests: XCTestCase {
         }
     }
     
-    func test_CustomBlaster_properties() {
+    func test_MainWeaponData_init_Blaster_customBlaster() {
         do {
             let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterMiddle.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .customBlaster)!
@@ -76,7 +76,7 @@ final class BlasterDataTests: XCTestCase {
     }
     
     // MARK: - Clash Blaster
-    func test_ClashBlaster_properties() {
+    func test_MainWeaponData_init_Blaster_clashBlaster() {
         do {
             let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterLightShort.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .clashBlaster)!
@@ -102,7 +102,7 @@ final class BlasterDataTests: XCTestCase {
         }
     }
     
-    func test_ClashBlasterNeo_properties() {
+    func test_MainWeaponData_init_Blaster_clashBlasterNeo() {
         do {
             let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterLightShort.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .clashBlasterNeo)!
@@ -129,7 +129,7 @@ final class BlasterDataTests: XCTestCase {
     }
 
     // MARK: - Luna Blaster
-    func test_LunaBlaster_properties() {
+    func test_MainWeaponData_init_Blaster_lunaBlaster() {
         do {
             let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterShort.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .lunaBlaster)!
@@ -155,7 +155,7 @@ final class BlasterDataTests: XCTestCase {
         }
     }
     
-    func test_LunaBlasterNeo_properties() {
+    func test_MainWeaponData_init_Blaster_lunaBlasterNeo() {
         do {
             let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterShort.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .lunaBlasterNeo)!
@@ -180,7 +180,7 @@ final class BlasterDataTests: XCTestCase {
         }
     }
     
-    func test_OrderBlasterReplica_properties() {
+    func test_MainWeaponData_init_Blaster_orderBlasterReplica() {
         do {
             let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterShort.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .orderBlasterReplica)!
@@ -206,9 +206,8 @@ final class BlasterDataTests: XCTestCase {
         }
     }
 
-    
     // MARK: - Range Blaster
-    func test_RangeBlaster_properties() {
+    func test_MainWeaponData_init_Blaster_rangeBlaster() {
         do {
             let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterLong.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .rangeBlaster)!
@@ -235,7 +234,7 @@ final class BlasterDataTests: XCTestCase {
     }
     
     // MARK: - Rapid Blaster
-    func test_RapidBlaster_properties() {
+    func test_MainWeaponData_init_Blaster_rapidBlaster() {
         do {
             let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterLight.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .rapidBlaster)!
@@ -261,7 +260,7 @@ final class BlasterDataTests: XCTestCase {
         }
     }
     
-    func test_RapidBlasterDeco_properties() {
+    func test_MainWeaponData_init_Blaster_rapidBlasterDeco() {
         do {
             let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterLight.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .rapidBlasterDeco)!
@@ -288,7 +287,7 @@ final class BlasterDataTests: XCTestCase {
     }
     
     // MARK: - Rapid Blaster Pro
-    func test_RapidBlasterPro_properties() {
+    func test_MainWeaponData_init_Blaster_rapidBlasterPro() {
         do {
             let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterLightLong.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .rapidBlasterPro)!
@@ -314,7 +313,7 @@ final class BlasterDataTests: XCTestCase {
         }
     }
 
-    func test_RapidBlasterProDeco_properties() {
+    func test_MainWeaponData_init_Blaster_rapidBlasterProDeco() {
         do {
             let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterLightLong.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .rapidBlasterProDeco)!
@@ -341,7 +340,7 @@ final class BlasterDataTests: XCTestCase {
     }
     
     // MARK: - S-BLAST
-    func test_SBlast92_properties() {
+    func test_MainWeaponData_init_Blaster_sblast92() {
         do {
             let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterPrecision.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .sblast92)!
@@ -367,7 +366,7 @@ final class BlasterDataTests: XCTestCase {
         }
     }
     
-    func test_SBlast91_properties() {
+    func test_MainWeaponData_init_Blaster_sblast91() {
         do {
             let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterPrecision.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .sblast91)!

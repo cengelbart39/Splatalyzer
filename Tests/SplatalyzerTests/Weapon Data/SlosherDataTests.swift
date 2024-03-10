@@ -23,7 +23,7 @@ final class SlosherDataTests: XCTestCase {
     }
 
     // MARK: - Bloblobber
-    func test_Bloblobber_properties() {
+    func test_MainWeaponData_init_Slosher_bloblobber() {
         do {
             let gameParams = try service.decode(Slosher.self, from: "WeaponSlosherBathtub.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .bloblobber)!
@@ -45,7 +45,7 @@ final class SlosherDataTests: XCTestCase {
         }
     }
 
-    func test_BloblobberDeco_properties() {
+    func test_MainWeaponData_init_Slosher_bloblobberDeco() {
         do {
             let gameParams = try service.decode(Slosher.self, from: "WeaponSlosherBathtub.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .bloblobberDeco)!
@@ -68,7 +68,7 @@ final class SlosherDataTests: XCTestCase {
     }
 
     // MARK: - Dread Wringer
-    func test_DreadWringer_properties() {
+    func test_MainWeaponData_init_Slosher_dreadWringer() {
         do {
             let gameParams = try service.decode(Slosher.self, from: "WeaponSlosherDouble.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .dreadWringer)!
@@ -90,7 +90,7 @@ final class SlosherDataTests: XCTestCase {
         }
     }
     
-    func test_DreadWringerD_properties() {
+    func test_MainWeaponData_init_Slosher_dreadWringerD() {
         do {
             let gameParams = try service.decode(Slosher.self, from: "WeaponSlosherDouble.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .dreadWringerD)!
@@ -113,7 +113,7 @@ final class SlosherDataTests: XCTestCase {
     }
 
     // MARK: - Explosher
-    func test_Explosher_properties() {
+    func test_MainWeaponData_init_Slosher_explosher() {
         do {
             let gameParams = try service.decode(Slosher.self, from: "WeaponSlosherWashtub.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .explosher)!
@@ -134,7 +134,7 @@ final class SlosherDataTests: XCTestCase {
         }
     }
     
-    func test_CustomExplosher_properties() {
+    func test_MainWeaponData_init_Slosher_customExplosher() {
         do {
             let gameParams = try service.decode(Slosher.self, from: "WeaponSlosherWashtub.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .customExplosher)!
@@ -156,7 +156,7 @@ final class SlosherDataTests: XCTestCase {
     }
 
     // MARK: - Slosher
-    func test_Slosher_properties() {
+    func test_MainWeaponData_init_Slosher_slosher() {
         do {
             let gameParams = try service.decode(Slosher.self, from: "WeaponSlosherStrong.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .slosher)!
@@ -180,7 +180,7 @@ final class SlosherDataTests: XCTestCase {
         }
     }
 
-    func test_SlosherDeco_properties() {
+    func test_MainWeaponData_init_Slosher_slosherDeco() {
         do {
             let gameParams = try service.decode(Slosher.self, from: "WeaponSlosherStrong.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .slosherDeco)!
@@ -204,7 +204,7 @@ final class SlosherDataTests: XCTestCase {
         }
     }
     
-    func test_OrderSlosher_properties() {
+    func test_MainWeaponData_init_Slosher_orderSlosherReplica() {
         do {
             let gameParams = try service.decode(Slosher.self, from: "WeaponSlosherStrong.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .orderSlosherReplica)!
@@ -229,7 +229,7 @@ final class SlosherDataTests: XCTestCase {
     }
 
     // MARK: - Sloshing Machine
-    func test_SloshingMachine_properties() {
+    func test_MainWeaponData_init_Slosher_sloshingMachine() {
         do {
             let gameParams = try service.decode(Slosher.self, from: "WeaponSlosherLauncher.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .sloshingMachine)!
@@ -254,7 +254,7 @@ final class SlosherDataTests: XCTestCase {
         }
     }
 
-    func test_SloshingMachineNeo_properties() {
+    func test_MainWeaponData_init_Slosher_sloshingMachineNeo() {
         do {
             let gameParams = try service.decode(Slosher.self, from: "WeaponSlosherLauncher.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .sloshingMachineNeo)!
@@ -280,7 +280,7 @@ final class SlosherDataTests: XCTestCase {
     }
 
     // MARK: - Tri-Slosher
-    func test_TriSlosher_properties() {
+    func test_MainWeaponData_init_Slosher_triSlosher() {
         do {
             let gameParams = try service.decode(Slosher.self, from: "WeaponSlosherDiffusion.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .triSlosher)!
@@ -304,7 +304,7 @@ final class SlosherDataTests: XCTestCase {
         }
     }
 
-    func test_TriSlosherNouveau_properties() {
+    func test_MainWeaponData_init_Slosher_triSlosherNouveau() {
         do {
             let gameParams = try service.decode(Slosher.self, from: "WeaponSlosherDiffusion.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .triSlosherNouveau)!

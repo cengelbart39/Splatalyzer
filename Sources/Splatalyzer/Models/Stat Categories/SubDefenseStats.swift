@@ -27,4 +27,17 @@ public struct SubDefenseStats: Codable, Equatable {
         self.inkMineMarkedSeconds = inkMineMarkedSeconds
         self.angleShooterMarkedSeconds = angleShooterMarkedSeconds
     }
+    
+    public init(ap: AbilityPoints, values: AbilityValues, mainData: MainWeaponData, allSubData: [SubWeapon : SubWeaponData]) {
+        
+        self.toxicMistMovementReduction = StatHelper.toxicMistMovementReduction(ap: ap, values: values, mainInfo: mainData)
+        
+        self.pointSensorMarkedSeconds = StatHelper.subMarkedSeconds(ap: ap, values: values, mainInfo: mainData, subInfo: allSubData[.pointSensor]!)
+        
+        self.inkMineMarkedSeconds = StatHelper.inkMineMarkedSeconds(ap: ap, values: values, mainInfo: mainData, inkMine: allSubData[.inkMine]!)
+
+        
+        self.angleShooterMarkedSeconds = StatHelper.subMarkedSeconds(ap: ap, values: values, mainInfo: mainData, subInfo: allSubData[.angleShooter]!)
+
+    }
 }

@@ -23,7 +23,7 @@ final class SplatlingDataTests: XCTestCase {
     }
     
     // MARK: - Ballpoint Splatling
-    func test_BallpointSplatling_properties() {
+    func test_MainWeaponData_init_Splatling_ballpointSplatling() {
         do {
             let gameParams = try service.decode(Splatling.self, from: "WeaponSpinnerDownpour.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .ballpointSplatling)!
@@ -48,7 +48,7 @@ final class SplatlingDataTests: XCTestCase {
         }
     }
 
-    func test_BallpointSplatlingNouveau_properties() {
+    func test_MainWeaponData_init_Splatling_ballpointSplatlingNouveau() {
         do {
             let gameParams = try service.decode(Splatling.self, from: "WeaponSpinnerDownpour.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .ballpointSplatlingNouveau)!
@@ -74,7 +74,7 @@ final class SplatlingDataTests: XCTestCase {
     }
 
     // MARK: - Heavy Edit Splatling
-    func test_HeavyEditSplatling_properties() {
+    func test_MainWeaponData_init_Splatling_heavyEditSplatling() {
         do {
             let gameParams = try service.decode(Splatling.self, from: "WeaponSpinnerHyperShort.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .heavyEditSplatling)!
@@ -100,7 +100,7 @@ final class SplatlingDataTests: XCTestCase {
     }
 
     // MARK: - Heavy Splatling
-    func test_HeavySplatling_properties() {
+    func test_MainWeaponData_init_Splatling_heavySplatling() {
         do {
             let gameParams = try service.decode(Splatling.self, from: "WeaponSpinnerStandard.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .heavySplatling)!
@@ -124,7 +124,7 @@ final class SplatlingDataTests: XCTestCase {
         }
     }
 
-    func test_HeavySplatlingDeco_properties() {
+    func test_MainWeaponData_init_Splatling_heavySplatlingDeco() {
         do {
             let gameParams = try service.decode(Splatling.self, from: "WeaponSpinnerStandard.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .heavySplatlingDeco)!
@@ -148,7 +148,7 @@ final class SplatlingDataTests: XCTestCase {
         }
     }
     
-    func test_OrderSplatlingReplica_properties() {
+    func test_MainWeaponData_init_Splatling_orderSplatlingReplica() {
         do {
             let gameParams = try service.decode(Splatling.self, from: "WeaponSpinnerStandard.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .orderSplatlingReplica)!
@@ -172,9 +172,8 @@ final class SplatlingDataTests: XCTestCase {
         }
     }
 
-
     // MARK: - Hydra Splatling
-    func test_HydraSplatling_properties() {
+    func test_MainWeaponData_init_Splatling_hydraSplatling() {
         do {
             let gameParams = try service.decode(Splatling.self, from: "WeaponSpinnerHyper.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .hydraSplatling)!
@@ -200,7 +199,7 @@ final class SplatlingDataTests: XCTestCase {
     }
 
     // MARK: - Mini Splatling
-    func test_MiniSplatling_properties() {
+    func test_MainWeaponData_init_Splatling_miniSplatling() {
         do {
             let gameParams = try service.decode(Splatling.self, from: "WeaponSpinnerQuick.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .miniSplatling)!
@@ -225,7 +224,7 @@ final class SplatlingDataTests: XCTestCase {
         }
     }
 
-    func test_ZinkMiniSplatling_properties() {
+    func test_MainWeaponData_init_Splatling_zinkMiniSplatling() {
         do {
             let gameParams = try service.decode(Splatling.self, from: "WeaponSpinnerQuick.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .zinkMiniSplatling)!
@@ -251,7 +250,7 @@ final class SplatlingDataTests: XCTestCase {
     }
 
     // MARK: - Nautilus
-    func test_Nautilus47_properties() {
+    func test_MainWeaponData_init_Splatling_nautilus47() {
         do {
             let gameParams = try service.decode(Splatling.self, from: "WeaponSpinnerSerein.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .nautilus47)!
@@ -277,7 +276,7 @@ final class SplatlingDataTests: XCTestCase {
         }
     }
 
-    func test_Nautilus79_properties() {
+    func test_MainWeaponData_init_Splatling_nautilus79() {
         do {
             let gameParams = try service.decode(Splatling.self, from: "WeaponSpinnerSerein.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .nautilus79)!

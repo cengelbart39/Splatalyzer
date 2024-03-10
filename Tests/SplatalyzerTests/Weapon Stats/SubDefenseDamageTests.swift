@@ -24,7 +24,7 @@ final class SubDefenseDamageTests: XCTestCase {
     
     func test_StatHelper_subDefenseDamages_angleShooter() throws {
         
-        let data = try self.getData(for: .angleShooter)
+        let data = try TestHelper.getSubData(for: .angleShooter)
         let subData = [SubWeapon.angleShooter : data]
         
         let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
@@ -39,7 +39,7 @@ final class SubDefenseDamageTests: XCTestCase {
     
     func test_StatHelper_subDefenseDamages_autobomb() throws {
         
-        let data = try self.getData(for: .autobomb)
+        let data = try TestHelper.getSubData(for: .autobomb)
         let subData = [SubWeapon.autobomb : data]
         
         let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
@@ -54,7 +54,7 @@ final class SubDefenseDamageTests: XCTestCase {
     
     func test_StatHelper_subDefenseDamages_burstBomb() throws {
         
-        let data = try self.getData(for: .burstBomb)
+        let data = try TestHelper.getSubData(for: .burstBomb)
         let subData = [SubWeapon.burstBomb : data]
         
         let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
@@ -69,7 +69,7 @@ final class SubDefenseDamageTests: XCTestCase {
 
     func test_StatHelper_subDefenseDamages_curlingBomb() throws {
         
-        let data = try self.getData(for: .curlingBomb)
+        let data = try TestHelper.getSubData(for: .curlingBomb)
         let subData = [SubWeapon.curlingBomb : data]
         
         let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
@@ -84,7 +84,7 @@ final class SubDefenseDamageTests: XCTestCase {
 
     func test_StatHelper_subDefenseDamages_fizzyBomb() throws {
         
-        let data = try self.getData(for: .fizzyBomb)
+        let data = try TestHelper.getSubData(for: .fizzyBomb)
         let subData = [SubWeapon.fizzyBomb : data]
         
         let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
@@ -99,7 +99,7 @@ final class SubDefenseDamageTests: XCTestCase {
 
     func test_StatHelper_subDefenseDamages_inkMine() throws {
         
-        let data = try self.getData(for: .inkMine)
+        let data = try TestHelper.getSubData(for: .inkMine)
         let subData = [SubWeapon.inkMine : data]
         
         let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
@@ -114,7 +114,7 @@ final class SubDefenseDamageTests: XCTestCase {
     
     func test_StatHelper_subDefenseDamages_pointSensor() throws {
         
-        let data = try self.getData(for: .pointSensor)
+        let data = try TestHelper.getSubData(for: .pointSensor)
         let subData = [SubWeapon.pointSensor : data]
         
         let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
@@ -126,7 +126,7 @@ final class SubDefenseDamageTests: XCTestCase {
 
     func test_StatHelper_subDefenseDamages_splashWall() throws {
         
-        let data = try self.getData(for: .splashWall)
+        let data = try TestHelper.getSubData(for: .splashWall)
         let subData = [SubWeapon.splashWall : data]
         
         let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
@@ -138,7 +138,7 @@ final class SubDefenseDamageTests: XCTestCase {
 
     func test_StatHelper_subDefenseDamages_splatBomb() throws {
         
-        let data = try self.getData(for: .splatBomb)
+        let data = try TestHelper.getSubData(for: .splatBomb)
         let subData = [SubWeapon.splatBomb : data]
         
         let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
@@ -153,7 +153,7 @@ final class SubDefenseDamageTests: XCTestCase {
 
     func test_StatHelper_subDefenseDamages_sprinkler() throws {
         
-        let data = try self.getData(for: .sprinkler)
+        let data = try TestHelper.getSubData(for: .sprinkler)
         let subData = [SubWeapon.sprinkler : data]
         
         let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
@@ -165,7 +165,7 @@ final class SubDefenseDamageTests: XCTestCase {
     
     func test_StatHelper_subDefenseDamages_squidBeakon() throws {
         
-        let data = try self.getData(for: .squidBeakon)
+        let data = try TestHelper.getSubData(for: .squidBeakon)
         let subData = [SubWeapon.squidBeakon : data]
         
         let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
@@ -177,7 +177,7 @@ final class SubDefenseDamageTests: XCTestCase {
     
     func test_StatHelper_subDefenseDamages_suctionBomb() throws {
         
-        let data = try self.getData(for: .suctionBomb)
+        let data = try TestHelper.getSubData(for: .suctionBomb)
         let subData = [SubWeapon.suctionBomb : data]
         
         let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
@@ -192,7 +192,7 @@ final class SubDefenseDamageTests: XCTestCase {
 
     func test_StatHelper_subDefenseDamages_torpedo() throws {
         
-        let data = try self.getData(for: .torpedo)
+        let data = try TestHelper.getSubData(for: .torpedo)
         let subData = [SubWeapon.torpedo : data]
         
         let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
@@ -206,7 +206,7 @@ final class SubDefenseDamageTests: XCTestCase {
     
     func test_StatHelper_subDefenseDamages_toxicMist() throws {
         
-        let data = try self.getData(for: .toxicMist)
+        let data = try TestHelper.getSubData(for: .toxicMist)
         let subData = [SubWeapon.toxicMist : data]
         
         let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
@@ -214,137 +214,5 @@ final class SubDefenseDamageTests: XCTestCase {
         XCTAssertFalse(defDmg.isEmpty)
         XCTAssertNotNil(defDmg[.toxicMist])
         XCTAssertTrue(defDmg[.toxicMist]!.isEmpty)
-    }
-
-    func getData(for weapon: SubWeapon) throws -> SubWeaponData {
-        switch weapon {
-        case .angleShooter:
-            let angleShooter = try service.decode(
-                AngleShooter.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
-            
-            let subData = SubWeaponData(container: angleShooter)
-            
-            return subData
-            
-        case .autobomb:
-            let autobomb = try service.decode(
-                Autobomb.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
-            
-            let subData = SubWeaponData(container: autobomb)
-            
-            return subData
-            
-        case .burstBomb:
-            let burstBomb = try service.decode(
-                BurstBomb.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
-            
-            let subData = SubWeaponData(container: burstBomb)
-            
-            return subData
-            
-        case .curlingBomb:
-            let curlingBomb = try service.decode(
-                CurlingBomb.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
-            
-            let subData = SubWeaponData(container: curlingBomb)
-            
-            return subData
-            
-        case .fizzyBomb:
-            let fizzyBomb = try service.decode(
-                FizzyBomb.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
-            
-            let subData = SubWeaponData(container: fizzyBomb)
-            
-            return subData
-            
-        case .inkMine:
-            let inkMine = try service.decode(
-                InkMine.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
-            
-            let subData = SubWeaponData(container: inkMine)
-            
-            return subData
-            
-        case .pointSensor:
-            let pointSensor = try service.decode(
-                PointSensor.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
-            
-            let subData = SubWeaponData(container: pointSensor)
-            
-            return subData
-            
-        case .splashWall:
-            let splashWall = try service.decode(
-                SplashWall.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
-            
-            let subData = SubWeaponData(container: splashWall)
-            
-            return subData
-            
-        case .splatBomb:
-            let splatBomb = try service.decode(
-                SplatBomb.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
-            
-            let subData = SubWeaponData(container: splatBomb)
-            
-            return subData
-            
-        case .sprinkler:
-            let sprinkler = try service.decode(
-                Sprinkler.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
-            
-            let subData = SubWeaponData(container: sprinkler)
-            
-            return subData
-            
-        case .squidBeakon:
-            let squidBeakon = try service.decode(
-                SquidBeakon.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
-            
-            let playerInfo = try service.decode(Player.self, from: "SplPlayer.game__GameParameterTable")
-            
-            let subData = SubWeaponData(container: squidBeakon, playerInfo: playerInfo)
-            
-            return subData
-            
-        case .suctionBomb:
-            let suctionBomb = try service.decode(
-                SuctionBomb.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
-            
-            let subData = SubWeaponData(container: suctionBomb)
-            
-            return subData
-            
-        case .torpedo:
-            let torpedo = try service.decode(
-                Torpedo.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
-            
-            let subData = SubWeaponData(container: torpedo)
-            
-            return subData
-            
-        case .toxicMist:
-            let toxicMist = try service.decode(
-                ToxicMist.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
-            
-            let subData = SubWeaponData(container: toxicMist)
-            
-            return subData
-        }
     }
 }

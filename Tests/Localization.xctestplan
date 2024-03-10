@@ -1,0 +1,141 @@
+{
+  "configurations" : [
+    {
+      "id" : "AA6FF110-C80D-4AF6-A558-BBCBE4E33063",
+      "name" : "Chinese-CN-Simplified",
+      "options" : {
+        "language" : "zh-Hans"
+      }
+    },
+    {
+      "id" : "AE10B57D-C646-46AD-84B6-293B6B1B198C",
+      "name" : "Chinese-TW-Traditional",
+      "options" : {
+        "language" : "zh-Hant"
+      }
+    },
+    {
+      "id" : "C6387C36-D48B-4F62-8B7B-216DF9DD3CFA",
+      "name" : "Dutch",
+      "options" : {
+        "language" : "nl"
+      }
+    },
+    {
+      "id" : "794E446C-F5B7-452F-AA8D-C84497317833",
+      "name" : "English-US",
+      "options" : {
+        "language" : "en"
+      }
+    },
+    {
+      "id" : "7BA9FDCB-70CB-4A3F-B664-EF298A4D1F6E",
+      "name" : "French-CA",
+      "options" : {
+        "language" : "fr-CA"
+      }
+    },
+    {
+      "id" : "99D07F54-0841-43A3-93A5-6EF02474627C",
+      "name" : "French-FR",
+      "options" : {
+        "language" : "fr"
+      }
+    },
+    {
+      "id" : "FAA3E9D5-CFDB-423D-AE16-6343336E1BAD",
+      "name" : "German",
+      "options" : {
+        "language" : "de"
+      }
+    },
+    {
+      "id" : "F4EC4062-5745-44FC-ABCD-5E381C93A48C",
+      "name" : "Italian",
+      "options" : {
+        "language" : "it"
+      }
+    },
+    {
+      "id" : "7A81AD5F-B748-4AC1-89CD-D44BC24F5CDE",
+      "name" : "Japanese",
+      "options" : {
+        "language" : "ja"
+      }
+    },
+    {
+      "id" : "4635F3A3-B597-44FF-A807-649EB0048CDF",
+      "name" : "Russian",
+      "options" : {
+        "language" : "ru"
+      }
+    },
+    {
+      "id" : "E8176156-3998-421E-93BC-960BC1548103",
+      "name" : "Spanish-ES",
+      "options" : {
+        "language" : "es"
+      }
+    },
+    {
+      "id" : "9EC8F7FA-75FF-4044-AEB5-F7C5EDF5C1C7",
+      "name" : "Spanish-LA",
+      "options" : {
+        "language" : "es-419"
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "skippedTests" : [
+        "BlasterDataTests",
+        "BlasterDecodingTests",
+        "BrellaDataTests",
+        "BrellaDecodingTests",
+        "BrushDataTests",
+        "BrushDecodingTests",
+        "BuildOptionsTests",
+        "ChargerDataTests",
+        "ChargerDecodingTests",
+        "DecodingTests",
+        "DualieDataTests",
+        "DualieDecodingTest",
+        "FullInkTankOptionsTests",
+        "GearBuildTests",
+        "GearPieceTests",
+        "MainDamagesTests",
+        "MainStatsTests",
+        "MovementStatsTests",
+        "RollerDataTests",
+        "RollerDecodingTests",
+        "ShooterDataTests",
+        "ShooterDecodingTests",
+        "SlosherDataTests",
+        "SlosherDecodingTests",
+        "SpecialDamagesTests",
+        "SpecialDataTests",
+        "SpecialDecodingTests",
+        "SpecialStatsTests",
+        "SplatanaDataTests",
+        "SplatanaDecodingTests",
+        "SplatlingDataTests",
+        "SplatlingDecodingTests",
+        "StringerDataTests",
+        "StringerDecodingTests",
+        "SubDataTests",
+        "SubDecodingTests",
+        "SubDefenseDamageTests",
+        "SubStatsTests"
+      ],
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "SplatalyzerTests",
+        "name" : "SplatalyzerTests"
+      }
+    }
+  ],
+  "version" : 1
+}

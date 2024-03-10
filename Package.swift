@@ -35,6 +35,10 @@ let package = Package(
         
         .testTarget(
             name: "SplatalyzerTests",
-            dependencies: ["Splatalyzer"]),
+            dependencies: ["Splatalyzer"],
+            resources: [
+                .process("Resources")
+            ]
+        )
     ]
 )

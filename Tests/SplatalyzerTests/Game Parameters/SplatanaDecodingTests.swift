@@ -12,12 +12,12 @@ final class SplatanaDecodingTests: XCTestCase {
     
     let service = JSONService()
     
-    func test_SplatanaStamper_decode_noThrows() {
+    func test_Splatana_decode_splatanaStamper_noThrows() {
         let fileName = "WeaponSaberNormal.game__GameParameterTable"
         XCTAssertNoThrow(try service.decode(Splatana.self, from: fileName))
     }
 
-    func test_SplatanaWiper_decode_noThrows() {
+    func test_Splatana_decode_splatanaWiper_noThrows() {
         let fileName = "WeaponSaberLite.game__GameParameterTable"
         XCTAssertNoThrow(try service.decode(Splatana.self, from: fileName))
     }

@@ -56,4 +56,30 @@ public struct SubWeaponStats: Codable, Equatable {
         self.subHp = subHp
         self.quickSuperJumpBoost = quickSuperJumpBoost
     }
+    
+    public init(ap: AbilityPoints, values: AbilityValues, mainData: MainWeaponData, subData: SubWeaponData) {
+        
+        self.weapon = mainData.subWeapon
+        
+        self.inkConsumptionPercentage = StatHelper.subInkConsumptionPercentage(ap: ap, abilities: values, mainInfo: mainData, subInfo: subData)
+        
+        self.whiteInkSeconds = subData.inkRecoverStop.framesToSeconds()
+        
+        self.velocity = StatHelper.subVelocity(ap: ap, values: values, subInfo: subData)
+        
+        self.firstPhaseDuration = StatHelper.subPhaseDuration(ap: ap, values: values, subInfo: subData, first: true)
+        
+        self.secondPhaseDuration = StatHelper.subPhaseDuration(ap: ap, values: values, subInfo: subData, first: false)
+        
+        self.markingTimeInSeconds = StatHelper.subMarkingSeconds(ap: ap, values: values, subInfo: subData)
+        
+        self.markingRadius = StatHelper.subMarkingRadius(ap: ap, values: values, subInfo: subData)
+
+        
+        self.explosionRadius = StatHelper.subExplosionRadius(ap: ap, values: values, subInfo: subData)
+        
+        self.subHp = StatHelper.subHp(ap: ap, values: values, subInfo: subData)
+        
+        self.quickSuperJumpBoost = StatHelper.quickSuperJumpBoost(ap: ap, values: values, subInfo: subData)
+    }
 }

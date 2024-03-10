@@ -23,7 +23,7 @@ final class DualieDataTests: XCTestCase {
     }
 
     // MARK: - Dapple Dualies
-    func test_DappleDualies_properties() {
+    func test_MainWeaponData_init_Dualie_dappleDualies() {
         do {
             let gameParams = try service.decode(Dualie.self, from: "WeaponManeuverShort.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .dappleDualies)!
@@ -47,7 +47,7 @@ final class DualieDataTests: XCTestCase {
         }
     }
 
-    func test_DappleDualiesNouveau_properties() {
+    func test_MainWeaponData_init_Dualie_dappleDualiesNouveau() {
         do {
             let gameParams = try service.decode(Dualie.self, from: "WeaponManeuverShort.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .dappleDualiesNouveau)!
@@ -72,7 +72,7 @@ final class DualieDataTests: XCTestCase {
     }
     
     // MARK: - Douser Dualies FF
-    func test_DouserDualiesFF_properties() {
+    func test_MainWeaponData_init_Dualie_douserDualiesFF() {
         do {
             let gameParams = try service.decode(Dualie.self, from: "WeaponManeuverLong.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .douserDualiesFF)!
@@ -97,9 +97,8 @@ final class DualieDataTests: XCTestCase {
         }
     }
 
-
     // MARK: - Dualie Squelchers
-    func test_DualieSquelchers_properties() {
+    func test_MainWeaponData_init_Dualie_dualieSquelchers() {
         do {
             let gameParams = try service.decode(Dualie.self, from: "WeaponManeuverDual.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .dualieSquelchers)!
@@ -123,7 +122,7 @@ final class DualieDataTests: XCTestCase {
         }
     }
     
-    func test_CustomDualieSquelchers_properties() {
+    func test_MainWeaponData_init_Dualie_customDualieSquelchers() {
         do {
             let gameParams = try service.decode(Dualie.self, from: "WeaponManeuverDual.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .customDualieSquelchers)!
@@ -148,7 +147,7 @@ final class DualieDataTests: XCTestCase {
     }
 
     // MARK: - Glooga Dualies
-    func test_GloogaDualies_properties() {
+    func test_MainWeaponData_init_Dualie_gloogaDualies() {
         do {
             let gameParams = try service.decode(Dualie.self, from: "WeaponManeuverGallon.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .gloogaDualies)!
@@ -174,7 +173,7 @@ final class DualieDataTests: XCTestCase {
         }
     }
     
-    func test_GloogaDualiesDeco_properties() {
+    func test_MainWeaponData_init_Dualie_gloogaDualiesDeco() {
         do {
             let gameParams = try service.decode(Dualie.self, from: "WeaponManeuverGallon.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .gloogaDualiesDeco)!
@@ -200,9 +199,8 @@ final class DualieDataTests: XCTestCase {
         }
     }
 
-
     // MARK: - Splat Dualies
-    func test_SplatDualies_properties() {
+    func test_MainWeaponData_init_Dualie_splatDualies() {
         do {
             let gameParams = try service.decode(Dualie.self, from: "WeaponManeuverNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .splatDualies)!
@@ -226,7 +224,7 @@ final class DualieDataTests: XCTestCase {
         }
     }
 
-    func test_EnperrySplatDualies_properties() {
+    func test_MainWeaponData_init_Dualie_enperrySplatDualies() {
         do {
             let gameParams = try service.decode(Dualie.self, from: "WeaponManeuverNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .enperrySplatDualies)!
@@ -250,7 +248,7 @@ final class DualieDataTests: XCTestCase {
         }
     }
     
-    func test_OrderDualiesReplica_properties() {
+    func test_MainWeaponData_init_Dualie_orderDualiesReplica() {
         do {
             let gameParams = try service.decode(Dualie.self, from: "WeaponManeuverNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .orderDualiesReplica)!
@@ -275,7 +273,7 @@ final class DualieDataTests: XCTestCase {
     }
     
     // MARK: - Tetra Dualies
-    func test_DarkTetraDualies_properties() {
+    func test_MainWeaponData_init_Dualie_darkTetraDualies() {
         do {
             let gameParams = try service.decode(Dualie.self, from: "WeaponManeuverStepper.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .darkTetraDualies)!
@@ -299,7 +297,7 @@ final class DualieDataTests: XCTestCase {
         }
     }
     
-    func test_LightTetraDualies_properties() {
+    func test_MainWeaponData_init_Dualie_lightTetraDualies() {
         do {
             let gameParams = try service.decode(Dualie.self, from: "WeaponManeuverStepper.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .lightTetraDualies)!

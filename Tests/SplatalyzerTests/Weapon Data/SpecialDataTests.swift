@@ -12,7 +12,7 @@ final class SpecialDataTests: XCTestCase {
 
     let service = JSONService()
     
-    func test_BigBubbler_properties() {
+    func test_SpecialWeaponData_init_bigBubbler() {
         do {
             let gameParams = try service.decode(BigBubbler.self, from: "WeaponSpGreatBarrier.game__GameParameterTable")
             
@@ -28,7 +28,7 @@ final class SpecialDataTests: XCTestCase {
         }
     }
     
-    func test_BooyahBomb_properties() {
+    func test_SpecialWeaponData_init_booyahBomb() {
         do {
             let gameParams = try service.decode(BooyahBomb.self, from: "WeaponSpNiceBall.game__GameParameterTable")
             
@@ -44,7 +44,7 @@ final class SpecialDataTests: XCTestCase {
         }
     }
 
-    func test_CrabTank_properties() {
+    func test_SpecialWeaponData_init_crabTank() {
         do {
             let gameParams = try service.decode(CrabTank.self, from: "WeaponSpChariot.game__GameParameterTable")
             
@@ -64,7 +64,7 @@ final class SpecialDataTests: XCTestCase {
         }
     }
 
-    func test_Inkjet_properties() {
+    func test_SpecialWeaponData_init_inkjet() {
         do {
             let gameParams = try service.decode(Inkjet.self, from: "WeaponSpJetpack.game__GameParameterTable")
             
@@ -84,7 +84,7 @@ final class SpecialDataTests: XCTestCase {
         }
     }
 
-    func test_InkStorm_properties() {
+    func test_SpecialWeaponData_init_inkStorm() {
         do {
             let gameParams = try service.decode(InkStorm.self, from: "WeaponSpInkStorm.game__GameParameterTable")
             
@@ -101,7 +101,7 @@ final class SpecialDataTests: XCTestCase {
         }
     }
 
-    func test_InkVac_properties() {
+    func test_SpecialWeaponData_init_inkVac() {
         do {
             let gameParams = try service.decode(InkVac.self, from: "WeaponSpBlower.game__GameParameterTable")
             
@@ -119,7 +119,7 @@ final class SpecialDataTests: XCTestCase {
         }
     }
     
-    func test_KillerWail51_properties() {
+    func test_SpecialWeaponData_init_killerWail51() {
         do {
             let gameParams = try service.decode(KillerWail51.self, from: "WeaponSpMicroLaser.game__GameParameterTable")
             
@@ -135,7 +135,7 @@ final class SpecialDataTests: XCTestCase {
         }
     }
 
-    func test_KrakenRoyale_properties() {
+    func test_SpecialWeaponData_init_krakenRoyale() {
         do {
             let gameParams = try service.decode(KrakenRoyale.self, from: "WeaponSpCastle.game__GameParameterTable")
             
@@ -152,7 +152,7 @@ final class SpecialDataTests: XCTestCase {
         }
     }
 
-    func test_Reefslider_properties() {
+    func test_SpecialWeaponData_init_reefslider() {
         do {
             let gameParams = try service.decode(Reefslider.self, from: "WeaponSpSkewer.game__GameParameterTable")
             
@@ -171,7 +171,7 @@ final class SpecialDataTests: XCTestCase {
         }
     }
 
-    func test_SplattercolorScreen_properties() {
+    func test_SpecialWeaponData_init_splattercolorScreen() {
         do {
             let gameParams = try service.decode(SplattercolorScreen.self, from: "WeaponSpChimney.game__GameParameterTable")
             
@@ -187,7 +187,7 @@ final class SpecialDataTests: XCTestCase {
         }
     }
 
-    func test_SuperChump_properties() {
+    func test_SpecialWeaponData_init_superChump() {
         do {
             let gameParams = try service.decode(SuperChump.self, from: "WeaponSpFirework.game__GameParameterTable")
             
@@ -205,7 +205,7 @@ final class SpecialDataTests: XCTestCase {
         }
     }
 
-    func test_Tacticooler_properties() {
+    func test_SpecialWeaponData_init_tacticooler() {
         do {
             let gameParams = try service.decode(Tacticooler.self, from: "WeaponSpEnergyStand.game__GameParameterTable")
             
@@ -220,7 +220,7 @@ final class SpecialDataTests: XCTestCase {
         }
     }
     
-    func test_TentaMissiles_properties() {
+    func test_SpecialWeaponData_init_tentaMissiles() {
         do {
             let gameParams = try service.decode(TentaMissiles.self, from: "WeaponSpMultiMissile.game__GameParameterTable")
             
@@ -236,7 +236,7 @@ final class SpecialDataTests: XCTestCase {
         }
     }
     
-    func test_TripleInkstrike_properties() {
+    func test_SpecialWeaponData_init_tripleInkstrike() {
         do {
             let gameParams = try service.decode(TripleInkstrike.self, from: "WeaponSpTripleTornado.game__GameParameterTable")
             
@@ -251,7 +251,7 @@ final class SpecialDataTests: XCTestCase {
         }
     }
     
-    func test_TripleSplashdown_properties() {
+    func test_SpecialWeaponData_init_tripleSplashdown() {
         do {
             let gameParams = try service.decode(TripleSplashdown.self, from: "WeaponSpPogo.game__GameParameterTable")
             
@@ -268,7 +268,7 @@ final class SpecialDataTests: XCTestCase {
         }
     }
 
-    func test_Trizooka_properties() {
+    func test_SpecialWeaponData_init_trizooka() {
         do {
             let gameParams = try service.decode(Trizooka.self, from: "WeaponSpUltraShot.game__GameParameterTable")
             
@@ -287,7 +287,7 @@ final class SpecialDataTests: XCTestCase {
         }
     }
 
-    func test_UltraStamp_properties() {
+    func test_SpecialWeaponData_init_ultraStamp() {
         do {
             let gameParams = try service.decode(UltraStamp.self, from: "WeaponSpUltraStamp.game__GameParameterTable")
             
@@ -304,7 +304,7 @@ final class SpecialDataTests: XCTestCase {
         }
     }
     
-    func test_WaveBreaker_properties() {
+    func test_SpecialWeaponData_init_waveBreaker() {
         do {
             let gameParams = try service.decode(WaveBreaker.self, from: "WeaponSpShockSonar.game__GameParameterTable")
             
@@ -322,7 +322,7 @@ final class SpecialDataTests: XCTestCase {
         }
     }
 
-    func test_Zipcaster_properties() {
+    func test_SpecialWeaponData_init_zipcaster() {
         do {
             let gameParams = try service.decode(Zipcaster.self, from: "WeaponSpSuperHook.game__GameParameterTable")
             

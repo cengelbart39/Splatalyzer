@@ -35,4 +35,51 @@ public struct MiscStats: Codable, Equatable {
         self.superJumpGroundFrames = superJumpGroundFrames
         self.superJumpTimeTotal = superJumpTimeTotal
     }
+    
+    public init(ap: AbilityPoints, values: AbilityValues, gearBuild: GearBuild, mainData: MainWeaponData, usingTacticooler: Bool) {
+        
+        self.squidInkRecovery = StatHelper.inkRecoverySeconds(
+            effectKey: .inkRecoverFrmStealth,
+            ap: ap,
+            abilities: values,
+            mainInfo: mainData
+        )
+        
+        self.humanoidInkRecovery = StatHelper.inkRecoverySeconds(
+            effectKey: .inkRecoverFrmStd,
+            ap: ap,
+            abilities: values,
+            mainInfo: mainData
+        )
+        
+        self.quickRespawnTime = StatHelper.respawnTime(
+            ap: ap,
+            values: values,
+            gearBuild: gearBuild,
+            mainInfo: mainData,
+            splatedByRP: false,
+            hasTacticooler: usingTacticooler
+        )
+        
+        self.quickRespawnTimeRP = StatHelper.respawnTime(
+            ap: ap,
+            values: values,
+            gearBuild: gearBuild,
+            mainInfo: mainData,
+            splatedByRP: true,
+            hasTacticooler: usingTacticooler
+        )
+        
+        self.superJumpGroundFrames = StatHelper.superJumpGroundFrames(
+            ap: ap,
+            values: values,
+            mainInfo: mainData
+        )
+        
+        self.superJumpTimeTotal = StatHelper.superJumpTimeTotal(
+            ap: ap,
+            values: values,
+            mainInfo: mainData
+        )
+    }
 }

@@ -23,7 +23,7 @@ final class StringerDataTests: XCTestCase {
     }
     
     // MARK: - REEF-LUX 450
-    func test_Reeflux450_properties() {
+    func test_MainWeaponData_init_Stringer_reeflux450() {
         do {
             let gameParams = try service.decode(Stringer.self, from: "WeaponStringerShort.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .reeflux450)!
@@ -46,7 +46,7 @@ final class StringerDataTests: XCTestCase {
         }
     }
 
-    func test_Reeflux450Deco_properties() {
+    func test_MainWeaponData_init_Stringer_reeflux450Deco() {
         do {
             let gameParams = try service.decode(Stringer.self, from: "WeaponStringerShort.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .reeflux450Deco)!
@@ -70,7 +70,7 @@ final class StringerDataTests: XCTestCase {
     }
 
     // MARK: - Tri-Stringer
-    func test_TriStringer_properties() {
+    func test_MainWeaponData_init_Stringer_triStringer() {
         do {
             let gameParams = try service.decode(Stringer.self, from: "WeaponStringerNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .triStringer)!
@@ -93,7 +93,7 @@ final class StringerDataTests: XCTestCase {
         }
     }
 
-    func test_InklineTriStringer_properties() {
+    func test_MainWeaponData_init_Stringer_inklineTriStringer() {
         do {
             let gameParams = try service.decode(Stringer.self, from: "WeaponStringerNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .inklineTriStringer)!
@@ -116,7 +116,7 @@ final class StringerDataTests: XCTestCase {
         }
     }
 
-    func test_OrderStringerReplica_properties() {
+    func test_MainWeaponData_init_Stringer_orderStringerReplica() {
         do {
             let gameParams = try service.decode(Stringer.self, from: "WeaponStringerNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .orderStringerReplica)!
@@ -138,5 +138,4 @@ final class StringerDataTests: XCTestCase {
             XCTFail(error.localizedDescription)
         }
     }
-
 }

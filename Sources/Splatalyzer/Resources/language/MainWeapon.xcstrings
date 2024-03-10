@@ -2118,7 +2118,7 @@
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tinter con mirino 4K CM"
+            "value" : "Tinter a carica 4K CM"
           }
         },
         "ja" : {
@@ -2284,7 +2284,7 @@
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tinter a carica 4K CM"
+            "value" : "Tinter con mirino 4K CM"
           }
         },
         "ja" : {
@@ -4312,7 +4312,7 @@
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "動馬達滾筒"
+            "value" : "電動馬達滾筒"
           }
         }
       }
@@ -4531,7 +4531,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ダイナモローラーテスラ"
+            "value" : "ヴァリアブルローラーフォイル"
           }
         },
         "ko" : {
@@ -4555,7 +4555,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "电动马达滚筒 高磁波"
+            "value" : "可变式滚筒 金属箔"
           }
         },
         "zh-Hant" : {
@@ -8954,7 +8954,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "洗笔桶·新艺术\""
+            "value" : "洗笔桶·新艺术"
           }
         },
         "zh-Hant" : {
@@ -10969,7 +10969,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "REEF-LUX 450"
+            "value" : "REEF-LUX 450 Deco"
           }
         },
         "es-419" : {

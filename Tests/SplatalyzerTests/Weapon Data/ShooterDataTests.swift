@@ -23,7 +23,7 @@ final class ShooterDataTests: XCTestCase {
     }
 
     // MARK: - .52 Gal
-    func test_52Gal_properties() {
+    func test_MainWeaponData_init_Shooter_52Gal() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterGravity.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .gal52)!
@@ -46,7 +46,7 @@ final class ShooterDataTests: XCTestCase {
         }
     }
     
-    func test_52GalDeco_properties() {
+    func test_MainWeaponData_init_Shooter_52GalDeco() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterGravity.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .gal52Deco)!
@@ -68,10 +68,9 @@ final class ShooterDataTests: XCTestCase {
             XCTFail(error.localizedDescription)
         }
     }
-
     
     // MARK: - .96 Gal
-    func test_96Gal_properties() {
+    func test_MainWeaponData_init_Shooter_96Gal() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterHeavy.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .gal96)!
@@ -94,7 +93,7 @@ final class ShooterDataTests: XCTestCase {
         }
     }
 
-    func test_96GalDeco_properties() {
+    func test_MainWeaponData_init_Shooter_96GalDeco() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterHeavy.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .gal96Deco)!
@@ -118,7 +117,7 @@ final class ShooterDataTests: XCTestCase {
     }
     
     // MARK: - Aerospray
-    func test_AerosprayMG_properties() {
+    func test_MainWeaponData_init_Shooter_aerosprayMG() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterBlaze.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .aerosprayMG)!
@@ -142,7 +141,7 @@ final class ShooterDataTests: XCTestCase {
         }
     }
 
-    func test_AerosprayRG_properties() {
+    func test_MainWeaponData_init_Shooter_aerosprayRG() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterBlaze.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .aerosprayRG)!
@@ -167,7 +166,7 @@ final class ShooterDataTests: XCTestCase {
     }
 
     // MARK: - H3 Nozzlenose
-    func test_H3Nozzlenose_properties() {
+    func test_MainWeaponData_init_Shooter_h3Nozzlenose() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterTripleMiddle.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .h3Nozzlenose)!
@@ -192,7 +191,7 @@ final class ShooterDataTests: XCTestCase {
         }
     }
 
-    func test_H3NozzlenoseD_properties() {
+    func test_MainWeaponData_init_Shooter_h3NozzlenoseD() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterTripleMiddle.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .h3NozzlenoseD)!
@@ -218,7 +217,7 @@ final class ShooterDataTests: XCTestCase {
     }
 
     // MARK: - Jet Squelcher
-    func test_JetSquelcher_properties() {
+    func test_MainWeaponData_init_Shooter_jetSquelcher() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterLong.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .jetSquelcher)!
@@ -241,7 +240,7 @@ final class ShooterDataTests: XCTestCase {
         }
     }
 
-    func test_CustomJetSquelcher_properties() {
+    func test_MainWeaponData_init_Shooter_customJetSquelcher() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterLong.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .customJetSquelcher)!
@@ -265,7 +264,7 @@ final class ShooterDataTests: XCTestCase {
     }
 
     // MARK: - L3 Nozzlenose
-    func test_L3Nozzlenose_properties() {
+    func test_MainWeaponData_init_Shooter_l3Nozzlenose() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterTripleQuick.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .l3Nozzlenose)!
@@ -290,7 +289,7 @@ final class ShooterDataTests: XCTestCase {
         }
     }
 
-    func test_L3NozzlenoseD_properties() {
+    func test_MainWeaponData_init_Shooter_l3NozzlenoseD() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterTripleQuick.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .l3NozzlenoseD)!
@@ -315,7 +314,7 @@ final class ShooterDataTests: XCTestCase {
     }
     
     // MARK: - N-Zap
-    func test_NZap85_properties() {
+    func test_MainWeaponData_init_Shooter_nzap85() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterQuickMiddle.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .nzap85)!
@@ -338,7 +337,7 @@ final class ShooterDataTests: XCTestCase {
         }
     }
 
-    func test_NZap89_properties() {
+    func test_MainWeaponData_init_Shooter_nzap89() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterQuickMiddle.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .nzap89)!
@@ -362,7 +361,7 @@ final class ShooterDataTests: XCTestCase {
     }
 
     // MARK: - Splash-o-matic
-    func test_Splashomatic_properties() {
+    func test_MainWeaponData_init_Shooter_splashomatic() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterPrecision.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .splashomatic)!
@@ -385,7 +384,7 @@ final class ShooterDataTests: XCTestCase {
         }
     }
 
-    func test_NeoSplashomatic_properties() {
+    func test_MainWeaponData_init_Shooter_neoSplashomatic() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterPrecision.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .neoSplashomatic)!
@@ -409,7 +408,7 @@ final class ShooterDataTests: XCTestCase {
     }
 
     // MARK: - Splattershot
-    func test_Splattershot_properties() {
+    func test_MainWeaponData_init_Shooter_splattershot() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .splattershot)!
@@ -432,7 +431,7 @@ final class ShooterDataTests: XCTestCase {
         }
     }
 
-    func test_TentatekSplattershot_properties() {
+    func test_MainWeaponData_init_Shooter_tentatekSplattershot() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .tentatekSplattershot)!
@@ -455,7 +454,7 @@ final class ShooterDataTests: XCTestCase {
         }
     }
 
-    func test_HeroShotReplica_properties() {
+    func test_MainWeaponData_init_Shooter_heroShotReplica() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .heroShotReplica)!
@@ -478,7 +477,7 @@ final class ShooterDataTests: XCTestCase {
         }
     }
     
-    func test_OctoShotReplica_properties() {
+    func test_MainWeaponData_init_Shooter_octoShotReplica() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .octoShotReplica)!
@@ -501,7 +500,7 @@ final class ShooterDataTests: XCTestCase {
         }
     }
     
-    func test_OrderShotReplica_properties() {
+    func test_MainWeaponData_init_Shooter_orderShotReplica() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .orderShotReplica)!
@@ -524,9 +523,8 @@ final class ShooterDataTests: XCTestCase {
         }
     }
 
-
     // MARK: - Splatershot Jr.
-    func test_SplattershotJr_properties() {
+    func test_MainWeaponData_init_Shooter_splattershotJr() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterFirst.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .splattershotJr)!
@@ -550,7 +548,7 @@ final class ShooterDataTests: XCTestCase {
         }
     }
 
-    func test_CustomSplattershotJr_properties() {
+    func test_MainWeaponData_init_Shooter_customSplattershotJr() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterFirst.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .customSplattershotJr)!
@@ -575,7 +573,7 @@ final class ShooterDataTests: XCTestCase {
     }
     
     // MARK: - Splattershot Nova
-    func test_SplattershotNova_properties() {
+    func test_MainWeaponData_init_Shooter_splattershotNova() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterQuickLong.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .splattershotNova)!
@@ -598,7 +596,7 @@ final class ShooterDataTests: XCTestCase {
         }
     }
 
-    func test_AnnakiSplattershotNova_properties() {
+    func test_MainWeaponData_init_Shooter_annakiSplattershotNova() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterQuickLong.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .annakiSplattershotNova)!
@@ -622,7 +620,7 @@ final class ShooterDataTests: XCTestCase {
     }
 
     // MARK: - Splattershot Pro
-    func test_SplattershotPro_properties() {
+    func test_MainWeaponData_init_Shooter_splattershotPro() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterExpert.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .splattershotPro)!
@@ -645,7 +643,7 @@ final class ShooterDataTests: XCTestCase {
         }
     }
 
-    func test_ForgeSplattershotPro_properties() {
+    func test_MainWeaponData_init_Shooter_forgeSplattershotPro() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterExpert.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .forgeSplattershotPro)!
@@ -669,7 +667,7 @@ final class ShooterDataTests: XCTestCase {
     }
 
     // MARK: - Sploosh-o-matic
-    func test_Splooshomatic_properties() {
+    func test_MainWeaponData_init_Shooter_splooshomatic() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterShort.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .splooshomatic)!
@@ -693,7 +691,7 @@ final class ShooterDataTests: XCTestCase {
         }
     }
     
-    func test_NeoSplooshomatic_properties() {
+    func test_MainWeaponData_init_Shooter_neoSplooshomatic() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterShort.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .neoSplooshomatic)!
@@ -718,7 +716,7 @@ final class ShooterDataTests: XCTestCase {
     }
 
     // MARK: - Squeezer
-    func test_Squeezer_properties() {
+    func test_MainWeaponData_init_Shooter_squeezer() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterFlash.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .squeezer)!
@@ -745,7 +743,7 @@ final class ShooterDataTests: XCTestCase {
         }
     }
 
-    func test_FoilSqueezer_properties() {
+    func test_MainWeaponData_init_Shooter_foilSqueezer() {
         do {
             let gameParams = try service.decode(Shooter.self, from: "WeaponShooterFlash.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .foilSqueezer)!

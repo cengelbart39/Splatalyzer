@@ -23,7 +23,7 @@ final class ChargerDataTests: XCTestCase {
     }
 
     // MARK: - Bamboozler 14
-    func test_Bamboozler14Mk1_properties() {
+    func test_MainWeaponData_init_Charger_bamboozler14Mk1() {
         do {
             let gameParams = try service.decode(Charger.self, from: "WeaponChargerLight.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .bamboozler14Mk1)!
@@ -46,7 +46,7 @@ final class ChargerDataTests: XCTestCase {
     }
     
     // MARK: - E-Liter 4K
-    func test_Eliter4K_properties() {
+    func test_MainWeaponData_init_Charger_eliter4K() {
         do {
             let gameParams = try service.decode(Charger.self, from: "WeaponChargerLong.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .eliter4K)!
@@ -71,7 +71,7 @@ final class ChargerDataTests: XCTestCase {
         }
     }
     
-    func test_CustomEliter4K_properties() {
+    func test_MainWeaponData_init_Charger_customEliter4K() {
         do {
             let gameParams = try service.decode(Charger.self, from: "WeaponChargerLong.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .customEliter4K)!
@@ -97,7 +97,7 @@ final class ChargerDataTests: XCTestCase {
     }
 
     // MARK: - E-Liter 4K Scope
-    func test_Eliter4KScope_properties() {
+    func test_MainWeaponData_init_Charger_eliter4KScope() {
         do {
             let gameParams = try service.decode(Charger.self, from: "WeaponChargerLongScope.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .eliter4KScope)!
@@ -121,7 +121,7 @@ final class ChargerDataTests: XCTestCase {
         }
     }
     
-    func test_CustomEliter4KScope_properties() {
+    func test_MainWeaponData_init_Charger_customEliter4KScope() {
         do {
             let gameParams = try service.decode(Charger.self, from: "WeaponChargerLongScope.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .customEliter4KScope)!
@@ -145,9 +145,8 @@ final class ChargerDataTests: XCTestCase {
         }
     }
 
-    
     // MARK: - Goo Tuber
-    func test_GooTuber_properties() {
+    func test_MainWeaponData_init_Charger_gooTuber() {
         do {
             let gameParams = try service.decode(Charger.self, from: "WeaponChargerKeeper.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .gooTuber)!
@@ -172,7 +171,7 @@ final class ChargerDataTests: XCTestCase {
         }
     }
     
-    func test_CustomGooTuber_properties() {
+    func test_MainWeaponData_init_Charger_customGooTuber() {
         do {
             let gameParams = try service.decode(Charger.self, from: "WeaponChargerKeeper.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .customGooTuber)!
@@ -198,7 +197,7 @@ final class ChargerDataTests: XCTestCase {
     }
     
     // MARK: - Snipewriter
-    func test_Snipewriter5H_properties() {
+    func test_MainWeaponData_init_Charger_snipewriter5H() {
         do {
             let gameParams = try service.decode(Charger.self, from: "WeaponChargerPencil.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .snipewriter5H)!
@@ -222,7 +221,7 @@ final class ChargerDataTests: XCTestCase {
         }
     }
     
-    func test_Snipewriter5B_properties() {
+    func test_MainWeaponData_init_Charger_snipewriter5B() {
         do {
             let gameParams = try service.decode(Charger.self, from: "WeaponChargerPencil.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .snipewriter5B)!
@@ -247,7 +246,7 @@ final class ChargerDataTests: XCTestCase {
     }
 
     // MARK: - Splat Charger
-    func test_SplatCharger_properties() {
+    func test_MainWeaponData_init_Charger_splatCharger() {
         do {
             let gameParams = try service.decode(Charger.self, from: "WeaponChargerNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .splatCharger)!
@@ -271,7 +270,7 @@ final class ChargerDataTests: XCTestCase {
         }
     }
 
-    func test_ZFSplatCharger_properties() {
+    func test_MainWeaponData_init_Charger_zfSplatCharger_properties() {
         do {
             let gameParams = try service.decode(Charger.self, from: "WeaponChargerNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .zfSplatCharger)!
@@ -295,7 +294,7 @@ final class ChargerDataTests: XCTestCase {
         }
     }
     
-    func test_OrderChargerReplica_properties() {
+    func test_MainWeaponData_init_Charger_orderChargerReplica() {
         do {
             let gameParams = try service.decode(Charger.self, from: "WeaponChargerNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .orderChargerReplica)!
@@ -319,9 +318,8 @@ final class ChargerDataTests: XCTestCase {
         }
     }
 
-    
     // MARK: - Splatterscope
-    func test_Splatterscope_properties() {
+    func test_MainWeaponData_init_Charger_splatterscope() {
         do {
             let gameParams = try service.decode(Charger.self, from: "WeaponChargerNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .splatterscope)!
@@ -345,7 +343,7 @@ final class ChargerDataTests: XCTestCase {
         }
     }
 
-    func test_ZFSplatterscope_properties() {
+    func test_MainWeaponData_init_Charger_zfSplatterscope() {
         do {
             let gameParams = try service.decode(Charger.self, from: "WeaponChargerNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .zfSplatterscope)!
@@ -370,7 +368,7 @@ final class ChargerDataTests: XCTestCase {
     }
     
     // MARK: - Squiffer
-    func test_ClassicSquiffer_properties() {
+    func test_MainWeaponData_init_Charger_classicSquiffer() {
         do {
             let gameParams = try service.decode(Charger.self, from: "WeaponChargerQuick.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .classicSquiffer)!
@@ -395,7 +393,7 @@ final class ChargerDataTests: XCTestCase {
         }
     }
     
-    func test_NewSquiffer_properties() {
+    func test_MainWeaponData_init_Charger_newSquiffer_properties() {
         do {
             let gameParams = try service.decode(Charger.self, from: "WeaponChargerQuick.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .newSquiffer)!
@@ -419,5 +417,4 @@ final class ChargerDataTests: XCTestCase {
             XCTFail(error.localizedDescription)
         }
     }
-
 }

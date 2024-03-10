@@ -1,0 +1,27 @@
+{
+  "configurations" : [
+    {
+      "id" : "60DCAF2E-B6DE-478C-8992-32A8FD328F78",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "skippedTests" : [
+        "LocalizationTest"
+      ],
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "SplatalyzerTests",
+        "name" : "SplatalyzerTests"
+      }
+    }
+  ],
+  "version" : 1
+}

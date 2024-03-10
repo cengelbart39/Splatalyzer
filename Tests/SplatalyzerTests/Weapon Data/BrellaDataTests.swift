@@ -23,7 +23,7 @@ final class BrellaDataTests: XCTestCase {
     }
 
     // MARK: - Recycled Brella 24
-    func test_RecycledBrella24Mk1_properties() {
+    func test_MainWeaponData_init_Brella_recycledBrella24Mk1() {
         do {
             let gameParams = try service.decode(Brella.self, from: "WeaponShelterFocus.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .recycledBrella24MkI)!
@@ -44,10 +44,9 @@ final class BrellaDataTests: XCTestCase {
             XCTFail(error.localizedDescription)
         }
     }
-
     
     // MARK: - Splat Brella
-    func test_SplatBrella_properties() {
+    func test_MainWeaponData_init_Brella_splatBrella() {
         do {
             let gameParams = try service.decode(Brella.self, from: "WeaponShelterNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .splatBrella)!
@@ -66,7 +65,7 @@ final class BrellaDataTests: XCTestCase {
         }
     }
 
-    func test_SorellaBrella_properties() {
+    func test_MainWeaponData_init_Brella_sorellaBrella() {
         do {
             let gameParams = try service.decode(Brella.self, from: "WeaponShelterNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .sorellaBrella)!
@@ -85,7 +84,7 @@ final class BrellaDataTests: XCTestCase {
         }
     }
     
-    func test_OrderBrellaReplica_properties() {
+    func test_MainWeaponData_init_Brella_orderBrellaReplica() {
         do {
             let gameParams = try service.decode(Brella.self, from: "WeaponShelterNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .orderBrellaReplica)!
@@ -104,9 +103,8 @@ final class BrellaDataTests: XCTestCase {
         }
     }
 
-    
     // MARK: - Tenta Brella
-    func test_TentaBrella_properties() {
+    func test_MainWeaponData_init_Brella_tentaBrella() {
         do {
             let gameParams = try service.decode(Brella.self, from: "WeaponShelterWide.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .tentaBrella)!
@@ -127,7 +125,7 @@ final class BrellaDataTests: XCTestCase {
         }
     }
     
-    func test_TentaSorellaBrella_properties() {
+    func test_MainWeaponData_init_Brella_tentaSorellaBrella() {
         do {
             let gameParams = try service.decode(Brella.self, from: "WeaponShelterWide.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .tentaSorellaBrella)!
@@ -149,7 +147,7 @@ final class BrellaDataTests: XCTestCase {
     }
     
     // MARK: - Undercover Brella
-    func test_UndercoverBrella_properties() {
+    func test_MainWeaponData_init_Brella_undercoverBrella() {
         do {
             let gameParams = try service.decode(Brella.self, from: "WeaponShelterCompact.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .undercoverBrella)!
@@ -169,7 +167,7 @@ final class BrellaDataTests: XCTestCase {
         }
     }
     
-    func test_UndercoverSorellaBrella_properties() {
+    func test_MainWeaponData_init_Brella_undercoverSorellaBrella() {
         do {
             let gameParams = try service.decode(Brella.self, from: "WeaponShelterCompact.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .undercoverSorellaBrella)!

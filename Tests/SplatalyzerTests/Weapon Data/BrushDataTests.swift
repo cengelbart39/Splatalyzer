@@ -23,7 +23,7 @@ final class BrushDataTests: XCTestCase {
     }
 
     // MARK: - Inkbrush
-    func test_Inkbrush_properties() {
+    func test_MainWeaponData_init_Brush_inkbrush() {
         do {
             let gameParams = try service.decode(Brush.self, from: "WeaponBrushMini.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .inkbrush)!
@@ -44,7 +44,7 @@ final class BrushDataTests: XCTestCase {
         }
     }
     
-    func test_InkbrushNouveau_properties() {
+    func test_MainWeaponData_init_Brush_inkbrushNouveau() {
         do {
             let gameParams = try service.decode(Brush.self, from: "WeaponBrushMini.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .inkbrushNouveau)!
@@ -66,7 +66,7 @@ final class BrushDataTests: XCTestCase {
     }
 
     // MARK: - Octobrush
-    func test_Octobrush_properties() {
+    func test_MainWeaponData_init_Brush_octobrush() {
         do {
             let gameParams = try service.decode(Brush.self, from: "WeaponBrushNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .octobrush)!
@@ -87,7 +87,7 @@ final class BrushDataTests: XCTestCase {
         }
     }
     
-    func test_OctobrushNouveau_properties() {
+    func test_MainWeaponData_init_Brush_octobrushNouveau() {
         do {
             let gameParams = try service.decode(Brush.self, from: "WeaponBrushNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .octobrushNouveau)!
@@ -108,7 +108,7 @@ final class BrushDataTests: XCTestCase {
         }
     }
     
-    func test_OrderbrushReplica_properties() {
+    func test_MainWeaponData_init_Brush_orderbrushReplica() {
         do {
             let gameParams = try service.decode(Brush.self, from: "WeaponBrushNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .orderbrushReplica)!
@@ -129,9 +129,8 @@ final class BrushDataTests: XCTestCase {
         }
     }
 
-    
     // MARK: - Painbrush
-    func test_Painbrush_properties() {
+    func test_MainWeaponData_init_Brush_painbrush() {
         do {
             let gameParams = try service.decode(Brush.self, from: "WeaponBrushHeavy.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .painbrush)!
@@ -152,7 +151,7 @@ final class BrushDataTests: XCTestCase {
         }
     }
 
-    func test_PainbrushNouveau_properties() {
+    func test_MainWeaponData_init_Brush_painbrushNouveau() {
         do {
             let gameParams = try service.decode(Brush.self, from: "WeaponBrushHeavy.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .painbrushNouveau)!

@@ -23,7 +23,7 @@ final class RollerDataTests: XCTestCase {
     }
 
     // MARK: - Big Swig Roller
-    func test_BigSwigRoller_properties() {
+    func test_MainWeaponData_init_Roller_bigSwigRoller() {
         do {
             let gameParams = try service.decode(Roller.self, from: "WeaponRollerWide.game__GameParameterTable")
             let item = weaponInfo.getItem(for: .bigSwigRoller)!
@@ -47,7 +47,7 @@ final class RollerDataTests: XCTestCase {
         }
     }
 
-    func test_BigSwigRollerExpress_properties() {
+    func test_MainWeaponData_init_Roller_bigSwigRollerExpress() {
         do {
             let gameParams = try service.decode(Roller.self, from: "WeaponRollerWide.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .bigSwigRollerExpress)!
@@ -72,7 +72,7 @@ final class RollerDataTests: XCTestCase {
     }
 
     // MARK: - Carbon Roller
-    func test_CarbonRoller_properties() {
+    func test_MainWeaponData_init_Roller_carbonRoller() {
         do {
             let gameParams = try service.decode(Roller.self, from: "WeaponRollerCompact.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .carbonRoller)!
@@ -96,7 +96,7 @@ final class RollerDataTests: XCTestCase {
         }
     }
 
-    func test_CarbonRollerDeco_properties() {
+    func test_MainWeaponData_init_Roller_carbonRollerDeco() {
         do {
             let gameParams = try service.decode(Roller.self, from: "WeaponRollerCompact.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .carbonRollerDeco)!
@@ -121,7 +121,7 @@ final class RollerDataTests: XCTestCase {
     }
 
     // MARK: - Dynamo Roller
-    func test_DynamoRoller_properties() {
+    func test_MainWeaponData_init_Roller_dynamoRoller() {
         do {
             let gameParams = try service.decode(Roller.self, from: "WeaponRollerHeavy.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .dynamoRoller)!
@@ -145,7 +145,7 @@ final class RollerDataTests: XCTestCase {
         }
     }
 
-    func test_GoldDynamoRoller_properties() {
+    func test_MainWeaponData_init_Roller_goldDynamoRoller() {
         do {
             let gameParams = try service.decode(Roller.self, from: "WeaponRollerHeavy.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .goldDynamoRoller)!
@@ -170,7 +170,7 @@ final class RollerDataTests: XCTestCase {
     }
 
     // MARK: - Flingza Roller
-    func test_FlingzaRoller_properties() {
+    func test_MainWeaponData_init_Roller_flingzaRoller() {
         do {
             let gameParams = try service.decode(Roller.self, from: "WeaponRollerHunter.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .flingzaRoller)!
@@ -194,7 +194,7 @@ final class RollerDataTests: XCTestCase {
         }
     }
     
-    func test_FoilFlingzaRoller_properties() {
+    func test_MainWeaponData_init_Roller_foilFlingzaRoller() {
         do {
             let gameParams = try service.decode(Roller.self, from: "WeaponRollerHunter.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .foilFlingzaRoller)!
@@ -218,9 +218,8 @@ final class RollerDataTests: XCTestCase {
         }
     }
 
-
     // MARK: - Splat Roller
-    func test_SplatRoller_properties() {
+    func test_MainWeaponData_init_Roller_splatRoller() {
         do {
             let gameParams = try service.decode(Roller.self, from: "WeaponRollerNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .splatRoller)!
@@ -244,7 +243,7 @@ final class RollerDataTests: XCTestCase {
         }
     }
 
-    func test_KrakOnSplatRoller_properties() {
+    func test_MainWeaponData_init_Roller_krakOnSplatRoller() {
         do {
             let gameParams = try service.decode(Roller.self, from: "WeaponRollerNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .krakOnSplatRoller)!
@@ -268,7 +267,7 @@ final class RollerDataTests: XCTestCase {
         }
     }
     
-    func test_OrderRollerReplica_properties() {
+    func test_MainWeaponData_init_Roller_orderRollerReplica() {
         do {
             let gameParams = try service.decode(Roller.self, from: "WeaponRollerNormal.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .orderRollerReplica)!
@@ -291,5 +290,4 @@ final class RollerDataTests: XCTestCase {
             XCTFail(error.localizedDescription)
         }
     }
-
 }
