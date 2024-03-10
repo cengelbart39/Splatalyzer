@@ -17,30 +17,30 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build
-      run: xcodebuild -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -verbose | xcpretty
+      run: xcodebuild build-for-testing -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -verbose | xcpretty
     - name: General Tests
-      run: xcodebuild -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan 'Splatalyzer-Package' -verbose test | xcpretty
+      run: xcodebuild test-without-building -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan 'Splatalyzer-Package' -verbose test | xcpretty
     - name: Tests for English
-      run: xcodebuild -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan Localization -only-test-configuration 'English-US' -verbose test | xcpretty
+      run: xcodebuild test-without-building -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan Localization -only-test-configuration 'English-US' -verbose test | xcpretty
     - name: Tests for Chinese (CN/Simplified)
-      run: xcodebuild -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan Localization -only-test-configuration 'Chinese-CN-Simplified' -verbose test | xcpretty
+      run: xcodebuild test-without-building -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan Localization -only-test-configuration 'Chinese-CN-Simplified' -verbose test | xcpretty
     - name: Tests for Chinese (TW/Traditional)
-      run: xcodebuild -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan Localization -only-test-configuration 'Chinese-TW-Traditional' -verbose test | xcpretty
+      run: xcodebuild test-without-building -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan Localization -only-test-configuration 'Chinese-TW-Traditional' -verbose test | xcpretty
     - name: Tests for Dutch
-      run: xcodebuild -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan Localization -only-test-configuration 'Dutch' -verbose test | xcpretty
+      run: xcodebuild test-without-building -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan Localization -only-test-configuration 'Dutch' -verbose test | xcpretty
     - name: Tests for French (Canada)
-      run: xcodebuild -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan Localization -only-test-configuration 'French-CA' -verbose test | xcpretty
+      run: xcodebuild test-without-building -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan Localization -only-test-configuration 'French-CA' -verbose test | xcpretty
     - name: Tests for French (France)
-      run: xcodebuild -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan Localization -only-test-configuration 'French-FR' -verbose test | xcpretty
+      run: xcodebuild test-without-building -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan Localization -only-test-configuration 'French-FR' -verbose test | xcpretty
     - name: Tests for German
-      run: xcodebuild -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan Localization -only-test-configuration 'German' -verbose test | xcpretty
+      run: xcodebuild test-without-building -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan Localization -only-test-configuration 'German' -verbose test | xcpretty
     - name: Tests for Italian
-      run: xcodebuild -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan Localization -only-test-configuration 'Italian' -verbose test | xcpretty
+      run: xcodebuild test-without-building -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan Localization -only-test-configuration 'Italian' -verbose test | xcpretty
     - name: Tests for Japanese
-      run: xcodebuild -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan Localization -only-test-configuration 'Japanese' -verbose test | xcpretty
+      run: xcodebuild test-without-building -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan Localization -only-test-configuration 'Japanese' -verbose test | xcpretty
     - name: Tests for Russian
-      run: xcodebuild -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan Localization -only-test-configuration 'Russian' -verbose test | xcpretty
+      run: xcodebuild test-without-building -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan Localization -only-test-configuration 'Russian' -verbose test | xcpretty
     - name: Tests for Spanish (Spain)
-      run: xcodebuild -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan Localization -only-test-configuration 'Spanish-ES' -verbose test | xcpretty
+      run: xcodebuild test-without-building -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan Localization -only-test-configuration 'Spanish-ES' -verbose test | xcpretty
     - name: Tests for Spanish (Latin America)
-      run: xcodebuild -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan Localization -only-test-configuration 'Spanish-LA' -verbose test | xcpretty
+      run: xcodebuild test-without-building -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -testPlan Localization -only-test-configuration 'Spanish-LA' -verbose test | xcpretty
