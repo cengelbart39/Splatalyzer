@@ -26,7 +26,10 @@
     "BlasterBurstParam": {
       "$type": "spl__BulletBlasterBurstParam",
       "BurstFrame": 11,
-      "SplashDropPaintShotColHitRadius": 2.3,
+      "SplashDropPaintRadius": 3.84,
+      "SplashDropPaintShotColHitRadius": 2.76,
+      "SplashPaintRadius": 2.4,
+      "SplashPaintShotColHitRadius": 1.68,
       "SplashRoundAxisXArray": [
         -90.0,
         -45.0,

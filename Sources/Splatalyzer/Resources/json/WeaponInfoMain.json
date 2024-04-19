@@ -841,7 +841,7 @@
     "ShopPrice": 9300,
     "ShopUnlockRank": 11,
     "SpecActor": "Work/Actor/WeaponBlasterLong.engine__actor__ActorParam.gyml",
-    "SpecialPoint": 200,
+    "SpecialPoint": 210,
     "SpecialWeapon": "Work/Gyml/SpShockSonar.spl__WeaponInfoSpecial.gyml",
     "SubWeapon": "Work/Gyml/Bomb_Suction.spl__WeaponInfoSub.gyml",
     "Type": "Versus",
@@ -3921,7 +3921,7 @@
     "ShopPrice": 11400,
     "ShopUnlockRank": 10,
     "SpecActor": "Work/Actor/WeaponChargerNormalScope.engine__actor__ActorParam.gyml",
-    "SpecialPoint": 200,
+    "SpecialPoint": 190,
     "SpecialWeapon": "Work/Gyml/SpBlower.spl__WeaponInfoSpecial.gyml",
     "SubWeapon": "Work/Gyml/Bomb_Splash.spl__WeaponInfoSub.gyml",
     "Type": "Versus",
@@ -4115,7 +4115,7 @@
     "ShopPrice": 2200,
     "ShopUnlockRank": 2,
     "SpecActor": "Work/Actor/WeaponChargerNormal.engine__actor__ActorParam.gyml",
-    "SpecialPoint": 200,
+    "SpecialPoint": 190,
     "SpecialWeapon": "Work/Gyml/SpBlower.spl__WeaponInfoSpecial.gyml",
     "SubWeapon": "Work/Gyml/Bomb_Splash.spl__WeaponInfoSub.gyml",
     "Type": "Versus",
@@ -4371,7 +4371,7 @@
     "ShopPrice": 0,
     "ShopUnlockRank": -1,
     "SpecActor": "Work/Actor/WeaponChargerNormal.engine__actor__ActorParam.gyml",
-    "SpecialPoint": 200,
+    "SpecialPoint": 190,
     "SpecialWeapon": "Work/Gyml/SpBlower.spl__WeaponInfoSpecial.gyml",
     "SubWeapon": "Work/Gyml/Bomb_Splash.spl__WeaponInfoSub.gyml",
     "Type": "Versus",
@@ -4436,7 +4436,7 @@
     "ShopPrice": 9500,
     "ShopUnlockRank": 14,
     "SpecActor": "Work/Actor/WeaponChargerPencil.engine__actor__ActorParam.gyml",
-    "SpecialPoint": 200,
+    "SpecialPoint": 210,
     "SpecialWeapon": "Work/Gyml/SpEnergyStand.spl__WeaponInfoSpecial.gyml",
     "SubWeapon": "Work/Gyml/Sprinkler.spl__WeaponInfoSub.gyml",
     "Type": "Versus",
@@ -5784,7 +5784,7 @@
     "ShopPrice": 14700,
     "ShopUnlockRank": 14,
     "SpecActor": "Work/Actor/WeaponManeuverShort.engine__actor__ActorParam.gyml",
-    "SpecialPoint": 180,
+    "SpecialPoint": 170,
     "SpecialWeapon": "Work/Gyml/SpEnergyStand.spl__WeaponInfoSpecial.gyml",
     "SubWeapon": "Work/Gyml/Beacon.spl__WeaponInfoSub.gyml",
     "Type": "Versus",
@@ -6170,7 +6170,7 @@
     "ShopPrice": 6200,
     "ShopUnlockRank": 6,
     "SpecActor": "Work/Actor/WeaponRollerCompact.engine__actor__ActorParam.gyml",
-    "SpecialPoint": 170,
+    "SpecialPoint": 160,
     "SpecialWeapon": "Work/Gyml/SpSuperHook.spl__WeaponInfoSpecial.gyml",
     "SubWeapon": "Work/Gyml/Bomb_Robot.spl__WeaponInfoSub.gyml",
     "Type": "Versus",
@@ -6491,7 +6491,7 @@
     "ShopPrice": 29000,
     "ShopUnlockRank": 17,
     "SpecActor": "Work/Actor/WeaponRollerHeavy.engine__actor__ActorParam.gyml",
-    "SpecialPoint": 190,
+    "SpecialPoint": 180,
     "SpecialWeapon": "Work/Gyml/SpFirework.spl__WeaponInfoSpecial.gyml",
     "SubWeapon": "Work/Gyml/Bomb_Splash.spl__WeaponInfoSub.gyml",
     "Type": "Versus",
@@ -9764,7 +9764,7 @@
       },
       {
         "Type": "Power",
-        "Value": 60
+        "Value": 64
       },
       {
         "Type": "Blaze",
@@ -9811,7 +9811,7 @@
       },
       {
         "Type": "Power",
-        "Value": 60
+        "Value": 64
       },
       {
         "Type": "Blaze",
@@ -10221,7 +10221,7 @@
     "ShopPrice": 9400,
     "ShopUnlockRank": 19,
     "SpecActor": "Work/Actor/WeaponShooterFlash.engine__actor__ActorParam.gyml",
-    "SpecialPoint": 210,
+    "SpecialPoint": 220,
     "SpecialWeapon": "Work/Gyml/SpUltraShot.spl__WeaponInfoSpecial.gyml",
     "SubWeapon": "Work/Gyml/Shield.spl__WeaponInfoSub.gyml",
     "Type": "Versus",
@@ -11120,7 +11120,7 @@
     "ShopPrice": 900,
     "ShopUnlockRank": 2,
     "SpecActor": "Work/Actor/WeaponShooterNormal.engine__actor__ActorParam.gyml",
-    "SpecialPoint": 200,
+    "SpecialPoint": 210,
     "SpecialWeapon": "Work/Gyml/SpUltraShot.spl__WeaponInfoSpecial.gyml",
     "SubWeapon": "Work/Gyml/Bomb_Suction.spl__WeaponInfoSub.gyml",
     "Type": "Versus",
@@ -11395,7 +11395,7 @@
     "ShopPrice": 0,
     "ShopUnlockRank": -1,
     "SpecActor": "Work/Actor/WeaponShooterNormal.engine__actor__ActorParam.gyml",
-    "SpecialPoint": 200,
+    "SpecialPoint": 210,
     "SpecialWeapon": "Work/Gyml/SpUltraShot.spl__WeaponInfoSpecial.gyml",
     "SubWeapon": "Work/Gyml/Bomb_Suction.spl__WeaponInfoSub.gyml",
     "Type": "Versus",
@@ -11487,7 +11487,7 @@
     "ShopPrice": 0,
     "ShopUnlockRank": -1,
     "SpecActor": "Work/Actor/WeaponShooterNormal.engine__actor__ActorParam.gyml",
-    "SpecialPoint": 200,
+    "SpecialPoint": 210,
     "SpecialWeapon": "Work/Gyml/SpUltraShot.spl__WeaponInfoSpecial.gyml",
     "SubWeapon": "Work/Gyml/Bomb_Suction.spl__WeaponInfoSub.gyml",
     "Type": "Versus",
@@ -11628,7 +11628,7 @@
     "ShopPrice": 16800,
     "ShopUnlockRank": 21,
     "SpecActor": "Work/Actor/WeaponShooterPrecision.engine__actor__ActorParam.gyml",
-    "SpecialPoint": 210,
+    "SpecialPoint": 200,
     "SpecialWeapon": "Work/Gyml/SpTripleTornado.spl__WeaponInfoSpecial.gyml",
     "SubWeapon": "Work/Gyml/Bomb_Suction.spl__WeaponInfoSub.gyml",
     "Type": "Versus",
@@ -11951,7 +11951,7 @@
     "ShopPrice": 8800,
     "ShopUnlockRank": 11,
     "SpecActor": "Work/Actor/WeaponShooterQuickMiddle.engine__actor__ActorParam.gyml",
-    "SpecialPoint": 180,
+    "SpecialPoint": 170,
     "SpecialWeapon": "Work/Gyml/SpFirework.spl__WeaponInfoSpecial.gyml",
     "SubWeapon": "Work/Gyml/Bomb_Robot.spl__WeaponInfoSub.gyml",
     "Type": "Versus",
@@ -12378,7 +12378,7 @@
       },
       {
         "Type": "Power",
-        "Value": 58
+        "Value": 62
       },
       {
         "Type": "Blaze",
@@ -12430,7 +12430,7 @@
       },
       {
         "Type": "Power",
-        "Value": 58
+        "Value": 62
       },
       {
         "Type": "Blaze",

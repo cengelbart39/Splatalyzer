@@ -88,7 +88,7 @@ final class LocalizationTest: XCTestCase {
             if let ability = Ability(rawValue: jsonKey) {
                 XCTAssertEqual(ability.localized, jsonAbility, "\(ability) localization")
                 
-            } else {
+            } else if jsonKey != "None" {
                 XCTFail("Cannot find \(jsonKey) in Ability")
             }
         }

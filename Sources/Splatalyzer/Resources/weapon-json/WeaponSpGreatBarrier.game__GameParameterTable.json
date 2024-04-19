@@ -4,16 +4,16 @@
       "$type": "spl__BulletSpGreatBarrierMoveParam",
       "BarrierParam": {
         "CanopyKnockBack": 700.0,
-        "DamgeRatio": 0.5,
+        "DamgeRatio": 0.64,
         "MaxFieldHP": {
-          "High": 28800.0,
-          "Low": 24000.0,
-          "Mid": 26400.0
+          "High": 36864.0,
+          "Low": 30720.0,
+          "Mid": 33792.0
         },
         "MaxHP": {
-          "High": 14400.0,
-          "Low": 12000.0,
-          "Mid": 13200.0
+          "High": 18432.0,
+          "Low": 15360.0,
+          "Mid": 16896.0
         },
         "MaxRadius": 7.5,
         "MinRadius": 2.255,
@@ -35,8 +35,8 @@
           "MaxX": 1.0,
           "Type": "Hermit2DSmooth"
         },
-        "TimeDamage": 720,
-        "TimeDamageOnVLift": 1440
+        "TimeDamage": 921,
+        "TimeDamageOnVLift": 1842
       },
       "DroneParam": {
         "AscendCurve": {

@@ -27,12 +27,13 @@ let folderUrl = URL(fileURLWithPath: "../Sources/Splatalyzer/Resources/weapon-js
 
 let watchWords = ["Mission", "Hero", "Coop", "Rival", "BigCoop", "coop"]
 
+var deleteItems = [URL]()
+var cleanedItems = 0
+
 do {
     // Access weapon-json/
     let urls = try fileManager.contentsOfDirectory(at: folderUrl, includingPropertiesForKeys: nil, options: .includesDirectoriesPostOrder)
         
-    var deleteItems = [URL]()
-    
     // Determine which ones we need to delete
     for url in urls {
         let name = url.lastPathComponent
@@ -41,8 +42,6 @@ do {
             deleteItems.append(url)
         }
     }
-    
-    var cleanedItems = 0
     
     // Delete unneeded files
     for item in deleteItems {

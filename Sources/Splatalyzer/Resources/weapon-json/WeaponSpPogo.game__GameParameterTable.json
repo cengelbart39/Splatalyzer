@@ -12,7 +12,7 @@
         },
         {
           "Damage": 600,
-          "Distance": 12.0
+          "Distance": 10.5
         }
       ],
       "KnockBackParam": {
@@ -62,7 +62,7 @@
         },
         {
           "Damage": 600,
-          "Distance": 12.0
+          "Distance": 10.5
         }
       ],
       "KnockBackParam": {
@@ -110,16 +110,16 @@
       ],
       "MoveDistance": 6.0,
       "MoveFrame": 15,
-      "StartInvincibleFrame": 65,
+      "StartInvincibleFrame": 55,
       "SuperJumpWaitFrame0": 30,
       "SuperJumpWaitFrame1": 60,
       "WaitRiseFrame": 0
     },
     "spl__WeaponSpPogoParam": {
       "$type": "spl__WeaponSpPogoParam",
-      "Rise_Frame": 70,
-      "Rise_NoDamageStartFrame": 70,
-      "SpecialTotalFrame": 70
+      "Rise_Frame": 60,
+      "Rise_NoDamageStartFrame": 60,
+      "SpecialTotalFrame": 60
     }
   }
 }

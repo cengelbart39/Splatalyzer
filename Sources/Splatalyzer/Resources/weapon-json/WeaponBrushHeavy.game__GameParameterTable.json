@@ -29,8 +29,8 @@
       "PaintParam": {
         "SpeedMax": 0.18,
         "SpeedMin": 0.12,
-        "WidthHalfMax": 1.1,
-        "WidthHalfMin": 1.1
+        "WidthHalfMax": 1.3,
+        "WidthHalfMin": 1.3
       },
       "SideParam": {
         "CheckLength": 1.0,
@@ -426,7 +426,7 @@
       "$type": "spl__WeaponBrushRollParam",
       "InkConsumeMaxPerFrame": 0.0018,
       "InkConsumeMinPerFrame": 0.0018,
-      "InkRecoverStop": 30,
+      "InkRecoverStop": 20,
       "SpeedInkConsumeMax": 0.18,
       "SpeedInkConsumeMin": 0.18,
       "SpeedNormal": 0.18,

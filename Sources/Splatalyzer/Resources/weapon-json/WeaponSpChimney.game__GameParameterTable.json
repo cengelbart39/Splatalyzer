@@ -15,7 +15,7 @@
     "WallParam": {
       "$type": "spl__BulletSpChimneyWallParam",
       "ClosingFrame": 60,
-      "DamageValue": 300,
+      "DamageValue": 400,
       "DebugBlockRotateDistance": 0.5,
       "DebugBlockRotateSpeedMax": 1.0,
       "DebugBlockRotateSpeedMin": 0.5,
