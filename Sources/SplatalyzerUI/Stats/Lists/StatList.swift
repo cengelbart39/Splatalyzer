@@ -61,6 +61,8 @@ public struct StatList<Content: View>: View {
     }
     #endif
     
+    @State var labelHeight = CGFloat.zero
+    
     public var body: some View {
         VStack(alignment: .leading) {
             Button(action: {
@@ -69,16 +71,37 @@ public struct StatList<Content: View>: View {
                 }
             }, label: {
                 HStack {
-                    if let image = image {
-                        Label(title: {
+                    if let uiImage = image {
+                        HStack(alignment: .center) {
+                            ImageView(image: image)
+                                .frame(maxHeight: labelHeight)
+                            
                             Text(title)
                                 .font(.title3)
-                            
-                        }, icon: {
-                            ImageView(image: image)
-                                .frame(width: 25)
-                        })
+                                .overlay(
+                                    GeometryReader { geo in
+                                        Color.clear
+                                            .onAppear {
+                                                self.labelHeight = geo.frame(in: .local).size.height
+                                            }
+                                    }
+                                )
+                        }
                         
+//                        let image = Image(uiImage: uiImage)
+//                        
+//                        Text("\(image) \(title)")
+//                            .font(.title3)
+//                        
+//                        Label(title: {
+//                            Text(title)
+//                                .font(.title3)
+//                            
+//                        }, icon: {
+//                            ImageView(image: image)
+//                                .frame(width: 25)
+//                        })
+//                        
                     } else {
                         Text(title)
                             .font(.title3)
@@ -93,6 +116,7 @@ public struct StatList<Content: View>: View {
             })
             .contentTransition(.symbolEffect(.replace))
             .cardBackground(for: colorScheme)
+            .accessibilityElement(children: .combine)
             
             if !isCollapsed {
                 content

@@ -34,7 +34,9 @@ public struct BuildStatsView: View {
             
             MainDamageList(mainDamages: stats.mainDamages.filtered())
             
-            SpecialDamageList(specialWeapon: stats.specialStats.weapon, specialDamage: stats.specialDamages)
+            if !stats.specialDamages.isEmpty {
+                SpecialDamageList(specialWeapon: stats.specialStats.weapon, specialDamage: stats.specialDamages)
+            }
             
             InkTankOptionsList(options: stats.fullInkTankOptions)
             

@@ -15,6 +15,10 @@ import SwiftUI
 /// Then weapons in that class are displayed as `Button`s to update ``mainWeapon``.
 public struct MainWeaponPicker: View {
     
+    @Environment(\.colorScheme) var colorScheme
+    
+    @State var subHeaderSize = CGFloat.zero
+    
     /// The current main weapon
     @Binding public var mainWeapon: MainWeapon
     
@@ -25,38 +29,41 @@ public struct MainWeaponPicker: View {
     public var body: some View {
         Menu {
             ForEach(WeaponClass.allCases, id: \.self) { type in
-                Menu {
+                Picker(selection: $mainWeapon) {
                     ForEach(MainWeapon.getWeapons(of: type), id: \.self) { weapon in
-                        Button(action: {
-                            self.mainWeapon = weapon
-                        }, label: {
-                            Label(
-                                title: { Text(weapon.localized) },
-                                icon: {
-                                    ImageView(image: weapon.image)
-                                }
-                            )
+                        Label(title: {
+                            Text(weapon.localized)
+                            
+                        }, icon: {
+                            ImageView(image: weapon.image)
                         })
-
+                        .tag(weapon)
                     }
+
                 } label: {
-                    Label(
-                        title: { Text(type.localized) },
-                        icon: {
-                            ImageView(image: type.image)
-                        }
-                    )
+                    Label(title: {
+                        Text(type.localized)
+                        
+                    }, icon: {
+                        ImageView(image: type.image)
+                    })
                 }
+                .pickerStyle(.menu)
             }
         } label : {
-            Label(
-                title: { Text(mainWeapon.localized) },
-                icon: {
-                    ImageView(image: mainWeapon.image)
-                        .frame(width: 50, height: 50)
-                }
-            )
+            Text(mainWeapon.localized)
+//            Label(
+//                title: { Text(mainWeapon.localized) },
+//                icon: {
+//                    ImageView(image: mainWeapon.image)
+//                        .frame(width: 50, height: 50)
+//                }
+//            )
         }
+        .pickerBackground(for: colorScheme)
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("Main Weapon")
+        .accessibilityValue(mainWeapon.localized)
     }
 }
 

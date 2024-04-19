@@ -26,13 +26,14 @@ public struct DamageStatCard: View {
                     VStack(alignment: .leading, spacing: 0) {
                         Text("Distance")
                             .font(.headline.weight(.semibold))
-                            .padding(.bottom, -10)
+                            .padding(.bottom, -5)
                             .foregroundStyle(.secondary)
                         
                         Text(distance.format())
                             .font(.title)
                             .fontDesign(.rounded)
                     }
+                    .accessibilityElement(children: .combine)
                     
                     Spacer()
                 }
@@ -40,7 +41,7 @@ public struct DamageStatCard: View {
                 VStack(alignment: .leading, spacing: 0) {
                     Text("Damage")
                         .font(.headline.weight(.semibold))
-                        .padding(.bottom, -10)
+                        .padding(.bottom, -5)
                         .foregroundStyle(.secondary)
                     
                     if stat.multiShots != nil {
@@ -62,23 +63,21 @@ public struct DamageStatCard: View {
                             Text("\(shots.format()) hit to splat!")
                                 .font(.caption)
                                 .foregroundStyle(.secondary)
-                                .padding(.top, -8)
+                                .padding(.top, -5)
                             
                         } else {
                             Text("\(shots.format()) hits to splat!")
                                 .font(.caption)
                                 .foregroundStyle(.secondary)
-                                .padding(.top, -8)
+                                .padding(.top, -5)
                         }
                         
                     }
                 }
+                .accessibilityElement(children: .combine)
                 
                 Spacer()
             }
-        }
-        .onAppear {
-            print(stat)
         }
     }
 }

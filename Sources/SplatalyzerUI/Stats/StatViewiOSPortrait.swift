@@ -1,5 +1,5 @@
 //
-//  StatViewVertical.swift
+//  StatViewiOSPortrait.swift
 //
 //
 //  Created by Christopher Engelbart on 1/24/24.
@@ -8,9 +8,9 @@
 import SwiftUI
 
 /// A vertical display of of ``BuildSelector`` and Build Stats
-public struct StatViewVertical: View {
+public struct StatViewiOSPortrait: View {
     
-    @StateObject public var analyzer = SplatalyzerViewModel()
+    @EnvironmentObject var analyzer: SplatalyzerViewModel
     
     public init() { }
     
@@ -29,10 +29,9 @@ public struct StatViewVertical: View {
             }
         }
         .foregroundStyle(.primary)
-        .environmentObject(analyzer)
     }
 }
 
 #Preview {
-    StatViewVertical()
+    StatViewiOSPortrait()
 }

@@ -31,13 +31,14 @@ public struct InkTankOptionStatCard: View {
                     VStack(alignment: .leading, spacing: 0) {
                         Text(option.type.localized)
                             .font(.headline.weight(.semibold))
-                            .padding(.bottom, -10)
+                            .padding(.bottom, -5)
                             .foregroundStyle(.secondary)
                         
                         Text(option.value.format())
                             .font(.title)
                             .fontDesign(.rounded)
                     }
+                    .accessibilityElement(children: .combine)
                     
                     Spacer()
                 }

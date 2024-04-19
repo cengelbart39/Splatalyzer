@@ -11,7 +11,13 @@ import SwiftUI
 /// A view that enables the selection of a gear ability
 public struct AbilityKeyboardView: View {
     
-    @Environment(\.dismiss) var dismiss
+    @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.dismiss) private var dismiss
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+    @Environment(\.verticalSizeClass) private var verticalSizeClass
+    
+    @AccessibilityFocusState
+    private var focusGrid: Bool
     
     /// The current ability
     @Binding public var currentAbility: Ability
@@ -38,25 +44,67 @@ public struct AbilityKeyboardView: View {
             }
         }
         
-        LazyVGrid(columns: Array.init(repeating: GridItem(.flexible()), count: 5), content: {
-            ForEach(abilities, id: \.self) { ability in
-                Button(action: {
-                    self.handleTap(for: ability)
-                    dismiss()
-                    
-                }, label: {
-                    ImageView(image: ability.image)
-                        .padding(5)
-                        .abilityBackground()
+        #if canImport(UIKit)
+        let count = if UIDevice.current.userInterfaceIdiom == .phone && verticalSizeClass == .compact {
+            7
+        } else {
+            5
+        }
+        let min: CGFloat = 0
+        #else
+        let count = 5
+        let min: CGFloat = 120
+        #endif
+        
+        VStack {
+            ScrollView {
+                LazyVGrid(columns: Array.init(repeating: GridItem(.flexible(minimum: min)), count: count), content: {
+                    ForEach(0..<abilities.count, id: \.self) { index in
+                        let ability = abilities[index]
+                        
+                        Button(action: {
+                            self.handleTap(for: ability)
+                            dismiss()
+                            
+                        }, label: {
+                            #if canImport(UIKit)
+                            ImageView(image: ability.image)
+                                .padding(5)
+                                .abilityBackground(for: colorScheme, with: UIDevice.current.userInterfaceIdiom == .phone)
+                            #else
+                            ImageView(image: ability.image)
+                                .padding(5)
+                                .abilityBackground(for: colorScheme, with: true)
+                            #endif
+                        })
+                        .buttonStyle(.plain)
+                        .accessibilityLabel(ability.localized)
+                    }
                 })
-                .buttonStyle(.plain)
+                .padding()
+                .accessibilityFocused($focusGrid)
             }
-        })
-        .padding()
+            
+            Button {
+                dismiss()
+                
+            } label: {
+                Text("Dismiss")
+            }
+            .foregroundStyle(Color.accentColor)
+            .padding(.bottom)
+        }
+        .onAppear {
+            DispatchQueue.main.async {
+                self.focusGrid = true
+            }
+        }
     }
     
     public func handleTap(for ability: Ability) {
-        self.currentAbility = ability
+        withAnimation(.easeIn, {
+            self.currentAbility = ability
+        })
     }
 }
 

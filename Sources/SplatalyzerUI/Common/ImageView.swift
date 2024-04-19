@@ -33,10 +33,12 @@ struct ImageView: View {
         Image(nsImage: image ?? NSImage())
             .resizable()
             .scaledToFit()
+            .accessibilityHidden(true)
         #else
         Image(uiImage: image ?? UIImage())
             .resizable()
             .scaledToFit()
+            .accessibilityHidden(true)
         #endif
     }
 }

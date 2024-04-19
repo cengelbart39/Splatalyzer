@@ -41,7 +41,7 @@ public struct DoubleStatCard: View {
                             
                             Text("Base")
                                 .font(.headline.weight(.semibold))
-                                .padding(.bottom, -10)
+                                .padding(.bottom, -5)
                                 .foregroundStyle(.secondary)
                             
                             if unit.symbol.isEmpty {
@@ -58,6 +58,7 @@ public struct DoubleStatCard: View {
                             }
                             
                         }
+                        .accessibilityElement(children: .combine)
                         
                         Spacer()
                         

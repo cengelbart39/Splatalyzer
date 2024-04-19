@@ -35,7 +35,7 @@ public struct StringStatCard: View {
                         
                         Text("Base")
                             .font(.headline.weight(.semibold))
-                            .padding(.bottom, -10)
+                            .padding(.bottom, -5)
                             .foregroundStyle(.secondary)
                         
                         Text(value)
@@ -43,6 +43,7 @@ public struct StringStatCard: View {
                             .fontDesign(.rounded)
                         
                     }
+                    .accessibilityElement(children: .combine)
                     
                     Spacer()
                     

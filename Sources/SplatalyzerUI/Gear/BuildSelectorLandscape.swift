@@ -1,37 +1,34 @@
 //
-//  BuildSelector.swift
+//  BuildSelectorLandscape.swift
 //
 //
-//  Created by Christopher Engelbart on 1/13/24.
+//  Created by Christopher Engelbart on 3/26/24.
 //
 
-import Splatalyzer
 import SwiftUI
 
-/// Enables selection of main weapon, gear abilities, Last-Ditch Effort AP, and
-/// Tacticooler status.
-public struct BuildSelector: View {
+public struct BuildSelectorLandscape: View {
     
     @EnvironmentObject public var analyzer: SplatalyzerViewModel
     
     public init() { }
     
     public var body: some View {
+        
         HStack {
             Spacer()
             
+            GearBuildView(gearBuild: $analyzer.build.gear)
+                .padding(.leading, 10)
+            
+            Spacer()
+
             VStack {
-                Spacer()
-                
                 MainWeaponPicker(mainWeapon: $analyzer.build.mainWeapon)
-                
-                GearBuildView(gearBuild: $analyzer.build.gear)
                 
                 LDEPicker()
                 
                 TacticoolerToggle()
-                
-                Spacer()
             }
             
             Spacer()
@@ -55,6 +52,6 @@ public struct BuildSelector: View {
 }
 
 #Preview {
-    BuildSelector()
+    BuildSelectorLandscape()
         .environmentObject(SplatalyzerViewModel())
 }

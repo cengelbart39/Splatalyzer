@@ -34,7 +34,7 @@ public struct AbilityStatCard: View {
                                 
                                 Text("Base", comment: "Refers to a base effect before any gear abilities.")
                                     .font(.headline.weight(.semibold))
-                                    .padding(.bottom, -10)
+                                    .padding(.bottom, -5)
                                     .foregroundStyle(.secondary)
                                 
                                 if stat.unit.symbol.isEmpty {
@@ -57,7 +57,7 @@ public struct AbilityStatCard: View {
                                 }
                                 
                             }
-                            
+                            .accessibilityElement(children: .combine)
                             
                             Spacer()
                             
@@ -66,7 +66,7 @@ public struct AbilityStatCard: View {
                                     
                                     Text("Build", comment: "Refers to a gear build. Used in reference to the effect caused by gear abilities.")
                                         .font(.headline.weight(.semibold))
-                                        .padding(.bottom, -10)
+                                        .padding(.bottom, -5)
                                         .foregroundStyle(.secondary)
                                     
                                     if stat.unit.symbol.isEmpty {
@@ -89,6 +89,7 @@ public struct AbilityStatCard: View {
                                     }
                                     
                                 }
+                                .accessibilityElement(children: .combine)
                                 
                                 Spacer()
                             }
@@ -107,7 +108,7 @@ public struct AbilityStatCard: View {
                         ForEach(stat.modifiedBy, id: \.self) { ability in
                             ImageView(image: ability.image)
                                 .padding(5)
-                                .abilityBackground()
+                                .abilityBackground(for: colorScheme)
                                 .frame(width: 35)
                                 .shadow(radius: colorScheme == .dark ? 5 : 0)
                         }

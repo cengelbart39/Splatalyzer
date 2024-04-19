@@ -30,7 +30,7 @@ public typealias AbilityPoints = [Ability : Int]
 /// Special attributes for gear that effect the player and/oror weapons
 public enum Ability: String, CaseIterable, Codable {
     /// A unassigned ability
-    case none = "None"
+    case none = "Unknown"
     
     /// An ability that increases ink-tank refill rate
     case inkRecoveryUp = "InkRecovery_Up"

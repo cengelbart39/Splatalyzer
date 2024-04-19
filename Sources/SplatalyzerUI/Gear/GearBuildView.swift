@@ -26,5 +26,6 @@ public struct GearBuildView: View {
             
             GearPieceView(gearPiece: $gearBuild.shoes)
         }
+        .scaledToFit()
     }
 }

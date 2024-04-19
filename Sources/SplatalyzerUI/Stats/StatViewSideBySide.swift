@@ -17,9 +17,10 @@ public struct StatViewSideBySide: View {
     public var body: some View {
         GeometryReader { geo in
             HStack(spacing: 0) {
-                BuildSelector()
-                    .frame(width: geo.size.width / 2, height: geo.size.height, alignment: .center)
-//                    .frame(width: geo.size.width / 2, alignment: .center)
+                ScrollView {
+                    BuildSelector()
+                        .frame(width: geo.size.width / 2, height: geo.size.height, alignment: .center)
+                }
                 
                 if let stats = analyzer.stats {
                     ScrollView {

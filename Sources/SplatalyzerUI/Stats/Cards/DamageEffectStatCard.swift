@@ -40,13 +40,14 @@ public struct DamageEffectStatCard: View {
                             .fontDesign(.rounded)
                     }
                 }
+                .accessibilityElement(children: .combine)
                 
                 Spacer()
                 
                 VStack(alignment: .leading, spacing: 0) {
                     Text("Base")
                         .font(.headline.weight(.semibold))
-                        .padding(.bottom, -10)
+                        .padding(.bottom, -5)
                         .foregroundStyle(.secondary)
                     
                     Text(stat.baseValue.format())
@@ -56,6 +57,7 @@ public struct DamageEffectStatCard: View {
                         .foregroundStyle(.secondary)
                         .font(.headline)
                 }
+                .accessibilityElement(children: .combine)
                 
                 Spacer()
                 
@@ -63,7 +65,7 @@ public struct DamageEffectStatCard: View {
                     VStack(alignment: .leading, spacing: 0) {
                         Text("Effect")
                             .font(.headline.weight(.semibold))
-                            .padding(.bottom, -10)
+                            .padding(.bottom, -5)
                             .foregroundStyle(.secondary)
                         
                         Text(stat.effectValue.format())
@@ -73,6 +75,7 @@ public struct DamageEffectStatCard: View {
                             .foregroundStyle(.secondary)
                             .font(.headline)
                     }
+                    .accessibilityElement(children: .combine)
                     
                     Spacer()
                 }
