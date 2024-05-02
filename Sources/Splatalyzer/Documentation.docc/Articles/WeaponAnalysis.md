@@ -28,7 +28,7 @@ There are also properties focused on display, like the unit of the statistic (``
 
 <doc:APEffect> is an intermediate structure used commonly throughout `StatHelper` that calculates the default value before accounting for AP and the effect accounting for AP.
 
-The initializer relies on `StatHelper`'s ``StatHelper/abilityValues(for:in:weapon:)``. It pulls the necessary value from ``AbilityValues``, or the appropriate overwrite, into ``HighMidLow``.
+The initializer relies on `StatHelper`'s ``StatHelper/abilityValues(for:weapon:)``. It pulls the necessary value from ``AbilityValue``, or the appropriate overwrite, into ``HighMidLow``.
 
 This values are used to then calculate the base and effect values.
 

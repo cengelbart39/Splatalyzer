@@ -71,48 +71,28 @@ public struct StatList<Content: View>: View {
                 }
             }, label: {
                 HStack {
-                    if let uiImage = image {
-                        HStack(alignment: .center) {
-                            ImageView(image: image)
-                                .frame(maxHeight: labelHeight)
-                            
-                            Text(title)
-                                .font(.title3)
-                                .overlay(
-                                    GeometryReader { geo in
-                                        Color.clear
-                                            .onAppear {
-                                                self.labelHeight = geo.frame(in: .local).size.height
-                                            }
-                                    }
-                                )
-                        }
-                        
-//                        let image = Image(uiImage: uiImage)
-//                        
-//                        Text("\(image) \(title)")
-//                            .font(.title3)
-//                        
-//                        Label(title: {
-//                            Text(title)
-//                                .font(.title3)
-//                            
-//                        }, icon: {
-//                            ImageView(image: image)
-//                                .frame(width: 25)
-//                        })
-//                        
-                    } else {
-                        Text(title)
-                            .font(.title3)
+                    if image != nil {
+                        ImageView(image: image)
+                            .frame(maxHeight: labelHeight)
                     }
+                    
+                    Text(title)
+                        .font(.title3)
+                        .overlay(
+                            GeometryReader { geo in
+                                Color.clear
+                                    .onAppear {
+                                        self.labelHeight = geo.frame(in: .local).size.height
+                                    }
+                            }
+                        )
                     
                     Spacer()
                     
                     Image(systemName: isCollapsed ? "chevron.right" : "chevron.down")
                         .font(.title3)
                 }
-                .bold()
+//                .bold()
             })
             .contentTransition(.symbolEffect(.replace))
             .cardBackground(for: colorScheme)

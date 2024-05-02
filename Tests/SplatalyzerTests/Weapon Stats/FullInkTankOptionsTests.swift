@@ -13,7 +13,6 @@ final class FullInkTankOptionsTests: XCTestCase {
     let service = JSONService()
     
     let mainInfo = try! JSONService().decode(WeaponInfoMain.self, from: "WeaponInfoMain")
-    let values = try! JSONService().decode(AbilityValues.self, from: "ability-values")
 
     // MARK: - Normal
     func test_StatHelper_fullInkTankOptions_blaster_containsNormal_true() throws {
@@ -809,6 +808,6 @@ final class FullInkTankOptionsTests: XCTestCase {
         let mainData = try TestHelper.getMainData(for: weapon, with: self.mainInfo)
         let subData = try TestHelper.getSubData(for: subWeapon)
         
-        return StatHelper.fullInkTankOptions(ap: AbilityPoints(), abilities: self.values, mainInfo: mainData, subInfo: subData)
+        return StatHelper.fullInkTankOptions(ap: AbilityPoints(), mainInfo: mainData, subInfo: subData)
     }
 }

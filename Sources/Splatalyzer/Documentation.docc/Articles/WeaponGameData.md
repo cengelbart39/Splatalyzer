@@ -32,5 +32,5 @@ This protocol forces conforming objects to have a property of type `any` <doc:Ov
 This particular method returns a damage value for some ``DamageType``.
 
 ### Overwritable
-All weapons in the game can overwrite the properties within ``AbilityValues``. Of course this varies from weapon-to-weapon. `Overwritable` forces implementation of ``Overwritable/value(for:)``. It gets the weapon's overwrite value for some ``AbilityValue``.
+All weapons in the game can overwrite the properties within ``AbilityValue``. Of course this varies from weapon-to-weapon. `Overwritable` forces implementation of ``Overwritable/value(for:)``. It gets the weapon's overwrite value for some ``AbilityValue``.
 

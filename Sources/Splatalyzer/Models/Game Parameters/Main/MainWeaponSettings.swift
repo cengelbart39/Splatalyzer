@@ -72,14 +72,14 @@ public struct MainOverwrites: Overwritable {
     /// - Parameter settings: Contains overwrite properties
     public init(settings: MainWeaponSettings) {
         self.consumeRtMain = HighMidLow(
-            high: settings.overwriteConsumeRtMainHigh,
-            mid: settings.overwriteConsumeRtMainMid,
-            low: settings.overwriteConsumeRtMainLow)
+            settings.overwriteConsumeRtMainHigh,
+            settings.overwriteConsumeRtMainMid,
+            settings.overwriteConsumeRtMainLow)
         
         self.moveVelRtShot = HighMidLow(
-            high: settings.overwriteMoveVelRtShotHigh,
-            mid: settings.overwriteMoveVelRtShotMid,
-            low: settings.overwriteMoveVelRtShotLow)
+            settings.overwriteMoveVelRtShotHigh,
+            settings.overwriteMoveVelRtShotMid,
+            settings.overwriteMoveVelRtShotLow)
     }
     
     /// Initializer to set all properties to `nil`

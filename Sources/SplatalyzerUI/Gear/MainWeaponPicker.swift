@@ -51,14 +51,14 @@ public struct MainWeaponPicker: View {
                 .pickerStyle(.menu)
             }
         } label : {
-            Text(mainWeapon.localized)
-//            Label(
-//                title: { Text(mainWeapon.localized) },
-//                icon: {
-//                    ImageView(image: mainWeapon.image)
-//                        .frame(width: 50, height: 50)
-//                }
-//            )
+//            Text(mainWeapon.localized)
+            Label(
+                title: { Text(mainWeapon.localized) },
+                icon: {
+                    ImageView(image: mainWeapon.image)
+                        .frame(width: 50, height: 50)
+                }
+            )
         }
         .pickerBackground(for: colorScheme)
         .accessibilityElement(children: .combine)

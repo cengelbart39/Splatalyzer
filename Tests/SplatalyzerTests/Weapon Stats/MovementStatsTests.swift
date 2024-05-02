@@ -9,9 +9,7 @@ import XCTest
 @testable import Splatalyzer
 
 final class MovementStatsTests: XCTestCase {
-    
-    let values = try! JSONService().decode(AbilityValues.self, from: "ability-values")
-    
+        
     let mainInfo = try! JSONService().decode(WeaponInfoMain.self, from: "WeaponInfoMain")
     
     func test_MovementStats_init_blasters() throws {
@@ -519,7 +517,7 @@ final class MovementStatsTests: XCTestCase {
         
         let data = try TestHelper.getMainData(for: weapon, with: self.mainInfo)
         
-        let moveStats = MovementStats(ap: AbilityPoints(), values: self.values, gearBuild: GearBuild(), mainData: data)
+        let moveStats = MovementStats(ap: AbilityPoints(), gearBuild: GearBuild(), mainData: data)
         
         return moveStats
     }

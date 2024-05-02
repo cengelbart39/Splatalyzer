@@ -65,32 +65,32 @@ public struct MovementStats: Codable, Equatable {
         self.enemyInkDamageLimit = enemyInkDamageLimit
     }
     
-    public init(ap: AbilityPoints, values: AbilityValues, gearBuild: GearBuild, mainData: MainWeaponData) {
+    public init(ap: AbilityPoints, gearBuild: GearBuild, mainData: MainWeaponData) {
         
         self.speedType = mainData.weaponSpeedType ?? .mid
         
-        self.swimSpeed = StatHelper.swimSpeed(ap: ap, values: values, gearBuild: gearBuild, mainInfo: mainData)
+        self.swimSpeed = StatHelper.swimSpeed(ap: ap, gearBuild: gearBuild, mainInfo: mainData)
         
-        self.swimSpeedWithRainmaker = StatHelper.swimSpeedWithRainmaker(ap: ap, values: values, gearBuild: gearBuild, mainInfo: mainData)
+        self.swimSpeedWithRainmaker = StatHelper.swimSpeedWithRainmaker(ap: ap, gearBuild: gearBuild, mainInfo: mainData)
         
-        self.runSpeed = StatHelper.runSpeed(ap: ap, abilities: values, mainInfo: mainData)
+        self.runSpeed = StatHelper.runSpeed(ap: ap, mainInfo: mainData)
         
-        self.shootingRunSpeed = StatHelper.shootingRunSpeed(for: .moveSpeed, ap: ap, abilities: values, mainInfo: mainData)
+        self.shootingRunSpeed = StatHelper.shootingRunSpeed(for: .moveSpeed, ap: ap, mainInfo: mainData)
         
-        self.shootingRunSpeedCharging = StatHelper.shootingRunSpeed(for: .moveSpeedCharge, ap: ap, abilities: values, mainInfo: mainData)
+        self.shootingRunSpeedCharging = StatHelper.shootingRunSpeed(for: .moveSpeedCharge, ap: ap, mainInfo: mainData)
         
-        self.shootingRunSpeedFullCharge = StatHelper.shootingRunSpeed(for: .moveSpeedFullCharge, ap: ap, abilities: values, mainInfo: mainData)
+        self.shootingRunSpeedFullCharge = StatHelper.shootingRunSpeed(for: .moveSpeedFullCharge, ap: ap, mainInfo: mainData)
         
-        self.shootingRunSpeedSecondary = StatHelper.shootingRunSpeed(for: .moveSpeedVariable, ap: ap, abilities: values, mainInfo: mainData)
+        self.shootingRunSpeedSecondary = StatHelper.shootingRunSpeed(for: .moveSpeedVariable, ap: ap, mainInfo: mainData)
         
-        self.squidSurgeChargeFrames = StatHelper.squidSurgeChargeFrames(ap: ap, values: values, mainInfo: mainData)
+        self.squidSurgeChargeFrames = StatHelper.squidSurgeChargeFrames(ap: ap, mainInfo: mainData)
         
-        self.runSpeedInEnemyInk = StatHelper.runSpeedInEnemyInk(ap: ap, values: values, mainInfo: mainData)
+        self.runSpeedInEnemyInk = StatHelper.runSpeedInEnemyInk(ap: ap, mainInfo: mainData)
         
-        self.framesBeforeDamageInEnemyInk = StatHelper.framesBeforeDamageInEnemyInk(ap: ap, values: values, mainInfo: mainData)
+        self.framesBeforeDamageInEnemyInk = StatHelper.framesBeforeDamageInEnemyInk(ap: ap, mainInfo: mainData)
         
-        self.damageInEnemyInkPerSecond = StatHelper.damageInEnemyInkPerSecond(ap: ap, values: values, mainInfo: mainData)
+        self.damageInEnemyInkPerSecond = StatHelper.damageInEnemyInkPerSecond(ap: ap, mainInfo: mainData)
 
-        self.enemyInkDamageLimit = StatHelper.enemyInkDamageLimit(ap: ap, values: values, mainInfo: mainData)
+        self.enemyInkDamageLimit = StatHelper.enemyInkDamageLimit(ap: ap, mainInfo: mainData)
     }
 }

@@ -52,7 +52,6 @@ public struct BuildStats: Codable, Equatable, Identifiable {
     ///   - allSubInfo: Information about every sub weapon
     ///   - specialInfo: Information about the associated special weapon
     ///   - gearBuild: The user's gear build
-    ///   - abilityValues: Decoded instance of ``AbilityValues``
     ///   - ldeIntensity: The intensity of Last-Ditch Effort; a range from 0 to 21
     ///   - usingTacticooler: Whether Tacticooler effects should be accounted for
     public init(
@@ -60,7 +59,6 @@ public struct BuildStats: Codable, Equatable, Identifiable {
         allSubInfo: [SubWeapon : SubWeaponData],
         specialInfo: SpecialWeaponData,
         gearBuild: GearBuild,
-        abilityValues: AbilityValues,
         ldeIntensity: Int,
         usingTacticooler: Bool
     ) {
@@ -71,20 +69,17 @@ public struct BuildStats: Codable, Equatable, Identifiable {
         self.mainStats = MainWeaponStats(
             weapon: mainInfo.mainWeaponId,
             ap: ap,
-            values: abilityValues,
             data: mainInfo
         )
         
         self.subStats = SubWeaponStats(
             ap: ap,
-            values: abilityValues,
             mainData: mainInfo,
             subData: subInfo
         )
         
         self.specialStats = SpecialWeaponStats(
             ap: ap,
-            values: abilityValues,
             gearBuild: gearBuild,
             mainData: mainInfo,
             specialData: specialInfo
@@ -92,21 +87,18 @@ public struct BuildStats: Codable, Equatable, Identifiable {
         
         self.subDefenseStats = SubDefenseStats(
             ap: ap,
-            values: abilityValues,
             mainData: mainInfo,
             allSubData: allSubInfo
         )
         
         self.moveStats = MovementStats(
             ap: ap,
-            values: abilityValues,
             gearBuild: gearBuild,
             mainData: mainInfo
         )
         
         self.miscStats = MiscStats(
             ap: ap,
-            values: abilityValues,
             gearBuild: gearBuild,
             mainData: mainInfo,
             usingTacticooler: usingTacticooler
@@ -114,12 +106,15 @@ public struct BuildStats: Codable, Equatable, Identifiable {
                         
         self.multiShots = StatHelper.multiShotDict[mainInfo.mainWeaponId]
         
-        self.fullInkTankOptions = StatHelper.fullInkTankOptions(ap: ap, abilities: abilityValues, mainInfo: mainInfo, subInfo: subInfo)
+        self.fullInkTankOptions = StatHelper.fullInkTankOptions(
+            ap: ap,
+            mainInfo: mainInfo,
+            subInfo: subInfo)
         
         self.mainDamages = StatHelper.mainDamages(mainInfo: mainInfo)
 
         self.specialDamages = StatHelper.specialDamages(specialInfo: specialInfo)
         
-        self.subDefenseDamages = StatHelper.subDefenseDamages(ap: ap, abilities: abilityValues, subData: allSubInfo)
+        self.subDefenseDamages = StatHelper.subDefenseDamages(ap: ap,subData: allSubInfo)
     }
 }

@@ -18,12 +18,10 @@ public struct SubWeaponConsume {
     /// Initializes and calculates an instance
     /// - Parameters:
     ///   - ap: The AP of the user's gear build
-    ///   - values: A decoded instance of ``AbilityValues``
     ///   - SmainInfo: Information about the main weapon
     ///   - subInfo: Information about the sub weapon
     public init(
         _ ap: AbilityPoints,
-        _ abilities: AbilityValues,
         _ mainInfo: MainWeaponData,
         _ subInfo: SubWeaponData
     ) {
@@ -31,7 +29,6 @@ public struct SubWeaponConsume {
         
         let apEffect = APEffect(
             for: AbilityValue.getSubConsumeLevel(for: subInfo.subLevelSave),
-            in: abilities,
             of: issAp,
             weapon: mainInfo)
 

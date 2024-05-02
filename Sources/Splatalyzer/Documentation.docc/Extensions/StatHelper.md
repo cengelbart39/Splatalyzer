@@ -4,71 +4,71 @@
 
 ### Main Statistics
 
-- ``shotSpreadAir(ap:values:mainInfo:)``
-- ``shotAutofireSpreadAir(ap:values:mainInfo:)``
+- ``shotSpreadAir(ap:mainInfo:)``
+- ``shotAutofireSpreadAir(ap:mainInfo:)``
 
 ### Sub Statistics
-- ``subInkConsumptionPercentage(ap:abilities:mainInfo:subInfo:)``
-- ``subVelocity(ap:values:subInfo:)``
-- ``subPhaseDuration(ap:values:subInfo:first:)``
-- ``subMarkingSeconds(ap:values:subInfo:)``
-- ``subMarkingRadius(ap:values:subInfo:)``
-- ``subExplosionRadius(ap:values:subInfo:)``
-- ``subHp(ap:values:subInfo:)``
-- ``quickSuperJumpBoost(ap:values:subInfo:)``
+- ``subInkConsumptionPercentage(ap:mainInfo:subInfo:)``
+- ``subVelocity(ap:subInfo:)``
+- ``subPhaseDuration(ap:subInfo:first:)``
+- ``subMarkingSeconds(ap:subInfo:)``
+- ``subMarkingRadius(ap:subInfo:)``
+- ``subExplosionRadius(ap:subInfo:)``
+- ``subHp(ap:subInfo:)``
+- ``quickSuperJumpBoost(ap:subInfo:)``
 
 ### Special Statistics
-- ``specialPoint(ap:values:mainInfo:)``
-- ``specialLost(ap:abilities:gearBuild:mainInfo:splattedByRP:)``
-- ``specialDuration(ap:values:specialInfo:)``
-- ``specialDamageDistance(ap:values:specialInfo:)``
-- ``specialPaintRadius(ap:values:specialInfo:)``
-- ``specialFieldHp(ap:values:specialInfo:)``
-- ``specialDeviceHp(ap:values:specialInfo:)``
-- ``specialHookInkConsumption(ap:values:specialInfo:)``
-- ``specialHookInkConsumptionPerSecond(ap:values:specialInfo:)``
-- ``specialReticleRadius(ap:values:specialInfo:)``
-- ``specialThrowDistance(ap:values:specialInfo:)``
-- ``specialMoveSpeed(ap:values:specialInfo:)``
-- ``specialAutoChargeRate(ap:values:specialInfo:)``
-- ``specialMaxRadius(ap:values:specialInfo:)``
-- ``specialRadiusRange(ap:values:specialInfo:)``
-- ``specialPowerUpDuration(ap:values:specialInfo:)``
+- ``specialPoint(ap:mainInfo:)``
+- ``specialLost(ap:gearBuild:mainInfo:splattedByRP:)``
+- ``specialDuration(ap:specialInfo:)``
+- ``specialDamageDistance(ap:specialInfo:)``
+- ``specialPaintRadius(ap:specialInfo:)``
+- ``specialFieldHp(ap:specialInfo:)``
+- ``specialDeviceHp(ap:specialInfo:)``
+- ``specialHookInkConsumption(ap:specialInfo:)``
+- ``specialHookInkConsumptionPerSecond(ap:specialInfo:)``
+- ``specialReticleRadius(ap:specialInfo:)``
+- ``specialThrowDistance(ap:specialInfo:)``
+- ``specialMoveSpeed(ap:specialInfo:)``
+- ``specialAutoChargeRate(ap:specialInfo:)``
+- ``specialMaxRadius(ap:specialInfo:)``
+- ``specialRadiusRange(ap:specialInfo:)``
+- ``specialPowerUpDuration(ap:specialInfo:)``
 
 ### Sub Defense Statistics
-- ``toxicMistMovementReduction(ap:values:mainInfo:)``
-- ``subMarkedSeconds(ap:values:mainInfo:subInfo:)``
-- ``inkMineMarkedSeconds(ap:values:mainInfo:inkMine:)``
+- ``toxicMistMovementReduction(ap:mainInfo:)``
+- ``subMarkedSeconds(ap:mainInfo:subInfo:)``
+- ``inkMineMarkedSeconds(ap:mainInfo:inkMine:)``
 
 ### Movement Statistics
-- ``swimSpeed(ap:values:gearBuild:mainInfo:)``
-- ``swimSpeedWithRainmaker(ap:values:gearBuild:mainInfo:)``
-- ``runSpeed(ap:abilities:mainInfo:)``
-- ``shootingRunSpeed(for:ap:abilities:mainInfo:)``
-- ``squidSurgeChargeFrames(ap:values:mainInfo:)``
-- ``runSpeedInEnemyInk(ap:values:mainInfo:)``
-- ``framesBeforeDamageInEnemyInk(ap:values:mainInfo:)``
-- ``damageInEnemyInkPerSecond(ap:values:mainInfo:)``
-- ``enemyInkDamageLimit(ap:values:mainInfo:)``
+- ``swimSpeed(ap:gearBuild:mainInfo:)``
+- ``swimSpeedWithRainmaker(ap:gearBuild:mainInfo:)``
+- ``runSpeed(ap:mainInfo:)``
+- ``shootingRunSpeed(for:ap:mainInfo:)``
+- ``squidSurgeChargeFrames(ap:mainInfo:)``
+- ``runSpeedInEnemyInk(ap:mainInfo:)``
+- ``framesBeforeDamageInEnemyInk(ap:mainInfo:)``
+- ``damageInEnemyInkPerSecond(ap:mainInfo:)``
+- ``enemyInkDamageLimit(ap:mainInfo:)``
 
 ### Miscellaneous Statistics
-- ``inkRecoverySeconds(effectKey:ap:abilities:mainInfo:)``
-- ``respawnTime(ap:values:gearBuild:mainInfo:splatedByRP:hasTacticooler:)``
-- ``superJumpGroundFrames(ap:values:mainInfo:)``
-- ``superJumpTimeTotal(ap:values:mainInfo:)``
+- ``inkRecoverySeconds(effectKey:ap:mainInfo:)``
+- ``respawnTime(ap:gearBuild:mainInfo:splatedByRP:hasTacticooler:)``
+- ``superJumpGroundFrames(ap:mainInfo:)``
+- ``superJumpTimeTotal(ap:mainInfo:)``
 
 ### Uncategorized Statistics
 - ``multiShotDict``
-- ``fullInkTankOptions(ap:abilities:mainInfo:subInfo:)``
+- ``fullInkTankOptions(ap:mainInfo:subInfo:)``
 - ``mainDamages(mainInfo:)``
 - ``specialDamages(specialInfo:)``
-- ``subDefenseDamages(ap:abilities:subData:)``
+- ``subDefenseDamages(ap:subData:)``
 
 ### Helper Functions
-- ``abilityValues(for:in:weapon:)``
+- ``abilityValues(for:weapon:)``
 - ``lerpN(_:_:)``
 - ``shotsToSplat(for:of:with:)``
-- ``subDamageValue(ap:abilities:baseValue:subInfo:)``
+- ``subDamageValue(ap:baseValue:subInfo:)``
 - ``specialSavedAfterDeath(_:)``
 - ``quickSuperJumpValue(for:with:)``
-- ``superJumpTotalFrames(ap:values:mainInfo:)``
+- ``superJumpTotalFrames(ap:mainInfo:)``

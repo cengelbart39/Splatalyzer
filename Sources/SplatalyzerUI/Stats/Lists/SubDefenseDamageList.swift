@@ -57,3 +57,15 @@ public struct SubDefenseDamageItem: View {
         }
     }
 }
+
+struct DamageEffectAll {
+    
+    var weapon: SubWeapon
+    
+    var stats: [DamageEffectStat]
+    
+    init(sub: SubWeapon, stats: [DamageEffectStat]) {
+        self.weapon = sub
+        self.stats = stats
+    }
+}

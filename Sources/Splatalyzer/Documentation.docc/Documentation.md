@@ -52,7 +52,6 @@ Learn more about how the package decodes and proccesses data.
 - ``AbilityPoints``
 - ``AbilitySpecialEffect``
 - ``AbilityEffectValue``
-- ``AbilityValues``
 - ``AbilityValue``
 
 ### Gear Pieces

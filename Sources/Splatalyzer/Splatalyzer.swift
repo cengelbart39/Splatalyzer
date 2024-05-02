@@ -51,14 +51,11 @@ public final class Splatalyzer {
             weapon: mainData.specialWeapon,
             service: service)
         
-        let abilityValues = try service.decode(AbilityValues.self, from: "ability-values")
-        
         let stats = BuildStats(
             mainInfo: mainData,
             allSubInfo: allSubData,
             specialInfo: specialData,
             gearBuild: build.gear,
-            abilityValues: abilityValues,
             ldeIntensity: build.ldeIntensity,
             usingTacticooler: build.usingTacticooler)
         

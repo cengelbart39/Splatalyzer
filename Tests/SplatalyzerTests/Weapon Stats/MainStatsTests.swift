@@ -11,9 +11,7 @@ import XCTest
 final class MainStatsTests: XCTestCase {
 
     let ap = AbilityPoints()
-    
-    let values = try! JSONService().decode(AbilityValues.self, from: "ability-values")
-    
+        
     let mainInfo = try! JSONService().decode(WeaponInfoMain.self, from: "WeaponInfoMain")
 
     // MARK: - Blasters
@@ -838,7 +836,7 @@ final class MainStatsTests: XCTestCase {
         
         let data = try TestHelper.getMainData(for: weapon, with: self.mainInfo)
         
-        let mainStats = MainWeaponStats(weapon: weapon, ap: self.ap, values: self.values, data: data)
+        let mainStats = MainWeaponStats(weapon: weapon, ap: self.ap, data: data)
         
         return mainStats
     }

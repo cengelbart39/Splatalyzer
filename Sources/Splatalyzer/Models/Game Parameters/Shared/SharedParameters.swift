@@ -32,7 +32,7 @@ public struct DistanceDamage: Codable {
 }
 
 /// Represents a set of values that have an upperbound, lowerbound, and median value
-public struct HighMidLow: Codable {
+public struct HighMidLow: Codable, Equatable {
     public let high: Double?
     public let low: Double?
     public let mid: Double?
@@ -51,10 +51,10 @@ public struct HighMidLow: Codable {
     }
     
     /// Initializes properties with custom values
-    public init(high: Double?, mid: Double?, low: Double?) {
-        self.high = high
-        self.low = low
-        self.mid = mid
+    public init(_ x: Double?, _ y: Double?, _ z: Double?) {
+        self.high = x
+        self.mid = y
+        self.low = z
     }
     
     /// Initializes using a 3-element `[Double]`; `nil` if has a different length

@@ -115,9 +115,9 @@ public struct Reefslider: GameParametable {
             let splashAroundPaintRadius = self.bulletBlastParam.subSpecialSpecUpList[safe: 4]?.value
             
             let overwritePaintRadius = HighMidLow(
-                high: (paintRadius?.high ?? 0) + (splashAroundPaintRadius?.high ?? 0),
-                mid: (paintRadius?.mid ?? 0) + (splashAroundPaintRadius?.mid ?? 0),
-                low: (paintRadius?.low ?? 0) + (splashAroundPaintRadius?.low ?? 0))
+                (paintRadius?.high ?? 0) + (splashAroundPaintRadius?.high ?? 0),
+                (paintRadius?.mid ?? 0) + (splashAroundPaintRadius?.mid ?? 0),
+                (paintRadius?.low ?? 0) + (splashAroundPaintRadius?.low ?? 0))
             
             let paintRadiusExists = paintRadius?.high != nil && paintRadius?.low != nil && paintRadius?.mid != nil && splashAroundPaintRadius?.high != nil && splashAroundPaintRadius?.low != nil && splashAroundPaintRadius?.mid != nil
             

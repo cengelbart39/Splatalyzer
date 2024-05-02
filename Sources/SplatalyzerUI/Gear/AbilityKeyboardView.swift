@@ -44,16 +44,19 @@ public struct AbilityKeyboardView: View {
             }
         }
         
-        #if canImport(UIKit)
+        #if os(iOS)
         let count = if UIDevice.current.userInterfaceIdiom == .phone && verticalSizeClass == .compact {
             7
         } else {
             5
         }
-        let min: CGFloat = 0
-        #else
+        let min = CGFloat.zero
+        #elseif os(macOS)
         let count = 5
         let min: CGFloat = 120
+        #else
+        let count = 7
+        let min = CGFloat.zero
         #endif
         
         VStack {

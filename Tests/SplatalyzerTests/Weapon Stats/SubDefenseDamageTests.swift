@@ -10,24 +10,14 @@ import XCTest
 
 final class SubDefenseDamageTests: XCTestCase {
     
-    let service = JSONService()
     let ap = AbilityPoints()
-    var values: AbilityValues!
-
-    override func setUpWithError() throws {
-        self.values = try self.service.decode(AbilityValues.self, from: "ability-values")
-    }
-
-    override func tearDownWithError() throws {
-        self.values = nil
-    }
     
     func test_StatHelper_subDefenseDamages_angleShooter() throws {
         
         let data = try TestHelper.getSubData(for: .angleShooter)
         let subData = [SubWeapon.angleShooter : data]
         
-        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
+        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
                 
         XCTAssertFalse(defDmg.isEmpty)
         XCTAssertNotNil(defDmg[.angleShooter])
@@ -42,7 +32,7 @@ final class SubDefenseDamageTests: XCTestCase {
         let data = try TestHelper.getSubData(for: .autobomb)
         let subData = [SubWeapon.autobomb : data]
         
-        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
+        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
                 
         XCTAssertFalse(defDmg.isEmpty)
         XCTAssertNotNil(defDmg[.autobomb])
@@ -57,7 +47,7 @@ final class SubDefenseDamageTests: XCTestCase {
         let data = try TestHelper.getSubData(for: .burstBomb)
         let subData = [SubWeapon.burstBomb : data]
         
-        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
+        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
                 
         XCTAssertFalse(defDmg.isEmpty)
         XCTAssertNotNil(defDmg[.burstBomb])
@@ -72,7 +62,7 @@ final class SubDefenseDamageTests: XCTestCase {
         let data = try TestHelper.getSubData(for: .curlingBomb)
         let subData = [SubWeapon.curlingBomb : data]
         
-        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
+        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
                 
         XCTAssertFalse(defDmg.isEmpty)
         XCTAssertNotNil(defDmg[.curlingBomb])
@@ -87,7 +77,7 @@ final class SubDefenseDamageTests: XCTestCase {
         let data = try TestHelper.getSubData(for: .fizzyBomb)
         let subData = [SubWeapon.fizzyBomb : data]
         
-        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
+        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
                 
         XCTAssertFalse(defDmg.isEmpty)
         XCTAssertNotNil(defDmg[.fizzyBomb])
@@ -102,7 +92,7 @@ final class SubDefenseDamageTests: XCTestCase {
         let data = try TestHelper.getSubData(for: .inkMine)
         let subData = [SubWeapon.inkMine : data]
         
-        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
+        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
                 
         XCTAssertFalse(defDmg.isEmpty)
         XCTAssertNotNil(defDmg[.inkMine])
@@ -117,7 +107,7 @@ final class SubDefenseDamageTests: XCTestCase {
         let data = try TestHelper.getSubData(for: .pointSensor)
         let subData = [SubWeapon.pointSensor : data]
         
-        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
+        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
                 
         XCTAssertFalse(defDmg.isEmpty)
         XCTAssertNotNil(defDmg[.pointSensor])
@@ -129,7 +119,7 @@ final class SubDefenseDamageTests: XCTestCase {
         let data = try TestHelper.getSubData(for: .splashWall)
         let subData = [SubWeapon.splashWall : data]
         
-        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
+        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
                 
         XCTAssertFalse(defDmg.isEmpty)
         XCTAssertNotNil(defDmg[.splashWall])
@@ -141,7 +131,7 @@ final class SubDefenseDamageTests: XCTestCase {
         let data = try TestHelper.getSubData(for: .splatBomb)
         let subData = [SubWeapon.splatBomb : data]
         
-        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
+        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
                 
         XCTAssertFalse(defDmg.isEmpty)
         XCTAssertNotNil(defDmg[.splatBomb])
@@ -156,7 +146,7 @@ final class SubDefenseDamageTests: XCTestCase {
         let data = try TestHelper.getSubData(for: .sprinkler)
         let subData = [SubWeapon.sprinkler : data]
         
-        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
+        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
                 
         XCTAssertFalse(defDmg.isEmpty)
         XCTAssertNotNil(defDmg[.sprinkler])
@@ -168,7 +158,7 @@ final class SubDefenseDamageTests: XCTestCase {
         let data = try TestHelper.getSubData(for: .squidBeakon)
         let subData = [SubWeapon.squidBeakon : data]
         
-        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
+        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
                 
         XCTAssertFalse(defDmg.isEmpty)
         XCTAssertNotNil(defDmg[.squidBeakon])
@@ -180,7 +170,7 @@ final class SubDefenseDamageTests: XCTestCase {
         let data = try TestHelper.getSubData(for: .suctionBomb)
         let subData = [SubWeapon.suctionBomb : data]
         
-        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
+        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
                 
         XCTAssertFalse(defDmg.isEmpty)
         XCTAssertNotNil(defDmg[.suctionBomb])
@@ -195,7 +185,7 @@ final class SubDefenseDamageTests: XCTestCase {
         let data = try TestHelper.getSubData(for: .torpedo)
         let subData = [SubWeapon.torpedo : data]
         
-        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
+        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
                 
         XCTAssertFalse(defDmg.isEmpty)
         XCTAssertNotNil(defDmg[.torpedo])
@@ -209,7 +199,7 @@ final class SubDefenseDamageTests: XCTestCase {
         let data = try TestHelper.getSubData(for: .toxicMist)
         let subData = [SubWeapon.toxicMist : data]
         
-        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, abilities: self.values, subData: subData)
+        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
                 
         XCTAssertFalse(defDmg.isEmpty)
         XCTAssertNotNil(defDmg[.toxicMist])

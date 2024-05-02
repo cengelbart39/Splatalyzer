@@ -132,9 +132,9 @@ public struct Inkjet: GameParametable {
             let specUpPaintRadiusExists = specUpPaintRadius?.high != nil  && specUpPaintRadius?.low != nil && specUpPaintRadius?.mid != nil
             
             let paintRadius = HighMidLow(
-                high: (specUpPaintRadius?.high ?? 0) + blastPaintRadius,
-                mid: (specUpPaintRadius?.mid ?? 0) + blastPaintRadius,
-                low: (specUpPaintRadius?.low ?? 0) + blastPaintRadius)
+                (specUpPaintRadius?.high ?? 0) + blastPaintRadius,
+                (specUpPaintRadius?.mid ?? 0) + blastPaintRadius,
+                (specUpPaintRadius?.low ?? 0) + blastPaintRadius)
             
             return SpecialOverwrites(
                 chargeRateAutoPerFrame: nil,

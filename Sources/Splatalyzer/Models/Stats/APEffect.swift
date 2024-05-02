@@ -18,18 +18,15 @@ public struct APEffect {
     /// Initializes `APEffect` and calculates ``baseEffect`` and ``effect``
     /// - Parameters:
     ///   - value: A key of `AbilityValues`
-    ///   - values: A decoded instance of ``AbilityValues``
     ///   - ap: The AP of some abilitity
     ///   - weapon: A weapon with overwritable values
     public init(
         for value: AbilityValue,
-        in values: AbilityValues,
         of ap: Int,
         weapon: WeaponDatable
     ) {
         let effect = StatHelper.abilityValues(
             for: value,
-            in: values,
             weapon: weapon
         )
         

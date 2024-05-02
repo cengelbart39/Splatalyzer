@@ -84,42 +84,42 @@ public struct SpecialWeaponStats: Codable, Equatable {
         self.powerUpDuration = powerUpDuration
     }
     
-    public init(ap: AbilityPoints, values: AbilityValues, gearBuild: GearBuild, mainData: MainWeaponData, specialData: SpecialWeaponData) {
+    public init(ap: AbilityPoints, gearBuild: GearBuild, mainData: MainWeaponData, specialData: SpecialWeaponData) {
         
         self.weapon = mainData.specialWeapon
         
-        self.point = StatHelper.specialPoint(ap: ap, values: values, mainInfo: mainData)
+        self.point = StatHelper.specialPoint(ap: ap, mainInfo: mainData)
         
-        self.lost = StatHelper.specialLost(ap: ap, abilities: values, gearBuild: gearBuild, mainInfo: mainData)
+        self.lost = StatHelper.specialLost(ap: ap, gearBuild: gearBuild, mainInfo: mainData)
         
-        self.lostSplattedByRP = StatHelper.specialLost(ap: ap, abilities: values, gearBuild: gearBuild, mainInfo: mainData, splattedByRP: true)
+        self.lostSplattedByRP = StatHelper.specialLost(ap: ap, gearBuild: gearBuild, mainInfo: mainData, splattedByRP: true)
 
-        self.duration = StatHelper.specialDuration(ap: ap, values: values, specialInfo: specialData)
+        self.duration = StatHelper.specialDuration(ap: ap, specialInfo: specialData)
         
-        self.damageDistance = StatHelper.specialDamageDistance(ap: ap, values: values, specialInfo: specialData)
+        self.damageDistance = StatHelper.specialDamageDistance(ap: ap, specialInfo: specialData)
         
-        self.paintRadius = StatHelper.specialPaintRadius(ap: ap, values: values, specialInfo: specialData)
+        self.paintRadius = StatHelper.specialPaintRadius(ap: ap, specialInfo: specialData)
         
-        self.fieldHp = StatHelper.specialFieldHp(ap: ap, values: values, specialInfo: specialData)
+        self.fieldHp = StatHelper.specialFieldHp(ap: ap, specialInfo: specialData)
         
-        self.deviceHp = StatHelper.specialDeviceHp(ap: ap, values: values, specialInfo: specialData)
+        self.deviceHp = StatHelper.specialDeviceHp(ap: ap, specialInfo: specialData)
         
-        self.hookInkConsumption = StatHelper.specialHookInkConsumption(ap: ap, values: values, specialInfo: specialData)
+        self.hookInkConsumption = StatHelper.specialHookInkConsumption(ap: ap, specialInfo: specialData)
         
-        self.hookInkConsumptionPerSecond = StatHelper.specialHookInkConsumptionPerSecond(ap: ap, values: values, specialInfo: specialData)
+        self.hookInkConsumptionPerSecond = StatHelper.specialHookInkConsumptionPerSecond(ap: ap, specialInfo: specialData)
         
-        self.reticleRadius = StatHelper.specialReticleRadius(ap: ap, values: values, specialInfo: specialData)
+        self.reticleRadius = StatHelper.specialReticleRadius(ap: ap, specialInfo: specialData)
         
-        self.throwDistance = StatHelper.specialThrowDistance(ap: ap, values: values, specialInfo: specialData)
+        self.throwDistance = StatHelper.specialThrowDistance(ap: ap, specialInfo: specialData)
         
-        self.moveSpeed = StatHelper.specialMoveSpeed(ap: ap, values: values, specialInfo: specialData)
+        self.moveSpeed = StatHelper.specialMoveSpeed(ap: ap, specialInfo: specialData)
         
-        self.autoChargeRate = StatHelper.specialAutoChargeRate(ap: ap, values: values, specialInfo: specialData)
+        self.autoChargeRate = StatHelper.specialAutoChargeRate(ap: ap, specialInfo: specialData)
         
-        self.maxRadius = StatHelper.specialMaxRadius(ap: ap, values: values, specialInfo: specialData)
+        self.maxRadius = StatHelper.specialMaxRadius(ap: ap, specialInfo: specialData)
         
-        self.radiusRange = StatHelper.specialRadiusRange(ap: ap, values: values, specialInfo: specialData)
+        self.radiusRange = StatHelper.specialRadiusRange(ap: ap, specialInfo: specialData)
         
-        self.powerUpDuration = StatHelper.specialPowerUpDuration(ap: ap, values: values, specialInfo: specialData)
+        self.powerUpDuration = StatHelper.specialPowerUpDuration(ap: ap, specialInfo: specialData)
     }
 }

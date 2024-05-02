@@ -51,16 +51,15 @@ public struct MainWeaponStats: Codable, Equatable {
     public init(
         weapon: MainWeapon,
         ap: AbilityPoints,
-        values: AbilityValues,
         data: MainWeaponData
     ) {
         self.weapon = weapon
         
-        self.shotSpreadAir = StatHelper.shotSpreadAir(ap: ap, values: values, mainInfo: data)
+        self.shotSpreadAir = StatHelper.shotSpreadAir(ap: ap, mainInfo: data)
         
         self.shotSpreadGround = data.standDegSwerve
         
-        self.shotAutofireSpreadAir = StatHelper.shotAutofireSpreadAir(ap: ap, values: values, mainInfo: data)
+        self.shotAutofireSpreadAir = StatHelper.shotAutofireSpreadAir(ap: ap, mainInfo: data)
         
         self.shotAutofireSpreadGround = data.variableStandDegSwerve
         
