@@ -9,6 +9,7 @@ import Foundation
 
 public enum DamageRateInfo: String, Codable {
     case blaster = "Blaster"
+    case blasterLightShort = "Blaster_BlasterLightShort"
     case blasterKillOneShot = "Blaster_KillOneShot"
     case blasterMiddle = "Blaster_BlasterMiddle"
     case blasterShort = "Blaster_BlasterShort"
@@ -25,6 +26,7 @@ public enum DamageRateInfo: String, Codable {
     case bombTrap = "Bomb_Trap"
     case brushCore = "BrushCore"
     case brushSplash = "BrushSplash"
+    case brushSplashHeavy = "BrushSplash_Heavy"
     case castle = "Castle"
     case charger = "Charger"
     case chargerFull = "ChargerFull"

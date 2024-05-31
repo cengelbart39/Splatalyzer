@@ -88,7 +88,7 @@
       "ShotGuideFrame": 8,
       "SquidShotShorteningFrame": 1,
       "Stand_DegBiasDecrease": 0.005,
-      "Stand_DegBiasKf": 0.01,
+      "Stand_DegBiasKf": 0.005,
       "Stand_DegBiasMin": 0.01,
       "Stand_DegSwerve": 5.0
     },

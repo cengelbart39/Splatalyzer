@@ -12,6 +12,11 @@ final class SplatanaDecodingTests: XCTestCase {
     
     let service = JSONService()
     
+    func test_Splatana_decode_mintDecavitator_noThrows() {
+        let fileName = "WeaponSaberHeavy.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(Splatana.self, from: fileName))
+    }
+    
     func test_Splatana_decode_splatanaStamper_noThrows() {
         let fileName = "WeaponSaberNormal.game__GameParameterTable"
         XCTAssertNoThrow(try service.decode(Splatana.self, from: fileName))

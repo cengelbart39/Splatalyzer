@@ -21,6 +21,54 @@ final class SplatanaDataTests: XCTestCase {
     override func tearDown() {
         self.weaponInfo = nil
     }
+    
+    // MARK: - Mint Decavitator
+    func test_MainWeaponData_init_Splatana_mintDecavitator() {
+        do {
+            let gameParams = try service.decode(Splatana.self, from: "WeaponSaberNormal.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .mintDecavitator)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+                        
+            XCTAssertEqual(data.mainWeaponId, .mintDecavitator)
+            XCTAssertEqual(data.subWeapon, .suctionBomb)
+            XCTAssertEqual(data.specialWeapon, .bigBubbler)
+            XCTAssertNil(data.weaponSpeedType)
+            XCTAssertNotNil(data.damageSplatanaVerticalDirect)
+            XCTAssertNotNil(data.damageSplatanaVertical)
+            XCTAssertNotNil(data.damageSplatanaHorizontalDirect)
+            XCTAssertNotNil(data.damageSplatanaHorizontal)
+            XCTAssertNotNil(data.inkConsumeSwing)
+            XCTAssertNotNil(data.inkConsumeChargeFullCharge)
+
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
+    func test_MainWeaponData_init_Splatana_charcoalDecavitator() {
+        do {
+            let gameParams = try service.decode(Splatana.self, from: "WeaponSaberNormal.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .charcoalDecavitator)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+                        
+            XCTAssertEqual(data.mainWeaponId, .charcoalDecavitator)
+            XCTAssertEqual(data.subWeapon, .splashWall)
+            XCTAssertEqual(data.specialWeapon, .inkjet)
+            XCTAssertNil(data.weaponSpeedType)
+            XCTAssertNotNil(data.damageSplatanaVerticalDirect)
+            XCTAssertNotNil(data.damageSplatanaVertical)
+            XCTAssertNotNil(data.damageSplatanaHorizontalDirect)
+            XCTAssertNotNil(data.damageSplatanaHorizontal)
+            XCTAssertNotNil(data.inkConsumeSwing)
+            XCTAssertNotNil(data.inkConsumeChargeFullCharge)
+
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
 
     // MARK: - Splatana Stamper
     func test_MainWeaponData_init_Splatana_splatanaStamper() {

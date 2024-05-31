@@ -233,6 +233,32 @@ final class BlasterDataTests: XCTestCase {
         }
     }
     
+    func test_MainWeaponData_init_Blaster_customRangeBlaster() {
+        do {
+            let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterLong.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .customRangeBlaster)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+                                    
+            XCTAssertEqual(data.mainWeaponId, .customRangeBlaster)
+            XCTAssertEqual(data.subWeapon, .splatBomb)
+            XCTAssertEqual(data.specialWeapon, .krakenRoyale)
+            XCTAssertNil(data.weaponSpeedType)
+            XCTAssertNotNil(data.moveSpeed)
+            XCTAssertNotNil(data.damageValueMax)
+            XCTAssertNotNil(data.damageValueDirect)
+            XCTAssertEqual(data.blastDamageDistance.count, 2)
+            XCTAssertNotNil(data.jumpDegSwerve)
+            XCTAssertNotNil(data.standDegSwerve)
+            XCTAssertNotNil(data.inkRecoverStop)
+            XCTAssertNotNil(data.inkConsume)
+
+            
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+    
     // MARK: - Rapid Blaster
     func test_MainWeaponData_init_Blaster_rapidBlaster() {
         do {

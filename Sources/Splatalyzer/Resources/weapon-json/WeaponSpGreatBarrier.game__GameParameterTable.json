@@ -38,6 +38,10 @@
         "TimeDamage": 921,
         "TimeDamageOnVLift": 1842
       },
+      "BaseParam": {
+        "PaintRadius": 4.5,
+        "PaintTexture": "Bomb00Height3pnt4"
+      },
       "DroneParam": {
         "AscendCurve": {
           "Data": [
@@ -60,6 +64,7 @@
           "MaxX": 1.0,
           "Type": "Hermit2DSmooth"
         },
+        "AscendFrame": 30,
         "AscendHeight": 8.5,
         "FieldCollisionRadius": 0.4,
         "IgnitionFrame": 15,

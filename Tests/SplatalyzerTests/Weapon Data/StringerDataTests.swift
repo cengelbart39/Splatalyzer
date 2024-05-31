@@ -138,4 +138,54 @@ final class StringerDataTests: XCTestCase {
             XCTFail(error.localizedDescription)
         }
     }
+    
+    // MARK: - Wellspring V
+    func test_MainWeaponData_init_Stringer_wellspringV() {
+        do {
+            let gameParams = try service.decode(Stringer.self, from: "WeaponStringerExplosion.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .wellspringV)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+                        
+            XCTAssertEqual(data.mainWeaponId, .wellspringV)
+            XCTAssertEqual(data.subWeapon, .autobomb)
+            XCTAssertEqual(data.specialWeapon, .ultraStamp)
+            XCTAssertEqual(data.weaponSpeedType, .slow)
+            XCTAssertNotNil(data.moveSpeedFullCharge)
+            XCTAssertNotNil(data.damageValueMax)
+            XCTAssertNotNil(data.damageValueMin)
+            XCTAssertFalse(data.blastDamageDistance.isEmpty)
+            XCTAssertNotNil(data.chargeFrameFullCharge)
+            XCTAssertNotNil(data.keepChargeFullFrame)
+            XCTAssertNotNil(data.inkConsumeChargeFullCharge)
+
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+    
+    func test_MainWeaponData_init_Stringer_customWellspringV() {
+        do {
+            let gameParams = try service.decode(Stringer.self, from: "WeaponStringerExplosion.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .customWellspringV)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+                        
+            XCTAssertEqual(data.mainWeaponId, .customWellspringV)
+            XCTAssertEqual(data.subWeapon, .pointSensor)
+            XCTAssertEqual(data.specialWeapon, .waveBreaker)
+            XCTAssertEqual(data.weaponSpeedType, .slow)
+            XCTAssertNotNil(data.moveSpeedFullCharge)
+            XCTAssertNotNil(data.damageValueMax)
+            XCTAssertNotNil(data.damageValueMin)
+            XCTAssertFalse(data.blastDamageDistance.isEmpty)
+            XCTAssertNotNil(data.chargeFrameFullCharge)
+            XCTAssertNotNil(data.keepChargeFullFrame)
+            XCTAssertNotNil(data.inkConsumeChargeFullCharge)
+
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
 }

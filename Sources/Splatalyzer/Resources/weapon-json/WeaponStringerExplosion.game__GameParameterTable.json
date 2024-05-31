@@ -4,7 +4,9 @@
       "$type": "spl__PlayerGearSkillParam_MainEffectiveRangeUp"
     },
     "MainWeaponSetting": {
-      "$type": "spl__PlayerGearSkillParam_MainWeaponSetting"
+      "$type": "spl__PlayerGearSkillParam_MainWeaponSetting",
+      "WeaponAccType": "Mid",
+      "WeaponSpeedType": "Slow"
     },
     "spl__BulletStringerParam": {
       "$type": "spl__BulletStringerParam",
@@ -14,8 +16,8 @@
       },
       "DamageParam": {
         "DirectHitDamageMax": 350,
-        "DirectHitDamageMid": 350,
-        "DirectHitDamageMin": 300
+        "DirectHitDamageMid": 240,
+        "DirectHitDamageMin": 240
       },
       "DetonationParam": {
         "BlastParam": {
@@ -56,9 +58,9 @@
         "GoStraightStateEndMaxSpeed": 10.0,
         "GoStraightToBrakeStateFrame": 4,
         "SpawnSpeed": 0.0,
-        "SpawnSpeedMax": 3.85,
-        "SpawnSpeedMid": 2.1,
-        "SpawnSpeedMin": 2.1
+        "SpawnSpeedMax": 3.5,
+        "SpawnSpeedMid": 2.294,
+        "SpawnSpeedMin": 1.45
       },
       "PaintParam": {
         "WidthHalfMax": 3.0,
@@ -66,13 +68,12 @@
         "WidthHalfMin": 2.5
       },
       "SplashPaintParam": {
-        "DepthScaleMax": 2.7,
+        "DepthScaleMax": 2.5,
         "WidthHalf": 1.48
       },
       "SplashSpawnParam": {
-        "DropInterval": 10.0,
-        "RandomSpawnVelXMax": 0.02,
-        "SplashNumMax": 5,
+        "DropInterval": 12.0,
+        "SplashNumMax": 2,
         "SplitNum": 5
       },
       "WallDropMoveParam": {
@@ -90,17 +91,19 @@
       },
       "ChargeParam": {
         "AirChargeRateByInkEmpty": 1,
-        "ChargeFrameFullCharge": 72,
-        "ChargeFrameMidCharge": 30,
-        "ChargeFrameMinCharge": 9,
+        "ChargeFrameFullCharge": 80,
+        "ChargeFrameMidCharge": 40,
+        "ChargeFrameMinCharge": 12,
         "FreezeFrameFullCharge": 15,
         "FreezeFrameMidCharge": 15,
         "FreezeFrameMinCharge": 12,
-        "InkConsumeFullCharge": 0.085,
-        "InkConsumeMidCharge": 0.06,
-        "InkConsumeMinCharge": 0.05,
+        "InkConsumeFullCharge": 0.09,
+        "InkConsumeMidCharge": 0.08,
+        "InkConsumeMinCharge": 0.07,
         "JumpHeightFullCharge": 0.07,
-        "MoveSpeedFullCharge": 0.068,
+        "MoveJumpDownBias": 0.8,
+        "MoveJumpDownStartChargeRate": 0.05,
+        "MoveSpeedFullCharge": 0.04,
         "PostDelayFrame": 10
       },
       "IsEnableChargeKeep": false,
@@ -118,14 +121,17 @@
         "TiltGuideWidth": 4.0
       },
       "ShotParam": {
-        "ArrowAngleMax": 8.0,
-        "ArrowAngleMid": 8,
-        "ArrowMargin": 0.4,
+        "ArrowAngleMax": 12.0,
+        "ArrowAngleMid": -4,
+        "ArrowAngleMin": -12.0,
+        "ArrowMargin": 0.2,
+        "ArrowNum": 5,
         "BowJumpTiltSpeedForward": 9.0,
-        "BowJumpTiltSpeedReverse": -12.0,
+        "BowJumpTiltSpeedReverse": -9.0,
         "BowTiltDegreeMax": 90.0,
         "BowTiltKeepFrame": 45,
-        "BowTiltResetSpeed": 2
+        "BowTiltResetSpeed": 2,
+        "CheckCollisionSpawnPos": true
       }
     }
   }

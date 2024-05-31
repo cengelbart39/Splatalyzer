@@ -32,18 +32,6 @@
     "spl__ConstraintBindableHelperParam": {
       "$type": "spl__ConstraintBindableHelperParam"
     },
-    "spl__CoopBuildParam": {
-      "$type": "spl__PlayerCoopBuildParam"
-    },
-    "spl__CoopBuildParam_HumanMoveUp": {
-      "$type": "spl__PlayerGearSkillParam_HumanMoveUp"
-    },
-    "spl__CoopBuildParam_OpInkEffectReduction": {
-      "$type": "spl__PlayerGearSkillParam_OpInkEffectReduction"
-    },
-    "spl__CoopBuildParam_SquidMoveUp": {
-      "$type": "spl__PlayerGearSkillParam_SquidMoveUp"
-    },
     "spl__DamageParam": {
       "$type": "spl__DamageParam",
       "DamageReceiverArray": [

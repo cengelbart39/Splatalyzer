@@ -23,7 +23,7 @@ final class BrellaDataTests: XCTestCase {
     }
 
     // MARK: - Recycled Brella 24
-    func test_MainWeaponData_init_Brella_recycledBrella24Mk1() {
+    func test_MainWeaponData_init_Brella_recycledBrella24MkI() {
         do {
             let gameParams = try service.decode(Brella.self, from: "WeaponShelterFocus.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .recycledBrella24MkI)!
@@ -44,6 +44,29 @@ final class BrellaDataTests: XCTestCase {
             XCTFail(error.localizedDescription)
         }
     }
+    
+    func test_MainWeaponData_init_Brella_recycledBrella24MkII() {
+        do {
+            let gameParams = try service.decode(Brella.self, from: "WeaponShelterFocus.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .recycledBrella24MkII)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+                        
+            XCTAssertEqual(data.mainWeaponId, .recycledBrella24MkII)
+            XCTAssertEqual(data.subWeapon, .toxicMist)
+            XCTAssertEqual(data.specialWeapon, .tripleSplashdown)
+            XCTAssertEqual(data.weaponSpeedType, .mid)
+            XCTAssertNotNil(data.moveSpeed)
+            XCTAssertNotNil(data.damageValueMax)
+            XCTAssertNotNil(data.canopyHP)
+            XCTAssertNotNil(data.inkConsumeUmbrellaShelterCanopy)
+            XCTAssertNotNil(data.inkConsumeWeaponShelterShotgun)
+            
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
     
     // MARK: - Splat Brella
     func test_MainWeaponData_init_Brella_splatBrella() {

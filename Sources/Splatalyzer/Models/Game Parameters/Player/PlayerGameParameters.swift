@@ -24,10 +24,10 @@ public struct Player: GameParametable {
         
         public let constraintBidnableHelperParam: ConstraintBindableHelperParameter
         
-        public let coopBuildParam: CoopBuildParameter
-        public let coopBuildParamHumanMoveUp: CoopBuildParameterHumanMoveUp
-        public let coopBuildParamOpInkEffectReduction: CoopBuildParameterOpInkEffectReduction
-        public let coopBuildParamSquidMoveUp: CoopBuildParameterSquidMoveUp
+//        public let coopBuildParam: CoopBuildParameter
+//        public let coopBuildParamHumanMoveUp: CoopBuildParameterHumanMoveUp
+//        public let coopBuildParamOpInkEffectReduction: CoopBuildParameterOpInkEffectReduction
+//        public let coopBuildParamSquidMoveUp: CoopBuildParameterSquidMoveUp
         
         public let damageParam: DamageParameter
         
@@ -95,10 +95,10 @@ public struct Player: GameParametable {
             case dieBlastParam = "DieBlastParam"
             case playerLeagueInGameModifierParam = "PlayerLeagueInGameModifierParam"
             case constraintBidnableHelperParam = "spl__ConstraintBindableHelperParam"
-            case coopBuildParam = "spl__CoopBuildParam"
-            case coopBuildParamHumanMoveUp = "spl__CoopBuildParam_HumanMoveUp"
-            case coopBuildParamOpInkEffectReduction = "spl__CoopBuildParam_OpInkEffectReduction"
-            case coopBuildParamSquidMoveUp = "spl__CoopBuildParam_SquidMoveUp"
+//            case coopBuildParam = "spl__CoopBuildParam"
+//            case coopBuildParamHumanMoveUp = "spl__CoopBuildParam_HumanMoveUp"
+//            case coopBuildParamOpInkEffectReduction = "spl__CoopBuildParam_OpInkEffectReduction"
+//            case coopBuildParamSquidMoveUp = "spl__CoopBuildParam_SquidMoveUp"
             case damageParam = "spl__DamageParam"
             case displayItemGetHelperParam = "spl__DisplayItemGetHelperParam"
             case inkRailPlayerParam = "spl__InkRailPlayerParam"

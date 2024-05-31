@@ -96,6 +96,15 @@
         "Y": 0.8,
         "Z": 1.0
       },
+      "PaintSplashParam": {
+        "DepthMaxDropHeight": 1.0,
+        "DepthMinDropHeight": 1.0,
+        "DepthScaleMax": 1.8,
+        "DepthScaleMin": 1.8,
+        "WidthHalf": 3.0,
+        "WidthHalfNearest": 3.0
+      },
+      "PaintSplashSpanFrame": 3,
       "PreBurstEmitFrame": 15,
       "PreBurstFrame": 38,
       "PreMoveFrame": 38,

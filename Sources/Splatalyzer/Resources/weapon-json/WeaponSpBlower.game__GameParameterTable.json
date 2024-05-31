@@ -110,6 +110,20 @@
       "LengthMax": 15.0,
       "MuzzleCollisionOffset": 1.0,
       "MuzzleCollisionRadius": 1.2,
+      "PaintSplashParam": {
+        "DepthMaxDropHeight": 1.0,
+        "DepthMinDropHeight": 1.0,
+        "DepthScaleMax": 2.0,
+        "DepthScaleMin": 2.0,
+        "WidthHalf": 1.5,
+        "WidthHalfNearest": 1.5
+      },
+      "PaintSplashSpanFrame": 20,
+      "PaintSplashSpawnOffset": {
+        "X": -0.3,
+        "Y": -0.7,
+        "Z": -0.7
+      },
       "PoisonMistForPlayer": {
         "EffectFrame": 5,
         "Level": [

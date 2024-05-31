@@ -21,4 +21,9 @@ final class StringerDecodingTests: XCTestCase {
         let fileName = "WeaponStringerNormal.game__GameParameterTable"
         XCTAssertNoThrow(try service.decode(Stringer.self, from: fileName))
     }
+    
+    func test_Stringer_decode_wellspringV_noThrows() {
+        let fileName = "WeaponStringerExplosion.game__GameParameterTable"
+        XCTAssertNoThrow(try service.decode(Stringer.self, from: fileName))
+    }
 }

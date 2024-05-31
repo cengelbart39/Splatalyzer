@@ -125,6 +125,9 @@ public struct InkVac: GameParametable {
             public let lengthMax: Double
             public let muzzleCollisionOffset: Double
             public let muzzleCollisionRadius: Double
+            public let paintSplashParam: PaintSplashParameter
+            public let paintSplashSpanFrame: Int
+            public let paintSplashSpawnOffset: XYZData
             public let poisonMistForPlayer: PoisonMistForPlayer
             public let radiusMax: HighMidLow
             public let radiusMin: HighMidLow
@@ -148,11 +151,32 @@ public struct InkVac: GameParametable {
                 case lengthMax = "LengthMax"
                 case muzzleCollisionOffset = "MuzzleCollisionOffset"
                 case muzzleCollisionRadius = "MuzzleCollisionRadius"
+                case paintSplashParam = "PaintSplashParam"
+                case paintSplashSpanFrame = "PaintSplashSpanFrame"
+                case paintSplashSpawnOffset = "PaintSplashSpawnOffset"
                 case poisonMistForPlayer = "PoisonMistForPlayer"
                 case radiusMax = "RadiusMax"
                 case radiusMin = "RadiusMin"
                 case receiveDamageForGeyser = "ReceiveDamageForGeyser"
                 case receiveDamageForPlayer = "ReceiveDamageForPlayer"
+            }
+        }
+        
+        public struct PaintSplashParameter: Codable {
+            let depthMaxDropHeight: Double
+            let depthMinDropHeight: Double
+            let depthScaleMax: Double
+            let depthScaleMin: Double
+            let widthHalf: Double
+            let widthHalfNearest: Double
+            
+            enum CodingKeys: String, CodingKey {
+                case depthMaxDropHeight = "DepthMaxDropHeight"
+                case depthMinDropHeight = "DepthMinDropHeight"
+                case depthScaleMax = "DepthScaleMax"
+                case depthScaleMin = "DepthScaleMin"
+                case widthHalf = "WidthHalf"
+                case widthHalfNearest = "WidthHalfNearest"
             }
         }
         

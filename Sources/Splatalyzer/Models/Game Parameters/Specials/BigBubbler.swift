@@ -29,11 +29,13 @@ public struct BigBubbler: GameParametable {
         public struct BulletMoveParameter: Codable {
             public let type: String
             public let barrierParam: BarrierParameter
+            public let baseParam: BaseParameter
             public let droneParam: DroneParameter
             
             public enum CodingKeys: String, CodingKey {
                 case type = "$type"
                 case barrierParam = "BarrierParam"
+                case baseParam = "BaseParam"
                 case droneParam = "DroneParam"
             }
             
@@ -61,8 +63,19 @@ public struct BigBubbler: GameParametable {
                 }
             }
             
+            public struct BaseParameter: Codable {
+                public let paintRadius: Double
+                public let paintTexture: String
+                
+                enum CodingKeys: String, CodingKey {
+                    case paintRadius = "PaintRadius"
+                    case paintTexture = "PaintTexture"
+                }
+            }
+            
             public struct DroneParameter: Codable {
                 public let ascendCurve: RateData
+                public let ascendFrame: Int
                 public let ascendHeight: Double
                 public let fieldCollisionRadius: Double
                 public let ignitionFrame: Int
@@ -71,6 +84,7 @@ public struct BigBubbler: GameParametable {
                 
                 public enum CodingKeys: String, CodingKey {
                     case ascendCurve = "AscendCurve"
+                    case ascendFrame = "AscendFrame"
                     case ascendHeight = "AscendHeight"
                     case fieldCollisionRadius = "FieldCollisionRadius"
                     case ignitionFrame = "IgnitionFrame"

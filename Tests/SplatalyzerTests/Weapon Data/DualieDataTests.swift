@@ -96,6 +96,32 @@ final class DualieDataTests: XCTestCase {
             XCTFail(error.localizedDescription)
         }
     }
+    
+    func test_MainWeaponData_init_Dualie_customDouserDualiesFF() {
+        do {
+            let gameParams = try service.decode(Dualie.self, from: "WeaponManeuverLong.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .customDouserDualiesFF)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+                                                            
+            XCTAssertEqual(data.mainWeaponId, .customDouserDualiesFF)
+            XCTAssertEqual(data.subWeapon, .burstBomb)
+            XCTAssertEqual(data.specialWeapon, .tripleInkstrike)
+            XCTAssertNotNil(data.moveSpeed)
+            XCTAssertNotNil(data.damageValueMax)
+            XCTAssertNotNil(data.damageValueMin)
+            XCTAssertNotNil(data.damageLapOverValueMax)
+            XCTAssertNotNil(data.damageLapOverValueMin)
+            XCTAssertNotNil(data.jumpDegSwerve)
+            XCTAssertNotNil(data.standDegSwerve)
+            XCTAssertNotNil(data.inkConsume)
+            XCTAssertNotNil(data.inkConsumeSideStep)
+            
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
 
     // MARK: - Dualie Squelchers
     func test_MainWeaponData_init_Dualie_dualieSquelchers() {

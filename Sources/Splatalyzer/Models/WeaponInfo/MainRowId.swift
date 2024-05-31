@@ -27,6 +27,7 @@ public enum MainRowId: String, CaseIterable, Codable {
     case rapidBlasterMsn = "Blaster_Light_Msn"
     
     case rangeBlaster = "Blaster_Long_00"
+    case customRangeBlaster = "Blaster_Long_01"
     case rangeBlasterCoop = "Blaster_Long_Coop"
     case rangeBlasterMsn = "Blaster_Long_Msn"
     
@@ -80,6 +81,7 @@ public enum MainRowId: String, CaseIterable, Codable {
     case gooTuberMsn = "Charger_Keeper_Msn"
     
     case bamboozler14Mk1 = "Charger_Light_00"
+    case bamboozler14Mk2 = "Charger_Light_01"
     case bamboozler14Mk1Coop = "Charger_Light_Coop"
     case bamboozler14Mk1Msn = "Charger_Light_Msn"
     
@@ -131,6 +133,7 @@ public enum MainRowId: String, CaseIterable, Codable {
     case gloogaDualiesMsn = "Maneuver_Gallon_Msn"
     
     case douserDualiesFF = "Maneuver_Long_00"
+    case customDouserDualiesFF = "Maneuver_Long_01"
     case douserDualiesFFCoop = "Maneuver_Long_Coop"
     
     case splatDualies = "Maneuver_Normal_00"
@@ -155,6 +158,8 @@ public enum MainRowId: String, CaseIterable, Codable {
     case dualiesSdodr = "Maneuver_Sdodr"
     
     // MARK: Rollers
+    case grizzcoRoller = "Roller_Bear_Coop"
+    
     case carbonRoller = "Roller_Compact_00"
     case carbonRollerDeco = "Roller_Compact_01"
     case carbonRollerCoop = "Roller_Compact_Coop"
@@ -199,6 +204,10 @@ public enum MainRowId: String, CaseIterable, Codable {
     case splatanaStamperCoop = "Saber_Normal_Coop"
     case splatanaStamperMsn = "Saber_Normal_Msn"
     
+    case mintDecavitator = "Saber_Heavy_00"
+    case charcoalDecavitator = "Saber_Heavy_01"
+    case mintDecavitatorCoop = "Saber_Heavy_Coop"
+    
     case splatanaSdodr = "Saber_Sdodr"
     
     // MARK: Brellas
@@ -210,6 +219,7 @@ public enum MainRowId: String, CaseIterable, Codable {
     case undercoverBrellaMsn = "Shelter_Compact_Msn"
     
     case recycledBrella24MkI = "Shelter_Focus_00"
+    case recycledBrella24MkII = "Shelter_Focus_01"
     case recycledBrella24MkICoop = "Shelter_Focus_Coop"
     
     case splatBrella = "Shelter_Normal_00"
@@ -359,9 +369,11 @@ public enum MainRowId: String, CaseIterable, Codable {
     case ballpointSplatlingMsn = "Spinner_Downpour_Msn"
     
     case heavyEditSplatling = "Spinner_HyperShort_00"
+    case heavyEditSplatlingNouveau = "Spinner_HyperShort_01"
     case heavyEditSplatlingCoop = "Spinner_HyperShort_Coop"
     
     case hydraSplatling = "Spinner_Hyper_00"
+    case customHydraSplatling = "Spinner_Hyper_01"
     case hydraSplatlingCoop = "Spinner_Hyper_Coop"
     case hydraSplatlingMsn = "Spinner_Hyper_Msn"
     
@@ -395,6 +407,10 @@ public enum MainRowId: String, CaseIterable, Codable {
     case reeflux450 = "Stringer_Short_00"
     case reeflux450Deco = "Stringer_Short_01"
     case reeflux450Coop = "Stringer_Short_Coop"
+    
+    case wellspringV = "Stringer_Explosion_00"
+    case customWellspringV = "Stringer_Explosion_01"
+    case wellspringVCoop = "Stringer_Explosion_Coop"
     
     case stringerSdodr = "Stringer_Sdodr"
 }

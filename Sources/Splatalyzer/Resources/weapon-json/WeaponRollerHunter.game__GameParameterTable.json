@@ -323,7 +323,7 @@
               "ChangeFrameForPlayer": 1,
               "DepletionRate": 0.5,
               "EndRadiusForField": 0.7,
-              "EndRadiusForPlayer": 0.0,
+              "EndRadiusForPlayer": 0.1,
               "FriendThroughFrameForPlayer": 3,
               "InitRadiusForField": 0.1,
               "InitRadiusForPlayer": 0.1
@@ -382,9 +382,10 @@
           "UnitParam": {
             "CollisionParam": {
               "ChangeFrameForField": 2,
+              "ChangeFrameForPlayer": 1,
               "DepletionRate": 0.5,
               "EndRadiusForField": 0.7,
-              "EndRadiusForPlayer": 0.0,
+              "EndRadiusForPlayer": 0.1,
               "FriendThroughFrameForPlayer": 3,
               "InitRadiusForField": 0.1,
               "InitRadiusForPlayer": 0.1

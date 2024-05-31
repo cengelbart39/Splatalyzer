@@ -98,6 +98,31 @@ final class SplatlingDataTests: XCTestCase {
             XCTFail(error.localizedDescription)
         }
     }
+    
+    func test_MainWeaponData_init_Splatling_heavyEditSplatlingNouveau() {
+        do {
+            let gameParams = try service.decode(Splatling.self, from: "WeaponSpinnerHyperShort.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .heavyEditSplatlingNouveau)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+            
+            XCTAssertEqual(data.mainWeaponId, .heavyEditSplatlingNouveau)
+            XCTAssertEqual(data.subWeapon, .splatBomb)
+            XCTAssertEqual(data.specialWeapon, .crabTank)
+            XCTAssertEqual(data.weaponSpeedType, .mid)
+            XCTAssertNotNil(data.moveSpeed)
+            XCTAssertNotNil(data.moveSpeedCharge)
+            XCTAssertNotNil(data.damageValueMin)
+            XCTAssertNotNil(data.damageValueFullChargeMax)
+            XCTAssertNotNil(data.jumpDegSwerve)
+            XCTAssertNotNil(data.standDegSwerve)
+            XCTAssertNotNil(data.inkRecoverStop)
+            XCTAssertNotNil(data.inkConsumeFullChargeSplatling)
+
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
 
     // MARK: - Heavy Splatling
     func test_MainWeaponData_init_Splatling_heavySplatling() {
@@ -183,6 +208,31 @@ final class SplatlingDataTests: XCTestCase {
             XCTAssertEqual(data.mainWeaponId, .hydraSplatling)
             XCTAssertEqual(data.subWeapon, .autobomb)
             XCTAssertEqual(data.specialWeapon, .booyahBomb)
+            XCTAssertEqual(data.weaponSpeedType, .slow)
+            XCTAssertNotNil(data.moveSpeed)
+            XCTAssertNotNil(data.moveSpeedCharge)
+            XCTAssertNotNil(data.damageValueMin)
+            XCTAssertNotNil(data.damageValueFullChargeMax)
+            XCTAssertNotNil(data.jumpDegSwerve)
+            XCTAssertNotNil(data.standDegSwerve)
+            XCTAssertNotNil(data.inkRecoverStop)
+            XCTAssertNotNil(data.inkConsumeFullChargeSplatling)
+
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+    
+    func test_MainWeaponData_init_Splatling_customHydraSplatling() {
+        do {
+            let gameParams = try service.decode(Splatling.self, from: "WeaponSpinnerHyper.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .customHydraSplatling)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+            
+            XCTAssertEqual(data.mainWeaponId, .customHydraSplatling)
+            XCTAssertEqual(data.subWeapon, .inkMine)
+            XCTAssertEqual(data.specialWeapon, .splattercolorScreen)
             XCTAssertEqual(data.weaponSpeedType, .slow)
             XCTAssertNotNil(data.moveSpeed)
             XCTAssertNotNil(data.moveSpeedCharge)

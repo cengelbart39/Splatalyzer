@@ -23,6 +23,7 @@ public enum MainWeapon: String, CaseIterable, Codable, Identifiable {
     case rapidBlaster = "Blaster_Light_00"
     case rapidBlasterDeco = "Blaster_Light_01"
     case rangeBlaster = "Blaster_Long_00"
+    case customRangeBlaster = "Blaster_Long_01"
     case blaster = "Blaster_Middle_00"
     case customBlaster = "Blaster_Middle_01"
     case sblast92 = "Blaster_Precision_00"
@@ -44,6 +45,7 @@ public enum MainWeapon: String, CaseIterable, Codable, Identifiable {
     case gooTuber = "Charger_Keeper_00"
     case customGooTuber = "Charger_Keeper_01"
     case bamboozler14Mk1 = "Charger_Light_00"
+    case bamboozler14Mk2 = "Charger_Light_01"
     case eliter4KScope = "Charger_LongScope_00"
     case customEliter4KScope = "Charger_LongScope_01"
     case eliter4K = "Charger_Long_00"
@@ -64,6 +66,7 @@ public enum MainWeapon: String, CaseIterable, Codable, Identifiable {
     case gloogaDualies = "Maneuver_Gallon_00"
     case gloogaDualiesDeco = "Maneuver_Gallon_01"
     case douserDualiesFF = "Maneuver_Long_00"
+    case customDouserDualiesFF = "Maneuver_Long_01"
     case splatDualies = "Maneuver_Normal_00"
     case enperrySplatDualies = "Maneuver_Normal_01"
     case orderDualiesReplica = "Maneuver_Normal_O"
@@ -86,6 +89,8 @@ public enum MainWeapon: String, CaseIterable, Codable, Identifiable {
     case bigSwigRollerExpress = "Roller_Wide_01"
     
     // MARK: Splatanas
+    case mintDecavitator = "Saber_Heavy_00"
+    case charcoalDecavitator = "Saber_Heavy_01"
     case splatanaWiper = "Saber_Lite_00"
     case splatanaWiperDeco = "Saber_Lite_01"
     case splatanaStamper = "Saber_Normal_00"
@@ -96,6 +101,7 @@ public enum MainWeapon: String, CaseIterable, Codable, Identifiable {
     case undercoverBrella = "Shelter_Compact_00"
     case undercoverSorellaBrella = "Shelter_Compact_01"
     case recycledBrella24MkI = "Shelter_Focus_00"
+    case recycledBrella24MkII = "Shelter_Focus_01"
     case splatBrella = "Shelter_Normal_00"
     case sorellaBrella = "Shelter_Normal_01"
     case orderBrellaReplica = "Shelter_Normal_O"
@@ -158,7 +164,9 @@ public enum MainWeapon: String, CaseIterable, Codable, Identifiable {
     case ballpointSplatling = "Spinner_Downpour_00"
     case ballpointSplatlingNouveau = "Spinner_Downpour_01"
     case heavyEditSplatling = "Spinner_HyperShort_00"
+    case heavyEditSplatlingNouveau = "Spinner_HyperShort_01"
     case hydraSplatling = "Spinner_Hyper_00"
+    case customHydraSplatling = "Spinner_Hyper_01"
     case miniSplatling = "Spinner_Quick_00"
     case zinkMiniSplatling = "Spinner_Quick_01"
     case nautilus47 = "Spinner_Serein_00"
@@ -168,6 +176,8 @@ public enum MainWeapon: String, CaseIterable, Codable, Identifiable {
     case orderSplatlingReplica = "Spinner_Standard_O"
     
     // MARK: Stringer
+    case wellspringV = "Stringer_Explosion_00"
+    case customWellspringV = "Stringer_Explosion_01"
     case triStringer = "Stringer_Normal_00"
     case inklineTriStringer = "Stringer_Normal_01"
     case orderStringerReplica = "Stringer_Normal_O"
@@ -177,25 +187,25 @@ public enum MainWeapon: String, CaseIterable, Codable, Identifiable {
     /// The weapon class associated with the main weapon
     public var type: WeaponClass {
         switch self {
-        case .rapidBlasterPro, .rapidBlasterProDeco, .clashBlaster, .clashBlasterNeo, .rapidBlaster, .rapidBlasterDeco, .rangeBlaster, .blaster, .customBlaster, .sblast91, .sblast92, .lunaBlaster, .lunaBlasterNeo, .orderBlasterReplica:
+        case .rapidBlasterPro, .rapidBlasterProDeco, .clashBlaster, .clashBlasterNeo, .rapidBlaster, .rapidBlasterDeco, .rangeBlaster, .customRangeBlaster, .blaster, .customBlaster, .sblast91, .sblast92, .lunaBlaster, .lunaBlasterNeo, .orderBlasterReplica:
             return .blaster
             
         case .painbrush, .painbrushNouveau, .inkbrush, .inkbrushNouveau, .octobrush, .octobrushNouveau, .orderbrushReplica:
             return .brush
             
-        case .gooTuber, .customGooTuber, .bamboozler14Mk1, .eliter4K, .customEliter4K, .eliter4KScope, .customEliter4KScope, .splatterscope, .zfSplatterscope, .splatCharger, .zfSplatCharger, .orderChargerReplica, .snipewriter5H, .snipewriter5B, .classicSquiffer, .newSquiffer:
+        case .gooTuber, .customGooTuber, .bamboozler14Mk1, .bamboozler14Mk2, .eliter4K, .customEliter4K, .eliter4KScope, .customEliter4KScope, .splatterscope, .zfSplatterscope, .splatCharger, .zfSplatCharger, .orderChargerReplica, .snipewriter5H, .snipewriter5B, .classicSquiffer, .newSquiffer:
             return .charger
             
-        case .dualieSquelchers, .customDualieSquelchers, .gloogaDualies, .gloogaDualiesDeco, .douserDualiesFF, .splatDualies, .enperrySplatDualies, .orderDualiesReplica, .dappleDualies, .dappleDualiesNouveau, .darkTetraDualies, .lightTetraDualies:
+        case .dualieSquelchers, .customDualieSquelchers, .gloogaDualies, .gloogaDualiesDeco, .douserDualiesFF, .customDouserDualiesFF, .splatDualies, .enperrySplatDualies, .orderDualiesReplica, .dappleDualies, .dappleDualiesNouveau, .darkTetraDualies, .lightTetraDualies:
             return .dualie
             
         case .carbonRoller, .carbonRollerDeco, .dynamoRoller, .goldDynamoRoller, .flingzaRoller, .foilFlingzaRoller, .splatRoller, .krakOnSplatRoller, .orderRollerReplica, .bigSwigRoller, .bigSwigRollerExpress:
             return .roller
             
-        case .splatanaWiper, .splatanaWiperDeco, .splatanaStamper, .splatanaStamperNouveau, .orderSplatanaReplica:
+        case .mintDecavitator, .charcoalDecavitator, .splatanaWiper, .splatanaWiperDeco, .splatanaStamper, .splatanaStamperNouveau, .orderSplatanaReplica:
             return .splatana
             
-        case .undercoverBrella, .undercoverSorellaBrella, .recycledBrella24MkI, .splatBrella, .sorellaBrella, .orderBrellaReplica, .tentaBrella, .tentaSorellaBrella:
+        case .undercoverBrella, .undercoverSorellaBrella, .recycledBrella24MkI, .recycledBrella24MkII, .splatBrella, .sorellaBrella, .orderBrellaReplica, .tentaBrella, .tentaSorellaBrella:
             return .brella
             
         case .aerosprayMG, .aerosprayRG, .splattershotPro, .forgeSplattershotPro, .splattershotJr, .customSplattershotJr, .squeezer, .foilSqueezer, .gal52, .gal52Deco, .gal96, .gal96Deco, .jetSquelcher, .customJetSquelcher, .splattershot, .tentatekSplattershot, .heroShotReplica, .orderShotReplica, .octoShotReplica, .splashomatic, .neoSplashomatic, .splattershotNova, .annakiSplattershotNova, .nzap85, .nzap89, .splooshomatic, .neoSplooshomatic, .l3Nozzlenose, .l3NozzlenoseD, .h3Nozzlenose, .h3NozzlenoseD:
@@ -204,10 +214,10 @@ public enum MainWeapon: String, CaseIterable, Codable, Identifiable {
         case .bloblobber, .bloblobberDeco, .triSlosher, .triSlosherNouveau, .dreadWringer, .dreadWringerD, .sloshingMachine, .sloshingMachineNeo, .slosher, .slosherDeco, .orderSlosherReplica, .explosher, .customExplosher:
             return .slosher
             
-        case .ballpointSplatling, .ballpointSplatlingNouveau, .heavyEditSplatling, .hydraSplatling, .miniSplatling, .zinkMiniSplatling, .nautilus47, .nautilus79, .heavySplatling, .heavySplatlingDeco, .orderSplatlingReplica:
+        case .ballpointSplatling, .ballpointSplatlingNouveau, .heavyEditSplatling, .heavyEditSplatlingNouveau, .hydraSplatling, .customHydraSplatling, .miniSplatling, .zinkMiniSplatling, .nautilus47, .nautilus79, .heavySplatling, .heavySplatlingDeco, .orderSplatlingReplica:
             return .splatling
             
-        case .triStringer, .inklineTriStringer, .orderStringerReplica, .reeflux450, .reeflux450Deco:
+        case .wellspringV, .customWellspringV, .triStringer, .inklineTriStringer, .orderStringerReplica, .reeflux450, .reeflux450Deco:
             return .stringer
         }
     }

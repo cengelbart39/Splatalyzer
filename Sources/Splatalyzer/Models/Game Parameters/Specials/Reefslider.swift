@@ -78,6 +78,8 @@ public struct Reefslider: GameParametable {
             public let noDamageFrameAfterBurst: Int
             public let noDamageStartFramePreMove: Int
             public let offsetLocalDetectPlayer: XYZData
+            public let paintSplashParam: PaintSplashParameter
+            public let paintSplashSpanFrame: Int
             public let preBurstEmitFrame: Int
             public let preBurstFrame: Int
             public let preMoveFrame: Int
@@ -101,12 +103,32 @@ public struct Reefslider: GameParametable {
                 case noDamageFrameAfterBurst = "NoDamageFrame_AfterBurst"
                 case noDamageStartFramePreMove = "NoDamageStartFrame_PreMove"
                 case offsetLocalDetectPlayer = "OffsetLocal_DetectPlayer"
+                case paintSplashParam = "PaintSplashParam"
+                case paintSplashSpanFrame = "PaintSplashSpanFrame"
                 case preBurstEmitFrame = "PreBurstEmitFrame"
                 case preBurstFrame = "PreBurstFrame"
                 case preMoveFrame = "PreMoveFrame"
                 case radiusDetectPlayer = "Radius_DetectPlayer"
                 case rutPaintRadius = "RutPaintRadius"
                 case unrelaxFrame = "UnrelaxFrame"
+            }
+            
+            public struct PaintSplashParameter: Codable {
+                let depthMaxDropHeight: Double
+                let depthMinDropHeight: Double
+                let depthScaleMax: Double
+                let depthScaleMin: Double
+                let widthHalf: Double
+                let widthHalfNearest: Double
+                
+                enum CodingKeys: String, CodingKey {
+                    case depthMaxDropHeight = "DepthMaxDropHeight"
+                    case depthMinDropHeight = "DepthMinDropHeight"
+                    case depthScaleMax = "DepthScaleMax"
+                    case depthScaleMin = "DepthScaleMin"
+                    case widthHalf = "WidthHalf"
+                    case widthHalfNearest = "WidthHalfNearest"
+                }
             }
         }
         

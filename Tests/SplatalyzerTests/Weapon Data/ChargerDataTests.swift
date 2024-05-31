@@ -23,7 +23,7 @@ final class ChargerDataTests: XCTestCase {
     }
 
     // MARK: - Bamboozler 14
-    func test_MainWeaponData_init_Charger_bamboozler14Mk1() {
+    func test_MainWeaponData_init_Charger_bamboozler14MkI() {
         do {
             let gameParams = try service.decode(Charger.self, from: "WeaponChargerLight.game__GameParameterTable")
             let item = self.weaponInfo.getItem(for: .bamboozler14Mk1)!
@@ -44,6 +44,29 @@ final class ChargerDataTests: XCTestCase {
             XCTFail(error.localizedDescription)
         }
     }
+    
+    func test_MainWeaponData_init_Charger_bamboozler14MkII() {
+        do {
+            let gameParams = try service.decode(Charger.self, from: "WeaponChargerLight.game__GameParameterTable")
+            let item = self.weaponInfo.getItem(for: .bamboozler14Mk2)!
+            
+            let data = MainWeaponData(weaponInfo: item, container: gameParams)
+                                    
+            XCTAssertEqual(data.mainWeaponId, .bamboozler14Mk2)
+            XCTAssertEqual(data.subWeapon, .fizzyBomb)
+            XCTAssertEqual(data.specialWeapon, .superChump)
+            XCTAssertEqual(data.weaponSpeedType, .fast)
+            XCTAssertNotNil(data.moveSpeedFullCharge)
+            XCTAssertNotNil(data.damageValueFullCharge)
+            XCTAssertNotNil(data.damageValueMaxCharge)
+            XCTAssertNotNil(data.damageValueMinCharge)
+            XCTAssertNotNil(data.inkConsumeFullCharge)
+            
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+
     
     // MARK: - E-Liter 4K
     func test_MainWeaponData_init_Charger_eliter4K() {
