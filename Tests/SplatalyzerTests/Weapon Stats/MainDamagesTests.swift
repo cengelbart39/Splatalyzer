@@ -83,6 +83,14 @@ final class MainDamagesTests: XCTestCase {
         XCTAssertTrue(dmgs00.contains(type: .normalMax))
         XCTAssertTrue(dmgs00.contains(type: .direct))
         XCTAssertTrue(dmgs00.contains(type: .splash))
+        
+        let data01 = try TestHelper.getMainData(for: .customRangeBlaster, with: mainInfo)
+        
+        let dmgs01 = StatHelper.mainDamages(mainInfo: data01)
+        XCTAssertFalse(dmgs01.isEmpty)
+        XCTAssertTrue(dmgs01.contains(type: .normalMax))
+        XCTAssertTrue(dmgs01.contains(type: .direct))
+        XCTAssertTrue(dmgs01.contains(type: .splash))
     }
 
     func test_StatHelper_mainDamages_rapidBlaster() throws {
@@ -146,6 +154,12 @@ final class MainDamagesTests: XCTestCase {
         let dmgs00 = StatHelper.mainDamages(mainInfo: data00)
         XCTAssertFalse(dmgs00.isEmpty)
         XCTAssertTrue(dmgs00.contains(type: .normalMax))
+        
+        let data01 = try TestHelper.getMainData(for: .recycledBrella24MkII, with: mainInfo)
+        
+        let dmgs01 = StatHelper.mainDamages(mainInfo: data01)
+        XCTAssertFalse(dmgs01.isEmpty)
+        XCTAssertTrue(dmgs01.contains(type: .normalMax))
     }
     
     func test_StatHelper_mainDamages_splatBrella() throws {
@@ -261,13 +275,21 @@ final class MainDamagesTests: XCTestCase {
 
     // MARK: - Charger
     func test_StatHelper_mainDamages_bamboozler14() throws {
-        let data00 = try TestHelper.getMainData(for: .bamboozler14Mk1, with: mainInfo)
+        let data00 = try TestHelper.getMainData(for: .bamboozler14MkI, with: mainInfo)
         
         let dmgs00 = StatHelper.mainDamages(mainInfo: data00)
         XCTAssertFalse(dmgs00.isEmpty)
         XCTAssertTrue(dmgs00.contains(type: .fullCharge))
         XCTAssertTrue(dmgs00.contains(type: .maxCharge))
         XCTAssertTrue(dmgs00.contains(type: .tapShot))
+        
+        let data01 = try TestHelper.getMainData(for: .bamboozler14MkII, with: mainInfo)
+        
+        let dmgs01 = StatHelper.mainDamages(mainInfo: data01)
+        XCTAssertFalse(dmgs01.isEmpty)
+        XCTAssertTrue(dmgs01.contains(type: .fullCharge))
+        XCTAssertTrue(dmgs01.contains(type: .maxCharge))
+        XCTAssertTrue(dmgs01.contains(type: .tapShot))
     }
 
     func test_StatHelper_mainDamages_eliter4K() throws {
@@ -428,6 +450,15 @@ final class MainDamagesTests: XCTestCase {
         XCTAssertTrue(dmgs00.contains(type: .normalMin))
         XCTAssertTrue(dmgs00.contains(type: .turretMax))
         XCTAssertTrue(dmgs00.contains(type: .turretMin))
+        
+        let data01 = try TestHelper.getMainData(for: .customDouserDualiesFF, with: mainInfo)
+        
+        let dmgs01 = StatHelper.mainDamages(mainInfo: data01)
+        XCTAssertFalse(dmgs01.isEmpty)
+        XCTAssertTrue(dmgs01.contains(type: .normalMax))
+        XCTAssertTrue(dmgs01.contains(type: .normalMin))
+        XCTAssertTrue(dmgs01.contains(type: .turretMax))
+        XCTAssertTrue(dmgs01.contains(type: .turretMin))
     }
 
     func test_StatHelper_mainDamages_dualieSquelchers() throws {
@@ -1002,6 +1033,27 @@ final class MainDamagesTests: XCTestCase {
     }
 
     // MARK: - Splatana
+    func test_StatHelper_mainDamages_mintDecavitator() throws {
+        let data00 = try TestHelper.getMainData(for: .mintDecavitator, with: mainInfo)
+        
+        let dmgs00 = StatHelper.mainDamages(mainInfo: data00)
+        XCTAssertFalse(dmgs00.isEmpty)
+        XCTAssertTrue(dmgs00.contains(type: .splatanaVertical))
+        XCTAssertTrue(dmgs00.contains(type: .splatanaVerticalDirect))
+        XCTAssertTrue(dmgs00.contains(type: .splatanaHorizontal))
+        XCTAssertTrue(dmgs00.contains(type: .splatanaHorizontalDirect))
+        
+        let data01 = try TestHelper.getMainData(for: .charcoalDecavitator, with: mainInfo)
+        
+        let dmgs01 = StatHelper.mainDamages(mainInfo: data01)
+        XCTAssertFalse(dmgs01.isEmpty)
+        XCTAssertTrue(dmgs01.contains(type: .splatanaVertical))
+        XCTAssertTrue(dmgs01.contains(type: .splatanaVerticalDirect))
+        XCTAssertTrue(dmgs01.contains(type: .splatanaHorizontal))
+        XCTAssertTrue(dmgs01.contains(type: .splatanaHorizontalDirect))
+    }
+
+    
     func test_StatHelper_mainDamages_splatanaStamper() throws {
         let data00 = try TestHelper.getMainData(for: .splatanaStamper, with: mainInfo)
         
@@ -1075,6 +1127,13 @@ final class MainDamagesTests: XCTestCase {
         XCTAssertFalse(dmgs00.isEmpty)
         XCTAssertTrue(dmgs00.contains(type: .normalMaxFullCharge))
         XCTAssertTrue(dmgs00.contains(type: .normalMin))
+        
+        let data01 = try TestHelper.getMainData(for: .heavyEditSplatlingNouveau, with: mainInfo)
+        
+        let dmgs01 = StatHelper.mainDamages(mainInfo: data01)
+        XCTAssertFalse(dmgs01.isEmpty)
+        XCTAssertTrue(dmgs01.contains(type: .normalMaxFullCharge))
+        XCTAssertTrue(dmgs01.contains(type: .normalMin))
     }
 
     func test_StatHelper_mainDamages_heavySplatling() throws {
@@ -1107,6 +1166,13 @@ final class MainDamagesTests: XCTestCase {
         XCTAssertFalse(dmgs00.isEmpty)
         XCTAssertTrue(dmgs00.contains(type: .normalMaxFullCharge))
         XCTAssertTrue(dmgs00.contains(type: .normalMin))
+        
+        let data01 = try TestHelper.getMainData(for: .customHydraSplatling, with: mainInfo)
+        
+        let dmgs01 = StatHelper.mainDamages(mainInfo: data01)
+        XCTAssertFalse(dmgs01.isEmpty)
+        XCTAssertTrue(dmgs01.contains(type: .normalMaxFullCharge))
+        XCTAssertTrue(dmgs01.contains(type: .normalMin))
     }
 
     func test_StatHelper_mainDamages_miniSplatling() throws {
@@ -1184,4 +1250,21 @@ final class MainDamagesTests: XCTestCase {
         XCTAssertTrue(dmgsO.contains(type: .splash))
     }
 
+    func test_StatHelper_mainDamages_wellspringV() throws {
+        let data00 = try TestHelper.getMainData(for: .wellspringV, with: mainInfo)
+        
+        let dmgs00 = StatHelper.mainDamages(mainInfo: data00)
+        XCTAssertFalse(dmgs00.isEmpty)
+        XCTAssertTrue(dmgs00.contains(type: .normalMax))
+        XCTAssertTrue(dmgs00.contains(type: .normalMin))
+        XCTAssertTrue(dmgs00.contains(type: .splash))
+        
+        let data01 = try TestHelper.getMainData(for: .customWellspringV, with: mainInfo)
+        
+        let dmgs01 = StatHelper.mainDamages(mainInfo: data01)
+        XCTAssertFalse(dmgs01.isEmpty)
+        XCTAssertTrue(dmgs01.contains(type: .normalMax))
+        XCTAssertTrue(dmgs01.contains(type: .normalMin))
+        XCTAssertTrue(dmgs01.contains(type: .splash))
+    }
 }

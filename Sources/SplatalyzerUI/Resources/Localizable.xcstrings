@@ -35,6 +35,9 @@
         }
       }
     },
+    "%@ Intensity" : {
+
+    },
     "%@-%@" : {
       "comment" : "Represents a distance range, i.e. 4-7",
       "localizations" : {
@@ -42,6 +45,16 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "%1$@-%2$@"
+          }
+        }
+      }
+    },
+    "%@,  %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@,  %2$@"
           }
         }
       }
@@ -353,6 +366,9 @@
         }
       }
     },
+    "Change current ability" : {
+
+    },
     "Charge Time To Full" : {
       "localizations" : {
         "en" : {
@@ -362,6 +378,12 @@
           }
         }
       }
+    },
+    "Clothes Main Ability, %@" : {
+
+    },
+    "Consider %@" : {
+
     },
     "Damage" : {
       "localizations" : {
@@ -373,6 +395,9 @@
         }
       }
     },
+    "Dismiss" : {
+
+    },
     "Distance" : {
       "localizations" : {
         "en" : {
@@ -382,6 +407,9 @@
           }
         }
       }
+    },
+    "Don't Consider %@" : {
+
     },
     "Effect" : {
       "localizations" : {
@@ -393,8 +421,12 @@
         }
       }
     },
+    "Headgear Main Ability, %@" : {
+
+    },
     "LDE Intensity" : {
       "comment" : "LDE = Last Ditch Error",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -403,6 +435,9 @@
           }
         }
       }
+    },
+    "Main Weapon" : {
+
     },
     "Max Charge Hold Time" : {
       "localizations" : {
@@ -434,6 +469,9 @@
         }
       }
     },
+    "Shoes Main Ability, %@" : {
+
+    },
     "Shot Spread on the Ground" : {
       "localizations" : {
         "en" : {
@@ -443,6 +481,9 @@
           }
         }
       }
+    },
+    "Sub Ability, %@" : {
+
     },
     "Weight" : {
       "comment" : "Refers to the weight class of a main weapon.",

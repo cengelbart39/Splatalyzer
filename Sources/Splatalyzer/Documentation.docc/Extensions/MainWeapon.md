@@ -61,7 +61,8 @@
 - ``customEliter4K``
 - ``eliter4KScope``
 - ``customEliter4KScope``
-- ``bamboozler14Mk1``
+- ``bamboozler14MkI``
+- ``bamboozler14MkII``
 - ``gooTuber``
 - ``customGooTuber``
 - ``snipewriter5H``
@@ -89,11 +90,13 @@
 - ``heavySplatlingDeco``
 - ``orderSplatlingReplica``
 - ``hydraSplatling``
+- ``customHydraSplatling``
 - ``ballpointSplatling``
 - ``ballpointSplatlingNouveau``
 - ``nautilus47``
 - ``nautilus79``
 - ``heavyEditSplatling``
+- ``heavyEditSplatlingNouveau``
 
 ### Dualies
 - ``dappleDualies``
@@ -108,6 +111,7 @@
 - ``darkTetraDualies``
 - ``lightTetraDualies``
 - ``douserDualiesFF``
+- ``customDouserDualiesFF``
 
 ### Brellas
 - ``splatBrella``
@@ -118,6 +122,7 @@
 - ``undercoverBrella``
 - ``undercoverSorellaBrella``
 - ``recycledBrella24MkI``
+- ``recycledBrella24MkII``
 
 ### Blasters
 - ``lunaBlaster``
@@ -126,6 +131,7 @@
 - ``blaster``
 - ``customBlaster``
 - ``rangeBlaster``
+- ``customRangeBlaster``
 - ``clashBlaster``
 - ``clashBlasterNeo``
 - ``rapidBlaster``
@@ -150,6 +156,8 @@
 - ``orderStringerReplica``
 - ``reeflux450``
 - ``reeflux450Deco``
+- ``wellspringV``
+- ``customWellspringV``
 
 ### Splatanas
 - ``splatanaStamper``
@@ -157,3 +165,5 @@
 - ``orderSplatanaReplica``
 - ``splatanaWiper``
 - ``splatanaWiperDeco``
+- ``mintDecavitator``
+- ``charcoalDecavitator``

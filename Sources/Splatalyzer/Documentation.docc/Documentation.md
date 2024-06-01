@@ -73,6 +73,7 @@ Learn more about how the package decodes and proccesses data.
 - ``DamageStat``
 - ``DamageEffectStat``
 - ``DamageType``
+- ``DamageWeaponType``
 - ``InkTankOption``
 - ``InkConsumeType``
 - ``APEffect``

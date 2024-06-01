@@ -49,6 +49,10 @@ final class FullInkTankOptionsTests: XCTestCase {
         XCTAssertFalse(options.isEmpty)
         XCTAssertTrue(options.contains(type: .normal))
         
+        options = try self.getInkTankOptions(for: .customRangeBlaster)
+        XCTAssertFalse(options.isEmpty)
+        XCTAssertTrue(options.contains(type: .normal))
+        
         options = try self.getInkTankOptions(for: .rapidBlaster)
         XCTAssertFalse(options.isEmpty)
         XCTAssertTrue(options.contains(type: .normal))
@@ -77,6 +81,10 @@ final class FullInkTankOptionsTests: XCTestCase {
     func test_StatHelper_fullInkTankOptions_brella_containsNormal_true() throws {
 
         var options = try self.getInkTankOptions(for: .recycledBrella24MkI)
+        XCTAssertFalse(options.isEmpty)
+        XCTAssertTrue(options.contains(type: .normal))
+        
+        options = try self.getInkTankOptions(for: .recycledBrella24MkII)
         XCTAssertFalse(options.isEmpty)
         XCTAssertTrue(options.contains(type: .normal))
         
@@ -120,6 +128,10 @@ final class FullInkTankOptionsTests: XCTestCase {
         XCTAssertTrue(options.contains(type: .normal))
         
         options = try self.getInkTankOptions(for: .douserDualiesFF)
+        XCTAssertFalse(options.isEmpty)
+        XCTAssertTrue(options.contains(type: .normal))
+        
+        options = try self.getInkTankOptions(for: .customDouserDualiesFF)
         XCTAssertFalse(options.isEmpty)
         XCTAssertTrue(options.contains(type: .normal))
         
@@ -317,7 +329,15 @@ final class FullInkTankOptionsTests: XCTestCase {
 
     func test_StatHelper_fullInkTankOptions_splatana_containsSwing_true() throws {
 
-        var options = try self.getInkTankOptions(for: .splatanaStamper)
+        var options = try self.getInkTankOptions(for: .mintDecavitator)
+        XCTAssertFalse(options.isEmpty)
+        XCTAssertTrue(options.contains(type: .swing))
+        
+        options = try self.getInkTankOptions(for: .charcoalDecavitator)
+        XCTAssertFalse(options.isEmpty)
+        XCTAssertTrue(options.contains(type: .swing))
+        
+        options = try self.getInkTankOptions(for: .splatanaStamper)
         XCTAssertFalse(options.isEmpty)
         XCTAssertTrue(options.contains(type: .swing))
         
@@ -493,7 +513,11 @@ final class FullInkTankOptionsTests: XCTestCase {
     // MARK: - Tap Shot
     func test_StatHelper_fullInkTankOptions_charger_containsTapShot_true() throws {
 
-        var options = try self.getInkTankOptions(for: .bamboozler14Mk1)
+        var options = try self.getInkTankOptions(for: .bamboozler14MkI)
+        XCTAssertFalse(options.isEmpty)
+        XCTAssertTrue(options.contains(type: .tapShot))
+        
+        options = try self.getInkTankOptions(for: .bamboozler14MkII)
         XCTAssertFalse(options.isEmpty)
         XCTAssertTrue(options.contains(type: .tapShot))
         
@@ -561,7 +585,11 @@ final class FullInkTankOptionsTests: XCTestCase {
     // MARK: - Full Charge
     func test_StatHelper_fullInkTankOptions_charger_containsFullCharge_true() throws {
 
-        var options = try self.getInkTankOptions(for: .bamboozler14Mk1)
+        var options = try self.getInkTankOptions(for: .bamboozler14MkI)
+        XCTAssertFalse(options.isEmpty)
+        XCTAssertTrue(options.contains(type: .fullCharge))
+        
+        options = try self.getInkTankOptions(for: .bamboozler14MkII)
         XCTAssertFalse(options.isEmpty)
         XCTAssertTrue(options.contains(type: .fullCharge))
         
@@ -628,7 +656,15 @@ final class FullInkTankOptionsTests: XCTestCase {
     
     func test_StatHelper_fullInkTankOptions_splatana_containsFullCharge_true() throws {
 
-        var options = try self.getInkTankOptions(for: .splatanaStamper)
+        var options = try self.getInkTankOptions(for: .mintDecavitator)
+        XCTAssertFalse(options.isEmpty)
+        XCTAssertTrue(options.contains(type: .fullCharge))
+        
+        options = try self.getInkTankOptions(for: .charcoalDecavitator)
+        XCTAssertFalse(options.isEmpty)
+        XCTAssertTrue(options.contains(type: .fullCharge))
+        
+        options = try self.getInkTankOptions(for: .splatanaStamper)
         XCTAssertFalse(options.isEmpty)
         XCTAssertTrue(options.contains(type: .fullCharge))
         
@@ -670,6 +706,14 @@ final class FullInkTankOptionsTests: XCTestCase {
         options = try self.getInkTankOptions(for: .orderStringerReplica)
         XCTAssertFalse(options.isEmpty)
         XCTAssertTrue(options.contains(type: .fullCharge))
+        
+        options = try self.getInkTankOptions(for: .wellspringV)
+        XCTAssertFalse(options.isEmpty)
+        XCTAssertTrue(options.contains(type: .fullCharge))
+        
+        options = try self.getInkTankOptions(for: .customWellspringV)
+        XCTAssertFalse(options.isEmpty)
+        XCTAssertTrue(options.contains(type: .fullCharge))
     }
     
     // MARK: - Splatling Charge
@@ -687,6 +731,10 @@ final class FullInkTankOptionsTests: XCTestCase {
         XCTAssertFalse(options.isEmpty)
         XCTAssertTrue(options.contains(type: .splatlingCharge))
         
+        options = try self.getInkTankOptions(for: .heavyEditSplatlingNouveau)
+        XCTAssertFalse(options.isEmpty)
+        XCTAssertTrue(options.contains(type: .splatlingCharge))
+        
         options = try self.getInkTankOptions(for: .heavySplatling)
         XCTAssertFalse(options.isEmpty)
         XCTAssertTrue(options.contains(type: .splatlingCharge))
@@ -700,6 +748,10 @@ final class FullInkTankOptionsTests: XCTestCase {
         XCTAssertTrue(options.contains(type: .splatlingCharge))
         
         options = try self.getInkTankOptions(for: .hydraSplatling)
+        XCTAssertFalse(options.isEmpty)
+        XCTAssertTrue(options.contains(type: .splatlingCharge))
+        
+        options = try self.getInkTankOptions(for: .customHydraSplatling)
         XCTAssertFalse(options.isEmpty)
         XCTAssertTrue(options.contains(type: .splatlingCharge))
         
@@ -723,6 +775,10 @@ final class FullInkTankOptionsTests: XCTestCase {
     func test_StatHelper_fullInkTankOptions_brella_containsShieldLaunch_true() throws {
 
         var options = try self.getInkTankOptions(for: .recycledBrella24MkI)
+        XCTAssertFalse(options.isEmpty)
+        XCTAssertTrue(options.contains(type: .shieldLaunch))
+        
+        options = try self.getInkTankOptions(for: .recycledBrella24MkII)
         XCTAssertFalse(options.isEmpty)
         XCTAssertTrue(options.contains(type: .shieldLaunch))
         
@@ -759,6 +815,10 @@ final class FullInkTankOptionsTests: XCTestCase {
         XCTAssertTrue(options.contains(type: .dualieRoll))
         
         options = try self.getInkTankOptions(for: .douserDualiesFF)
+        XCTAssertFalse(options.isEmpty)
+        XCTAssertTrue(options.contains(type: .dualieRoll))
+        
+        options = try self.getInkTankOptions(for: .customDouserDualiesFF)
         XCTAssertFalse(options.isEmpty)
         XCTAssertTrue(options.contains(type: .dualieRoll))
         

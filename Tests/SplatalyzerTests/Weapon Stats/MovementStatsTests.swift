@@ -37,6 +37,9 @@ final class MovementStatsTests: XCTestCase {
         moveStats = try self.getMoveStats(for: .rangeBlaster)
         XCTAssertNotNil(moveStats.shootingRunSpeed)
         
+        moveStats = try self.getMoveStats(for: .customRangeBlaster)
+        XCTAssertNotNil(moveStats.shootingRunSpeed)
+        
         moveStats = try self.getMoveStats(for: .rapidBlaster)
         XCTAssertNotNil(moveStats.shootingRunSpeed)
         
@@ -58,6 +61,9 @@ final class MovementStatsTests: XCTestCase {
     
     func test_MovementStats_init_brellas() throws {
         var moveStats = try self.getMoveStats(for: .recycledBrella24MkI)
+        XCTAssertNotNil(moveStats.shootingRunSpeed)
+        
+        moveStats = try self.getMoveStats(for: .recycledBrella24MkII)
         XCTAssertNotNil(moveStats.shootingRunSpeed)
         
         moveStats = try self.getMoveStats(for: .splatBrella)
@@ -127,7 +133,10 @@ final class MovementStatsTests: XCTestCase {
     }
     
     func test_MovementStats_init_chargers() throws {
-        var moveStats = try self.getMoveStats(for: .bamboozler14Mk1)
+        var moveStats = try self.getMoveStats(for: .bamboozler14MkI)
+        XCTAssertNotNil(moveStats.shootingRunSpeedFullCharge)
+        
+        moveStats = try self.getMoveStats(for: .bamboozler14MkII)
         XCTAssertNotNil(moveStats.shootingRunSpeedFullCharge)
         
         moveStats = try self.getMoveStats(for: .eliter4K)
@@ -184,6 +193,9 @@ final class MovementStatsTests: XCTestCase {
         XCTAssertNotNil(moveStats.shootingRunSpeed)
         
         moveStats = try self.getMoveStats(for: .douserDualiesFF)
+        XCTAssertNotNil(moveStats.shootingRunSpeed)
+        
+        moveStats = try self.getMoveStats(for: .customDouserDualiesFF)
         XCTAssertNotNil(moveStats.shootingRunSpeed)
         
         moveStats = try self.getMoveStats(for: .dualieSquelchers)
@@ -419,7 +431,19 @@ final class MovementStatsTests: XCTestCase {
     }
 
     func test_MovementStats_init_splatanas() throws {
-        var moveStats = try self.getMoveStats(for: .splatanaStamper)
+        var moveStats = try self.getMoveStats(for: .mintDecavitator)
+        XCTAssertNil(moveStats.shootingRunSpeed)
+        XCTAssertNil(moveStats.shootingRunSpeedCharging)
+        XCTAssertNil(moveStats.shootingRunSpeedFullCharge)
+        XCTAssertNil(moveStats.shootingRunSpeedSecondary)
+        
+        moveStats = try self.getMoveStats(for: .charcoalDecavitator)
+        XCTAssertNil(moveStats.shootingRunSpeed)
+        XCTAssertNil(moveStats.shootingRunSpeedCharging)
+        XCTAssertNil(moveStats.shootingRunSpeedFullCharge)
+        XCTAssertNil(moveStats.shootingRunSpeedSecondary)
+        
+        moveStats = try self.getMoveStats(for: .splatanaStamper)
         XCTAssertNil(moveStats.shootingRunSpeed)
         XCTAssertNil(moveStats.shootingRunSpeedCharging)
         XCTAssertNil(moveStats.shootingRunSpeedFullCharge)
@@ -463,6 +487,10 @@ final class MovementStatsTests: XCTestCase {
         XCTAssertNotNil(moveStats.shootingRunSpeed)
         XCTAssertNotNil(moveStats.shootingRunSpeedCharging)
         
+        moveStats = try self.getMoveStats(for: .heavyEditSplatlingNouveau)
+        XCTAssertNotNil(moveStats.shootingRunSpeed)
+        XCTAssertNotNil(moveStats.shootingRunSpeedCharging)
+        
         moveStats = try self.getMoveStats(for: .heavySplatling)
         XCTAssertNotNil(moveStats.shootingRunSpeed)
         
@@ -473,6 +501,10 @@ final class MovementStatsTests: XCTestCase {
         XCTAssertNotNil(moveStats.shootingRunSpeed)
         
         moveStats = try self.getMoveStats(for: .hydraSplatling)
+        XCTAssertNotNil(moveStats.shootingRunSpeed)
+        XCTAssertNotNil(moveStats.shootingRunSpeedCharging)
+        
+        moveStats = try self.getMoveStats(for: .customHydraSplatling)
         XCTAssertNotNil(moveStats.shootingRunSpeed)
         XCTAssertNotNil(moveStats.shootingRunSpeedCharging)
         
@@ -507,6 +539,12 @@ final class MovementStatsTests: XCTestCase {
         XCTAssertNotNil(moveStats.shootingRunSpeedFullCharge)
 
         moveStats = try self.getMoveStats(for: .orderStringerReplica)
+        XCTAssertNotNil(moveStats.shootingRunSpeedFullCharge)
+        
+        moveStats = try self.getMoveStats(for: .wellspringV)
+        XCTAssertNotNil(moveStats.shootingRunSpeedFullCharge)
+        
+        moveStats = try self.getMoveStats(for: .customWellspringV)
         XCTAssertNotNil(moveStats.shootingRunSpeedFullCharge)
     }
 

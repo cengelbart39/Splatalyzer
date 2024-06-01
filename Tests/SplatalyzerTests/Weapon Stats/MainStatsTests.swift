@@ -73,6 +73,12 @@ final class MainStatsTests: XCTestCase {
         XCTAssertNotNil(mainStats00.shotSpreadAir)
         XCTAssertNotNil(mainStats00.shotSpreadGround)
         XCTAssertNotNil(mainStats00.whiteInkSeconds)
+        
+        let mainStats01 = try self.getMainWeaponStats(for: .customRangeBlaster)
+        XCTAssertEqual(mainStats01.weapon, .customRangeBlaster)
+        XCTAssertNotNil(mainStats01.shotSpreadAir)
+        XCTAssertNotNil(mainStats01.shotSpreadGround)
+        XCTAssertNotNil(mainStats01.whiteInkSeconds)
     }
 
     func test_MainWeaponStats_init_rapidBlaster() throws {
@@ -126,6 +132,10 @@ final class MainStatsTests: XCTestCase {
         let mainStats00 = try self.getMainWeaponStats(for: .recycledBrella24MkI)
         XCTAssertEqual(mainStats00.weapon, .recycledBrella24MkI)
         XCTAssertNotNil(mainStats00.brellaCanopyHp)
+        
+        let mainStats01 = try self.getMainWeaponStats(for: .recycledBrella24MkII)
+        XCTAssertEqual(mainStats01.weapon, .recycledBrella24MkII)
+        XCTAssertNotNil(mainStats01.brellaCanopyHp)
     }
     
     func test_MainWeaponStats_init_splatBrella() throws {
@@ -205,9 +215,13 @@ final class MainStatsTests: XCTestCase {
 
     // MARK: - Chargers
     func test_MainWeaponStats_init_bamboozler14() throws {
-        let mainStats00 = try self.getMainWeaponStats(for: .bamboozler14Mk1)
-        XCTAssertEqual(mainStats00.weapon, .bamboozler14Mk1)
+        let mainStats00 = try self.getMainWeaponStats(for: .bamboozler14MkI)
+        XCTAssertEqual(mainStats00.weapon, .bamboozler14MkI)
         XCTAssertNotNil(mainStats00.fullChargeSeconds)
+        
+        let mainStats01 = try self.getMainWeaponStats(for: .bamboozler14MkII)
+        XCTAssertEqual(mainStats01.weapon, .bamboozler14MkII)
+        XCTAssertNotNil(mainStats01.fullChargeSeconds)
     }
     
     func test_MainWeaponStats_init_eliter4K() throws {
@@ -315,6 +329,11 @@ final class MainStatsTests: XCTestCase {
         XCTAssertEqual(mainStats00.weapon, .douserDualiesFF)
         XCTAssertNotNil(mainStats00.shotSpreadAir)
         XCTAssertNotNil(mainStats00.shotSpreadGround)
+        
+        let mainStats01 = try self.getMainWeaponStats(for: .customDouserDualiesFF)
+        XCTAssertEqual(mainStats01.weapon, .customDouserDualiesFF)
+        XCTAssertNotNil(mainStats01.shotSpreadAir)
+        XCTAssertNotNil(mainStats01.shotSpreadGround)
     }
 
     func test_MainWeaponStats_init_dualieSquelchers() throws {
@@ -695,6 +714,16 @@ final class MainStatsTests: XCTestCase {
     }
 
     // MARK: - Splatana
+    func test_MainWeaponStats_init_mintDecavitator() throws {
+        let mainStats00 = try self.getMainWeaponStats(for: .mintDecavitator)
+        XCTAssertEqual(mainStats00.weapon, .mintDecavitator)
+        XCTAssertFalse(mainStats00.exists())
+        
+        let mainStats01 = try self.getMainWeaponStats(for: .charcoalDecavitator)
+        XCTAssertEqual(mainStats01.weapon, .charcoalDecavitator)
+        XCTAssertFalse(mainStats01.exists())
+    }
+    
     func test_MainWeaponStats_init_splatanaStamper() throws {
         let mainStats00 = try self.getMainWeaponStats(for: .splatanaStamper)
         XCTAssertEqual(mainStats00.weapon, .splatanaStamper)
@@ -740,6 +769,12 @@ final class MainStatsTests: XCTestCase {
         XCTAssertNotNil(mainStats00.shotSpreadAir)
         XCTAssertNotNil(mainStats00.shotSpreadGround)
         XCTAssertNotNil(mainStats00.whiteInkSeconds)
+        
+        let mainStats01 = try self.getMainWeaponStats(for: .heavyEditSplatlingNouveau)
+        XCTAssertEqual(mainStats01.weapon, .heavyEditSplatlingNouveau)
+        XCTAssertNotNil(mainStats01.shotSpreadAir)
+        XCTAssertNotNil(mainStats01.shotSpreadGround)
+        XCTAssertNotNil(mainStats01.whiteInkSeconds)
     }
     
     func test_MainWeaponStats_init_heavySplatling() throws {
@@ -768,6 +803,12 @@ final class MainStatsTests: XCTestCase {
         XCTAssertNotNil(mainStats00.shotSpreadAir)
         XCTAssertNotNil(mainStats00.shotSpreadGround)
         XCTAssertNotNil(mainStats00.whiteInkSeconds)
+        
+        let mainStats01 = try self.getMainWeaponStats(for: .customHydraSplatling)
+        XCTAssertEqual(mainStats01.weapon, .customHydraSplatling)
+        XCTAssertNotNil(mainStats01.shotSpreadAir)
+        XCTAssertNotNil(mainStats01.shotSpreadGround)
+        XCTAssertNotNil(mainStats01.whiteInkSeconds)
     }
 
     func test_MainWeaponStats_init_miniSplatling() throws {
@@ -828,6 +869,18 @@ final class MainStatsTests: XCTestCase {
         XCTAssertEqual(mainStatsO.weapon, .orderStringerReplica)
         XCTAssertNotNil(mainStatsO.fullChargeSeconds)
         XCTAssertNotNil(mainStatsO.maxChargeSeconds)
+    }
+    
+    func test_MainWeaponStats_init_wellspringV() throws {
+        let mainStats00 = try self.getMainWeaponStats(for: .wellspringV)
+        XCTAssertEqual(mainStats00.weapon, .wellspringV)
+        XCTAssertNotNil(mainStats00.fullChargeSeconds)
+        XCTAssertNotNil(mainStats00.maxChargeSeconds)
+        
+        let mainStats01 = try self.getMainWeaponStats(for: .customWellspringV)
+        XCTAssertEqual(mainStats01.weapon, .customWellspringV)
+        XCTAssertNotNil(mainStats01.fullChargeSeconds)
+        XCTAssertNotNil(mainStats01.maxChargeSeconds)
     }
 
     // MARK: - Helper Functions

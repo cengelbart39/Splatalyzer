@@ -44,8 +44,8 @@ public enum MainWeapon: String, CaseIterable, Codable, Identifiable {
     // MARK: Chargers
     case gooTuber = "Charger_Keeper_00"
     case customGooTuber = "Charger_Keeper_01"
-    case bamboozler14Mk1 = "Charger_Light_00"
-    case bamboozler14Mk2 = "Charger_Light_01"
+    case bamboozler14MkI = "Charger_Light_00"
+    case bamboozler14MkII = "Charger_Light_01"
     case eliter4KScope = "Charger_LongScope_00"
     case customEliter4KScope = "Charger_LongScope_01"
     case eliter4K = "Charger_Long_00"
@@ -193,7 +193,7 @@ public enum MainWeapon: String, CaseIterable, Codable, Identifiable {
         case .painbrush, .painbrushNouveau, .inkbrush, .inkbrushNouveau, .octobrush, .octobrushNouveau, .orderbrushReplica:
             return .brush
             
-        case .gooTuber, .customGooTuber, .bamboozler14Mk1, .bamboozler14Mk2, .eliter4K, .customEliter4K, .eliter4KScope, .customEliter4KScope, .splatterscope, .zfSplatterscope, .splatCharger, .zfSplatCharger, .orderChargerReplica, .snipewriter5H, .snipewriter5B, .classicSquiffer, .newSquiffer:
+        case .gooTuber, .customGooTuber, .bamboozler14MkI, .bamboozler14MkII, .eliter4K, .customEliter4K, .eliter4KScope, .customEliter4KScope, .splatterscope, .zfSplatterscope, .splatCharger, .zfSplatCharger, .orderChargerReplica, .snipewriter5H, .snipewriter5B, .classicSquiffer, .newSquiffer:
             return .charger
             
         case .dualieSquelchers, .customDualieSquelchers, .gloogaDualies, .gloogaDualiesDeco, .douserDualiesFF, .customDouserDualiesFF, .splatDualies, .enperrySplatDualies, .orderDualiesReplica, .dappleDualies, .dappleDualiesNouveau, .darkTetraDualies, .lightTetraDualies:

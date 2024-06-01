@@ -81,7 +81,7 @@ public enum MainRowId: String, CaseIterable, Codable {
     case gooTuberMsn = "Charger_Keeper_Msn"
     
     case bamboozler14Mk1 = "Charger_Light_00"
-    case bamboozler14Mk2 = "Charger_Light_01"
+    case bamboozler14MkII = "Charger_Light_01"
     case bamboozler14Mk1Coop = "Charger_Light_Coop"
     case bamboozler14Mk1Msn = "Charger_Light_Msn"
     

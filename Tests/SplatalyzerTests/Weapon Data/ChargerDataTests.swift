@@ -26,11 +26,11 @@ final class ChargerDataTests: XCTestCase {
     func test_MainWeaponData_init_Charger_bamboozler14MkI() {
         do {
             let gameParams = try service.decode(Charger.self, from: "WeaponChargerLight.game__GameParameterTable")
-            let item = self.weaponInfo.getItem(for: .bamboozler14Mk1)!
+            let item = self.weaponInfo.getItem(for: .bamboozler14MkI)!
             
             let data = MainWeaponData(weaponInfo: item, container: gameParams)
                                     
-            XCTAssertEqual(data.mainWeaponId, .bamboozler14Mk1)
+            XCTAssertEqual(data.mainWeaponId, .bamboozler14MkI)
             XCTAssertEqual(data.subWeapon, .autobomb)
             XCTAssertEqual(data.specialWeapon, .killerWail51)
             XCTAssertEqual(data.weaponSpeedType, .fast)
@@ -48,11 +48,11 @@ final class ChargerDataTests: XCTestCase {
     func test_MainWeaponData_init_Charger_bamboozler14MkII() {
         do {
             let gameParams = try service.decode(Charger.self, from: "WeaponChargerLight.game__GameParameterTable")
-            let item = self.weaponInfo.getItem(for: .bamboozler14Mk2)!
+            let item = self.weaponInfo.getItem(for: .bamboozler14MkII)!
             
             let data = MainWeaponData(weaponInfo: item, container: gameParams)
                                     
-            XCTAssertEqual(data.mainWeaponId, .bamboozler14Mk2)
+            XCTAssertEqual(data.mainWeaponId, .bamboozler14MkII)
             XCTAssertEqual(data.subWeapon, .fizzyBomb)
             XCTAssertEqual(data.specialWeapon, .superChump)
             XCTAssertEqual(data.weaponSpeedType, .fast)
