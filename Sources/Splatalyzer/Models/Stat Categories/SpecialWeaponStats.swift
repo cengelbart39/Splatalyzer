@@ -8,7 +8,7 @@
 import Foundation
 
 /// Represents statistics about the Special Weapon
-public struct SpecialWeaponStats: Codable, Equatable {
+public struct SpecialWeaponStats: Codable, Equatable, Sendable {
     /// The kit's special weapon
     public let weapon: SpecialWeapon
     

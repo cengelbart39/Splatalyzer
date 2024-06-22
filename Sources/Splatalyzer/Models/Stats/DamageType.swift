@@ -8,7 +8,7 @@
 import Foundation
 
 /// The type of damage done by a weapon
-public enum DamageType: String, CaseIterable, Codable {
+public enum DamageType: String, CaseIterable, Codable, Sendable {
     case turretMax
     case turretMin
     case normalMaxFullCharge

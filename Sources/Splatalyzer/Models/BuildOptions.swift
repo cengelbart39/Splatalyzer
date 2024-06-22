@@ -8,7 +8,7 @@
 import Foundation
 
 /// Structure that represents the user's build and selected options
-public struct BuildOptions: Codable, Equatable, Identifiable {
+public struct BuildOptions: Codable, Equatable, Identifiable, Sendable {
     public var id = UUID()
     public var mainWeapon: MainWeapon
     public var gear: GearBuild

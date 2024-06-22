@@ -8,7 +8,7 @@
 import Foundation
 
 /// Represents miscellaneous statistics that don't fall in other categories
-public struct MiscStats: Codable, Equatable {
+public struct MiscStats: Codable, Equatable, Sendable {
     /// Player's ink recovery rate in squid/octopus form
     public let squidInkRecovery: AbilityStat
     

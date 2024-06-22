@@ -8,7 +8,7 @@
 import Foundation
 
 /// Represents statistics about the Main Weapon
-public struct MainWeaponStats: Codable, Equatable {
+public struct MainWeaponStats: Codable, Equatable, Sendable {
     /// The kit's main weapon
     public let weapon: MainWeapon
     

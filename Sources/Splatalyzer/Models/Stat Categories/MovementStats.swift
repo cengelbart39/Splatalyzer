@@ -8,7 +8,7 @@
 import Foundation
 
 /// Represents statistics about player movement
-public struct MovementStats: Codable, Equatable {
+public struct MovementStats: Codable, Equatable, Sendable {
     
     /// The weight of the main weapon
     public let speedType: WeaponSpeedType

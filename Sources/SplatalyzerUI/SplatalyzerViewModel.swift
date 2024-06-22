@@ -24,7 +24,7 @@ public final class SplatalyzerViewModel: ObservableObject {
     public init() { }
     
     /// Update statstics after a change in `MainWeapon`
-    public func updateStats(for weapon: MainWeapon) throws {
+    @MainActor public func updateStats(for weapon: MainWeapon) throws {
         DispatchQueue.main.async {
             self.build.mainWeapon = weapon
         }
@@ -33,7 +33,7 @@ public final class SplatalyzerViewModel: ObservableObject {
     }
     
     /// Update statstics after a change in `GearBuild`
-    public func updateStats(for gearBuild: GearBuild) throws {
+    @MainActor public func updateStats(for gearBuild: GearBuild) throws {
         DispatchQueue.main.async {
             self.build.gear = gearBuild
         }
@@ -42,7 +42,7 @@ public final class SplatalyzerViewModel: ObservableObject {
     }
     
     /// Update statstics after a change in LDE intensity
-    public func updateStats(for ldeIntensity: Int) throws {
+    @MainActor public func updateStats(for ldeIntensity: Int) throws {
         DispatchQueue.main.async {
             self.build.ldeIntensity = ldeIntensity
         }
@@ -51,7 +51,7 @@ public final class SplatalyzerViewModel: ObservableObject {
     }
     
     /// Update statstics after a change in Tacticooler statis
-    public func updateStats(for tacticooler: Bool) throws {
+    @MainActor public func updateStats(for tacticooler: Bool) throws {
         DispatchQueue.main.async {
             self.build.usingTacticooler = tacticooler
         }
@@ -62,7 +62,7 @@ public final class SplatalyzerViewModel: ObservableObject {
     /// Build analysis from class properties
     /// - SeeAlso: This function pass its properties to `Splatalyzer` to perform analysis
     /// - Throws: Can throw `SplatalyzerError` or `JSONError`
-    public func analyze() throws {
+    @MainActor public func analyze() throws {
         let stats = try splatalyzer.analyze(self.build)
         
         DispatchQueue.main.async {

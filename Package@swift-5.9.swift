@@ -1,4 +1,4 @@
-// swift-tools-version: 6.0
+// swift-tools-version: 5.9
 
 import PackageDescription
 
@@ -40,6 +40,5 @@ let package = Package(
                 .process("Resources")
             ]
         )
-    ],
-    swiftLanguageVersions: [.v5, .v6]
+    ]
 )

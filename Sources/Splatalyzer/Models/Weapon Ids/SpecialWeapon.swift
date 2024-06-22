@@ -14,7 +14,7 @@ import UIKit
 import Foundation
 
 /// Represents every Special Weapon
-public enum SpecialWeapon: String, CaseIterable, Codable {
+public enum SpecialWeapon: String, CaseIterable, Codable, Sendable {
     case inkVac = "SpBlower"
     case krakenRoyale = "SpCastle"
     case crabTank = "SpChariot"

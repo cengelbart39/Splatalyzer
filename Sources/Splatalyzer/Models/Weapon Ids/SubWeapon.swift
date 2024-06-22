@@ -14,7 +14,7 @@ import UIKit
 import Foundation
 
 /// Represents every Sub Weapon
-public enum SubWeapon: String, CaseIterable, Codable {
+public enum SubWeapon: String, CaseIterable, Codable, Sendable {
     case angleShooter = "LineMarker"
     case autobomb = "Bomb_Robot"
     case burstBomb = "Bomb_Quick"

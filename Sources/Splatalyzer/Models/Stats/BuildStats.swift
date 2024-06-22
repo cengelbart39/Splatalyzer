@@ -8,7 +8,7 @@
 import Foundation
 
 /// Represents all stats for a``GearBuild``
-public struct BuildStats: Codable, Equatable, Identifiable {
+public struct BuildStats: Codable, Equatable, Identifiable, Sendable {
     
     public var id = UUID()
     

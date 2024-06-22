@@ -41,7 +41,7 @@ public struct MainWeaponSettings: Codable {
 }
 
 /// Represents the weight of a Main Weapon
-public enum WeaponSpeedType: String, Codable {
+public enum WeaponSpeedType: String, Codable, Sendable {
     case slow = "Slow"
     case mid = "Mid"
     case fast = "Fast"

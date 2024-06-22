@@ -8,7 +8,7 @@
 import Foundation
 
 /// Represents statistics about player defense to certain sub weapons
-public struct SubDefenseStats: Codable, Equatable {
+public struct SubDefenseStats: Codable, Equatable, Sendable {
     /// Effect of Toxic Mist Movement Reduction
     public let toxicMistMovementReduction: AbilityStat
     

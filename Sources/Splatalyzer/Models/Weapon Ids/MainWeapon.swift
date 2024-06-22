@@ -14,7 +14,7 @@ import UIKit
 import Foundation
 
 /// Represents every Main Weapon (including alternate kits).
-public enum MainWeapon: String, CaseIterable, Codable, Identifiable {
+public enum MainWeapon: String, CaseIterable, Codable, Identifiable, Sendable {
     // MARK: Blasters
     case rapidBlasterPro = "Blaster_LightLong_00"
     case rapidBlasterProDeco = "Blaster_LightLong_01"

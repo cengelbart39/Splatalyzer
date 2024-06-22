@@ -240,6 +240,7 @@
       }
     },
     "Failed to load (file) in bundle: (descr)" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -250,6 +251,7 @@
       }
     },
     "Failed to locate '(file)' in bundle." : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
