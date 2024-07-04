@@ -30,7 +30,7 @@ public struct InkStorm: GameParametable {
             case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
         }
         
-        public struct CloudParameter: Codable {
+        public struct CloudParameter: Parametable {
             public let type: String
             public let noPaintRainNum: Double
             public let rainNum: Int
@@ -46,7 +46,7 @@ public struct InkStorm: GameParametable {
             }
         }
         
-        public struct MoveParameter: Codable {
+        public struct MoveParameter: Parametable {
             public let type: String
             public let guideHitCollisionType: String
             public let spawnSpeedY: Double
@@ -62,7 +62,7 @@ public struct InkStorm: GameParametable {
             }
         }
         
-        public struct RainParameter: Codable {
+        public struct RainParameter: Parametable {
             public let type: String
             public let collisionParam: CollisionParameter
             public let moveParam: RainParameter.MoveParameter
@@ -73,7 +73,7 @@ public struct InkStorm: GameParametable {
                 case moveParam = "MoveParam"
             }
             
-            public struct CollisionParameter: Codable {
+            public struct CollisionParameter: Parametable {
                 public let endRadiusForField: Double
                 public let endRadiusForPlayer: Double
                 public let initRadiusForField: Double
@@ -87,7 +87,7 @@ public struct InkStorm: GameParametable {
                 }
             }
             
-            public struct MoveParameter: Codable {
+            public struct MoveParameter: Parametable {
                 public let brakeAirResist: Double
                 public let brakeGravity: Double
                 public let brakeToFreeStateFrame: Double
@@ -114,7 +114,7 @@ public struct InkStorm: GameParametable {
             }
         }
         
-        public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public struct SpawnBulletAdditionMovePlayerParameter: Parametable {
             public let type: String
             public let xRate: Double
             public let yMax: Double

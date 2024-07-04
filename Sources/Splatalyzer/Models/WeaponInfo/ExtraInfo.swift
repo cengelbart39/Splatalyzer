@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum ExtraInfo: String, Codable {    
+public enum ExtraInfo: String, Codable, Sendable {    
     case blasterWeakBlast = "BlasterWeakBlast"
     case blowerInhale = "BlowerInhale"
     case castleAttack = "CastleAttack"

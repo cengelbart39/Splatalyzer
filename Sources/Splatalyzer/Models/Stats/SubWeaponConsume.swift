@@ -8,7 +8,7 @@
 import Foundation
 
 /// Represents the ink consumption of a sub weapon
-public struct SubWeaponConsume {
+public struct SubWeaponConsume: Sendable {
     /// The ink consumption
     public let inkConsume: Double
     

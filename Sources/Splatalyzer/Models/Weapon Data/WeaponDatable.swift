@@ -8,7 +8,7 @@
 import Foundation
 
 /// Represents structures that contain weapon data 
-public protocol WeaponDatable {
+public protocol WeaponDatable: Sendable {
     var overwrites: any Overwritable { get }
     
     /// Fetches the proper damage value for a ``DamageType``
@@ -18,7 +18,7 @@ public protocol WeaponDatable {
 }
 
 /// A structure that can overwrite an ``AbilityValue`` property with its own property
-public protocol Overwritable {
+public protocol Overwritable: Sendable {
     
     /// Gets the associated weapon property for an ``AbilityValue``
     /// - Parameter key: An  `AbilityValue` that the weapon *may* be able to overwrite

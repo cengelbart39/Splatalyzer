@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct BRUnit: Codable {
+public struct BRUnit: Parametable {
     public let addSpawnSpeedYRateBySpeed: Double?
     public let afterOffsetSpawnRoateXDegree: Double?
     public let afterOffsetSpawnSpeed: Double?
@@ -62,7 +62,7 @@ public struct BRUnit: Codable {
 }
 
 extension BRUnit {
-    public struct UnitParameter: Codable {
+    public struct UnitParameter: Parametable {
         public let collisionParam: CollisionParameter
         public let drawSizeParam: DrawSizeParameter
         public let moveParam: MoveParameter
@@ -82,7 +82,7 @@ extension BRUnit {
 }
 
 extension BRUnit.UnitParameter {
-    public struct CollisionParameter: Codable {
+    public struct CollisionParameter: Parametable {
         public let chargeFrameForField: Int
         public let chargeFrameForPlayer: Int?
         public let depletionRate: Double
@@ -104,7 +104,7 @@ extension BRUnit.UnitParameter {
         }
     }
     
-    public struct DrawSizeParameter: Codable {
+    public struct DrawSizeParameter: Parametable {
         public let chargeFrame: Int?
         public let endRadius: Double
         public let initRadius: Double
@@ -116,7 +116,7 @@ extension BRUnit.UnitParameter {
         }
     }
     
-    public struct MoveParameter: Codable {
+    public struct MoveParameter: Parametable {
         public let freeAirResist: Double
         public let freeGravity: Double
         public let goStraightToBrakeStateFrame: Int
@@ -130,7 +130,7 @@ extension BRUnit.UnitParameter {
         }
     }
     
-    public struct PaintParameter: Codable {
+    public struct PaintParameter: Parametable {
         public let changeFrameWidthRate: Double
         public let changeWidthEndFrame: Int
         public let changeWidthStartFrame: Int
@@ -168,7 +168,7 @@ extension BRUnit.UnitParameter {
         }
     }
     
-    public struct WallDropCollisionPaintParameter: Codable {
+    public struct WallDropCollisionPaintParameter: Parametable {
         public let fallPeriodFirstSecondTargetAlp: Double?
         public let paintRadiusFall: Double?
         public let paintRadiusGround: Double?
@@ -182,7 +182,7 @@ extension BRUnit.UnitParameter {
         }
     }
     
-    public struct WallDropMoveParameter: Codable {
+    public struct WallDropMoveParameter: Parametable {
         public let fallPeriodFirstFrameMax: Int
         public let fallPeriodFirstFrameMin: Int?
         public let fallPeriodFirstTargetSpeed: Double?

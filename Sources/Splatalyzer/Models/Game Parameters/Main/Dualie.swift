@@ -20,7 +20,7 @@ public struct Dualie: GameParametable {
         self.parameters = parameters
     }
     
-    public struct Parameters: Codable {
+    public struct Parameters: Parametable {
         public let collisionLapOverParam: CollisionParameter?
         public let collisionParam: CollisionParameter?
         
@@ -73,7 +73,7 @@ public struct Dualie: GameParametable {
 }
 
 extension Dualie.Parameters {
-    public struct CollisionParameter: Codable {
+    public struct CollisionParameter: Parametable {
         public let type: String
         public let changeFrameForField: Int
         public let changeFrameForPlayer: Int
@@ -97,7 +97,7 @@ extension Dualie.Parameters {
 }
 
 extension Dualie.Parameters {
-    public struct DamageParameter: Codable {
+    public struct DamageParameter: Parametable {
         public let type: String
         public let reduceEndFrame: Int?
         public let reduceStartFrame: Int?
@@ -115,7 +115,7 @@ extension Dualie.Parameters {
 }
 
 extension Dualie.Parameters {
-    public struct MoveParameter: Codable {
+    public struct MoveParameter: Parametable {
         public let type: String
         public let freeGravity: Double?
         public let goStraightStateEndMaxSpeed: Double
@@ -133,7 +133,7 @@ extension Dualie.Parameters {
 }
 
 extension Dualie.Parameters {
-    public struct PaintParameter: Codable {
+    public struct PaintParameter: Parametable {
         public let type: String
         public let degreeUseDepthScaleMin: Double?
         public let depthScaleMax: Double
@@ -161,7 +161,7 @@ extension Dualie.Parameters {
 }
 
 extension Dualie.Parameters {
-    public struct SideStepBlastParameter: Codable {
+    public struct SideStepBlastParameter: Parametable {
         public let type: String
         public let crossPaintCheckLength: Double
         public let crossPaintRadius: Double
@@ -183,7 +183,7 @@ extension Dualie.Parameters {
 }
 
 extension Dualie.Parameters {
-    public struct SideStepParameter: Codable {
+    public struct SideStepParameter: Parametable {
         public let type: String
         public let chargeFrame: Int?
         public let inkConsume: Double
@@ -235,7 +235,7 @@ extension Dualie.Parameters {
 }
 
 extension Dualie.Parameters.SideStepParameter {
-    public struct SplashSlideParameter: Codable {
+    public struct SplashSlideParameter: Parametable {
         public let moveLength: Double?
         public let paintWidthHalf: Double
         
@@ -247,7 +247,7 @@ extension Dualie.Parameters.SideStepParameter {
 }
 
 extension Dualie.Parameters {
-    public struct SplashPaintParameter: Codable {
+    public struct SplashPaintParameter: Parametable {
         public let type: String
         public let depthMaxDropHeight: Double
         public let depthMinDropHeight: Double
@@ -267,7 +267,7 @@ extension Dualie.Parameters {
 }
 
 extension Dualie.Parameters {
-    public struct SplashSpawnParameter: Codable {
+    public struct SplashSpawnParameter: Parametable {
         public let type: String
         public let forceSpawnNearestAddNumArray: [Double]?
         public let spawnBetweenLength: Double?
@@ -287,7 +287,7 @@ extension Dualie.Parameters {
 }
 
 extension Dualie.Parameters {
-    public struct WallDropCollisionPaintParameter: Codable {
+    public struct WallDropCollisionPaintParameter: Parametable {
         public let type: String
         public let paintRadiusFall: Double
         public let paintRadiusGround: Double
@@ -303,7 +303,7 @@ extension Dualie.Parameters {
 }
 
 extension Dualie.Parameters {
-    public struct WallDropMoveParameter: Codable {
+    public struct WallDropMoveParameter: Parametable {
         public let type: String
         public let fallPeriodFirstFrameMax: Int
         public let fallPeriodFirstFrameMin: Int
@@ -329,7 +329,7 @@ extension Dualie.Parameters {
 }
 
 extension Dualie.Parameters {
-    public struct WeaponParameter: Codable {
+    public struct WeaponParameter: Parametable {
         public let type: String
         public let inkConsume: Double
         public let jumpDegBiasDecreaseStartFrame: Int?
@@ -373,7 +373,7 @@ extension Dualie.Parameters {
 }
 
 extension Dualie.Parameters {
-    public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+    public struct SpawnBulletAdditionMovePlayerParameter: Parametable {
         public let type: String
         public let zRate: Double
         

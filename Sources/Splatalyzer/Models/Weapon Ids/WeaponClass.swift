@@ -14,7 +14,7 @@ import UIKit
 #endif
 
 /// Represents the classes of Main Weapons
-public enum WeaponClass: String, CaseIterable {
+public enum WeaponClass: String, CaseIterable, Sendable {
     case blaster = "Blaster"
     case brush = "Brush"
     case charger = "Charger"

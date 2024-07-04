@@ -32,7 +32,7 @@ public struct ToxicMist: GameParametable {
             case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
         }
         
-        public struct AreaParameter: Codable {
+        public struct AreaParameter: Parametable {
             public let type: String
             public let areaOffsetY: Double
             public let distanceForOff: Double
@@ -45,14 +45,14 @@ public struct ToxicMist: GameParametable {
                 case effectParam = "EffectParam"
             }
             
-            public struct EffectParameter: Codable {
+            public struct EffectParameter: Parametable {
                 public let level: [Level]
                 
                 public enum CodingKeys: String, CodingKey {
                     case level = "Level"
                 }
                 
-                public struct Level: Codable {
+                public struct Level: Parametable {
                     public let frame: Int
                     public let nextLevelCount: Int
                     
@@ -64,7 +64,7 @@ public struct ToxicMist: GameParametable {
             }
         }
         
-        public struct MoveParameter: Codable {
+        public struct MoveParameter: Parametable {
             public let type: String
             public let guideHitCollisionType: String
             public let spawnSpeedY: Double
@@ -80,7 +80,7 @@ public struct ToxicMist: GameParametable {
             }
         }
         
-        public struct WeaponParameter: Codable {
+        public struct WeaponParameter: Parametable {
             public let type: String
             public let inkConsume: Double
             public let inkRecoverStop: Int
@@ -92,7 +92,7 @@ public struct ToxicMist: GameParametable {
             }
         }
         
-        public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public struct SpawnBulletAdditionMovePlayerParameter: Parametable {
             public let type: String
             public let xRate: Double
             public let yMax: Double

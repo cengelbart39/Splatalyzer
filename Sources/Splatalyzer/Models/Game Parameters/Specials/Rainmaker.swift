@@ -19,7 +19,7 @@ struct Rainmaker: GameParametable {
         self.parameters = parameters
     }
     
-    struct Parameters: Codable {
+    struct Parameters: Parametable {
         let blastParamFullCharge: BlastParameterFullCharge
         let collisionParam: CollisionParameter
         let damageParam: Rainmaker.Parameters.DamageParameter
@@ -42,7 +42,7 @@ struct Rainmaker: GameParametable {
             case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
         }
         
-        struct BlastParameterFullCharge: Codable {
+        struct BlastParameterFullCharge: Parametable {
             let type: String
             let crossPaintCheckLength: Double
             let crossPaintRadius: Double
@@ -66,7 +66,7 @@ struct Rainmaker: GameParametable {
             }
         }
         
-        struct CollisionParameter: Codable {
+        struct CollisionParameter: Parametable {
             let type: String
             
             enum CodingKeys: String, CodingKey {
@@ -74,7 +74,7 @@ struct Rainmaker: GameParametable {
             }
         }
         
-        struct DamageParameter: Codable {
+        struct DamageParameter: Parametable {
             let type: String
             let directAccelFullCharge: Double
             let directAccelMaxCharge: Double
@@ -88,7 +88,7 @@ struct Rainmaker: GameParametable {
             }
         }
         
-        struct MoveParameter: Codable {
+        struct MoveParameter: Parametable {
             let type: String
             let guideHitCollisionType: String
             let guideRadius: Double
@@ -112,7 +112,7 @@ struct Rainmaker: GameParametable {
             }
         }
         
-        struct SplashNearestParameter: Codable {
+        struct SplashNearestParameter: Parametable {
             let type: String
             let paintRadiusFullCharge: Double
             let paintRadiusMaxCharge: Double
@@ -128,7 +128,7 @@ struct Rainmaker: GameParametable {
             }
         }
         
-        struct SplashPaintSpawnParameter: Codable {
+        struct SplashPaintSpawnParameter: Parametable {
             let type: String
             let paintRadiusFullCharge: Double
             let paintRadiusMaxCharge: Double
@@ -142,7 +142,7 @@ struct Rainmaker: GameParametable {
             }
         }
         
-        struct SplashWallHitParameter: Codable {
+        struct SplashWallHitParameter: Parametable {
             let type: String
             let wallDropCollisionPaintParam: WallDropCollisionPaintParameter
             let wallDropMoveParam: WallDropMoveParameter
@@ -153,7 +153,7 @@ struct Rainmaker: GameParametable {
                 case wallDropMoveParam = "WallDropMoveParam"
             }
             
-            struct WallDropCollisionPaintParameter: Codable {
+            struct WallDropCollisionPaintParameter: Parametable {
                 let fallPeriodFirstSecondTargetAlp: Double
                 let paintRadiusFall: Double
                 let paintRadiusGround: Double
@@ -167,7 +167,7 @@ struct Rainmaker: GameParametable {
                 }
             }
             
-            struct WallDropMoveParameter: Codable {
+            struct WallDropMoveParameter: Parametable {
                 let fallPeriodFirstFrameMax: Int
                 let fallPeriodFirstFrameMin: Int
                 let fallPeriodFirstTargetSpeed: Double
@@ -188,7 +188,7 @@ struct Rainmaker: GameParametable {
             }
         }
         
-        struct WeaponParameter: Codable {
+        struct WeaponParameter: Parametable {
             let type: String
             let knockBackParamFullCharge: KnockBackParamCharge
             let knockBackParamMaxCharge: KnockBackParamCharge
@@ -201,7 +201,7 @@ struct Rainmaker: GameParametable {
                 case knockBackParamMinCharge = "KnockBackParamMinCharge"
             }
             
-            struct KnockBackParamCharge: Codable {
+            struct KnockBackParamCharge: Parametable {
                 let airBreakRt: Double
                 let impactValue: Double
                 let stickDownRt: Double
@@ -214,7 +214,7 @@ struct Rainmaker: GameParametable {
             }
         }
         
-        struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        struct SpawnBulletAdditionMovePlayerParameter: Parametable {
             let type: String
             let xRate: Double
             let yPlusRate: Double

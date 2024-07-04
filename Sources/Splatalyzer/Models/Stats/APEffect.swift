@@ -8,7 +8,7 @@
 import Foundation
 
 /// The effect of AP on some ``AbilityValue``
-public struct APEffect {
+public struct APEffect: Sendable {
     /// The default effect before accounting for AP
     public let baseEffect: Double
     

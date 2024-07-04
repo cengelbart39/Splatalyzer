@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct MainEffectiveRangeUpParameter: Codable {
+public struct MainEffectiveRangeUpParameter: Parametable {
     public let type: String
     public let baseDistance: Double?
     public let high: Double?

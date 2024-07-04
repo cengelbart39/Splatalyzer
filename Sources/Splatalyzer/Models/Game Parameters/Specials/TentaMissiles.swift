@@ -34,7 +34,7 @@ public struct TentaMissiles: GameParametable {
             case weaponPlayerParam = "spl__WeaponSpMultiMissilePlayerParam"
         }
         
-        public struct BulletBlastParameter: Codable {
+        public struct BulletBlastParameter: Parametable {
             public let type: String
             public let crossPaintCheckLength: Double
             public let damageOffsetY: Double
@@ -56,7 +56,7 @@ public struct TentaMissiles: GameParametable {
             }
         }
         
-        public struct BulletDamageParameter: Codable {
+        public struct BulletDamageParameter: Parametable {
             public let type: String
             
             public enum CodingKeys: String, CodingKey {
@@ -64,7 +64,7 @@ public struct TentaMissiles: GameParametable {
             }
         }
         
-        public struct BulletMoveParameter: Codable {
+        public struct BulletMoveParameter: Parametable {
             public let type: String
             public let riseParam: RiseParameter
             public let targetParam: TargetParameter
@@ -75,7 +75,7 @@ public struct TentaMissiles: GameParametable {
                 case targetParam = "TargetParam"
             }
             
-            public struct RiseParameter: Codable {
+            public struct RiseParameter: Parametable {
                 public let riseBaseSpeedComeUnderRate: Double
                 
                 public enum CodingKeys: String, CodingKey {
@@ -83,7 +83,7 @@ public struct TentaMissiles: GameParametable {
                 }
             }
             
-            public struct TargetParameter: Codable {
+            public struct TargetParameter: Parametable {
                 public let multiTargetCircleArray: [TargetCircle]
                 public let oneTargetCircleArray: [TargetCircle]
                 
@@ -92,7 +92,7 @@ public struct TentaMissiles: GameParametable {
                     case oneTargetCircleArray = "OneTargetCircleArray"
                 }
                 
-                public struct TargetCircle: Codable {
+                public struct TargetCircle: Parametable {
                     public let num: Int?
                     public let radius: Double?
                     public let randomOffset: Double
@@ -108,7 +108,7 @@ public struct TentaMissiles: GameParametable {
             }
         }
         
-        public struct WeaponLaunchParameter: Codable {
+        public struct WeaponLaunchParameter: Parametable {
             public let type: String
             public let shotIntervalTargetArray: [Int]
             public let shotNumOneTargetArray: [Int]
@@ -120,7 +120,7 @@ public struct TentaMissiles: GameParametable {
             }
         }
         
-        public struct WeaponLockOnParameter: Codable {
+        public struct WeaponLockOnParameter: Parametable {
             public let target: String
             public let targetCircleEffectDefaultRadius: Double
             public let targetInCircleRadius: HighMidLow
@@ -132,7 +132,7 @@ public struct TentaMissiles: GameParametable {
             }
         }
         
-        public struct WeaponPlayerParameter: Codable {
+        public struct WeaponPlayerParameter: Parametable {
             public let type: String
             public let jumpVelLimitSearching: Double
             public let moveVelLimitSearching: Double

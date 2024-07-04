@@ -51,7 +51,7 @@ public struct CrabTank: GameParametable {
             case paintMonitorSetParma = "spl__PaintMonitorSetParam"
         }
         
-        public struct AdditionMovePlayerParameter: Codable {
+        public struct AdditionMovePlayerParameter: Parametable {
             public let type: String
             public let zRate: Double
             
@@ -61,7 +61,7 @@ public struct CrabTank: GameParametable {
             }
         }
         
-        public struct BodyParameter: Codable {
+        public struct BodyParameter: Parametable {
             public let type: String
             public let collisionRadiusForField: Double
             public let collisionRadiusForPlayer: Double
@@ -76,7 +76,7 @@ public struct CrabTank: GameParametable {
                 case knockBackOpponent = "KnockBackOpponent"
             }
             
-            public struct KnockBack: Codable {
+            public struct KnockBack: Parametable {
                 public let accelMax: Double
                 public let accelMin: Double
                 public let myVelocityRate: Double
@@ -91,7 +91,7 @@ public struct CrabTank: GameParametable {
             }
         }
         
-        public struct CannonParameter: Codable {
+        public struct CannonParameter: Parametable {
             public let type: String
             public let blastParam: BlastParameter
             public let collisionParam: CollisionParameter
@@ -108,7 +108,7 @@ public struct CrabTank: GameParametable {
                 case splashParam = "SplashParam"
             }
             
-            public struct BlastParameter: Codable {
+            public struct BlastParameter: Parametable {
                 public let crossPaintCheckLength: Double
                 public let crossPaintRadius: Double
                 public let damageOffsetY: Double
@@ -128,7 +128,7 @@ public struct CrabTank: GameParametable {
                 }
             }
             
-            public struct MoveParameter: Codable {
+            public struct MoveParameter: Parametable {
                 public let brakeAirResist: Double
                 public let brakeGravity: Double
                 public let brakeToFreeStateFrame: Int
@@ -150,7 +150,7 @@ public struct CrabTank: GameParametable {
                 }
             }
             
-            public struct SplashParameter: Codable {
+            public struct SplashParameter: Parametable {
                 public let drawSizeCollisionPaintParam: DrawSizeCollisionPaintParameter
                 public let spawnParam: SpawnParameter
                 
@@ -159,7 +159,7 @@ public struct CrabTank: GameParametable {
                     case spawnParam = "SpawnParam"
                 }
                 
-                public struct DrawSizeCollisionPaintParameter: Codable {
+                public struct DrawSizeCollisionPaintParameter: Parametable {
                     public let collisionParam: CollisionParameter
                     public let drawRadius: Double
                     public let paintDepthScale: Double
@@ -177,7 +177,7 @@ public struct CrabTank: GameParametable {
             }
         }
         
-        public struct CollisionParameter: Codable {
+        public struct CollisionParameter: Parametable {
             public let changeFrameForField: Int?
             public let changeFrameForPlayer: Int?
             public let endRadiusForField: Double
@@ -197,7 +197,7 @@ public struct CrabTank: GameParametable {
             }
         }
         
-        public struct ShooterDamageParameter: Codable {
+        public struct ShooterDamageParameter: Parametable {
             public let type: String
             public let reduceEndFrame: Int
             public let reduceStartFrame: Int
@@ -213,7 +213,7 @@ public struct CrabTank: GameParametable {
             }
         }
         
-        public struct ShooterMoveParameter: Codable {
+        public struct ShooterMoveParameter: Parametable {
             public let type: String
             public let freeGravity: Double
             public let goStraightStateEndMaxSpeed: Double
@@ -229,7 +229,7 @@ public struct CrabTank: GameParametable {
             }
         }
         
-        public struct ShooterPaintParameter: Codable {
+        public struct ShooterPaintParameter: Parametable {
             public let type: String
             public let distanceMiddle: Double
             public let widthHalfFar: Double
@@ -245,7 +245,7 @@ public struct CrabTank: GameParametable {
             }
         }
         
-        public struct ShooterSplashPaintParameter: Codable {
+        public struct ShooterSplashPaintParameter: Parametable {
             public let type: String
             public let depthMaxDropHeight: Double
             public let depthMinDropHeight: Double
@@ -261,7 +261,7 @@ public struct CrabTank: GameParametable {
             }
         }
         
-        public struct SpawnParameter: Codable {
+        public struct SpawnParameter: Parametable {
             public let type: String?
             public let forceSpawnNearestAddNumArray: [Int]?
             public let spawnBetweenLength: Double
@@ -279,7 +279,7 @@ public struct CrabTank: GameParametable {
             }
         }
         
-        public struct ShooterWallDropCollisionPaintParameter: Codable {
+        public struct ShooterWallDropCollisionPaintParameter: Parametable {
             public let type: String
             public let paintRadiusFall: Double
             public let paintRadiusGround: Double
@@ -293,7 +293,7 @@ public struct CrabTank: GameParametable {
             }
         }
         
-        public struct ShooterWallDropMoveParameter: Codable {
+        public struct ShooterWallDropMoveParameter: Parametable {
             public let type: String
             public let fallPeriodFirstFrameMax: Int
             public let fallPeriodFirstFrameMin: Int
@@ -317,7 +317,7 @@ public struct CrabTank: GameParametable {
             }
         }
         
-        public struct WeaponParameter: Codable {
+        public struct WeaponParameter: Parametable {
             public let type: String
             public let armorHP: Int
             public let armorHPBreakScissors: Int
@@ -363,7 +363,7 @@ public struct CrabTank: GameParametable {
             }
         }
         
-        public struct BulletShooterTailLengthParameter: Codable {
+        public struct BulletShooterTailLengthParameter: Parametable {
             public let type: String
             public let delayShotFrame: Int
             public let endMaxLength: Double
@@ -375,7 +375,7 @@ public struct CrabTank: GameParametable {
             }
         }
         
-        public struct PaintMonitorSetParameter: Codable {
+        public struct PaintMonitorSetParameter: Parametable {
             public let type: String
             public let relabilityMinTime: Int
             

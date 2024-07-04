@@ -34,7 +34,7 @@ public struct TripleInkstrike: GameParametable {
             case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
         }
         
-        public struct BlastParameter: Codable {
+        public struct BlastParameter: Parametable {
             public let type: String
             public let damageHeightUp: Double
             public let damageRadiusEnd: Double
@@ -62,7 +62,7 @@ public struct TripleInkstrike: GameParametable {
             }
         }
         
-        public struct MissileParameter: Codable {
+        public struct MissileParameter: Parametable {
             public let type: String
             public let useDirect: Bool
             public let xzBias: Double
@@ -74,7 +74,7 @@ public struct TripleInkstrike: GameParametable {
             }
         }
         
-        public struct MotherParameter: Codable {
+        public struct MotherParameter: Parametable {
             public let type: String
             public let targetHeight: Double
             
@@ -84,7 +84,7 @@ public struct TripleInkstrike: GameParametable {
             }
         }
         
-        public struct MoveParameter: Codable {
+        public struct MoveParameter: Parametable {
             public let type: String
             public let guideHitCollisionType: String
             public let spawnSpeedY: Double
@@ -100,7 +100,7 @@ public struct TripleInkstrike: GameParametable {
             }
         }
         
-        public struct WeaponParameter: Codable {
+        public struct WeaponParameter: Parametable {
             public let type: String
             public let specialTotalFrame: Int
             
@@ -110,7 +110,7 @@ public struct TripleInkstrike: GameParametable {
             }
         }
         
-        public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public struct SpawnBulletAdditionMovePlayerParameter: Parametable {
             public let type: String
             public let xRate: Double
             public let yMax: Double

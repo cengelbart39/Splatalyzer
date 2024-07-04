@@ -19,7 +19,7 @@ struct IkuraShoot: GameParametable {
         self.parameters = parameters
     }
     
-    struct Parameters: Codable {
+    struct Parameters: Parametable {
         let moveParam: MoveParameter
         let weaponParam: WeaponParameter
         let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
@@ -30,7 +30,7 @@ struct IkuraShoot: GameParametable {
             case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
         }
         
-        struct MoveParameter: Codable {
+        struct MoveParameter: Parametable {
             let type: String
             let guideHitCollisionType: String
             let guideRadius: Double
@@ -48,7 +48,7 @@ struct IkuraShoot: GameParametable {
             }
         }
         
-        struct WeaponParameter: Codable {
+        struct WeaponParameter: Parametable {
             let type: String
             let showPointGuideDistance: Double
             
@@ -58,7 +58,7 @@ struct IkuraShoot: GameParametable {
             }
         }
         
-        struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        struct SpawnBulletAdditionMovePlayerParameter: Parametable {
             let type: String
             let xRate: Double
             let yMax: Double

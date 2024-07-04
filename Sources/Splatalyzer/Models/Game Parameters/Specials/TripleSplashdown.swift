@@ -30,7 +30,7 @@ public struct TripleSplashdown: GameParametable {
             case weaponParam = "spl__WeaponSpPogoParam"
         }
         
-        public struct BlastParameter: Codable {
+        public struct BlastParameter: Parametable {
             public let type: String
             public let crossPaintCheckLength: Double
             public let crossPaintRadius: Double
@@ -56,7 +56,7 @@ public struct TripleSplashdown: GameParametable {
             }
         }
         
-        public struct BulletParameter: Codable {
+        public struct BulletParameter: Parametable {
             public let type: String
             public let hitPoint: Int
             public let moveCollisionHeight: [Double]
@@ -80,7 +80,7 @@ public struct TripleSplashdown: GameParametable {
             }
         }
         
-        public struct WeaponParameter: Codable {
+        public struct WeaponParameter: Parametable {
             public let type: String
             public let riseFrame: Int
             public let riseNoDamageStartFrame: Int

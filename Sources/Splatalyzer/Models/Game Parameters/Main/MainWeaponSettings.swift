@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct MainWeaponSettings: Codable {
+public struct MainWeaponSettings: Parametable {
     public let type: String
     public let overwriteConsumeRtMainHigh: Double?
     public let overwriteConsumeRtMainLow: Double?
@@ -30,7 +30,7 @@ public struct MainWeaponSettings: Codable {
         case weaponSpeedType = "WeaponSpeedType"
     }
     
-    public enum WeaponAccType: String, Codable {
+    public enum WeaponAccType: String, Parametable {
         case fast = "Fast"
         case mid = "Mid"
     }
@@ -41,7 +41,7 @@ public struct MainWeaponSettings: Codable {
 }
 
 /// Represents the weight of a Main Weapon
-public enum WeaponSpeedType: String, Codable, Sendable {
+public enum WeaponSpeedType: String, Parametable {
     case slow = "Slow"
     case mid = "Mid"
     case fast = "Fast"

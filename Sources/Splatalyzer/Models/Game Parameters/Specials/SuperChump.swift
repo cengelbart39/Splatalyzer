@@ -28,7 +28,7 @@ public struct SuperChump: GameParametable {
             case weaponParam = "WeaponParam"
         }
         
-        public struct IceParameter: Codable {
+        public struct IceParameter: Parametable {
             public let type: String
             public let blastParam: BlastParameter
             public let burstFrame: Int
@@ -63,7 +63,7 @@ public struct SuperChump: GameParametable {
                 case warningSERestFrame = "WarningSERestFrame"
             }
             
-            public struct BlastParameter: Codable {
+            public struct BlastParameter: Parametable {
                 public let crossPaintCheckLength: Double
                 public let crossPaintRadius: Double
                 public let damageOffsetY: Double
@@ -90,7 +90,7 @@ public struct SuperChump: GameParametable {
             }
         }
         
-        public struct PipeParameter: Codable {
+        public struct PipeParameter: Parametable {
             public let type: String
             public let depthRadius: Double
             public let minBetweenDistance: Double
@@ -104,7 +104,7 @@ public struct SuperChump: GameParametable {
             }
         }
         
-        public struct WeaponParameter: Codable {
+        public struct WeaponParameter: Parametable {
             public let type: String
             public let specialTotalFrame: Int
             public let targetCenterBias: Double

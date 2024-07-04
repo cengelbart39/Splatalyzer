@@ -20,7 +20,7 @@ public struct Brush: GameParametable {
         self.parameters = parameters
     }
     
-    public struct Parameters: Codable {
+    public struct Parameters: Parametable {
         public let bodyParam: BRBodyParameter
         public let bulletAdditionMovePlayerSplashNearestParam: BRBulletAdditionMovePlayerSplashNearestParameter
         public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
@@ -44,7 +44,7 @@ public struct Brush: GameParametable {
 }
 
 extension Brush.Parameters {
-    public struct SwingUnitGroupParameter: Codable {
+    public struct SwingUnitGroupParameter: Parametable {
         public let type: String
         public let damageParam: BRDamageParameter
         public let pushOutCheckFieldCollisionFrame: Int?

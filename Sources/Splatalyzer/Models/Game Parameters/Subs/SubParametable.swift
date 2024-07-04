@@ -8,9 +8,9 @@
 import Foundation
 
 /// Sets required properties for any Sub Weapon
-public protocol SubParametable: Codable {
-    associatedtype MoveParameter
-    associatedtype WeaponParameter
+public protocol SubParametable: Parametable {
+    associatedtype MoveParameter: Parametable
+    associatedtype WeaponParameter: Parametable
     
     var moveParam: MoveParameter { get }
     var subWeaponSetting: SubWeaponSetting { get }

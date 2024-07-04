@@ -20,7 +20,7 @@ public struct Splatling: GameParametable {
         self.parameters = parameters
     }
     
-    public struct Parameters: Codable {
+    public struct Parameters: Parametable {
         public let collisionParam: CollisionParameter
         public let damageParam: DamageParameter
         public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
@@ -75,7 +75,7 @@ public struct Splatling: GameParametable {
 }
 
 extension Splatling.Parameters {
-    public struct CollisionParameter: Codable {
+    public struct CollisionParameter: Parametable {
         public let type: String
         public let changeFrameForField: Int
         public let endRadiusForField: Double
@@ -95,7 +95,7 @@ extension Splatling.Parameters {
         }
     }
     
-    public struct DamageParameter: Codable {
+    public struct DamageParameter: Parametable {
         public let type: String
         public let reduceEndFrame: Int
         public let reduceStartFrame: Int
@@ -113,7 +113,7 @@ extension Splatling.Parameters {
         }
     }
     
-    public struct MoveParameter: Codable {
+    public struct MoveParameter: Parametable {
         public let type: String
         public let goStraightStateEndMaxSpeed: Double
         public let goStraightToBrakeStateFrame: Int
@@ -133,7 +133,7 @@ extension Splatling.Parameters {
         }
     }
 
-    public struct PaintParameter: Codable {
+    public struct PaintParameter: Parametable {
         public let type: String
         public let depthScaleMax: Double
         public let depthScaleMaxBreakFree: Double
@@ -165,7 +165,7 @@ extension Splatling.Parameters {
         }
     }
     
-    public struct SplashPaintParameter: Codable {
+    public struct SplashPaintParameter: Parametable {
         public let type: String
         public let depthMaxDropHeight: Double?
         public let depthMinDropHeight: Double?
@@ -185,7 +185,7 @@ extension Splatling.Parameters {
         }
     }
 
-    public struct SplashSpawnParameter: Codable {
+    public struct SplashSpawnParameter: Parametable {
         public let type: String
         public let forceSpawnNearestAddNumArray: [Int]?
         public let spawnBetweenLength: Double
@@ -203,7 +203,7 @@ extension Splatling.Parameters {
         }
     }
 
-    public struct VariableShotParameter: Codable {
+    public struct VariableShotParameter: Parametable {
         public let type: String
         public let jumpDegBiasDecreaseStartFrame: Int
         public let jumpDegBiasEndFrame: Int
@@ -233,7 +233,7 @@ extension Splatling.Parameters {
         }
     }
     
-    public struct WallDropCollisionPaintParameter: Codable {
+    public struct WallDropCollisionPaintParameter: Parametable {
         public let type: String
         public let paintRadiusFall: Double
         public let paintRadiusGround: Double
@@ -247,7 +247,7 @@ extension Splatling.Parameters {
         }
     }
     
-    public struct WallDropMoveParameter: Codable {
+    public struct WallDropMoveParameter: Parametable {
         public let type: String
         public let fallPeriodFirstFrameMax: Int
         public let fallPeriodFirstFrameMin: Int
@@ -269,7 +269,7 @@ extension Splatling.Parameters {
         }
     }
     
-    public struct FullChargeParameter: Codable {
+    public struct FullChargeParameter: Parametable {
         public let type: String
         public let maxShootingFrameSecond: Int
         public let repeatFrame: Int
@@ -281,7 +281,7 @@ extension Splatling.Parameters {
         }
     }
 
-    public struct KeepChargeParameter: Codable {
+    public struct KeepChargeParameter: Parametable {
         public let type: String
         public let enableKeepChargeAnytime: Bool
         public let keepChargeFullFrame: Int
@@ -297,7 +297,7 @@ extension Splatling.Parameters {
         }
     }
 
-    public struct WeaponParameter: Codable {
+    public struct WeaponParameter: Parametable {
         public let type: String
         public let burstAimMoveFrame: Int?
         public let chargeFrameFirst: Int?
@@ -359,7 +359,7 @@ extension Splatling.Parameters {
         }
     }
 
-    public struct BulletShooterTailLengthParameter: Codable {
+    public struct BulletShooterTailLengthParameter: Parametable {
         public let type: String
         public let maxLengthFrame: Int
         
@@ -369,7 +369,7 @@ extension Splatling.Parameters {
         }
     }
     
-    public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+    public struct SpawnBulletAdditionMovePlayerParameter: Parametable {
         public let type: String
         
         public enum CodingKeys: String, CodingKey {

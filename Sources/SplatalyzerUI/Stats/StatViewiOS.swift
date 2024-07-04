@@ -26,18 +26,18 @@ public struct StatViewiOS: View {
         Group {
             if UIDevice.current.userInterfaceIdiom == .phone {
                 if horizontalSizeClass == .compact && verticalSizeClass == .regular {
-                    StatViewiOSPortrait()
+                    StatViewPortrait()
                     
                 } else if verticalSizeClass == .compact {
-                    StatViewiOSLandscape()
+                    StatViewLandscape()
                 }
                 
             } else {
                 if (horizontalSizeClass == .compact && verticalSizeClass == .regular) || isPortrait {
-                    StatViewiOSPortrait()
+                    StatViewPortrait()
                     
                 } else if UIApplication.shared.isSplitOrSlideOver  {
-                    StatViewiOSLandscape()
+                    StatViewLandscape()
                     
                 } else {
                     StatViewSideBySide()

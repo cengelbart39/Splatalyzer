@@ -26,7 +26,7 @@ public struct KillerWail51: GameParametable {
             case weaponParam = "spl__WeaponSpMicroLaserParam"
         }
         
-        public struct BulletBitParameter: Codable {
+        public struct BulletBitParameter: Parametable {
             public let type: String
             public let chargeParam: ChargeParameter
             public let followParam: FollowParameter
@@ -39,7 +39,7 @@ public struct KillerWail51: GameParametable {
                 case laserParam = "LaserParam"
             }
             
-            public struct ChargeParameter: Codable {
+            public struct ChargeParameter: Parametable {
                 public let chargeFrame: Int
                 public let interpRate: Double
                 public let maxAngularVel: Double
@@ -53,7 +53,7 @@ public struct KillerWail51: GameParametable {
                 }
             }
             
-            public struct FollowParameter: Codable {
+            public struct FollowParameter: Parametable {
                 public let lockonEndFrame: Int
                 
                 public enum CodingKeys: String, CodingKey {
@@ -61,7 +61,7 @@ public struct KillerWail51: GameParametable {
                 }
             }
             
-            public struct LaserParameter: Codable {
+            public struct LaserParameter: Parametable {
                 public let afterLaserWaitFrame: Int
                 public let freeMoveRotSpeed: Double
                 public let laserDamage: Int
@@ -78,7 +78,7 @@ public struct KillerWail51: GameParametable {
             }
         }
         
-        public struct WeaponParameter: Codable {
+        public struct WeaponParameter: Parametable {
             public let type: String
             public let launchParam: LaunchParameter
             public let playerParam: PlayerParameter
@@ -89,7 +89,7 @@ public struct KillerWail51: GameParametable {
                 case playerParam = "PlayerParam"
             }
             
-            public struct LaunchParameter: Codable {
+            public struct LaunchParameter: Parametable {
                 public let enableDualLaunch: Bool
                 public let laserBitCenterOffset: XYZData
                 public let laserBitRadius: Double
@@ -105,7 +105,7 @@ public struct KillerWail51: GameParametable {
                 }
             }
             
-            public struct PlayerParameter: Codable {
+            public struct PlayerParameter: Parametable {
                 public let afterShotNoBombFrm: Int
                 public let afterShotNoShotFrm: Int
                 public let afterShotNoSquidFrm: Int

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct BRSplashNearestParameter: Codable {
+public struct BRSplashNearestParameter: Parametable {
     public let loopNum: Int?
     public let orderNum: Int?
     public let spawnParam: SpawnParameter
@@ -20,7 +20,7 @@ public struct BRSplashNearestParameter: Codable {
 }
 
 extension BRSplashNearestParameter {
-    public struct SpawnParameter: Codable {
+    public struct SpawnParameter: Parametable {
         public let maxHeight: Double?
         public let offset: XYZData
         public let paintDepthScale: Double?

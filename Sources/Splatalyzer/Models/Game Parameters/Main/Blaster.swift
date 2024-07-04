@@ -20,7 +20,7 @@ public struct Blaster: GameParametable {
         self.parameters = parameters
     }
     
-    public struct Parameters: Codable {
+    public struct Parameters: Parametable {
         public let blastJumpParam: BlastParameter?
         public let blastParam: BlastParameter
         
@@ -82,7 +82,7 @@ public struct Blaster: GameParametable {
 }
 
 extension Blaster.Parameters {
-    public struct BlastParameter: Codable {
+    public struct BlastParameter: Parametable {
         public let type: String
         public let crossPaintCheckLength: Double
         public let crossPaintRadius: Double
@@ -106,7 +106,7 @@ extension Blaster.Parameters {
         }
     }
     
-    public struct BurstParameter: Codable {
+    public struct BurstParameter: Parametable {
         public let type: String
         public let burstFrame: Int?
         public let moveLength: Double?
@@ -146,7 +146,7 @@ extension Blaster.Parameters {
 }
 
 extension Blaster.Parameters.BurstParameter {
-    public struct SplashWallDropPaintParameter: Codable {
+    public struct SplashWallDropPaintParameter: Parametable {
         public let paintRadiusFall: Double
         public let paintRadiusGround: Double
         public let paintRadiusShock: Double
@@ -160,7 +160,7 @@ extension Blaster.Parameters.BurstParameter {
 }
 
 extension Blaster.Parameters {
-    public struct CollisionParameter: Codable {
+    public struct CollisionParameter: Parametable {
         public let type: String
         public let changeFrameForField: Int
         public let endRadiusForField: Double
@@ -180,7 +180,7 @@ extension Blaster.Parameters {
         }
     }
 
-    public struct DamageParameter: Codable {
+    public struct DamageParameter: Parametable {
         public let type: String
         public let reduceEndFrame: Int
         public let reduceStartFrame: Int
@@ -196,7 +196,7 @@ extension Blaster.Parameters {
         }
     }
     
-    public struct MoveParameter: Codable {
+    public struct MoveParameter: Parametable {
         public let type: String
         public let freeGravity: Double?
         public let goStraightStateEndMaxSpeed: Double
@@ -212,7 +212,7 @@ extension Blaster.Parameters {
         }
     }
 
-    public struct PaintParameter: Codable {
+    public struct PaintParameter: Parametable {
         public let type: String
         public let distanceMiddle: Double
         public let widthHalfFar: Double
@@ -228,7 +228,7 @@ extension Blaster.Parameters {
         }
     }
 
-    public struct SplashPaintParameter: Codable {
+    public struct SplashPaintParameter: Parametable {
         public let type: String
         public let depthMaxDropHeight: Double
         public let depthMinDropHeight: Double
@@ -246,7 +246,7 @@ extension Blaster.Parameters {
         }
     }
 
-    public struct SplashSpawnParameter: Codable {
+    public struct SplashSpawnParameter: Parametable {
         public let type: String
         public let forceSpawnNearestAddNumArray: [Double]
         public let randomSpawnVelXMax: Double?
@@ -272,7 +272,7 @@ extension Blaster.Parameters {
         }
     }
 
-    public struct SplashWallHitParameter: Codable {
+    public struct SplashWallHitParameter: Parametable {
         public let type: String
         public let spawnParam: SpawnParameter
         public let wallDropCollisionPaintParam: WallDropCollisionPaintParameter
@@ -288,7 +288,7 @@ extension Blaster.Parameters {
 }
 
 extension Blaster.Parameters.SplashWallHitParameter {
-    public struct SpawnParameter: Codable {
+    public struct SpawnParameter: Parametable {
         public let distanceXZRate: Double?
         public let firstDistance: Double
         public let velocityMinusYRate: Double
@@ -302,7 +302,7 @@ extension Blaster.Parameters.SplashWallHitParameter {
 }
 
 extension Blaster.Parameters {
-    public struct WallDropCollisionPaintParameter: Codable {
+    public struct WallDropCollisionPaintParameter: Parametable {
         public let type: String?
         public let fallPeriodFirstSecondTargetAlp: Double
         public let paintRadiusFall: Double
@@ -318,7 +318,7 @@ extension Blaster.Parameters {
         }
     }
 
-    public struct WallDropMoveParameter: Codable {
+    public struct WallDropMoveParameter: Parametable {
         public let type: String?
         public let fallPeriodFirstFrameMax: Int?
         public let fallPeriodFirstFrameMin: Int
@@ -340,7 +340,7 @@ extension Blaster.Parameters {
         }
     }
 
-    public struct WeaponParameter: Codable {
+    public struct WeaponParameter: Parametable {
         public let type: String
         public let inkConsume: Double
         public let inkRecoverStop: Int
@@ -386,7 +386,7 @@ extension Blaster.Parameters {
         }
     }
 
-    public struct ActionSpecUpReduceJumpSwerveRate: Codable {
+    public struct ActionSpecUpReduceJumpSwerveRate: Parametable {
         public let type: String
         public let mid: Double
         
@@ -396,7 +396,7 @@ extension Blaster.Parameters {
         }
     }
     
-    public struct MainEffectiveRangeUpSkill: Codable {
+    public struct MainEffectiveRangeUpSkill: Parametable {
         public let type: String
         
         public enum CodingKeys: String, CodingKey {
@@ -404,7 +404,7 @@ extension Blaster.Parameters {
         }
     }
     
-    public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+    public struct SpawnBulletAdditionMovePlayerParameter: Parametable {
         public let type: String
         public let zRate: Double
         

@@ -34,7 +34,7 @@ public struct Inkjet: GameParametable {
             case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
         }
         
-        public struct BlastParameter: Codable {
+        public struct BlastParameter: Parametable {
             public let type: String
             public let crossPaintCheckLength: Double
             public let crossPaintRadius: Double
@@ -56,7 +56,7 @@ public struct Inkjet: GameParametable {
             }
         }
         
-        public struct JetParameter: Codable {
+        public struct JetParameter: Parametable {
             public let type: String
             
             public enum CodingKeys: String, CodingKey {
@@ -64,7 +64,7 @@ public struct Inkjet: GameParametable {
             }
         }
         
-        public struct LauncherCollisionParameter: Codable {
+        public struct LauncherCollisionParameter: Parametable {
             public let type: String
             public let changeFrameForField: Int
             public let changeFrameForPlayer: Int
@@ -86,7 +86,7 @@ public struct Inkjet: GameParametable {
             }
         }
         
-        public struct MoveParameter: Codable {
+        public struct MoveParameter: Parametable {
             public let type: String
             public let distance: Double
             
@@ -96,7 +96,7 @@ public struct Inkjet: GameParametable {
             }
         }
         
-        public struct WeaponParameter: Codable {
+        public struct WeaponParameter: Parametable {
             public let type: String
             public let boostJumpVel: Double
             public let specialTotalFrame: HighMidLow
@@ -108,7 +108,7 @@ public struct Inkjet: GameParametable {
             }
         }
         
-        public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public struct SpawnBulletAdditionMovePlayerParameter: Parametable {
             public let type: String
             public let xRate: Double
             public let yMax: Double

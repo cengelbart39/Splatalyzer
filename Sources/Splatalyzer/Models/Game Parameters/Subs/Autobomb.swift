@@ -34,7 +34,7 @@ public struct Autobomb: GameParametable {
             case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
         }
         
-        public struct BlastParameter: Codable {
+        public struct BlastParameter: Parametable {
             public let type: String
             public let crossPaintCheckLength: Double
             public let crossPaintRadius: Double
@@ -52,7 +52,7 @@ public struct Autobomb: GameParametable {
             }
         }
         
-        public struct MoveParameter: Codable {
+        public struct MoveParameter: Parametable {
             public let type: String
             public let beforeRotateFrame: Int
             public let chaseAirAddSpeedXZPerFrame: Double
@@ -121,7 +121,7 @@ public struct Autobomb: GameParametable {
                 case warningSERestFrame = "WarningSERestFrame"
             }
             
-            public struct ContactDashPanel: Codable {
+            public struct ContactDashPanel: Parametable {
                 public let addSpeedPerImpact: Double
                 
                 public enum CodingKeys: String, CodingKey {
@@ -129,7 +129,7 @@ public struct Autobomb: GameParametable {
                 }
             }
             
-            public struct ContactJumpPanel: Codable {
+            public struct ContactJumpPanel: Parametable {
                 public let addSpeedOneBoundRate: Double
                 public let addSpeedPerImpact: Double
                 public let maxBoundNum: Int
@@ -142,7 +142,7 @@ public struct Autobomb: GameParametable {
             }
         }
         
-        public struct WeaponParameter: Codable {
+        public struct WeaponParameter: Parametable {
             public let type: String
             public let inkConsume: Double
             public let inkRecoverStop: Int
@@ -154,7 +154,7 @@ public struct Autobomb: GameParametable {
             }
         }
         
-        public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public struct SpawnBulletAdditionMovePlayerParameter: Parametable {
             public let type: String
             public let xRate: Double
             public let yMax: Double

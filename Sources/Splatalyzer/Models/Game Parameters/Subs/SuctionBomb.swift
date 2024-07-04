@@ -34,7 +34,7 @@ public struct SuctionBomb: GameParametable {
             case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
         }
         
-        public struct BlastParameter: Codable {
+        public struct BlastParameter: Parametable {
             public let type: String
             public let crossPaintCheckLength: Double
             public let crossPaintRadius: Double
@@ -58,7 +58,7 @@ public struct SuctionBomb: GameParametable {
             }
         }
         
-        public struct MoveParameter: Codable {
+        public struct MoveParameter: Parametable {
             public let type: String
             public let guideHitCollisionType: String
             public let spawnSpeedY: Double
@@ -76,7 +76,7 @@ public struct SuctionBomb: GameParametable {
             }
         }
         
-        public struct WeaponParameter: Codable {
+        public struct WeaponParameter: Parametable {
             public let type: String
             public let inkRecoverStop: Int
             
@@ -86,7 +86,7 @@ public struct SuctionBomb: GameParametable {
             }
         }
         
-        public struct BulletInformImpactControlForGeyserParameter: Codable {
+        public struct BulletInformImpactControlForGeyserParameter: Parametable {
             public let type: String
             public let addSpeedPerImpact: Double
             
@@ -96,7 +96,7 @@ public struct SuctionBomb: GameParametable {
             }
         }
         
-        public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public struct SpawnBulletAdditionMovePlayerParameter: Parametable {
             public let type: String
             public let xRate: Double
             public let yMax: Double

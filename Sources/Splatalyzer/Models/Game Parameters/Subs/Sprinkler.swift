@@ -32,7 +32,7 @@ public struct Sprinkler: GameParametable {
             case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
         }
         
-        public struct MoveParameter: Codable {
+        public struct MoveParameter: Parametable {
             public let type: String
             public let guideHitCollisionType: String
             public let hitPaintRadius: Double
@@ -64,7 +64,7 @@ public struct Sprinkler: GameParametable {
             }
         }
         
-        public struct WeaponParameter: Codable {
+        public struct WeaponParameter: Parametable {
             public let type: String
             public let inkConsume: Double
             public let inkRecoverStop: Int
@@ -76,7 +76,7 @@ public struct Sprinkler: GameParametable {
             }
         }
         
-        public struct BulletInformImpactControlForGeyserParameter: Codable {
+        public struct BulletInformImpactControlForGeyserParameter: Parametable {
             public let type: String
             public let addSpeedPerImpact: Double
             
@@ -86,7 +86,7 @@ public struct Sprinkler: GameParametable {
             }
         }
         
-        public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public struct SpawnBulletAdditionMovePlayerParameter: Parametable {
             public let type: String
             public let xRate: Double
             public let yMax: Double

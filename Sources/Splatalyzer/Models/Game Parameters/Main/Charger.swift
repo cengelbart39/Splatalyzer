@@ -20,7 +20,7 @@ public struct Charger: GameParametable {
         self.parameters = parameters
     }
     
-    public struct Parameters: Codable {
+    public struct Parameters: Parametable {
         public let collisionParam: CollisionParameter
         public let damageParam: DamageParameter
         public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
@@ -60,7 +60,7 @@ public struct Charger: GameParametable {
 }
     
 extension Charger.Parameters {
-    public struct CollisionParameter: Codable {
+    public struct CollisionParameter: Parametable {
         public let type: String
         public let endRadiusForField: Double
         public let endRadiusForPlayer: Double
@@ -78,7 +78,7 @@ extension Charger.Parameters {
 }
 
 extension Charger.Parameters {
-    public struct DamageParameter: Codable {
+    public struct DamageParameter: Parametable {
         public let type: String
         public let valueFullCharge: Int
         public let valueMaxCharge: Int
@@ -94,7 +94,7 @@ extension Charger.Parameters {
 }
 
 extension Charger.Parameters {
-    public struct MoveParameter: Codable {
+    public struct MoveParameter: Parametable {
         public let type: String
         public let distanceFullCharge: Double
         public let distanceMaxCharge: Double
@@ -118,7 +118,7 @@ extension Charger.Parameters {
 }
 
 extension Charger.Parameters {
-    public struct PaintParameter: Codable {
+    public struct PaintParameter: Parametable {
         public let type: String
         public let radiusFullCharge: Double
         public let radiusMaxCharge: Double
@@ -134,7 +134,7 @@ extension Charger.Parameters {
 }
 
 extension Charger.Parameters {
-    public struct SplashPaintParameter: Codable {
+    public struct SplashPaintParameter: Parametable {
         public let type: String
         public let depthHalfFullCharge: Double
         public let depthHalfMaxCharge: Double
@@ -164,7 +164,7 @@ extension Charger.Parameters {
 }
 
 extension Charger.Parameters {
-    public struct SplashSpawnParameter: Codable {
+    public struct SplashSpawnParameter: Parametable {
         public let type: String
         public let onTopRateFullCharge: Double
         public let onTopRateMaxCharge: Double
@@ -186,7 +186,7 @@ extension Charger.Parameters {
 }
 
 extension Charger.Parameters {
-    public struct SplashWallHitParameter: Codable {
+    public struct SplashWallHitParameter: Parametable {
         public let type: String
         public let spawnParam: SpawnParameter?
         public let wallDropCollisionPaintParam: WallDropCollisionPaintParameter
@@ -202,7 +202,7 @@ extension Charger.Parameters {
 }
 
 extension Charger.Parameters.SplashWallHitParameter {
-    public struct SpawnParameter: Codable {
+    public struct SpawnParameter: Parametable {
         public let betweenDistance: Double?
         public let firstDistance: Double?
         public let numMax: Int?
@@ -220,7 +220,7 @@ extension Charger.Parameters.SplashWallHitParameter {
 }
 
 extension Charger.Parameters {
-    public struct WallDropCollisionPaintParameter: Codable {
+    public struct WallDropCollisionPaintParameter: Parametable {
         public let type: String?
         public let paintRadiusFall: Double
         public let paintRadiusFallMaxCharge: Double
@@ -242,7 +242,7 @@ extension Charger.Parameters {
         }
     }
     
-    public struct WallDropMoveParameter: Codable {
+    public struct WallDropMoveParameter: Parametable {
         public let type: String?
         public let fallPeriodFirstFrameMin: Int
         public let fallPeriodFirstTargetSpeed: Double
@@ -260,7 +260,7 @@ extension Charger.Parameters {
 }
 
 extension Charger.Parameters {
-    public struct KeepChargeParameter: Codable {
+    public struct KeepChargeParameter: Parametable {
         public let type: String
         public let enableKeepChargeAnytime: Bool?
         public let enableKeepChargeTransCancel: Bool?
@@ -280,7 +280,7 @@ extension Charger.Parameters {
         }
     }
     
-    public struct DivideChargerParameter: Codable {
+    public struct DivideChargerParameter: Parametable {
         public let type: String
         public let fullChargeDivideNum: Int
         public let muzzleLocalPos: XYZData
@@ -294,7 +294,7 @@ extension Charger.Parameters {
 }
 
 extension Charger.Parameters {
-    public struct WeaponParameter: Codable {
+    public struct WeaponParameter: Parametable {
         public let type: String
         public let airChargeRateByInkEmpty: Int?
         public let chargeFrameFullCharge: Int?
@@ -326,7 +326,7 @@ extension Charger.Parameters {
 }
 
 extension Charger.Parameters {
-    public struct ScopeParameter: Codable {
+    public struct ScopeParameter: Parametable {
         public let type: String
         public let cameraFovy: Double?
         
@@ -336,7 +336,7 @@ extension Charger.Parameters {
         }
     }
     
-    public struct GuideShapeParameter: Codable {
+    public struct GuideShapeParameter: Parametable {
         public let type: String
         
         public enum CodingKeys: String, CodingKey {

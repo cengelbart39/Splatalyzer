@@ -38,7 +38,7 @@ public struct InkVac: GameParametable {
             case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
         }
         
-        public struct ExhaleBlastParameterCharge: Codable {
+        public struct ExhaleBlastParameterCharge: Parametable {
             public let type: String
             public let damageOffsetY: Double
             public let distanceDamge: [DistanceDamage]
@@ -56,7 +56,7 @@ public struct InkVac: GameParametable {
             }
         }
         
-        public struct ExhaleCollisionParameter: Codable {
+        public struct ExhaleCollisionParameter: Parametable {
             public let type: String
             public let radiusForPlayerMinCharge: Double
             
@@ -66,7 +66,7 @@ public struct InkVac: GameParametable {
             }
         }
         
-        public struct ExhaleParameter: Codable {
+        public struct ExhaleParameter: Parametable {
             public let type: String
             public let directAccel: Double
             public let directDamage: Int
@@ -100,7 +100,7 @@ public struct InkVac: GameParametable {
             }
         }
         
-        public struct ExhaleSplashPaintSpawnParameter: Codable {
+        public struct ExhaleSplashPaintSpawnParameter: Parametable {
             public let type: String
             
             public enum CodingKeys: String, CodingKey {
@@ -108,7 +108,7 @@ public struct InkVac: GameParametable {
             }
         }
         
-        public struct InhaleParameter: Codable {
+        public struct InhaleParameter: Parametable {
             public let type: String
             public let collisionAccelRateNearest: Double
             public let collisionAccelRatePerDist: Double
@@ -162,7 +162,7 @@ public struct InkVac: GameParametable {
             }
         }
         
-        public struct PaintSplashParameter: Codable {
+        public struct PaintSplashParameter: Parametable {
             let depthMaxDropHeight: Double
             let depthMinDropHeight: Double
             let depthScaleMax: Double
@@ -180,7 +180,7 @@ public struct InkVac: GameParametable {
             }
         }
         
-        public struct PoisonMistForPlayer: Codable {
+        public struct PoisonMistForPlayer: Parametable {
             public let effectFrame: Int
             public let level: [PoisonMistForPlayerLevel]
             public let sideStepInkConsumeRate: Double
@@ -194,7 +194,7 @@ public struct InkVac: GameParametable {
             }
         }
         
-        public struct PoisonMistForPlayerLevel: Codable {
+        public struct PoisonMistForPlayerLevel: Parametable {
             public let frame: Int?
             public let nextLevelCount: Int?
             
@@ -204,7 +204,7 @@ public struct InkVac: GameParametable {
             }
         }
         
-        public struct WeaponParameter: Codable {
+        public struct WeaponParameter: Parametable {
             public let type: String
             public let exhaleWaitFrame: Int
             public let inhaleToExhaleWaitFrame: Int
@@ -234,7 +234,7 @@ public struct InkVac: GameParametable {
             }
         }
         
-        public struct SpawnBulletAdditionMovePlayerParam: Codable {
+        public struct SpawnBulletAdditionMovePlayerParam: Parametable {
             public let type: String
             public let xRate: Double
             public let yPlusRate: Double

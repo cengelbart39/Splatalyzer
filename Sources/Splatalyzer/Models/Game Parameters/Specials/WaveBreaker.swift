@@ -31,7 +31,7 @@ public struct WaveBreaker: GameParametable {
             case weaponParam = "spl__WeaponSpShockSonarParam"
         }
         
-        public struct BulletInformImpactControlForGeyserParameter: Codable {
+        public struct BulletInformImpactControlForGeyserParameter: Parametable {
             public let type: String
             public let addSpeedPerImpact: Double
             
@@ -41,7 +41,7 @@ public struct WaveBreaker: GameParametable {
             }
         }
         
-        public struct BulletParameter: Codable {
+        public struct BulletParameter: Parametable {
             public let type: String
             public let generatorParam: GeneratorParameter
             public let waveParam: WaveParameter
@@ -52,7 +52,7 @@ public struct WaveBreaker: GameParametable {
                 case waveParam = "WaveParam"
             }
             
-            public struct GeneratorParameter: Codable {
+            public struct GeneratorParameter: Parametable {
                 public let headColRadius: Double
                 public let hitDamage: Int
                 public let hitDamageInterval: Double
@@ -77,7 +77,7 @@ public struct WaveBreaker: GameParametable {
                     case waveEmitFrameArray = "WaveEmitFrameArray"
                 }
                 
-                public struct MoveParameter: Codable {
+                public struct MoveParameter: Parametable {
                     public let flyGravity: Double
                     public let flyPositionAirResist: Double
                     public let guideHitCollisionType: String
@@ -96,7 +96,7 @@ public struct WaveBreaker: GameParametable {
                 }
             }
             
-            public struct WaveParameter: Codable {
+            public struct WaveParameter: Parametable {
                 public let damage: Int
                 public let damageYMax: Double
                 public let damageYMin: Double
@@ -113,7 +113,7 @@ public struct WaveBreaker: GameParametable {
             }
         }
         
-        public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public struct SpawnBulletAdditionMovePlayerParameter: Parametable {
             public let type: String
             public let xRate: Double
             public let yPlusRate: Double
@@ -127,7 +127,7 @@ public struct WaveBreaker: GameParametable {
             }
         }
         
-        public struct WeaponParameter: Codable {
+        public struct WeaponParameter: Parametable {
             public let type: String
             public let shotParam: EmptyStruct
             
@@ -136,7 +136,7 @@ public struct WaveBreaker: GameParametable {
                 case shotParam = "ShotParam"
             }
             
-            public struct EmptyStruct: Codable { }
+            public struct EmptyStruct: Parametable { }
         }
         
         public func getOverwrites() -> SpecialOverwrites {

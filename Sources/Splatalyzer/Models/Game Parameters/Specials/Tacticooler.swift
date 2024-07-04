@@ -32,7 +32,7 @@ public struct Tacticooler: GameParametable {
             case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
         }
         
-        public struct FridgeParameter: Codable {
+        public struct FridgeParameter: Parametable {
             public let type: String
             public let powerUpFrame: HighMidLow
             public let putFrame: Int
@@ -54,7 +54,7 @@ public struct Tacticooler: GameParametable {
             }
         }
         
-        public struct MoveParameter: Codable {
+        public struct MoveParameter: Parametable {
             public let type: String
             public let canPlaceBoundDegree: Double
             public let canPlaceBoundVel: Double
@@ -94,7 +94,7 @@ public struct Tacticooler: GameParametable {
             }
         }
         
-        public struct WeaponParameter: Codable {
+        public struct WeaponParameter: Parametable {
             public let type: String
             public let specialReduceFrame: Int
             
@@ -104,7 +104,7 @@ public struct Tacticooler: GameParametable {
             }
         }
         
-        public struct BulletInformImpactControlForGeyserParameter: Codable {
+        public struct BulletInformImpactControlForGeyserParameter: Parametable {
             public let type: String
             public let addSpeedPerImpact: Double
             
@@ -114,7 +114,7 @@ public struct Tacticooler: GameParametable {
             }
         }
         
-        public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public struct SpawnBulletAdditionMovePlayerParameter: Parametable {
             public let type: String
             public let xRate: Double
             public let yMax: Double

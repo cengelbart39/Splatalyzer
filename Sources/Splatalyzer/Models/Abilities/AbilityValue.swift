@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum AbilityValue: CaseIterable, Codable, Equatable {
+public enum AbilityValue: CaseIterable, Codable, Equatable, Sendable {
     case consumeRtMain
     
     case consumeRtSubLv0

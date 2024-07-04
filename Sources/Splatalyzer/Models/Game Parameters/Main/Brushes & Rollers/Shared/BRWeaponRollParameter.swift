@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct BRWeaponRollParameter: Codable {
+public struct BRWeaponRollParameter: Parametable {
     public let type: String
     public let dashFrame: Int?
     public let inkConsumeMaxPerFrame: Double

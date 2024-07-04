@@ -32,7 +32,7 @@ public struct SplatBomb: GameParametable {
             case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
         }
         
-        public struct BlastParameter: Codable {
+        public struct BlastParameter: Parametable {
             public let type: String
             public let distanceDamage: [DistanceDamage]
             public let knockBackParam: KnockbackParameter
@@ -48,7 +48,7 @@ public struct SplatBomb: GameParametable {
             }
         }
         
-        public struct MoveParameter: Codable {
+        public struct MoveParameter: Parametable {
             public let type: String
             public let burstFrame: Int
             public let collisionSESpanFrame: Int
@@ -93,7 +93,7 @@ public struct SplatBomb: GameParametable {
                 case spawnSpeedZSpecUp = "SpawnSpeedZSpecUp"
             }
             
-            public struct ContactDashPanel: Codable {
+            public struct ContactDashPanel: Parametable {
                 public let addSpeedPerImpact: Double
                 public let crossSaveSpeedRate: Double
                 
@@ -103,7 +103,7 @@ public struct SplatBomb: GameParametable {
                 }
             }
             
-            public struct ContactJumpPanel: Codable {
+            public struct ContactJumpPanel: Parametable {
                 public let addSpeedOneBoundRate: Double
                 public let addSpeedPerImpact: Double
                 
@@ -114,7 +114,7 @@ public struct SplatBomb: GameParametable {
             }
         }
         
-        public struct WeaponParameter: Codable {
+        public struct WeaponParameter: Parametable {
             public let type: String
             public let inkRecoverStop: Int
             
@@ -124,7 +124,7 @@ public struct SplatBomb: GameParametable {
             }
         }
         
-        public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public struct SpawnBulletAdditionMovePlayerParameter: Parametable {
             public let type: String
             public let xRate: Double
             public let yMax: Double

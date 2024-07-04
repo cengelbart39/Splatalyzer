@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum MainRowId: String, CaseIterable, Codable {
+public enum MainRowId: String, CaseIterable, Codable, Sendable {
     // MARK: Blasters
     case grizzcoBlaster = "Blaster_Bear_Coop"
         

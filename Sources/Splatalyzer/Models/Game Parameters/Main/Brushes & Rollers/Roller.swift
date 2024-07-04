@@ -20,7 +20,7 @@ public struct Roller: GameParametable {
         self.parameters = parameters
     }
     
-    public struct Parameters: Codable {
+    public struct Parameters: Parametable {
         public let bodyParam: BRBodyParameter
         public let bulletAdditionMovePlayerSpalashNearestParam: BRBulletAdditionMovePlayerSplashNearestParameter
         
@@ -54,7 +54,7 @@ public struct Roller: GameParametable {
 }
 
 extension Roller.Parameters {
-    public struct KnockBackByCanopyParameter: Codable {
+    public struct KnockBackByCanopyParameter: Parametable {
         public let type: String
         public let knockBackRollerPlayerDamageOff: BRKnockBack
         public let knockBackRollerPlayerDamageOn: BRKnockBack
@@ -66,7 +66,7 @@ extension Roller.Parameters {
         }
     }
     
-    public struct VerticalSwingUnitGroupParameter: Codable {
+    public struct VerticalSwingUnitGroupParameter: Parametable {
         public let type: String
         public let damageParam: BRDamageParameter
         public let spawnSplashBetweenLength: Double
@@ -88,7 +88,7 @@ extension Roller.Parameters {
         }
     }
     
-    public struct WideSwingUnitGroupParameter: Codable {
+    public struct WideSwingUnitGroupParameter: Parametable {
         public let type: String
         public let damageParam: BRDamageParameter
         public let splashNearestParam: BRSplashNearestParameter
@@ -104,7 +104,7 @@ extension Roller.Parameters {
 }
 
 extension Roller.Parameters.VerticalSwingUnitGroupParameter {
-    public struct SplashPaintParameter: Codable {
+    public struct SplashPaintParameter: Parametable {
         public let depthScaleMax: Double
         public let depthScaleMin: Double
         public let widthHalf: Double

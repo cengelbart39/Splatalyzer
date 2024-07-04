@@ -20,7 +20,7 @@ public struct Slosher: GameParametable {
         self.parameters = parameters
     }
     
-    public struct Parameters: Codable {
+    public struct Parameters: Parametable {
         public let blastParam: BlastParameter?
         public let bounceGroupParam: BounceGroupParameter?
         public let mainEffectiveRangeUp: MainEffectiveRangeUpParameter
@@ -48,7 +48,7 @@ public struct Slosher: GameParametable {
 }
 
 extension Slosher.Parameters {
-    public struct BlastParameter: Codable {
+    public struct BlastParameter: Parametable {
         public let type: String
         public let blastParam: BlastInnerParameter
         public let distanceFar: Double
@@ -68,7 +68,7 @@ extension Slosher.Parameters {
 }
 
 extension Slosher.Parameters.BlastParameter {
-    public struct BlastInnerParameter: Codable {
+    public struct BlastInnerParameter: Parametable {
         public let collisionRadiusForPaint: Double
         public let crossPaintCheckLength: Double
         public let crossPaintRadius: Double
@@ -94,7 +94,7 @@ extension Slosher.Parameters.BlastParameter {
 }
 
 extension Slosher.Parameters {
-    public struct BounceGroupParameter: Codable {
+    public struct BounceGroupParameter: Parametable {
         public let type: String
         public let bounceParam: [BounceParameter]
         
@@ -106,7 +106,7 @@ extension Slosher.Parameters {
 }
 
 extension Slosher.Parameters.BounceGroupParameter {
-    public struct BounceParameter: Codable {
+    public struct BounceParameter: Parametable {
         public let afterOffsetPaintRadiusFirstBnce: Double?
         public let bounceAfterMaxSpeed: Double?
         public let paintRadiusFirstBounce: Double
@@ -122,7 +122,7 @@ extension Slosher.Parameters.BounceGroupParameter {
 }
 
 extension Slosher.Parameters {
-    public struct CollisionParameter: Codable {
+    public struct CollisionParameter: Parametable {
         public let endRadiusForField: Double?
         public let endRadiusForPlayer: Double
         public let initRadiusForField: Double?
@@ -138,7 +138,7 @@ extension Slosher.Parameters {
 }
 
 extension Slosher.Parameters {
-    public struct NearestParameter: Codable {
+    public struct NearestParameter: Parametable {
         public let type: String
         public let drawSizeCollisionPaintParam: DrawSizeCollisionPaintParameter
         public let spawnOffset: XYData
@@ -152,7 +152,7 @@ extension Slosher.Parameters {
 }
 
 extension Slosher.Parameters.NearestParameter {
-    public struct DrawSizeCollisionPaintParameter: Codable {
+    public struct DrawSizeCollisionPaintParameter: Parametable {
         public let collisionParam: Slosher.Parameters.CollisionParameter?
         public let paintDepthScale: Double
         public let paintWidthHalf: Double
@@ -166,7 +166,7 @@ extension Slosher.Parameters.NearestParameter {
 }
 
 extension Slosher.Parameters {
-    public struct SplashScatterParameter: Codable {
+    public struct SplashScatterParameter: Parametable {
         public let type: String
         public let collisionParam: Slosher.Parameters.CollisionParameter
         public let paintRadius: Double
@@ -200,7 +200,7 @@ extension Slosher.Parameters {
 }
 
 extension Slosher.Parameters {
-    public struct SplashSpiralParameter: Codable {
+    public struct SplashSpiralParameter: Parametable {
         public let type: String
         public let collisionParam: Slosher.Parameters.CollisionParameter
         public let lifeFrame: Int
@@ -234,7 +234,7 @@ extension Slosher.Parameters {
 }
 
 extension Slosher.Parameters {
-    public struct WeaponParameter: Codable {
+    public struct WeaponParameter: Parametable {
         public let type: String
         public let frameOffsetDegreeRate: Double?
         public let frameOffsetMaxDegree: Double?
@@ -268,7 +268,7 @@ extension Slosher.Parameters {
 }
 
 extension Slosher.Parameters.WeaponParameter {
-    public struct ShotGuide: Codable {
+    public struct ShotGuide: Parametable {
         public let bulletOrderNumInUnit: Int?
         public let frame: Int
         public let unitOrderNum: Int?
@@ -282,7 +282,7 @@ extension Slosher.Parameters.WeaponParameter {
 }
 
 extension Slosher.Parameters {
-    public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+    public struct SpawnBulletAdditionMovePlayerParameter: Parametable {
         public let type: String
         public let guideYMinusZero: Bool
         public let xRate: Double?

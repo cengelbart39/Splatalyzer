@@ -28,7 +28,7 @@ public struct SplattercolorScreen: GameParametable {
             case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
         }
         
-        public struct MoveParameter: Codable {
+        public struct MoveParameter: Parametable {
             public let type: String
             public let damageValueForDamageTag: Int
             public let guideHitCollisionType: String
@@ -46,7 +46,7 @@ public struct SplattercolorScreen: GameParametable {
             }
         }
         
-        public struct WallParameter: Codable {
+        public struct WallParameter: Parametable {
             public let type: String
             public let closingFrame: Int
             public let damageValue: Int
@@ -104,7 +104,7 @@ public struct SplattercolorScreen: GameParametable {
             }
         }
         
-        public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public struct SpawnBulletAdditionMovePlayerParameter: Parametable {
             public let type: String
             public let xRate: Double
             public let yMax: Double

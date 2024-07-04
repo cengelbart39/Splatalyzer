@@ -28,7 +28,7 @@ public struct SquidBeakon: GameParametable {
             case weaponParam = "WeaponParam"
         }
         
-        public struct MoveParameter: Codable {
+        public struct MoveParameter: Parametable {
             public let type: String
             public let guideRadius: Double
             public let spawnSpeedZSpecUp: HighMidLow
@@ -40,7 +40,7 @@ public struct SquidBeakon: GameParametable {
             }
         }
         
-        public struct WeaponParameter: Codable {
+        public struct WeaponParameter: Parametable {
             public let type: String
             public let inkConsume: Double
             public let inkRecoverStop: Int
@@ -53,7 +53,7 @@ public struct SquidBeakon: GameParametable {
                 case knockBackParam = "KnockBackParam"
             }
             
-            public struct KnockBackParam: Codable {
+            public struct KnockBackParam: Parametable {
                 public let impactValue: Double
                 
                 public enum CodingKeys: String, CodingKey {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct BRKnockBack: Codable {
+public struct BRKnockBack: Parametable {
     public let accelMax: Double
     public let accelMin: Double
     public let myVelocityRate: Double

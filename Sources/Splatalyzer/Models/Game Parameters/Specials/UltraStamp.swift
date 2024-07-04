@@ -43,7 +43,7 @@ public struct UltraStamp: GameParametable {
             case weaponParam = "spl__WeaponSpUltraStampParam"
         }
         
-        public struct SwingBlastParam: Codable {
+        public struct SwingBlastParam: Parametable {
             public let type: String
             public let crossPaintCheckLength: Double
             public let crossPaintRadius: Double
@@ -67,7 +67,7 @@ public struct UltraStamp: GameParametable {
             }
         }
         
-        public struct SwingBulletWallParameter: Codable {
+        public struct SwingBulletWallParameter: Parametable {
             public let type: String
             
             public enum CodingKeys: String, CodingKey {
@@ -75,7 +75,7 @@ public struct UltraStamp: GameParametable {
             }
         }
         
-        public struct SwingParameter: Codable {
+        public struct SwingParameter: Parametable {
             public let type: String
             public let defiladeHandSideOffsetLength: Double
             public let stateSwingUpLateFrame: Int
@@ -87,7 +87,7 @@ public struct UltraStamp: GameParametable {
             }
         }
         
-        public struct SwingWallDropCollisionPaintParameter: Codable {
+        public struct SwingWallDropCollisionPaintParameter: Parametable {
             public let type: String
             public let paintRadiusGround: Double
             
@@ -97,7 +97,7 @@ public struct UltraStamp: GameParametable {
             }
         }
         
-        public struct SwingWallDropMoveParameter: Codable {
+        public struct SwingWallDropMoveParameter: Parametable {
             public let type: String
             public let fallPeriodFirstFrameMax: Int
             public let fallPeriodFirstFrameMin: Int
@@ -117,7 +117,7 @@ public struct UltraStamp: GameParametable {
             }
         }
         
-        public struct ThrowBlastParameter: Codable {
+        public struct ThrowBlastParameter: Parametable {
             public let type: String
             public let crossPaintCheckLength: Double
             public let crosSPaintRadius: Double
@@ -135,7 +135,7 @@ public struct UltraStamp: GameParametable {
             }
         }
         
-        public struct ThrowMoveParameter: Codable {
+        public struct ThrowMoveParameter: Parametable {
             public let type: String
             public let directAccel: Int
             public let directDamageValue: Int
@@ -161,7 +161,7 @@ public struct UltraStamp: GameParametable {
             }
         }
         
-        public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public struct SpawnBulletAdditionMovePlayerParameter: Parametable {
             public let type: String
             public let xRate: Double
             public let yPlusRate: Double
@@ -175,7 +175,7 @@ public struct UltraStamp: GameParametable {
             }
         }
         
-        public struct WeaponParameter: Codable {
+        public struct WeaponParameter: Parametable {
             public let type: String
             public let bangDownSmallTurnLimitAngleDeg: Double
             public let bangDownVelLimitY: Double

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct SubWeaponSetting: Codable {
+public struct SubWeaponSetting: Parametable {
     public let type: String
     public let subInkSaveLv: Int?
     

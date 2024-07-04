@@ -17,14 +17,14 @@ struct Splashdown: GameParametable {
         self.parameters = parameters
     }
     
-    struct Parameters: Codable {
+    struct Parameters: Parametable {
         let bulletBlastParam: BulletBlastParameter
         
         enum CodingKeys: String, CodingKey {
             case bulletBlastParam = "spl__BulletBlastParam"
         }
         
-        struct BulletBlastParameter: Codable {
+        struct BulletBlastParameter: Parametable {
             let type: String
             let crossPaintCheckLength: Double
             let crossPaintRadius: Double

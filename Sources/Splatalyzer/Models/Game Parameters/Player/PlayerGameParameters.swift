@@ -17,7 +17,7 @@ public struct Player: GameParametable {
         self.parameters = parameters
     }
     
-    public struct Parameters: Codable {
+    public struct Parameters: Parametable {
         public let dieBlastParam: DieBlastParameter
         
         public let playerLeagueInGameModifierParam: PlayerLeagueInGameModifierParameter
@@ -135,7 +135,7 @@ public struct Player: GameParametable {
 }
 
 extension Player.Parameters {
-    public struct DieBlastParameter: Codable {
+    public struct DieBlastParameter: Parametable {
         public let type: String
         public let collisionRadiusForPaint: Double
         public let crossPaintCheckLength: Double
@@ -163,7 +163,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct PlayerLeagueInGameModifierParameter: Codable {
+    public struct PlayerLeagueInGameModifierParameter: Parametable {
         public let type: String
         public let highJumpExCoefSpecial: Double
         public let highJumpVelCoef: Double
@@ -181,7 +181,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct ConstraintBindableHelperParameter: Codable {
+    public struct ConstraintBindableHelperParameter: Parametable {
         public let type: String
         
         public enum CodingKeys: String, CodingKey {
@@ -189,7 +189,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct CoopBuildParameter: Codable {
+    public struct CoopBuildParameter: Parametable {
         public let type: String
         
         public enum CodingKeys: String, CodingKey {
@@ -197,7 +197,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct CoopBuildParameterHumanMoveUp: Codable {
+    public struct CoopBuildParameterHumanMoveUp: Parametable {
         public let type: String
         
         public enum CodingKeys: String, CodingKey {
@@ -205,7 +205,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct CoopBuildParameterOpInkEffectReduction: Codable {
+    public struct CoopBuildParameterOpInkEffectReduction: Parametable {
         public let type: String
         
         public enum CodingKeys: String, CodingKey {
@@ -213,7 +213,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct CoopBuildParameterSquidMoveUp: Codable {
+    public struct CoopBuildParameterSquidMoveUp: Parametable {
         public let type: String
         
         public enum CodingKeys: String, CodingKey {
@@ -221,7 +221,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct DamageParameter: Codable {
+    public struct DamageParameter: Parametable {
         public let type: String
         public let damageRecivers: [DamagerReciever]
         public let damageSenders: [DamageSender]
@@ -235,7 +235,7 @@ extension Player.Parameters {
 }
 
 extension Player.Parameters.DamageParameter {
-    public struct DamagerReciever: Codable {
+    public struct DamagerReciever: Parametable {
         public let damagerHistMaxSize: Int
         public let damageRateInfoCol: String
         public let flag: [String]
@@ -257,7 +257,7 @@ extension Player.Parameters.DamageParameter {
         }
     }
     
-    public struct DamageSender: Codable {
+    public struct DamageSender: Parametable {
         public let name: String
         public let refRigidBody: [String]
         
@@ -270,7 +270,7 @@ extension Player.Parameters.DamageParameter {
 }
 
 extension Player.Parameters {
-    public struct DisplayItemGetHelperParameter: Codable {
+    public struct DisplayItemGetHelperParameter: Parametable {
         public let type: String
         public let displayOffsetY: Double
         
@@ -280,7 +280,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct InkRailPlayerParameter: Codable {
+    public struct InkRailPlayerParameter: Parametable {
         public let type: String
         public let finishImmAfterFrame: Int
         public let finishPlayerVelRateY: Double
@@ -300,7 +300,7 @@ extension Player.Parameters {
 }
 
 extension Player.Parameters.InkRailPlayerParameter {
-    public struct ModelDynamicsUnitParameter: Codable {
+    public struct ModelDynamicsUnitParameter: Parametable {
         public let airRes: Double
         public let connectionForce: Double
         public let endBoneName: String
@@ -322,7 +322,7 @@ extension Player.Parameters.InkRailPlayerParameter {
 }
 
 // Not a extension since used in SubWeaponData
-public struct BeaconSubSpecUpParameter: Codable {
+public struct BeaconSubSpecUpParameter: Parametable {
     public let type: String
     public let subSpecUpParam: HighMidLow
     
@@ -333,7 +333,7 @@ public struct BeaconSubSpecUpParameter: Codable {
 }
 
 extension Player.Parameters {
-    public struct AttractTargetParameter: Codable {
+    public struct AttractTargetParameter: Parametable {
         public let type: String
         
         public enum CodingKeys: String, CodingKey {
@@ -341,7 +341,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct CameraPeriscopeParameter: Codable {
+    public struct CameraPeriscopeParameter: Parametable {
         public let type: String
         public let playerFollowRate: RateData
         public let yawAngleVelRateGyro: RateData
@@ -355,7 +355,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct CanolaShotParameter: Codable {
+    public struct CanolaShotParameter: Parametable {
         public var type: String
         
         public enum CodingKeys: String, CodingKey {
@@ -363,7 +363,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct EntryLiftParameter: Codable {
+    public struct EntryLiftParameter: Parametable {
         public let type: String
         public let finishVel: Double
         
@@ -373,7 +373,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct GeyserParameter: Codable {
+    public struct GeyserParameter: Parametable {
         public let type: String
         public let bindToRoofMinSec: Double
         public let jumpVelAtRoof: Double
@@ -385,7 +385,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct GrindRailParameter: Codable {
+    public struct GrindRailParameter: Parametable {
         public let type: String
         public let aerialVelYToBind: Double
         public let autoFinishCheckDist: Double
@@ -415,7 +415,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct JumpGimmickParameter: Codable {
+    public struct JumpGimmickParameter: Parametable {
         public let type: String
         public let jumpDisableFrm: Int
         
@@ -425,7 +425,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct MissionSkillParameter: Codable {
+    public struct MissionSkillParameter: Parametable {
         public let type: String
         public let armorRecoverFrame: [Int]
         public let inkTankCapacityRate: [Double]
@@ -455,7 +455,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct PeriscopeParameter: Codable {
+    public struct PeriscopeParameter: Parametable {
         public let type: String
         public let extendSec: Double
         public let shrinkMoveGraph: RateData
@@ -469,7 +469,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct PipelineParameter: Codable {
+    public struct PipelineParameter: Parametable {
         public let type: String
         public let darkenDelaySec: Double
         public let finishSec: Double
@@ -497,7 +497,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct VehicleSpectacleParameter: Codable {
+    public struct VehicleSpectacleParameter: Parametable {
         public let type: String
         
         public enum CodingKeys: String, CodingKey {
@@ -507,7 +507,7 @@ extension Player.Parameters {
 }
 
 extension Player.Parameters {
-    public struct ActionSpecUpSquidSkillParameter: Codable {
+    public struct ActionSpecUpSquidSkillParameter: Parametable {
         public let type: String
         public let wallJumpChargeFormHigh: Int
         public let wallJumpChargeFormLow: Int
@@ -521,7 +521,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct HumanMoveUpSkillParameter: Codable {
+    public struct HumanMoveUpSkillParameter: Parametable {
         public let type: String
         
         public enum CodingKeys: String, CodingKey {
@@ -529,7 +529,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct InkRecoveryUpSkillParameter: Codable {
+    public struct InkRecoveryUpSkillParameter: Parametable {
         public let type: String
         
         public enum CodingKeys: String, CodingKey {
@@ -537,7 +537,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct MainInkSaveSkillParameter: Codable {
+    public struct MainInkSaveSkillParameter: Parametable {
         public let type: String
         
         public enum CodingKeys: String, CodingKey {
@@ -545,7 +545,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct OpInkEffectReductionSkillParameter: Codable {
+    public struct OpInkEffectReductionSkillParameter: Parametable {
         public let type: String
         
         public enum CodingKeys: String, CodingKey {
@@ -553,7 +553,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct RespawnSpecialGuageSaveSkillParameter: Codable {
+    public struct RespawnSpecialGuageSaveSkillParameter: Parametable {
         public let type: String
         
         public enum CodingKeys: String, CodingKey {
@@ -561,7 +561,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct RespawnTimeSaveSkillParameter: Codable {
+    public struct RespawnTimeSaveSkillParameter: Parametable {
         public let type: String
         
         public enum CodingKeys: String, CodingKey {
@@ -569,7 +569,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct SpecialIncreaseUpSkillParameter: Codable {
+    public struct SpecialIncreaseUpSkillParameter: Parametable {
         public let type: String
         
         public enum CodingKeys: String, CodingKey {
@@ -577,7 +577,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct SquidMoveUpSkillParameter: Codable {
+    public struct SquidMoveUpSkillParameter: Parametable {
         public let type: String
         
         public enum CodingKeys: String, CodingKey {
@@ -585,7 +585,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct SubEffectReductionSkillParameter: Codable {
+    public struct SubEffectReductionSkillParameter: Parametable {
         public let type: String
         public let damageRtBombLHigh: Double
         public let damageRtBombLMid: Double
@@ -597,7 +597,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct SubInkSaveSkillParameter: Codable {
+    public struct SubInkSaveSkillParameter: Parametable {
         public let type: String
         
         public enum CodingKeys: String, CodingKey {
@@ -605,7 +605,7 @@ extension Player.Parameters {
         }
     }
     
-    public struct SuperJumpTimeSaveSkillParameter: Codable {
+    public struct SuperJumpTimeSaveSkillParameter: Parametable {
         public let type: String
         
         public enum CodingKeys: String, CodingKey {
@@ -615,7 +615,7 @@ extension Player.Parameters {
 }
 
 extension Player.Parameters {
-    public struct MissionSearchAbilityParameter: Codable {
+    public struct MissionSearchAbilityParameter: Parametable {
         public let type: String
         public let markingForgetTime: Double
         public let periscopeMarkingMaxNum: [Double]
@@ -635,7 +635,7 @@ extension Player.Parameters {
 }
 
 extension Player.Parameters.MissionSearchAbilityParameter {
-    public struct RadiusParameter: Codable {
+    public struct RadiusParameter: Parametable {
         public let strongRadius: Double
         public let weakRadius: Double
         
@@ -645,7 +645,7 @@ extension Player.Parameters.MissionSearchAbilityParameter {
         }
     }
     
-    public struct SightParameter: Codable {
+    public struct SightParameter: Parametable {
         public let queryLayerHitMaskEntity: String
         public let querySubLayerHitMskEntity: String
         public let shapeHolderUnitParam: [ShapeHolderUnitParameter]
@@ -661,7 +661,7 @@ extension Player.Parameters.MissionSearchAbilityParameter {
 }
 
 extension Player.Parameters.MissionSearchAbilityParameter.SightParameter {
-    public struct ShapeHolderUnitParameter: Codable {
+    public struct ShapeHolderUnitParameter: Parametable {
         public let name: String
         public let shapeHolderUnitParam: ShapeHolderParameter
         
@@ -670,14 +670,14 @@ extension Player.Parameters.MissionSearchAbilityParameter.SightParameter {
             case shapeHolderUnitParam = "ShapeHolderParam"
         }
         
-        public struct ShapeHolderParameter: Codable {
+        public struct ShapeHolderParameter: Parametable {
             public let sphereArray: [Sphere]
             
             public enum CodingKeys: String, CodingKey {
                 case sphereArray = "SphereArray"
             }
             
-            public struct Sphere: Codable {
+            public struct Sphere: Parametable {
                 public enum CodingKeys: CodingKey { }
             }
         }
@@ -685,7 +685,7 @@ extension Player.Parameters.MissionSearchAbilityParameter.SightParameter {
 }
 
 extension Player.Parameters {
-    public struct ThrowClamParameter: Codable {
+    public struct ThrowClamParameter: Parametable {
         public let type: String
         public let additionalMoveParam: AdditionalMoveParameter
         public let blastGachiParam: BlastGachiParameter
@@ -703,7 +703,7 @@ extension Player.Parameters {
 }
 
 extension Player.Parameters.ThrowClamParameter {
-    public struct BlastGachiParameter: Codable {
+    public struct BlastGachiParameter: Parametable {
         public let crossPaintCheckLength: Double
         public let crossPaintRadius: Double
         public let distanceDamage: [DistanceDamage]
@@ -719,7 +719,7 @@ extension Player.Parameters.ThrowClamParameter {
         }
     }
     
-    public struct ThrowParameter: Codable {
+    public struct ThrowParameter: Parametable {
         public let guideHitCollisionType: String
         public let guideRadius: Double
         public let spawnSpeedY: Double
@@ -737,7 +737,7 @@ extension Player.Parameters.ThrowClamParameter {
 }
 
 extension Player.Parameters {
-    public struct ThrowGoldenIkuraParameter: Codable {
+    public struct ThrowGoldenIkuraParameter: Parametable {
         public let type: String
         public let additionalMoveParam: AdditionalMoveParameter
         public let attackParam: AttackParameter
@@ -757,7 +757,7 @@ extension Player.Parameters {
 }
 
 extension Player.Parameters.ThrowGoldenIkuraParameter {
-    public struct AttackParameter: Codable {
+    public struct AttackParameter: Parametable {
         public let blastParam: BlastParameter
         public let collisionRadius: Double
         public let damageDirectHit: Int
@@ -783,7 +783,7 @@ extension Player.Parameters.ThrowGoldenIkuraParameter {
         }
     }
     
-    public struct BlastParameter: Codable {
+    public struct BlastParameter: Parametable {
         public let damageAttackPriority: Bool
         public let distanceDamage: [DistanceDamage]
         public let paintRadius: Int
@@ -795,7 +795,7 @@ extension Player.Parameters.ThrowGoldenIkuraParameter {
         }
     }
     
-    public struct ThrowParameter: Codable {
+    public struct ThrowParameter: Parametable {
         public let flyHitWallReboundRate: Double
         public let guideHitCollisionType: String
         public let returnWaterMinFrame: Int
@@ -815,7 +815,7 @@ extension Player.Parameters.ThrowGoldenIkuraParameter {
 }
 
 extension Player.Parameters.ThrowGoldenIkuraParameter.AttackParameter {
-    public struct BlastParameter: Codable {
+    public struct BlastParameter: Parametable {
         public let crossPaintCheckLength: Double
         public let crossPaintRadius: Double
         public let damageAttackerPriority: Bool
@@ -841,7 +841,7 @@ extension Player.Parameters.ThrowGoldenIkuraParameter.AttackParameter {
 }
 
 extension Player.Parameters {
-    public struct ThrowTenjinParameter: Codable {
+    public struct ThrowTenjinParameter: Parametable {
         public let type: String
         public let additionalMoveParam: AdditionalMoveParameter
         public let throwParam: ThrowParameter
@@ -855,7 +855,7 @@ extension Player.Parameters {
 }
 
 extension Player.Parameters.ThrowTenjinParameter {
-    public struct ThrowParameter: Codable {
+    public struct ThrowParameter: Parametable {
         public let blastParam: BlastParameter
         public let guideHitCollisionType: String
         public let hitWallPitchToPlane: Double
@@ -881,7 +881,7 @@ extension Player.Parameters.ThrowTenjinParameter {
 }
 
 extension Player.Parameters.ThrowTenjinParameter.ThrowParameter {
-    public struct BlastParameter: Codable {
+    public struct BlastParameter: Parametable {
         public let crossPaintCheckLength: Double
         public let distanceDamage: [DistanceDamage]
         public let knockBackParam: KnockbackParameter

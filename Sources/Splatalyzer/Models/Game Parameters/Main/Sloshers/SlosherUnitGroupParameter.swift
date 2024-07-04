@@ -8,7 +8,7 @@
 import Foundation
 
 extension Slosher.Parameters {
-    public struct UnitGroupParameter: Codable {
+    public struct UnitGroupParameter: Parametable {
         public let type: String
         public let unit: [UnitParameter]
         
@@ -20,7 +20,7 @@ extension Slosher.Parameters {
 }
 
 extension Slosher.Parameters.UnitGroupParameter {
-    public struct UnitParameter: Codable {
+    public struct UnitParameter: Parametable {
         public let addSpawnSpeedYRateByXZ: Double
         public let afterOffsetDelayFrame: Int
         public let afterOffsetSpawnSpeed: Double
@@ -86,7 +86,7 @@ extension Slosher.Parameters.UnitGroupParameter {
 }
 
 extension Slosher.Parameters.UnitGroupParameter.UnitParameter {
-    public struct AfterPaintParameter: Codable {
+    public struct AfterPaintParameter: Parametable {
         public let depthScaleFar: Double
         public let depthScaleNear: Double
         public let distanceXZFar: Double
@@ -110,7 +110,7 @@ extension Slosher.Parameters.UnitGroupParameter.UnitParameter {
         }
     }
     
-    public struct AfterWallDropCollisionPaintParameter: Codable {
+    public struct AfterWallDropCollisionPaintParameter: Parametable {
         public let fallPeriodFirstSecondTargetAlp: Double
         public let paintRadiusFall: Double
         public let paintRadiusGround: Double
@@ -124,7 +124,7 @@ extension Slosher.Parameters.UnitGroupParameter.UnitParameter {
         }
     }
     
-    public struct AfterWallDropMoveParameter: Codable {
+    public struct AfterWallDropMoveParameter: Parametable {
         public let fallPeriodFirstFrameMax: Int
         public let fallPeriodFirstFrameMin: Int
         public let fallPeriodFirstTargetSpeed: Double
@@ -146,7 +146,7 @@ extension Slosher.Parameters.UnitGroupParameter.UnitParameter {
         }
     }
     
-    public struct CollisionParameter: Codable {
+    public struct CollisionParameter: Parametable {
         public let afterOffsetEndRadiusForField: Double
         public let afterOffsetEndRadiusForPlayer: Double
         public let afterOffsetInitRadiusForField: Double
@@ -174,7 +174,7 @@ extension Slosher.Parameters.UnitGroupParameter.UnitParameter {
         }
     }
     
-    public struct DamageParameter: Codable {
+    public struct DamageParameter: Parametable {
         public let groupNum: Int
         public let reduceEndFallDistance: Double
         public let reduceStartFallDistance: Double
@@ -190,7 +190,7 @@ extension Slosher.Parameters.UnitGroupParameter.UnitParameter {
         }
     }
     
-    public struct DrawSizeParameter: Codable {
+    public struct DrawSizeParameter: Parametable {
         public let afterOffsetEndRadius: Double
         public let afterOffsetInitRadius: Double
         public let changeFrame: Int
@@ -216,7 +216,7 @@ extension Slosher.Parameters.UnitGroupParameter.UnitParameter {
         }
     }
     
-    public struct MoveParameter: Codable {
+    public struct MoveParameter: Parametable {
         public let brakeAirResist: Double
         public let brakeGravity: Double
         public let brakeToFreeStateFrame: Int
@@ -242,7 +242,7 @@ extension Slosher.Parameters.UnitGroupParameter.UnitParameter {
         }
     }
     
-    public struct PaintParameter: Codable {
+    public struct PaintParameter: Parametable {
         public let depthScaleFar: Double
         public let depthScaleNear: Double
         public let distanceXZFar: Double
@@ -266,14 +266,14 @@ extension Slosher.Parameters.UnitGroupParameter.UnitParameter {
         }
     }
     
-    public struct SplashAndSplashWallHitSpawnParameter: Codable {
+    public struct SplashAndSplashWallHitSpawnParameter: Parametable {
         public let combination: [SplashHitSpawnCombination]?
         public let splashParam: [SplashHitSpawnSplashParameter]?
     }
 }
 
 extension Slosher.Parameters.UnitGroupParameter.UnitParameter.SplashAndSplashWallHitSpawnParameter {
-    public struct SplashHitSpawnCombination: Codable {
+    public struct SplashHitSpawnCombination: Parametable {
         public let orderNum: Int
         public let splashArrayOrderNum: Int
         public let splashWallHitArrayOrderNum: Int
@@ -287,7 +287,7 @@ extension Slosher.Parameters.UnitGroupParameter.UnitParameter.SplashAndSplashWal
         }
     }
     
-    public struct SplashHitSpawnSplashParameter: Codable {
+    public struct SplashHitSpawnSplashParameter: Parametable {
         public let drawSizeCollisionPaintParam: DrawSizeCollisionPaintParameter
         public let spawnParam: SpawnParameter
         
@@ -299,7 +299,7 @@ extension Slosher.Parameters.UnitGroupParameter.UnitParameter.SplashAndSplashWal
 }
 
 extension Slosher.Parameters.UnitGroupParameter.UnitParameter.SplashAndSplashWallHitSpawnParameter.SplashHitSpawnSplashParameter {
-    public struct DrawSizeCollisionPaintParameter: Codable {
+    public struct DrawSizeCollisionPaintParameter: Parametable {
         public let collisionParam: Slosher.Parameters.CollisionParameter
         public let drawRadius: Double
         public let paintDepthScale: Double
@@ -313,7 +313,7 @@ extension Slosher.Parameters.UnitGroupParameter.UnitParameter.SplashAndSplashWal
         }
     }
     
-    public struct SpawnParameter: Codable {
+    public struct SpawnParameter: Parametable {
         public let changeFrameForField: Int
         public let changeFrameForPlayer: Int
         public let endRadiusForField: Double
@@ -335,7 +335,7 @@ extension Slosher.Parameters.UnitGroupParameter.UnitParameter.SplashAndSplashWal
 }
 
 extension Slosher.Parameters.UnitGroupParameter.UnitParameter {
-    public struct SplashHitParameter: Codable {
+    public struct SplashHitParameter: Parametable {
         public let collisionRadius: Double
         public let drawRadius: Double
         public let paintRadiusRatePerWidthHalf: Double
@@ -351,7 +351,7 @@ extension Slosher.Parameters.UnitGroupParameter.UnitParameter {
         }
     }
     
-    public struct WallDropCollisionPaintParameter: Codable {
+    public struct WallDropCollisionPaintParameter: Parametable {
         public let fallPeriodFirstSecondTargetAlp: Double
         public let paintRadiusFall: Double
         public let paintRadiusGround: Double
@@ -365,7 +365,7 @@ extension Slosher.Parameters.UnitGroupParameter.UnitParameter {
         }
     }
     
-    public struct WallDropMoveParameter: Codable {
+    public struct WallDropMoveParameter: Parametable {
         public let fallPeriodFirstFrameMax: Int
         public let fallPeriodFirstFrameMin: Int
         public let fallPeriodFirstTargetSpeed: Double

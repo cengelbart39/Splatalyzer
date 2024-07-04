@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct BRWeaponSwingParameter: Codable {
+public struct BRWeaponSwingParameter: Parametable {
     public let type: String
     public let guideParam: GuideParameter?
     public let inkConsume: Double
@@ -17,7 +17,7 @@ public struct BRWeaponSwingParameter: Codable {
     public let swingFrame: Int
     public let swingMoveSpeed: Double
     
-    public struct GuideParameter: Codable {
+    public struct GuideParameter: Parametable {
         public let frame: Int?
         public let widthScale: Double
         

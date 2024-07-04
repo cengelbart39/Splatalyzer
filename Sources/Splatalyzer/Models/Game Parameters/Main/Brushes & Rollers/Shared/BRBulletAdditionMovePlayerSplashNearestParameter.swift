@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct BRBulletAdditionMovePlayerSplashNearestParameter: Codable {
+public struct BRBulletAdditionMovePlayerSplashNearestParameter: Parametable {
     public let type: String
     public let xRate: Double
     public let yPlusRate: Double

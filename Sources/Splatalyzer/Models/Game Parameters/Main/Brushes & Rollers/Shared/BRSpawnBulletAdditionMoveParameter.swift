@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct BRSpawnBulletAdditionMoveParameter: Codable {
+public struct BRSpawnBulletAdditionMoveParameter: Parametable {
     public let type: String
     public let zRate: Double
     

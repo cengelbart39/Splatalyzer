@@ -36,7 +36,7 @@ public struct Trizooka: GameParametable {
             case weaponParam = "spl__WeaponSpUltraShotParam"
         }
         
-        public struct BlastParameter: Codable {
+        public struct BlastParameter: Parametable {
             public let type: String
             public let distanceDamage: [DistanceDamage]
             public let knockBackParam: KnockbackParameter
@@ -52,7 +52,7 @@ public struct Trizooka: GameParametable {
             }
         }
         
-        public struct CollisionParameter: Codable {
+        public struct CollisionParameter: Parametable {
             public let type: String
             public let changeFrameForField: Int
             public let changeFrameForPlayer: Int
@@ -72,7 +72,7 @@ public struct Trizooka: GameParametable {
             }
         }
         
-        public struct DamageParameter: Codable {
+        public struct DamageParameter: Parametable {
             public let type: String
             public let directHitDamage: Int
             
@@ -82,7 +82,7 @@ public struct Trizooka: GameParametable {
             }
         }
         
-        public struct MoveParameter: Codable {
+        public struct MoveParameter: Parametable {
             public let type: String
             public let brakeAirResist: Double
             public let brakeGravity: Double
@@ -110,7 +110,7 @@ public struct Trizooka: GameParametable {
             }
         }
         
-        public struct UltraShotMoveParameter: Codable {
+        public struct UltraShotMoveParameter: Parametable {
             public let type: String
             public let orbitalRadiusEnd: Double
             public let orbitalRadiusTransitionFrame: Int
@@ -122,7 +122,7 @@ public struct Trizooka: GameParametable {
             }
         }
         
-        public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public struct SpawnBulletAdditionMovePlayerParameter: Parametable {
             public let type: String
             public let xRate: Double
             public let yPlusRate: Double
@@ -136,7 +136,7 @@ public struct Trizooka: GameParametable {
             }
         }
         
-        public struct WeaponParameter: Codable {
+        public struct WeaponParameter: Parametable {
             public let type: String
             public let ejectCartridgeAngularVel: XYZData
             public let ejectCartridgeFadeOutFrame: Int
@@ -169,7 +169,7 @@ public struct Trizooka: GameParametable {
                 case specialDurationFrame = "SpecialDurationFrame"
             }
             
-            public struct KnockBackParam: Codable {
+            public struct KnockBackParam: Parametable {
                 public let airBreakRt: Double
                 public let impactValue: Double
                 public let stickDownRt: Double

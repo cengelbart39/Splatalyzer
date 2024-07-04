@@ -26,7 +26,7 @@ public struct KrakenRoyale: GameParametable {
             case weaponParam = "WeaponParam"
         }
         
-        public struct BodyParameter: Codable {
+        public struct BodyParameter: Parametable {
             public let type: String
             public let collisionAttackFrontOffset: Double
             public let collisionDashFrontOffset: Double
@@ -66,7 +66,7 @@ public struct KrakenRoyale: GameParametable {
             }
         }
         
-        public struct WeaponParameter: Codable {
+        public struct WeaponParameter: Parametable {
             public let type: String
             public let colBulletOffsetY: Double
             public let colBulletOffsetZHead: Double

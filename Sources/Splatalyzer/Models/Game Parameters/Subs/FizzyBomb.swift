@@ -31,7 +31,7 @@ public struct FizzyBomb: GameParametable {
             case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
         }
         
-        public struct MoveParameter: Codable {
+        public struct MoveParameter: Parametable {
             public let type: String
             public let blastParamArray: [BlastParameter]
             public let burstSeFrameArray: [Int]
@@ -76,7 +76,7 @@ public struct FizzyBomb: GameParametable {
                 case spawnSpeedZSpecUp = "SpawnSpeedZSpecUp"
             }
             
-            public struct BlastParameter: Codable {
+            public struct BlastParameter: Parametable {
                 public let crossPaintRadius: Double
                 public let distanceDamage: [DistanceDamage]
                 public let knockBackParam: KnockbackParameter
@@ -92,7 +92,7 @@ public struct FizzyBomb: GameParametable {
                 }
             }
             
-            public struct FlySplashPaintParameter: Codable {
+            public struct FlySplashPaintParameter: Parametable {
                 public let depthMaxDropHeight: Double?
                 public let depthMinDropHeight: Double?
                 public let depthScaleMax: Double
@@ -111,7 +111,7 @@ public struct FizzyBomb: GameParametable {
             }
         }
         
-        public struct WeaponParameter: Codable {
+        public struct WeaponParameter: Parametable {
             public let type: String
             public let inkConsume: Double
             public let inkRecoverStop: Int
@@ -123,7 +123,7 @@ public struct FizzyBomb: GameParametable {
             }
         }
         
-        public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public struct SpawnBulletAdditionMovePlayerParameter: Parametable {
             public let type: String
             public let xRate: Double
             public let yMax: Double

@@ -27,7 +27,7 @@ extension WeaponInfoMain {
 }
 
 /// Represents a single item in ``WeaponInfoMain``
-public struct WeaponInfoMainItem: Codable, Identifiable {
+public struct WeaponInfoMainItem: Codable, Identifiable, Sendable {
     public let debugDispColumn: Int
     public let debugDispOrder: Int
     public let defaultDamgeRate: DamageRateInfo
@@ -94,7 +94,7 @@ public struct WeaponInfoMainItem: Codable, Identifiable {
 }
 
 extension WeaponInfoMainItem {
-    public struct UIParam: Codable {
+    public struct UIParam: Codable, Sendable {
         public let type: UIParamType
         public let value: Int
         
@@ -104,7 +104,7 @@ extension WeaponInfoMainItem {
         }
     }
     
-    public enum UIParamType: String, Codable {
+    public enum UIParamType: String, Codable, Sendable {
         case blaze = "Blaze"
         case charge = "Charge"
         case defence = "Defence"
@@ -118,7 +118,7 @@ extension WeaponInfoMainItem {
 }
     
 extension WeaponInfoMainItem {
-    public enum SubWeaponPath: String, Codable {
+    public enum SubWeaponPath: String, Codable, Sendable {
         case squidBeakon = "Work/Gyml/Beacon.spl__WeaponInfoSub.gyml"
         case curlingBomb = "Work/Gyml/Bomb_Curling.spl__WeaponInfoSub.gyml"
         case fizzyBomb = "Work/Gyml/Bomb_Fizzy.spl__WeaponInfoSub.gyml"
@@ -189,7 +189,7 @@ extension WeaponInfoMainItem {
 }
 
 extension WeaponInfoMainItem {
-    public enum SpecialWeaponPath: String, Codable {
+    public enum SpecialWeaponPath: String, Codable, Sendable {
         case inkVac = "Work/Gyml/SpBlower.spl__WeaponInfoSpecial.gyml"
         case krakenRoyale = "Work/Gyml/SpCastle.spl__WeaponInfoSpecial.gyml"
         case crabTank = "Work/Gyml/SpChariot.spl__WeaponInfoSpecial.gyml"

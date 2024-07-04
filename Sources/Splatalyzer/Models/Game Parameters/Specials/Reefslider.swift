@@ -28,7 +28,7 @@ public struct Reefslider: GameParametable {
             case weaponParam = "WeaponParam"
         }
         
-        public struct BulletBlastParameter: Codable {
+        public struct BulletBlastParameter: Parametable {
             public let type: String
             public let distanceDamage: [DistanceDamage]
             public let knockBackParam: KnockbackParameter
@@ -48,7 +48,7 @@ public struct Reefslider: GameParametable {
             }
         }
         
-        public struct BulletParameter: Codable {
+        public struct BulletParameter: Parametable {
             public let type: String
             public let collisionRadiusForPlayer: Double
             public let damageValue: Int
@@ -62,7 +62,7 @@ public struct Reefslider: GameParametable {
             }
         }
         
-        public struct WeaponParameter: Codable {
+        public struct WeaponParameter: Parametable {
             public let type: String
             public let chargeFrame: Int
             public let distanceAfterglow: Double
@@ -113,7 +113,7 @@ public struct Reefslider: GameParametable {
                 case unrelaxFrame = "UnrelaxFrame"
             }
             
-            public struct PaintSplashParameter: Codable {
+            public struct PaintSplashParameter: Parametable {
                 let depthMaxDropHeight: Double
                 let depthMinDropHeight: Double
                 let depthScaleMax: Double

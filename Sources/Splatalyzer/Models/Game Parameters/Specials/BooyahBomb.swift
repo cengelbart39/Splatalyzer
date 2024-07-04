@@ -32,7 +32,7 @@ public struct BooyahBomb: GameParametable {
             case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
         }
         
-        public struct BlastParameter: Codable {
+        public struct BlastParameter: Parametable {
             public let type: String
             public let crossPaintCheckLength: Double
             public let crossPaintRadius: Double
@@ -56,7 +56,7 @@ public struct BooyahBomb: GameParametable {
             }
         }
         
-        public struct FootSplashParameter: Codable {
+        public struct FootSplashParameter: Parametable {
             public let type: String
             public let paintRadius: Double
             
@@ -66,7 +66,7 @@ public struct BooyahBomb: GameParametable {
             }
         }
         
-        public struct MoveParameter: Codable {
+        public struct MoveParameter: Parametable {
             public let type: String
             public let flyGravity: Double
             public let flyPositionAirResist: Double
@@ -84,7 +84,7 @@ public struct BooyahBomb: GameParametable {
             }
         }
         
-        public struct WeaponParameter: Codable {
+        public struct WeaponParameter: Parametable {
             public let type: String
             public let armorHp: Int
             public let chargeRateAutoPerFrame: HighMidLow
@@ -102,7 +102,7 @@ public struct BooyahBomb: GameParametable {
             }
         }
         
-        public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public struct SpawnBulletAdditionMovePlayerParameter: Parametable {
             public let type: String
             public let xRate: Double
             public let yMinusRate: Double

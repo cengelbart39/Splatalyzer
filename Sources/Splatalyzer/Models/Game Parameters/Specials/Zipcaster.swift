@@ -32,7 +32,7 @@ public struct Zipcaster: GameParametable {
             case weaponParam = "WeaponParam"
         }
         
-        public struct BulletBombMoveParameter: Codable {
+        public struct BulletBombMoveParameter: Parametable {
             public let type: String
             public let flyGravity: Double
             public let flyPositionAirResist: Double
@@ -48,7 +48,7 @@ public struct Zipcaster: GameParametable {
             }
         }
         
-        public struct BulletParameter: Codable {
+        public struct BulletParameter: Parametable {
             public let type: String
             public let collisionRadiusForField: Double
             public let collisionRadiusForPlayer: Double
@@ -68,7 +68,7 @@ public struct Zipcaster: GameParametable {
             }
         }
         
-        public struct HookBlastParameter: Codable {
+        public struct HookBlastParameter: Parametable {
             public let type: String
             public let crossPaintCheckLength: Double
             public let crossPaintRadius: Double
@@ -84,7 +84,7 @@ public struct Zipcaster: GameParametable {
             }
         }
         
-        public struct HookCollisionParameter: Codable {
+        public struct HookCollisionParameter: Parametable {
             public let type: String
             public let endRadiusForField: Double
             public let endRadiusForPlayer: Double
@@ -100,7 +100,7 @@ public struct Zipcaster: GameParametable {
             }
         }
         
-        public struct WeaponParameter: Codable {
+        public struct WeaponParameter: Parametable {
             public let type: String
             public let inkCapacityRt: Double
             public let inkConsumeHook: HighMidLow

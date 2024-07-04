@@ -74,7 +74,7 @@ public enum DamageType: String, CaseIterable, Codable, Sendable {
 
 /// The type of weapon that can perform certain damage
 /// - SeeAlso: ``DamageType`` for a use of `DamageWepaonType`
-public enum DamageWeaponType {
+public enum DamageWeaponType: Sendable {
     case main
     case sub
     case special

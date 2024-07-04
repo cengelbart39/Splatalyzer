@@ -26,7 +26,7 @@ public struct BigBubbler: GameParametable {
             case weaponParam = "spl__WeaponSpGreatBarrierParam"
         }
         
-        public struct BulletMoveParameter: Codable {
+        public struct BulletMoveParameter: Parametable {
             public let type: String
             public let barrierParam: BarrierParameter
             public let baseParam: BaseParameter
@@ -39,7 +39,7 @@ public struct BigBubbler: GameParametable {
                 case droneParam = "DroneParam"
             }
             
-            public struct BarrierParameter: Codable {
+            public struct BarrierParameter: Parametable {
                 public let canopyKnockBack: Double
                 public let damgeRatio: Double
                 public let maxFieldHP: HighMidLow
@@ -63,7 +63,7 @@ public struct BigBubbler: GameParametable {
                 }
             }
             
-            public struct BaseParameter: Codable {
+            public struct BaseParameter: Parametable {
                 public let paintRadius: Double
                 public let paintTexture: String
                 
@@ -73,7 +73,7 @@ public struct BigBubbler: GameParametable {
                 }
             }
             
-            public struct DroneParameter: Codable {
+            public struct DroneParameter: Parametable {
                 public let ascendCurve: RateData
                 public let ascendFrame: Int
                 public let ascendHeight: Double
@@ -94,7 +94,7 @@ public struct BigBubbler: GameParametable {
             }
         }
         
-        public struct WeaponParameter: Codable {
+        public struct WeaponParameter: Parametable {
             public let type: String
             public let knockBackParam: KnockBackParam
             
@@ -103,7 +103,7 @@ public struct BigBubbler: GameParametable {
                 case knockBackParam = "KnockBackParam"
             }
             
-            public struct KnockBackParam: Codable {
+            public struct KnockBackParam: Parametable {
                 public let impactValue: Double
                 
                 public enum CodingKeys: String, CodingKey {

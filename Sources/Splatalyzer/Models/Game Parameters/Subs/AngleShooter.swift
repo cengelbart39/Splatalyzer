@@ -32,7 +32,7 @@ public struct AngleShooter: GameParametable {
             case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
         }
         
-        public struct BlastParameter: Codable {
+        public struct BlastParameter: Parametable {
             public let type: String
             public let collisionRadiusForPaint: Double
             public let crossPaintCheckLength: Double
@@ -58,7 +58,7 @@ public struct AngleShooter: GameParametable {
             }
         }
         
-        public struct MoveParameter: Codable {
+        public struct MoveParameter: Parametable {
             public let type: String
             public let collisionRadius: Double
             public let directDamage: Int
@@ -100,7 +100,7 @@ public struct AngleShooter: GameParametable {
             }
         }
         
-        public struct WeaponParameter: Codable {
+        public struct WeaponParameter: Parametable {
             public let type: String
             public let inkConsume: Double
             public let inkRecoverStop: Int
@@ -112,7 +112,7 @@ public struct AngleShooter: GameParametable {
             }
         }
         
-        public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public struct SpawnBulletAdditionMovePlayerParameter: Parametable {
             public let type: String
             public let xRate: Double
             public let yPlusRate: Double

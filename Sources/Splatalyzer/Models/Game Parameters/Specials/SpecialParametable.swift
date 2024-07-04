@@ -8,7 +8,7 @@
 import Foundation
 
 /// Sets required methods for any Special Weapon
-public protocol SpecialParametable: Codable {
+public protocol SpecialParametable: Parametable {
     
     /// Isolates properties of the special weapon that can overwrite other properties
     /// - Returns: Overwrites for properties that exist

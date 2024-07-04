@@ -10,7 +10,7 @@ import Foundation
 /// Represents the AP provided by certain abilities, that provide AP from multiple other abilities.
 ///
 /// For example, the Drop Roller ability provides AP of Swim Speed Up, Run Speed Up, and Ink Resistance Up.
-public enum AbilitySpecialEffect: Equatable {
+public enum AbilitySpecialEffect: Equatable, Sendable {
     /// The effect provided by `Ability.dropRoller`
     case dropRoller
     
@@ -90,7 +90,7 @@ public enum AbilitySpecialEffect: Equatable {
 }
 
 /// Represents the amount of AP provided by an ``Ability`` and whether it exceeds the usual cap.
-public struct AbilityEffectValue {
+public struct AbilityEffectValue: Sendable {
     /// The ability providing the effect
     public let type: Ability
     

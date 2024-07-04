@@ -26,9 +26,9 @@ import SwiftUI
 /// However, every file is a different; the contents of `GameParameters` isn't constant file-to-file.
 ///
 /// This protocol is designed to support this structure.
-public protocol GameParametable: Decodable {
+public protocol GameParametable: Decodable, Sendable {
     /// A type that represents the game parameters and all of their properties.
-    associatedtype Parameters: Codable
+    associatedtype Parameters: Parametable
     
     /// The game parameters
     var parameters: Parameters { get }

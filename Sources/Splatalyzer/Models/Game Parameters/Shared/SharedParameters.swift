@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct AdditionalMoveParameter: Codable {
+public struct AdditionalMoveParameter: Parametable {
     public let xRate: Double
     public let yMax: Double
     public let yPlusRate: Double
@@ -21,7 +21,7 @@ public struct AdditionalMoveParameter: Codable {
     }
 }
 
-public struct DistanceDamage: Codable {
+public struct DistanceDamage: Parametable {
     public let damage: Int
     public let distance: Double
     
@@ -32,7 +32,7 @@ public struct DistanceDamage: Codable {
 }
 
 /// Represents a set of values that have an upperbound, lowerbound, and median value
-public struct HighMidLow: Codable, Equatable {
+public struct HighMidLow: Codable, Equatable, Sendable {
     public let high: Double?
     public let low: Double?
     public let mid: Double?
@@ -72,7 +72,7 @@ public struct HighMidLow: Codable, Equatable {
     }
 }
 
-public struct KnockbackParameter: Codable {
+public struct KnockbackParameter: Parametable {
     public let accel: Double
     public let bias: Double?
     public let degree: Double?
@@ -89,7 +89,7 @@ public struct KnockbackParameter: Codable {
 }
 
 
-public struct RateData: Codable {
+public struct RateData: Parametable {
     public let data: [Double]
     public let maxX: Double
     public let type: String
@@ -101,7 +101,7 @@ public struct RateData: Codable {
     }
 }
 
-public struct SplashAroundParameter: Codable {
+public struct SplashAroundParameter: Parametable {
     public let num: Int?
     public let offsetY: Double?
     public let paintRadius: Double
@@ -121,7 +121,7 @@ public struct SplashAroundParameter: Codable {
     }
 }
 
-public struct SubSpecialSpecUpList: Codable {
+public struct SubSpecialSpecUpList: Parametable {
     public let specUpType: String?
     public let value: HighMidLow
     
@@ -131,7 +131,7 @@ public struct SubSpecialSpecUpList: Codable {
     }
 }
 
-public struct XYData: Codable {
+public struct XYData: Parametable {
     public let x: Double
     public let y: Double
     
@@ -141,7 +141,7 @@ public struct XYData: Codable {
     }
 }
 
-public struct XYZData: Codable {
+public struct XYZData: Parametable {
     public let x: Double
     public let y: Double
     public let z: Double

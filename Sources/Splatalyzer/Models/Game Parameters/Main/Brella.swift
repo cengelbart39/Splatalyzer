@@ -20,7 +20,7 @@ public struct Brella: GameParametable {
         self.parameters = parameters
     }
     
-    public struct Parameters: Codable {
+    public struct Parameters: Parametable {
         public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
         public let mainWeaponSetting: MainWeaponSettings
         
@@ -45,7 +45,7 @@ public struct Brella: GameParametable {
 }
 
 extension Brella.Parameters {
-    public struct BulletCanopyParameter: Codable {
+    public struct BulletCanopyParameter: Parametable {
         public let type: String
         public let canopyAttackedDamageRate: Double?
         public let canopyColRadius: Double?
@@ -97,7 +97,7 @@ extension Brella.Parameters {
 }
 
 extension Brella.Parameters {
-    public struct BulletShotgunParameter: Codable {
+    public struct BulletShotgunParameter: Parametable {
         public let type: String
         public let damageEffectiveTotalMax: Int
         public let groupParams: [GroupParameter]
@@ -121,7 +121,7 @@ extension Brella.Parameters {
 }
 
 extension Brella.Parameters.BulletShotgunParameter {
-    public struct GroupParameter: Codable {
+    public struct GroupParameter: Parametable {
         public let addDegree: Double?
         public let collisionParam: CollisionParameter?
         public let damageParam: GroupDamageParameter
@@ -151,7 +151,7 @@ extension Brella.Parameters.BulletShotgunParameter {
         }
     }
     
-    public struct WallDropCollisionParameter: Codable {
+    public struct WallDropCollisionParameter: Parametable {
         public let paintRadiusShock: Double
         
         public enum CodingKeys: String, CodingKey {
@@ -159,7 +159,7 @@ extension Brella.Parameters.BulletShotgunParameter {
         }
     }
     
-    public struct WallDropMoveParameter: Codable {
+    public struct WallDropMoveParameter: Parametable {
         public let fallPeriodFirstFrameMax: Int
         public let fallPeriodFirstFrameMin: Int
         public let fallPeriodFirstTargetSpeed: Double
@@ -175,7 +175,7 @@ extension Brella.Parameters.BulletShotgunParameter {
         }
     }
     
-    public struct SplashParameter: Codable {
+    public struct SplashParameter: Parametable {
         public let createSplashLength: Double?
         public let createSplashNum: Int?
         public let splashPaintDepthScaleFullActive: Double
@@ -193,7 +193,7 @@ extension Brella.Parameters.BulletShotgunParameter {
         }
     }
     
-    public struct SplashWallDropCollisionParameter: Codable {
+    public struct SplashWallDropCollisionParameter: Parametable {
         public let paintRadiusFall: Double
         public let paintRadiusGround: Double
         public let paintRadiusShock: Double
@@ -205,7 +205,7 @@ extension Brella.Parameters.BulletShotgunParameter {
         }
     }
     
-    public struct SplashWallDropMoveParameter: Codable {
+    public struct SplashWallDropMoveParameter: Parametable {
         public let fallPeriodFirstFrameMax: Int
         public let fallPeriodFirstTargetSpeed: Double
         public let fallPeriodLastFrameMax: Int
@@ -225,7 +225,7 @@ extension Brella.Parameters.BulletShotgunParameter {
 }
 
 extension Brella.Parameters.BulletShotgunParameter.GroupParameter {
-    public struct CollisionParameter: Codable {
+    public struct CollisionParameter: Parametable {
         public let endRadiusForField: Double
         public let endRadiusForPlayer: Double
         public let initRadiusForField: Double
@@ -239,7 +239,7 @@ extension Brella.Parameters.BulletShotgunParameter.GroupParameter {
         }
     }
     
-    public struct GroupDamageParameter: Codable {
+    public struct GroupDamageParameter: Parametable {
         public let reduceEndFrame: Int?
         public let reduceStartFrame: Int?
         public let valueMax: Int
@@ -253,7 +253,7 @@ extension Brella.Parameters.BulletShotgunParameter.GroupParameter {
         }
     }
     
-    public struct GroupMoveParameter: Codable {
+    public struct GroupMoveParameter: Parametable {
         public let brakeGravity: Double?
         public let goStraightStateEndMaxSpeed: Double
         public let goStraightToBrakeStateFrame: Int
@@ -267,7 +267,7 @@ extension Brella.Parameters.BulletShotgunParameter.GroupParameter {
         }
     }
     
-    public struct GroupPaintParameter: Codable {
+    public struct GroupPaintParameter: Parametable {
         public let distanceNear: Double?
         public let widthHalfFar: Double?
         public let widthHalfMiddle: Double?
@@ -283,7 +283,7 @@ extension Brella.Parameters.BulletShotgunParameter.GroupParameter {
 }
 
 extension Brella.Parameters {
-    public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+    public struct SpawnBulletAdditionMovePlayerParameter: Parametable {
         public let type: String
         public let zRate: Double
         
@@ -295,7 +295,7 @@ extension Brella.Parameters {
 }
 
 extension Brella.Parameters {
-    public struct CanopyParameter: Codable {
+    public struct CanopyParameter: Parametable {
         public let type: String
         public let canopyChargeFrame: Int?
         public let canopyDirXZDiffDegH: Double?
@@ -337,7 +337,7 @@ extension Brella.Parameters {
 }
 
 extension Brella.Parameters {
-    public struct ShotgunParameter: Codable {
+    public struct ShotgunParameter: Parametable {
         public let type: String
         public let inkConsume: Double?
         public let inkRecoverStop: Int?

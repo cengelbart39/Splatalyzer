@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct BRBodyParameter: Codable {
+public struct BRBodyParameter: Parametable {
     public let type: String
     public let collisionParam: CollisionParameter
     public let damage: Int
@@ -24,7 +24,7 @@ public struct BRBodyParameter: Codable {
 }
 
 extension BRBodyParameter {
-    public struct CollisionParameter: Codable {
+    public struct CollisionParameter: Parametable {
         public let downRayCastLength: Double?
         public let knockBackDefeat: Bool?
         public let knockBackOpponent: BRKnockBack
@@ -42,7 +42,7 @@ extension BRBodyParameter {
         }
     }
     
-    public struct PaintParameter: Codable {
+    public struct PaintParameter: Parametable {
         public let depth: Double?
         public let speedMax: Double
         public let speedMin: Double?
@@ -60,7 +60,7 @@ extension BRBodyParameter {
         }
     }
     
-    public struct SideParameter: Codable {
+    public struct SideParameter: Parametable {
         public let checkLength: Double
         public let radius: Double
         

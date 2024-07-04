@@ -33,7 +33,7 @@ public struct InkMine: GameParametable {
             case weaponParam = "WeaponParam"
         }
         
-        public struct AreaParameter: Codable {
+        public struct AreaParameter: Parametable {
             public let type: String
             public let areaOffsetY: Double
             public let distance: HighMidLow
@@ -49,7 +49,7 @@ public struct InkMine: GameParametable {
             }
         }
         
-        public struct BlastParameter: Codable {
+        public struct BlastParameter: Parametable {
             public let type: String
             public let crossPaintCheckLength: Double
             public let crossPaintRadius: Double
@@ -75,7 +75,7 @@ public struct InkMine: GameParametable {
             }
         }
         
-        public struct MoveParameter: Codable {
+        public struct MoveParameter: Parametable {
             public let type: String
             public let guideRadius: Double
             public let maxPlaceNum: Int
@@ -93,7 +93,7 @@ public struct InkMine: GameParametable {
             }
         }
         
-        public struct WeaponParameter: Codable {
+        public struct WeaponParameter: Parametable {
             public let type: String
             public let inkConsume: Double
             public let inkRecoverStop: Int
@@ -106,7 +106,7 @@ public struct InkMine: GameParametable {
                 case knockBackParam = "KnockBackParam"
             }
             
-            public struct KnockBackParam: Codable {
+            public struct KnockBackParam: Parametable {
                 public let impactValue: Double
                 
                 public enum CodingKeys: String, CodingKey {

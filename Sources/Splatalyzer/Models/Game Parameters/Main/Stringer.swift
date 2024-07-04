@@ -20,7 +20,7 @@ public struct Stringer: GameParametable {
         self.parameters = parameters
     }
     
-    public struct Parameters: Codable {
+    public struct Parameters: Parametable {
         public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
         public let mainWeaponSetting: MainWeaponSettings
         
@@ -37,7 +37,7 @@ public struct Stringer: GameParametable {
 }
 
 extension Stringer.Parameters {
-    public struct BulletParameter: Codable {
+    public struct BulletParameter: Parametable {
         public let type: String
         public let collisionParam: CollisionParameter
         public let damageParam: DamageParameter
@@ -71,7 +71,7 @@ extension Stringer.Parameters {
 }
 
 extension Stringer.Parameters.BulletParameter {
-    public struct CollisionParameter: Codable {
+    public struct CollisionParameter: Parametable {
         public let changeFrameForField: Int?
         public let changeFrameForPlayer: Int?
         public let endRadiusForField: Double?
@@ -91,7 +91,7 @@ extension Stringer.Parameters.BulletParameter {
         }
     }
     
-    public struct DamageParameter: Codable {
+    public struct DamageParameter: Parametable {
         public let directHitDamageMax: Int
         public let directHitDamageMid: Int
         public let directHitDamageMin: Int
@@ -103,7 +103,7 @@ extension Stringer.Parameters.BulletParameter {
         }
     }
     
-    public struct DetonationParameter: Codable {
+    public struct DetonationParameter: Parametable {
         public let blastParam: BlastParameter
         public let detonationFrame: Int
         public let isExplosiveBoltMidCharge: Bool
@@ -117,7 +117,7 @@ extension Stringer.Parameters.BulletParameter {
         }
     }
     
-    public struct DrawParameter: Codable {
+    public struct DrawParameter: Parametable {
         public let attInterpRate: Double?
         public let capsuleLength: Double
         public let capsuleRadius: Double
@@ -133,7 +133,7 @@ extension Stringer.Parameters.BulletParameter {
         }
     }
     
-    public struct Effect1stParameter: Codable {
+    public struct Effect1stParameter: Parametable {
         public let delayFrame: Int
         public let maxLength: Double
         
@@ -143,7 +143,7 @@ extension Stringer.Parameters.BulletParameter {
         }
     }
     
-    public struct Effect2ndParameter: Codable {
+    public struct Effect2ndParameter: Parametable {
         public let landArrowMinAngle: Int?
         public let landArrowRiseFrame: Int?
         public let smokeInterval: Double
@@ -157,7 +157,7 @@ extension Stringer.Parameters.BulletParameter {
         }
     }
     
-    public struct MoveParameter: Codable {
+    public struct MoveParameter: Parametable {
         public let brakeAirResist: Double
         public let brakeGravity: Double
         public let brakeToFreeStateFrame: Int
@@ -191,7 +191,7 @@ extension Stringer.Parameters.BulletParameter {
         }
     }
     
-    public struct PaintParameter: Codable {
+    public struct PaintParameter: Parametable {
         public let depthScaleMax: Double?
         public let depthScaleMin: Double?
         public let paintDegreeMax: Double?
@@ -211,7 +211,7 @@ extension Stringer.Parameters.BulletParameter {
         }
     }
     
-    public struct SplashPaintParameter: Codable {
+    public struct SplashPaintParameter: Parametable {
         public let depthMaxDropHeight: Double?
         public let depthMinDropHeight: Double?
         public let depthScaleMax: Double
@@ -229,7 +229,7 @@ extension Stringer.Parameters.BulletParameter {
         }
     }
     
-    public struct SplashSpawnParameter: Codable {
+    public struct SplashSpawnParameter: Parametable {
         public let dropInterval: Double
         public let nearestLen: Double?
         public let randomSpawnVelXMax: Double?
@@ -251,7 +251,7 @@ extension Stringer.Parameters.BulletParameter {
         }
     }
     
-    public struct WallDropMoveParameter: Codable {
+    public struct WallDropMoveParameter: Parametable {
         public let fallPeriodFirstFrameMax: Int
         public let fallPeriodFirstFrameMin: Int
         public let fallPeriodFirstTargetSpeed: Double?
@@ -273,7 +273,7 @@ extension Stringer.Parameters.BulletParameter {
         }
     }
     
-    public struct WallDropPaintParameter: Codable {
+    public struct WallDropPaintParameter: Parametable {
         public let fallPeriodFirstSecondTargetAlp: Double
         public let paintRadiusFall: Double
         public let paintRadiusGround: Double
@@ -289,7 +289,7 @@ extension Stringer.Parameters.BulletParameter {
 }
 
 extension Stringer.Parameters.BulletParameter.DetonationParameter {
-    public struct BlastParameter: Codable {
+    public struct BlastParameter: Parametable {
         public let collisionRadiusForPaint: Double?
         public let crossPaintCheckLength: Double?
         public let crossPaintRadius: Double?
@@ -333,7 +333,7 @@ extension Stringer.Parameters.BulletParameter.DetonationParameter {
 }
 
 extension Stringer.Parameters {
-    public struct WeaponParameter: Codable {
+    public struct WeaponParameter: Parametable {
         public let type: String
         public let chargeKeepParameter: ChargeKeepParameter
         public let chargeParameter: ChargeParameter
@@ -355,7 +355,7 @@ extension Stringer.Parameters {
 }
 
 extension Stringer.Parameters.WeaponParameter {
-    public struct ChargeKeepParameter: Codable {
+    public struct ChargeKeepParameter: Parametable {
         public let enableKeepChargeAnytime: Bool?
         public let enableKeepChargeTransCancel: Bool?
         public let keepChargeFullFrame: Int
@@ -373,7 +373,7 @@ extension Stringer.Parameters.WeaponParameter {
         }
     }
     
-    public struct ChargeParameter: Codable {
+    public struct ChargeParameter: Parametable {
         public let airChargeRateByInkEmpty: Int
         public let chargeFrameFullCharge: Int
         public let chargeFrameMidCharge: Int
@@ -415,7 +415,7 @@ extension Stringer.Parameters.WeaponParameter {
         }
     }
     
-    public struct PlayerParameter: Codable {
+    public struct PlayerParameter: Parametable {
         public let bowTiltDegRcvInterpRate: Double
         
         public enum CodingKeys: String, CodingKey {
@@ -423,7 +423,7 @@ extension Stringer.Parameters.WeaponParameter {
         }
     }
     
-    public struct ShotGuideParameter: Codable {
+    public struct ShotGuideParameter: Parametable {
         public let delayFrameShowShotGuide: Int?
         public let guideDrawFrameDefilade: Int?
         public let guideDrawFrameFirst: Int
@@ -449,7 +449,7 @@ extension Stringer.Parameters.WeaponParameter {
         }
     }
     
-    public struct ShotParameter: Codable {
+    public struct ShotParameter: Parametable {
         public let arrowAngleMax: Double
         public let arrowAngleMid: Double?
         public let arrowAngleMin: Double?
@@ -497,7 +497,7 @@ extension Stringer.Parameters.WeaponParameter {
 }
 
 extension Stringer.Parameters.WeaponParameter.ShotParameter {
-    public struct DiffusionArrowParameter: Codable {
+    public struct DiffusionArrowParameter: Parametable {
         public let shotAddDegH: Double
         public let shotAddDegV: Double
         public let spawnSpeedMax: Double

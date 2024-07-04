@@ -20,7 +20,7 @@ public struct Splatana: GameParametable {
         self.parameters = parameters
     }
     
-    public struct Parameters: Codable {
+    public struct Parameters: Parametable {
         public let bulletSaberHorizontalParam: BulletParameter
         public let bulletSaberSlashHorizontalParam: BulletSlashParameter
         
@@ -45,7 +45,7 @@ public struct Splatana: GameParametable {
 }
 
 extension Splatana.Parameters {
-    public struct BulletParameter: Codable {
+    public struct BulletParameter: Parametable {
         public let type: String
         public let burstParam: BurstParameter
         public let collisionParam: CollisionParameter
@@ -71,7 +71,7 @@ extension Splatana.Parameters {
 }
 
 extension Splatana.Parameters.BulletParameter {
-    public struct BurstParameter: Codable {
+    public struct BurstParameter: Parametable {
         public let burstFrame: Int
         public let isEmitSplash: Bool?
         public let splashColRadius: Double?
@@ -87,7 +87,7 @@ extension Splatana.Parameters.BulletParameter {
         }
     }
     
-    public struct CollisionParameter: Codable {
+    public struct CollisionParameter: Parametable {
         public let coreIndex: Int
         public let offsetArray: [XYZData]
         public let paramArray: [ParameterItem]
@@ -99,7 +99,7 @@ extension Splatana.Parameters.BulletParameter {
         }
     }
     
-    public struct DamageParameter: Codable {
+    public struct DamageParameter: Parametable {
         public let hasGuard: Bool?
         public let hitDamage: Int
         
@@ -109,7 +109,7 @@ extension Splatana.Parameters.BulletParameter {
         }
     }
     
-    public struct MoveParameter: Codable {
+    public struct MoveParameter: Parametable {
         public let brakeAirResist: Double?
         public let brakeGravity: Double
         public let brakeToFreeStartFrame: Int?
@@ -135,7 +135,7 @@ extension Splatana.Parameters.BulletParameter {
         }
     }
     
-    public struct PaintParameter: Codable {
+    public struct PaintParameter: Parametable {
         public let castPaintDistance: Double?
         public let depthScaleMax: Double?
         public let depthScaleMin: Double?
@@ -151,7 +151,7 @@ extension Splatana.Parameters.BulletParameter {
         }
     }
     
-    public struct SplashPaintParameter: Codable {
+    public struct SplashPaintParameter: Parametable {
         public let depthScaleMax: Double?
         public let depthScaleMin: Double?
         public let widthHalf: Double
@@ -165,7 +165,7 @@ extension Splatana.Parameters.BulletParameter {
         }
     }
     
-    public struct SplashSpawnParameter: Codable {
+    public struct SplashSpawnParameter: Parametable {
         public let dropInterval: Double
         public let nearestLen: Double?
         public let splashNumMax: Int
@@ -179,7 +179,7 @@ extension Splatana.Parameters.BulletParameter {
         }
     }
     
-    public struct WallDropPaintParameter: Codable {
+    public struct WallDropPaintParameter: Parametable {
         public let paintRadiusShock: Double
         
         public enum CodingKeys: String, CodingKey {
@@ -189,7 +189,7 @@ extension Splatana.Parameters.BulletParameter {
 }
 
 extension Splatana.Parameters.BulletParameter.CollisionParameter {
-    public struct ParameterItem: Codable {
+    public struct ParameterItem: Parametable {
         public let chargeFrameForField: Int?
         public let chargeFrameForPlayer: Int?
         public let endRadiusForField: Double
@@ -211,7 +211,7 @@ extension Splatana.Parameters.BulletParameter.CollisionParameter {
 }
 
 extension Splatana.Parameters {
-    public struct BulletSlashParameter: Codable {
+    public struct BulletSlashParameter: Parametable {
         public let type: String
         public let damageParam: DamageParameter
         public let moveParam: MoveParameter
@@ -227,7 +227,7 @@ extension Splatana.Parameters {
 }
 
 extension Splatana.Parameters.BulletSlashParameter {
-    public struct DamageParameter: Codable {
+    public struct DamageParameter: Parametable {
         public let accelForCastle: Double?
         public let damageValue: Int
         public let isPenetrate: Bool?
@@ -239,7 +239,7 @@ extension Splatana.Parameters.BulletSlashParameter {
         }
     }
     
-    public struct MoveParameter: Codable {
+    public struct MoveParameter: Parametable {
         public let aliveFrame: Int
         
         public enum CodingKeys: String, CodingKey {
@@ -247,7 +247,7 @@ extension Splatana.Parameters.BulletSlashParameter {
         }
     }
     
-    public struct ShapeParameter: Codable {
+    public struct ShapeParameter: Parametable {
         public let boxCenter: XYZData
         public let boxHalfExtents: XYZData
         public let cylinderCenterA: XYZData?
@@ -267,7 +267,7 @@ extension Splatana.Parameters.BulletSlashParameter {
 }
 
 extension Splatana.Parameters {
-    public struct WeaponParameter: Codable {
+    public struct WeaponParameter: Parametable {
         public let type: String
         public let chargeKeepParam: ChargeKeepParameter?
         public let chargeParam: ChargeParameter
@@ -289,7 +289,7 @@ extension Splatana.Parameters {
 }
 
 extension Splatana.Parameters.WeaponParameter {
-    public struct ChargeKeepParameter: Codable {
+    public struct ChargeKeepParameter: Parametable {
         public let keepChargePreDelayFrame: Int
         
         public enum CodingKeys: String, CodingKey {
@@ -297,7 +297,7 @@ extension Splatana.Parameters.WeaponParameter {
         }
     }
     
-    public struct ChargeParameter: Codable {
+    public struct ChargeParameter: Parametable {
         public let airChargeRateByInkEmpty: Int?
         public let chargeFrameFullCharge: Int
         public let chargeFrameMinCharge: Int
@@ -317,7 +317,7 @@ extension Splatana.Parameters.WeaponParameter {
         }
     }
     
-    public struct FootSplashPaintParameter: Codable {
+    public struct FootSplashPaintParameter: Parametable {
         public let depthMaxDropHeight: Double?
         public let depthMinDropHeight: Double?
         public let depthScaleMax: Double
@@ -335,7 +335,7 @@ extension Splatana.Parameters.WeaponParameter {
         }
     }
     
-    public struct ShotGuideParameter: Codable {
+    public struct ShotGuideParameter: Parametable {
         public let horizontalSightFrame: Int
         public let horizontalSphereIndex: Int
         public let verticalSightFrame: Int
@@ -349,7 +349,7 @@ extension Splatana.Parameters.WeaponParameter {
         }
     }
     
-    public struct SwingParameter: Codable {
+    public struct SwingParameter: Parametable {
         public let chargeMoveVelLimit: Double
         public let chargeSwingASFrame: Int?
         public let chargeSwingFrame: Int
@@ -415,7 +415,7 @@ extension Splatana.Parameters.WeaponParameter {
 }
 
 extension Splatana.Parameters.WeaponParameter.SwingParameter {
-    public struct SideStepParameter: Codable {
+    public struct SideStepParameter: Parametable {
         public let chargeFrame: Int
         public let inkConsume: Double?
         public let inkRecoverStop: Int?

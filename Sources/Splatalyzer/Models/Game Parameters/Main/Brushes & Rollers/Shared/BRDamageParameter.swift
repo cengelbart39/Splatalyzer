@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct BRDamageParameter: Codable {
+public struct BRDamageParameter: Parametable {
     public let damageRejectEndFrame: Int
     public let damageRejectState: Double
     public let damageRejectStartFrame: Int
@@ -24,7 +24,7 @@ public struct BRDamageParameter: Codable {
 }
 
 extension BRDamageParameter {
-    public struct Damage: Codable {
+    public struct Damage: Parametable {
         public let damageHighDistance: Double
         public let damageHighValue: Int
         public let damageLowDistance: Double

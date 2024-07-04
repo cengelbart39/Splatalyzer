@@ -33,7 +33,7 @@ public struct PointSensor: GameParametable {
             case spawnBulletAdditionMovePlayerParam = "spl__SpawnBulletAdditionMovePlayerParam"
         }
         
-        public struct AreaParameter: Codable {
+        public struct AreaParameter: Parametable {
             public let type: String
             public let distance: HighMidLow
             public let markingFrameSubSpec: HighMidLow
@@ -45,7 +45,7 @@ public struct PointSensor: GameParametable {
             }
         }
         
-        public struct MoveParameter: Codable {
+        public struct MoveParameter: Parametable {
             public let type: String
             public let guideHitCollisionType: String
             public let markingFrameSubSpec: HighMidLow
@@ -63,7 +63,7 @@ public struct PointSensor: GameParametable {
             }
         }
         
-        public struct WeaponParameter: Codable {
+        public struct WeaponParameter: Parametable {
             public let type: String
             public let inkConsume: Double
             public let inkRecoverStop: Int
@@ -75,7 +75,7 @@ public struct PointSensor: GameParametable {
             }
         }
         
-        public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+        public struct SpawnBulletAdditionMovePlayerParameter: Parametable {
             public let type: String
             public let xRate: Double
             public let yMax: Double

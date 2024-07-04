@@ -20,7 +20,7 @@ public struct Shooter: GameParametable {
         self.parameters = parameters
     }
     
-    public struct Parameters: Codable {
+    public struct Parameters: Parametable {
         public let collisionParam: CollisionParameter
         public let damageParam: DamageParameter
         
@@ -73,7 +73,7 @@ public struct Shooter: GameParametable {
 }
 
 extension Shooter.Parameters {
-    public struct CollisionParameter: Codable {
+    public struct CollisionParameter: Parametable {
         public let type: String
         public let changeFrameForField: Int?
         public let endRadiusForField: Double?
@@ -93,7 +93,7 @@ extension Shooter.Parameters {
         }
     }
     
-    public struct DamageParameter: Codable {
+    public struct DamageParameter: Parametable {
         public let type: String
         public let reduceEndFrame: Int
         public let reduceStartFrame: Int
@@ -109,7 +109,7 @@ extension Shooter.Parameters {
         }
     }
     
-    public struct MoveParameter: Codable {
+    public struct MoveParameter: Parametable {
         public let type: String
         public let freeAirResist: Double?
         public let freeGravity: Double?
@@ -127,7 +127,7 @@ extension Shooter.Parameters {
         }
     }
     
-    public struct PaintParameter: Codable {
+    public struct PaintParameter: Parametable {
         public let type: String
         public let depthScaleMax: Double
         public let depthScaleMaxBreakFree: Double
@@ -159,7 +159,7 @@ extension Shooter.Parameters {
         }
     }
     
-    public struct SplashPaintParameter: Codable {
+    public struct SplashPaintParameter: Parametable {
         public let type: String
         public let depthMaxDropHeight: Double?
         public let depthMinDropHeight: Double?
@@ -175,7 +175,7 @@ extension Shooter.Parameters {
         }
     }
     
-    public struct SplashSpawnParameter: Codable {
+    public struct SplashSpawnParameter: Parametable {
         public let type: String
         public let forceSpawnNearestAddNumArray: [Int]?
         public let randomSpawnVelXMax: Double?
@@ -195,7 +195,7 @@ extension Shooter.Parameters {
         }
     }
     
-    public struct WallDropCollisionPaintParameter: Codable {
+    public struct WallDropCollisionPaintParameter: Parametable {
         public let type: String
         public let paintRadiusFall: Double
         public let paintRadiusGround: Double
@@ -209,7 +209,7 @@ extension Shooter.Parameters {
         }
     }
     
-    public struct WallDropMoveParameter: Codable {
+    public struct WallDropMoveParameter: Parametable {
         public let type: String
         public let fallPeriodFirstFrameMax: Int
         public let fallPeriodFirstFrameMin: Int
@@ -233,7 +233,7 @@ extension Shooter.Parameters {
         }
     }
     
-    public struct WeaponParameter: Codable {
+    public struct WeaponParameter: Parametable {
         public let type: String
         public let burstAimMoveFrame: Int?
         public let inkConsume: Double
@@ -279,7 +279,7 @@ extension Shooter.Parameters {
         }
     }
     
-    public struct ActionSpecUpParameter: Codable {
+    public struct ActionSpecUpParameter: Parametable {
         public let type: String
         
         public enum CodingKeys: String, CodingKey {
@@ -287,7 +287,7 @@ extension Shooter.Parameters {
         }
     }
     
-    public struct SpawnBulletAdditionMovePlayerParameter: Codable {
+    public struct SpawnBulletAdditionMovePlayerParameter: Parametable {
         public let type: String
         public let zRate: Double
         
