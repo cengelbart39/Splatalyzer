@@ -7,4 +7,5 @@
 
 import Foundation
 
+/// A protocol that forces conformance to `Codable` and `Sendable`
 public protocol Parametable: Codable, Sendable { }

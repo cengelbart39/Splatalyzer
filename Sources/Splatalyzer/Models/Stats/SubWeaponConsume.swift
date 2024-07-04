@@ -18,7 +18,7 @@ public struct SubWeaponConsume: Sendable {
     /// Initializes and calculates an instance
     /// - Parameters:
     ///   - ap: The AP of the user's gear build
-    ///   - SmainInfo: Information about the main weapon
+    ///   - mainInfo: Information about the main weapon
     ///   - subInfo: Information about the sub weapon
     public init(
         _ ap: AbilityPoints,

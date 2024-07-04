@@ -10,11 +10,7 @@ public final class Splatalyzer {
     public init() { }
     
     /// Analyzes the main weapon and gear build to produce build statistics.
-    /// - Parameters:
-    ///   - mainWeapon: The current main weapon
-    ///   - gearBuild: The current gear build
-    ///   - ldeIntensity: The current LDE intensity
-    ///   - usingTacticooler: Whether to consider Tacticooler effects in statistics
+    /// - Parameter build: Information about the current build: main weapon, gear, LDE intensity, and whether to consider Tacticooler effects
     /// - Throws: Can throw ``SplatalyzerError`` or ``JSONError``
     public func analyze(_ build: BuildOptions) throws -> BuildStats {
         guard build.isGearValid() else {

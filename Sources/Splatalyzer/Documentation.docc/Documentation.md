@@ -100,6 +100,7 @@ Learn more about how the package decodes and proccesses data.
 ### Weapon Models
 - ``GameParametable``
 - ``GPCodingKeys``
+- ``Parametable``
 - ``Overwritable``
 - ``WeaponSpeedType``
 
