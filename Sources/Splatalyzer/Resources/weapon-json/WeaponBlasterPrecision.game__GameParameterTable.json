@@ -240,7 +240,7 @@
       "PostDelayFrame_Blaster": 23,
       "PreDelayFrame_HumanShot": 10,
       "PreDelayFrame_SquidShot": 15,
-      "RepeatFrame": 60,
+      "RepeatFrame": 55,
       "ShotGuideFrame": 11,
       "SquidShotShorteningFrame": 0,
       "Stand_DegBiasDecrease": 0.0,

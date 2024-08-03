@@ -9,7 +9,7 @@
         },
         {
           "Damage": 700,
-          "Distance": 13.5
+          "Distance": 14.9
         }
       ],
       "KnockBackParam": {
@@ -39,9 +39,9 @@
         {
           "SpecUpType": "PaintRadius",
           "Value": {
-            "High": 10.2,
-            "Low": 8.5,
-            "Mid": 9.35
+            "High": 9.69,
+            "Low": 8.075,
+            "Mid": 8.882
           }
         },
         {

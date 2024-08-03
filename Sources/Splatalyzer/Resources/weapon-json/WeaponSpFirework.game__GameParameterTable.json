@@ -63,7 +63,7 @@
           }
         ]
       },
-      "BurstFrame": 240,
+      "BurstFrame": 210,
       "CollisionRadius": 0.8,
       "FlyingFrame": 108,
       "GroundOffsetY": 0.9,

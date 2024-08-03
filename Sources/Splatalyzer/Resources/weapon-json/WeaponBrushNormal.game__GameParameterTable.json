@@ -112,7 +112,7 @@
               "ChangeFrameForPlayer": 5,
               "DepletionRate": 0.5,
               "EndRadiusForField": 0.8,
-              "EndRadiusForPlayer": 1.2,
+              "EndRadiusForPlayer": 1.3,
               "FriendThroughFrameForPlayer": 3,
               "InitRadiusForField": 0.1,
               "InitRadiusForPlayer": 0.1
@@ -174,7 +174,7 @@
               "ChangeFrameForPlayer": 4,
               "DepletionRate": 0.5,
               "EndRadiusForField": 0.6,
-              "EndRadiusForPlayer": 0.8,
+              "EndRadiusForPlayer": 0.9,
               "FriendThroughFrameForPlayer": 3,
               "InitRadiusForField": 0.1,
               "InitRadiusForPlayer": 0.1

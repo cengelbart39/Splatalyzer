@@ -318,6 +318,8 @@
         "WidthHalfNearest": 2.0
       },
       "ShotGuideParam": {
+        "ChargeStepSwingShotGuideFrame": 21,
+        "ChargeSwingShotGuideFrame": 9,
         "HorizontalSightFrame": 6,
         "HorizontalSphereIndex": 2,
         "VerticalSightFrame": 26,

@@ -368,6 +368,8 @@
       },
       "IsEnableChargeKeep": false,
       "ShotGuideParam": {
+        "ChargeStepSwingShotGuideFrame": 40,
+        "ChargeSwingShotGuideFrame": 26,
         "HorizontalSightFrame": 6,
         "HorizontalSphereIndex": 3,
         "VerticalSightFrame": 21,

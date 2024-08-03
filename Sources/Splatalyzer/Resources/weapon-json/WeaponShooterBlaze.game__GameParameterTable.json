@@ -39,9 +39,9 @@
       "DistanceFar": 15.0,
       "DistanceMiddle": 4.2,
       "DistanceNear": 2.1,
-      "WidthHalfFar": 1.99,
-      "WidthHalfMiddle": 2.08,
-      "WidthHalfNear": 2.24
+      "WidthHalfFar": 2.051,
+      "WidthHalfMiddle": 2.145,
+      "WidthHalfNear": 2.31
     },
     "SplashPaintParam": {
       "$type": "spl__BulletSplashShooterPaintParam",

@@ -160,7 +160,7 @@
       "Jump_DegBiasEndFrame": 70,
       "Jump_DegBiasMax": 0.5,
       "Jump_DegSwerve": 8.0,
-      "MoveSpeed": 0.065,
+      "MoveSpeed": 0.068,
       "PostDelayFrame": 4,
       "PostDelayFrame_Blaster": 20,
       "PreDelayFrame_HumanShot": 8,

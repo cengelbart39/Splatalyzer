@@ -2,6 +2,8 @@
   "GameParameters": {
     "ExhaleBlastParamMaxCharge": {
       "$type": "spl__BulletBlastParam",
+      "CrossPaintCheckLength": 6.0,
+      "CrossPaintRadius": 9.0,
       "DamageOffsetY": 0.5,
       "DistanceDamage": [
         {
@@ -19,6 +21,8 @@
     },
     "ExhaleBlastParamMinCharge": {
       "$type": "spl__BulletBlastParam",
+      "CrossPaintCheckLength": 6.0,
+      "CrossPaintRadius": 5.5,
       "DamageOffsetY": 0.5,
       "DistanceDamage": [
         {

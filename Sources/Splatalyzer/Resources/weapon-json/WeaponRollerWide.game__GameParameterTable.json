@@ -353,10 +353,10 @@
           "DamageMaxDistance": 4.2,
           "DamageMaxValue": 700,
           "DamageMinDistance": 8.2,
-          "DamageMinValue": 350,
+          "DamageMinValue": 400,
           "Degree": 12.0,
           "DepletionDamageRate": 0.25,
-          "FinalDamageMinValue": 350,
+          "FinalDamageMinValue": 400,
           "InsideDistanceXZ": 1.2
         },
         "Outside": {
@@ -367,11 +367,11 @@
           "DamageMaxDistance": 2.0,
           "DamageMaxValue": 700,
           "DamageMinDistance": 7.7,
-          "DamageMinValue": 350,
+          "DamageMinValue": 400,
           "DamageRate": 1.0,
           "Degree": 25.0,
           "DepletionDamageRate": 0.25,
-          "FinalDamageMinValue": 350
+          "FinalDamageMinValue": 400
         }
       },
       "SplashNearestParam": {

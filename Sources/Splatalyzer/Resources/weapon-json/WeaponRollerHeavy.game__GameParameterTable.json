@@ -404,7 +404,7 @@
           "SpawnPositionRandomCube": 0.1,
           "SpawnPositionWidth": 0.8,
           "SpawnSpeedBase": 1.2,
-          "SpawnSpeedRandom": 0.52,
+          "SpawnSpeedRandom": 0.4,
           "SpawnWideDegree": 18.0,
           "SwerveRateBySpeed": 0.05,
           "UnitParam": {

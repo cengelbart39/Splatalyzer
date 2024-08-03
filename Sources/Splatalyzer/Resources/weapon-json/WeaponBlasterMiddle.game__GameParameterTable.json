@@ -145,7 +145,7 @@
     "WeaponParam": {
       "$type": "spl__WeaponShooterParam",
       "InkConsume": 0.1,
-      "InkRecoverStop": 60,
+      "InkRecoverStop": 57,
       "Jump_DegBiasDecreaseStartFrame": 25,
       "Jump_DegBiasEndFrame": 70,
       "Jump_DegBiasMax": 0.5,
