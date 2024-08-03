@@ -6,7 +6,6 @@
     },
     "(specialWeapon.localized) Damage" : {
       "comment" : "Refers to the damage done by the Special Weapon.",
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

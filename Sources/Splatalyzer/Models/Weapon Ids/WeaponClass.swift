@@ -61,4 +61,31 @@ public enum WeaponClass: String, CaseIterable, Sendable {
     public var localized: String {
         return NSLocalizedString(self.rawValue, tableName: "WeaponClass",  bundle: Bundle.module, comment: "")
     }
+    
+    public var symbolName: String {
+        switch self {
+        case .blaster:
+            return "weapon.class.blaster"
+        case .brush:
+            return "weapon.class.brush"
+        case .charger:
+            return "weapon.class.charger"
+        case .dualie:
+            return "weapon.class.dualies"
+        case .roller:
+            return "weapon.class.roller"
+        case .splatana:
+            return "weapon.class.splatana"
+        case .brella:
+            return "weapon.class.brella"
+        case .shooter:
+            return "weapon.class.shooter"
+        case .slosher:
+            return "weapon.class.slosher"
+        case .splatling:
+            return "weapon.class.splatling"
+        case .stringer:
+            return "weapon.class.stringer"
+        }
+    }
 }

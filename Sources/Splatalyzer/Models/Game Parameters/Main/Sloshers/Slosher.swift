@@ -20,10 +20,10 @@ public struct Slosher: GameParametable {
         self.parameters = parameters
     }
     
-    public struct Parameters: Parametable {
+    public struct Parameters: MainParametable {
         public let blastParam: BlastParameter?
         public let bounceGroupParam: BounceGroupParameter?
-        public let mainEffectiveRangeUp: MainEffectiveRangeUpParameter
+        public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter?
         public let mainWeaponSetting: MainWeaponSettings
         public let nearestParam: NearestParameter
         public let splashSlosherScatterParam: SplashScatterParameter?
@@ -35,7 +35,7 @@ public struct Slosher: GameParametable {
         public enum CodingKeys: String, CodingKey {
             case blastParam = "BlastParam"
             case bounceGroupParam = "BounceGroupParam"
-            case mainEffectiveRangeUp = "MainEffectiveRangeUpParam"
+            case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
             case mainWeaponSetting = "MainWeaponSetting"
             case nearestParam = "NearestParam"
             case splashSlosherScatterParam = "SplashSlosherScatterParam"

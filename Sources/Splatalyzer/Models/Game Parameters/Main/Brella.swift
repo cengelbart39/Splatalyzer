@@ -20,8 +20,8 @@ public struct Brella: GameParametable {
         self.parameters = parameters
     }
     
-    public struct Parameters: Parametable {
-        public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
+    public struct Parameters: MainParametable {
+        public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter?
         public let mainWeaponSetting: MainWeaponSettings
         
         public let bulletShelterCanopyParam: BulletCanopyParameter

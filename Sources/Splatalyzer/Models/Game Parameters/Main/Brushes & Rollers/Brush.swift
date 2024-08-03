@@ -20,11 +20,11 @@ public struct Brush: GameParametable {
         self.parameters = parameters
     }
     
-    public struct Parameters: Parametable {
+    public struct Parameters: MainParametable {
         public let bodyParam: BRBodyParameter
         public let bulletAdditionMovePlayerSplashNearestParam: BRBulletAdditionMovePlayerSplashNearestParameter
-        public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
-        public let mainWepaonSetting: MainWeaponSettings
+        public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter?
+        public let mainWeaponSetting: MainWeaponSettings
         public let swingUnitGroupParam: SwingUnitGroupParameter
         public let weaponRollParam: BRWeaponRollParameter
         public let weaponSwingParam: BRWeaponSwingParameter
@@ -34,7 +34,7 @@ public struct Brush: GameParametable {
             case bodyParam = "BodyParam"
             case bulletAdditionMovePlayerSplashNearestParam = "BulletAdditionMovePlayerSplashNearestParam"
             case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
-            case mainWepaonSetting = "MainWeaponSetting"
+            case mainWeaponSetting = "MainWeaponSetting"
             case swingUnitGroupParam = "SwingUnitGroupParam"
             case weaponRollParam = "WeaponRollParam"
             case weaponSwingParam = "WeaponSwingParam"

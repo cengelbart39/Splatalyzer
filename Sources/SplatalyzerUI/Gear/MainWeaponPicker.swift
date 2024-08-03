@@ -45,13 +45,14 @@ public struct MainWeaponPicker: View {
                         Text(type.localized)
                         
                     }, icon: {
-                        ImageView(image: type.image)
+                        Image(type.symbolName, bundle: .module)
+                            .accessibilityHidden(true)
+                            .symbolRenderingMode(.multicolor)
                     })
                 }
                 .pickerStyle(.menu)
             }
         } label : {
-//            Text(mainWeapon.localized)
             Label(
                 title: { Text(mainWeapon.localized) },
                 icon: {

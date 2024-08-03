@@ -20,10 +20,10 @@ public struct Charger: GameParametable {
         self.parameters = parameters
     }
     
-    public struct Parameters: Parametable {
+    public struct Parameters: MainParametable {
         public let collisionParam: CollisionParameter
         public let damageParam: DamageParameter
-        public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
+        public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter?
         public let mainWeaponSetting: MainWeaponSettings
         public let moveParam: MoveParameter
         public let paintParam: PaintParameter

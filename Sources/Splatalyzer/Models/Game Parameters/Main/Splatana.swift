@@ -20,7 +20,7 @@ public struct Splatana: GameParametable {
         self.parameters = parameters
     }
     
-    public struct Parameters: Parametable {
+    public struct Parameters: MainParametable {
         public let bulletSaberHorizontalParam: BulletParameter
         public let bulletSaberSlashHorizontalParam: BulletSlashParameter
         

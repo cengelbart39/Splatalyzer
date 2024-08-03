@@ -20,7 +20,7 @@ public struct Blaster: GameParametable {
         self.parameters = parameters
     }
     
-    public struct Parameters: Parametable {
+    public struct Parameters: MainParametable {
         public let blastJumpParam: BlastParameter?
         public let blastParam: BlastParameter
         

@@ -20,13 +20,13 @@ public struct Roller: GameParametable {
         self.parameters = parameters
     }
     
-    public struct Parameters: Parametable {
+    public struct Parameters: MainParametable {
         public let bodyParam: BRBodyParameter
         public let bulletAdditionMovePlayerSpalashNearestParam: BRBulletAdditionMovePlayerSplashNearestParameter
         
         public let knockBackByCanopyParam: KnockBackByCanopyParameter?
         
-        public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter
+        public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter?
         public let mainWeaponSetting: MainWeaponSettings
         
         public let verticalSwingUnitGroupParam: VerticalSwingUnitGroupParameter

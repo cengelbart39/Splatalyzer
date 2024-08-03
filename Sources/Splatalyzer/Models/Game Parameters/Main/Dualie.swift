@@ -20,7 +20,7 @@ public struct Dualie: GameParametable {
         self.parameters = parameters
     }
     
-    public struct Parameters: Parametable {
+    public struct Parameters: MainParametable {
         public let collisionLapOverParam: CollisionParameter?
         public let collisionParam: CollisionParameter?
         
@@ -28,7 +28,7 @@ public struct Dualie: GameParametable {
         public let damageParam: DamageParameter
         
         public let mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter?
-        public let mainWeaponSetting: MainWeaponSettings?
+        public let mainWeaponSetting: MainWeaponSettings
         
         public let moveLapOverParam: MoveParameter?
         public let moveParam: MoveParameter

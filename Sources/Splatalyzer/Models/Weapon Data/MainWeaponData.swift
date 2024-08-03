@@ -173,7 +173,7 @@ public struct MainWeaponData: WeaponDatable {
         self.specialWeapon = weaponInfo.specialWeapon.toSpecialWeapon()!
         self.overwrites = MainOverwrites()
         self.tripleShotSpanFrame = nil
-        self.weaponSpeedType = gameParams.mainWepaonSetting.weaponSpeedType
+        self.weaponSpeedType = gameParams.mainWeaponSetting.weaponSpeedType
         self.moveSpeed = nil
         self.moveSpeedCharge = nil
         self.moveSpeedFullCharge = nil
@@ -321,9 +321,9 @@ public struct MainWeaponData: WeaponDatable {
         self.specialPoints = weaponInfo.specialPoint
         self.subWeapon = weaponInfo.subWeapon.toSubWeapon()!
         self.specialWeapon = weaponInfo.specialWeapon.toSpecialWeapon()!
-        self.overwrites = gameParams.mainWeaponSetting?.getOverwrites() ?? MainOverwrites()
+        self.overwrites = gameParams.mainWeaponSetting.getOverwrites()
         self.tripleShotSpanFrame = nil
-        self.weaponSpeedType = gameParams.mainWeaponSetting?.weaponSpeedType
+        self.weaponSpeedType = gameParams.mainWeaponSetting.weaponSpeedType
         self.moveSpeed = gameParams.weaponParam.moveSpeed
         self.moveSpeedCharge = nil
         self.moveSpeedFullCharge = nil

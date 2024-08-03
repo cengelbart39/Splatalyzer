@@ -25,7 +25,7 @@ let fileManager = FileManager.default
 
 let folderUrl = URL(fileURLWithPath: "../Sources/Splatalyzer/Resources/weapon-json")
 
-let watchWords = ["Mission", "Hero", "Coop", "Rival", "BigCoop", "coop"]
+let watchWords = ["Mission", "Msn", "Hero", "Coop", "Rival", "BigCoop", "coop"]
 
 var deleteItems = [URL]()
 var cleanedItems = 0
