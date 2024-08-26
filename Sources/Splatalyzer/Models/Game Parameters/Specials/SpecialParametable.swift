@@ -73,11 +73,17 @@ public struct SpecialOverwrites: Overwritable {
         case .specialMaxRadius:
             return self.maxRadius
             
-        case .specialMinRadius:
+        case .specialRadiusMax:
+            return self.radiusMax
+            
+        case .specialRadiusMin:
             return self.radiusMin
             
         case .specialPowerUpDuration:
             return self.powerUpFrame
+            
+        case .specialAutoChargeRate:
+            return self.chargeRateAutoPerFrame
             
         default:
             return nil

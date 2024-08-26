@@ -40,8 +40,8 @@ public enum DamageType: String, CaseIterable, Codable, Sendable {
     case wave
     case specialMaxCharge
     case specialMinCharge
-    case specialThrow
     case specialThrowDirect
+    case specialThrow
     case specialSwing
     case specialCannon
     case specialBulletMax

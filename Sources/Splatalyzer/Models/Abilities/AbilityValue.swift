@@ -87,7 +87,8 @@ public enum AbilityValue: CaseIterable, Codable, Equatable, Sendable {
     case specialMoveSpeed
     case specialAutoChargeRate
     case specialMaxRadius
-    case specialMinRadius
+    case specialRadiusMax
+    case specialRadiusMin
     case specialPowerUpDuration
     
     public var rawValue: HighMidLow {

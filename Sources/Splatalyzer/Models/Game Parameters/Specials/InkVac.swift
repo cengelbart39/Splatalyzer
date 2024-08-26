@@ -40,6 +40,8 @@ public struct InkVac: GameParametable {
         
         public struct ExhaleBlastParameterCharge: Parametable {
             public let type: String
+            public let crossPaintCheckLength: Double
+            public let crossPaintRadius: Double
             public let damageOffsetY: Double
             public let distanceDamge: [DistanceDamage]
             public let knockBackParam: KnockbackParameter
@@ -48,6 +50,8 @@ public struct InkVac: GameParametable {
             
             public enum CodingKeys: String, CodingKey {
                 case type = "$type"
+                case crossPaintCheckLength = "CrossPaintCheckLength"
+                case crossPaintRadius = "CrossPaintRadius"
                 case damageOffsetY = "DamageOffsetY"
                 case distanceDamge = "DistanceDamage"
                 case knockBackParam = "KnockBackParam"

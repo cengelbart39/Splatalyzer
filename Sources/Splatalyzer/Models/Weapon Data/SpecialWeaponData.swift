@@ -446,7 +446,7 @@ public struct SpecialWeaponData: WeaponDatable {
         self.overwrites = gameParams.getOverwrites()
         self.swingDamage = swingDmg
         self.throwDamage = gameParams.throwBlastParam.distanceDamage
-        self.throwDirectDamage = nil
+        self.throwDirectDamage = gameParams.throwMoveParam.directDamageValue
         self.tickDamage = nil
         self.waveDamage = nil
     }

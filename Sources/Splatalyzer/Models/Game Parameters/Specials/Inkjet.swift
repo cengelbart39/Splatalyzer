@@ -153,7 +153,7 @@ public struct Inkjet: GameParametable {
                 radiusMax: nil,
                 radiusMin: nil,
                 spawnSpeedZSpecUp: nil,
-                specialDurationFrame: nil,
+                specialDurationFrame: self.weaponParam.specialTotalFrame,
                 splashAroundVelocityMax: self.blastParam.subSpecialSpecUpList[safe: 3]?.value,
                 splashAroundVelocityMin: self.blastParam.subSpecialSpecUpList[safe: 2]?.value,
                 targetInCircleRadius: nil)

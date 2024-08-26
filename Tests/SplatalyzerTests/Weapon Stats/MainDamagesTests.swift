@@ -18,7 +18,6 @@ final class MainDamagesTests: XCTestCase {
         
         let dmgs00 = StatHelper.mainDamages(mainInfo: data00)
         XCTAssertFalse(dmgs00.isEmpty)
-        XCTAssertTrue(dmgs00.contains(type: .normalMax))
         XCTAssertTrue(dmgs00.contains(type: .direct))
         XCTAssertTrue(dmgs00.contains(type: .splash))
         
@@ -26,7 +25,6 @@ final class MainDamagesTests: XCTestCase {
         
         let dmgs01 = StatHelper.mainDamages(mainInfo: data01)
         XCTAssertFalse(dmgs01.isEmpty)
-        XCTAssertTrue(dmgs01.contains(type: .normalMax))
         XCTAssertTrue(dmgs01.contains(type: .direct))
         XCTAssertTrue(dmgs01.contains(type: .splash))
     }
@@ -36,7 +34,6 @@ final class MainDamagesTests: XCTestCase {
         
         let dmgs00 = StatHelper.mainDamages(mainInfo: data00)
         XCTAssertFalse(dmgs00.isEmpty)
-        XCTAssertTrue(dmgs00.contains(type: .normalMax))
         XCTAssertTrue(dmgs00.contains(type: .direct))
         XCTAssertTrue(dmgs00.contains(type: .splash))
         
@@ -44,7 +41,6 @@ final class MainDamagesTests: XCTestCase {
         
         let dmgs01 = StatHelper.mainDamages(mainInfo: data01)
         XCTAssertFalse(dmgs01.isEmpty)
-        XCTAssertTrue(dmgs01.contains(type: .normalMax))
         XCTAssertTrue(dmgs01.contains(type: .direct))
         XCTAssertTrue(dmgs01.contains(type: .splash))
     }
@@ -54,7 +50,6 @@ final class MainDamagesTests: XCTestCase {
         
         let dmgs00 = StatHelper.mainDamages(mainInfo: data00)
         XCTAssertFalse(dmgs00.isEmpty)
-        XCTAssertTrue(dmgs00.contains(type: .normalMax))
         XCTAssertTrue(dmgs00.contains(type: .direct))
         XCTAssertTrue(dmgs00.contains(type: .splash))
         
@@ -62,7 +57,6 @@ final class MainDamagesTests: XCTestCase {
         
         let dmgs01 = StatHelper.mainDamages(mainInfo: data01)
         XCTAssertFalse(dmgs01.isEmpty)
-        XCTAssertTrue(dmgs01.contains(type: .normalMax))
         XCTAssertTrue(dmgs01.contains(type: .direct))
         XCTAssertTrue(dmgs01.contains(type: .splash))
         
@@ -70,7 +64,6 @@ final class MainDamagesTests: XCTestCase {
         
         let dmgsO = StatHelper.mainDamages(mainInfo: dataO)
         XCTAssertFalse(dmgs01.isEmpty)
-        XCTAssertTrue(dmgsO.contains(type: .normalMax))
         XCTAssertTrue(dmgsO.contains(type: .direct))
         XCTAssertTrue(dmgsO.contains(type: .splash))
     }
@@ -80,7 +73,6 @@ final class MainDamagesTests: XCTestCase {
         
         let dmgs00 = StatHelper.mainDamages(mainInfo: data00)
         XCTAssertFalse(dmgs00.isEmpty)
-        XCTAssertTrue(dmgs00.contains(type: .normalMax))
         XCTAssertTrue(dmgs00.contains(type: .direct))
         XCTAssertTrue(dmgs00.contains(type: .splash))
         
@@ -88,7 +80,6 @@ final class MainDamagesTests: XCTestCase {
         
         let dmgs01 = StatHelper.mainDamages(mainInfo: data01)
         XCTAssertFalse(dmgs01.isEmpty)
-        XCTAssertTrue(dmgs01.contains(type: .normalMax))
         XCTAssertTrue(dmgs01.contains(type: .direct))
         XCTAssertTrue(dmgs01.contains(type: .splash))
     }
@@ -98,7 +89,6 @@ final class MainDamagesTests: XCTestCase {
         
         let dmgs00 = StatHelper.mainDamages(mainInfo: data00)
         XCTAssertFalse(dmgs00.isEmpty)
-        XCTAssertTrue(dmgs00.contains(type: .normalMax))
         XCTAssertTrue(dmgs00.contains(type: .direct))
         XCTAssertTrue(dmgs00.contains(type: .splash))
         
@@ -106,7 +96,6 @@ final class MainDamagesTests: XCTestCase {
         
         let dmgs01 = StatHelper.mainDamages(mainInfo: data01)
         XCTAssertFalse(dmgs01.isEmpty)
-        XCTAssertTrue(dmgs01.contains(type: .normalMax))
         XCTAssertTrue(dmgs01.contains(type: .direct))
         XCTAssertTrue(dmgs01.contains(type: .splash))
     }
@@ -116,7 +105,6 @@ final class MainDamagesTests: XCTestCase {
         
         let dmgs00 = StatHelper.mainDamages(mainInfo: data00)
         XCTAssertFalse(dmgs00.isEmpty)
-        XCTAssertTrue(dmgs00.contains(type: .normalMax))
         XCTAssertTrue(dmgs00.contains(type: .direct))
         XCTAssertTrue(dmgs00.contains(type: .splash))
         
@@ -124,7 +112,6 @@ final class MainDamagesTests: XCTestCase {
         
         let dmgs01 = StatHelper.mainDamages(mainInfo: data01)
         XCTAssertFalse(dmgs01.isEmpty)
-        XCTAssertTrue(dmgs01.contains(type: .normalMax))
         XCTAssertTrue(dmgs01.contains(type: .direct))
         XCTAssertTrue(dmgs01.contains(type: .splash))
     }
@@ -134,7 +121,6 @@ final class MainDamagesTests: XCTestCase {
         
         let dmgs00 = StatHelper.mainDamages(mainInfo: data00)
         XCTAssertFalse(dmgs00.isEmpty)
-        XCTAssertTrue(dmgs00.contains(type: .normalMax))
         XCTAssertTrue(dmgs00.contains(type: .direct))
         XCTAssertTrue(dmgs00.contains(type: .splash))
         
@@ -142,7 +128,6 @@ final class MainDamagesTests: XCTestCase {
         
         let dmgs01 = StatHelper.mainDamages(mainInfo: data01)
         XCTAssertFalse(dmgs01.isEmpty)
-        XCTAssertTrue(dmgs01.contains(type: .normalMax))
         XCTAssertTrue(dmgs01.contains(type: .direct))
         XCTAssertTrue(dmgs01.contains(type: .splash))
     }
@@ -917,16 +902,12 @@ final class MainDamagesTests: XCTestCase {
         let dmgs00 = StatHelper.mainDamages(mainInfo: data00)
         XCTAssertFalse(dmgs00.isEmpty)
         XCTAssertTrue(dmgs00.contains(type: .direct))
-        XCTAssertTrue(dmgs00.contains(type: .directSecondaryMax))
-        XCTAssertTrue(dmgs00.contains(type: .directSecondaryMin))
         
         let data01 = try TestHelper.getMainData(for: .bloblobberDeco, with: mainInfo)
         
         let dmgs01 = StatHelper.mainDamages(mainInfo: data01)
         XCTAssertFalse(dmgs01.isEmpty)
         XCTAssertTrue(dmgs01.contains(type: .direct))
-        XCTAssertTrue(dmgs01.contains(type: .directSecondaryMax))
-        XCTAssertTrue(dmgs01.contains(type: .directSecondaryMin))
     }
 
     func test_StatHelper_mainDamages_dreadWringer() throws {
@@ -968,8 +949,6 @@ final class MainDamagesTests: XCTestCase {
         XCTAssertFalse(dmgs00.isEmpty)
         XCTAssertTrue(dmgs00.contains(type: .directMax))
         XCTAssertTrue(dmgs00.contains(type: .directMin))
-        XCTAssertTrue(dmgs00.contains(type: .directSecondaryMax))
-        XCTAssertTrue(dmgs00.contains(type: .directSecondaryMin))
         
         let data01 = try TestHelper.getMainData(for: .slosherDeco, with: mainInfo)
         
@@ -977,8 +956,6 @@ final class MainDamagesTests: XCTestCase {
         XCTAssertFalse(dmgs01.isEmpty)
         XCTAssertTrue(dmgs01.contains(type: .directMax))
         XCTAssertTrue(dmgs01.contains(type: .directMin))
-        XCTAssertTrue(dmgs01.contains(type: .directSecondaryMax))
-        XCTAssertTrue(dmgs01.contains(type: .directSecondaryMin))
         
         let dataO = try TestHelper.getMainData(for: .orderSlosherReplica, with: mainInfo)
         
@@ -986,8 +963,6 @@ final class MainDamagesTests: XCTestCase {
         XCTAssertFalse(dmgsO.isEmpty)
         XCTAssertTrue(dmgsO.contains(type: .directMax))
         XCTAssertTrue(dmgsO.contains(type: .directMin))
-        XCTAssertTrue(dmgsO.contains(type: .directSecondaryMax))
-        XCTAssertTrue(dmgsO.contains(type: .directSecondaryMin))
     }
 
     func test_StatHelper_mainDamages_sloshingMachine() throws {
@@ -997,8 +972,6 @@ final class MainDamagesTests: XCTestCase {
         XCTAssertFalse(dmgs00.isEmpty)
         XCTAssertTrue(dmgs00.contains(type: .directMax))
         XCTAssertTrue(dmgs00.contains(type: .directMin))
-        XCTAssertTrue(dmgs00.contains(type: .directSecondaryMax))
-        XCTAssertTrue(dmgs00.contains(type: .directSecondaryMin))
         XCTAssertTrue(dmgs00.contains(type: .splash))
         
         let data01 = try TestHelper.getMainData(for: .sloshingMachineNeo, with: mainInfo)
@@ -1007,8 +980,6 @@ final class MainDamagesTests: XCTestCase {
         XCTAssertFalse(dmgs01.isEmpty)
         XCTAssertTrue(dmgs01.contains(type: .directMax))
         XCTAssertTrue(dmgs01.contains(type: .directMin))
-        XCTAssertTrue(dmgs01.contains(type: .directSecondaryMax))
-        XCTAssertTrue(dmgs01.contains(type: .directSecondaryMin))
         XCTAssertTrue(dmgs01.contains(type: .splash))
     }
 
@@ -1019,8 +990,6 @@ final class MainDamagesTests: XCTestCase {
         XCTAssertFalse(dmgs00.isEmpty)
         XCTAssertTrue(dmgs00.contains(type: .directMax))
         XCTAssertTrue(dmgs00.contains(type: .directMin))
-        XCTAssertTrue(dmgs00.contains(type: .directSecondaryMax))
-        XCTAssertTrue(dmgs00.contains(type: .directSecondaryMin))
         
         let data01 = try TestHelper.getMainData(for: .triSlosherNouveau, with: mainInfo)
         
@@ -1028,8 +997,6 @@ final class MainDamagesTests: XCTestCase {
         XCTAssertFalse(dmgs01.isEmpty)
         XCTAssertTrue(dmgs01.contains(type: .directMax))
         XCTAssertTrue(dmgs01.contains(type: .directMin))
-        XCTAssertTrue(dmgs01.contains(type: .directSecondaryMax))
-        XCTAssertTrue(dmgs01.contains(type: .directSecondaryMin))
     }
 
     // MARK: - Splatana
@@ -1109,14 +1076,14 @@ final class MainDamagesTests: XCTestCase {
         
         let dmgs00 = StatHelper.mainDamages(mainInfo: data00)
         XCTAssertFalse(dmgs00.isEmpty)
-        XCTAssertTrue(dmgs00.contains(type: .normalMaxFullCharge))
+        XCTAssertTrue(dmgs00.contains(type: .normalMax))
         XCTAssertTrue(dmgs00.contains(type: .normalMin))
         
         let data01 = try TestHelper.getMainData(for: .ballpointSplatlingNouveau, with: mainInfo)
         
         let dmgs01 = StatHelper.mainDamages(mainInfo: data01)
         XCTAssertFalse(dmgs01.isEmpty)
-        XCTAssertTrue(dmgs01.contains(type: .normalMaxFullCharge))
+        XCTAssertTrue(dmgs01.contains(type: .normalMax))
         XCTAssertTrue(dmgs01.contains(type: .normalMin))
     }
 
@@ -1125,14 +1092,14 @@ final class MainDamagesTests: XCTestCase {
         
         let dmgs00 = StatHelper.mainDamages(mainInfo: data00)
         XCTAssertFalse(dmgs00.isEmpty)
-        XCTAssertTrue(dmgs00.contains(type: .normalMaxFullCharge))
+        XCTAssertTrue(dmgs00.contains(type: .normalMax))
         XCTAssertTrue(dmgs00.contains(type: .normalMin))
         
         let data01 = try TestHelper.getMainData(for: .heavyEditSplatlingNouveau, with: mainInfo)
         
         let dmgs01 = StatHelper.mainDamages(mainInfo: data01)
         XCTAssertFalse(dmgs01.isEmpty)
-        XCTAssertTrue(dmgs01.contains(type: .normalMaxFullCharge))
+        XCTAssertTrue(dmgs01.contains(type: .normalMax))
         XCTAssertTrue(dmgs01.contains(type: .normalMin))
     }
 
@@ -1141,21 +1108,21 @@ final class MainDamagesTests: XCTestCase {
         
         let dmgs00 = StatHelper.mainDamages(mainInfo: data00)
         XCTAssertFalse(dmgs00.isEmpty)
-        XCTAssertTrue(dmgs00.contains(type: .normalMaxFullCharge))
+        XCTAssertTrue(dmgs00.contains(type: .normalMax))
         XCTAssertTrue(dmgs00.contains(type: .normalMin))
         
         let data01 = try TestHelper.getMainData(for: .heavySplatlingDeco, with: mainInfo)
         
         let dmgs01 = StatHelper.mainDamages(mainInfo: data01)
         XCTAssertFalse(dmgs01.isEmpty)
-        XCTAssertTrue(dmgs01.contains(type: .normalMaxFullCharge))
+        XCTAssertTrue(dmgs01.contains(type: .normalMax))
         XCTAssertTrue(dmgs01.contains(type: .normalMin))
         
         let dataO = try TestHelper.getMainData(for: .orderSplatlingReplica, with: mainInfo)
         
         let dmgsO = StatHelper.mainDamages(mainInfo: dataO)
         XCTAssertFalse(dmgsO.isEmpty)
-        XCTAssertTrue(dmgsO.contains(type: .normalMaxFullCharge))
+        XCTAssertTrue(dmgsO.contains(type: .normalMax))
         XCTAssertTrue(dmgsO.contains(type: .normalMin))
     }
 
@@ -1165,6 +1132,7 @@ final class MainDamagesTests: XCTestCase {
         let dmgs00 = StatHelper.mainDamages(mainInfo: data00)
         XCTAssertFalse(dmgs00.isEmpty)
         XCTAssertTrue(dmgs00.contains(type: .normalMaxFullCharge))
+        XCTAssertTrue(dmgs00.contains(type: .normalMax))
         XCTAssertTrue(dmgs00.contains(type: .normalMin))
         
         let data01 = try TestHelper.getMainData(for: .customHydraSplatling, with: mainInfo)
@@ -1172,6 +1140,7 @@ final class MainDamagesTests: XCTestCase {
         let dmgs01 = StatHelper.mainDamages(mainInfo: data01)
         XCTAssertFalse(dmgs01.isEmpty)
         XCTAssertTrue(dmgs01.contains(type: .normalMaxFullCharge))
+        XCTAssertTrue(dmgs01.contains(type: .normalMax))
         XCTAssertTrue(dmgs01.contains(type: .normalMin))
     }
 
@@ -1180,14 +1149,14 @@ final class MainDamagesTests: XCTestCase {
         
         let dmgs00 = StatHelper.mainDamages(mainInfo: data00)
         XCTAssertFalse(dmgs00.isEmpty)
-        XCTAssertTrue(dmgs00.contains(type: .normalMaxFullCharge))
+        XCTAssertTrue(dmgs00.contains(type: .normalMax))
         XCTAssertTrue(dmgs00.contains(type: .normalMin))
         
         let data01 = try TestHelper.getMainData(for: .zinkMiniSplatling, with: mainInfo)
         
         let dmgs01 = StatHelper.mainDamages(mainInfo: data01)
         XCTAssertFalse(dmgs01.isEmpty)
-        XCTAssertTrue(dmgs01.contains(type: .normalMaxFullCharge))
+        XCTAssertTrue(dmgs01.contains(type: .normalMax))
         XCTAssertTrue(dmgs01.contains(type: .normalMin))
     }
 
@@ -1196,14 +1165,14 @@ final class MainDamagesTests: XCTestCase {
         
         let dmgs00 = StatHelper.mainDamages(mainInfo: data00)
         XCTAssertFalse(dmgs00.isEmpty)
-        XCTAssertTrue(dmgs00.contains(type: .normalMaxFullCharge))
+        XCTAssertTrue(dmgs00.contains(type: .normalMax))
         XCTAssertTrue(dmgs00.contains(type: .normalMin))
         
         let data01 = try TestHelper.getMainData(for: .nautilus79, with: mainInfo)
         
         let dmgs01 = StatHelper.mainDamages(mainInfo: data01)
         XCTAssertFalse(dmgs01.isEmpty)
-        XCTAssertTrue(dmgs01.contains(type: .normalMaxFullCharge))
+        XCTAssertTrue(dmgs01.contains(type: .normalMax))
         XCTAssertTrue(dmgs01.contains(type: .normalMin))
     }
 

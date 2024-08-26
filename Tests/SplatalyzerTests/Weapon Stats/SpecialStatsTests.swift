@@ -19,6 +19,11 @@ final class SpecialStatsTests: XCTestCase {
         var data = try TestHelper.getSpecialData(for: .crabTank)
         var duration = StatHelper.specialDuration(ap: ap, specialInfo: data)
         XCTAssertNotNil(duration)
+        
+        // Inkjet
+        data = try TestHelper.getSpecialData(for: .inkjet)
+        duration = StatHelper.specialDuration(ap: ap, specialInfo: data)
+        XCTAssertNotNil(duration)
                 
         // Ink Storm
         data = try TestHelper.getSpecialData(for: .inkStorm)
@@ -62,11 +67,6 @@ final class SpecialStatsTests: XCTestCase {
         
         // Ink Vac
         data = try TestHelper.getSpecialData(for: .inkVac)
-        duration = StatHelper.specialDuration(ap: ap, specialInfo: data)
-        XCTAssertNil(duration)
-        
-        // Inkjet
-        data = try TestHelper.getSpecialData(for: .inkjet)
         duration = StatHelper.specialDuration(ap: ap, specialInfo: data)
         XCTAssertNil(duration)
         
@@ -1071,6 +1071,15 @@ final class SpecialStatsTests: XCTestCase {
     }
 
     // MARK: - Auto Charge Rate
+    func test_StatHelper_specialAutoChargeRate_notNil() throws {
+        let ap = AbilityPoints()
+        
+        // Booyah Bomb
+        let data = try TestHelper.getSpecialData(for: .booyahBomb)
+        let rate = StatHelper.specialAutoChargeRate(ap: ap, specialInfo: data)
+        XCTAssertNotNil(rate)
+    }
+    
     func test_StatHelper_specialAutoChargeRate_nil() throws {
 
         let ap = AbilityPoints()
@@ -1078,11 +1087,6 @@ final class SpecialStatsTests: XCTestCase {
         // Big Bubbler
         var data = try TestHelper.getSpecialData(for: .bigBubbler)
         var rate = StatHelper.specialAutoChargeRate(ap: ap, specialInfo: data)
-        XCTAssertNil(rate)
-                
-        // Booyah Bomb
-        data = try TestHelper.getSpecialData(for: .booyahBomb)
-        rate = StatHelper.specialAutoChargeRate(ap: ap, specialInfo: data)
         XCTAssertNil(rate)
         
         // Crab Tank
@@ -1278,6 +1282,15 @@ final class SpecialStatsTests: XCTestCase {
     }
 
     // MARK: - Radius Range
+    func test_StatHelper_specialRadiusRange_notNil() throws {
+        let ap = AbilityPoints()
+        
+        // Ink Vac
+        let data = try TestHelper.getSpecialData(for: .inkVac)
+        let range = StatHelper.specialRadiusRange(ap: ap, specialInfo: data)
+        XCTAssertNotNil(range)
+    }
+    
     func test_StatHelper_specialRadiusRange_nil() throws {
 
         let ap = AbilityPoints()
@@ -1299,11 +1312,6 @@ final class SpecialStatsTests: XCTestCase {
         
         // Ink Storm
         data = try TestHelper.getSpecialData(for: .inkStorm)
-        range = StatHelper.specialRadiusRange(ap: ap, specialInfo: data)
-        XCTAssertNil(range)
-        
-        // Ink Vac
-        data = try TestHelper.getSpecialData(for: .inkVac)
         range = StatHelper.specialRadiusRange(ap: ap, specialInfo: data)
         XCTAssertNil(range)
         

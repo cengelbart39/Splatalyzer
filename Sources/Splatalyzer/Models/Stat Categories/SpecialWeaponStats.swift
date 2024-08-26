@@ -58,12 +58,12 @@ public struct SpecialWeaponStats: Codable, Equatable, Sendable {
     public let maxRadius: AbilityStat?
     
     /// Max and min radius of certain specials
-    public let radiusRange: AbilityStat?
+    public let radiusRange: AbilityStatRange?
     
     /// Special Power Up Duration
     public let powerUpDuration: AbilityStat?
     
-    public init(weapon: SpecialWeapon, point: AbilityStat, lost: AbilityStat, lostSplattedByRP: AbilityStat, duration: AbilityStat?, damageDistance: AbilityStat?, paintRadius: AbilityStat?, fieldHp: AbilityStat?, deviceHp: AbilityStat?, hookInkConsumption: AbilityStat?, hookInkConsumptionPerSecond: AbilityStat?, reticleRadius: AbilityStat?, throwDistance: AbilityStat?, moveSpeed: AbilityStat?, autoChargeRate: AbilityStat?, maxRadius: AbilityStat?, radiusRange: AbilityStat?, powerUpDuration: AbilityStat?) {
+    public init(weapon: SpecialWeapon, point: AbilityStat, lost: AbilityStat, lostSplattedByRP: AbilityStat, duration: AbilityStat?, damageDistance: AbilityStat?, paintRadius: AbilityStat?, fieldHp: AbilityStat?, deviceHp: AbilityStat?, hookInkConsumption: AbilityStat?, hookInkConsumptionPerSecond: AbilityStat?, reticleRadius: AbilityStat?, throwDistance: AbilityStat?, moveSpeed: AbilityStat?, autoChargeRate: AbilityStat?, maxRadius: AbilityStat?, radiusRange: AbilityStatRange?, powerUpDuration: AbilityStat?) {
         self.weapon = weapon
         self.point = point
         self.lost = lost

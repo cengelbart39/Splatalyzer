@@ -26,6 +26,9 @@
         }
       }
     },
+    "%@ Drink Effect Duration" : {
+      "comment" : "Refers to how long Tacticooler drinks effect players for."
+    },
     "%@ Duration" : {
       "comment" : "Refers to the duration of certain special weapons.",
       "localizations" : {
@@ -505,6 +508,7 @@
       }
     },
     "Special Power Up Duration" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

@@ -296,6 +296,45 @@ final class FullInkTankOptionsTests: XCTestCase {
     }
     
     // MARK: - Swing
+    func test_StatHelper_fullInkTankOptions_roller_containsSwing_true() throws {
+        var options = try self.getInkTankOptions(for: .bigSwigRoller)
+        XCTAssertFalse(options.isEmpty)
+        XCTAssertTrue(options.contains(type: .swing))
+        
+        options = try self.getInkTankOptions(for: .bigSwigRollerExpress)
+        XCTAssertFalse(options.isEmpty)
+        XCTAssertTrue(options.contains(type: .swing))
+        
+        options = try self.getInkTankOptions(for: .carbonRoller)
+        XCTAssertFalse(options.isEmpty)
+        XCTAssertTrue(options.contains(type: .swing))
+        
+        options = try self.getInkTankOptions(for: .carbonRollerDeco)
+        XCTAssertFalse(options.isEmpty)
+        XCTAssertTrue(options.contains(type: .swing))
+        
+        options = try self.getInkTankOptions(for: .dynamoRoller)
+        XCTAssertFalse(options.isEmpty)
+        XCTAssertTrue(options.contains(type: .swing))
+        
+        options = try self.getInkTankOptions(for: .goldDynamoRoller)
+        XCTAssertFalse(options.isEmpty)
+        XCTAssertTrue(options.contains(type: .swing))
+        
+        options = try self.getInkTankOptions(for: .splatRoller)
+        XCTAssertFalse(options.isEmpty)
+        XCTAssertTrue(options.contains(type: .swing))
+        
+        options = try self.getInkTankOptions(for: .krakOnSplatRoller)
+        XCTAssertFalse(options.isEmpty)
+        XCTAssertTrue(options.contains(type: .swing))
+        
+        options = try self.getInkTankOptions(for: .orderRollerReplica)
+        XCTAssertFalse(options.isEmpty)
+        XCTAssertTrue(options.contains(type: .swing))
+    }
+
+    
     func test_StatHelper_fullInkTankOptions_brush_containsSwing_true() throws {
 
         var options = try self.getInkTankOptions(for: .inkbrush)
@@ -328,7 +367,6 @@ final class FullInkTankOptionsTests: XCTestCase {
     }
 
     func test_StatHelper_fullInkTankOptions_splatana_containsSwing_true() throws {
-
         var options = try self.getInkTankOptions(for: .mintDecavitator)
         XCTAssertFalse(options.isEmpty)
         XCTAssertTrue(options.contains(type: .swing))
@@ -416,96 +454,22 @@ final class FullInkTankOptionsTests: XCTestCase {
 
     // MARK: - Vertical Swing
     func test_StatHelper_fullInkTankOptions_roller_containsVerticalSwing_true() throws {
-
-        var options = try self.getInkTankOptions(for: .bigSwigRoller)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .verticalSwing))
-        
-        options = try self.getInkTankOptions(for: .bigSwigRollerExpress)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .verticalSwing))
-        
-        options = try self.getInkTankOptions(for: .carbonRoller)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .verticalSwing))
-        
-        options = try self.getInkTankOptions(for: .carbonRollerDeco)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .verticalSwing))
-        
-        options = try self.getInkTankOptions(for: .dynamoRoller)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .verticalSwing))
-        
-        options = try self.getInkTankOptions(for: .goldDynamoRoller)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .verticalSwing))
-        
-        options = try self.getInkTankOptions(for: .flingzaRoller)
+        var options = try self.getInkTankOptions(for: .flingzaRoller)
         XCTAssertFalse(options.isEmpty)
         XCTAssertTrue(options.contains(type: .verticalSwing))
         
         options = try self.getInkTankOptions(for: .foilFlingzaRoller)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .verticalSwing))
-        
-        options = try self.getInkTankOptions(for: .splatRoller)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .verticalSwing))
-        
-        options = try self.getInkTankOptions(for: .krakOnSplatRoller)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .verticalSwing))
-        
-        options = try self.getInkTankOptions(for: .orderRollerReplica)
         XCTAssertFalse(options.isEmpty)
         XCTAssertTrue(options.contains(type: .verticalSwing))
     }
 
     // MARK: - Horizontal Swing
     func test_StatHelper_fullInkTankOptions_roller_containsHorizontalSwing_true() throws {
-
-        var options = try self.getInkTankOptions(for: .bigSwigRoller)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .horizontalSwing))
-        
-        options = try self.getInkTankOptions(for: .bigSwigRollerExpress)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .horizontalSwing))
-        
-        options = try self.getInkTankOptions(for: .carbonRoller)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .horizontalSwing))
-        
-        options = try self.getInkTankOptions(for: .carbonRollerDeco)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .horizontalSwing))
-        
-        options = try self.getInkTankOptions(for: .dynamoRoller)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .horizontalSwing))
-        
-        options = try self.getInkTankOptions(for: .goldDynamoRoller)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .horizontalSwing))
-        
-        options = try self.getInkTankOptions(for: .flingzaRoller)
+        var options = try self.getInkTankOptions(for: .flingzaRoller)
         XCTAssertFalse(options.isEmpty)
         XCTAssertTrue(options.contains(type: .horizontalSwing))
         
         options = try self.getInkTankOptions(for: .foilFlingzaRoller)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .horizontalSwing))
-        
-        options = try self.getInkTankOptions(for: .splatRoller)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .horizontalSwing))
-        
-        options = try self.getInkTankOptions(for: .krakOnSplatRoller)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .horizontalSwing))
-        
-        options = try self.getInkTankOptions(for: .orderRollerReplica)
         XCTAssertFalse(options.isEmpty)
         XCTAssertTrue(options.contains(type: .horizontalSwing))
     }

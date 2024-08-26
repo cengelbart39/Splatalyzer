@@ -374,7 +374,7 @@ public struct MainWeaponData: WeaponDatable {
         self.inkConsumeWeaponWideSwing = nil
         self.inkConsumeUmbrellaShelterCanopy = nil
         self.inkConsumeWeaponShelterShotgun = nil
-        self.inkConsumeSideStep = gameParams.weaponParam.inkConsume
+        self.inkConsumeSideStep = gameParams.sideStepParam.inkConsume
         self.inkConsumeSwing = nil
         self.inkConsumeChargeFullCharge = nil
     }
@@ -499,7 +499,7 @@ public struct MainWeaponData: WeaponDatable {
         self.damageSplatanaVerticalDirect = gameParams.bulletSaberSlashVerticalParam.damageParam.damageValue
         self.damageSplatanaVertical  = gameParams.bulletSaberVerticalParam.damageParam.hitDamage
         self.damageSplatanaHorizontalDirect = gameParams.bulletSaberHorizontalParam.damageParam.hitDamage + gameParams.bulletSaberSlashHorizontalParam.damageParam.damageValue
-        self.damageSplatanaHorizontal = gameParams.bulletSaberSlashHorizontalParam.damageParam.damageValue
+        self.damageSplatanaHorizontal = gameParams.bulletSaberHorizontalParam.damageParam.hitDamage
         self.bodyDamage = nil
         self.variableDamageMax = nil
         self.variableDamageMin = nil
@@ -619,11 +619,6 @@ public struct MainWeaponData: WeaponDatable {
             gameParams.weaponShelterCanopyParam.inkConsumeUmbrella != 0
             ? gameParams.weaponShelterCanopyParam.inkConsumeUmbrella
             : nil
-
-        let inkConsumeShelterShotgun =
-            weaponInfo.rowId == .splatBrella || weaponInfo.rowId == .sorellaBrella
-            ? 0.0632499977946
-            : gameParams.weaponShelterShotgunParam.inkConsume
         
         self.mainWeaponId = MainWeapon(rawValue: weaponInfo.rowId.rawValue)!
         self.specialPoints = weaponInfo.specialPoint
@@ -681,7 +676,7 @@ public struct MainWeaponData: WeaponDatable {
         self.inkConsumeWeaponVerticalSwing = nil
         self.inkConsumeWeaponWideSwing = nil
         self.inkConsumeUmbrellaShelterCanopy = inkConsumeShelterCanopy
-        self.inkConsumeWeaponShelterShotgun = inkConsumeShelterShotgun
+        self.inkConsumeWeaponShelterShotgun = gameParams.weaponShelterShotgunParam.inkConsume
         self.inkConsumeSideStep = nil
         self.inkConsumeSwing = nil
         self.inkConsumeChargeFullCharge = nil
@@ -701,7 +696,6 @@ public struct MainWeaponData: WeaponDatable {
         let damageDirect = damageDirectMax == damageDirectMin && damageDirectMax != nil ? damageDirectMax : nil
         
         let isSloshingMachine = weaponInfo.rowId == .sloshingMachine || weaponInfo.rowId == .sloshingMachineNeo
-        let isDreadWringer = weaponInfo.rowId == .dreadWringer
         
         self.mainWeaponId = MainWeapon(rawValue: weaponInfo.rowId.rawValue)!
         self.specialPoints = weaponInfo.specialPoint
@@ -719,8 +713,8 @@ public struct MainWeaponData: WeaponDatable {
         self.damageValueDirect = damageDirect
         self.damageValueDirectMax = damageDirect == nil ? damageDirectMax : nil
         self.damageValueDirectMin = damageDirect == nil ? damageDirectMin : nil
-        self.damageSecondaryValueDirectMax = isDreadWringer ? nil : gameParams.unitGroupParam.unit[safe: 1]?.damageParam.valueMax
-        self.damageSecondaryValueDirectMin = isDreadWringer ? nil : gameParams.unitGroupParam.unit[safe: 1]?.damageParam.valueMin
+        self.damageSecondaryValueDirectMax = gameParams.unitGroupParam.unit[safe: 1]?.damageParam.valueMax
+        self.damageSecondaryValueDirectMin = gameParams.unitGroupParam.unit[safe: 1]?.damageParam.valueMin
         self.damageLapOverValueMax = nil
         self.damageLapOverValueMin = nil
         self.blastSplashDamage = isSloshingMachine ? gameParams.unitGroupParam.unit[safe: 1]?.damageParam.valueMax : nil
@@ -774,8 +768,7 @@ public struct MainWeaponData: WeaponDatable {
     public init(weaponInfo: WeaponInfoMainItem, container: Splatling) {
         let gameParams = container.parameters
         
-        let damageDirect = gameParams.damageParam.valueMax == gameParams.damageParam.valueMin ? Double(gameParams.damageParam.valueMax) : nil
-        let damageMax = damageDirect != nil ? gameParams.damageParam.valueMax : nil
+        let damageFullChargeMax = gameParams.damageParam.valueFullChargeMax == gameParams.damageParam.valueMax ? nil : gameParams.damageParam.valueFullChargeMax
         
         self.mainWeaponId = MainWeapon(rawValue: weaponInfo.rowId.rawValue)!
         self.specialPoints = weaponInfo.specialPoint
@@ -788,9 +781,9 @@ public struct MainWeaponData: WeaponDatable {
         self.moveSpeedCharge = gameParams.weaponParam.moveSpeedCharge
         self.moveSpeedFullCharge = nil
         self.moveSpeedVariable = nil
-        self.damageValueMax = damageMax
-        self.damageValueMin = damageDirect == nil ? gameParams.damageParam.valueMin : nil
-        self.damageValueDirect = damageDirect
+        self.damageValueMax = gameParams.damageParam.valueMax
+        self.damageValueMin = gameParams.damageParam.valueMin
+        self.damageValueDirect = nil
         self.damageValueDirectMax = nil
         self.damageValueDirectMin = nil
         self.damageSecondaryValueDirectMax = nil
@@ -800,7 +793,7 @@ public struct MainWeaponData: WeaponDatable {
         self.blastSplashDamage = nil
         self.blastDamageDistance = []
         self.damageValueFullCharge = nil
-        self.damageValueFullChargeMax = gameParams.damageParam.valueFullChargeMax
+        self.damageValueFullChargeMax = damageFullChargeMax
         self.damageValueMaxCharge = nil
         self.damageValueMinCharge = nil
         self.damageSplatanaVertical = nil
@@ -821,8 +814,8 @@ public struct MainWeaponData: WeaponDatable {
         self.keepChargeFullFrame = gameParams.weaponKeepChargeParam?.keepChargeFullFrame != 1 ? gameParams.weaponKeepChargeParam?.keepChargeFullFrame : nil
         self.jumpDegSwerve = gameParams.weaponParam.jumpDegSwerve
         self.standDegSwerve = gameParams.weaponParam.standDegSwerve
-        self.variableJumpDegSwerve = nil
-        self.variableStandDegSwerve = nil
+        self.variableJumpDegSwerve = gameParams.variableShotParam?.jumpDegSwerve
+        self.variableStandDegSwerve = gameParams.variableShotParam?.standDegSwerve
         self.inkRecoverStop = gameParams.weaponParam.inkRecoverStop
         self.inkConsume = nil
         self.inkConsumeSlosher = nil

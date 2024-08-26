@@ -56,6 +56,6 @@ public struct APEffect: Sendable {
     
     /// Converts ``effect`` to damage
     public func effectToDamage() -> Double {
-        return (effect * 100 - 0.05).cutToDecimalPlaces(3)
+        return (effect * 100).cutToDecimalPlaces(3)
     }
 }

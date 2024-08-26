@@ -49,9 +49,11 @@ public struct SpecialStatList: View {
                 
                 AbilityStatCard(stat: specialStats.autoChargeRate)
                 
-                AbilityStatCard(stat: specialStats.maxRadius)
+                if specialStats.radiusRange == nil {
+                    AbilityStatCard(stat: specialStats.maxRadius)
+                }
                 
-                AbilityStatCard(stat: specialStats.radiusRange)
+                AbilityStatRangeCard(range: specialStats.radiusRange)
                 
                 AbilityStatCard(stat: specialStats.powerUpDuration)
             }

@@ -22,7 +22,12 @@ public struct StatHelper {
         .bloblobber : 4,
         .bloblobberDeco : 4,
         .dreadWringer : 2,
-        .dreadWringerD : 2
+        .dreadWringerD : 2,
+        .wellspringV : 5,
+        .customWellspringV : 5,
+        .triStringer : 3,
+        .inklineTriStringer: 3,
+        .orderStringerReplica : 3
     ]
     
     
@@ -126,29 +131,35 @@ public struct StatHelper {
                     of: ap[.inkSaverMain] ?? 0,
                     weapon: mainInfo)
                 
-                if let value = mainInfo.inkConsume(for: type) {
-                    let mainConsume = value * apEffect.effect
-                    
-                    let value = (mainInfo.inkTankSize - subConsume.inkConsume * Double(fromFullInkTank)) / mainConsume
-                    
-                    let option = InkTankOption(
-                        subsFromFullInkTank: fromFullInkTank,
-                        type: type,
-                        value: value.roundToDecimalPlaces())
-                    
-                    if result[fromFullInkTank] == nil {
-                        result[fromFullInkTank] = [option]
-                        
-                    } else {
-                        result[fromFullInkTank]!.append(option)
-                    }
+                guard let value = mainInfo.inkConsume(for: type) else {
+                    continue
+                }
+                
+                let mainConsume = value * apEffect.effect
+                
+                let tankValue = (mainInfo.inkTankSize - subConsume.inkConsume * Double(fromFullInkTank)) / mainConsume
+                
+                let option = InkTankOption(
+                    subsFromFullInkTank: fromFullInkTank,
+                    type: type,
+                    value: tankValue.roundToDecimalPlaces())
+                
+                if result[fromFullInkTank] == nil {
+                    result[fromFullInkTank] = [option]
                     
                 } else {
-                    continue
+                    result[fromFullInkTank]!.append(option)
                 }
             }
         }
         
+        // For rollers, where horizontal and vertical swings
+        // use the same amount of ink, we can condense into
+        // a single InkTankOption for swings
+        for fromFullInkTank in 0...subConsume.maxSubsFromFullInkTank {
+            result[fromFullInkTank]?.combineSwings()
+        }
+
         return result
     }
     
@@ -158,19 +169,20 @@ public struct StatHelper {
     public static func mainDamages(mainInfo: MainWeaponData) -> [DamageStat] {
         var result = [DamageStat]()
         
+        let multiShot = StatHelper.multiShotDict[mainInfo.mainWeaponId]
+        
         for type in DamageType.allCases {
             if let subValue = mainInfo.damage(for: type) as? Double {
                 
                 let stat = DamageStat(
                     type: type == .distance ? .splash : type,
-                    value: subValue / 10,
+                    values: Array(repeating: subValue / 10, count: multiShot ?? 1),
                     distance: nil,
                     shotsToSplat: StatHelper.shotsToSplat(
                         for: subValue,
                         of: type,
                         with: StatHelper.multiShotDict[mainInfo.mainWeaponId]
-                    ),
-                    multiShots: StatHelper.multiShotDict[mainInfo.mainWeaponId]
+                    )
                 )
                 
                 result.append(stat)
@@ -180,15 +192,21 @@ public struct StatHelper {
                 for item in arr {
                     let stat = DamageStat(
                         type: type == .distance ? .splash : type,
-                        value: Double(item.damage) / 10,
+                        values: Array(repeating: Double(item.damage) / 10, count: multiShot ?? 1),
                         distance: item.distance,
-                        shotsToSplat: nil,
-                        multiShots: StatHelper.multiShotDict[mainInfo.mainWeaponId])
+                        shotsToSplat: nil)
                     
                     result.append(stat)
                 }
             }
         }
+        
+        result.combineNormalDirect()
+        result.combineDirects()
+        result.combineDirectMaxes()
+        result.combineDirectMins()
+        result.combineSplashAndSecondaries()
+        result.assymetricCombineDirectMaxes()
         
         return result
     }
@@ -202,8 +220,21 @@ public struct StatHelper {
         for type in DamageType.allCases {
             let subValue = specialInfo.damage(for: type)
             
-            if let subValue = subValue as? Double {
+            if let subValue = subValue as? Int {
+                let stat = DamageStat(
+                    type: type,
+                    value: Double(subValue) / 10.0,
+                    distance: nil,
+                    shotsToSplat: StatHelper.shotsToSplat(
+                        for: Double(subValue),
+                        of: type,
+                        with: nil
+                    )
+                )
                 
+                result.append(stat)
+                
+            } else if let subValue = subValue as? Double {
                 let stat = DamageStat(
                     type: type,
                     value: subValue / 10,
@@ -212,8 +243,7 @@ public struct StatHelper {
                         for: subValue,
                         of: type,
                         with: nil
-                    ),
-                    multiShots: nil
+                    )
                 )
                 
                 result.append(stat)
@@ -225,8 +255,7 @@ public struct StatHelper {
                         type: type,
                         value: Double(item.damage) / 10,
                         distance: item.distance,
-                        shotsToSplat: nil,
-                        multiShots: nil)
+                        shotsToSplat: nil)
                     
                     result.append(stat)
                 }
@@ -238,8 +267,7 @@ public struct StatHelper {
                 type: result.first!.type,
                 value: result.sumValue(),
                 distance: 0,
-                shotsToSplat: nil,
-                multiShots: nil)
+                shotsToSplat: nil)
             
             result.insert(stat, at: 0)
             
@@ -251,8 +279,7 @@ public struct StatHelper {
                 type: .specialCannon,
                 value: cannonDamage.sumValue(),
                 distance: 0,
-                shotsToSplat: nil,
-                multiShots: nil)
+                shotsToSplat: nil)
             
             result.insert(stat, at: firstCannonIndex)
         }
@@ -1676,10 +1703,10 @@ public struct StatHelper {
     public static func specialRadiusRange(
         ap: AbilityPoints,
         specialInfo: SpecialWeaponData
-    ) -> AbilityStat? {
-        let hmlMax = abilityValues(for: .specialMaxRadius, weapon: specialInfo)
+    ) -> AbilityStatRange? {
+        let hmlMax = abilityValues(for: .specialRadiusMax, weapon: specialInfo)
         
-        let hmlMin = abilityValues(for: .specialMinRadius, weapon: specialInfo)
+        let hmlMin = abilityValues(for: .specialRadiusMin, weapon: specialInfo)
         
         guard hmlMax.hasEffect() && hmlMin.hasEffect() else {
             return nil
@@ -1689,22 +1716,26 @@ public struct StatHelper {
         let spuAp = ap[spu] ?? 0
         
         let maxEffect = APEffect(
-            for: .specialMaxRadius,
+            for: .specialRadiusMax,
             of: spuAp,
             weapon: specialInfo)
         
         let minEffect = APEffect(
-            for: .specialMinRadius,
+            for: .specialRadiusMin,
             of: spuAp,
             weapon: specialInfo)
-                
-        return AbilityStat(
-            baseValue: minEffect.baseEffect.roundToDecimalPlaces() - maxEffect.baseEffect.roundToDecimalPlaces(),
+        
+        let range = AbilityStatRange(
+            baseMin: minEffect.baseEffect.roundToDecimalPlaces(),
+            baseMax: maxEffect.baseEffect.roundToDecimalPlaces(),
+            valueMin: minEffect.effect.roundToDecimalPlaces(),
+            valueMax: maxEffect.effect.roundToDecimalPlaces(),
             modifiedBy: [spu],
-            value: minEffect.effect.roundToDecimalPlaces() - maxEffect.effect.roundToDecimalPlaces(),
             unit: .radius,
             title: String(localized: "\(specialInfo.id.localized) Radius Range", comment: "Refers to the maximum and minimum radius of the certain specials.")
         )
+                
+        return range
     }
     
     /// Calculates the duration of Special Power Up
@@ -1731,11 +1762,11 @@ public struct StatHelper {
             weapon: specialInfo)
                 
         return AbilityStat(
-            baseValue: apEffect.baseEffect,
+            baseValue: apEffect.baseEffect.framesToSeconds(),
             modifiedBy: [spu],
-            value: apEffect.effect,
-            unit: .none,
-            title: String(localized: "Special Power Up Duration")
+            value: apEffect.effect.framesToSeconds(),
+            unit: .seconds,
+            title: String(localized: "\(specialInfo.id.localized) Drink Effect Duration", comment: "Refers to how long Tacticooler drinks effect players for.")
         )
     }
     

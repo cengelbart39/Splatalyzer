@@ -31,6 +31,33 @@ public extension Array where Element == InkTankOption {
     func containsType(_ type: InkConsumeType) -> Bool {
         return self.contains(where: { $0.type == type })
     }
+    
+    func getElement(of type: InkConsumeType) -> InkTankOption? {
+        return self.first(where: { $0.type == type })
+    }
+    
+    mutating func combineSwings() {
+        guard let vertical = self.getElement(of: .verticalSwing), let horizontal = self.getElement(of: .horizontalSwing) else {
+            return
+        }
+        
+        guard vertical.value == horizontal.value else {
+            return
+        }
+        
+        let newOption = InkTankOption(
+            subsFromFullInkTank: vertical.subsFromFullInkTank,
+            type: .swing,
+            value: vertical.value
+        )
+        
+        let verticalIndex = self.firstIndex(of: vertical)!
+        let horizontalIndex = self.firstIndex(of: horizontal)!
+        
+        self[verticalIndex] = newOption
+        self.remove(at: horizontalIndex)
+
+    }
 }
 
 public extension Dictionary where Key == Int, Value == [InkTankOption] {

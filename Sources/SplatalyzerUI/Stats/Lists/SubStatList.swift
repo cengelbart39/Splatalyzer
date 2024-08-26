@@ -27,7 +27,9 @@ public struct SubStatList: View {
                     value: subStats.whiteInkSeconds,
                     unit: .seconds)
                 
-                AbilityStatCard(stat: subStats.velocity)
+                if subStats.weapon != .squidBeakon {
+                    AbilityStatCard(stat: subStats.velocity)
+                }
                 
                 AbilityStatCard(stat: subStats.firstPhaseDuration)
                 

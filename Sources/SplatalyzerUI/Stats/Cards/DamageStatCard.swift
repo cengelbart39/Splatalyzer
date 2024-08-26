@@ -44,13 +44,13 @@ public struct DamageStatCard: View {
                         .padding(.bottom, -5)
                         .foregroundStyle(.secondary)
                     
-                    if stat.multiShots != nil {
-                        Text(stat.multiShotString())
+                    if stat.values.count > 1 {
+                        Text(stat.valuesToString())
                             .font(.title)
                             .fontDesign(.rounded)
                         
-                    } else {
-                        Text(stat.value.format())
+                    } else if stat.values.count == 1 {
+                        Text(stat.valuesToString())
                             .font(.title)
                             .fontDesign(.rounded)
                         + Text(StatUnit.hp.symbol.uppercased())

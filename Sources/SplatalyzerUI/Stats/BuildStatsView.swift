@@ -32,7 +32,7 @@ public struct BuildStatsView: View {
             
             SubDefenseDamageList(defenseDamage: stats.subDefenseDamages)
             
-            MainDamageList(mainDamages: stats.mainDamages.filtered())
+            MainDamageList(mainDamages: stats.mainDamages)
             
             if !stats.specialDamages.isEmpty {
                 SpecialDamageList(specialWeapon: stats.specialStats.weapon, specialDamage: stats.specialDamages)
