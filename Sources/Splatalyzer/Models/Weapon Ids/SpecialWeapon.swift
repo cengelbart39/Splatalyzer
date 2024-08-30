@@ -75,3 +75,52 @@ public enum SpecialWeapon: String, CaseIterable, Codable, Sendable {
         return self.rawValue
     }
 }
+
+extension SpecialWeapon {
+    var modelType: any GameParametable.Type {
+        switch self {
+        case .inkVac:
+            return InkVac.self
+        case .krakenRoyale:
+            return KrakenRoyale.self
+        case .crabTank:
+            return CrabTank.self
+        case .splattercolorScreen:
+            return SplattercolorScreen.self
+        case .tacticooler:
+            return Tacticooler.self
+        case .superChump:
+            return SuperChump.self
+        case .bigBubbler:
+            return BigBubbler.self
+        case .inkStorm:
+            return InkStorm.self
+        case .inkjet:
+            return Inkjet.self
+        case .killerWail51:
+            return KillerWail51.self
+        case .tentaMissiles:
+            return TentaMissiles.self
+        case .booyahBomb:
+            return BooyahBomb.self
+        case .tripleSplashdown:
+            return TripleSplashdown.self
+        case .waveBreaker:
+            return WaveBreaker.self
+        case .reefslider:
+            return Reefslider.self
+        case .zipcaster:
+            return Zipcaster.self
+        case .tripleInkstrike:
+            return TripleInkstrike.self
+        case .trizooka:
+            return Trizooka.self
+        case .ultraStamp:
+            return UltraStamp.self
+        }
+    }
+    
+    static func allModelTypes() -> [any GameParametable.Type] {
+        return self.allCases.map { $0.modelType }
+    }
+}

@@ -362,6 +362,23 @@ struct TestHelper {
         }
     }
 
+    static func getFullInkTankOptions(for weapon: MainWeapon, with mainInfo: WeaponInfoMain) throws -> [Int : [InkTankOption]] {
+        
+        guard let mainItem = mainInfo.getItem(for: weapon),
+              let subWeapon = mainItem.subWeapon.toSubWeapon() else {
+            return [:]
+        }
+        
+        do {
+            let mainData = try TestHelper.getMainData(for: weapon, with: mainInfo)
+            let subData = try TestHelper.getSubData(for: subWeapon)
+            
+            return StatHelper.fullInkTankOptions(ap: AbilityPoints(), mainInfo: mainData, subInfo: subData)
+            
+        } catch {
+            return [:]
+        }
+    }
 }
 
 struct Localization: Codable {

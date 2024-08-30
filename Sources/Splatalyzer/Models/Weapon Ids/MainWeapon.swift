@@ -282,4 +282,11 @@ public enum MainWeapon: String, CaseIterable, Codable, Identifiable, Sendable {
             .filter { $0.type == type }
             .sorted(by: { $0.rawValue < $1.rawValue })
     }
+    
+    public static func vanillaWeapons(of type: WeaponClass) -> [MainWeapon] {
+        return MainWeapon.allCases
+            .filter { $0.rawValue.hasSuffix("00") }
+            .filter { $0.type == type }
+            .sorted(by: { $0.rawValue < $1.rawValue })
+    }
 }

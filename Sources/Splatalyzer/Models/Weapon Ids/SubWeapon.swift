@@ -85,3 +85,46 @@ public enum SubWeapon: String, CaseIterable, Codable, Sendable {
         }
     }
 }
+
+extension SubWeapon {
+    var modelType: any GameParametable.Type {
+        switch self {
+        case .angleShooter:
+            return AngleShooter.self
+        case .autobomb:
+            return Autobomb.self
+        case .burstBomb:
+            return BurstBomb.self
+        case .curlingBomb:
+            return CurlingBomb.self
+        case .fizzyBomb:
+            return FizzyBomb.self
+        case .inkMine:
+            return InkMine.self
+        case .pointSensor:
+            return PointSensor.self
+        case .splashWall:
+            return SplashWall.self
+        case .splatBomb:
+            return SplatBomb.self
+        case .squidBeakon:
+            return SquidBeakon.self
+        case .sprinkler:
+            return Sprinkler.self
+        case .suctionBomb:
+            return SuctionBomb.self
+        case .torpedo:
+            return Torpedo.self
+        case .toxicMist:
+            return ToxicMist.self
+        }
+    }
+    
+    static func fileNames() -> [String] {
+        return self.allCases.map { $0.fileName() }
+    }
+    
+    static func allModelTypes() -> [any GameParametable.Type] {
+        return self.allCases.map { $0.modelType }
+    }
+}
