@@ -63,9 +63,9 @@
         "SpawnSpeedMin": 1.45
       },
       "PaintParam": {
-        "WidthHalfMax": 3.0,
-        "WidthHalfMid": 2.5,
-        "WidthHalfMin": 2.5
+        "WidthHalfMax": 2.76,
+        "WidthHalfMid": 2.3,
+        "WidthHalfMin": 2.3
       },
       "SplashPaintParam": {
         "DepthScaleMax": 2.5,

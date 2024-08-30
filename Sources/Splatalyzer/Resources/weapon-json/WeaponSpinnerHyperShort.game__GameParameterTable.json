@@ -67,9 +67,9 @@
       "ForceSpawnNearestAddNumArray": [
         5
       ],
-      "SpawnBetweenLength": 22.0,
+      "SpawnBetweenLength": 24.0,
       "SpawnNearestLength": 0.0,
-      "SpawnNum": 0.75,
+      "SpawnNum": 0.6,
       "SplitNum": 10
     },
     "WallDropCollisionPaintParam": {

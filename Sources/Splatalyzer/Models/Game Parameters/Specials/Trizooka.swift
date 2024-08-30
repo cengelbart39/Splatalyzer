@@ -145,12 +145,14 @@ public struct Trizooka: GameParametable {
             public let ejectCartridgeLifeTimeFrame: Double
             public let hideCartridgeBeforeEjectFrame: Int
             public let holdAimFrame: Int
+            public let isReqShotInStartDelay: Bool
             public let knockBackParam: KnockBackParam
             public let moveSpeed: Double
             public let moveSpeedInCharge: Double
             public let repeatFrame: Int
             public let shotDelayFrame: Int
             public let specialDurationFrame: HighMidLow
+            public let startDelayFrame: Int
             
             public enum CodingKeys: String, CodingKey {
                 case type = "$type"
@@ -161,12 +163,14 @@ public struct Trizooka: GameParametable {
                 case ejectCartridgeLifeTimeFrame = "EjectCartridgeLifeTimeFrame"
                 case hideCartridgeBeforeEjectFrame = "HideCartridgeBeforeEjectFrame"
                 case holdAimFrame = "HoldAimFrame"
+                case isReqShotInStartDelay = "IsReqShotInStartDelay"
                 case knockBackParam = "KnockBackParam"
                 case moveSpeed = "MoveSpeed"
                 case moveSpeedInCharge = "MoveSpeedInCharge"
                 case repeatFrame = "RepeatFrame"
                 case shotDelayFrame = "ShotDelayFrame"
                 case specialDurationFrame = "SpecialDurationFrame"
+                case startDelayFrame = "StartDelayFrame"
             }
             
             public struct KnockBackParam: Parametable {

@@ -88,6 +88,8 @@
       "Jump_DegBiasEndFrame": 70,
       "Jump_DegBiasMax": 0.3,
       "Jump_DegSwerve": 7.0,
+      "MaxShootingFrame_First": 72,
+      "MaxShootingFrame_Second": 144,
       "MoveSpeed": 0.07,
       "PitchDegBias": 0.4,
       "PitchDegSwerve": 1.6,

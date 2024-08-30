@@ -25,9 +25,9 @@
     "MoveParam": {
       "$type": "spl__BulletSimpleMoveParam",
       "FreeGravity": 0.016,
-      "GoStraightStateEndMaxSpeed": 2.9695,
+      "GoStraightStateEndMaxSpeed": 2.8303,
       "GoStraightToBrakeStateFrame": 4,
-      "SpawnSpeed": 3.2
+      "SpawnSpeed": 3.05
     },
     "PaintParam": {
       "$type": "spl__BulletShooterPaintParam",
@@ -142,7 +142,7 @@
       "Jump_DegBiasEndFrame": 70,
       "Jump_DegBiasMax": 0.4,
       "Jump_DegSwerve": 0.0,
-      "MoveSpeed": 0.072,
+      "MoveSpeed": 0.066,
       "PostDelayFrame": 3,
       "RepeatFrame": 8,
       "ShotGuideFrame": 8,

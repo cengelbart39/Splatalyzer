@@ -474,7 +474,7 @@
     },
     "WeaponParam": {
       "$type": "spl__WeaponSlosherParam",
-      "InkConsume": 0.07,
+      "InkConsume": 0.076,
       "InkRecoverStop": 40,
       "MoveSpeed": 0.04,
       "RepeatFrame": 29,
