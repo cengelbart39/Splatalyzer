@@ -83,6 +83,7 @@
       "EjectCartridgeLifeTimeFrame": 60,
       "HideCartridgeBeforeEjectFrame": 1,
       "HoldAimFrame": 55,
+      "IsReqShotInStartDelay": true,
       "KnockBackParam": {
         "AirBreakRt": 0.8,
         "ImpactValue": 0.04,
@@ -96,7 +97,8 @@
         "High": 480.0,
         "Low": 360.0,
         "Mid": 420.0
-      }
+      },
+      "StartDelayFrame": 5
     }
   }
 }

@@ -121,7 +121,7 @@
           "RandomRotateYOffOrderNum": [
             0
           ],
-          "SpawnSpeedAir": 1.7,
+          "SpawnSpeedAir": 1.79,
           "SpawnSpeedGround": 1.85,
           "SplashAndSplashWallHitSpawnPrm": {
             "Combination": [
@@ -273,7 +273,7 @@
           "RandomRotateYOffOrderNum": [
             0
           ],
-          "SpawnSpeedAir": 1.7,
+          "SpawnSpeedAir": 1.79,
           "SpawnSpeedGround": 1.85,
           "SplashAndSplashWallHitSpawnPrm": {
             "Combination": [

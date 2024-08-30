@@ -41,8 +41,8 @@
       "DepthHalfMaxCharge": 1.56,
       "DepthHalfMinCharge": 2.73,
       "RadiusSpawnNearest": 1.2,
-      "WidthHalfFullCharge": 1.11,
-      "WidthHalfMaxCharge": 1.11,
+      "WidthHalfFullCharge": 1.055,
+      "WidthHalfMaxCharge": 1.055,
       "WidthHalfMinCharge": 0.78
     },
     "SplashSpawnParam": {
