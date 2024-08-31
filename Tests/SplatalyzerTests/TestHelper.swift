@@ -15,132 +15,132 @@ struct TestHelper {
     static let localizationUrl = Bundle.module.url(forResource: "localizations", withExtension: "json")!
     
     static func getMainData(for weapon: MainWeapon, with mainInfo: WeaponInfoMain) throws -> MainWeaponData {
-    let service = JSONService()
-    
-    switch weapon.type {
-    case .blaster:
-        let blaster = try service.decode(
-            Blaster.self,
-            from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+        let service = JSONService()
         
-        let infoItem = mainInfo.getItem(for: weapon)!
+        switch weapon.type {
+        case .blaster:
+            let blaster = try service.decode(
+                Blaster.self,
+                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+            
+            let infoItem = mainInfo.getItem(for: weapon)!
+            
+            let mainData = MainWeaponData(weaponInfo: infoItem, container: blaster)
+            
+            return mainData
+            
+        case .brella:
+            let brella = try service.decode(
+                Brella.self,
+                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+            
+            let infoItem = mainInfo.getItem(for: weapon)!
+            
+            let mainData = MainWeaponData(weaponInfo: infoItem, container: brella)
+            
+            return mainData
+            
+        case .brush:
+            let brush = try service.decode(
+                Brush.self,
+                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+            
+            let infoItem = mainInfo.getItem(for: weapon)!
+            
+            let mainData = MainWeaponData(weaponInfo: infoItem, container: brush)
+            
+            return mainData
+            
+        case .charger:
+            let charger = try service.decode(
+                Charger.self,
+                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+            
+            let infoItem = mainInfo.getItem(for: weapon)!
+            
+            let mainData = MainWeaponData(weaponInfo: infoItem, container: charger)
+            
+            return mainData
+            
+        case .dualie:
+            let dualie = try service.decode(
+                Dualie.self,
+                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+            
+            let infoItem = mainInfo.getItem(for: weapon)!
+            
+            let mainData = MainWeaponData(weaponInfo: infoItem, container: dualie)
+            
+            return mainData
+            
+        case .roller:
+            let roller = try service.decode(
+                Roller.self,
+                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+            
+            let infoItem = mainInfo.getItem(for: weapon)!
+            
+            let mainData = MainWeaponData(weaponInfo: infoItem, container: roller)
+            
+            return mainData
+            
+        case .shooter:
+            let shooter = try service.decode(
+                Shooter.self,
+                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+            
+            let infoItem = mainInfo.getItem(for: weapon)!
+            
+            let mainData = MainWeaponData(weaponInfo: infoItem, container: shooter)
+            
+            return mainData
+            
+        case .slosher:
+            let slosher = try service.decode(
+                Slosher.self,
+                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+            
+            let infoItem = mainInfo.getItem(for: weapon)!
+            
+            let mainData = MainWeaponData(weaponInfo: infoItem, container: slosher)
+            
+            return mainData
+            
+        case .splatana:
+            let splatana = try service.decode(
+                Splatana.self,
+                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+            
+            let infoItem = mainInfo.getItem(for: weapon)!
+            
+            let mainData = MainWeaponData(weaponInfo: infoItem, container: splatana)
+            
+            return mainData
+            
+        case .splatling:
+            let splatling = try service.decode(
+                Splatling.self,
+                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+            
+            let infoItem = mainInfo.getItem(for: weapon)!
+            
+            let mainData = MainWeaponData(weaponInfo: infoItem, container: splatling)
+            
+            return mainData
+            
+        case .stringer:
+            let stringer = try service.decode(
+                Stringer.self,
+                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+            
+            let infoItem = mainInfo.getItem(for: weapon)!
+            
+            let mainData = MainWeaponData(weaponInfo: infoItem, container: stringer)
+            
+            return mainData
+        }
         
-        let mainData = MainWeaponData(weaponInfo: infoItem, container: blaster)
-        
-        return mainData
-        
-    case .brella:
-        let brella = try service.decode(
-            Brella.self,
-            from: "Weapon\(weapon.fileName()).game__GameParameterTable")
-        
-        let infoItem = mainInfo.getItem(for: weapon)!
-        
-        let mainData = MainWeaponData(weaponInfo: infoItem, container: brella)
-        
-        return mainData
-        
-    case .brush:
-        let brush = try service.decode(
-            Brush.self,
-            from: "Weapon\(weapon.fileName()).game__GameParameterTable")
-        
-        let infoItem = mainInfo.getItem(for: weapon)!
-        
-        let mainData = MainWeaponData(weaponInfo: infoItem, container: brush)
-        
-        return mainData
-        
-    case .charger:
-        let charger = try service.decode(
-            Charger.self,
-            from: "Weapon\(weapon.fileName()).game__GameParameterTable")
-        
-        let infoItem = mainInfo.getItem(for: weapon)!
-        
-        let mainData = MainWeaponData(weaponInfo: infoItem, container: charger)
-        
-        return mainData
-        
-    case .dualie:
-        let dualie = try service.decode(
-            Dualie.self,
-            from: "Weapon\(weapon.fileName()).game__GameParameterTable")
-        
-        let infoItem = mainInfo.getItem(for: weapon)!
-        
-        let mainData = MainWeaponData(weaponInfo: infoItem, container: dualie)
-        
-        return mainData
-        
-    case .roller:
-        let roller = try service.decode(
-            Roller.self,
-            from: "Weapon\(weapon.fileName()).game__GameParameterTable")
-        
-        let infoItem = mainInfo.getItem(for: weapon)!
-        
-        let mainData = MainWeaponData(weaponInfo: infoItem, container: roller)
-        
-        return mainData
-        
-    case .shooter:
-        let shooter = try service.decode(
-            Shooter.self,
-            from: "Weapon\(weapon.fileName()).game__GameParameterTable")
-        
-        let infoItem = mainInfo.getItem(for: weapon)!
-        
-        let mainData = MainWeaponData(weaponInfo: infoItem, container: shooter)
-        
-        return mainData
-        
-    case .slosher:
-        let slosher = try service.decode(
-            Slosher.self,
-            from: "Weapon\(weapon.fileName()).game__GameParameterTable")
-        
-        let infoItem = mainInfo.getItem(for: weapon)!
-        
-        let mainData = MainWeaponData(weaponInfo: infoItem, container: slosher)
-        
-        return mainData
-        
-    case .splatana:
-        let splatana = try service.decode(
-            Splatana.self,
-            from: "Weapon\(weapon.fileName()).game__GameParameterTable")
-        
-        let infoItem = mainInfo.getItem(for: weapon)!
-        
-        let mainData = MainWeaponData(weaponInfo: infoItem, container: splatana)
-        
-        return mainData
-        
-    case .splatling:
-        let splatling = try service.decode(
-            Splatling.self,
-            from: "Weapon\(weapon.fileName()).game__GameParameterTable")
-        
-        let infoItem = mainInfo.getItem(for: weapon)!
-        
-        let mainData = MainWeaponData(weaponInfo: infoItem, container: splatling)
-        
-        return mainData
-        
-    case .stringer:
-        let stringer = try service.decode(
-            Stringer.self,
-            from: "Weapon\(weapon.fileName()).game__GameParameterTable")
-        
-        let infoItem = mainInfo.getItem(for: weapon)!
-        
-        let mainData = MainWeaponData(weaponInfo: infoItem, container: stringer)
-        
-        return mainData
     }
-
-}
     
     static func getSubData(for weapon: SubWeapon) throws -> SubWeaponData {
         let service = JSONService()
@@ -274,9 +274,9 @@ struct TestHelper {
             
             return subData
         }
-
+        
     }
-
+    
     static func getSpecialData(for weapon: SpecialWeapon) throws -> SpecialWeaponData {
         
         let service = JSONService()
@@ -308,7 +308,7 @@ struct TestHelper {
             
         case .killerWail51:
             let gameParams = try service.decode(KillerWail51.self, from: "WeaponSpMicroLaser.game__GameParameterTable")
-
+            
             return SpecialWeaponData(container: gameParams)
             
         case .krakenRoyale:
@@ -329,7 +329,7 @@ struct TestHelper {
             
         case .tacticooler:
             let gameParams = try service.decode(Tacticooler.self, from: "WeaponSpEnergyStand.game__GameParameterTable")
-
+            
             return SpecialWeaponData(container: gameParams)
             
         case .tentaMissiles:
@@ -361,7 +361,7 @@ struct TestHelper {
             return SpecialWeaponData(container: gameParams)
         }
     }
-
+    
     static func getFullInkTankOptions(for weapon: MainWeapon, with mainInfo: WeaponInfoMain) throws -> [Int : [InkTankOption]] {
         
         guard let mainItem = mainInfo.getItem(for: weapon),
@@ -378,6 +378,24 @@ struct TestHelper {
         } catch {
             return [:]
         }
+    }
+    
+    static func getMainWeaponStats(for weapon: MainWeapon, with mainInfo: WeaponInfoMain) throws -> MainWeaponStats {
+        
+        let data = try TestHelper.getMainData(for: weapon, with: mainInfo)
+        
+        let mainStats = MainWeaponStats(weapon: weapon, ap: AbilityPoints(), data: data)
+        
+        return mainStats
+    }
+    
+    static func getMoveStats(for weapon: MainWeapon, with mainInfo: WeaponInfoMain) throws -> MovementStats {
+        
+        let data = try TestHelper.getMainData(for: weapon, with: mainInfo)
+        
+        let moveStats = MovementStats(ap: AbilityPoints(), gearBuild: GearBuild(), mainData: data)
+        
+        return moveStats
     }
 }
 
@@ -428,5 +446,5 @@ struct Localization: Codable {
         }
     }
     
-
+    
 }

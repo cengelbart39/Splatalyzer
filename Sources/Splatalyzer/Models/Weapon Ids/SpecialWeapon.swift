@@ -71,8 +71,8 @@ public enum SpecialWeapon: String, CaseIterable, Codable, Sendable {
     }
     
     /// Gets file name in relation to `.game__GameParameterTable.json` files for special weapons.
-    func fileName() -> String {
-        return self.rawValue
+    public var fileName: String {
+        return "Weapon\(self.rawValue).game__GameParameterTable"
     }
 }
 

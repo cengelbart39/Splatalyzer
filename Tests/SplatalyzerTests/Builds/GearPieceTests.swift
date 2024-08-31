@@ -5,571 +5,194 @@
 //  Created by Christopher Engelbart on 2/18/24.
 //
 
-import XCTest
+import Testing
 @testable import Splatalyzer
 
-final class GearPieceTests: XCTestCase {
-
-    // MARK: - init(for:)
-    func test_GearPiece_init_slot_headgearOnly() {
-        let head = GearPiece(for: .headgearOnly)
-        XCTAssertEqual(head.main, .none)
-        XCTAssertEqual(head.sub1, .none)
-        XCTAssertEqual(head.sub2, .none)
-        XCTAssertEqual(head.sub3, .none)
-        XCTAssertEqual(head.slot, .headgearOnly)
-    }
-
-    func test_GearPiece_init_slot_clothesOnly() {
-        let head = GearPiece(for: .clothesOnly)
-        XCTAssertEqual(head.main, .none)
-        XCTAssertEqual(head.sub1, .none)
-        XCTAssertEqual(head.sub2, .none)
-        XCTAssertEqual(head.sub3, .none)
-        XCTAssertEqual(head.slot, .clothesOnly)
+struct GearPieceTests {
+    @Test("Default Values", arguments: [
+        AbilityRestriction.none, .headgearOnly, .clothesOnly, .shoesOnly
+    ])
+    func defaultValues(_ restriction: AbilityRestriction) {
+        let piece = GearPiece(for: restriction)
+        #expect(piece.main == .none)
+        #expect(piece.sub1 == .none)
+        #expect(piece.sub2 == .none)
+        #expect(piece.sub3 == .none)
+        #expect(piece.slot == restriction)
     }
     
-    func test_GearPiece_init_slot_shoesOnly() {
-        let head = GearPiece(for: .shoesOnly)
-        XCTAssertEqual(head.main, .none)
-        XCTAssertEqual(head.sub1, .none)
-        XCTAssertEqual(head.sub2, .none)
-        XCTAssertEqual(head.sub3, .none)
-        XCTAssertEqual(head.slot, .shoesOnly)
-    }
-    
-    func test_GearPiece_init_slot_none() {
-        let head = GearPiece(for: .none)
-        XCTAssertEqual(head.main, .none)
-        XCTAssertEqual(head.sub1, .none)
-        XCTAssertEqual(head.sub2, .none)
-        XCTAssertEqual(head.sub3, .none)
-        XCTAssertEqual(head.slot, .none)
-    }
-    
-    // MARK: - isValid()
-    func test_GearPiece_isValid_headgear_true() {
+    @Test("Headgear is Valid", arguments: [
+        Ability.comeback, .lastDitchEffort, .openingGambit, .tenacity, .inkRecoveryUp, .inkResistanceUp, .inkSaverMain, .inkSaverSub, .intensifyAction, .runSpeedUp, .subResistanceUp, .subPowerUp, .swimSpeedUp, .specialPowerUp, .quickRespawn, .quickSuperJump, .none
+    ])
+    func headgearIsValid(with ability: Ability) {
         var gearPiece = GearPiece(for: .headgearOnly)
+        gearPiece.main = ability
         
-        gearPiece.main = .comeback
-        XCTAssertTrue(gearPiece.isValid(), "Comeback")
-        
-        gearPiece.main = .lastDitchEffort
-        XCTAssertTrue(gearPiece.isValid(), "Last-Ditch Effort")
-        
-        gearPiece.main = .openingGambit
-        XCTAssertTrue(gearPiece.isValid(), "Opening Gambit")
-
-        gearPiece.main = .tenacity
-        XCTAssertTrue(gearPiece.isValid(), "Tenacity")
-        
-        gearPiece.main = .inkRecoveryUp
-        XCTAssertTrue(gearPiece.isValid(), "Ink Recovery Up")
-
-        gearPiece.main = .inkResistanceUp
-        XCTAssertTrue(gearPiece.isValid(), "Ink Resistance Up")
-
-        gearPiece.main = .inkSaverMain
-        XCTAssertTrue(gearPiece.isValid(), "Ink Saver Main")
-
-        gearPiece.main = .inkSaverSub
-        XCTAssertTrue(gearPiece.isValid(), "Ink Saver Sub")
-
-        gearPiece.main = .intensifyAction
-        XCTAssertTrue(gearPiece.isValid(), "Intensify Action")
-
-        gearPiece.main = .runSpeedUp
-        XCTAssertTrue(gearPiece.isValid(), "Run Speed Up")
-
-        gearPiece.main = .subResistanceUp
-        XCTAssertTrue(gearPiece.isValid(), "Sub Resistance Up")
-
-        gearPiece.main = .subPowerUp
-        XCTAssertTrue(gearPiece.isValid(), "Sub Power Up")
-
-        gearPiece.main = .swimSpeedUp
-        XCTAssertTrue(gearPiece.isValid(), "Swim Speed Up")
-
-        gearPiece.main = .specialChargeUp
-        XCTAssertTrue(gearPiece.isValid(), "Special Charge Up")
-
-        gearPiece.main = .specialPowerUp
-        XCTAssertTrue(gearPiece.isValid(), "Specail Power Up")
-
-        gearPiece.main = .quickRespawn
-        XCTAssertTrue(gearPiece.isValid(), "Quick Respawn")
-
-        gearPiece.main = .quickSuperJump
-        XCTAssertTrue(gearPiece.isValid(), "Quick Super Jump")
-        
-        gearPiece.main = .none
-        XCTAssertTrue(gearPiece.isValid(), "None")
+        #expect(gearPiece.isValid())
     }
     
-    func test_GearPiece_isValid_headgear_false() {
+    @Test("Headgear is Invalid", arguments: [
+        Ability.abilityDoubler, .haunt, .ninjaSquid, .respawnPunisher, .thermalInk, .dropRoller, .objectShredder, .stealthJump
+    ])
+    func headgearIsInvalid(with ability: Ability) {
         var gearPiece = GearPiece(for: .headgearOnly)
+        gearPiece.main = ability
         
-        gearPiece.main = .abilityDoubler
-        XCTAssertFalse(gearPiece.isValid(), "Ability Doubler")
-        
-        gearPiece.main = .haunt
-        XCTAssertFalse(gearPiece.isValid(), "Haunt")
-        
-        gearPiece.main = .ninjaSquid
-        XCTAssertFalse(gearPiece.isValid(), "Ninja Squid")
-
-        gearPiece.main = .respawnPunisher
-        XCTAssertFalse(gearPiece.isValid(), "Respawn Punisher")
-        
-        gearPiece.main = .thermalInk
-        XCTAssertFalse(gearPiece.isValid(), "Thermal Ink")
-
-        gearPiece.main = .dropRoller
-        XCTAssertFalse(gearPiece.isValid(), "Drop Roller")
-
-        gearPiece.main = .objectShredder
-        XCTAssertFalse(gearPiece.isValid(), "Object Shredder")
-
-        gearPiece.main = .stealthJump
-        XCTAssertFalse(gearPiece.isValid(), "Stealth Jump")
+        #expect(!gearPiece.isValid())
     }
-
-    func test_GearPiece_isValid_clothes_true() {
+    
+    @Test("Clothes is Valid", arguments: [
+        Ability.abilityDoubler, .haunt, .ninjaSquid, .respawnPunisher, .thermalInk, .inkRecoveryUp, .inkResistanceUp, .inkSaverMain, .inkSaverSub, .intensifyAction, .runSpeedUp, .subResistanceUp, .subPowerUp, .swimSpeedUp, .specialPowerUp, .quickRespawn, .quickSuperJump, .none
+    ])
+    func clothesIsValid(with ability: Ability) {
         var gearPiece = GearPiece(for: .clothesOnly)
+        gearPiece.main = ability
         
-        gearPiece.main = .abilityDoubler
-        XCTAssertTrue(gearPiece.isValid(), "Ability Doubler")
-        
-        gearPiece.main = .haunt
-        XCTAssertTrue(gearPiece.isValid(), "Haunt")
-        
-        gearPiece.main = .ninjaSquid
-        XCTAssertTrue(gearPiece.isValid(), "Ninja Squid")
-
-        gearPiece.main = .respawnPunisher
-        XCTAssertTrue(gearPiece.isValid(), "Respawn Punisher")
-        
-        gearPiece.main = .thermalInk
-        XCTAssertTrue(gearPiece.isValid(), "Thermal Ink")
-        
-        gearPiece.main = .inkRecoveryUp
-        XCTAssertTrue(gearPiece.isValid(), "Ink Recovery Up")
-
-        gearPiece.main = .inkResistanceUp
-        XCTAssertTrue(gearPiece.isValid(), "Ink Resistance Up")
-
-        gearPiece.main = .inkSaverMain
-        XCTAssertTrue(gearPiece.isValid(), "Ink Saver Main")
-
-        gearPiece.main = .inkSaverSub
-        XCTAssertTrue(gearPiece.isValid(), "Ink Saver Sub")
-
-        gearPiece.main = .intensifyAction
-        XCTAssertTrue(gearPiece.isValid(), "Intensify Action")
-
-        gearPiece.main = .runSpeedUp
-        XCTAssertTrue(gearPiece.isValid(), "Run Speed Up")
-
-        gearPiece.main = .subResistanceUp
-        XCTAssertTrue(gearPiece.isValid(), "Sub Resistance Up")
-
-        gearPiece.main = .subPowerUp
-        XCTAssertTrue(gearPiece.isValid(), "Sub Power Up")
-
-        gearPiece.main = .swimSpeedUp
-        XCTAssertTrue(gearPiece.isValid(), "Swim Speed Up")
-
-        gearPiece.main = .specialChargeUp
-        XCTAssertTrue(gearPiece.isValid(), "Special Charge Up")
-
-        gearPiece.main = .specialPowerUp
-        XCTAssertTrue(gearPiece.isValid(), "Specail Power Up")
-
-        gearPiece.main = .quickRespawn
-        XCTAssertTrue(gearPiece.isValid(), "Quick Respawn")
-
-        gearPiece.main = .quickSuperJump
-        XCTAssertTrue(gearPiece.isValid(), "Quick Super Jump")
-        
-        gearPiece.main = .none
-        XCTAssertTrue(gearPiece.isValid(), "None")
+        #expect(gearPiece.isValid())
     }
     
-    func test_GearPiece_isValid_clothes_false() {
+    @Test("Clothes is Invalid", arguments: [
+        Ability.comeback, .lastDitchEffort, .openingGambit, .tenacity, .dropRoller, .objectShredder, .stealthJump
+    ])
+    func clothesIsInvalid(with ability: Ability) {
         var gearPiece = GearPiece(for: .clothesOnly)
+        gearPiece.main = ability
         
-        gearPiece.main = .comeback
-        XCTAssertFalse(gearPiece.isValid(), "Comeback")
-        
-        gearPiece.main = .lastDitchEffort
-        XCTAssertFalse(gearPiece.isValid(), "Last-Ditch Effort")
-        
-        gearPiece.main = .openingGambit
-        XCTAssertFalse(gearPiece.isValid(), "Opening Gambit")
-
-        gearPiece.main = .tenacity
-        XCTAssertFalse(gearPiece.isValid(), "Tenacity")
-
-        gearPiece.main = .dropRoller
-        XCTAssertFalse(gearPiece.isValid(), "Drop Roller")
-
-        gearPiece.main = .objectShredder
-        XCTAssertFalse(gearPiece.isValid(), "Object Shredder")
-
-        gearPiece.main = .stealthJump
-        XCTAssertFalse(gearPiece.isValid(), "Stealth Jump")
+        #expect(!gearPiece.isValid())
     }
     
-    func test_GearPiece_isValid_shoes_true() {
+    @Test("Shoes is Valid", arguments: [
+        Ability.dropRoller, .objectShredder, .stealthJump, .inkRecoveryUp, .inkResistanceUp, .inkSaverMain, .inkSaverSub, .intensifyAction, .runSpeedUp, .subResistanceUp, .subPowerUp, .swimSpeedUp, .specialPowerUp, .quickRespawn, .quickSuperJump, .none
+    ])
+    func shoesIsValid(with ability: Ability) {
         var gearPiece = GearPiece(for: .shoesOnly)
+        gearPiece.main = ability
         
-        gearPiece.main = .dropRoller
-        XCTAssertTrue(gearPiece.isValid(), "Drop Roller")
-
-        gearPiece.main = .objectShredder
-        XCTAssertTrue(gearPiece.isValid(), "Object Shredder")
-
-        gearPiece.main = .stealthJump
-        XCTAssertTrue(gearPiece.isValid(), "Stealth Jump")
-        
-        gearPiece.main = .inkRecoveryUp
-        XCTAssertTrue(gearPiece.isValid(), "Ink Recovery Up")
-
-        gearPiece.main = .inkResistanceUp
-        XCTAssertTrue(gearPiece.isValid(), "Ink Resistance Up")
-
-        gearPiece.main = .inkSaverMain
-        XCTAssertTrue(gearPiece.isValid(), "Ink Saver Main")
-
-        gearPiece.main = .inkSaverSub
-        XCTAssertTrue(gearPiece.isValid(), "Ink Saver Sub")
-
-        gearPiece.main = .intensifyAction
-        XCTAssertTrue(gearPiece.isValid(), "Intensify Action")
-
-        gearPiece.main = .runSpeedUp
-        XCTAssertTrue(gearPiece.isValid(), "Run Speed Up")
-
-        gearPiece.main = .subResistanceUp
-        XCTAssertTrue(gearPiece.isValid(), "Sub Resistance Up")
-
-        gearPiece.main = .subPowerUp
-        XCTAssertTrue(gearPiece.isValid(), "Sub Power Up")
-
-        gearPiece.main = .swimSpeedUp
-        XCTAssertTrue(gearPiece.isValid(), "Swim Speed Up")
-
-        gearPiece.main = .specialChargeUp
-        XCTAssertTrue(gearPiece.isValid(), "Special Charge Up")
-
-        gearPiece.main = .specialPowerUp
-        XCTAssertTrue(gearPiece.isValid(), "Specail Power Up")
-
-        gearPiece.main = .quickRespawn
-        XCTAssertTrue(gearPiece.isValid(), "Quick Respawn")
-
-        gearPiece.main = .quickSuperJump
-        XCTAssertTrue(gearPiece.isValid(), "Quick Super Jump")
-        
-        gearPiece.main = .none
-        XCTAssertTrue(gearPiece.isValid(), "None")
+        #expect(gearPiece.isValid())
     }
     
-    func test_GearPiece_isValid_shoes_false() {
+    @Test("Shoes is Invalid", arguments: [
+        Ability.comeback, .lastDitchEffort, .openingGambit, .tenacity, .abilityDoubler, .haunt, .ninjaSquid, .respawnPunisher, .thermalInk
+    ])
+    func shoesIsInvalid(with ability: Ability) {
         var gearPiece = GearPiece(for: .shoesOnly)
+        gearPiece.main = ability
         
-        gearPiece.main = .comeback
-        XCTAssertFalse(gearPiece.isValid(), "Comeback")
-        
-        gearPiece.main = .lastDitchEffort
-        XCTAssertFalse(gearPiece.isValid(), "Last-Ditch Effort")
-        
-        gearPiece.main = .openingGambit
-        XCTAssertFalse(gearPiece.isValid(), "Opening Gambit")
-
-        gearPiece.main = .tenacity
-        XCTAssertFalse(gearPiece.isValid(), "Tenacity")
-        
-        gearPiece.main = .abilityDoubler
-        XCTAssertFalse(gearPiece.isValid(), "Ability Doubler")
-        
-        gearPiece.main = .haunt
-        XCTAssertFalse(gearPiece.isValid(), "Haunt")
-        
-        gearPiece.main = .ninjaSquid
-        XCTAssertFalse(gearPiece.isValid(), "Ninja Squid")
-
-        gearPiece.main = .respawnPunisher
-        XCTAssertFalse(gearPiece.isValid(), "Respawn Punisher")
-        
-        gearPiece.main = .thermalInk
-        XCTAssertFalse(gearPiece.isValid(), "Thermal Ink")
+        #expect(!gearPiece.isValid())
     }
     
-    func test_GearPiece_isValid_none_false() {
+    @Test("None is Invalid", arguments: Ability.allCases)
+    func noneIsInvalid(with ability: Ability) {
         var gearPiece = GearPiece(for: .none)
+        gearPiece.main = ability
         
-        gearPiece.main = .comeback
-        XCTAssertFalse(gearPiece.isValid(), "Comeback")
-        
-        gearPiece.main = .lastDitchEffort
-        XCTAssertFalse(gearPiece.isValid(), "Last-Ditch Effort")
-        
-        gearPiece.main = .openingGambit
-        XCTAssertFalse(gearPiece.isValid(), "Opening Gambit")
-
-        gearPiece.main = .tenacity
-        XCTAssertFalse(gearPiece.isValid(), "Tenacity")
-        
-        gearPiece.main = .abilityDoubler
-        XCTAssertFalse(gearPiece.isValid(), "Ability Doubler")
-        
-        gearPiece.main = .haunt
-        XCTAssertFalse(gearPiece.isValid(), "Haunt")
-        
-        gearPiece.main = .ninjaSquid
-        XCTAssertFalse(gearPiece.isValid(), "Ninja Squid")
-
-        gearPiece.main = .respawnPunisher
-        XCTAssertFalse(gearPiece.isValid(), "Respawn Punisher")
-        
-        gearPiece.main = .thermalInk
-        XCTAssertFalse(gearPiece.isValid(), "Thermal Ink")
-        
-        gearPiece.main = .dropRoller
-        XCTAssertFalse(gearPiece.isValid(), "Drop Roller")
-
-        gearPiece.main = .objectShredder
-        XCTAssertFalse(gearPiece.isValid(), "Object Shredder")
-
-        gearPiece.main = .stealthJump
-        XCTAssertFalse(gearPiece.isValid(), "Stealth Jump")
-        
-        gearPiece.main = .inkRecoveryUp
-        XCTAssertFalse(gearPiece.isValid(), "Ink Recovery Up")
-
-        gearPiece.main = .inkResistanceUp
-        XCTAssertFalse(gearPiece.isValid(), "Ink Resistance Up")
-
-        gearPiece.main = .inkSaverMain
-        XCTAssertFalse(gearPiece.isValid(), "Ink Saver Main")
-
-        gearPiece.main = .inkSaverSub
-        XCTAssertFalse(gearPiece.isValid(), "Ink Saver Sub")
-
-        gearPiece.main = .intensifyAction
-        XCTAssertFalse(gearPiece.isValid(), "Intensify Action")
-
-        gearPiece.main = .runSpeedUp
-        XCTAssertFalse(gearPiece.isValid(), "Run Speed Up")
-
-        gearPiece.main = .subResistanceUp
-        XCTAssertFalse(gearPiece.isValid(), "Sub Resistance Up")
-
-        gearPiece.main = .subPowerUp
-        XCTAssertFalse(gearPiece.isValid(), "Sub Power Up")
-
-        gearPiece.main = .swimSpeedUp
-        XCTAssertFalse(gearPiece.isValid(), "Swim Speed Up")
-
-        gearPiece.main = .specialChargeUp
-        XCTAssertFalse(gearPiece.isValid(), "Special Charge Up")
-
-        gearPiece.main = .specialPowerUp
-        XCTAssertFalse(gearPiece.isValid(), "Specail Power Up")
-
-        gearPiece.main = .quickRespawn
-        XCTAssertFalse(gearPiece.isValid(), "Quick Respawn")
-
-        gearPiece.main = .quickSuperJump
-        XCTAssertFalse(gearPiece.isValid(), "Quick Super Jump")
-        
-        gearPiece.main = .none
-        XCTAssertFalse(gearPiece.isValid(), "None")
+        #expect(!gearPiece.isValid())
     }
     
-    // MARK: - toArray()
-    func test_GearPiece_toArray() {
+    @Test func toArray() throws {
         let gearPiece = GearPiece(main: .swimSpeedUp, sub1: .specialPowerUp, sub2: .swimSpeedUp, sub3: .specialPowerUp, for: .headgearOnly)
         
         let array = gearPiece.toArray()
+        try #require(array.count == 4)
         
-        XCTAssertEqual(array.count, 4)
-        XCTAssertEqual(array[0], .swimSpeedUp)
-        XCTAssertEqual(array[1], .specialPowerUp)
-        XCTAssertEqual(array[2], .swimSpeedUp)
-        XCTAssertEqual(array[3], .specialPowerUp)
+        #expect(array[0] == .swimSpeedUp)
+        #expect(array[1] == .specialPowerUp)
+        #expect(array[2] == .swimSpeedUp)
+        #expect(array[3] == .specialPowerUp)
     }
     
-    // MARK: - toAbilityPoints()
-    func test_GearPiece_toAbilityPoints_exclusive() {
-        let gearPiece = GearPiece(
+    @Test func pieceAPExclusive() throws {
+        let piece = GearPiece(
             main: .ninjaSquid,
             sub1: .quickSuperJump,
             sub2: .swimSpeedUp,
             sub3: .swimSpeedUp,
             for: .clothesOnly)
         
-        let ap = gearPiece.toAbilityPoints()
-
-        XCTAssertNil(ap[.ninjaSquid])
-        XCTAssertEqual(ap[.quickSuperJump], 3)
-        XCTAssertEqual(ap[.swimSpeedUp], 6)
+        let ap = piece.toAbilityPoints()
+        try #require(!ap.isEmpty)
+        
+        #expect(ap[.ninjaSquid] == nil)
+        #expect(ap[.quickSuperJump] == 3)
+        #expect(ap[.swimSpeedUp] == 6)
     }
     
-    func test_GearPiece_toAbilityPoints_nonExclusive() {
-        let gearPiece = GearPiece(
+    @Test func pieceAPNonExclusive() throws {
+        let piece = GearPiece(
             main: .swimSpeedUp,
             sub1: .specialPowerUp,
             sub2: .swimSpeedUp,
             sub3: .specialPowerUp,
             for: .headgearOnly)
         
-        let ap = gearPiece.toAbilityPoints()
-
-        XCTAssertEqual(ap[.swimSpeedUp], 13)
-        XCTAssertEqual(ap[.specialPowerUp], 6)
+        let ap = piece.toAbilityPoints()
+        try #require(!ap.isEmpty)
+        
+        #expect(ap[.specialPowerUp] == 6)
+        #expect(ap[.swimSpeedUp] == 13)
     }
     
-    func test_GearPiece_toAbilityPoints_abilityDoubler() {
-        let gearPiece = GearPiece(
+    @Test func pieceAPAbilityDoubler() throws {
+        let piece = GearPiece(
             main: .abilityDoubler,
             sub1: .specialPowerUp,
             sub2: .swimSpeedUp,
             sub3: .specialPowerUp,
-            for: .headgearOnly)
+            for: .clothesOnly)
         
-        let ap = gearPiece.toAbilityPoints()
-
-        XCTAssertEqual(ap[.swimSpeedUp], 6)
-        XCTAssertEqual(ap[.specialPowerUp], 12)
+        let ap = piece.toAbilityPoints()
+        try #require(!ap.isEmpty)
+        
+        #expect(ap[.specialPowerUp] == 12)
+        #expect(ap[.swimSpeedUp] == 6)
     }
     
-    // MARK: - specialEffect(ldeIntensity:)
-    func test_GearPiece_specialEffect_dropRoller() {
-        var gearPiece = GearPiece(for: .shoesOnly)
-        gearPiece.main = .dropRoller
+    @Test("Has Special Effect", arguments: zip(
+        [Ability.dropRoller, .openingGambit, .comeback],
+        [AbilitySpecialEffect.dropRoller, .openingGambit, .comeBack]
+    ))
+    func hasSpecialEffect(from ability: Ability, to effect: AbilitySpecialEffect) {
+        var gearPiece = GearPiece(for: ability.restriction)
+        gearPiece.main = ability
         
-        let effect = gearPiece.specialEffect()
-        XCTAssertEqual(effect, .dropRoller)
+        let spEffect = gearPiece.specialEffect()
+        #expect(spEffect == effect)
     }
     
-    func test_GearPiece_specialEffect_openingGambit() {
-        var gearPiece = GearPiece(for: .headgearOnly)
-        gearPiece.main = .openingGambit
-        
-        let effect = gearPiece.specialEffect()
-        XCTAssertEqual(effect, .openingGambit)
-    }
-    
-    func test_GearPiece_specialEffect_comeBack() {
-        var gearPiece = GearPiece(for: .headgearOnly)
-        gearPiece.main = .comeback
-        
-        let effect = gearPiece.specialEffect()
-        XCTAssertEqual(effect, .comeBack)
-    }
-    
-    func test_GearPiece_specialEffect_lastDitchEffort() {
+    @Test("Has LDE Special Effect", arguments: [0, 21])
+    func hasLDESpecialEffect(_ intensity: Int) {
         var gearPiece = GearPiece(for: .headgearOnly)
         gearPiece.main = .lastDitchEffort
         
-        let effect0 = gearPiece.specialEffect()
-        XCTAssertEqual(effect0, .lastDitchEffort(0))
-        
-        let effect21 = gearPiece.specialEffect(ldeIntensity: 21)
-        XCTAssertEqual(effect21, .lastDitchEffort(21))
+        let spEffect = gearPiece.specialEffect(ldeIntensity: intensity)
+        #expect(spEffect == .lastDitchEffort(intensity))
     }
     
-    func test_GearPiece_specialEffect_nil() {
+    @Test("Has No Special Effect", arguments: [
+        Ability.abilityDoubler, .haunt, .ninjaSquid, .respawnPunisher, .thermalInk, .objectShredder, .stealthJump, .inkRecoveryUp, .inkResistanceUp, .inkSaverMain, .inkSaverSub, .intensifyAction, .runSpeedUp, .subResistanceUp, .subPowerUp, .swimSpeedUp, .specialSaver, .specialChargeUp, .specialPowerUp, .quickRespawn, .quickSuperJump, .none
+    ])
+    func hasNoSpecialEffect(_ ablity: Ability) {
         var gearPiece = GearPiece(for: .none)
+        gearPiece.main = ablity
         
-        gearPiece.main = .tenacity
-        XCTAssertNil(gearPiece.specialEffect())
-        
-        gearPiece.main = .abilityDoubler
-        XCTAssertNil(gearPiece.specialEffect())
-        
-        gearPiece.main = .haunt
-        XCTAssertNil(gearPiece.specialEffect())
-        
-        gearPiece.main = .ninjaSquid
-        XCTAssertNil(gearPiece.specialEffect())
-        
-        gearPiece.main = .respawnPunisher
-        XCTAssertNil(gearPiece.specialEffect())
-        
-        gearPiece.main = .thermalInk
-        XCTAssertNil(gearPiece.specialEffect())
-        
-        gearPiece.main = .objectShredder
-        XCTAssertNil(gearPiece.specialEffect())
-        
-        gearPiece.main = .stealthJump
-        XCTAssertNil(gearPiece.specialEffect())
-        
-        gearPiece.main = .none
-        XCTAssertNil(gearPiece.specialEffect())
-        
-        gearPiece.main = .inkRecoveryUp
-        XCTAssertNil(gearPiece.specialEffect())
-        
-        gearPiece.main = .inkResistanceUp
-        XCTAssertNil(gearPiece.specialEffect())
-        
-        gearPiece.main = .inkSaverMain
-        XCTAssertNil(gearPiece.specialEffect())
-        
-        gearPiece.main = .inkSaverSub
-        XCTAssertNil(gearPiece.specialEffect())
-        
-        gearPiece.main = .intensifyAction
-        XCTAssertNil(gearPiece.specialEffect())
-        
-        gearPiece.main = .runSpeedUp
-        XCTAssertNil(gearPiece.specialEffect())
-        
-        gearPiece.main = .subResistanceUp
-        XCTAssertNil(gearPiece.specialEffect())
-        
-        gearPiece.main = .subPowerUp
-        XCTAssertNil(gearPiece.specialEffect())
-        
-        gearPiece.main = .swimSpeedUp
-        XCTAssertNil(gearPiece.specialEffect())
-        
-        gearPiece.main = .specialSaver
-        XCTAssertNil(gearPiece.specialEffect())
-        
-        gearPiece.main = .specialChargeUp
-        XCTAssertNil(gearPiece.specialEffect())
-        
-        gearPiece.main = .specialPowerUp
-        XCTAssertNil(gearPiece.specialEffect())
-        
-        gearPiece.main = .quickRespawn
-        XCTAssertNil(gearPiece.specialEffect())
-        
-        gearPiece.main = .quickSuperJump
-        XCTAssertNil(gearPiece.specialEffect())
+        #expect(gearPiece.specialEffect() == nil)
     }
     
-    // MARK: - hasAbility()
-    func test_GearPiece_hasAbility_true() {
+    @Test("Has Ability", arguments: [
+        Ability.swimSpeedUp, .inkSaverMain, .runSpeedUp, .specialSaver
+    ])
+    func hasAbility(_ ability: Ability) {
         let gearPiece = GearPiece(main: .swimSpeedUp, sub1: .inkSaverMain, sub2: .runSpeedUp, sub3: .specialSaver, for: .shoesOnly)
-        
-        XCTAssertTrue(gearPiece.hasAbility(.swimSpeedUp))
-        XCTAssertTrue(gearPiece.hasAbility(.inkSaverMain))
-        XCTAssertTrue(gearPiece.hasAbility(.runSpeedUp))
-        XCTAssertTrue(gearPiece.hasAbility(.specialSaver))
+
+        #expect(gearPiece.hasAbility(ability))
     }
     
-    func test_GearPiece_hasAbility_false() {
+    @Test("Not Have Ability", arguments: [
+        Ability.comeback, .subPowerUp, .specialChargeUp, .inkRecoveryUp
+    ])
+    func notHaveAbility(_ ability: Ability) {
         let gearPiece = GearPiece(main: .swimSpeedUp, sub1: .inkSaverMain, sub2: .runSpeedUp, sub3: .specialSaver, for: .shoesOnly)
-        
-        XCTAssertFalse(gearPiece.hasAbility(.comeback))
-        XCTAssertFalse(gearPiece.hasAbility(.subPowerUp))
-        XCTAssertFalse(gearPiece.hasAbility(.specialChargeUp))
-        XCTAssertFalse(gearPiece.hasAbility(.inkRecoveryUp))
+
+        #expect(!gearPiece.hasAbility(ability))
     }
 }

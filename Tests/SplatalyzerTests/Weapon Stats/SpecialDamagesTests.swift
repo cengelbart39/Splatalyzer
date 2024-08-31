@@ -5,201 +5,123 @@
 //  Created by Christopher Engelbart on 2/27/24.
 //
 
-import XCTest
+import Testing
 @testable import Splatalyzer
 
-final class SpecialDamagesTests: XCTestCase {
+struct SpecialDamagesTests {
     
-    let service = JSONService()
-
-    func test_StatHelper_specialDamages_bigBubbler() throws {
-        
-        let data = try TestHelper.getSpecialData(for: .bigBubbler)
+    @Test("Bomb Normal", arguments: [
+        SpecialWeapon.inkjet, .reefslider, .superChump, .tentaMissiles, .tripleSplashdown, .trizooka, .zipcaster
+    ])
+    func bombNormalDmgs(for weapon: SpecialWeapon) throws {
+        let data = try TestHelper.getSpecialData(for: weapon)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
-        XCTAssertTrue(dmgs.isEmpty)
-    }
-
-    func test_StatHelper_specialDamages_booyahBomb() throws {
+        try #require(!dmgs.isEmpty)
         
-        let data = try TestHelper.getSpecialData(for: .booyahBomb)
-        
-        let dmgs = StatHelper.specialDamages(specialInfo: data)
-        
-        XCTAssertFalse(dmgs.isEmpty)
-        XCTAssertTrue(dmgs.contains(type: .specialTick))
+        #expect(dmgs.contains(type: .bombNormal))
     }
     
-    func test_StatHelper_specialDamages_crabTank() throws {
-
+    @Test("Special Bullet")
+    func specialBulletDmgs() throws {
         let data = try TestHelper.getSpecialData(for: .crabTank)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
-        XCTAssertFalse(dmgs.isEmpty)
-        XCTAssertTrue(dmgs.contains(type: .specialCannon))
-        XCTAssertTrue(dmgs.contains(type: .specialBulletMax))
-        XCTAssertTrue(dmgs.contains(type: .specialBulletMin))
-        XCTAssertTrue(dmgs.contains(type: .specialBump))
+        try #require(!dmgs.isEmpty)
+        
+        #expect(dmgs.contains(type: .specialBulletMax))
+        #expect(dmgs.contains(type: .specialBulletMin))
     }
     
-    func test_StatHelper_specialDamages_inkStorm() throws {
-        
-        let data = try TestHelper.getSpecialData(for: .inkStorm)
-        
-        let dmgs = StatHelper.specialDamages(specialInfo: data)
-        
-        XCTAssertFalse(dmgs.isEmpty)
-        XCTAssertTrue(dmgs.contains(type: .specialTick))
-    }
-
-    func test_StatHelper_specialDamages_inkVac() throws {
-
-        let data =  try TestHelper.getSpecialData(for: .inkVac)
+    @Test("Special Bump")
+    func specialBumpDmgs() throws {
+        let data = try TestHelper.getSpecialData(for: .crabTank)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
-        XCTAssertFalse(dmgs.isEmpty)
-        XCTAssertTrue(dmgs.contains(type: .specialMaxCharge))
-        XCTAssertTrue(dmgs.contains(type: .specialMinCharge))
+        try #require(!dmgs.isEmpty)
+        
+        #expect(dmgs.contains(type: .specialBump))
     }
     
-    func test_StatHelper_specialDamages_inkjet() throws {
-
-        let data =  try TestHelper.getSpecialData(for: .inkjet)
+    @Test("Special Cannon")
+    func specialCannonDmgs() throws {
+        let data = try TestHelper.getSpecialData(for: .crabTank)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
-        XCTAssertFalse(dmgs.isEmpty)
-        XCTAssertTrue(dmgs.contains(type: .bombNormal))
+        try #require(!dmgs.isEmpty)
+        
+        #expect(dmgs.contains(type: .specialCannon))
     }
     
-    func test_StatHelper_specialDamages_killerWail51() throws {
-
-        let data =  try TestHelper.getSpecialData(for: .killerWail51)
+    @Test("Special Charge")
+    func specialChargeDmgs() throws {
+        let data = try TestHelper.getSpecialData(for: .inkVac)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
-        XCTAssertFalse(dmgs.isEmpty)
-        XCTAssertTrue(dmgs.contains(type: .specialTick))
-    }
-
-    func test_StatHelper_specialDamages_krakenRoyale() throws {
-
-        let data =  try TestHelper.getSpecialData(for: .krakenRoyale)
+        try #require(!dmgs.isEmpty)
         
-        let dmgs = StatHelper.specialDamages(specialInfo: data)
-        
-        XCTAssertFalse(dmgs.isEmpty)
-        XCTAssertTrue(dmgs.contains(type: .specialJump))
+        #expect(dmgs.contains(type: .specialMaxCharge))
+        #expect(dmgs.contains(type: .specialMinCharge))
     }
     
-    func test_StatHelper_specialDamages_reefslider() throws {
-        
-        let data =  try TestHelper.getSpecialData(for: .reefslider)
-        
-        let dmgs = StatHelper.specialDamages(specialInfo: data)
-        
-        XCTAssertFalse(dmgs.isEmpty)
-        XCTAssertTrue(dmgs.contains(type: .bombNormal))
-    }
-
-    func test_StatHelper_specialDamages_splattercolorScreen() throws {
-
-        let data =  try TestHelper.getSpecialData(for: .splattercolorScreen)
+    @Test("Special Jump")
+    func specialJumpDmgs() throws {
+        let data = try TestHelper.getSpecialData(for: .krakenRoyale)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
-        XCTAssertTrue(dmgs.isEmpty)
+        try #require(!dmgs.isEmpty)
+        
+        #expect(dmgs.contains(type: .specialJump))
     }
     
-    func test_StatHelper_specialDamages_superChump() throws {
-        
-        let data =  try TestHelper.getSpecialData(for: .superChump)
+    @Test("Special Swing")
+    func specialSwingDmgs() throws {
+        let data = try TestHelper.getSpecialData(for: .ultraStamp)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
-        XCTAssertFalse(dmgs.isEmpty)
-        XCTAssertTrue(dmgs.contains(type: .bombNormal))
+        try #require(!dmgs.isEmpty)
+        
+        #expect(dmgs.contains(type: .specialSwing))
     }
     
-    func test_StatHelper_specialDamages_tacticooler() throws {
-
-        let data =  try TestHelper.getSpecialData(for: .tacticooler)
+    @Test("Special Throw")
+    func specialThrowDmgs() throws {
+        let data = try TestHelper.getSpecialData(for: .ultraStamp)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
-        XCTAssertTrue(dmgs.isEmpty)
-    }
-
-    func test_StatHelper_specialDamages_tentaMissiles() throws {
-
-        let data =  try TestHelper.getSpecialData(for: .tentaMissiles)
+        try #require(!dmgs.isEmpty)
         
-        let dmgs = StatHelper.specialDamages(specialInfo: data)
-        
-        XCTAssertFalse(dmgs.isEmpty)
-        XCTAssertTrue(dmgs.contains(type: .bombNormal))
+        #expect(dmgs.contains(type: .specialThrow))
     }
     
-    func test_StatHelper_specialDamages_tripleInkstrike() throws {
-
-        let data = try TestHelper.getSpecialData(for: .tripleInkstrike)
+    @Test("Special Tick", arguments: [
+        SpecialWeapon.booyahBomb, .inkStorm, .killerWail51
+    ])
+    func specialTickDmgs(for weapon: SpecialWeapon) throws {
+        let data = try TestHelper.getSpecialData(for: weapon)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
-        XCTAssertTrue(dmgs.isEmpty)
+        try #require(!dmgs.isEmpty)
+        
+        #expect(dmgs.contains(type: .specialTick))
     }
 
-    func test_StatHelper_specialDamages_tripleSplashdown() throws {
-
-        let data =  try TestHelper.getSpecialData(for: .tripleSplashdown)
-        
-        let dmgs = StatHelper.specialDamages(specialInfo: data)
-        
-        XCTAssertFalse(dmgs.isEmpty)
-        XCTAssertTrue(dmgs.contains(type: .bombNormal))
-    }
-    
-    func test_StatHelper_specialDamages_trizooka() throws {
-
-        let data =  try TestHelper.getSpecialData(for: .trizooka)
-        
-        let dmgs = StatHelper.specialDamages(specialInfo: data)
-        
-        XCTAssertFalse(dmgs.isEmpty)
-        XCTAssertTrue(dmgs.contains(type: .bombNormal))
-    }
-
-    func test_StatHelper_specialDamages_ultraStamp() throws {
-
-        let data =  try TestHelper.getSpecialData(for: .ultraStamp)
-        
-        let dmgs = StatHelper.specialDamages(specialInfo: data)
-        
-        XCTAssertFalse(dmgs.isEmpty)
-        XCTAssertTrue(dmgs.contains(type: .specialThrow))
-        XCTAssertTrue(dmgs.contains(type: .specialSwing))
-    }
-    
-    func test_StatHelper_specialDamages_waveBreaker() throws {
-
+    @Test("Wave") func waveDmgs() throws {
         let data = try TestHelper.getSpecialData(for: .waveBreaker)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
-        XCTAssertFalse(dmgs.isEmpty)
-        XCTAssertTrue(dmgs.contains(type: .wave))
-    }
-
-    func test_StatHelper_specialDamages_zipcaster() throws {
-
-        let data =  try TestHelper.getSpecialData(for: .zipcaster)
+        try #require(!dmgs.isEmpty)
         
-        let dmgs = StatHelper.specialDamages(specialInfo: data)
-        
-        XCTAssertFalse(dmgs.isEmpty)
-        XCTAssertTrue(dmgs.contains(type: .bombNormal))
+        #expect(dmgs.contains(type: .wave))
     }
 }

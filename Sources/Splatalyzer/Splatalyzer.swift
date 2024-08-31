@@ -348,73 +348,63 @@ public final class Splatalyzer {
     ) throws -> SpecialWeaponData {
         switch weapon {
         case .bigBubbler:
-            let bigBubbler = try service.decode(
-                BigBubbler.self, from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+            let bigBubbler = try service.decode(BigBubbler.self, from: weapon.fileName)
             
             let specialData = SpecialWeaponData(container: bigBubbler)
             
             return specialData
             
         case .booyahBomb:
-            let booyahBomb = try service.decode(
-                BooyahBomb.self, from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+            let booyahBomb = try service.decode(BooyahBomb.self, from: weapon.fileName)
             
             let specialData = SpecialWeaponData(container: booyahBomb)
             
             return specialData
             
         case .crabTank:
-            let crabTank = try service.decode(
-                CrabTank.self, from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+            let crabTank = try service.decode(CrabTank.self, from: weapon.fileName)
             
             let specialData = SpecialWeaponData(container: crabTank)
             
             return specialData
             
         case .inkStorm:
-            let inkStorm = try service.decode(
-                InkStorm.self, from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+            let inkStorm = try service.decode(InkStorm.self, from: weapon.fileName)
             
             let specialData = SpecialWeaponData(container: inkStorm)
             
             return specialData
             
         case .inkVac:
-            let inkVac = try service.decode(
-                InkVac.self, from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+            let inkVac = try service.decode(InkVac.self, from: weapon.fileName)
             
             let specialData = SpecialWeaponData(container: inkVac)
             
             return specialData
             
         case .inkjet:
-            let inkjet = try service.decode(
-                Inkjet.self, from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+            let inkjet = try service.decode(Inkjet.self, from: weapon.fileName)
             
             let specialData = SpecialWeaponData(container: inkjet)
             
             return specialData
             
         case .killerWail51:
-            let killerWail51 = try service.decode(
-                KillerWail51.self, from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+            let killerWail51 = try service.decode(KillerWail51.self, from: weapon.fileName)
             
             let specialData = SpecialWeaponData(container: killerWail51)
             
             return specialData
             
         case .krakenRoyale:
-            let krakenRoyale = try service.decode(
-                KrakenRoyale.self, from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+            let krakenRoyale = try service.decode(KrakenRoyale.self, from: weapon.fileName)
             
             let specialData = SpecialWeaponData(container: krakenRoyale)
             
             return specialData
             
         case .reefslider:
-            let reefslider = try service.decode(
-                Reefslider.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+            let reefslider = try service.decode(Reefslider.self, from: weapon.fileName)
             
             let specialData = SpecialWeaponData(container: reefslider)
             
@@ -423,7 +413,7 @@ public final class Splatalyzer {
         case .splattercolorScreen:
             let splattercolorScreen = try service.decode(
                 SplattercolorScreen.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let specialData = SpecialWeaponData(container: splattercolorScreen)
             
@@ -432,7 +422,7 @@ public final class Splatalyzer {
         case .superChump:
             let superChump = try service.decode(
                 SuperChump.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let specialData = SpecialWeaponData(container: superChump)
             
@@ -441,7 +431,7 @@ public final class Splatalyzer {
         case .tacticooler:
             let tacticooler = try service.decode(
                 Tacticooler.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let specialData = SpecialWeaponData(container: tacticooler)
             
@@ -450,7 +440,7 @@ public final class Splatalyzer {
         case .tentaMissiles:
             let tentaMissiles = try service.decode(
                 TentaMissiles.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let specialData = SpecialWeaponData(container: tentaMissiles)
             
@@ -459,7 +449,7 @@ public final class Splatalyzer {
         case .tripleInkstrike:
             let tripleInkstrike = try service.decode(
                 TripleInkstrike.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let specialData = SpecialWeaponData(container: tripleInkstrike)
             
@@ -468,7 +458,7 @@ public final class Splatalyzer {
         case .tripleSplashdown:
             let tripleSplashdown = try service.decode(
                 TripleSplashdown.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let specialData = SpecialWeaponData(container: tripleSplashdown)
             
@@ -477,7 +467,7 @@ public final class Splatalyzer {
         case .trizooka:
             let trizooka = try service.decode(
                 Trizooka.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let specialData = SpecialWeaponData(container: trizooka)
             
@@ -486,7 +476,7 @@ public final class Splatalyzer {
         case .ultraStamp:
             let ultraStamp = try service.decode(
                 UltraStamp.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let specialData = SpecialWeaponData(container: ultraStamp)
             
@@ -495,7 +485,7 @@ public final class Splatalyzer {
         case .waveBreaker:
             let waveBreaker = try service.decode(
                 WaveBreaker.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let specialData = SpecialWeaponData(container: waveBreaker)
             
@@ -504,7 +494,7 @@ public final class Splatalyzer {
         case .zipcaster:
             let zipcaster = try service.decode(
                 Zipcaster.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let specialData = SpecialWeaponData(container: zipcaster)
             

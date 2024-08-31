@@ -123,9 +123,8 @@ struct DecodingTests {
     // MARK: - Special Weapons
     @Test("Decode Special Weapons", arguments: SpecialWeapon.allCases)
     func decodeSpecialWeapon(_ weapon: SpecialWeapon) {
-        let fileName = "Weapon\(weapon.fileName()).game__GameParameterTable"
         #expect(throws: Never.self, performing: {
-            try service.decode(weapon.modelType, from: fileName)
+            try service.decode(weapon.modelType, from: weapon.fileName)
         })
     }
     
