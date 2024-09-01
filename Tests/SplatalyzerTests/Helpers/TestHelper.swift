@@ -21,7 +21,7 @@ struct TestHelper {
         case .blaster:
             let blaster = try service.decode(
                 Blaster.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let infoItem = mainInfo.getItem(for: weapon)!
             
@@ -32,7 +32,7 @@ struct TestHelper {
         case .brella:
             let brella = try service.decode(
                 Brella.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let infoItem = mainInfo.getItem(for: weapon)!
             
@@ -43,7 +43,7 @@ struct TestHelper {
         case .brush:
             let brush = try service.decode(
                 Brush.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let infoItem = mainInfo.getItem(for: weapon)!
             
@@ -54,7 +54,7 @@ struct TestHelper {
         case .charger:
             let charger = try service.decode(
                 Charger.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let infoItem = mainInfo.getItem(for: weapon)!
             
@@ -65,7 +65,7 @@ struct TestHelper {
         case .dualie:
             let dualie = try service.decode(
                 Dualie.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let infoItem = mainInfo.getItem(for: weapon)!
             
@@ -76,7 +76,7 @@ struct TestHelper {
         case .roller:
             let roller = try service.decode(
                 Roller.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let infoItem = mainInfo.getItem(for: weapon)!
             
@@ -87,7 +87,7 @@ struct TestHelper {
         case .shooter:
             let shooter = try service.decode(
                 Shooter.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let infoItem = mainInfo.getItem(for: weapon)!
             
@@ -98,7 +98,7 @@ struct TestHelper {
         case .slosher:
             let slosher = try service.decode(
                 Slosher.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let infoItem = mainInfo.getItem(for: weapon)!
             
@@ -109,7 +109,7 @@ struct TestHelper {
         case .splatana:
             let splatana = try service.decode(
                 Splatana.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let infoItem = mainInfo.getItem(for: weapon)!
             
@@ -120,7 +120,7 @@ struct TestHelper {
         case .splatling:
             let splatling = try service.decode(
                 Splatling.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let infoItem = mainInfo.getItem(for: weapon)!
             
@@ -131,7 +131,7 @@ struct TestHelper {
         case .stringer:
             let stringer = try service.decode(
                 Stringer.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let infoItem = mainInfo.getItem(for: weapon)!
             
@@ -149,7 +149,7 @@ struct TestHelper {
         case .angleShooter:
             let angleShooter = try service.decode(
                 AngleShooter.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: angleShooter)
             
@@ -158,7 +158,7 @@ struct TestHelper {
         case .autobomb:
             let autobomb = try service.decode(
                 Autobomb.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: autobomb)
             
@@ -167,7 +167,7 @@ struct TestHelper {
         case .burstBomb:
             let burstBomb = try service.decode(
                 BurstBomb.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: burstBomb)
             
@@ -176,7 +176,7 @@ struct TestHelper {
         case .curlingBomb:
             let curlingBomb = try service.decode(
                 CurlingBomb.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: curlingBomb)
             
@@ -185,7 +185,7 @@ struct TestHelper {
         case .fizzyBomb:
             let fizzyBomb = try service.decode(
                 FizzyBomb.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: fizzyBomb)
             
@@ -194,7 +194,7 @@ struct TestHelper {
         case .inkMine:
             let inkMine = try service.decode(
                 InkMine.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: inkMine)
             
@@ -203,7 +203,7 @@ struct TestHelper {
         case .pointSensor:
             let pointSensor = try service.decode(
                 PointSensor.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: pointSensor)
             
@@ -212,7 +212,7 @@ struct TestHelper {
         case .splashWall:
             let splashWall = try service.decode(
                 SplashWall.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: splashWall)
             
@@ -221,7 +221,7 @@ struct TestHelper {
         case .splatBomb:
             let splatBomb = try service.decode(
                 SplatBomb.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: splatBomb)
             
@@ -230,7 +230,7 @@ struct TestHelper {
         case .sprinkler:
             let sprinkler = try service.decode(
                 Sprinkler.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: sprinkler)
             
@@ -239,7 +239,7 @@ struct TestHelper {
         case .squidBeakon:
             let squidBeakon = try service.decode(
                 SquidBeakon.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let playerInfo = try service.decode(Player.self, from: "SplPlayer.game__GameParameterTable")
             
@@ -250,7 +250,7 @@ struct TestHelper {
         case .suctionBomb:
             let suctionBomb = try service.decode(
                 SuctionBomb.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: suctionBomb)
             
@@ -259,7 +259,7 @@ struct TestHelper {
         case .torpedo:
             let torpedo = try service.decode(
                 Torpedo.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: torpedo)
             
@@ -268,7 +268,7 @@ struct TestHelper {
         case .toxicMist:
             let toxicMist = try service.decode(
                 ToxicMist.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: toxicMist)
             
@@ -397,54 +397,4 @@ struct TestHelper {
         
         return moveStats
     }
-}
-
-struct Localization: Codable {
-    let de: Language
-    let en: Language
-    let esUS: Language
-    let esEU: Language
-    let frUS: Language
-    let frEU: Language
-    let it: Language
-    let jp: Language
-    let ko: Language
-    let nl: Language
-    let ru: Language
-    let zhCN: Language
-    let zhTW: Language
-    
-    enum CodingKeys: String, CodingKey {
-        case de = "EUde"
-        case en = "USen"
-        case esUS = "USes"
-        case esEU = "EUes"
-        case frUS = "USfr"
-        case frEU = "EUfr"
-        case it = "EUit"
-        case jp = "JPjp"
-        case ko = "KOko"
-        case nl = "EUnl"
-        case ru = "EUru"
-        case zhCN = "CNzh"
-        case zhTW = "TWzh"
-    }
-    
-    struct Language: Codable {
-        let mainWeapons: [String : String]
-        let subWeapons: [String : String]
-        let specialWeapons: [String : String]
-        let abilities: [String : String]
-        let classes: [String : String]
-        
-        enum CodingKeys: String, CodingKey {
-            case mainWeapons = "CommonMsg/Weapon/WeaponName_Main"
-            case subWeapons = "CommonMsg/Weapon/WeaponName_Sub"
-            case specialWeapons = "CommonMsg/Weapon/WeaponName_Special"
-            case abilities = "CommonMsg/Gear/GearPowerName"
-            case classes = "CommonMsg/Weapon/WeaponTypeName"
-        }
-    }
-    
-    
 }

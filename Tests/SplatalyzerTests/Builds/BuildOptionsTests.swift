@@ -16,7 +16,8 @@ struct BuildOptionsTests {
         self.options = BuildOptions()
     }
     
-    @Test func defaultValues() {
+    @Test("BuildOptions Default Values")
+    func defaultValues() {
         #expect(options.mainWeapon == .rapidBlasterPro)
         #expect(options.gear.headgear.toArray() == [.none, .none, .none, .none])
         #expect(options.gear.clothes.toArray() == [.none, .none, .none, .none])
@@ -37,7 +38,9 @@ struct BuildOptionsTests {
         #expect(!options.isLDEIntensityValid())
     }
     
-    @Test mutating func isGearValid() {
+    
+    @Test("BuildOptions Is Gear Valid")
+    mutating func isGearValid() {
         self.options.gear = GearBuild(
             headgear: GearPiece(
                 main: .swimSpeedUp,
@@ -64,7 +67,8 @@ struct BuildOptionsTests {
         #expect(self.options.isGearValid())
     }
     
-    @Test mutating func isGearInvalid() {
+    @Test("BuildOptions Is Gear Invalid")
+    mutating func isGearInvalid() {
         options.gear = GearBuild(
             headgear: GearPiece(
                 main: .swimSpeedUp,
@@ -91,7 +95,8 @@ struct BuildOptionsTests {
         #expect(!options.isGearValid())
     }
     
-    @Test mutating func buildHasAbility() {
+    @Test("Build Has Ability")
+    mutating func buildHasAbility() {
         options.gear = GearBuild(
             headgear: GearPiece(
                 main: .swimSpeedUp,
@@ -124,7 +129,8 @@ struct BuildOptionsTests {
         #expect(options.hasAbility(.inkSaverSub))
     }
     
-    @Test mutating func buildDoesNotHaveAbility() {
+    @Test("Build Doesn't Have Ability")
+    mutating func buildDoesNotHaveAbility() {
         options.gear = GearBuild(
             headgear: GearPiece(
                 main: .swimSpeedUp,

@@ -13,16 +13,12 @@ struct ShooterDataTests {
     
     let mainInfo = try! JSONService().decode(WeaponInfoMain.self, from: "WeaponInfoMain")
     
-    private func makeFileName(with weapon: MainWeapon) -> String {
-        return "Weapon\(weapon.fileName()).game__GameParameterTable"
-    }
-    
-    @Test(".52 Gal", arguments: [
+    @Test(".52 Gal Data", arguments: [
         WeaponKit(.gal52, .splashWall, .killerWail51),
         WeaponKit(.gal52Deco, .curlingBomb, .splattercolorScreen)
     ])
     func gal52(_ kit: WeaponKit) async throws {
-        let gameParams = try service.decode(Shooter.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Shooter.self, from: kit.main.fileName)
         
         let item = try #require(self.mainInfo.getItem(for: kit.main))
         
@@ -40,12 +36,12 @@ struct ShooterDataTests {
         #expect(data.inkConsume != nil)
     }
     
-    @Test(".96 Gal", arguments: [
+    @Test(".96 Gal Data", arguments: [
         WeaponKit(.gal96, .sprinkler, .inkVac),
         WeaponKit(.gal96Deco, .splashWall, .krakenRoyale)
     ])
     func gal96(_ kit: WeaponKit) async throws {
-        let gameParams = try service.decode(Shooter.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Shooter.self, from: kit.main.fileName)
         
         let item = try #require(self.mainInfo.getItem(for: kit.main))
         
@@ -63,12 +59,12 @@ struct ShooterDataTests {
         #expect(data.inkConsume != nil)
     }
     
-    @Test("Aerospray", arguments: [
+    @Test("Aerospray Data", arguments: [
         WeaponKit(.aerosprayMG, .fizzyBomb, .reefslider),
         WeaponKit(.aerosprayRG, .sprinkler, .booyahBomb)
     ])
     func aerospray(_ kit: WeaponKit) async throws {
-        let gameParams = try service.decode(Shooter.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Shooter.self, from: kit.main.fileName)
         
         let item = try #require(self.mainInfo.getItem(for: kit.main))
         
@@ -87,12 +83,12 @@ struct ShooterDataTests {
         #expect(data.inkConsume != nil)
     }
     
-    @Test("H-3 Nozzlenose", arguments: [
+    @Test("H-3 Nozzlenose Data", arguments: [
         WeaponKit(.h3Nozzlenose, .pointSensor, .tacticooler),
         WeaponKit(.h3NozzlenoseD, .splashWall, .bigBubbler)
     ])
     func h3Nozzlenose(_ kit: WeaponKit) async throws {
-        let gameParams = try service.decode(Shooter.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Shooter.self, from: kit.main.fileName)
         
         let item = try #require(self.mainInfo.getItem(for: kit.main))
         
@@ -112,12 +108,12 @@ struct ShooterDataTests {
         #expect(data.inkConsume != nil)
     }
     
-    @Test("Jet Squelcher", arguments: [
+    @Test("Jet Squelcher Data", arguments: [
         WeaponKit(.jetSquelcher, .angleShooter, .inkVac),
         WeaponKit(.customJetSquelcher, .toxicMist, .inkStorm)
     ])
     func jetSquelcher(_ kit: WeaponKit) async throws {
-        let gameParams = try service.decode(Shooter.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Shooter.self, from: kit.main.fileName)
         
         let item = try #require(self.mainInfo.getItem(for: kit.main))
         
@@ -135,12 +131,12 @@ struct ShooterDataTests {
         #expect(data.inkConsume != nil)
     }
     
-    @Test("L-3 Nozzlenose", arguments: [
+    @Test("L-3 Nozzlenose Data", arguments: [
         WeaponKit(.l3Nozzlenose, .curlingBomb, .crabTank),
         WeaponKit(.l3NozzlenoseD, .burstBomb, .ultraStamp)
     ])
     func l3Nozzlenose(_ kit: WeaponKit) async throws {
-        let gameParams = try service.decode(Shooter.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Shooter.self, from: kit.main.fileName)
         
         let item = try #require(self.mainInfo.getItem(for: kit.main))
         
@@ -160,12 +156,12 @@ struct ShooterDataTests {
         #expect(data.inkConsume != nil)
     }
     
-    @Test("N-ZAP", arguments: [
+    @Test("N-ZAP Data", arguments: [
         WeaponKit(.nzap85, .suctionBomb, .tacticooler),
         WeaponKit(.nzap89, .autobomb, .superChump)
     ])
     func nzap(_ kit: WeaponKit) async throws {
-        let gameParams = try service.decode(Shooter.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Shooter.self, from: kit.main.fileName)
         
         let item = try #require(self.mainInfo.getItem(for: kit.main))
         
@@ -183,12 +179,12 @@ struct ShooterDataTests {
         #expect(data.inkConsume != nil)
     }
     
-    @Test("Splash-o-matic", arguments: [
+    @Test("Splash-o-matic Data", arguments: [
         WeaponKit(.splashomatic, .burstBomb, .crabTank),
         WeaponKit(.neoSplashomatic, .suctionBomb, .tripleInkstrike)
     ])
     func splashomatic(_ kit: WeaponKit) async throws {
-        let gameParams = try service.decode(Shooter.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Shooter.self, from: kit.main.fileName)
         
         let item = try #require(self.mainInfo.getItem(for: kit.main))
         
@@ -206,7 +202,7 @@ struct ShooterDataTests {
         #expect(data.inkConsume != nil)
     }
     
-    @Test("Splattershot", arguments: [
+    @Test("Splattershot Data", arguments: [
         WeaponKit(.splattershot, .suctionBomb, .trizooka),
         WeaponKit(.tentatekSplattershot, .splatBomb, .tripleInkstrike),
         WeaponKit(.heroShotReplica, .suctionBomb, .trizooka),
@@ -214,7 +210,7 @@ struct ShooterDataTests {
         WeaponKit(.octoShotReplica, .splatBomb, .tripleInkstrike)
     ])
     func splattershot(_ kit: WeaponKit) async throws {
-        let gameParams = try service.decode(Shooter.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Shooter.self, from: kit.main.fileName)
         
         let item = try #require(self.mainInfo.getItem(for: kit.main))
         
@@ -232,12 +228,12 @@ struct ShooterDataTests {
         #expect(data.inkConsume != nil)
     }
     
-    @Test("Splattershot Jr.", arguments: [
+    @Test("Splattershot Jr. Data", arguments: [
         WeaponKit(.splattershotJr, .splatBomb, .bigBubbler),
         WeaponKit(.customSplattershotJr, .torpedo, .waveBreaker)
     ])
     func splattershotJr(_ kit: WeaponKit) async throws {
-        let gameParams = try service.decode(Shooter.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Shooter.self, from: kit.main.fileName)
         
         let item = try #require(self.mainInfo.getItem(for: kit.main))
         
@@ -256,12 +252,12 @@ struct ShooterDataTests {
         #expect(data.inkConsume != nil)
     }
     
-    @Test("Splattershot Nova", arguments: [
+    @Test("Splattershot Nova Data", arguments: [
         WeaponKit(.splattershotNova, .pointSensor, .killerWail51),
         WeaponKit(.annakiSplattershotNova, .inkMine, .inkjet)
     ])
     func splattershotNova(_ kit: WeaponKit) async throws {
-        let gameParams = try service.decode(Shooter.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Shooter.self, from: kit.main.fileName)
         
         let item = try #require(self.mainInfo.getItem(for: kit.main))
         
@@ -279,12 +275,12 @@ struct ShooterDataTests {
         #expect(data.inkConsume != nil)
     }
     
-    @Test("Splattershot Pro", arguments: [
+    @Test("Splattershot Pro Data", arguments: [
         WeaponKit(.splattershotPro, .angleShooter, .crabTank),
         WeaponKit(.forgeSplattershotPro, .suctionBomb, .booyahBomb)
     ])
     func splattershotPro(_ kit: WeaponKit) async throws {
-        let gameParams = try service.decode(Shooter.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Shooter.self, from: kit.main.fileName)
         
         let item = try #require(self.mainInfo.getItem(for: kit.main))
         
@@ -302,12 +298,12 @@ struct ShooterDataTests {
         #expect(data.inkConsume != nil)
     }
     
-    @Test("Sploosh-o-matic", arguments: [
+    @Test("Sploosh-o-matic Data", arguments: [
         WeaponKit(.splooshomatic, .curlingBomb, .ultraStamp),
         WeaponKit(.neoSplooshomatic, .squidBeakon, .killerWail51)
     ])
     func splooshomatic(_ kit: WeaponKit) async throws {
-        let gameParams = try service.decode(Shooter.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Shooter.self, from: kit.main.fileName)
         
         let item = try #require(self.mainInfo.getItem(for: kit.main))
         
@@ -326,12 +322,12 @@ struct ShooterDataTests {
         #expect(data.inkConsume != nil)
     }
     
-    @Test("Squeezer", arguments: [
+    @Test("Squeezer Data", arguments: [
         WeaponKit(.squeezer, .splashWall, .trizooka),
         WeaponKit(.foilSqueezer, .autobomb, .splattercolorScreen)
     ])
     func squeezer(_ kit: WeaponKit) async throws {
-        let gameParams = try service.decode(Shooter.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Shooter.self, from: kit.main.fileName)
         
         let item = try #require(self.mainInfo.getItem(for: kit.main))
         

@@ -14,109 +14,86 @@ struct DecodingTests {
     // MARK: - Main Weapons
     @Test("Decode Blasters", arguments: MainWeapon.vanillaWeapons(of: .blaster))
     func decodeBlaster(_ weapon: MainWeapon) {
-        let fileName = "Weapon\(weapon.fileName()).game__GameParameterTable"
-        
         #expect(throws: Never.self, performing: {
-            try service.decode(Blaster.self, from: fileName)
+            try service.decode(Blaster.self, from: weapon.fileName)
         })
     }
     
     @Test("Decode Brellas", arguments: MainWeapon.vanillaWeapons(of: .brella))
     func decodeBrella(_ weapon: MainWeapon) {
-        let fileName = "Weapon\(weapon.fileName()).game__GameParameterTable"
-        
         #expect(throws: Never.self, performing: {
-            try service.decode(Brella.self, from: fileName)
+            try service.decode(Brella.self, from: weapon.fileName)
         })
     }
     
     @Test("Decode Brushes", arguments: MainWeapon.vanillaWeapons(of: .brush))
     func decodeBrush(_ weapon: MainWeapon) {
-        let fileName = "Weapon\(weapon.fileName()).game__GameParameterTable"
-
         #expect(throws: Never.self, performing: {
-            try service.decode(Brush.self, from: fileName)
+            try service.decode(Brush.self, from: weapon.fileName)
         })
     }
     
     @Test("Decode Chargers", arguments: MainWeapon.vanillaWeapons(of: .charger))
     func decodeCharger(_ weapon: MainWeapon) {
-        let fileName = "Weapon\(weapon.fileName()).game__GameParameterTable"
-        
         #expect(throws: Never.self, performing: {
-            try service.decode(Charger.self, from: fileName)
+            try service.decode(Charger.self, from: weapon.fileName)
         })
     }
     
     @Test("Decode Dualies", arguments: MainWeapon.vanillaWeapons(of: .dualie))
     func decodeDualie(_ weapon: MainWeapon) {
-        let fileName = "Weapon\(weapon.fileName()).game__GameParameterTable"
-        
         #expect(throws: Never.self, performing: {
-            try service.decode(Dualie.self, from: fileName)
+            try service.decode(Dualie.self, from: weapon.fileName)
         })
     }
     
     @Test("Decode Rollers", arguments: MainWeapon.vanillaWeapons(of: .roller))
     func decodeRoller(_ weapon: MainWeapon) {
-        let fileName = "Weapon\(weapon.fileName()).game__GameParameterTable"
-        
         #expect(throws: Never.self, performing: {
-            try service.decode(Roller.self, from: fileName)
+            try service.decode(Roller.self, from: weapon.fileName)
         })
     }
     
     @Test("Decode Shooters", arguments: MainWeapon.vanillaWeapons(of: .shooter))
     func decodeShooter(_ weapon: MainWeapon) {
-        let fileName = "Weapon\(weapon.fileName()).game__GameParameterTable"
-        
         #expect(throws: Never.self, performing: {
-            try service.decode(Shooter.self, from: fileName)
+            try service.decode(Shooter.self, from: weapon.fileName)
         })
     }
     
     @Test("Decode Sloshers", arguments: MainWeapon.vanillaWeapons(of: .slosher))
     func decodeSlosher(_ weapon: MainWeapon) {
-        let fileName = "Weapon\(weapon.fileName()).game__GameParameterTable"
-        
         #expect(throws: Never.self, performing: {
-            try service.decode(Slosher.self, from: fileName)
+            try service.decode(Slosher.self, from: weapon.fileName)
         })
     }
     
     @Test("Decode Splatanas", arguments: MainWeapon.vanillaWeapons(of: .splatana))
     func decodeSplatana(_ weapon: MainWeapon) {
-        let fileName = "Weapon\(weapon.fileName()).game__GameParameterTable"
-        
         #expect(throws: Never.self, performing: {
-            try service.decode(Splatana.self, from: fileName)
+            try service.decode(Splatana.self, from: weapon.fileName)
         })
     }
     
     @Test("Decode Splatlings", arguments: MainWeapon.vanillaWeapons(of: .splatling))
     func decodeSplatling(_ weapon: MainWeapon) {
-        let fileName = "Weapon\(weapon.fileName()).game__GameParameterTable"
-        
         #expect(throws: Never.self, performing: {
-            try service.decode(Splatling.self, from: fileName)
+            try service.decode(Splatling.self, from: weapon.fileName)
         })
     }
     
     @Test("Decode Stringer", arguments: MainWeapon.vanillaWeapons(of: .stringer))
     func decodeMainWeaponer(_ weapon: MainWeapon) {
-        let fileName = "Weapon\(weapon.fileName()).game__GameParameterTable"
-        
         #expect(throws: Never.self, performing: {
-            try service.decode(Stringer.self, from: fileName)
+            try service.decode(Stringer.self, from: weapon.fileName)
         })
     }
     
     // MARK: - Sub Weapons
     @Test("Decode Sub Weapons", arguments: SubWeapon.allCases)
     func decodeSubWeapon(_ weapon: SubWeapon) {
-        let fileName = "Weapon\(weapon.fileName()).game__GameParameterTable"
         #expect(throws: Never.self, performing: {
-            try service.decode(weapon.modelType, from: fileName)
+            try service.decode(weapon.modelType, from: weapon.fileName)
         })
     }
     

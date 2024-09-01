@@ -10,7 +10,8 @@ import Testing
 
 struct GearBuildTests {
     
-    @Test func defaultProperties() {
+    @Test("GearBuild Default Values")
+    func defaultProperties() {
         let build = GearBuild()
         
         #expect(build.headgear.slot == .headgearOnly)
@@ -33,7 +34,8 @@ struct GearBuildTests {
         #expect(build.shoes.sub3 == .none)
     }
     
-    @Test func gearIsValid() {
+    @Test("GearBuild is Valid")
+    func gearIsValid() {
         let empty = GearBuild()
         #expect(empty.isValid())
         
@@ -63,7 +65,8 @@ struct GearBuildTests {
         #expect(build.isValid())
     }
     
-    @Test func gearIsNotValid() {
+    @Test("GearBuild is Invalid")
+    func gearIsNotValid() {
         let build = GearBuild(
             headgear: GearPiece(
                 main: .swimSpeedUp,
@@ -90,7 +93,8 @@ struct GearBuildTests {
         #expect(!build.isValid())
     }
     
-    @Test func emptyBuildAP() throws {
+    @Test("Empty Build AP")
+    func emptyBuildAP() throws {
         let build = GearBuild()
         
         let ap = build.toAbilityPoints(usingTacticooler: false)
@@ -99,7 +103,8 @@ struct GearBuildTests {
         #expect(ap[.none] == 57)
     }
     
-    @Test func buildAP() throws {
+    @Test("Build AP")
+    func buildAP() throws {
         let build = GearBuild(
             headgear: GearPiece(
                 main: .swimSpeedUp,
@@ -135,7 +140,8 @@ struct GearBuildTests {
         #expect(ap[.inkResistanceUp] == 30)
     }
     
-    @Test func buildAPTacticooler() throws {
+    @Test("Build AP + Tacticooler")
+    func buildAPTacticooler() throws {
         let build = GearBuild(
             headgear: GearPiece(
                 main: .swimSpeedUp,
@@ -173,7 +179,8 @@ struct GearBuildTests {
         #expect(ap[.intensifyAction] == 57)
     }
     
-    @Test func buildAPWithNoLDE() throws {
+    @Test("Build AP + LDE 0")
+    func buildAPWithNoLDE() throws {
         let build = GearBuild(
             headgear: GearPiece(
                 main: .lastDitchEffort,
@@ -208,7 +215,8 @@ struct GearBuildTests {
         #expect(ap[.specialSaver] == 3)
     }
     
-    @Test func buildAPWithMaxLDE() throws {
+    @Test("Build AP + LDE 21")
+    func buildAPWithMaxLDE() throws {
         let build = GearBuild(
             headgear: GearPiece(
                 main: .lastDitchEffort,

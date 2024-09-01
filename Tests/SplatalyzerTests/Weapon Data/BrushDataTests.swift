@@ -17,17 +17,12 @@ struct BrushDataTests {
     init() throws {
         self.weaponInfo = try service.decode(WeaponInfoMain.self, from: "WeaponInfoMain")
     }
-    
-    private func makeFileName(with weapon: MainWeapon) -> String {
-        return "Weapon\(weapon.fileName()).game__GameParameterTable"
-    }
-    
-    @Test("Inkbrush", arguments: [
+    @Test("Inkbrush Data", arguments: [
         WeaponKit(.inkbrush, .splatBomb, .killerWail51),
         WeaponKit(.inkbrushNouveau, .inkMine, .ultraStamp)
     ])
     func inkbrush(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Brush.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Brush.self, from: kit.main.fileName)
         
         let item = try #require(self.weaponInfo.getItem(for: kit.main))
         
@@ -43,13 +38,13 @@ struct BrushDataTests {
         #expect(data.inkConsumeWeaponSwing != nil)
     }
     
-    @Test("Octobrush", arguments: [
+    @Test("Octobrush Data", arguments: [
         WeaponKit(.octobrush, .suctionBomb, .zipcaster),
         WeaponKit(.octobrushNouveau, .squidBeakon, .inkStorm),
         WeaponKit(.orderbrushReplica, .suctionBomb, .zipcaster)
     ])
     func octobrush(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Brush.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Brush.self, from: kit.main.fileName)
         
         let item = try #require(self.weaponInfo.getItem(for: kit.main))
         
@@ -65,12 +60,12 @@ struct BrushDataTests {
         #expect(data.inkConsumeWeaponSwing != nil)
     }
     
-    @Test("Painbrush", arguments: [
+    @Test("Painbrush Data", arguments: [
         WeaponKit(.painbrush, .curlingBomb, .waveBreaker),
         WeaponKit(.painbrushNouveau, .pointSensor, .tentaMissiles)
     ])
     func painbrush(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Brush.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Brush.self, from: kit.main.fileName)
         
         let item = try #require(self.weaponInfo.getItem(for: kit.main))
         

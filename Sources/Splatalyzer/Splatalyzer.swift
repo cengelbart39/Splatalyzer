@@ -74,7 +74,7 @@ public final class Splatalyzer {
         case .blaster:
             let blaster = try service.decode(
                 Blaster.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let infoItem = mainInfo.getItem(for: weapon)!
             
@@ -85,7 +85,7 @@ public final class Splatalyzer {
         case .brella:
             let brella = try service.decode(
                 Brella.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let infoItem = mainInfo.getItem(for: weapon)!
             
@@ -96,7 +96,7 @@ public final class Splatalyzer {
         case .brush:
             let brush = try service.decode(
                 Brush.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let infoItem = mainInfo.getItem(for: weapon)!
             
@@ -107,7 +107,7 @@ public final class Splatalyzer {
         case .charger:
             let charger = try service.decode(
                 Charger.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let infoItem = mainInfo.getItem(for: weapon)!
             
@@ -118,7 +118,7 @@ public final class Splatalyzer {
         case .dualie:
             let dualie = try service.decode(
                 Dualie.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let infoItem = mainInfo.getItem(for: weapon)!
             
@@ -129,7 +129,7 @@ public final class Splatalyzer {
         case .roller:
             let roller = try service.decode(
                 Roller.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let infoItem = mainInfo.getItem(for: weapon)!
             
@@ -140,7 +140,7 @@ public final class Splatalyzer {
         case .shooter:
             let shooter = try service.decode(
                 Shooter.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let infoItem = mainInfo.getItem(for: weapon)!
             
@@ -151,7 +151,7 @@ public final class Splatalyzer {
         case .slosher:
             let slosher = try service.decode(
                 Slosher.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let infoItem = mainInfo.getItem(for: weapon)!
             
@@ -162,7 +162,7 @@ public final class Splatalyzer {
         case .splatana:
             let splatana = try service.decode(
                 Splatana.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let infoItem = mainInfo.getItem(for: weapon)!
             
@@ -173,7 +173,7 @@ public final class Splatalyzer {
         case .splatling:
             let splatling = try service.decode(
                 Splatling.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let infoItem = mainInfo.getItem(for: weapon)!
             
@@ -184,7 +184,7 @@ public final class Splatalyzer {
         case .stringer:
             let stringer = try service.decode(
                 Stringer.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let infoItem = mainInfo.getItem(for: weapon)!
             
@@ -210,7 +210,7 @@ public final class Splatalyzer {
         case .angleShooter:
             let angleShooter = try service.decode(
                 AngleShooter.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: angleShooter)
             
@@ -219,7 +219,7 @@ public final class Splatalyzer {
         case .autobomb:
             let autobomb = try service.decode(
                 Autobomb.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: autobomb)
             
@@ -228,7 +228,7 @@ public final class Splatalyzer {
         case .burstBomb:
             let burstBomb = try service.decode(
                 BurstBomb.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: burstBomb)
             
@@ -237,7 +237,7 @@ public final class Splatalyzer {
         case .curlingBomb:
             let curlingBomb = try service.decode(
                 CurlingBomb.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: curlingBomb)
             
@@ -246,7 +246,7 @@ public final class Splatalyzer {
         case .fizzyBomb:
             let fizzyBomb = try service.decode(
                 FizzyBomb.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: fizzyBomb)
             
@@ -255,7 +255,7 @@ public final class Splatalyzer {
         case .inkMine:
             let inkMine = try service.decode(
                 InkMine.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: inkMine)
             
@@ -264,7 +264,7 @@ public final class Splatalyzer {
         case .pointSensor:
             let pointSensor = try service.decode(
                 PointSensor.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: pointSensor)
             
@@ -273,7 +273,7 @@ public final class Splatalyzer {
         case .splashWall:
             let splashWall = try service.decode(
                 SplashWall.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: splashWall)
             
@@ -282,7 +282,7 @@ public final class Splatalyzer {
         case .splatBomb:
             let splatBomb = try service.decode(
                 SplatBomb.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: splatBomb)
             
@@ -291,7 +291,7 @@ public final class Splatalyzer {
         case .sprinkler:
             let sprinkler = try service.decode(
                 Sprinkler.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: sprinkler)
             
@@ -300,7 +300,7 @@ public final class Splatalyzer {
         case .squidBeakon:
             let squidBeakon = try service.decode(
                 SquidBeakon.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: squidBeakon, playerInfo: playerInfo)
             
@@ -309,7 +309,7 @@ public final class Splatalyzer {
         case .suctionBomb:
             let suctionBomb = try service.decode(
                 SuctionBomb.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: suctionBomb)
             
@@ -318,7 +318,7 @@ public final class Splatalyzer {
         case .torpedo:
             let torpedo = try service.decode(
                 Torpedo.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: torpedo)
             
@@ -327,7 +327,7 @@ public final class Splatalyzer {
         case .toxicMist:
             let toxicMist = try service.decode(
                 ToxicMist.self,
-                from: "Weapon\(weapon.fileName()).game__GameParameterTable")
+                from: weapon.fileName)
             
             let subData = SubWeaponData(container: toxicMist)
             

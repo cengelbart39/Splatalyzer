@@ -8,22 +8,6 @@
 import Testing
 @testable import Splatalyzer
 
-struct WeaponKit: CustomTestStringConvertible {
-    let main: MainWeapon
-    let sub: SubWeapon
-    let special: SpecialWeapon
-    
-    var testDescription: String {
-        return main.localized
-    }
-    
-    init(_ main: MainWeapon, _ sub: SubWeapon, _ special: SpecialWeapon) {
-        self.main = main
-        self.sub = sub
-        self.special = special
-    }
-}
-
 struct BlasterDataTests {
     
     let service = JSONService()
@@ -34,16 +18,12 @@ struct BlasterDataTests {
         self.weaponInfo = try service.decode(WeaponInfoMain.self, from: "WeaponInfoMain")
     }
     
-    private func makeFileName(with weapon: MainWeapon) -> String {
-        return "Weapon\(weapon.fileName()).game__GameParameterTable"
-    }
-    
-    @Test("Blaster", arguments: [
+    @Test("Blaster Data", arguments: [
         WeaponKit(.blaster, .autobomb, .bigBubbler),
         WeaponKit(.customBlaster, .pointSensor, .tripleSplashdown)
     ])
     func blaster(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Blaster.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Blaster.self, from: kit.main.fileName)
         
         let item = try #require(self.weaponInfo.getItem(for: kit.main))
         
@@ -63,13 +43,12 @@ struct BlasterDataTests {
         #expect(data.inkConsume != nil)
     }
     
-    @Test("Clash Blaster", arguments: [
+    @Test("Clash Blaster Data", arguments: [
         WeaponKit(.clashBlaster, .splatBomb, .trizooka),
         WeaponKit(.clashBlasterNeo, .curlingBomb, .superChump)
     ])
     func clashBlaster(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Blaster.self, from: self.makeFileName(with: kit.main))
-        
+        let gameParams = try service.decode(Blaster.self, from: kit.main.fileName)
         let item = try #require(self.weaponInfo.getItem(for: kit.main))
         
         let data = MainWeaponData(weaponInfo: item, container: gameParams)
@@ -88,13 +67,13 @@ struct BlasterDataTests {
         #expect(data.inkConsume != nil)
     }
     
-    @Test("Luna Blaster", arguments: [
+    @Test("Luna Blaster Data", arguments: [
         WeaponKit(.lunaBlaster, .splatBomb, .zipcaster),
         WeaponKit(.lunaBlasterNeo, .fizzyBomb, .ultraStamp),
         WeaponKit(.orderBlasterReplica, .splatBomb, .zipcaster)
     ])
     func lunaBlaster(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Blaster.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Blaster.self, from: kit.main.fileName)
         
         let item = try #require(self.weaponInfo.getItem(for: kit.main))
         
@@ -114,12 +93,12 @@ struct BlasterDataTests {
         #expect(data.inkConsume != nil)
     }
     
-    @Test("Range Blaster", arguments: [
+    @Test("Range Blaster Data", arguments: [
         WeaponKit(.rangeBlaster, .suctionBomb, .waveBreaker),
         WeaponKit(.customRangeBlaster, .splatBomb, .krakenRoyale)
     ])
     func rangeBlaster(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Blaster.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Blaster.self, from: kit.main.fileName)
         
         let item = try #require(self.weaponInfo.getItem(for: kit.main))
         
@@ -139,12 +118,12 @@ struct BlasterDataTests {
         #expect(data.inkConsume != nil)
     }
     
-    @Test("Rapid Blaster", arguments: [
+    @Test("Rapid Blaster Data", arguments: [
         WeaponKit(.rapidBlaster, .inkMine, .tripleInkstrike),
         WeaponKit(.rapidBlasterDeco, .torpedo, .inkjet)
     ])
     func rapidBlaster(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Blaster.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Blaster.self, from: kit.main.fileName)
         
         let item = try #require(self.weaponInfo.getItem(for: kit.main))
         
@@ -164,12 +143,12 @@ struct BlasterDataTests {
         #expect(data.inkConsume != nil)
     }
     
-    @Test("Rapid Blaster Pro", arguments: [
+    @Test("Rapid Blaster Pro Data", arguments: [
         WeaponKit(.rapidBlasterPro, .toxicMist, .inkVac),
         WeaponKit(.rapidBlasterProDeco, .angleShooter, .killerWail51)
     ])
     func rapidBlasterPro(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Blaster.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Blaster.self, from: kit.main.fileName)
         
         let item = try #require(self.weaponInfo.getItem(for: kit.main))
         
@@ -189,12 +168,12 @@ struct BlasterDataTests {
         #expect(data.inkConsume != nil)
     }
     
-    @Test("S-BLAST", arguments: [
+    @Test("S-BLAST Data", arguments: [
         WeaponKit(.sblast92, .sprinkler, .reefslider),
         WeaponKit(.sblast91, .burstBomb, .booyahBomb)
     ])
     func sblast(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Blaster.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Blaster.self, from: kit.main.fileName)
         
         let item = try #require(self.weaponInfo.getItem(for: kit.main))
         

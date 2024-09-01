@@ -17,16 +17,12 @@ struct BrellaDataTests {
         self.weaponInfo = try service.decode(WeaponInfoMain.self, from: "WeaponInfoMain")
     }
     
-    private func makeFileName(with weapon: MainWeapon) -> String {
-        return "Weapon\(weapon.fileName()).game__GameParameterTable"
-    }
-    
-    @Test("Recycled Brella 24", arguments: [
+    @Test("Recycled Brella 24 Data", arguments: [
         WeaponKit(.recycledBrella24MkI, .angleShooter, .bigBubbler),
         WeaponKit(.recycledBrella24MkII, .toxicMist, .tripleSplashdown)
     ])
     func recycledBrella24(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Brella.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Brella.self, from: kit.main.fileName)
         
         let item = try #require(self.weaponInfo.getItem(for: kit.main))
         
@@ -43,13 +39,13 @@ struct BrellaDataTests {
         #expect(data.inkConsumeWeaponShelterShotgun != nil)
     }
     
-    @Test("Splat Brella", arguments: [
+    @Test("Splat Brella Data", arguments: [
         WeaponKit(.splatBrella, .sprinkler, .tripleInkstrike),
         WeaponKit(.sorellaBrella, .autobomb, .inkjet),
         WeaponKit(.orderBrellaReplica, .sprinkler, .tripleInkstrike)
     ])
     func splatBrella(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Brella.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Brella.self, from: kit.main.fileName)
         
         let item = try #require(self.weaponInfo.getItem(for: kit.main))
         
@@ -64,12 +60,12 @@ struct BrellaDataTests {
         #expect(data.inkConsumeWeaponShelterShotgun != nil)
     }
     
-    @Test("Tenta Brella", arguments: [
+    @Test("Tenta Brella Data", arguments: [
         WeaponKit(.tentaBrella, .squidBeakon, .inkVac),
         WeaponKit(.tentaSorellaBrella, .inkMine, .trizooka)
     ])
     func tentaBrella(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Brella.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Brella.self, from: kit.main.fileName)
         
         let item = try #require(self.weaponInfo.getItem(for: kit.main))
         
@@ -85,12 +81,12 @@ struct BrellaDataTests {
         #expect(data.inkConsumeWeaponShelterShotgun != nil)
     }
     
-    @Test("Undercover Brella", arguments: [
+    @Test("Undercover Brella Data", arguments: [
         WeaponKit(.undercoverBrella, .inkMine, .reefslider),
         WeaponKit(.undercoverSorellaBrella, .torpedo, .splattercolorScreen)
     ])
     func undercoverBrella(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Brella.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Brella.self, from: kit.main.fileName)
         
         let item = try #require(self.weaponInfo.getItem(for: kit.main))
         

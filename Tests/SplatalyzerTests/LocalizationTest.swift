@@ -5,161 +5,120 @@
 //  Created by Christopher Engelbart on 3/7/24.
 //
 
-import XCTest
+import Testing
+import Foundation
 @testable import Splatalyzer
 
-final class LocalizationTest: XCTestCase {
+extension Tag {
+    @Tag static var localization: Self
+}
 
-    var localizationData: Localization!
+@Suite(.tags(.localization))
+struct LocalizationTests {
     
-    override func setUpWithError() throws {
+    var translations: Localization.Language?
+    
+    init() throws {
         let data = try Data(contentsOf: TestHelper.localizationUrl)
-        
-        self.localizationData = try JSONDecoder().decode(Localization.self, from: data)
+        let langData = try JSONDecoder().decode(Localization.self, from: data)
+        self.translations = langData.chooseLocalization()
     }
     
-    override func tearDown() {
-        self.localizationData = nil
+    @Test("Blaster Localizations", arguments: MainWeapon.getWeapons(of: .blaster))
+    func blasterLocalizations(for blaster: MainWeapon) throws {
+        let translation = try #require(translations?.mainWeapons[blaster.rawValue])
+        
+        #expect(translation == blaster.localized)
     }
     
-    func test_Localization_mainWeapons() {
-        let language = self.chooseLanguageData()!
+    @Test("Brella Localizations", arguments: MainWeapon.getWeapons(of: .brella))
+    func brellaLocalizations(for brella: MainWeapon) throws {
+        let translation = try #require(translations?.mainWeapons[brella.rawValue])
         
-        let pkgMain = MainWeapon.allCases
-        let jsonMain = language.mainWeapons
-        
-        XCTAssertEqual(pkgMain.count, jsonMain.count)
-        
-        for (jsonKey, jsonMain) in jsonMain {
-            if let mainWeapon = MainWeapon(rawValue: jsonKey) {
-                XCTAssertEqual(mainWeapon.localized, jsonMain, "\(mainWeapon) localization")
-                
-            } else {
-                XCTFail("Cannot find \(jsonKey) in MainWeapon")
-            }
-        }
+        #expect(translation == brella.localized)
     }
     
-    func test_Localization_subWeapons() {
-        let language = self.chooseLanguageData()!
+    @Test("Brush Localizations", arguments: MainWeapon.getWeapons(of: .brush))
+    func brushLocalizations(for brush: MainWeapon) throws {
+        let translation = try #require(translations?.mainWeapons[brush.rawValue])
         
-        let pkgSub = SubWeapon.allCases
-        let jsonSub = language.subWeapons
-        
-        XCTAssertEqual(pkgSub.count, jsonSub.count)
-        
-        for (jsonKey, jsonSub) in jsonSub {
-            if let subWeapon = SubWeapon(rawValue: jsonKey) {
-                XCTAssertEqual(subWeapon.localized, jsonSub, "\(subWeapon) localization")
-                
-            } else {
-                XCTFail("Cannot find \(jsonKey) in SubWeapon")
-            }
-        }
+        #expect(translation == brush.localized)
     }
     
-    func test_Localization_specialWeapons() {
-        let language = self.chooseLanguageData()!
+    @Test("Charger Localizations", arguments: MainWeapon.getWeapons(of: .charger))
+    func chargerLocalizations(for charger: MainWeapon) throws {
+        let translation = try #require(translations?.mainWeapons[charger.rawValue])
         
-        let pkgSpecial = SpecialWeapon.allCases
-        let jsonSpecial = language.specialWeapons
-        
-        XCTAssertEqual(pkgSpecial.count, jsonSpecial.count)
-        
-        for (jsonKey, jsonSpecial) in jsonSpecial {
-            if let specialWeapon = SpecialWeapon(rawValue: jsonKey) {
-                XCTAssertEqual(specialWeapon.localized, jsonSpecial, "\(specialWeapon) localization")
-                
-            } else {
-                XCTFail("Cannot find \(jsonKey) in SpecialWeapon")
-            }
-        }
+        #expect(translation == charger.localized)
     }
-
-    func test_Localization_abilities() {
-        let language = self.chooseLanguageData()!
-        
-        let pkgAbility = Ability.allCases
-        let jsonAbility = language.abilities
-        
-        XCTAssertEqual(pkgAbility.count, jsonAbility.count)
-        
-        for (jsonKey, jsonAbility) in jsonAbility {
-            if let ability = Ability(rawValue: jsonKey) {
-                XCTAssertEqual(ability.localized, jsonAbility, "\(ability) localization")
-                
-            } else if jsonKey != "None" {
-                XCTFail("Cannot find \(jsonKey) in Ability")
-            }
-        }
-    }
-
-    func test_Localization_weaponClass() {
-        let language = self.chooseLanguageData()!
-        
-        let pkgClass = WeaponClass.allCases
-        let jsonClass = language.classes
-        
-        XCTAssertEqual(pkgClass.count, jsonClass.count)
-        
-        for (jsonKey, jsonClass) in jsonClass {
-            if let wpnClass = WeaponClass(rawValue: jsonKey) {
-                XCTAssertEqual(wpnClass.localized, jsonClass, "\(wpnClass) localization")
-                
-            } else {
-                XCTFail("Cannot find \(jsonKey) in WeaponClass")
-            }
-        }
-    }
-
-
     
-    func chooseLanguageData() -> Localization.Language? {
-        let data = UserDefaults.standard.object(forKey: "AppleLanguages") as! Array<String>
-        let lang = data.first!
+    @Test("Dualie Localizations", arguments: MainWeapon.getWeapons(of: .dualie))
+    func dualieLocalizations(for dualie: MainWeapon) throws {
+        let translation = try #require(translations?.mainWeapons[dualie.rawValue])
         
-        switch lang {
-        case "de":
-            return self.localizationData.de
-            
-        case "en":
-            return self.localizationData.en
-            
-        case "es":
-            return self.localizationData.esEU
-
-        case "es-419":
-            return self.localizationData.esUS
-            
-        case "fr":
-            return self.localizationData.frEU
-            
-        case "fr-CA":
-            return self.localizationData.frUS
-            
-        case "it":
-            return self.localizationData.it
-
-        case "ja":
-            return self.localizationData.jp
-            
-        case "ko":
-            return self.localizationData.ko
-            
-        case "nl":
-            return self.localizationData.nl
-            
-        case "ru":
-            return self.localizationData.ru
-            
-        case "zh-Hans":
-            return self.localizationData.zhCN
-            
-        case "zh-Hant":
-            return self.localizationData.zhTW
-            
-        default:
-            return nil
-        }
+        #expect(translation == dualie.localized)
+    }
+    
+    @Test("Roller Localizations", arguments: MainWeapon.getWeapons(of: .roller))
+    func rollerLocalizations(for roller: MainWeapon) throws {
+        let translation = try #require(translations?.mainWeapons[roller.rawValue])
+        
+        #expect(translation == roller.localized)
+    }
+    
+    @Test("Shooter Localizations", arguments: MainWeapon.getWeapons(of: .shooter))
+    func shooterLocalizations(for shooter: MainWeapon) throws {
+        let translation = try #require(translations?.mainWeapons[shooter.rawValue])
+        
+        #expect(translation == shooter.localized)
+    }
+    
+    @Test("Slosher Localizations", arguments: MainWeapon.getWeapons(of: .slosher))
+    func slosherLocalizations(for slosher: MainWeapon) throws {
+        let translation = try #require(translations?.mainWeapons[slosher.rawValue])
+        
+        #expect(translation == slosher.localized)
+    }
+    
+    @Test("Splatana Localizations", arguments: MainWeapon.getWeapons(of: .splatana))
+    func splatanaLocalizations(for splatana: MainWeapon) throws {
+        let translation = try #require(translations?.mainWeapons[splatana.rawValue])
+        
+        #expect(translation == splatana.localized)
+    }
+    
+    @Test("Splatling Localizations", arguments: MainWeapon.getWeapons(of: .splatling))
+    func splatlingLocalizations(for splatling: MainWeapon) throws {
+        let translation = try #require(translations?.mainWeapons[splatling.rawValue])
+        
+        #expect(translation == splatling.localized)
+    }
+    
+    @Test("Stringer Localizations", arguments: MainWeapon.getWeapons(of: .stringer))
+    func stringerLocalizations(for stringer: MainWeapon) throws {
+        let translation = try #require(translations?.mainWeapons[stringer.rawValue])
+        
+        #expect(translation == stringer.localized)
+    }
+    
+    @Test("Sub Weapon Localizations", arguments: SubWeapon.allCases)
+    func subWeaponLocalizations(for weapon: SubWeapon) throws {
+        let translation = try #require(translations?.subWeapons[weapon.rawValue])
+        
+        #expect(translation == weapon.localized)
+    }
+    
+    @Test("Special Weapon Localizations", arguments: SpecialWeapon.allCases)
+    func specialWeaponLocalizations(for weapon: SpecialWeapon) throws {
+        let translation = try #require(translations?.specialWeapons[weapon.rawValue])
+        
+        #expect(translation == weapon.localized)
+    }
+    
+    @Test("Abilities Localizations", arguments: Ability.useableAbilities)
+    func abilityLocalizations(for ability: Ability) throws {
+        let translation = try #require(translations?.abilities[ability.rawValue])
+        
+        #expect(translation == ability.localized)
     }
 }

@@ -268,9 +268,9 @@ public enum MainWeapon: String, CaseIterable, Codable, Identifiable, Sendable {
     /// It's file is `WeaponBlasterLightLong.game__GameParameterTable.json`.
     ///
     /// This function outputs `BlasterLightLong`, ignoring the right-most side (`_00`) and removing the left underscore.
-    func fileName() -> String {
+    var fileName: String {
         let split = self.rawValue.split(separator: "_")
-        return String(split[0] + split[1])
+        return "Weapon\(split[0])\(split[1]).game__GameParameterTable"
     }
     
     

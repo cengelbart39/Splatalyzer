@@ -17,16 +17,12 @@ struct DualieDataTests {
         self.weaponInfo = try service.decode(WeaponInfoMain.self, from: "WeaponInfoMain")
     }
     
-    private func makeFileName(with weapon: MainWeapon) -> String {
-        return "Weapon\(weapon.fileName()).game__GameParameterTable"
-    }
-    
-    @Test("Dapple Dualies", arguments: [
+    @Test("Dapple Dualies Data", arguments: [
         WeaponKit(.dappleDualies, .squidBeakon, .tacticooler),
         WeaponKit(.dappleDualiesNouveau, .torpedo, .reefslider)
     ])
     func dappleDualies(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Dualie.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Dualie.self, from: kit.main.fileName)
         
         let item = try #require(self.weaponInfo.getItem(for: kit.main))
         
@@ -45,12 +41,12 @@ struct DualieDataTests {
         #expect(data.inkConsumeSideStep != nil)
     }
     
-    @Test("Douser Dualies FF", arguments: [
+    @Test("Douser Dualies FF Data", arguments: [
         WeaponKit(.douserDualiesFF, .inkMine, .killerWail51),
         WeaponKit(.customDouserDualiesFF, .burstBomb, .tripleInkstrike)
     ])
     func douserDualiesFF(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Dualie.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Dualie.self, from: kit.main.fileName)
         
         let item = try #require(self.weaponInfo.getItem(for: kit.main))
         
@@ -71,12 +67,12 @@ struct DualieDataTests {
         #expect(data.inkConsumeSideStep != nil)
     }
     
-    @Test("Dualie Squelchers", arguments: [
+    @Test("Dualie Squelchers Data", arguments: [
         WeaponKit(.dualieSquelchers, .splatBomb, .waveBreaker),
         WeaponKit(.customDualieSquelchers, .squidBeakon, .superChump)
     ])
     func dualieSquelchers(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Dualie.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Dualie.self, from: kit.main.fileName)
         
         let item = try #require(self.weaponInfo.getItem(for: kit.main))
         
@@ -94,12 +90,12 @@ struct DualieDataTests {
         #expect(data.inkConsumeSideStep != nil)
     }
     
-    @Test("Glooga Dualies", arguments: [
+    @Test("Glooga Dualies Data", arguments: [
         WeaponKit(.gloogaDualies, .splashWall, .booyahBomb),
         WeaponKit(.gloogaDualiesDeco, .pointSensor, .trizooka)
     ])
     func gloogaDualies(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Dualie.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Dualie.self, from: kit.main.fileName)
         
         let item = try #require(self.weaponInfo.getItem(for: kit.main))
         
@@ -120,13 +116,13 @@ struct DualieDataTests {
         #expect(data.inkConsumeSideStep != nil)
     }
     
-    @Test("Splat Dualies", arguments: [
+    @Test("Splat Dualies Data", arguments: [
         WeaponKit(.splatDualies, .suctionBomb, .crabTank),
         WeaponKit(.enperrySplatDualies, .curlingBomb, .tripleSplashdown),
         WeaponKit(.orderDualiesReplica, .suctionBomb, .crabTank)
     ])
     func splatDualies(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Dualie.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Dualie.self, from: kit.main.fileName)
         
         let item = try #require(self.weaponInfo.getItem(for: kit.main))
         
@@ -145,12 +141,12 @@ struct DualieDataTests {
         #expect(data.inkConsumeSideStep != nil)
     }
     
-    @Test("Tetra Dualies", arguments: [
+    @Test("Tetra Dualies Data", arguments: [
         WeaponKit(.darkTetraDualies, .autobomb, .reefslider),
         WeaponKit(.lightTetraDualies, .sprinkler, .zipcaster)
     ])
     func tetraDualies(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Dualie.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Dualie.self, from: kit.main.fileName)
         
         let item = try #require(self.weaponInfo.getItem(for: kit.main))
         

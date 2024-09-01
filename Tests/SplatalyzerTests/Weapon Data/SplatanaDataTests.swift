@@ -5,186 +5,82 @@
 //  Created by Christopher Engelbart on 2/16/24.
 //
 
-import XCTest
+import Testing
 @testable import Splatalyzer
 
-final class SplatanaDataTests: XCTestCase {
-
+struct SplatanaDataTests {
+    
     let service = JSONService()
     
-    var weaponInfo: WeaponInfoMain!
+    let mainInfo = try! JSONService().decode(WeaponInfoMain.self, from: "WeaponInfoMain")
     
-    override func setUpWithError() throws {
-        self.weaponInfo = try service.decode(WeaponInfoMain.self, from: "WeaponInfoMain")
-    }
-    
-    override func tearDown() {
-        self.weaponInfo = nil
-    }
-    
-    // MARK: - Mint Decavitator
-    func test_MainWeaponData_init_Splatana_mintDecavitator() {
-        do {
-            let gameParams = try service.decode(Splatana.self, from: "WeaponSaberNormal.game__GameParameterTable")
-            let item = self.weaponInfo.getItem(for: .mintDecavitator)!
-            
-            let data = MainWeaponData(weaponInfo: item, container: gameParams)
-                        
-            XCTAssertEqual(data.mainWeaponId, .mintDecavitator)
-            XCTAssertEqual(data.subWeapon, .suctionBomb)
-            XCTAssertEqual(data.specialWeapon, .bigBubbler)
-            XCTAssertNil(data.weaponSpeedType)
-            XCTAssertNotNil(data.damageSplatanaVerticalDirect)
-            XCTAssertNotNil(data.damageSplatanaVertical)
-            XCTAssertNotNil(data.damageSplatanaHorizontalDirect)
-            XCTAssertNotNil(data.damageSplatanaHorizontal)
-            XCTAssertNotNil(data.inkConsumeSwing)
-            XCTAssertNotNil(data.inkConsumeChargeFullCharge)
-
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
-    }
-
-    func test_MainWeaponData_init_Splatana_charcoalDecavitator() {
-        do {
-            let gameParams = try service.decode(Splatana.self, from: "WeaponSaberNormal.game__GameParameterTable")
-            let item = self.weaponInfo.getItem(for: .charcoalDecavitator)!
-            
-            let data = MainWeaponData(weaponInfo: item, container: gameParams)
-                        
-            XCTAssertEqual(data.mainWeaponId, .charcoalDecavitator)
-            XCTAssertEqual(data.subWeapon, .splashWall)
-            XCTAssertEqual(data.specialWeapon, .inkjet)
-            XCTAssertNil(data.weaponSpeedType)
-            XCTAssertNotNil(data.damageSplatanaVerticalDirect)
-            XCTAssertNotNil(data.damageSplatanaVertical)
-            XCTAssertNotNil(data.damageSplatanaHorizontalDirect)
-            XCTAssertNotNil(data.damageSplatanaHorizontal)
-            XCTAssertNotNil(data.inkConsumeSwing)
-            XCTAssertNotNil(data.inkConsumeChargeFullCharge)
-
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
-    }
-
-
-    // MARK: - Splatana Stamper
-    func test_MainWeaponData_init_Splatana_splatanaStamper() {
-        do {
-            let gameParams = try service.decode(Splatana.self, from: "WeaponSaberNormal.game__GameParameterTable")
-            let item = self.weaponInfo.getItem(for: .splatanaStamper)!
-            
-            let data = MainWeaponData(weaponInfo: item, container: gameParams)
-                        
-            XCTAssertEqual(data.mainWeaponId, .splatanaStamper)
-            XCTAssertEqual(data.subWeapon, .burstBomb)
-            XCTAssertEqual(data.specialWeapon, .zipcaster)
-            XCTAssertNil(data.weaponSpeedType)
-            XCTAssertNotNil(data.damageSplatanaVerticalDirect)
-            XCTAssertNotNil(data.damageSplatanaVertical)
-            XCTAssertNotNil(data.damageSplatanaHorizontalDirect)
-            XCTAssertNotNil(data.damageSplatanaHorizontal)
-            XCTAssertNotNil(data.inkConsumeSwing)
-            XCTAssertNotNil(data.inkConsumeChargeFullCharge)
-
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
-    }
-
-    func test_MainWeaponData_init_Splatana_splatanaStamperNouveau() {
-        do {
-            let gameParams = try service.decode(Splatana.self, from: "WeaponSaberNormal.game__GameParameterTable")
-            let item = self.weaponInfo.getItem(for: .splatanaStamperNouveau)!
-            
-            let data = MainWeaponData(weaponInfo: item, container: gameParams)
-                        
-            XCTAssertEqual(data.mainWeaponId, .splatanaStamperNouveau)
-            XCTAssertEqual(data.subWeapon, .toxicMist)
-            XCTAssertEqual(data.specialWeapon, .crabTank)
-            XCTAssertNil(data.weaponSpeedType)
-            XCTAssertNotNil(data.damageSplatanaVerticalDirect)
-            XCTAssertNotNil(data.damageSplatanaVertical)
-            XCTAssertNotNil(data.damageSplatanaHorizontalDirect)
-            XCTAssertNotNil(data.damageSplatanaHorizontal)
-            XCTAssertNotNil(data.inkConsumeSwing)
-            XCTAssertNotNil(data.inkConsumeChargeFullCharge)
-
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
+    @Test("Decavitator Data", arguments: [
+        WeaponKit(.mintDecavitator, .suctionBomb, .bigBubbler),
+        WeaponKit(.charcoalDecavitator, .splashWall, .inkjet)
+    ])
+    func decavitator(_ kit: WeaponKit) throws {
+        let gameParams = try service.decode(Splatana.self, from: kit.main.fileName)
+        
+        let item = try #require(self.mainInfo.getItem(for: kit.main))
+        
+        let data = MainWeaponData(weaponInfo: item, container: gameParams)
+        
+        #expect(data.mainWeaponId == kit.main)
+        #expect(data.subWeapon == kit.sub)
+        #expect(data.specialWeapon == kit.special)
+        #expect(data.weaponSpeedType == .mid)
+        #expect(data.damageSplatanaVertical != nil)
+        #expect(data.damageSplatanaVerticalDirect != nil)
+        #expect(data.damageSplatanaHorizontal != nil)
+        #expect(data.damageSplatanaHorizontalDirect != nil)
+        #expect(data.inkConsumeSwing != nil)
+        #expect(data.inkConsumeChargeFullCharge != nil)
     }
     
-    func test_MainWeaponData_init_Splatana_orderSplatanaReplica() {
-        do {
-            let gameParams = try service.decode(Splatana.self, from: "WeaponSaberNormal.game__GameParameterTable")
-            let item = self.weaponInfo.getItem(for: .orderSplatanaReplica)!
-            
-            let data = MainWeaponData(weaponInfo: item, container: gameParams)
-                        
-            XCTAssertEqual(data.mainWeaponId, .orderSplatanaReplica)
-            XCTAssertEqual(data.subWeapon, .burstBomb)
-            XCTAssertEqual(data.specialWeapon, .zipcaster)
-            XCTAssertNil(data.weaponSpeedType)
-            XCTAssertNotNil(data.damageSplatanaVerticalDirect)
-            XCTAssertNotNil(data.damageSplatanaVertical)
-            XCTAssertNotNil(data.damageSplatanaHorizontalDirect)
-            XCTAssertNotNil(data.damageSplatanaHorizontal)
-            XCTAssertNotNil(data.inkConsumeSwing)
-            XCTAssertNotNil(data.inkConsumeChargeFullCharge)
-
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
+    @Test("Splatana Stamper Data", arguments: [
+        WeaponKit(.splatanaStamper, .burstBomb, .zipcaster),
+        WeaponKit(.splatanaStamperNouveau, .toxicMist, .crabTank),
+        WeaponKit(.orderSplatanaReplica, .burstBomb, .zipcaster)
+    ])
+    func splatanaStamper(_ kit: WeaponKit) throws {
+        let gameParams = try service.decode(Splatana.self, from: kit.main.fileName)
+        
+        let item = try #require(self.mainInfo.getItem(for: kit.main))
+        
+        let data = MainWeaponData(weaponInfo: item, container: gameParams)
+        
+        #expect(data.mainWeaponId == kit.main)
+        #expect(data.subWeapon == kit.sub)
+        #expect(data.specialWeapon == kit.special)
+        #expect(data.weaponSpeedType == nil)
+        #expect(data.damageSplatanaVertical != nil)
+        #expect(data.damageSplatanaVerticalDirect != nil)
+        #expect(data.damageSplatanaHorizontal != nil)
+        #expect(data.damageSplatanaHorizontalDirect != nil)
+        #expect(data.inkConsumeSwing != nil)
+        #expect(data.inkConsumeChargeFullCharge != nil)
     }
-
-    // MARK: - Splatana Wiper
-    func test_MainWeaponData_init_Splatana_splatanaWiper() {
-        do {
-            let gameParams = try service.decode(Splatana.self, from: "WeaponSaberLite.game__GameParameterTable")
-            let item = self.weaponInfo.getItem(for: .splatanaWiper)!
-            
-            let data = MainWeaponData(weaponInfo: item, container: gameParams)
-                        
-            XCTAssertEqual(data.mainWeaponId, .splatanaWiper)
-            XCTAssertEqual(data.subWeapon, .torpedo)
-            XCTAssertEqual(data.specialWeapon, .ultraStamp)
-            XCTAssertEqual(data.weaponSpeedType, .fast)
-            XCTAssertNotNil(data.damageSplatanaVerticalDirect)
-            XCTAssertNotNil(data.damageSplatanaVertical)
-            XCTAssertNotNil(data.damageSplatanaHorizontalDirect)
-            XCTAssertNotNil(data.damageSplatanaHorizontal)
-            XCTAssertNotNil(data.inkConsumeSwing)
-            XCTAssertNotNil(data.inkConsumeChargeFullCharge)
-
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
+    
+    @Test("Splatana Wiper Data", arguments: [
+        WeaponKit(.splatanaWiper, .torpedo, .ultraStamp),
+        WeaponKit(.splatanaWiperDeco, .squidBeakon, .tentaMissiles)
+    ])
+    func splatanaWiper(_ kit: WeaponKit) throws {
+        let gameParams = try service.decode(Splatana.self, from: kit.main.fileName)
+        
+        let item = try #require(self.mainInfo.getItem(for: kit.main))
+        
+        let data = MainWeaponData(weaponInfo: item, container: gameParams)
+        
+        #expect(data.mainWeaponId == kit.main)
+        #expect(data.subWeapon == kit.sub)
+        #expect(data.specialWeapon == kit.special)
+        #expect(data.weaponSpeedType == .fast)
+        #expect(data.damageSplatanaVertical != nil)
+        #expect(data.damageSplatanaVerticalDirect != nil)
+        #expect(data.damageSplatanaHorizontal != nil)
+        #expect(data.damageSplatanaHorizontalDirect != nil)
+        #expect(data.inkConsumeSwing != nil)
+        #expect(data.inkConsumeChargeFullCharge != nil)
     }
-
-    func test_MainWeaponData_init_Splatana_splatanaWiperDeco() {
-        do {
-            let gameParams = try service.decode(Splatana.self, from: "WeaponSaberLite.game__GameParameterTable")
-            let item = self.weaponInfo.getItem(for: .splatanaWiperDeco)!
-            
-            let data = MainWeaponData(weaponInfo: item, container: gameParams)
-                        
-            XCTAssertEqual(data.mainWeaponId, .splatanaWiperDeco)
-            XCTAssertEqual(data.subWeapon, .squidBeakon)
-            XCTAssertEqual(data.specialWeapon, .tentaMissiles)
-            XCTAssertEqual(data.weaponSpeedType, .fast)
-            XCTAssertNotNil(data.damageSplatanaVerticalDirect)
-            XCTAssertNotNil(data.damageSplatanaVertical)
-            XCTAssertNotNil(data.damageSplatanaHorizontalDirect)
-            XCTAssertNotNil(data.damageSplatanaHorizontal)
-            XCTAssertNotNil(data.inkConsumeSwing)
-            XCTAssertNotNil(data.inkConsumeChargeFullCharge)
-
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
-    }
-
 }

@@ -10,7 +10,7 @@ import Testing
 
 struct SpecialDamagesTests {
     
-    @Test("Bomb Normal", arguments: [
+    @Test("Bomb Normal Sp.Dmg.", arguments: [
         SpecialWeapon.inkjet, .reefslider, .superChump, .tentaMissiles, .tripleSplashdown, .trizooka, .zipcaster
     ])
     func bombNormalDmgs(for weapon: SpecialWeapon) throws {
@@ -23,7 +23,7 @@ struct SpecialDamagesTests {
         #expect(dmgs.contains(type: .bombNormal))
     }
     
-    @Test("Special Bullet")
+    @Test("Special Bullet Sp.Dmg.")
     func specialBulletDmgs() throws {
         let data = try TestHelper.getSpecialData(for: .crabTank)
         
@@ -35,7 +35,7 @@ struct SpecialDamagesTests {
         #expect(dmgs.contains(type: .specialBulletMin))
     }
     
-    @Test("Special Bump")
+    @Test("Special Bump Sp.Dmg.")
     func specialBumpDmgs() throws {
         let data = try TestHelper.getSpecialData(for: .crabTank)
         
@@ -46,7 +46,7 @@ struct SpecialDamagesTests {
         #expect(dmgs.contains(type: .specialBump))
     }
     
-    @Test("Special Cannon")
+    @Test("Special Cannon Sp.Dmg.")
     func specialCannonDmgs() throws {
         let data = try TestHelper.getSpecialData(for: .crabTank)
         
@@ -57,7 +57,7 @@ struct SpecialDamagesTests {
         #expect(dmgs.contains(type: .specialCannon))
     }
     
-    @Test("Special Charge")
+    @Test("Special Charge Sp.Dmg.")
     func specialChargeDmgs() throws {
         let data = try TestHelper.getSpecialData(for: .inkVac)
         
@@ -69,7 +69,7 @@ struct SpecialDamagesTests {
         #expect(dmgs.contains(type: .specialMinCharge))
     }
     
-    @Test("Special Jump")
+    @Test("Special Jump Sp.Dmg.")
     func specialJumpDmgs() throws {
         let data = try TestHelper.getSpecialData(for: .krakenRoyale)
         
@@ -80,7 +80,7 @@ struct SpecialDamagesTests {
         #expect(dmgs.contains(type: .specialJump))
     }
     
-    @Test("Special Swing")
+    @Test("Special Swing Sp.Dmg.")
     func specialSwingDmgs() throws {
         let data = try TestHelper.getSpecialData(for: .ultraStamp)
         
@@ -91,7 +91,7 @@ struct SpecialDamagesTests {
         #expect(dmgs.contains(type: .specialSwing))
     }
     
-    @Test("Special Throw")
+    @Test("Special Throw Sp.Dmg.")
     func specialThrowDmgs() throws {
         let data = try TestHelper.getSpecialData(for: .ultraStamp)
         
@@ -102,7 +102,7 @@ struct SpecialDamagesTests {
         #expect(dmgs.contains(type: .specialThrow))
     }
     
-    @Test("Special Tick", arguments: [
+    @Test("Special Tick Sp.Dmg.", arguments: [
         SpecialWeapon.booyahBomb, .inkStorm, .killerWail51
     ])
     func specialTickDmgs(for weapon: SpecialWeapon) throws {
@@ -115,7 +115,7 @@ struct SpecialDamagesTests {
         #expect(dmgs.contains(type: .specialTick))
     }
 
-    @Test("Wave") func waveDmgs() throws {
+    @Test("Wave Sp.Dmg.") func waveDmgs() throws {
         let data = try TestHelper.getSpecialData(for: .waveBreaker)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)

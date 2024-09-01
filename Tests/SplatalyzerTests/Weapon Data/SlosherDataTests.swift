@@ -14,16 +14,12 @@ struct SlosherDataTests {
     
     let mainInfo = try! JSONService().decode(WeaponInfoMain.self, from: "WeaponInfoMain")
     
-    private func makeFileName(with weapon: MainWeapon) -> String {
-        return "Weapon\(weapon.fileName()).game__GameParameterTable"
-    }
-    
-    @Test("Bloblobber", arguments: [
+    @Test("Bloblobber Data", arguments: [
         WeaponKit(.bloblobber, .sprinkler, .inkStorm),
         WeaponKit(.bloblobberDeco, .angleShooter, .krakenRoyale)
     ])
     func bloblobber(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Slosher.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Slosher.self, from: kit.main.fileName)
         
         let item = try #require(self.mainInfo.getItem(for: kit.main))
         
@@ -41,12 +37,12 @@ struct SlosherDataTests {
         #expect(data.inkConsumeSlosher != nil)
     }
     
-    @Test("Dread Wringer", arguments: [
+    @Test("Dread Wringer Data", arguments: [
         WeaponKit(.dreadWringer, .suctionBomb, .reefslider),
         WeaponKit(.dreadWringerD, .squidBeakon, .waveBreaker)
     ])
     func dreadWringer(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Slosher.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Slosher.self, from: kit.main.fileName)
         
         let item = try #require(self.mainInfo.getItem(for: kit.main))
         
@@ -63,12 +59,12 @@ struct SlosherDataTests {
         #expect(data.inkConsumeSlosher != nil)
     }
     
-    @Test("Explosher", arguments: [
+    @Test("Explosher Data", arguments: [
         WeaponKit(.explosher, .pointSensor, .inkStorm),
         WeaponKit(.customExplosher, .splashWall, .tripleSplashdown)
     ])
     func explosher(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Slosher.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Slosher.self, from: kit.main.fileName)
         
         let item = try #require(self.mainInfo.getItem(for: kit.main))
         
@@ -84,13 +80,13 @@ struct SlosherDataTests {
         #expect(data.inkConsumeSlosher != nil)
     }
     
-    @Test("Slosher", arguments: [
+    @Test("Slosher Data", arguments: [
         WeaponKit(.slosher, .splatBomb, .tripleInkstrike),
         WeaponKit(.slosherDeco, .angleShooter, .zipcaster),
         WeaponKit(.orderSlosherReplica, .splatBomb, .tripleInkstrike)
     ])
     func slosher(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Slosher.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Slosher.self, from: kit.main.fileName)
         
         let item = try #require(self.mainInfo.getItem(for: kit.main))
         
@@ -109,12 +105,12 @@ struct SlosherDataTests {
         #expect(data.inkConsumeSlosher != nil)
     }
     
-    @Test("Sloshing Machine", arguments: [
+    @Test("Sloshing Machine Data", arguments: [
         WeaponKit(.sloshingMachine, .fizzyBomb, .booyahBomb),
         WeaponKit(.sloshingMachineNeo, .pointSensor, .trizooka)
     ])
     func sloshingMachine(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Slosher.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Slosher.self, from: kit.main.fileName)
         
         let item = try #require(self.mainInfo.getItem(for: kit.main))
         
@@ -134,12 +130,12 @@ struct SlosherDataTests {
         #expect(data.inkConsumeSlosher != nil)
     }
     
-    @Test("Tri-Slosher", arguments: [
+    @Test("Tri-Slosher Data", arguments: [
         WeaponKit(.triSlosher, .toxicMist, .inkjet),
         WeaponKit(.triSlosherNouveau, .fizzyBomb, .tacticooler)
     ])
     func triSlosher(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Slosher.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Slosher.self, from: kit.main.fileName)
         
         let item = try #require(self.mainInfo.getItem(for: kit.main))
         

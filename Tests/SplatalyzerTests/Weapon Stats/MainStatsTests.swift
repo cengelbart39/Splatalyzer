@@ -12,7 +12,7 @@ struct MainStatsTests {
     
     let mainInfo = try! JSONService().decode(WeaponInfoMain.self, from: "WeaponInfoMain")
 
-    @Test("Blasters", arguments: MainWeapon.getWeapons(of: .blaster))
+    @Test("Blasters Main Stats", arguments: MainWeapon.getWeapons(of: .blaster))
     func blasterStats(_ blaster: MainWeapon) throws {
         let stats = try TestHelper.getMainWeaponStats(for: blaster, with: mainInfo)
         
@@ -22,7 +22,7 @@ struct MainStatsTests {
         #expect(stats.whiteInkSeconds != nil)
     }
     
-    @Test("Brellas (Exists)", arguments: [
+    @Test("Brellas (Exists) Main Stats", arguments: [
         MainWeapon.recycledBrella24MkI, .recycledBrella24MkII, .tentaBrella, .tentaSorellaBrella, .undercoverBrella, .undercoverSorellaBrella
     ])
     func brellaStatsExist(_ brella: MainWeapon) throws {
@@ -32,7 +32,7 @@ struct MainStatsTests {
         #expect(stats.brellaCanopyHp != nil)
     }
     
-    @Test("Brellas (Not Exist)", arguments: [
+    @Test("Brellas (Not Exist) Main Stats", arguments: [
         MainWeapon.splatBrella, .sorellaBrella, .orderBrellaReplica
     ])
     func brellaStatsNotExist(_ brella: MainWeapon) throws {
@@ -42,7 +42,7 @@ struct MainStatsTests {
         #expect(!stats.exists())
     }
     
-    @Test("Brushes", arguments: MainWeapon.getWeapons(of: .brush))
+    @Test("Brushes Main Stats", arguments: MainWeapon.getWeapons(of: .brush))
     func brushStats(_ brush: MainWeapon) throws {
         let stats = try TestHelper.getMainWeaponStats(for: brush, with: mainInfo)
         
@@ -50,7 +50,7 @@ struct MainStatsTests {
         #expect(!stats.exists())
     }
     
-    @Test("Chargers (Full Charge)", arguments: [
+    @Test("Chargers (Full Charge) Main Stats", arguments: [
         MainWeapon.gooTuber, .customGooTuber, .bamboozler14MkI, .bamboozler14MkII, .eliter4KScope, .customEliter4KScope, .eliter4K, .customEliter4K, .snipewriter5H, .snipewriter5B, .classicSquiffer, .newSquiffer
     ])
     func chargerFullChargeStats(_ charger: MainWeapon) throws {
@@ -60,7 +60,7 @@ struct MainStatsTests {
         #expect(stats.fullChargeSeconds != nil)
     }
     
-    @Test("Chargers (Max Charge)", arguments: [
+    @Test("Chargers (Max Charge) Main Stats", arguments: [
         MainWeapon.gooTuber, .customGooTuber, .eliter4K, .customEliter4K, .splatCharger, .zfSplatCharger, .orderChargerReplica, .classicSquiffer, .newSquiffer
     ])
     func chargerMaxChargeStats(_ charger: MainWeapon) throws {
@@ -70,7 +70,7 @@ struct MainStatsTests {
         #expect(stats.maxChargeSeconds != nil)
     }
     
-    @Test("Chargers (Not Exist)", arguments: [
+    @Test("Chargers (Not Exist) Main Stats", arguments: [
         MainWeapon.splatterscope, .zfSplatterscope
     ])
     func chargerNotExistStats(_ charger: MainWeapon) throws {
@@ -80,7 +80,7 @@ struct MainStatsTests {
         #expect(!stats.exists())
     }
     
-    @Test("Dualies", arguments: MainWeapon.getWeapons(of: .dualie))
+    @Test("Dualies Main Stats", arguments: MainWeapon.getWeapons(of: .dualie))
     func dualieStats(_ dualie: MainWeapon) throws {
         let stats = try TestHelper.getMainWeaponStats(for: dualie, with: mainInfo)
         
@@ -89,7 +89,7 @@ struct MainStatsTests {
         #expect(stats.shotSpreadGround != nil)
     }
     
-    @Test("Rollers", arguments: MainWeapon.getWeapons(of: .roller))
+    @Test("Rollers Main Stats", arguments: MainWeapon.getWeapons(of: .roller))
     func rollerStats(_ roller: MainWeapon) throws {
         let stats = try TestHelper.getMainWeaponStats(for: roller, with: mainInfo)
         
@@ -97,7 +97,7 @@ struct MainStatsTests {
         #expect(!stats.exists())
     }
     
-    @Test("Shooters (Shot Spread)", arguments: MainWeapon.getWeapons(of: .shooter))
+    @Test("Shooters (Shot Spread) Main Stats", arguments: MainWeapon.getWeapons(of: .shooter))
     func shooterStats(_ shooter: MainWeapon) throws {
         let stats = try TestHelper.getMainWeaponStats(for: shooter, with: mainInfo)
         
@@ -106,7 +106,7 @@ struct MainStatsTests {
         #expect(stats.shotSpreadGround != nil)
     }
     
-    @Test("Shooters (White Ink)", arguments: [
+    @Test("Shooters (White Ink) Main Stats", arguments: [
         MainWeapon.aerosprayMG, .aerosprayRG, .splattershotJr, .customSplattershotJr, .splooshomatic, .neoSplooshomatic, .h3Nozzlenose, .h3NozzlenoseD, .l3Nozzlenose, .l3NozzlenoseD
     ])
     func shooterWhiteInkStats(_ shooter: MainWeapon) throws {
@@ -116,7 +116,7 @@ struct MainStatsTests {
         #expect(stats.whiteInkSeconds != nil)
     }
     
-    @Test("Shooters (Autofire Spread)", arguments: [
+    @Test("Shooters (Autofire Spread) Main Stats", arguments: [
         MainWeapon.squeezer, .foilSqueezer
     ])
     func shooterAutofireStats(_ shooter: MainWeapon) throws {
@@ -127,7 +127,7 @@ struct MainStatsTests {
         #expect(stats.shotAutofireSpreadGround != nil)
     }
     
-    @Test("Sloshers", arguments: MainWeapon.getWeapons(of: .slosher))
+    @Test("Sloshers Main Stats", arguments: MainWeapon.getWeapons(of: .slosher))
     func slosherStats(_ slosher: MainWeapon) throws {
         let stats = try TestHelper.getMainWeaponStats(for: slosher, with: mainInfo)
         
@@ -135,7 +135,7 @@ struct MainStatsTests {
         #expect(stats.whiteInkSeconds != nil)
     }
     
-    @Test("Splatanas", arguments: MainWeapon.getWeapons(of: .splatana))
+    @Test("Splatanas Main Stats", arguments: MainWeapon.getWeapons(of: .splatana))
     func splatanaStats(_ splatana: MainWeapon) throws {
         let stats = try TestHelper.getMainWeaponStats(for: splatana, with: mainInfo)
         
@@ -143,7 +143,7 @@ struct MainStatsTests {
         #expect(!stats.exists())
     }
     
-    @Test("Splatlings", arguments: MainWeapon.getWeapons(of: .splatling))
+    @Test("Splatlings Main Stats", arguments: MainWeapon.getWeapons(of: .splatling))
     func splatlingStats(_ splatling: MainWeapon) throws {
         let stats = try TestHelper.getMainWeaponStats(for: splatling, with: mainInfo)
         
@@ -153,7 +153,7 @@ struct MainStatsTests {
         #expect(stats.whiteInkSeconds != nil)
     }
     
-    @Test("Splatlings (Max Charge)", arguments: [
+    @Test("Splatlings (Max Charge) Main Stats", arguments: [
         MainWeapon.nautilus47, .nautilus79
     ])
     func splatlingMaxChargeStats(_ splatling: MainWeapon) throws {
@@ -163,7 +163,7 @@ struct MainStatsTests {
         #expect(stats.maxChargeSeconds != nil)
     }
     
-    @Test("Stringers", arguments: MainWeapon.getWeapons(of: .stringer))
+    @Test("Stringers Main Stats", arguments: MainWeapon.getWeapons(of: .stringer))
     func stringerStats(_ stringer: MainWeapon) throws {
         let stats = try TestHelper.getMainWeaponStats(for: stringer, with: mainInfo)
         

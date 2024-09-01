@@ -220,6 +220,8 @@ public enum Ability: String, CaseIterable, Codable, Sendable {
 }
 
 public extension Ability {
+    static let useableAbilities = Ability.allCases.filter { $0 != .none }
+    
     /// An array of abilities that can only  be used on headgear
     static let headgearAbilities = Ability.allCases.filter {
         $0.restriction == .headgearOnly || $0.restriction == .none

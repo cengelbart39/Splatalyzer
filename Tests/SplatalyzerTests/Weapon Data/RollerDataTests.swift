@@ -14,16 +14,12 @@ struct RollerDataTests {
     
     let mainInfo = try! JSONService().decode(WeaponInfoMain.self, from: "WeaponInfoMain")
     
-    private func makeFileName(with weapon: MainWeapon) -> String {
-        return "Weapon\(weapon.fileName()).game__GameParameterTable"
-    }
-
-    @Test("Big Swig Roller", arguments: [
+    @Test("Big Swig Roller Data", arguments: [
         WeaponKit(.bigSwigRoller, .splashWall, .inkVac),
         WeaponKit(.bigSwigRollerExpress, .angleShooter, .inkStorm)
     ])
     func bigSwigRoller(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Roller.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Roller.self, from: kit.main.fileName)
         
         let item = try #require(self.mainInfo.getItem(for: kit.main))
         
@@ -42,12 +38,12 @@ struct RollerDataTests {
         #expect(data.inkConsumeWeaponWideSwing != nil)
     }
     
-    @Test("Carbon Roller", arguments: [
+    @Test("Carbon Roller Data", arguments: [
         WeaponKit(.carbonRoller, .autobomb, .zipcaster),
         WeaponKit(.carbonRollerDeco, .burstBomb, .trizooka)
     ])
     func carbonRoller(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Roller.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Roller.self, from: kit.main.fileName)
         
         let item = try #require(self.mainInfo.getItem(for: kit.main))
         
@@ -66,12 +62,12 @@ struct RollerDataTests {
         #expect(data.inkConsumeWeaponWideSwing != nil)
     }
     
-    @Test("Dynamo Roller", arguments: [
+    @Test("Dynamo Roller Data", arguments: [
         WeaponKit(.dynamoRoller, .sprinkler, .tacticooler),
         WeaponKit(.goldDynamoRoller, .splatBomb, .superChump)
     ])
     func dynamoRoller(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Roller.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Roller.self, from: kit.main.fileName)
         
         let item = try #require(self.mainInfo.getItem(for: kit.main))
         
@@ -90,12 +86,12 @@ struct RollerDataTests {
         #expect(data.inkConsumeWeaponWideSwing != nil)
     }
     
-    @Test("Flingza Roller", arguments: [
+    @Test("Flingza Roller Data", arguments: [
         WeaponKit(.flingzaRoller, .inkMine, .tentaMissiles),
         WeaponKit(.foilFlingzaRoller, .suctionBomb, .splattercolorScreen)
     ])
     func flingzaRoller(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Roller.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Roller.self, from: kit.main.fileName)
         
         let item = try #require(self.mainInfo.getItem(for: kit.main))
         
@@ -114,13 +110,13 @@ struct RollerDataTests {
         #expect(data.inkConsumeWeaponWideSwing != nil)
     }
     
-    @Test("Splat Roller", arguments: [
+    @Test("Splat Roller Data", arguments: [
         WeaponKit(.splatRoller, .curlingBomb, .bigBubbler),
         WeaponKit(.krakOnSplatRoller, .squidBeakon, .krakenRoyale),
         WeaponKit(.orderRollerReplica, .curlingBomb, .bigBubbler)
     ])
     func splatRoller(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Roller.self, from: self.makeFileName(with: kit.main))
+        let gameParams = try service.decode(Roller.self, from: kit.main.fileName)
         
         let item = try #require(self.mainInfo.getItem(for: kit.main))
         

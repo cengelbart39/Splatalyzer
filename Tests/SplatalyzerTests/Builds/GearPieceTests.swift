@@ -9,7 +9,8 @@ import Testing
 @testable import Splatalyzer
 
 struct GearPieceTests {
-    @Test("Default Values", arguments: [
+    
+    @Test("GearPiece Default Values", arguments: [
         AbilityRestriction.none, .headgearOnly, .clothesOnly, .shoesOnly
     ])
     func defaultValues(_ restriction: AbilityRestriction) {
@@ -89,7 +90,8 @@ struct GearPieceTests {
         #expect(!gearPiece.isValid())
     }
     
-    @Test func toArray() throws {
+    @Test("GearPiece to Array")
+    func toArray() throws {
         let gearPiece = GearPiece(main: .swimSpeedUp, sub1: .specialPowerUp, sub2: .swimSpeedUp, sub3: .specialPowerUp, for: .headgearOnly)
         
         let array = gearPiece.toArray()
@@ -101,7 +103,8 @@ struct GearPieceTests {
         #expect(array[3] == .specialPowerUp)
     }
     
-    @Test func pieceAPExclusive() throws {
+    @Test("Piece AP - Exclusive Ability")
+    func pieceAPExclusive() throws {
         let piece = GearPiece(
             main: .ninjaSquid,
             sub1: .quickSuperJump,
@@ -117,7 +120,8 @@ struct GearPieceTests {
         #expect(ap[.swimSpeedUp] == 6)
     }
     
-    @Test func pieceAPNonExclusive() throws {
+    @Test("Piece AP - Unexclusive Ability")
+    func pieceAPNonExclusive() throws {
         let piece = GearPiece(
             main: .swimSpeedUp,
             sub1: .specialPowerUp,
@@ -132,7 +136,8 @@ struct GearPieceTests {
         #expect(ap[.swimSpeedUp] == 13)
     }
     
-    @Test func pieceAPAbilityDoubler() throws {
+    @Test("Piece AP - Ability Doubler")
+    func pieceAPAbilityDoubler() throws {
         let piece = GearPiece(
             main: .abilityDoubler,
             sub1: .specialPowerUp,

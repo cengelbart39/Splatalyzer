@@ -10,7 +10,7 @@ import Testing
 
 struct SpecialStatsTests {
     
-    @Test("Duration Not Nil", arguments: [
+    @Test("Duration Not Nil Sp.Stats", arguments: [
         SpecialWeapon.crabTank, .inkjet, .inkStorm, .killerWail51, .krakenRoyale, .trizooka, .ultraStamp
     ])
     func durationNotNil(_ weapon: SpecialWeapon) throws {
@@ -20,7 +20,7 @@ struct SpecialStatsTests {
         #expect(duration != nil)
     }
     
-    @Test("Duration Nil", arguments: [
+    @Test("Duration Nil Sp.Stats", arguments: [
         SpecialWeapon.bigBubbler, .booyahBomb, .inkVac, .reefslider, .splattercolorScreen, .superChump, .tacticooler, .tentaMissiles, .tripleInkstrike, .tripleSplashdown, .waveBreaker, .zipcaster
     ])
     func durationNil(_ weapon: SpecialWeapon) throws {
@@ -30,7 +30,7 @@ struct SpecialStatsTests {
         #expect(duration == nil)
     }
     
-    @Test("Damage Distance Not Nil", arguments: [
+    @Test("Damage Distance Not Nil Sp.Stats", arguments: [
         SpecialWeapon.inkjet, .reefslider, .superChump, .tripleSplashdown, .trizooka
     ])
     func damageDistanceNotNil(_ weapon: SpecialWeapon) throws {
@@ -41,7 +41,7 @@ struct SpecialStatsTests {
         #expect(dmgDist != nil)
     }
     
-    @Test("Damage Distance Nil", arguments: [
+    @Test("Damage Distance Nil Sp.Stats", arguments: [
         SpecialWeapon.bigBubbler, .booyahBomb, .crabTank, .inkStorm, .inkVac, .killerWail51, .krakenRoyale, .splattercolorScreen, .tacticooler, .tentaMissiles, .tripleInkstrike, .ultraStamp, .waveBreaker, .zipcaster
     ])
     func damageDistanceNil(_ weapon: SpecialWeapon) throws {
@@ -52,7 +52,7 @@ struct SpecialStatsTests {
         #expect(dmgDist == nil)
     }
     
-    @Test("Paint Radius Not Nil", arguments: [
+    @Test("Paint Radius Not Nil Sp.Stats", arguments: [
         SpecialWeapon.inkjet, .reefslider, .superChump, .tripleSplashdown, .trizooka
     ])
     func paintRadiusNotNil(_ weapon: SpecialWeapon) throws {
@@ -63,7 +63,7 @@ struct SpecialStatsTests {
         #expect(dmgDist != nil)
     }
     
-    @Test("Paint Radius Nil", arguments: [
+    @Test("Paint Radius Nil Sp.Stats", arguments: [
         SpecialWeapon.bigBubbler, .booyahBomb, .crabTank, .inkStorm, .inkVac, .killerWail51, .krakenRoyale, .splattercolorScreen, .tacticooler, .tentaMissiles, .tripleInkstrike, .ultraStamp, .waveBreaker, .zipcaster
     ])
     func paintRadiusNil(_ weapon: SpecialWeapon) throws {
@@ -74,7 +74,7 @@ struct SpecialStatsTests {
         #expect(dmgDist == nil)
     }
     
-    @Test("Field HP Not Nil")
+    @Test("Field HP Not Nil Sp.Stats")
     func fieldHpNotNil() throws {
         let data = try TestHelper.getSpecialData(for: .bigBubbler)
         
@@ -83,7 +83,7 @@ struct SpecialStatsTests {
         #expect(fieldHp != nil)
     }
     
-    @Test("Field HP Nil", arguments: [
+    @Test("Field HP Nil Sp.Stats", arguments: [
         SpecialWeapon.inkVac, .krakenRoyale, .crabTank, .splattercolorScreen, .tacticooler, .superChump, .inkStorm, .inkjet, .killerWail51, .tentaMissiles, .booyahBomb, .tripleSplashdown, .waveBreaker, .reefslider, .zipcaster, .tripleInkstrike, .trizooka, .ultraStamp
     ])
     func fieldHpNil(_ weapon: SpecialWeapon) throws {
@@ -94,7 +94,7 @@ struct SpecialStatsTests {
         #expect(fieldHp == nil)
     }
     
-    @Test("Device HP Not Nil")
+    @Test("Device HP Not Nil Sp.Stats")
     func deviceHpNotNil() throws {
         let data = try TestHelper.getSpecialData(for: .bigBubbler)
         
@@ -103,7 +103,7 @@ struct SpecialStatsTests {
         #expect(fieldHp != nil)
     }
     
-    @Test("Device HP Nil", arguments: [
+    @Test("Device HP Nil Sp.Stats", arguments: [
         SpecialWeapon.inkVac, .krakenRoyale, .crabTank, .splattercolorScreen, .tacticooler, .superChump, .inkStorm, .inkjet, .killerWail51, .tentaMissiles, .booyahBomb, .tripleSplashdown, .waveBreaker, .reefslider, .zipcaster, .tripleInkstrike, .trizooka, .ultraStamp
     ])
     func deviceHpNil(_ weapon: SpecialWeapon) throws {
@@ -114,7 +114,7 @@ struct SpecialStatsTests {
         #expect(fieldHp == nil)
     }
     
-    @Test("Hook Consumption Not Nil")
+    @Test("Hook Consumption Not Nil Sp.Stats")
     func hookConsumptionNotNil() throws {
         let data = try TestHelper.getSpecialData(for: .zipcaster)
         
@@ -123,7 +123,7 @@ struct SpecialStatsTests {
         #expect(hookConsumption != nil)
     }
     
-    @Test("Hook Consumption Nil", arguments: [
+    @Test("Hook Consumption Nil Sp.Stats", arguments: [
         SpecialWeapon.inkVac, .krakenRoyale, .crabTank, .splattercolorScreen, .tacticooler, .superChump, .inkStorm, .inkjet, .killerWail51, .tentaMissiles, .booyahBomb, .tripleSplashdown, .waveBreaker, .reefslider, .bigBubbler, .tripleInkstrike, .trizooka, .ultraStamp
     ])
     func hookConsumptionNil(_ weapon: SpecialWeapon) throws {
@@ -134,7 +134,7 @@ struct SpecialStatsTests {
         #expect(hookConsumption == nil)
     }
     
-    @Test("Hook Consumption Per Sec Not Nil")
+    @Test("Hook Consumption Per Sec Not Nil Sp.Stats")
     func hookConsumptionPerSecNotNil() throws {
         let data = try TestHelper.getSpecialData(for: .zipcaster)
         
@@ -143,7 +143,7 @@ struct SpecialStatsTests {
         #expect(hookConsumption != nil)
     }
     
-    @Test("Hook Consumption Per Sec Nil", arguments: [
+    @Test("Hook Consumption Per Sec Nil Sp.Stats", arguments: [
         SpecialWeapon.inkVac, .krakenRoyale, .crabTank, .splattercolorScreen, .tacticooler, .superChump, .inkStorm, .inkjet, .killerWail51, .tentaMissiles, .booyahBomb, .tripleSplashdown, .waveBreaker, .reefslider, .bigBubbler, .tripleInkstrike, .trizooka, .ultraStamp
     ])
     func hookConsumptionPerSecNil(_ weapon: SpecialWeapon) throws {
@@ -154,7 +154,7 @@ struct SpecialStatsTests {
         #expect(hookConsumption == nil)
     }
     
-    @Test("Reticle Radius Not Nil")
+    @Test("Reticle Radius Not Nil Sp.Stats")
     func reticleRadiusNotNil() throws {
         let data = try TestHelper.getSpecialData(for: .tentaMissiles)
         
@@ -163,7 +163,7 @@ struct SpecialStatsTests {
         #expect(hookConsumption != nil)
     }
     
-    @Test("Reticle Radius Nil", arguments: [
+    @Test("Reticle Radius Nil Sp.Stats", arguments: [
         SpecialWeapon.inkVac, .krakenRoyale, .crabTank, .splattercolorScreen, .tacticooler, .superChump, .inkStorm, .inkjet, .killerWail51, .zipcaster, .booyahBomb, .tripleSplashdown, .waveBreaker, .reefslider, .bigBubbler, .tripleInkstrike, .trizooka, .ultraStamp
     ])
     func reticleRadiusNil(_ weapon: SpecialWeapon) throws {
@@ -174,7 +174,7 @@ struct SpecialStatsTests {
         #expect(hookConsumption == nil)
     }
     
-    @Test("Throw Distance Not Nil", arguments: [
+    @Test("Throw Distance Not Nil Sp.Stats", arguments: [
         SpecialWeapon.inkStorm, .splattercolorScreen, .tripleInkstrike
     ])
     func throwDistanceNotNil(_ weapon: SpecialWeapon) throws {
@@ -185,7 +185,7 @@ struct SpecialStatsTests {
         #expect(throwDist != nil)
     }
     
-    @Test("Throw Distance Nil", arguments: [
+    @Test("Throw Distance Nil Sp.Stats", arguments: [
         SpecialWeapon.inkVac, .krakenRoyale, .crabTank, .tacticooler, .superChump, .bigBubbler, .inkjet, .killerWail51, .tentaMissiles, .booyahBomb, .tripleSplashdown, .waveBreaker, .reefslider, .zipcaster, .trizooka, .ultraStamp
     ])
     func throwDistanceNil(_ weapon: SpecialWeapon) throws {
@@ -196,7 +196,7 @@ struct SpecialStatsTests {
         #expect(throwDist == nil)
     }
     
-    @Test("Move Speed Not Nil")
+    @Test("Move Speed Not Nil Sp.Stats")
     func moveSpeedNotNil() throws {
         let data = try TestHelper.getSpecialData(for: .splattercolorScreen)
         
@@ -205,7 +205,7 @@ struct SpecialStatsTests {
         #expect(speed != nil)
     }
     
-    @Test("Move Speed Nil", arguments: [
+    @Test("Move Speed Nil Sp.Stats", arguments: [
         SpecialWeapon.inkVac, .krakenRoyale, .crabTank, .tacticooler, .superChump, .bigBubbler, .inkStorm, .inkjet, .killerWail51, .tentaMissiles, .booyahBomb, .tripleSplashdown, .waveBreaker, .reefslider, .zipcaster, .tripleInkstrike, .trizooka, .ultraStamp
     ])
     func moveSpeedNil(_ weapon: SpecialWeapon) throws {
@@ -216,7 +216,7 @@ struct SpecialStatsTests {
         #expect(speed == nil)
     }
     
-    @Test("Auto Charge Rate Not Nil")
+    @Test("Auto Charge Rate Not Nil Sp.Stats")
     func autoChargeRateNotNil() throws {
         let data = try TestHelper.getSpecialData(for: .booyahBomb)
         
@@ -225,7 +225,7 @@ struct SpecialStatsTests {
         #expect(rate != nil)
     }
     
-    @Test("Auto Charge Rate Nil", arguments: [
+    @Test("Auto Charge Rate Nil Sp.Stats", arguments: [
         SpecialWeapon.inkVac, .krakenRoyale, .crabTank, .splattercolorScreen, .tacticooler, .superChump, .bigBubbler, .inkStorm, .inkjet, .killerWail51, .tentaMissiles, .tripleSplashdown, .waveBreaker, .reefslider, .zipcaster, .tripleInkstrike, .trizooka, .ultraStamp
     ])
     func autoChargeRateNil(_ weapon: SpecialWeapon) throws {
@@ -236,7 +236,7 @@ struct SpecialStatsTests {
         #expect(rate == nil)
     }
     
-    @Test("Max Radius Not Nil")
+    @Test("Max Radius Not Nil Sp.Stats")
     func maxRadiusNotNil() throws {
         let data = try TestHelper.getSpecialData(for: .waveBreaker)
         
@@ -245,7 +245,7 @@ struct SpecialStatsTests {
         #expect(rate != nil)
     }
     
-    @Test("Max Radius Nil", arguments: [
+    @Test("Max Radius Nil Sp.Stats", arguments: [
         SpecialWeapon.inkVac, .krakenRoyale, .crabTank, .splattercolorScreen, .tacticooler, .superChump, .bigBubbler, .inkStorm, .inkjet, .killerWail51, .tentaMissiles, .booyahBomb, .tripleSplashdown, .reefslider, .zipcaster, .tripleInkstrike, .trizooka, .ultraStamp
     ])
     func maxRadiusNil(_ weapon: SpecialWeapon) throws {
@@ -256,7 +256,7 @@ struct SpecialStatsTests {
         #expect(rate == nil)
     }
     
-    @Test("Radius Range Not Nil")
+    @Test("Radius Range Not Nil Sp.Stats")
     func radiusRangeNotNil() throws {
         let data = try TestHelper.getSpecialData(for: .inkVac)
         
@@ -265,7 +265,7 @@ struct SpecialStatsTests {
         #expect(range != nil)
     }
     
-    @Test("Radius Range Nil", arguments: [
+    @Test("Radius Range Nil Sp.Stats", arguments: [
         SpecialWeapon.krakenRoyale, .crabTank, .splattercolorScreen, .tacticooler, .superChump, .bigBubbler, .inkStorm, .inkjet, .killerWail51, .tentaMissiles, .booyahBomb, .tripleSplashdown, .waveBreaker, .reefslider, .tripleInkstrike, .trizooka, .ultraStamp
     ])
     func radiusRangeNil(_ weapon: SpecialWeapon) throws {
@@ -276,7 +276,7 @@ struct SpecialStatsTests {
         #expect(range == nil)
     }
     
-    @Test("Power Up Duration Not Nil")
+    @Test("Power Up Duration Not Nil Sp.Stats")
     func powerUpDurationNotNil() throws {
         let data = try TestHelper.getSpecialData(for: .tacticooler)
         
@@ -285,7 +285,7 @@ struct SpecialStatsTests {
         #expect(range != nil)
     }
     
-    @Test("Power Up Duration Nil", arguments: [
+    @Test("Power Up Duration Nil Sp.Stats", arguments: [
         SpecialWeapon.inkVac, .krakenRoyale, .crabTank, .splattercolorScreen, .superChump, .bigBubbler, .inkStorm, .inkjet, .killerWail51, .tentaMissiles, .booyahBomb, .tripleSplashdown, .waveBreaker, .reefslider, .zipcaster, .tripleInkstrike, .trizooka, .ultraStamp
     ])
     func powerUpDurationNil(_ weapon: SpecialWeapon) throws {

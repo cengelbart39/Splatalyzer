@@ -11,7 +11,9 @@ import Testing
 struct SpecialDataTests {
     let service = JSONService()
     
-    @Test func bigBubbler() throws {
+    
+    @Test("Big Bubbler Data")
+    func bigBubbler() throws {
         let gameParams = try service.decode(BigBubbler.self, from: SpecialWeapon.bigBubbler.fileName)
         
         let data = SpecialWeaponData(container: gameParams)
@@ -22,7 +24,8 @@ struct SpecialDataTests {
         #expect(overwrites.maxHp != nil)
     }
     
-    @Test func booyahBomb() throws {
+    @Test("Booyah Bomb Data")
+    func booyahBomb() throws {
         let gameParams = try service.decode(BooyahBomb.self, from: SpecialWeapon.booyahBomb.fileName)
         
         let data = SpecialWeaponData(container: gameParams)
@@ -33,7 +36,8 @@ struct SpecialDataTests {
         #expect(overwrites.chargeRateAutoPerFrame != nil)
     }
     
-    @Test func crabTank() throws {
+    @Test("Crab Tank Data")
+    func crabTank() throws {
         let gameParams = try service.decode(CrabTank.self, from: SpecialWeapon.crabTank.fileName)
         
         let data = SpecialWeaponData(container: gameParams)
@@ -48,7 +52,8 @@ struct SpecialDataTests {
         #expect(overwrites.specialDurationFrame != nil)
     }
     
-    @Test func inkjet() throws {
+    @Test("Inkjet Data")
+    func inkjet() throws {
         let gameParams = try service.decode(Inkjet.self, from: SpecialWeapon.inkjet.fileName)
         
         let data = SpecialWeaponData(container: gameParams)
@@ -63,7 +68,8 @@ struct SpecialDataTests {
         #expect(overwrites.splashAroundVelocityMin != nil)
     }
     
-    @Test func inkStorm() throws {
+    @Test("Ink Storm Data")
+    func inkStorm() throws {
         let gameParams = try service.decode(InkStorm.self, from: SpecialWeapon.inkStorm.fileName)
         
         let data = SpecialWeaponData(container: gameParams)
@@ -75,7 +81,8 @@ struct SpecialDataTests {
         #expect(overwrites.specialDurationFrame != nil)
     }
     
-    @Test func inkVac() throws {
+    @Test("Ink Vac Data")
+    func inkVac() throws {
         let gameParams = try service.decode(InkVac.self, from: SpecialWeapon.inkVac.fileName)
         
         let data = SpecialWeaponData(container: gameParams)
@@ -88,7 +95,8 @@ struct SpecialDataTests {
         #expect(overwrites.radiusMin != nil)
     }
     
-    @Test func killerWail51() throws {
+    @Test("Killer Wail 5.1 Data")
+    func killerWail51() throws {
         let gameParams = try service.decode(KillerWail51.self, from: SpecialWeapon.killerWail51.fileName)
         
         let data = SpecialWeaponData(container: gameParams)
@@ -99,7 +107,8 @@ struct SpecialDataTests {
         #expect(overwrites.specialDurationFrame != nil)
     }
     
-    @Test func krakenRoyale() throws {
+    @Test("Kraken Royale Data")
+    func krakenRoyale() throws {
         let gameParams = try service.decode(KrakenRoyale.self, from: SpecialWeapon.krakenRoyale.fileName)
         
         let data = SpecialWeaponData(container: gameParams)
@@ -111,7 +120,8 @@ struct SpecialDataTests {
         #expect(overwrites.specialDurationFrame != nil)
     }
     
-    @Test func reefslider() throws {
+    @Test("Reefslider Data")
+    func reefslider() throws {
         let gameParams = try service.decode(Reefslider.self, from: SpecialWeapon.reefslider.fileName)
         
         let data = SpecialWeaponData(container: gameParams)
@@ -125,7 +135,8 @@ struct SpecialDataTests {
         #expect(overwrites.splashAroundVelocityMin != nil)
     }
     
-    @Test func splattercolorScreen() throws {
+    @Test("Splattercolor Screen Data")
+    func splattercolorScreen() throws {
         let gameParams = try service.decode(SplattercolorScreen.self, from: SpecialWeapon.splattercolorScreen.fileName)
         
         let data = SpecialWeaponData(container: gameParams)
@@ -136,7 +147,8 @@ struct SpecialDataTests {
         #expect(overwrites.spawnSpeedZSpecUp != nil)
     }
     
-    @Test func superChump() throws {
+    @Test("Super Chump Data")
+    func superChump() throws {
         let gameParams = try service.decode(SuperChump.self, from: SpecialWeapon.superChump.fileName)
         
         let data = SpecialWeaponData(container: gameParams)
@@ -149,7 +161,8 @@ struct SpecialDataTests {
         #expect(overwrites.distanceDamageDistanceRate != nil)
     }
     
-    @Test func tacticooler() throws {
+    @Test("Tacticooler Data")
+    func tacticooler() throws {
         let gameParams = try service.decode(Tacticooler.self, from: SpecialWeapon.tacticooler.fileName)
         
         let data = SpecialWeaponData(container: gameParams)
@@ -159,7 +172,8 @@ struct SpecialDataTests {
         #expect(overwrites.powerUpFrame != nil)
     }
     
-    @Test func tentaMissiles() throws {
+    @Test("Tenta Missiles Data")
+    func tentaMissiles() throws {
         let gameParams = try service.decode(TentaMissiles.self, from: SpecialWeapon.tentaMissiles.fileName)
         
         let data = SpecialWeaponData(container: gameParams)
@@ -170,7 +184,8 @@ struct SpecialDataTests {
         #expect(overwrites.targetInCircleRadius != nil)
     }
     
-    @Test func tripleInkstrike() throws {
+    @Test("Triple Inkstrike Data")
+    func tripleInkstrike() throws {
         let gameParams = try service.decode(TripleInkstrike.self, from: SpecialWeapon.tripleInkstrike.fileName)
         
         let data = SpecialWeaponData(container: gameParams)
@@ -180,7 +195,8 @@ struct SpecialDataTests {
         #expect(overwrites.spawnSpeedZSpecUp != nil)
     }
     
-    @Test func tripleSplashdown() throws {
+    @Test("Triple Splashdown Data")
+    func tripleSplashdown() throws {
         let gameParams = try service.decode(TripleSplashdown.self, from: SpecialWeapon.tripleSplashdown.fileName)
         
         let data = SpecialWeaponData(container: gameParams)
@@ -192,7 +208,8 @@ struct SpecialDataTests {
         #expect(overwrites.paintRadius != nil)
     }
     
-    @Test func trizooka() throws {
+    @Test("Trizooka Data")
+    func trizooka() throws {
         let gameParams = try service.decode(Trizooka.self, from: SpecialWeapon.trizooka.fileName)
         
         let data = SpecialWeaponData(container: gameParams)
@@ -206,7 +223,8 @@ struct SpecialDataTests {
         #expect(overwrites.specialDurationFrame != nil)
     }
     
-    @Test func ultraStamp() throws {
+    @Test("Ultra Stamp Data")
+    func ultraStamp() throws {
         let gameParams = try service.decode(UltraStamp.self, from: SpecialWeapon.ultraStamp.fileName)
         
         let data = SpecialWeaponData(container: gameParams)
@@ -217,7 +235,8 @@ struct SpecialDataTests {
         #expect(!data.throwDamage.isEmpty)
     }
     
-    @Test func waveBreaker() throws {
+    @Test("Wave Breaker Data")
+    func waveBreaker() throws {
         let gameParams = try service.decode(WaveBreaker.self, from: SpecialWeapon.waveBreaker.fileName)
         
         let data = SpecialWeaponData(container: gameParams)
@@ -230,7 +249,8 @@ struct SpecialDataTests {
         #expect(overwrites.maxRadius != nil)
     }
     
-    @Test func zipcaster() throws {
+    @Test("Zipcaster Data")
+    func zipcaster() throws {
         let gameParams = try service.decode(Zipcaster.self, from: SpecialWeapon.zipcaster.fileName)
         
         let data = SpecialWeaponData(container: gameParams)

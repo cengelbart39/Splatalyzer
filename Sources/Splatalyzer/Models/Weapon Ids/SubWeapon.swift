@@ -74,14 +74,13 @@ public enum SubWeapon: String, CaseIterable, Codable, Sendable {
     /// This function outputs `BombCurling`, removing the underscore.
     ///
     /// For no-underscore raw values, we can just return them without doing any work.
-    func fileName() -> String {
+    var fileName: String {
         if self.rawValue.contains("_") {
             let subSplit = self.rawValue.split(separator: "_")
             
-            return String(subSplit[0] + subSplit[1])
-            
+            return "Weapon\(subSplit[0])\(subSplit[1]).game__GameParameterTable"
         } else {
-            return self.rawValue
+            return "Weapon\(self.rawValue).game__GameParameterTable"
         }
     }
 }
@@ -121,7 +120,7 @@ extension SubWeapon {
     }
     
     static func fileNames() -> [String] {
-        return self.allCases.map { $0.fileName() }
+        return self.allCases.map { $0.fileName }
     }
     
     static func allModelTypes() -> [any GameParametable.Type] {
