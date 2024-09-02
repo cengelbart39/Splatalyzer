@@ -7,6 +7,8 @@
 
 import Foundation
 
+public protocol SpecialWeaponable: GameParametable where Parameters: SpecialParametable { }
+
 /// Sets required methods for any Special Weapon
 public protocol SpecialParametable: Parametable {
     

@@ -9,10 +9,6 @@ import Testing
 import Foundation
 @testable import Splatalyzer
 
-extension Tag {
-    @Tag static var localization: Self
-}
-
 @Suite(.tags(.localization))
 struct LocalizationTests {
     

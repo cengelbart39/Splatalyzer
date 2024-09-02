@@ -8,22 +8,17 @@
 import Testing
 @testable import Splatalyzer
 
+@Suite(.tags(.weaponData))
 struct SplatlingDataTests {
     
     let service = JSONService()
-    
-    let mainInfo = try! JSONService().decode(WeaponInfoMain.self, from: "WeaponInfoMain")
-    
+        
     @Test("Ballpoint Splatling Data", arguments: [
         WeaponKit(.ballpointSplatling, .fizzyBomb, .inkjet),
         WeaponKit(.ballpointSplatlingNouveau, .inkMine, .inkVac)
     ])
     func ballpointSplatling(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Splatling.self, from: kit.main.fileName)
-        
-        let item = try #require(self.mainInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
+        let data = try MainWeaponData(for: kit.main)
         
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
@@ -44,12 +39,8 @@ struct SplatlingDataTests {
         WeaponKit(.heavyEditSplatlingNouveau, .splatBomb, .crabTank)
     ])
     func heavyEditSplatling(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Splatling.self, from: kit.main.fileName)
-        
-        let item = try #require(self.mainInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)
@@ -70,12 +61,8 @@ struct SplatlingDataTests {
         WeaponKit(.orderSplatlingReplica, .sprinkler, .waveBreaker)
     ])
     func heavySplatling(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Splatling.self, from: kit.main.fileName)
-        
-        let item = try #require(self.mainInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)
@@ -94,12 +81,8 @@ struct SplatlingDataTests {
         WeaponKit(.customHydraSplatling, .inkMine, .splattercolorScreen)
     ])
     func hydraSplatling(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Splatling.self, from: kit.main.fileName)
-        
-        let item = try #require(self.mainInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)
@@ -120,12 +103,8 @@ struct SplatlingDataTests {
         WeaponKit(.zinkMiniSplatling, .toxicMist, .bigBubbler)
     ])
     func miniSplatling(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Splatling.self, from: kit.main.fileName)
-        
-        let item = try #require(self.mainInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)
@@ -145,12 +124,8 @@ struct SplatlingDataTests {
         WeaponKit(.nautilus79, .suctionBomb, .tripleSplashdown)
     ])
     func nautilus(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Splatling.self, from: kit.main.fileName)
-        
-        let item = try #require(self.mainInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)

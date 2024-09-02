@@ -8,25 +8,15 @@
 import Testing
 @testable import Splatalyzer
 
+@Suite(.tags(.weaponData))
 struct BrellaDataTests {
-    let service = JSONService()
-    
-    var weaponInfo: WeaponInfoMain
-    
-    init() throws {
-        self.weaponInfo = try service.decode(WeaponInfoMain.self, from: "WeaponInfoMain")
-    }
     
     @Test("Recycled Brella 24 Data", arguments: [
         WeaponKit(.recycledBrella24MkI, .angleShooter, .bigBubbler),
         WeaponKit(.recycledBrella24MkII, .toxicMist, .tripleSplashdown)
     ])
     func recycledBrella24(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Brella.self, from: kit.main.fileName)
-        
-        let item = try #require(self.weaponInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
+        let data = try MainWeaponData(for: kit.main)
         
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
@@ -45,12 +35,8 @@ struct BrellaDataTests {
         WeaponKit(.orderBrellaReplica, .sprinkler, .tripleInkstrike)
     ])
     func splatBrella(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Brella.self, from: kit.main.fileName)
-        
-        let item = try #require(self.weaponInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)
@@ -65,12 +51,8 @@ struct BrellaDataTests {
         WeaponKit(.tentaSorellaBrella, .inkMine, .trizooka)
     ])
     func tentaBrella(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Brella.self, from: kit.main.fileName)
-        
-        let item = try #require(self.weaponInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)
@@ -86,12 +68,8 @@ struct BrellaDataTests {
         WeaponKit(.undercoverSorellaBrella, .torpedo, .splattercolorScreen)
     ])
     func undercoverBrella(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Brella.self, from: kit.main.fileName)
-        
-        let item = try #require(self.weaponInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)

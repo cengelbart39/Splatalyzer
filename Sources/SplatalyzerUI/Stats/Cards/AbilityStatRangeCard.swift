@@ -106,7 +106,7 @@ public struct AbilityStatRangeCard: View {
                     
                     HStack {
                         ForEach(range.modifiedBy, id: \.self) { ability in
-                            ImageView(image: ability.image)
+                            Image(platformImage: ability.image)
                                 .padding(5)
                                 .abilityBackground(for: colorScheme)
                                 .frame(width: 35)

@@ -35,7 +35,7 @@ public struct AbilityView: View {
         Button(action: {
             showCover = true
         }, label: {
-            ImageView(image: ability.image)
+            Image(platformImage: ability.image)
                 .padding(5)
                 .abilityBackground(for: colorScheme)
         })

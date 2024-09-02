@@ -11,7 +11,7 @@ import Foundation
 /// weapon
 ///
 /// See the JSON file `WeaponBombCurling.game__GameParameterTable.json` in Resources.
-public struct CurlingBomb: GameParametable {
+public struct CurlingBomb: SubWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

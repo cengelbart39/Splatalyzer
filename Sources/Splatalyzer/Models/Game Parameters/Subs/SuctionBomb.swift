@@ -10,7 +10,7 @@ import Foundation
 /// Represents the game parameters of the Suction Bomb sub weapon
 ///
 /// See the JSON file `WeaponBombSuction.game__GameParameterTable.json`
-public struct SuctionBomb: GameParametable {
+public struct SuctionBomb: SubWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

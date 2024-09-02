@@ -10,7 +10,7 @@ import Foundation
 /// Represents the game parameters of the Ultra Stamp special weapon
 ///
 /// See the JSON file `WeaponSpUltraStamp.game__GameParameterTable.json`.
-public struct UltraStamp: GameParametable {
+public struct UltraStamp: SpecialWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

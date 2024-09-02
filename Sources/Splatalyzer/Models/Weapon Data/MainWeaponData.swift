@@ -83,14 +83,77 @@ public struct MainWeaponData: WeaponDatable {
         }
     }
     
+    public init(for weapon: MainWeapon) throws {
+        
+        let mainInfo = try JSONService().decode(.weaponInfoMain, into: WeaponInfoMain.self)
+        let infoItem = mainInfo.getItem(for: weapon)!
+        
+        switch weapon.type {
+        case .blaster:
+            let object = try JSONService().decode(.weapon(weapon), into: Blaster.self)
+            
+            self.init(weaponInfo: infoItem, blaster: object)
+
+        case .brush:
+            let object = try JSONService().decode(.weapon(weapon), into: Brush.self)
+            
+            self.init(weaponInfo: infoItem, brush: object)
+            
+        case .charger:
+            let object = try JSONService().decode(.weapon(weapon), into: Charger.self)
+            
+            self.init(weaponInfo: infoItem, charger: object)
+            
+        case .dualie:
+            let object = try JSONService().decode(.weapon(weapon), into: Dualie.self)
+            
+            self.init(weaponInfo: infoItem, dualie: object)
+            
+        case .roller:
+            let object = try JSONService().decode(.weapon(weapon), into: Roller.self)
+            
+            self.init(weaponInfo: infoItem, roller: object)
+            
+        case .splatana:
+            let object = try JSONService().decode(.weapon(weapon), into: Splatana.self)
+            
+            self.init(weaponInfo: infoItem, splatana: object)
+            
+        case .brella:
+            let object = try JSONService().decode(.weapon(weapon), into: Brella.self)
+            
+            self.init(weaponInfo: infoItem, brella: object)
+            
+        case .shooter:
+            let object = try JSONService().decode(.weapon(weapon), into: Shooter.self)
+            
+            self.init(weaponInfo: infoItem, shooter: object)
+            
+        case .slosher:
+            let object = try JSONService().decode(.weapon(weapon), into: Slosher.self)
+            
+            self.init(weaponInfo: infoItem, slosher: object)
+            
+        case .splatling:
+            let object = try JSONService().decode(.weapon(weapon), into: Splatling.self)
+            
+            self.init(weaponInfo: infoItem, splatling: object)
+            
+        case .stringer:
+            let object = try JSONService().decode(.weapon(weapon), into: Stringer.self)
+            
+            self.init(weaponInfo: infoItem, stringer: object)
+        }
+    }
+    
     /**
      Creates an instance for a Blaster weapon
      - Parameters:
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
-        - container: Weapon game parameters
+        - blaster: Weapon game parameters
      */
-    public init(weaponInfo: WeaponInfoMainItem, container: Blaster) {
-        let gameParams = container.parameters
+    public init(weaponInfo: WeaponInfoMainItem, blaster: Blaster) {
+        let gameParams = blaster.parameters
                 
         let damageValueDirect = gameParams.damageParam.valueMax == gameParams.damageParam.valueMin ? Double(gameParams.damageParam.valueMax) : nil
         
@@ -162,10 +225,10 @@ public struct MainWeaponData: WeaponDatable {
      Creates an instance for a Brush weapon
      - Parameters:
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
-        - container: Weapon game parameters
+        - brush: Weapon game parameters
      */
-    public init(weaponInfo: WeaponInfoMainItem, container: Brush) {
-        let gameParams = container.parameters
+    public init(weaponInfo: WeaponInfoMainItem, brush: Brush) {
+        let gameParams = brush.parameters
         
         self.mainWeaponId = MainWeapon(rawValue: weaponInfo.rowId.rawValue)!
         self.specialPoints = weaponInfo.specialPoint
@@ -237,10 +300,10 @@ public struct MainWeaponData: WeaponDatable {
      Creates an instance for a Charger weapon
      - Parameters:
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
-        - container: Weapon game parameters
+        - charger: Weapon game parameters
      */
-    public init(weaponInfo: WeaponInfoMainItem, container: Charger) {
-        let gameParams = container.parameters
+    public init(weaponInfo: WeaponInfoMainItem, charger: Charger) {
+        let gameParams = charger.parameters
                 
         self.mainWeaponId = MainWeapon(rawValue: weaponInfo.rowId.rawValue)!
         self.specialPoints = weaponInfo.specialPoint
@@ -308,10 +371,10 @@ public struct MainWeaponData: WeaponDatable {
      Creates an instance for a Dualie weapon
      - Parameters:
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
-        - container: Weapon game parameters
+        - dualie: Weapon game parameters
      */
-    public init(weaponInfo: WeaponInfoMainItem, container: Dualie) {
-        let gameParams = container.parameters
+    public init(weaponInfo: WeaponInfoMainItem, dualie: Dualie) {
+        let gameParams = dualie.parameters
                 
         let damageParamValueDirect = gameParams.damageParam.valueMax == gameParams.damageParam.valueMin ? Double(gameParams.damageParam.valueMax) : nil
         
@@ -381,11 +444,12 @@ public struct MainWeaponData: WeaponDatable {
     
     /**
      Creates an instance for a Roller weapon
-     - weaponInfo: Weapon info from `WeaponInfoMain.json`
-     - container: Weapon game parameters
+     - Parameters:
+       - weaponInfo: Weapon info from `WeaponInfoMain.json`
+       - roller: Weapon game parameters
      */
-    public init(weaponInfo: WeaponInfoMainItem, container: Roller) {
-        let gameParams = container.parameters
+    public init(weaponInfo: WeaponInfoMainItem, roller: Roller) {
+        let gameParams = roller.parameters
         
         self.mainWeaponId = MainWeapon(rawValue: weaponInfo.rowId.rawValue)!
         self.specialPoints = weaponInfo.specialPoint
@@ -465,10 +529,10 @@ public struct MainWeaponData: WeaponDatable {
      Creates an instance for a Splatana weapon
      - Parameters:
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
-        - container: Weapon game parameters
+        - splatana: Weapon game parameters
      */
-    public init(weaponInfo: WeaponInfoMainItem, container: Splatana) {
-        let gameParams = container.parameters
+    public init(weaponInfo: WeaponInfoMainItem, splatana: Splatana) {
+        let gameParams = splatana.parameters
         
         self.mainWeaponId = MainWeapon(rawValue: weaponInfo.rowId.rawValue)!
         self.specialPoints = weaponInfo.specialPoint
@@ -534,11 +598,12 @@ public struct MainWeaponData: WeaponDatable {
     
     /**
      Creates an instance for a Shooter weapon
-     - weaponInfo: Weapon info from `WeaponInfoMain.json`
-     - container: Weapon game parameters
+     - Parameters:
+        - weaponInfo: Weapon info from `WeaponInfoMain.json`
+        - container: Weapon game parameters
      */
-    public init(weaponInfo: WeaponInfoMainItem, container: Shooter) {
-        let gameParams = container.parameters
+    public init(weaponInfo: WeaponInfoMainItem, shooter: Shooter) {
+        let gameParams = shooter.parameters
         
         let damageValueDirect = gameParams.damageParam.valueMax == gameParams.damageParam.valueMin ? Double(gameParams.damageParam.valueMax) : nil
         
@@ -610,10 +675,10 @@ public struct MainWeaponData: WeaponDatable {
      Creates an instance for a Brella weapon
      - Parameters:
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
-        - container: Weapon game parameters
+        - brella: Weapon game parameters
      */
-    public init(weaponInfo: WeaponInfoMainItem, container: Brella) {
-        let gameParams = container.parameters
+    public init(weaponInfo: WeaponInfoMainItem, brella: Brella) {
+        let gameParams = brella.parameters
                 
         let inkConsumeShelterCanopy =
             gameParams.weaponShelterCanopyParam.inkConsumeUmbrella != 0
@@ -686,10 +751,10 @@ public struct MainWeaponData: WeaponDatable {
      Creates an instance for a Slosher weapon
      - Parameters:
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
-        - container: Weapon game parameters
+        - slosher: Weapon game parameters
      */
-    public init(weaponInfo: WeaponInfoMainItem, container: Slosher) {
-        let gameParams = container.parameters
+    public init(weaponInfo: WeaponInfoMainItem, slosher: Slosher) {
+        let gameParams = slosher.parameters
                 
         let damageDirectMax = gameParams.unitGroupParam.unit.first?.damageParam.valueMax
         let damageDirectMin = gameParams.unitGroupParam.unit.first?.damageParam.valueMin
@@ -763,10 +828,10 @@ public struct MainWeaponData: WeaponDatable {
      Creates an instance for a Splatling weapon
      - Parameters:
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
-        - container: Weapon game parameters
+        - splatling: Weapon game parameters
      */
-    public init(weaponInfo: WeaponInfoMainItem, container: Splatling) {
-        let gameParams = container.parameters
+    public init(weaponInfo: WeaponInfoMainItem, splatling: Splatling) {
+        let gameParams = splatling.parameters
         
         let damageFullChargeMax = gameParams.damageParam.valueFullChargeMax == gameParams.damageParam.valueMax ? nil : gameParams.damageParam.valueFullChargeMax
         
@@ -836,10 +901,10 @@ public struct MainWeaponData: WeaponDatable {
      Creates an instance for a Stringer weapon
      - Parameters:
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
-        - container: Weapon game parameters
+        - stringer: Weapon game parameters
      */
-    public init(weaponInfo: WeaponInfoMainItem, container: Stringer) {
-        let gameParams = container.parameters
+    public init(weaponInfo: WeaponInfoMainItem, stringer: Stringer) {
+        let gameParams = stringer.parameters
             
         self.mainWeaponId = MainWeapon(rawValue: weaponInfo.rowId.rawValue)!
         self.specialPoints = weaponInfo.specialPoint

@@ -7,6 +7,8 @@
 
 import Foundation
 
+public protocol SubWeaponable: GameParametable where Parameters: SubParametable { }
+
 /// Sets required properties for any Sub Weapon
 public protocol SubParametable: Parametable {
     associatedtype MoveParameter: Parametable

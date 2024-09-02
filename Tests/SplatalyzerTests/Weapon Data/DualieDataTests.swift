@@ -8,26 +8,16 @@
 import Testing
 @testable import Splatalyzer
 
+@Suite(.tags(.weaponData))
 struct DualieDataTests {
-    let service = JSONService()
-    
-    var weaponInfo: WeaponInfoMain
-    
-    init() throws {
-        self.weaponInfo = try service.decode(WeaponInfoMain.self, from: "WeaponInfoMain")
-    }
-    
+
     @Test("Dapple Dualies Data", arguments: [
         WeaponKit(.dappleDualies, .squidBeakon, .tacticooler),
         WeaponKit(.dappleDualiesNouveau, .torpedo, .reefslider)
     ])
     func dappleDualies(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Dualie.self, from: kit.main.fileName)
-        
-        let item = try #require(self.weaponInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)
@@ -46,12 +36,8 @@ struct DualieDataTests {
         WeaponKit(.customDouserDualiesFF, .burstBomb, .tripleInkstrike)
     ])
     func douserDualiesFF(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Dualie.self, from: kit.main.fileName)
-        
-        let item = try #require(self.weaponInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)
@@ -72,12 +58,8 @@ struct DualieDataTests {
         WeaponKit(.customDualieSquelchers, .squidBeakon, .superChump)
     ])
     func dualieSquelchers(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Dualie.self, from: kit.main.fileName)
-        
-        let item = try #require(self.weaponInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)
@@ -95,12 +77,8 @@ struct DualieDataTests {
         WeaponKit(.gloogaDualiesDeco, .pointSensor, .trizooka)
     ])
     func gloogaDualies(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Dualie.self, from: kit.main.fileName)
-        
-        let item = try #require(self.weaponInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)
@@ -122,12 +100,8 @@ struct DualieDataTests {
         WeaponKit(.orderDualiesReplica, .suctionBomb, .crabTank)
     ])
     func splatDualies(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Dualie.self, from: kit.main.fileName)
-        
-        let item = try #require(self.weaponInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)
@@ -146,12 +120,8 @@ struct DualieDataTests {
         WeaponKit(.lightTetraDualies, .sprinkler, .zipcaster)
     ])
     func tetraDualies(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Dualie.self, from: kit.main.fileName)
-        
-        let item = try #require(self.weaponInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)

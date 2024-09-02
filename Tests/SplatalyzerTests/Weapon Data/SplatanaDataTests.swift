@@ -8,22 +8,17 @@
 import Testing
 @testable import Splatalyzer
 
+@Suite(.tags(.weaponData))
 struct SplatanaDataTests {
     
     let service = JSONService()
-    
-    let mainInfo = try! JSONService().decode(WeaponInfoMain.self, from: "WeaponInfoMain")
     
     @Test("Decavitator Data", arguments: [
         WeaponKit(.mintDecavitator, .suctionBomb, .bigBubbler),
         WeaponKit(.charcoalDecavitator, .splashWall, .inkjet)
     ])
     func decavitator(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Splatana.self, from: kit.main.fileName)
-        
-        let item = try #require(self.mainInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
+        let data = try MainWeaponData(for: kit.main)
         
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
@@ -43,11 +38,7 @@ struct SplatanaDataTests {
         WeaponKit(.orderSplatanaReplica, .burstBomb, .zipcaster)
     ])
     func splatanaStamper(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Splatana.self, from: kit.main.fileName)
-        
-        let item = try #require(self.mainInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
+        let data = try MainWeaponData(for: kit.main)
         
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
@@ -66,11 +57,7 @@ struct SplatanaDataTests {
         WeaponKit(.splatanaWiperDeco, .squidBeakon, .tentaMissiles)
     ])
     func splatanaWiper(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Splatana.self, from: kit.main.fileName)
-        
-        let item = try #require(self.mainInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
+        let data = try MainWeaponData(for: kit.main)
         
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)

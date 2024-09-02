@@ -8,13 +8,14 @@
 import Testing
 @testable import Splatalyzer
 
+@Suite(.tags(.buildStats))
 struct SpecialDamagesTests {
     
     @Test("Bomb Normal Sp.Dmg.", arguments: [
         SpecialWeapon.inkjet, .reefslider, .superChump, .tentaMissiles, .tripleSplashdown, .trizooka, .zipcaster
     ])
     func bombNormalDmgs(for weapon: SpecialWeapon) throws {
-        let data = try TestHelper.getSpecialData(for: weapon)
+        let data = try SpecialWeaponData(for: weapon)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -25,7 +26,7 @@ struct SpecialDamagesTests {
     
     @Test("Special Bullet Sp.Dmg.")
     func specialBulletDmgs() throws {
-        let data = try TestHelper.getSpecialData(for: .crabTank)
+        let data = try SpecialWeaponData(for: .crabTank)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -37,7 +38,7 @@ struct SpecialDamagesTests {
     
     @Test("Special Bump Sp.Dmg.")
     func specialBumpDmgs() throws {
-        let data = try TestHelper.getSpecialData(for: .crabTank)
+        let data = try SpecialWeaponData(for: .crabTank)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -48,7 +49,7 @@ struct SpecialDamagesTests {
     
     @Test("Special Cannon Sp.Dmg.")
     func specialCannonDmgs() throws {
-        let data = try TestHelper.getSpecialData(for: .crabTank)
+        let data = try SpecialWeaponData(for: .crabTank)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -59,7 +60,7 @@ struct SpecialDamagesTests {
     
     @Test("Special Charge Sp.Dmg.")
     func specialChargeDmgs() throws {
-        let data = try TestHelper.getSpecialData(for: .inkVac)
+        let data = try SpecialWeaponData(for: .inkVac)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -71,7 +72,7 @@ struct SpecialDamagesTests {
     
     @Test("Special Jump Sp.Dmg.")
     func specialJumpDmgs() throws {
-        let data = try TestHelper.getSpecialData(for: .krakenRoyale)
+        let data = try SpecialWeaponData(for: .krakenRoyale)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -82,7 +83,7 @@ struct SpecialDamagesTests {
     
     @Test("Special Swing Sp.Dmg.")
     func specialSwingDmgs() throws {
-        let data = try TestHelper.getSpecialData(for: .ultraStamp)
+        let data = try SpecialWeaponData(for: .ultraStamp)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -93,7 +94,7 @@ struct SpecialDamagesTests {
     
     @Test("Special Throw Sp.Dmg.")
     func specialThrowDmgs() throws {
-        let data = try TestHelper.getSpecialData(for: .ultraStamp)
+        let data = try SpecialWeaponData(for: .ultraStamp)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -106,7 +107,7 @@ struct SpecialDamagesTests {
         SpecialWeapon.booyahBomb, .inkStorm, .killerWail51
     ])
     func specialTickDmgs(for weapon: SpecialWeapon) throws {
-        let data = try TestHelper.getSpecialData(for: weapon)
+        let data = try SpecialWeaponData(for: weapon)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         
@@ -116,7 +117,7 @@ struct SpecialDamagesTests {
     }
 
     @Test("Wave Sp.Dmg.") func waveDmgs() throws {
-        let data = try TestHelper.getSpecialData(for: .waveBreaker)
+        let data = try SpecialWeaponData(for: .waveBreaker)
         
         let dmgs = StatHelper.specialDamages(specialInfo: data)
         

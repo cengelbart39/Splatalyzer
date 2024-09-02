@@ -10,7 +10,7 @@ import Foundation
 /// Represents the game parameters of the Splattercolor Screen special weapon
 ///
 /// See the JSON file `WeaponSpChimney.game__GameParameterTable.json`.
-public struct SplattercolorScreen: GameParametable {
+public struct SplattercolorScreen: SpecialWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

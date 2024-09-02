@@ -10,7 +10,7 @@ import Foundation
 /// Represents the game parameters of the Squid Beakon sub weapon
 ///
 /// See the JSON file `WeaponBeacon.game__GameParameterTable.json`
-public struct SquidBeakon: GameParametable {
+public struct SquidBeakon: SubWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

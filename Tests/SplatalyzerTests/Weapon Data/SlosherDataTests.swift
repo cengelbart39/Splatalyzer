@@ -8,23 +8,16 @@
 import Testing
 @testable import Splatalyzer
 
+@Suite(.tags(.weaponData))
 struct SlosherDataTests {
-    
-    let service = JSONService()
-    
-    let mainInfo = try! JSONService().decode(WeaponInfoMain.self, from: "WeaponInfoMain")
-    
+
     @Test("Bloblobber Data", arguments: [
         WeaponKit(.bloblobber, .sprinkler, .inkStorm),
         WeaponKit(.bloblobberDeco, .angleShooter, .krakenRoyale)
     ])
     func bloblobber(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Slosher.self, from: kit.main.fileName)
-        
-        let item = try #require(self.mainInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)
@@ -42,12 +35,8 @@ struct SlosherDataTests {
         WeaponKit(.dreadWringerD, .squidBeakon, .waveBreaker)
     ])
     func dreadWringer(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Slosher.self, from: kit.main.fileName)
-        
-        let item = try #require(self.mainInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)
@@ -64,12 +53,8 @@ struct SlosherDataTests {
         WeaponKit(.customExplosher, .splashWall, .tripleSplashdown)
     ])
     func explosher(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Slosher.self, from: kit.main.fileName)
-        
-        let item = try #require(self.mainInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)
@@ -86,12 +71,8 @@ struct SlosherDataTests {
         WeaponKit(.orderSlosherReplica, .splatBomb, .tripleInkstrike)
     ])
     func slosher(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Slosher.self, from: kit.main.fileName)
-        
-        let item = try #require(self.mainInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)
@@ -110,12 +91,8 @@ struct SlosherDataTests {
         WeaponKit(.sloshingMachineNeo, .pointSensor, .trizooka)
     ])
     func sloshingMachine(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Slosher.self, from: kit.main.fileName)
-        
-        let item = try #require(self.mainInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)
@@ -135,12 +112,8 @@ struct SlosherDataTests {
         WeaponKit(.triSlosherNouveau, .fizzyBomb, .tacticooler)
     ])
     func triSlosher(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Slosher.self, from: kit.main.fileName)
-        
-        let item = try #require(self.mainInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)

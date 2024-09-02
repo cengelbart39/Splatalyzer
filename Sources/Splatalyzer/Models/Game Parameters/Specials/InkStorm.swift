@@ -10,7 +10,7 @@ import Foundation
 /// Represents the game parameters of the Ink Storm special weapon
 ///
 /// See the JSON file `WeaponSpInkStorm.game__GameParameterTable.json`
-public struct InkStorm: GameParametable {
+public struct InkStorm: SpecialWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

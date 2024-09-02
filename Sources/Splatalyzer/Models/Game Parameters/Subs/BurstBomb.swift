@@ -11,7 +11,7 @@ import Foundation
 /// weapon
 ///
 /// See the JSON file `WeaponBombQuick.game__GameParameterTable.json` in Resources.
-public struct BurstBomb: GameParametable {
+public struct BurstBomb: SubWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

@@ -10,7 +10,7 @@ import Foundation
 /// Represents the game parameters of the Killer Wail 5.1 special weapon
 ///
 /// See the JSON file `WeaponSpMicroLaser.game__GameParameterTable.json`
-public struct KillerWail51: GameParametable {
+public struct KillerWail51: SpecialWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

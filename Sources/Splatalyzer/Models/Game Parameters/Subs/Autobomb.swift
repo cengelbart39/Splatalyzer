@@ -11,7 +11,7 @@ import Foundation
 /// weapon
 ///
 /// See the JSON file `WeaponBombRobot.game__GameParameterTable.json` in Resources.
-public struct Autobomb: GameParametable {
+public struct Autobomb: SubWeaponable {
     
     public var parameters: Parameters
     

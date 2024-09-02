@@ -8,6 +8,7 @@
 import Testing
 @testable import Splatalyzer
 
+@Suite(.tags(.buildStats))
 struct SubDefenseDamageTests {
     
     let ap = AbilityPoints()
@@ -16,7 +17,7 @@ struct SubDefenseDamageTests {
         SubWeapon.autobomb, .burstBomb, .curlingBomb, .inkMine, .splatBomb, .suctionBomb
     ])
     func bombNormalDefDmg(for sub: SubWeapon) throws {
-        let data = try TestHelper.getSubData(for: sub)
+        let data = try SubWeaponData(for: sub)
         let subData = [sub : data]
         
         let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
@@ -28,7 +29,7 @@ struct SubDefenseDamageTests {
     
     @Test("Bomb Direct Def.Dmg.")
     func bombDirectDefDmg() throws {
-        let data = try TestHelper.getSubData(for: .torpedo)
+        let data = try SubWeaponData(for: .torpedo)
         let subData = [SubWeapon.torpedo : data]
         
         let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
@@ -40,7 +41,7 @@ struct SubDefenseDamageTests {
     
     @Test("Direct Def.Dmg.")
     func directDefDmg() throws {
-        let data = try TestHelper.getSubData(for: .angleShooter)
+        let data = try SubWeaponData(for: .angleShooter)
         let subData = [SubWeapon.angleShooter : data]
         
         let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
@@ -52,7 +53,7 @@ struct SubDefenseDamageTests {
     
     @Test("Distance Def.Dmg.")
     func distanceDefDmg() throws {
-        let data = try TestHelper.getSubData(for: .fizzyBomb)
+        let data = try SubWeaponData(for: .fizzyBomb)
         let subData = [SubWeapon.fizzyBomb : data]
         
         let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
@@ -64,7 +65,7 @@ struct SubDefenseDamageTests {
     
     @Test("Splash Def.Dmg.")
     func splsashDefDmg() throws {
-        let data = try TestHelper.getSubData(for: .torpedo)
+        let data = try SubWeaponData(for: .torpedo)
         let subData = [SubWeapon.torpedo : data]
         
         let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
@@ -78,7 +79,7 @@ struct SubDefenseDamageTests {
         SubWeapon.pointSensor, .splashWall, .sprinkler, .squidBeakon, .toxicMist
     ])
     func emptyDefDmg(for sub: SubWeapon) throws {
-        let data = try TestHelper.getSubData(for: sub)
+        let data = try SubWeaponData(for: sub)
         let subData = [sub : data]
         
         let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)

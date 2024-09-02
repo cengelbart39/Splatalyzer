@@ -10,7 +10,7 @@ import Foundation
 /// Represents the game parameters of the Inkjet special weapon
 ///
 /// See the JSON file `WeaponSpJetpack.game__GameParameterTable.json`
-public struct Inkjet: GameParametable {
+public struct Inkjet: SpecialWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

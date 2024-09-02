@@ -8,26 +8,15 @@
 import Testing
 @testable import Splatalyzer
 
+@Suite(.tags(.weaponData))
 struct BlasterDataTests {
-    
-    let service = JSONService()
-    
-    var weaponInfo: WeaponInfoMain
-    
-    init() throws {
-        self.weaponInfo = try service.decode(WeaponInfoMain.self, from: "WeaponInfoMain")
-    }
     
     @Test("Blaster Data", arguments: [
         WeaponKit(.blaster, .autobomb, .bigBubbler),
         WeaponKit(.customBlaster, .pointSensor, .tripleSplashdown)
     ])
     func blaster(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Blaster.self, from: kit.main.fileName)
-        
-        let item = try #require(self.weaponInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
+        let data = try MainWeaponData(for: kit.main)
         
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
@@ -48,11 +37,8 @@ struct BlasterDataTests {
         WeaponKit(.clashBlasterNeo, .curlingBomb, .superChump)
     ])
     func clashBlaster(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Blaster.self, from: kit.main.fileName)
-        let item = try #require(self.weaponInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)
@@ -73,12 +59,8 @@ struct BlasterDataTests {
         WeaponKit(.orderBlasterReplica, .splatBomb, .zipcaster)
     ])
     func lunaBlaster(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Blaster.self, from: kit.main.fileName)
-        
-        let item = try #require(self.weaponInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)
@@ -98,12 +80,8 @@ struct BlasterDataTests {
         WeaponKit(.customRangeBlaster, .splatBomb, .krakenRoyale)
     ])
     func rangeBlaster(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Blaster.self, from: kit.main.fileName)
-        
-        let item = try #require(self.weaponInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)
@@ -123,12 +101,8 @@ struct BlasterDataTests {
         WeaponKit(.rapidBlasterDeco, .torpedo, .inkjet)
     ])
     func rapidBlaster(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Blaster.self, from: kit.main.fileName)
-        
-        let item = try #require(self.weaponInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)
@@ -148,12 +122,8 @@ struct BlasterDataTests {
         WeaponKit(.rapidBlasterProDeco, .angleShooter, .killerWail51)
     ])
     func rapidBlasterPro(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Blaster.self, from: kit.main.fileName)
-        
-        let item = try #require(self.weaponInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)
@@ -173,12 +143,8 @@ struct BlasterDataTests {
         WeaponKit(.sblast91, .burstBomb, .booyahBomb)
     ])
     func sblast(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Blaster.self, from: kit.main.fileName)
-        
-        let item = try #require(self.weaponInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)

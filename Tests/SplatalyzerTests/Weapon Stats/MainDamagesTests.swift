@@ -8,13 +8,12 @@
 import Testing
 @testable import Splatalyzer
 
+@Suite(.tags(.buildStats))
 struct MainDamagesTests {
     
-    let mainInfo = try! JSONService().decode(WeaponInfoMain.self, from: "WeaponInfoMain")
-
-    @Test("Blaster Main Dmg.", arguments: MainWeapon.getWeapons(of: .blaster))
+    @Test("Blaster Main Dmg.", arguments: MainWeapon.blasters)
     func blasterDamages(_ blaster: MainWeapon) throws {
-        let data = try TestHelper.getMainData(for: blaster, with: mainInfo)
+        let data = try MainWeaponData(for: blaster)
         
         let dmgs = StatHelper.mainDamages(mainInfo: data)
         try #require(!dmgs.isEmpty)
@@ -23,20 +22,20 @@ struct MainDamagesTests {
         #expect(dmgs.contains(type: .splash))
     }
     
-    @Test("Brella Main Dmg.", arguments: MainWeapon.getWeapons(of: .brella))
+    @Test("Brella Main Dmg.", arguments: MainWeapon.brellas)
     func brellaDamages(_ brella: MainWeapon) throws {
-        let data = try TestHelper.getMainData(for: brella, with: mainInfo)
-        
+        let data = try MainWeaponData(for: brella)
+
         let dmgs = StatHelper.mainDamages(mainInfo: data)
         try #require(!dmgs.isEmpty)
         
         #expect(dmgs.contains(type: .normalMax))
     }
     
-    @Test("Brush Main Dmg.", arguments: MainWeapon.getWeapons(of: .brush))
+    @Test("Brush Main Dmg.", arguments: MainWeapon.brushes)
     func brushDamages(_ brush: MainWeapon) throws {
-        let data = try TestHelper.getMainData(for: brush, with: mainInfo)
-        
+        let data = try MainWeaponData(for: brush)
+
         let dmgs = StatHelper.mainDamages(mainInfo: data)
         try #require(!dmgs.isEmpty)
         
@@ -45,10 +44,10 @@ struct MainDamagesTests {
         #expect(dmgs.contains(type: .rollOver))
     }
     
-    @Test("Charger Main Dmg.", arguments: MainWeapon.getWeapons(of: .charger))
+    @Test("Charger Main Dmg.", arguments: MainWeapon.chargers)
     func chargerDamages(_ charger: MainWeapon) throws {
-        let data = try TestHelper.getMainData(for: charger, with: mainInfo)
-        
+        let data = try MainWeaponData(for: charger)
+
         let dmgs = StatHelper.mainDamages(mainInfo: data)
         try #require(!dmgs.isEmpty)
         
@@ -57,10 +56,10 @@ struct MainDamagesTests {
         #expect(dmgs.contains(type: .tapShot))
     }
     
-    @Test("Dualie (Normal) Main Dmg.", arguments: MainWeapon.getWeapons(of: .dualie))
+    @Test("Dualie (Normal) Main Dmg.", arguments: MainWeapon.dualies)
     func dualieDamages(_ dualie: MainWeapon) throws {
-        let data = try TestHelper.getMainData(for: dualie, with: mainInfo)
-        
+        let data = try MainWeaponData(for: dualie)
+
         let dmgs = StatHelper.mainDamages(mainInfo: data)
         try #require(!dmgs.isEmpty)
         
@@ -72,8 +71,8 @@ struct MainDamagesTests {
         MainWeapon.douserDualiesFF, .customDouserDualiesFF, .gloogaDualies, .gloogaDualiesDeco
     ])
     func dualieDamagesTurret(_ dualie: MainWeapon) throws {
-        let data = try TestHelper.getMainData(for: dualie, with: mainInfo)
-        
+        let data = try MainWeaponData(for: dualie)
+
         let dmgs = StatHelper.mainDamages(mainInfo: data)
         try #require(!dmgs.isEmpty)
         
@@ -81,10 +80,10 @@ struct MainDamagesTests {
         #expect(dmgs.contains(type: .turretMin))
     }
     
-    @Test("Roller Main Dmg.", arguments: MainWeapon.getWeapons(of: .roller))
+    @Test("Roller Main Dmg.", arguments: MainWeapon.rollers)
     func rollerDamages(_ roller: MainWeapon) throws {
-        let data = try TestHelper.getMainData(for: roller, with: mainInfo)
-        
+        let data = try MainWeaponData(for: roller)
+
         let dmgs = StatHelper.mainDamages(mainInfo: data)
         try #require(!dmgs.isEmpty)
         
@@ -95,10 +94,10 @@ struct MainDamagesTests {
         #expect(dmgs.contains(type: .rollOver))
     }
     
-    @Test("Shooter Main Dmg.", arguments: MainWeapon.getWeapons(of: .shooter))
+    @Test("Shooter Main Dmg.", arguments: MainWeapon.shooters)
     func shooterDamages(_ shooter: MainWeapon) throws {
-        let data = try TestHelper.getMainData(for: shooter, with: mainInfo)
-        
+        let data = try MainWeaponData(for: shooter)
+
         let dmgs = StatHelper.mainDamages(mainInfo: data)
         try #require(!dmgs.isEmpty)
         
@@ -110,8 +109,8 @@ struct MainDamagesTests {
         MainWeapon.bloblobber, .bloblobberDeco, .explosher, .customExplosher
     ])
     func slosherDirectDamages(_ slosher: MainWeapon) throws {
-        let data = try TestHelper.getMainData(for: slosher, with: mainInfo)
-        
+        let data = try MainWeaponData(for: slosher)
+
         let dmgs = StatHelper.mainDamages(mainInfo: data)
         try #require(!dmgs.isEmpty)
         
@@ -122,8 +121,8 @@ struct MainDamagesTests {
         MainWeapon.dreadWringer, .dreadWringerD, .slosher, .slosherDeco, .orderSlosherReplica, .sloshingMachine, .sloshingMachineNeo, .triSlosher, .triSlosherNouveau
     ])
     func slosherDirectRangeDamages(_ slosher: MainWeapon) throws {
-        let data = try TestHelper.getMainData(for: slosher, with: mainInfo)
-        
+        let data = try MainWeaponData(for: slosher)
+
         let dmgs = StatHelper.mainDamages(mainInfo: data)
         try #require(!dmgs.isEmpty)
         
@@ -135,18 +134,18 @@ struct MainDamagesTests {
         MainWeapon.explosher, .customExplosher, .sloshingMachine, .sloshingMachineNeo
     ])
     func slosherSplashDamages(_ slosher: MainWeapon) throws {
-        let data = try TestHelper.getMainData(for: slosher, with: mainInfo)
-        
+        let data = try MainWeaponData(for: slosher)
+
         let dmgs = StatHelper.mainDamages(mainInfo: data)
         try #require(!dmgs.isEmpty)
         
         #expect(dmgs.contains(type: .splash))
     }
     
-    @Test("Splatana Main Dmg.", arguments: MainWeapon.getWeapons(of: .splatana))
+    @Test("Splatana Main Dmg.", arguments: MainWeapon.splatanas)
     func splatanaDamages(_ splatana: MainWeapon) throws {
-        let data = try TestHelper.getMainData(for: splatana, with: mainInfo)
-        
+        let data = try MainWeaponData(for: splatana)
+
         let dmgs = StatHelper.mainDamages(mainInfo: data)
         try #require(!dmgs.isEmpty)
         
@@ -156,10 +155,10 @@ struct MainDamagesTests {
         #expect(dmgs.contains(type: .splatanaHorizontalDirect))
     }
     
-    @Test("Splatling Main Dmg.", arguments: MainWeapon.getWeapons(of: .splatling))
+    @Test("Splatling Main Dmg.", arguments: MainWeapon.splatlings)
     func splatlingDamages(_ splatling: MainWeapon) throws {
-        let data = try TestHelper.getMainData(for: splatling, with: mainInfo)
-        
+        let data = try MainWeaponData(for: splatling)
+
         let dmgs = StatHelper.mainDamages(mainInfo: data)
         try #require(!dmgs.isEmpty)
         
@@ -167,10 +166,10 @@ struct MainDamagesTests {
         #expect(dmgs.contains(type: .normalMin))
     }
     
-    @Test("Stringer (Normal) Main Dmg.", arguments: MainWeapon.getWeapons(of: .stringer))
+    @Test("Stringer (Normal) Main Dmg.", arguments: MainWeapon.stringers)
     func stringerNormalDamages(_ stringer: MainWeapon) throws {
-        let data = try TestHelper.getMainData(for: stringer, with: mainInfo)
-        
+        let data = try MainWeaponData(for: stringer)
+
         let dmgs = StatHelper.mainDamages(mainInfo: data)
         try #require(!dmgs.isEmpty)
         
@@ -182,8 +181,8 @@ struct MainDamagesTests {
         MainWeapon.triStringer, .inklineTriStringer, .orderStringerReplica, .wellspringV, .customWellspringV
     ])
     func stringerSplashDamages(_ stringer: MainWeapon) throws {
-        let data = try TestHelper.getMainData(for: stringer, with: mainInfo)
-        
+        let data = try MainWeaponData(for: stringer)
+
         let dmgs = StatHelper.mainDamages(mainInfo: data)
         try #require(!dmgs.isEmpty)
         

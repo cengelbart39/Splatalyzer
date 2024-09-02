@@ -20,13 +20,90 @@ public struct SubWeaponData: WeaponDatable {
     public let blastParamChase: [DistanceDamage]
     public let splashBlastParam: [DistanceDamage]
     
-
+    
+    /// A convenience initializer that creates instances for all sub weapons
+    public init(for weapon: SubWeapon) throws {
+        switch weapon {
+        case .angleShooter:
+            let object = try JSONService().decode(.weapon(weapon), into: AngleShooter.self)
+            
+            self.init(angleShooter: object)
+            
+        case .autobomb:
+            let object = try JSONService().decode(.weapon(weapon), into: Autobomb.self)
+            
+            self.init(autobomb: object)
+            
+        case .burstBomb:
+            let object = try JSONService().decode(.weapon(weapon), into: BurstBomb.self)
+            
+            self.init(burstBomb: object)
+            
+        case .curlingBomb:
+            let object = try JSONService().decode(.weapon(weapon), into: CurlingBomb.self)
+            
+            self.init(curlingBomb: object)
+            
+        case .fizzyBomb:
+            let object = try JSONService().decode(.weapon(weapon), into: FizzyBomb.self)
+            
+            self.init(fizzyBomb: object)
+            
+        case .inkMine:
+            let object = try JSONService().decode(.weapon(weapon), into: InkMine.self)
+            
+            self.init(inkMine: object)
+            
+        case .pointSensor:
+            let object = try JSONService().decode(.weapon(weapon), into: PointSensor.self)
+            
+            self.init(pointSensor: object)
+            
+        case .splashWall:
+            let object = try JSONService().decode(.weapon(weapon), into: SplashWall.self)
+            
+            self.init(splashWall: object)
+            
+        case .splatBomb:
+            let object = try JSONService().decode(.weapon(weapon), into: SplatBomb.self)
+            
+            self.init(splatBomb: object)
+            
+        case .squidBeakon:
+            let object = try JSONService().decode(.weapon(weapon), into: SquidBeakon.self)
+            
+            let player = try JSONService().decode(.player, into: Player.self)
+            
+            self.init(squidBeakon: object, playerInfo: player)
+            
+        case .sprinkler:
+            let object = try JSONService().decode(.weapon(weapon), into: Sprinkler.self)
+            
+            self.init(sprinkler: object)
+            
+        case .suctionBomb:
+            let object = try JSONService().decode(.weapon(weapon), into: SuctionBomb.self)
+            
+            self.init(suctionBomb: object)
+            
+        case .torpedo:
+            let object = try JSONService().decode(.weapon(weapon), into: Torpedo.self)
+            
+            self.init(torpedo: object)
+            
+        case .toxicMist:
+            let object = try JSONService().decode(.weapon(weapon), into: ToxicMist.self)
+            
+            self.init(toxicMist: object)
+        }
+    }
+    
     /// Create an instance for the Beacon sub weapon
     /// - Parameters:
-    ///   - container: `Beacon` game parameters
+    ///   - squidBeakon: `Beacon` game parameters
     ///   - playerInfo: Player game parameters
-    public init(container: SquidBeakon, playerInfo: Player) {
-        let gameParams = container.parameters
+    public init(squidBeakon: SquidBeakon, playerInfo: Player) {
+        let gameParams = squidBeakon.parameters
         
         self.id = .squidBeakon
         self.overwrites = gameParams.getOverwrites(playerInfo)
@@ -41,9 +118,9 @@ public struct SubWeaponData: WeaponDatable {
     }
     
     /// Create an instance for the `BombCurling` sub weapon
-    /// - Parameter container: `BombCurling` game parameters
-    public init(container: CurlingBomb) {
-        let gameParams = container.parameters
+    /// - Parameter curlingBomb: `BombCurling` game parameters
+    public init(curlingBomb: CurlingBomb) {
+        let gameParams = curlingBomb.parameters
         
         self.id = .curlingBomb
         self.overwrites = gameParams.getOverwrites()
@@ -58,9 +135,9 @@ public struct SubWeaponData: WeaponDatable {
     }
     
     /// Create an instance for the `BombFizzy` sub weapon
-    /// - Parameter container: `BombFizzy` game parameters
-    public init(container: FizzyBomb) {
-        let gameParams = container.parameters
+    /// - Parameter fizzyBomb: `BombFizzy` game parameters
+    public init(fizzyBomb: FizzyBomb) {
+        let gameParams = fizzyBomb.parameters
         
         self.id = .fizzyBomb
         self.overwrites = gameParams.getOverwrites()
@@ -76,8 +153,8 @@ public struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `BombQuick` sub weapon
     /// - Parameter container: `BombQuick` game parameters
-    public init(container: BurstBomb) {
-        let gameParams = container.parameters
+    public init(burstBomb: BurstBomb) {
+        let gameParams = burstBomb.parameters
         
         self.id = .burstBomb
         self.overwrites = gameParams.getOverwrites()
@@ -92,9 +169,9 @@ public struct SubWeaponData: WeaponDatable {
     }
     
     /// Create an instance for the `BombRobot` sub weapon
-    /// - Parameter container: `BombRobot` game parameters
-    public init(container: Autobomb) {
-        let gameParams = container.parameters
+    /// - Parameter autobomb: `BombRobot` game parameters
+    public init(autobomb: Autobomb) {
+        let gameParams = autobomb.parameters
         
         self.id = .autobomb
         self.overwrites = gameParams.getOverwrites()
@@ -109,9 +186,9 @@ public struct SubWeaponData: WeaponDatable {
     }
     
     /// Create an instance for the `BombSplash` sub weapon
-    /// - Parameter container: `BombSplash` game parameters
-    public init(container: SplatBomb) {
-        let gameParams = container.parameters
+    /// - Parameter splatBomb: `BombSplash` game parameters
+    public init(splatBomb: SplatBomb) {
+        let gameParams = splatBomb.parameters
         
         self.id = .splatBomb
         self.overwrites = gameParams.getOverwrites()
@@ -126,9 +203,9 @@ public struct SubWeaponData: WeaponDatable {
     }
     
     /// Create an instance for the `BombSuction` sub weapon
-    /// - Parameter container: `BombSuction` game parameters
-    public init(container: SuctionBomb) {
-        let gameParams = container.parameters
+    /// - Parameter suctionBomb: `BombSuction` game parameters
+    public init(suctionBomb: SuctionBomb) {
+        let gameParams = suctionBomb.parameters
         
         self.id = .suctionBomb
         self.overwrites = gameParams.getOverwrites()
@@ -144,8 +221,8 @@ public struct SubWeaponData: WeaponDatable {
     
     /// Create an instance for the `BombTorpedo` sub weapon
     /// - Parameter container: `BombTorpedo` game parameters
-    public init(container: Torpedo) {
-        let gameParams = container.parameters
+    public init(torpedo: Torpedo) {
+        let gameParams = torpedo.parameters
         
         self.id = .torpedo
         self.overwrites = gameParams.getOverwrites()
@@ -160,9 +237,9 @@ public struct SubWeaponData: WeaponDatable {
     }
     
     /// Create an instance for the `LineMarker` sub weapon
-    /// - Parameter container: `LineMarker` game parameters
-    public init(container: AngleShooter) {
-        let gameParams = container.parameters
+    /// - Parameter angleShooter: `LineMarker` game parameters
+    public init(angleShooter: AngleShooter) {
+        let gameParams = angleShooter.parameters
         
         self.id = .angleShooter
         self.overwrites = gameParams.getOverwrites()
@@ -177,9 +254,9 @@ public struct SubWeaponData: WeaponDatable {
     }
     
     /// Create an instance for the `PointSensor` sub weapon
-    /// - Parameter container: `PointSensor` game parameters
-    public init(container: PointSensor) {
-        let gameParams = container.parameters
+    /// - Parameter pointSensor: `PointSensor` game parameters
+    public init(pointSensor: PointSensor) {
+        let gameParams = pointSensor.parameters
         
         self.id = .pointSensor
         self.overwrites = gameParams.getOverwrites()
@@ -194,9 +271,9 @@ public struct SubWeaponData: WeaponDatable {
     }
     
     /// Create an instance for the `PoisonMist` sub weapon
-    /// - Parameter container: `PoisonMist` game parameters
-    public init(container: ToxicMist) {
-        let gameParams = container.parameters
+    /// - Parameter toxicMist: `PoisonMist` game parameters
+    public init(toxicMist: ToxicMist) {
+        let gameParams = toxicMist.parameters
         
         self.id = .toxicMist
         self.overwrites = gameParams.getOverwrites()
@@ -211,9 +288,9 @@ public struct SubWeaponData: WeaponDatable {
     }
     
     /// Create an instance for the `Shield` sub weapon
-    /// - Parameter container: `Shield` game parameters
-    public init(container: SplashWall) {
-        let gameParams = container.parameters
+    /// - Parameter splashWall: `Shield` game parameters
+    public init(splashWall: SplashWall) {
+        let gameParams = splashWall.parameters
         
         self.id = .splashWall
         self.overwrites = gameParams.getOverwrites()
@@ -228,9 +305,9 @@ public struct SubWeaponData: WeaponDatable {
     }
     
     /// Create an instance for the `Sprinkler` sub weapon
-    /// - Parameter container: `Sprinkler` game parameters
-    public init(container: Sprinkler) {
-        let gameParams = container.parameters
+    /// - Parameter sprinkler: `Sprinkler` game parameters
+    public init(sprinkler: Sprinkler) {
+        let gameParams = sprinkler.parameters
         
         self.id = .sprinkler
         self.overwrites = gameParams.getOverwrites()
@@ -245,9 +322,9 @@ public struct SubWeaponData: WeaponDatable {
     }
     
     /// Create an instance for the `Trap` sub weapon
-    /// - Parameter container: `Trap` game parameters
-    public init(container: InkMine) {
-        let gameParams = container.parameters
+    /// - Parameter inkMine: `Trap` game parameters
+    public init(inkMine: InkMine) {
+        let gameParams = inkMine.parameters
         
         self.id = .inkMine
         self.overwrites = gameParams.getOverwrites()

@@ -11,7 +11,7 @@ import Foundation
 /// weapon
 ///
 /// See the JSON file `WeaponTrap.game__GameParameterTable.json`
-public struct InkMine: GameParametable {
+public struct InkMine: SubWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

@@ -8,13 +8,14 @@
 import Testing
 @testable import Splatalyzer
 
+@Suite(.tags(.buildStats))
 struct SpecialStatsTests {
     
     @Test("Duration Not Nil Sp.Stats", arguments: [
         SpecialWeapon.crabTank, .inkjet, .inkStorm, .killerWail51, .krakenRoyale, .trizooka, .ultraStamp
     ])
     func durationNotNil(_ weapon: SpecialWeapon) throws {
-        let data = try TestHelper.getSpecialData(for: weapon)
+        let data = try SpecialWeaponData(for: weapon)
         let duration = StatHelper.specialDuration(ap: AbilityPoints(), specialInfo: data)
         
         #expect(duration != nil)
@@ -24,7 +25,7 @@ struct SpecialStatsTests {
         SpecialWeapon.bigBubbler, .booyahBomb, .inkVac, .reefslider, .splattercolorScreen, .superChump, .tacticooler, .tentaMissiles, .tripleInkstrike, .tripleSplashdown, .waveBreaker, .zipcaster
     ])
     func durationNil(_ weapon: SpecialWeapon) throws {
-        let data = try TestHelper.getSpecialData(for: weapon)
+        let data = try SpecialWeaponData(for: weapon)
         let duration = StatHelper.specialDuration(ap: AbilityPoints(), specialInfo: data)
         
         #expect(duration == nil)
@@ -34,7 +35,7 @@ struct SpecialStatsTests {
         SpecialWeapon.inkjet, .reefslider, .superChump, .tripleSplashdown, .trizooka
     ])
     func damageDistanceNotNil(_ weapon: SpecialWeapon) throws {
-        let data = try TestHelper.getSpecialData(for: weapon)
+        let data = try SpecialWeaponData(for: weapon)
         
         let dmgDist = StatHelper.specialDamageDistance(ap: AbilityPoints(), specialInfo: data)
         
@@ -45,7 +46,7 @@ struct SpecialStatsTests {
         SpecialWeapon.bigBubbler, .booyahBomb, .crabTank, .inkStorm, .inkVac, .killerWail51, .krakenRoyale, .splattercolorScreen, .tacticooler, .tentaMissiles, .tripleInkstrike, .ultraStamp, .waveBreaker, .zipcaster
     ])
     func damageDistanceNil(_ weapon: SpecialWeapon) throws {
-        let data = try TestHelper.getSpecialData(for: weapon)
+        let data = try SpecialWeaponData(for: weapon)
         
         let dmgDist = StatHelper.specialDamageDistance(ap: AbilityPoints(), specialInfo: data)
         
@@ -56,7 +57,7 @@ struct SpecialStatsTests {
         SpecialWeapon.inkjet, .reefslider, .superChump, .tripleSplashdown, .trizooka
     ])
     func paintRadiusNotNil(_ weapon: SpecialWeapon) throws {
-        let data = try TestHelper.getSpecialData(for: weapon)
+        let data = try SpecialWeaponData(for: weapon)
         
         let dmgDist = StatHelper.specialPaintRadius(ap: AbilityPoints(), specialInfo: data)
         
@@ -67,7 +68,7 @@ struct SpecialStatsTests {
         SpecialWeapon.bigBubbler, .booyahBomb, .crabTank, .inkStorm, .inkVac, .killerWail51, .krakenRoyale, .splattercolorScreen, .tacticooler, .tentaMissiles, .tripleInkstrike, .ultraStamp, .waveBreaker, .zipcaster
     ])
     func paintRadiusNil(_ weapon: SpecialWeapon) throws {
-        let data = try TestHelper.getSpecialData(for: weapon)
+        let data = try SpecialWeaponData(for: weapon)
         
         let dmgDist = StatHelper.specialPaintRadius(ap: AbilityPoints(), specialInfo: data)
         
@@ -76,7 +77,7 @@ struct SpecialStatsTests {
     
     @Test("Field HP Not Nil Sp.Stats")
     func fieldHpNotNil() throws {
-        let data = try TestHelper.getSpecialData(for: .bigBubbler)
+        let data = try SpecialWeaponData(for: .bigBubbler)
         
         let fieldHp = StatHelper.specialFieldHp(ap: AbilityPoints(), specialInfo: data)
         
@@ -87,7 +88,7 @@ struct SpecialStatsTests {
         SpecialWeapon.inkVac, .krakenRoyale, .crabTank, .splattercolorScreen, .tacticooler, .superChump, .inkStorm, .inkjet, .killerWail51, .tentaMissiles, .booyahBomb, .tripleSplashdown, .waveBreaker, .reefslider, .zipcaster, .tripleInkstrike, .trizooka, .ultraStamp
     ])
     func fieldHpNil(_ weapon: SpecialWeapon) throws {
-        let data = try TestHelper.getSpecialData(for: weapon)
+        let data = try SpecialWeaponData(for: weapon)
         
         let fieldHp = StatHelper.specialFieldHp(ap: AbilityPoints(), specialInfo: data)
         
@@ -96,7 +97,7 @@ struct SpecialStatsTests {
     
     @Test("Device HP Not Nil Sp.Stats")
     func deviceHpNotNil() throws {
-        let data = try TestHelper.getSpecialData(for: .bigBubbler)
+        let data = try SpecialWeaponData(for: .bigBubbler)
         
         let fieldHp = StatHelper.specialDeviceHp(ap: AbilityPoints(), specialInfo: data)
         
@@ -107,7 +108,7 @@ struct SpecialStatsTests {
         SpecialWeapon.inkVac, .krakenRoyale, .crabTank, .splattercolorScreen, .tacticooler, .superChump, .inkStorm, .inkjet, .killerWail51, .tentaMissiles, .booyahBomb, .tripleSplashdown, .waveBreaker, .reefslider, .zipcaster, .tripleInkstrike, .trizooka, .ultraStamp
     ])
     func deviceHpNil(_ weapon: SpecialWeapon) throws {
-        let data = try TestHelper.getSpecialData(for: weapon)
+        let data = try SpecialWeaponData(for: weapon)
         
         let fieldHp = StatHelper.specialDeviceHp(ap: AbilityPoints(), specialInfo: data)
         
@@ -116,7 +117,7 @@ struct SpecialStatsTests {
     
     @Test("Hook Consumption Not Nil Sp.Stats")
     func hookConsumptionNotNil() throws {
-        let data = try TestHelper.getSpecialData(for: .zipcaster)
+        let data = try SpecialWeaponData(for: .zipcaster)
         
         let hookConsumption = StatHelper.specialHookInkConsumption(ap: AbilityPoints(), specialInfo: data)
         
@@ -127,7 +128,7 @@ struct SpecialStatsTests {
         SpecialWeapon.inkVac, .krakenRoyale, .crabTank, .splattercolorScreen, .tacticooler, .superChump, .inkStorm, .inkjet, .killerWail51, .tentaMissiles, .booyahBomb, .tripleSplashdown, .waveBreaker, .reefslider, .bigBubbler, .tripleInkstrike, .trizooka, .ultraStamp
     ])
     func hookConsumptionNil(_ weapon: SpecialWeapon) throws {
-        let data = try TestHelper.getSpecialData(for: weapon)
+        let data = try SpecialWeaponData(for: weapon)
         
         let hookConsumption = StatHelper.specialHookInkConsumption(ap: AbilityPoints(), specialInfo: data)
         
@@ -136,7 +137,7 @@ struct SpecialStatsTests {
     
     @Test("Hook Consumption Per Sec Not Nil Sp.Stats")
     func hookConsumptionPerSecNotNil() throws {
-        let data = try TestHelper.getSpecialData(for: .zipcaster)
+        let data = try SpecialWeaponData(for: .zipcaster)
         
         let hookConsumption = StatHelper.specialHookInkConsumptionPerSecond(ap: AbilityPoints(), specialInfo: data)
         
@@ -147,7 +148,7 @@ struct SpecialStatsTests {
         SpecialWeapon.inkVac, .krakenRoyale, .crabTank, .splattercolorScreen, .tacticooler, .superChump, .inkStorm, .inkjet, .killerWail51, .tentaMissiles, .booyahBomb, .tripleSplashdown, .waveBreaker, .reefslider, .bigBubbler, .tripleInkstrike, .trizooka, .ultraStamp
     ])
     func hookConsumptionPerSecNil(_ weapon: SpecialWeapon) throws {
-        let data = try TestHelper.getSpecialData(for: weapon)
+        let data = try SpecialWeaponData(for: weapon)
         
         let hookConsumption = StatHelper.specialHookInkConsumptionPerSecond(ap: AbilityPoints(), specialInfo: data)
         
@@ -156,7 +157,7 @@ struct SpecialStatsTests {
     
     @Test("Reticle Radius Not Nil Sp.Stats")
     func reticleRadiusNotNil() throws {
-        let data = try TestHelper.getSpecialData(for: .tentaMissiles)
+        let data = try SpecialWeaponData(for: .tentaMissiles)
         
         let hookConsumption = StatHelper.specialReticleRadius(ap: AbilityPoints(), specialInfo: data)
         
@@ -167,7 +168,7 @@ struct SpecialStatsTests {
         SpecialWeapon.inkVac, .krakenRoyale, .crabTank, .splattercolorScreen, .tacticooler, .superChump, .inkStorm, .inkjet, .killerWail51, .zipcaster, .booyahBomb, .tripleSplashdown, .waveBreaker, .reefslider, .bigBubbler, .tripleInkstrike, .trizooka, .ultraStamp
     ])
     func reticleRadiusNil(_ weapon: SpecialWeapon) throws {
-        let data = try TestHelper.getSpecialData(for: weapon)
+        let data = try SpecialWeaponData(for: weapon)
         
         let hookConsumption = StatHelper.specialReticleRadius(ap: AbilityPoints(), specialInfo: data)
         
@@ -178,7 +179,7 @@ struct SpecialStatsTests {
         SpecialWeapon.inkStorm, .splattercolorScreen, .tripleInkstrike
     ])
     func throwDistanceNotNil(_ weapon: SpecialWeapon) throws {
-        let data = try TestHelper.getSpecialData(for: weapon)
+        let data = try SpecialWeaponData(for: weapon)
         
         let throwDist = StatHelper.specialThrowDistance(ap: AbilityPoints(), specialInfo: data)
         
@@ -189,7 +190,7 @@ struct SpecialStatsTests {
         SpecialWeapon.inkVac, .krakenRoyale, .crabTank, .tacticooler, .superChump, .bigBubbler, .inkjet, .killerWail51, .tentaMissiles, .booyahBomb, .tripleSplashdown, .waveBreaker, .reefslider, .zipcaster, .trizooka, .ultraStamp
     ])
     func throwDistanceNil(_ weapon: SpecialWeapon) throws {
-        let data = try TestHelper.getSpecialData(for: weapon)
+        let data = try SpecialWeaponData(for: weapon)
         
         let throwDist = StatHelper.specialThrowDistance(ap: AbilityPoints(), specialInfo: data)
         
@@ -198,7 +199,7 @@ struct SpecialStatsTests {
     
     @Test("Move Speed Not Nil Sp.Stats")
     func moveSpeedNotNil() throws {
-        let data = try TestHelper.getSpecialData(for: .splattercolorScreen)
+        let data = try SpecialWeaponData(for: .splattercolorScreen)
         
         let speed = StatHelper.specialMoveSpeed(ap: AbilityPoints(), specialInfo: data)
         
@@ -209,7 +210,7 @@ struct SpecialStatsTests {
         SpecialWeapon.inkVac, .krakenRoyale, .crabTank, .tacticooler, .superChump, .bigBubbler, .inkStorm, .inkjet, .killerWail51, .tentaMissiles, .booyahBomb, .tripleSplashdown, .waveBreaker, .reefslider, .zipcaster, .tripleInkstrike, .trizooka, .ultraStamp
     ])
     func moveSpeedNil(_ weapon: SpecialWeapon) throws {
-        let data = try TestHelper.getSpecialData(for: weapon)
+        let data = try SpecialWeaponData(for: weapon)
         
         let speed = StatHelper.specialMoveSpeed(ap: AbilityPoints(), specialInfo: data)
         
@@ -218,7 +219,7 @@ struct SpecialStatsTests {
     
     @Test("Auto Charge Rate Not Nil Sp.Stats")
     func autoChargeRateNotNil() throws {
-        let data = try TestHelper.getSpecialData(for: .booyahBomb)
+        let data = try SpecialWeaponData(for: .booyahBomb)
         
         let rate = StatHelper.specialAutoChargeRate(ap: AbilityPoints(), specialInfo: data)
         
@@ -229,7 +230,7 @@ struct SpecialStatsTests {
         SpecialWeapon.inkVac, .krakenRoyale, .crabTank, .splattercolorScreen, .tacticooler, .superChump, .bigBubbler, .inkStorm, .inkjet, .killerWail51, .tentaMissiles, .tripleSplashdown, .waveBreaker, .reefslider, .zipcaster, .tripleInkstrike, .trizooka, .ultraStamp
     ])
     func autoChargeRateNil(_ weapon: SpecialWeapon) throws {
-        let data = try TestHelper.getSpecialData(for: weapon)
+        let data = try SpecialWeaponData(for: weapon)
         
         let rate = StatHelper.specialAutoChargeRate(ap: AbilityPoints(), specialInfo: data)
         
@@ -238,7 +239,7 @@ struct SpecialStatsTests {
     
     @Test("Max Radius Not Nil Sp.Stats")
     func maxRadiusNotNil() throws {
-        let data = try TestHelper.getSpecialData(for: .waveBreaker)
+        let data = try SpecialWeaponData(for: .waveBreaker)
         
         let rate = StatHelper.specialMaxRadius(ap: AbilityPoints(), specialInfo: data)
         
@@ -249,7 +250,7 @@ struct SpecialStatsTests {
         SpecialWeapon.inkVac, .krakenRoyale, .crabTank, .splattercolorScreen, .tacticooler, .superChump, .bigBubbler, .inkStorm, .inkjet, .killerWail51, .tentaMissiles, .booyahBomb, .tripleSplashdown, .reefslider, .zipcaster, .tripleInkstrike, .trizooka, .ultraStamp
     ])
     func maxRadiusNil(_ weapon: SpecialWeapon) throws {
-        let data = try TestHelper.getSpecialData(for: weapon)
+        let data = try SpecialWeaponData(for: weapon)
         
         let rate = StatHelper.specialMaxRadius(ap: AbilityPoints(), specialInfo: data)
         
@@ -258,7 +259,7 @@ struct SpecialStatsTests {
     
     @Test("Radius Range Not Nil Sp.Stats")
     func radiusRangeNotNil() throws {
-        let data = try TestHelper.getSpecialData(for: .inkVac)
+        let data = try SpecialWeaponData(for: .inkVac)
         
         let range = StatHelper.specialRadiusRange(ap: AbilityPoints(), specialInfo: data)
         
@@ -269,7 +270,7 @@ struct SpecialStatsTests {
         SpecialWeapon.krakenRoyale, .crabTank, .splattercolorScreen, .tacticooler, .superChump, .bigBubbler, .inkStorm, .inkjet, .killerWail51, .tentaMissiles, .booyahBomb, .tripleSplashdown, .waveBreaker, .reefslider, .tripleInkstrike, .trizooka, .ultraStamp
     ])
     func radiusRangeNil(_ weapon: SpecialWeapon) throws {
-        let data = try TestHelper.getSpecialData(for: weapon)
+        let data = try SpecialWeaponData(for: weapon)
         
         let range = StatHelper.specialRadiusRange(ap: AbilityPoints(), specialInfo: data)
         
@@ -278,7 +279,7 @@ struct SpecialStatsTests {
     
     @Test("Power Up Duration Not Nil Sp.Stats")
     func powerUpDurationNotNil() throws {
-        let data = try TestHelper.getSpecialData(for: .tacticooler)
+        let data = try SpecialWeaponData(for: .tacticooler)
         
         let range = StatHelper.specialPowerUpDuration(ap: AbilityPoints(), specialInfo: data)
         
@@ -289,7 +290,7 @@ struct SpecialStatsTests {
         SpecialWeapon.inkVac, .krakenRoyale, .crabTank, .splattercolorScreen, .superChump, .bigBubbler, .inkStorm, .inkjet, .killerWail51, .tentaMissiles, .booyahBomb, .tripleSplashdown, .waveBreaker, .reefslider, .zipcaster, .tripleInkstrike, .trizooka, .ultraStamp
     ])
     func powerUpDurationNil(_ weapon: SpecialWeapon) throws {
-        let data = try TestHelper.getSpecialData(for: weapon)
+        let data = try SpecialWeaponData(for: weapon)
         
         let range = StatHelper.specialPowerUpDuration(ap: AbilityPoints(), specialInfo: data)
         

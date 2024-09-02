@@ -10,7 +10,7 @@ import Foundation
 /// Represents the game parameters of the Toxic Mist sub weapon
 ///
 /// See the JSON file `WeaponPoisonMist.game__GameParameterTable.json`
-public struct ToxicMist: GameParametable {
+public struct ToxicMist: SubWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

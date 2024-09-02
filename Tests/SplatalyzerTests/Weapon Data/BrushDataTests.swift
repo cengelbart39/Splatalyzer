@@ -8,26 +8,16 @@
 import Testing
 @testable import Splatalyzer
 
+@Suite(.tags(.weaponData))
 struct BrushDataTests {
-    
-    let service = JSONService()
-    
-    var weaponInfo: WeaponInfoMain
-    
-    init() throws {
-        self.weaponInfo = try service.decode(WeaponInfoMain.self, from: "WeaponInfoMain")
-    }
+
     @Test("Inkbrush Data", arguments: [
         WeaponKit(.inkbrush, .splatBomb, .killerWail51),
         WeaponKit(.inkbrushNouveau, .inkMine, .ultraStamp)
     ])
     func inkbrush(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Brush.self, from: kit.main.fileName)
-        
-        let item = try #require(self.weaponInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)
@@ -44,12 +34,8 @@ struct BrushDataTests {
         WeaponKit(.orderbrushReplica, .suctionBomb, .zipcaster)
     ])
     func octobrush(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Brush.self, from: kit.main.fileName)
-        
-        let item = try #require(self.weaponInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)
@@ -65,12 +51,8 @@ struct BrushDataTests {
         WeaponKit(.painbrushNouveau, .pointSensor, .tentaMissiles)
     ])
     func painbrush(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Brush.self, from: kit.main.fileName)
-        
-        let item = try #require(self.weaponInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)

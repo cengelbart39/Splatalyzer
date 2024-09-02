@@ -8,22 +8,17 @@
 import Testing
 @testable import Splatalyzer
 
+@Suite(.tags(.weaponData))
 struct RollerDataTests {
     
     let service = JSONService()
-    
-    let mainInfo = try! JSONService().decode(WeaponInfoMain.self, from: "WeaponInfoMain")
-    
+        
     @Test("Big Swig Roller Data", arguments: [
         WeaponKit(.bigSwigRoller, .splashWall, .inkVac),
         WeaponKit(.bigSwigRollerExpress, .angleShooter, .inkStorm)
     ])
     func bigSwigRoller(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Roller.self, from: kit.main.fileName)
-        
-        let item = try #require(self.mainInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
+        let data = try MainWeaponData(for: kit.main)
         
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
@@ -43,11 +38,7 @@ struct RollerDataTests {
         WeaponKit(.carbonRollerDeco, .burstBomb, .trizooka)
     ])
     func carbonRoller(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Roller.self, from: kit.main.fileName)
-        
-        let item = try #require(self.mainInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
+        let data = try MainWeaponData(for: kit.main)
         
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
@@ -67,12 +58,8 @@ struct RollerDataTests {
         WeaponKit(.goldDynamoRoller, .splatBomb, .superChump)
     ])
     func dynamoRoller(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Roller.self, from: kit.main.fileName)
-        
-        let item = try #require(self.mainInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)
@@ -91,12 +78,8 @@ struct RollerDataTests {
         WeaponKit(.foilFlingzaRoller, .suctionBomb, .splattercolorScreen)
     ])
     func flingzaRoller(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Roller.self, from: kit.main.fileName)
-        
-        let item = try #require(self.mainInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)
@@ -116,12 +99,8 @@ struct RollerDataTests {
         WeaponKit(.orderRollerReplica, .curlingBomb, .bigBubbler)
     ])
     func splatRoller(_ kit: WeaponKit) throws {
-        let gameParams = try service.decode(Roller.self, from: kit.main.fileName)
-        
-        let item = try #require(self.mainInfo.getItem(for: kit.main))
-        
-        let data = MainWeaponData(weaponInfo: item, container: gameParams)
-        
+        let data = try MainWeaponData(for: kit.main)
+
         #expect(data.mainWeaponId == kit.main)
         #expect(data.subWeapon == kit.sub)
         #expect(data.specialWeapon == kit.special)

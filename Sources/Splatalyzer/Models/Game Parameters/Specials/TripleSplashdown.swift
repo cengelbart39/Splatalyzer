@@ -10,7 +10,7 @@ import Foundation
 /// Represents the game parameters of the Triple Splashdown special weapon
 ///
 /// See the JSON file `WeaponSpPogo.game__GameParameterTable.json`.
-public struct TripleSplashdown: GameParametable {
+public struct TripleSplashdown: SpecialWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

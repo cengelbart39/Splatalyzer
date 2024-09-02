@@ -5,16 +5,10 @@
 //  Created by Christopher Engelbart on 1/12/24.
 //
 
-#if os(macOS)
-import AppKit
-#else
-import UIKit
-#endif
-
 import Foundation
 
 /// Represents every Sub Weapon
-public enum SubWeapon: String, CaseIterable, Codable, Sendable {
+public enum SubWeapon: String, CaseIterable, Codable, Sendable, WeaponRepresentable {
     case angleShooter = "LineMarker"
     case autobomb = "Bomb_Robot"
     case burstBomb = "Bomb_Quick"
@@ -30,10 +24,8 @@ public enum SubWeapon: String, CaseIterable, Codable, Sendable {
     case torpedo = "Bomb_Torpedo"
     case toxicMist = "PoisonMist"
     
-    #if os(macOS)
     /// The image of the current sub weapon
-    /// - Note: OSes other than `macOS` use `UIImage` instead.
-    public var image: NSImage? {
+    public var image: PlatformImage? {
         guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
             return nil
         }
@@ -42,23 +34,8 @@ public enum SubWeapon: String, CaseIterable, Codable, Sendable {
             return nil
         }
         
-        return NSImage(data: data)
+        return PlatformImage(data: data)
     }
-    #else
-    /// The image of the current sub weapon
-    /// - Note: `macOS` use `NSImage` instead.
-    public var image: UIImage? {
-        guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
-            return nil
-        }
-        
-        guard let data = try? Data(contentsOf: url) else {
-            return nil
-        }
-        
-        return UIImage(data: data)
-    }
-    #endif
     
     /// The localized name of the Sub Weapon
     public var localized: String {
@@ -74,7 +51,7 @@ public enum SubWeapon: String, CaseIterable, Codable, Sendable {
     /// This function outputs `BombCurling`, removing the underscore.
     ///
     /// For no-underscore raw values, we can just return them without doing any work.
-    var fileName: String {
+    public var fileName: String {
         if self.rawValue.contains("_") {
             let subSplit = self.rawValue.split(separator: "_")
             
@@ -86,7 +63,7 @@ public enum SubWeapon: String, CaseIterable, Codable, Sendable {
 }
 
 extension SubWeapon {
-    var modelType: any GameParametable.Type {
+    var modelType: any SubWeaponable.Type {
         switch self {
         case .angleShooter:
             return AngleShooter.self

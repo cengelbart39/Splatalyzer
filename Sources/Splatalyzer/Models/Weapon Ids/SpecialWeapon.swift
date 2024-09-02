@@ -5,40 +5,31 @@
 //  Created by Christopher Engelbart on 1/12/24.
 //
 
-#if os(macOS)
-import AppKit
-#else
-import UIKit
-#endif
-
 import Foundation
 
 /// Represents every Special Weapon
-public enum SpecialWeapon: String, CaseIterable, Codable, Sendable {
-    case inkVac = "SpBlower"
-    case krakenRoyale = "SpCastle"
-    case crabTank = "SpChariot"
-    case splattercolorScreen = "SpChimney"
-    case tacticooler = "SpEnergyStand"
-    case superChump = "SpFirework"
+public enum SpecialWeapon: String, CaseIterable, Codable, Sendable, WeaponRepresentable {
     case bigBubbler = "SpGreatBarrier"
-    case inkStorm = "SpInkStorm"
-    case inkjet = "SpJetpack"
-    case killerWail51 = "SpMicroLaser"
-    case tentaMissiles = "SpMultiMissile"
     case booyahBomb = "SpNiceBall"
-    case tripleSplashdown = "SpPogo"
-    case waveBreaker = "SpShockSonar"
+    case crabTank = "SpChariot"
+    case inkjet = "SpJetpack"
+    case inkStorm = "SpInkStorm"
+    case inkVac = "SpBlower"
+    case killerWail51 = "SpMicroLaser"
+    case krakenRoyale = "SpCastle"
     case reefslider = "SpSkewer"
-    case zipcaster = "SpSuperHook"
+    case splattercolorScreen = "SpChimney"
+    case superChump = "SpFirework"
+    case tacticooler = "SpEnergyStand"
+    case tentaMissiles = "SpMultiMissile"
     case tripleInkstrike = "SpTripleTornado"
+    case tripleSplashdown = "SpPogo"
     case trizooka = "SpUltraShot"
     case ultraStamp = "SpUltraStamp"
+    case waveBreaker = "SpShockSonar"
+    case zipcaster = "SpSuperHook"
     
-    #if os(macOS)
-    /// The image of the current special weapon
-    /// - Note: OSes other than `macOS` use `UIImage` instead.
-    public var image: NSImage? {
+    public var image: PlatformImage? {
         guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
             return nil
         }
@@ -47,23 +38,8 @@ public enum SpecialWeapon: String, CaseIterable, Codable, Sendable {
             return nil
         }
         
-        return NSImage(data: data)
+        return PlatformImage(data: data)
     }
-    #else
-    /// The image of the current special weapon
-    /// - Note: `macOS` use `NSImage` instead.
-    public var image: UIImage? {
-        guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
-            return nil
-        }
-        
-        guard let data = try? Data(contentsOf: url) else {
-            return nil
-        }
-        
-        return UIImage(data: data)
-    }
-    #endif
     
     /// The localized name of the Special Weapon
     public var localized: String {
@@ -77,7 +53,7 @@ public enum SpecialWeapon: String, CaseIterable, Codable, Sendable {
 }
 
 extension SpecialWeapon {
-    var modelType: any GameParametable.Type {
+    var modelType: any SpecialWeaponable.Type {
         switch self {
         case .inkVac:
             return InkVac.self

@@ -8,6 +8,7 @@
 import Testing
 @testable import Splatalyzer
 
+@Suite(.tags(.gearBuild))
 struct GearBuildTests {
     
     @Test("GearBuild Default Values")

@@ -10,7 +10,7 @@ import Foundation
 /// Represents the game parameters of the Wave Breaker special weapon
 ///
 /// See the JSON file `WeaponSpShockSonar.game__GameParameterTable.json`.
-public struct WaveBreaker: GameParametable {
+public struct WaveBreaker: SpecialWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

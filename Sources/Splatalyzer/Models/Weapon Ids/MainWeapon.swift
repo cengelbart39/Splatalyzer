@@ -14,7 +14,7 @@ import UIKit
 import Foundation
 
 /// Represents every Main Weapon (including alternate kits).
-public enum MainWeapon: String, CaseIterable, Codable, Identifiable, Sendable {
+public enum MainWeapon: String, CaseIterable, Codable, Identifiable, Sendable, WeaponRepresentable {
     // MARK: Blasters
     case rapidBlasterPro = "Blaster_LightLong_00"
     case rapidBlasterProDeco = "Blaster_LightLong_01"
@@ -226,10 +226,8 @@ public enum MainWeapon: String, CaseIterable, Codable, Identifiable, Sendable {
         return UUID()
     }
     
-    #if os(macOS)
     /// The image of the current main weapon
-    /// - Note: OSes other than `macOS` use `UIImage` instead
-    public var image: NSImage? {
+    public var image: PlatformImage? {
         guard let url = Bundle.module.url(forResource: "Path_Wst_\(self.rawValue)", withExtension: "png") else {
             return nil
         }
@@ -238,23 +236,8 @@ public enum MainWeapon: String, CaseIterable, Codable, Identifiable, Sendable {
             return nil
         }
         
-        return NSImage(data: data)
+        return PlatformImage(data: data)
     }
-    #else
-    /// The image of the current main weapon
-    /// - Note: `macOS` use `NSImage` instead
-    public var image: UIImage? {
-        guard let url = Bundle.module.url(forResource: "Path_Wst_\(self.rawValue)", withExtension: "png") else {
-            return nil
-        }
-        
-        guard let data = try? Data(contentsOf: url) else {
-            return nil
-        }
-        
-        return UIImage(data: data)
-    }
-    #endif
     
     /// The localized name of the main weapon.
     public var localized: String {
@@ -268,7 +251,7 @@ public enum MainWeapon: String, CaseIterable, Codable, Identifiable, Sendable {
     /// It's file is `WeaponBlasterLightLong.game__GameParameterTable.json`.
     ///
     /// This function outputs `BlasterLightLong`, ignoring the right-most side (`_00`) and removing the left underscore.
-    var fileName: String {
+    public var fileName: String {
         let split = self.rawValue.split(separator: "_")
         return "Weapon\(split[0])\(split[1]).game__GameParameterTable"
     }
@@ -288,5 +271,71 @@ public enum MainWeapon: String, CaseIterable, Codable, Identifiable, Sendable {
             .filter { $0.rawValue.hasSuffix("00") }
             .filter { $0.type == type }
             .sorted(by: { $0.rawValue < $1.rawValue })
+    }
+}
+
+public extension MainWeapon {
+    /// Weapons of the Blaster class
+    static let blasters = MainWeapon.allCases
+        .filter { $0.type == .blaster }
+        .sorted(by: { $0.rawValue < $1.rawValue })
+    
+    /// Weapons of the Brella class
+    static let brellas = MainWeapon.allCases
+        .filter { $0.type == .brella }
+        .sorted(by: { $0.rawValue < $1.rawValue })
+    
+    /// Weapons of the Brush class
+    static let brushes = MainWeapon.allCases
+        .filter { $0.type == .brush }
+        .sorted(by: { $0.rawValue < $1.rawValue })
+    
+    /// Weapons of the Charger class
+    static let chargers = MainWeapon.allCases
+        .filter { $0.type == .charger }
+        .sorted(by: { $0.rawValue < $1.rawValue })
+    
+    /// Weapons of the Dualie class
+    static let dualies = MainWeapon.allCases
+        .filter { $0.type == .dualie }
+        .sorted(by: { $0.rawValue < $1.rawValue })
+    
+    /// Weapons of the Roller class
+    static let rollers = MainWeapon.allCases
+        .filter { $0.type == .roller }
+        .sorted(by: { $0.rawValue < $1.rawValue })
+    
+    /// Weapons of the Shooter class
+    static let shooters = MainWeapon.allCases
+        .filter { $0.type == .shooter }
+        .sorted(by: { $0.rawValue < $1.rawValue })
+    
+    /// Weapons of the Slosher class
+    static let sloshers = MainWeapon.allCases
+        .filter { $0.type == .slosher }
+        .sorted(by: { $0.rawValue < $1.rawValue })
+    
+    /// Weapons of the Splatana class
+    static let splatanas = MainWeapon.allCases
+        .filter { $0.type == .splatana }
+        .sorted(by: { $0.rawValue < $1.rawValue })
+    
+    /// Weapons of the Splatling class
+    static let splatlings = MainWeapon.allCases
+        .filter { $0.type == .splatling }
+        .sorted(by: { $0.rawValue < $1.rawValue })
+    
+    /// Weapons of the Stringer class
+    static let stringers = MainWeapon.allCases
+        .filter { $0.type == .stringer }
+        .sorted(by: { $0.rawValue < $1.rawValue })
+}
+
+public extension Array where Element == MainWeapon {
+    /// Filters out alternate main weapon kits
+    /// - Note: This keeps weapons suffixed with `00`, and removes those who aren't (`01`, `H`, `O`, `Oct`)
+    /// - Returns: Array of vanilla weapon kits
+    func vanilla() -> [MainWeapon] {
+        return self.filter { $0.rawValue.hasSuffix("00") }
     }
 }

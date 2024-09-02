@@ -16,7 +16,7 @@ public struct TacticoolerToggle: View {
     
     public var body: some View {
         HStack {
-            ImageView(image: SpecialWeapon.tacticooler.image)
+            Image(platformImage: SpecialWeapon.tacticooler.image)
                 .frame(width: 60, height: 60)
                 .accessibilityHidden(false)
             

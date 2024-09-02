@@ -11,7 +11,7 @@ import Foundation
 /// weapon
 ///
 /// See the JSON file `WeaponPointSensor.game__GameParameterTable.json`
-public struct PointSensor: GameParametable {
+public struct PointSensor: SubWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {
