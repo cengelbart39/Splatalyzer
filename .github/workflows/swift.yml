@@ -16,6 +16,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: '16.0-beta-6'
     - name: Build
       run: xcodebuild build-for-testing -scheme Splatalyzer-Package -destination 'platform=macOS,arch=arm64' -verbose | xcpretty
     - name: General Tests
