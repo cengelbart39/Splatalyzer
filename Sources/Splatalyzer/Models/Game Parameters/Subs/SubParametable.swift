@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// A type that conforms to ``GameParametable`` and requires its ``GameParametable/Parameters``  to conform  to ``SubParametable``
 public protocol SubWeaponable: GameParametable where Parameters: SubParametable { }
 
 /// Sets required properties for any Sub Weapon

@@ -12,13 +12,13 @@ public struct AbilityStat: Codable, Equatable, Sendable {
     /// The default value before any abilities
     public let baseValue: Double
     
-    /// The ability or abilities that produce modify the statistic
+    /// The ability or abilities that effect the statistic
     public let modifiedBy: [Ability]
     
     /// The build value accounting for abilities
     public let value: Double
     
-    /// The unit of ``baseValue`` and ``value``
+    /// The unit of the statistic
     public let unit: StatUnit
     
     /// The name of the statistic

@@ -1777,7 +1777,7 @@ public struct StatHelper {
     /// - Returns: A ``HighMidLow`` for `value`; if overwrite and decoded value are both `nil` goes to 0.
     public static func abilityValues(
         for value: AbilityValue,
-        weapon: WeaponDatable
+        weapon: any WeaponDatable
     ) -> HighMidLow {
         let overwrites = weapon.overwrites.value(for: value)
         

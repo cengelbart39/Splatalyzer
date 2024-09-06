@@ -23,7 +23,7 @@ public struct APEffect: Sendable {
     public init(
         for value: AbilityValue,
         of ap: Int,
-        weapon: WeaponDatable
+        weapon: any WeaponDatable
     ) {
         let effect = StatHelper.abilityValues(
             for: value,

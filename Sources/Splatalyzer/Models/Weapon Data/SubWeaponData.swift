@@ -10,7 +10,7 @@ import Foundation
 /// An object representing the necessary Sub Weapon information for build analysis.
 public struct SubWeaponData: WeaponDatable {
     public let id: SubWeapon
-    public let overwrites: Overwritable
+    public let overwrites: SubOverwrites
     public let subLevelSave: Int
     public let inkConsume: Double
     public let inkRecoverStop: Int
@@ -152,7 +152,7 @@ public struct SubWeaponData: WeaponDatable {
     }
     
     /// Create an instance for the `BombQuick` sub weapon
-    /// - Parameter container: `BombQuick` game parameters
+    /// - Parameter burstBomb: `BombQuick` game parameters
     public init(burstBomb: BurstBomb) {
         let gameParams = burstBomb.parameters
         
@@ -220,7 +220,7 @@ public struct SubWeaponData: WeaponDatable {
     }
     
     /// Create an instance for the `BombTorpedo` sub weapon
-    /// - Parameter container: `BombTorpedo` game parameters
+    /// - Parameter torpedo: `BombTorpedo` game parameters
     public init(torpedo: Torpedo) {
         let gameParams = torpedo.parameters
         

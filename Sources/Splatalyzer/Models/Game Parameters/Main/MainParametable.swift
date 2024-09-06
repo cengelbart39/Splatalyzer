@@ -13,4 +13,5 @@ public protocol MainParametable: Parametable {
     var mainWeaponSetting: MainWeaponSettings { get }
 }
 
+/// A type that conforms to ``GameParametable`` and requires its ``GameParametable/Parameters``  to conform  to ``MainParametable``
 public protocol MainWeaponable: GameParametable where Parameters: MainParametable { }

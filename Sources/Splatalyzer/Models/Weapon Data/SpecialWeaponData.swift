@@ -20,7 +20,7 @@ public struct SpecialWeaponData: WeaponDatable {
     public let exhaleBlastParamMinCharge: [DistanceDamage]
     public let exhaleBlastParamMaxCharge: [DistanceDamage]
     public let jumpDamage: Int?
-    public let overwrites: Overwritable
+    public let overwrites: SpecialOverwrites
     public let swingDamage: [DistanceDamage]
     public let throwDamage: [DistanceDamage]
     public let throwDirectDamage: Int?

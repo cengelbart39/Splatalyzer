@@ -28,14 +28,21 @@ public struct InkTankOption: Codable, Equatable, Identifiable, Sendable {
 }
 
 public extension Array where Element == InkTankOption {
-    func containsType(_ type: InkConsumeType) -> Bool {
+    /// Determines if a certain ``InkConsumeType`` is present in the array
+    /// - Parameter type: The type of ink consumption to look for
+    /// - Returns: Whether the ink consumption type exists in the array
+    func contains(type: InkConsumeType) -> Bool {
         return self.contains(where: { $0.type == type })
     }
     
+    /// Get the first element of a certain ``InkConsumeType``
+    /// - Parameter type: The type of ink consumption to look for
+    /// - Returns: The first element with the ink consumption type, if it exists
     func getElement(of type: InkConsumeType) -> InkTankOption? {
         return self.first(where: { $0.type == type })
     }
     
+    /// Combines elements of ``InkConsumeType/verticalSwing`` and ``InkConsumeType/horizontalSwing`` if their values are the same and remove the latter
     mutating func combineSwings() {
         guard let vertical = self.getElement(of: .verticalSwing), let horizontal = self.getElement(of: .horizontalSwing) else {
             return
@@ -61,6 +68,9 @@ public extension Array where Element == InkTankOption {
 }
 
 public extension Dictionary where Key == Int, Value == [InkTankOption] {
+    /// Determines if a certain ``InkConsumeType`` is present in the values of the dictionary
+    /// - Parameter type: The type of ink consumption to look for
+    /// - Returns: Whether the ink consumption type exists in the dictionary's values
     func contains(type: InkConsumeType) -> Bool {
         for (_, values) in self {
             if values.contains(where: { $0.type == type }) {

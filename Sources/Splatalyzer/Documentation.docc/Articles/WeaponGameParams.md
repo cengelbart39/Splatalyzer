@@ -62,5 +62,10 @@ Additionally, there are Game Parameters for the Player. The model is called ``Pl
 
 ### Decoding
 
-These models are decoded with `JSONService`.``JSONService/decode(_:from:)``, with their respective type and file.
+These models are decoded with `JSONService`.``JSONService/decode(_:into:)``, with their respective type and file.
 
+To decode, it uses a ``DecodeType``. Each case has a respective ``DecodeType/fileName``, containing the file name of the associated JSON file.
+
+In the case of Main, Sub, and Special weapons the ``DecodeType/weapon(_:)`` case is used. It takes an associated property of type ``WeaponRepresentable``, which contains the file name.
+
+For Player parameters, the ``DecodeType/player`` case is used.

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// C
 public struct MainWeaponSettings: Parametable {
     public let type: String
     public let overwriteConsumeRtMainHigh: Double?

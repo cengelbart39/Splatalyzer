@@ -86,11 +86,14 @@ public extension Array where Element == DamageStat {
         return result
     }
     
+    /// Determines if a certain ``DamageType`` is present in the array
+    /// - Parameter type: The type of damage to look for
+    /// - Returns: Whether the damage type exists in the array
     func contains(type: DamageType) -> Bool {
         return self.contains(where: { $0.type == type })
     }
     
-    /// If `DamageStat`s of type `.direct` and `.normalMax` both exist and have the same `value`, we will remove the `.normalMax` element
+    /// If `DamageStat`s of type ``DamageType/direct`` and ``DamageType/normalMax`` both exist and have the same `values`, we will remove the latter
     mutating func combineNormalDirect() {
         guard let directIndex = self.firstIndex(where: { $0.type == .direct }),
               let normalMaxIndex = self.firstIndex(where: { $0.type == .normalMax })
@@ -103,8 +106,7 @@ public extension Array where Element == DamageStat {
         }
     }
     
-    /// If `DamageStat`s of type ``DamageType/direct``,  ``DamageType/directSecondaryMax``,  and ``DamageType/directSecondaryMin`` exist and
-    /// have the same value, remove both direct secondary stats.
+    /// If `DamageStat`s of type ``DamageType/direct``,  ``DamageType/directSecondaryMax``,  and ``DamageType/directSecondaryMin`` exist and have the same `values`, remove both direct secondary stats.
     mutating func combineDirects() {
         guard let directIndex = self.firstIndex(where: { $0.type == .direct }),
               let secMaxIndex = self.firstIndex(where: { $0.type == .directSecondaryMax }),
@@ -121,6 +123,7 @@ public extension Array where Element == DamageStat {
         self.remove(at: secMaxIndex)
     }
     
+    /// If `DamageStat`s of type ``DamageType/directMax`` and ``DamageType/directSecondaryMax`` exist and have the same `values`, remove the latter
     mutating func combineDirectMaxes() {
         guard let directMaxIndex = self.firstIndex(where: { $0.type == .directMax }),
               let directSecMaxIndex = self.firstIndex(where: { $0.type == .directSecondaryMax })
@@ -135,6 +138,7 @@ public extension Array where Element == DamageStat {
         self.remove(at: directSecMaxIndex)
     }
     
+    /// If `DamageStat`s of type ``DamageType/directMin`` and ``DamageType/directSecondaryMin`` exist and have the same `values`, remove the latter
     mutating func combineDirectMins() {
         guard let directMinIndex = self.firstIndex(where: { $0.type == .directMin }),
               let directSecMinIndex = self.firstIndex(where: { $0.type == .directSecondaryMin })
@@ -149,6 +153,7 @@ public extension Array where Element == DamageStat {
         self.remove(at: directSecMinIndex)
     }
     
+    /// If `DamageStat`s of type ``DamageType/directMax`` and ``DamageType/directSecondaryMax`` exist and have different `values`, add the first value of the latter to the end of the former and remove the latter
     mutating func assymetricCombineDirectMaxes() {
         guard let directMaxIndex = self.firstIndex(where: { $0.type == .directMax }),
               let directSecMaxIndex = self.firstIndex(where: { $0.type == .directSecondaryMax })
@@ -167,6 +172,7 @@ public extension Array where Element == DamageStat {
         self.remove(at: directSecMaxIndex)
     }
     
+    /// If `DamageStat`s of type ``DamageType/directSecondaryMax``, ``DamageType/directSecondaryMin``, and ``DamageType/splash`` exist and have the same `values`, remove the the first two
     mutating func combineSplashAndSecondaries() {
         guard let directSecMaxIndex = self.firstIndex(where: { $0.type == .directSecondaryMax }),
               let directSecMinIndex = self.firstIndex(where: { $0.type == .directSecondaryMin }),

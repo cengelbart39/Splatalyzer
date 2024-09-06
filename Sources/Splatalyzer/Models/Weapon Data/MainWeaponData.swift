@@ -15,7 +15,7 @@ public struct MainWeaponData: WeaponDatable {
     public let mainWeaponId: MainWeapon
     public let subWeapon: SubWeapon
     public let specialWeapon: SpecialWeapon
-    public let overwrites: Overwritable
+    public let overwrites: MainOverwrites
     public let tripleShotSpanFrame: Int?
     public let weaponSpeedType: WeaponSpeedType?
     public let moveSpeed: Double?
@@ -600,7 +600,7 @@ public struct MainWeaponData: WeaponDatable {
      Creates an instance for a Shooter weapon
      - Parameters:
         - weaponInfo: Weapon info from `WeaponInfoMain.json`
-        - container: Weapon game parameters
+        - shooter: Weapon game parameters
      */
     public init(weaponInfo: WeaponInfoMainItem, shooter: Shooter) {
         let gameParams = shooter.parameters

@@ -15,7 +15,7 @@ struct SpecialDataTests {
     func bigBubbler() throws {
 
         let data = try SpecialWeaponData(for: .bigBubbler)
-        let overwrites = try #require(data.overwrites as? SpecialOverwrites)
+        let overwrites = data.overwrites
 
         #expect(data.id == .bigBubbler)
         #expect(overwrites.maxFieldHp != nil)
@@ -25,7 +25,7 @@ struct SpecialDataTests {
     @Test("Booyah Bomb Data")
     func booyahBomb() throws {
         let data = try SpecialWeaponData(for: .booyahBomb)
-        let overwrites = try #require(data.overwrites as? SpecialOverwrites)
+        let overwrites = data.overwrites
 
         #expect(data.id == .booyahBomb)
         #expect(data.tickDamage != nil)
@@ -35,7 +35,7 @@ struct SpecialDataTests {
     @Test("Crab Tank Data")
     func crabTank() throws {
         let data = try SpecialWeaponData(for: .crabTank)
-        let overwrites = try #require(data.overwrites as? SpecialOverwrites)
+        let overwrites = data.overwrites
 
         #expect(data.id == .crabTank)
         #expect(data.armorHp != nil)
@@ -49,7 +49,7 @@ struct SpecialDataTests {
     @Test("Inkjet Data")
     func inkjet() throws {
         let data = try SpecialWeaponData(for: .inkjet)
-        let overwrites = try #require(data.overwrites as? SpecialOverwrites)
+        let overwrites = data.overwrites
 
         #expect(data.id == .inkjet)
         #expect(data.directDamage != nil)
@@ -63,7 +63,7 @@ struct SpecialDataTests {
     @Test("Ink Storm Data")
     func inkStorm() throws {
         let data = try SpecialWeaponData(for: .inkStorm)
-        let overwrites = try #require(data.overwrites as? SpecialOverwrites)
+        let overwrites = data.overwrites
 
         #expect(data.id == .inkStorm)
         #expect(data.tickDamage != nil)
@@ -74,7 +74,7 @@ struct SpecialDataTests {
     @Test("Ink Vac Data")
     func inkVac() throws {
         let data = try SpecialWeaponData(for: .inkVac)
-        let overwrites = try #require(data.overwrites as? SpecialOverwrites)
+        let overwrites = data.overwrites
 
         #expect(data.id == .inkVac)
         #expect(data.exhaleBlastParamMaxCharge != nil)
@@ -86,7 +86,7 @@ struct SpecialDataTests {
     @Test("Killer Wail 5.1 Data")
     func killerWail51() throws {
         let data = try SpecialWeaponData(for: .killerWail51)
-        let overwrites = try #require(data.overwrites as? SpecialOverwrites)
+        let overwrites = data.overwrites
 
         #expect(data.id == .killerWail51)
         #expect(data.tickDamage != nil)
@@ -96,7 +96,7 @@ struct SpecialDataTests {
     @Test("Kraken Royale Data")
     func krakenRoyale() throws {
         let data = try SpecialWeaponData(for: .krakenRoyale)
-        let overwrites = try #require(data.overwrites as? SpecialOverwrites)
+        let overwrites = data.overwrites
 
         #expect(data.id == .krakenRoyale)
         #expect(data.directDamage != nil)
@@ -107,7 +107,7 @@ struct SpecialDataTests {
     @Test("Reefslider Data")
     func reefslider() throws {
         let data = try SpecialWeaponData(for: .reefslider)
-        let overwrites = try #require(data.overwrites as? SpecialOverwrites)
+        let overwrites = data.overwrites
 
         #expect(data.id == .reefslider)
         #expect(!data.distanceDamage.isEmpty)
@@ -120,7 +120,7 @@ struct SpecialDataTests {
     @Test("Splattercolor Screen Data")
     func splattercolorScreen() throws {
         let data = try SpecialWeaponData(for: .splattercolorScreen)
-        let overwrites = try #require(data.overwrites as? SpecialOverwrites)
+        let overwrites = data.overwrites
 
         #expect(data.id == .splattercolorScreen)
         #expect(overwrites.moveSpeed != nil)
@@ -130,7 +130,7 @@ struct SpecialDataTests {
     @Test("Super Chump Data")
     func superChump() throws {
         let data = try SpecialWeaponData(for: .superChump)
-        let overwrites = try #require(data.overwrites as? SpecialOverwrites)
+        let overwrites = data.overwrites
 
         #expect(data.id == .superChump)
         #expect(!data.distanceDamage.isEmpty)
@@ -142,7 +142,7 @@ struct SpecialDataTests {
     @Test("Tacticooler Data")
     func tacticooler() throws {
         let data = try SpecialWeaponData(for: .tacticooler)
-        let overwrites = try #require(data.overwrites as? SpecialOverwrites)
+        let overwrites = data.overwrites
 
         #expect(data.id == .tacticooler)
         #expect(overwrites.powerUpFrame != nil)
@@ -151,7 +151,7 @@ struct SpecialDataTests {
     @Test("Tenta Missiles Data")
     func tentaMissiles() throws {
         let data = try SpecialWeaponData(for: .tentaMissiles)
-        let overwrites = try #require(data.overwrites as? SpecialOverwrites)
+        let overwrites = data.overwrites
 
         #expect(data.id == .tentaMissiles)
         #expect(!data.distanceDamage.isEmpty)
@@ -161,7 +161,7 @@ struct SpecialDataTests {
     @Test("Triple Inkstrike Data")
     func tripleInkstrike() throws {
         let data = try SpecialWeaponData(for: .tripleInkstrike)
-        let overwrites = try #require(data.overwrites as? SpecialOverwrites)
+        let overwrites = data.overwrites
 
         #expect(data.id == .tripleInkstrike)
         #expect(overwrites.spawnSpeedZSpecUp != nil)
@@ -170,8 +170,8 @@ struct SpecialDataTests {
     @Test("Triple Splashdown Data")
     func tripleSplashdown() throws {
         let data = try SpecialWeaponData(for: .tripleSplashdown)
-        let overwrites = try #require(data.overwrites as? SpecialOverwrites)
-        
+        let overwrites = data.overwrites
+
         #expect(data.id == .tripleSplashdown)
         #expect(!data.distanceDamage.isEmpty)
         #expect(overwrites.distanceDamageDistanceRate != nil)
@@ -181,8 +181,8 @@ struct SpecialDataTests {
     @Test("Trizooka Data")
     func trizooka() throws {
         let data = try SpecialWeaponData(for: .trizooka)
-        let overwrites = try #require(data.overwrites as? SpecialOverwrites)
-        
+        let overwrites = data.overwrites
+
         #expect(data.id == .trizooka)
         #expect(data.directDamage != nil)
         #expect(!data.distanceDamage.isEmpty)
@@ -194,8 +194,7 @@ struct SpecialDataTests {
     @Test("Ultra Stamp Data")
     func ultraStamp() throws {
         let data = try SpecialWeaponData(for: .ultraStamp)
-        _ = try #require(data.overwrites as? SpecialOverwrites)
-        
+
         #expect(data.id == .ultraStamp)
         #expect(!data.swingDamage.isEmpty)
         #expect(!data.throwDamage.isEmpty)
@@ -204,8 +203,8 @@ struct SpecialDataTests {
     @Test("Wave Breaker Data")
     func waveBreaker() throws {
         let data = try SpecialWeaponData(for: .waveBreaker)
-        let overwrites = try #require(data.overwrites as? SpecialOverwrites)
-        
+        let overwrites = data.overwrites
+
         #expect(data.id == .waveBreaker)
         #expect(data.directDamage != nil)
         #expect(data.waveDamage != nil)
@@ -216,8 +215,8 @@ struct SpecialDataTests {
     @Test("Zipcaster Data")
     func zipcaster() throws {
         let data = try SpecialWeaponData(for: .zipcaster)
-        let overwrites = try #require(data.overwrites as? SpecialOverwrites)
-        
+        let overwrites = data.overwrites
+
         #expect(data.id == .zipcaster)
         #expect(!data.distanceDamage.isEmpty)
         #expect(overwrites.inkConsumeHook != nil)

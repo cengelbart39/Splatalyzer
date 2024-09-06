@@ -14,7 +14,7 @@ struct SubDataTests {
     @Test("Angle Shooter Data")
     func angleShooterData() throws {
         let data = try SubWeaponData(for: .angleShooter)
-        let overwrites = try #require(data.overwrites as? SubOverwrites)
+        let overwrites = data.overwrites
         
         #expect(data.id == .angleShooter)
         #expect(data.directDamage != nil)
@@ -24,7 +24,6 @@ struct SubDataTests {
     @Test("Autobomb Data")
     func autobombData() throws {
         let data = try SubWeaponData(for: .autobomb)
-        _ = try #require(data.overwrites as? SubOverwrites)
         
         #expect(data.id == .autobomb)
         #expect(!data.distanceDamage.isEmpty)
@@ -33,7 +32,6 @@ struct SubDataTests {
     @Test("Burst Bomb Data")
     func burstBombData() throws {
         let data = try SubWeaponData(for: .burstBomb)
-        _ = try #require(data.overwrites as? SubOverwrites)
         
         #expect(data.id == .burstBomb)
         #expect(!data.distanceDamage.isEmpty)
@@ -42,7 +40,6 @@ struct SubDataTests {
     @Test("Curling Bomb Data")
     func curlingBombData() throws {
         let data = try SubWeaponData(for: .curlingBomb)
-        _ = try #require(data.overwrites as? SubOverwrites)
         
         #expect(data.id == .curlingBomb)
         #expect(!data.distanceDamage.isEmpty)
@@ -52,7 +49,6 @@ struct SubDataTests {
     @Test("Fizzy Bomb Data")
     func fizzyBombData() throws {
         let data = try SubWeaponData(for: .fizzyBomb)
-        _ = try #require(data.overwrites as? SubOverwrites)
         
         #expect(data.id == .fizzyBomb)
         #expect(!data.blastParam.isEmpty)
@@ -61,8 +57,8 @@ struct SubDataTests {
     @Test("Ink Mine Data")
     func inkMineData() throws {
         let data = try SubWeaponData(for: .inkMine)
-        let overwrites = try #require(data.overwrites as? SubOverwrites)
-        
+        let overwrites = data.overwrites
+
         #expect(data.id == .inkMine)
         #expect(!data.distanceDamage.isEmpty)
         #expect(overwrites.markingFrameSubSpec != nil)
@@ -73,8 +69,8 @@ struct SubDataTests {
     @Test("Point Sensor Data")
     func pointSensorData() throws {
         let data = try SubWeaponData(for: .pointSensor)
-        let overwrites = try #require(data.overwrites as? SubOverwrites)
-        
+        let overwrites = data.overwrites
+
         #expect(data.id == .pointSensor)
         #expect(overwrites.markingFrameSubSpec != nil)
         #expect(overwrites.explosionRadius != nil)
@@ -83,8 +79,8 @@ struct SubDataTests {
     @Test("Splash Wall Data")
     func splashWallData() throws {
         let data = try SubWeaponData(for: .splashWall)
-        let overwrites = try #require(data.overwrites as? SubOverwrites)
-        
+        let overwrites = data.overwrites
+
         #expect(data.id == .splashWall)
         #expect(overwrites.maxHp != nil)
     }
@@ -92,7 +88,6 @@ struct SubDataTests {
     @Test("Splat Bomb Data")
     func splatBombData() throws {
         let data = try SubWeaponData(for: .splatBomb)
-        _ = try #require(data.overwrites as? SubOverwrites)
         
         #expect(data.id == .splatBomb)
         #expect(!data.distanceDamage.isEmpty)
@@ -101,8 +96,8 @@ struct SubDataTests {
     @Test("Sprinkler Data")
     func sprinklerData() throws {
         let data = try SubWeaponData(for: .sprinkler)
-        let overwrites = try #require(data.overwrites as? SubOverwrites)
-        
+        let overwrites = data.overwrites
+
         #expect(data.id == .sprinkler)
         #expect(overwrites.periodFirst != nil)
         #expect(overwrites.periodSecond != nil)
@@ -111,8 +106,8 @@ struct SubDataTests {
     @Test("Squid Beakon Data")
     func squidBeakonData() throws {
         let data = try SubWeaponData(for: .squidBeakon)
-        let overwrites = try #require(data.overwrites as? SubOverwrites)
-        
+        let overwrites = data.overwrites
+
         #expect(data.id == .squidBeakon)
         #expect(overwrites.subSpecUpParam != nil)
     }
@@ -120,7 +115,6 @@ struct SubDataTests {
     @Test("Suction Bomb Data")
     func suctionBombData() throws {
         let data = try SubWeaponData(for: .suctionBomb)
-        _ = try #require(data.overwrites as? SubOverwrites)
         
         #expect(data.id == .suctionBomb)
         #expect(!data.distanceDamage.isEmpty)
@@ -129,7 +123,6 @@ struct SubDataTests {
     @Test("Torpedo Data")
     func torpedoData() throws {
         let data = try SubWeaponData(for: .torpedo)
-        _ = try #require(data.overwrites as? SubOverwrites)
         
         #expect(data.id == .torpedo)
         #expect(!data.blastParamChase.isEmpty)
@@ -139,7 +132,6 @@ struct SubDataTests {
     @Test("Toxic Mist Data")
     func toxicMistData() throws {
         let data = try SubWeaponData(for: .toxicMist)
-        _ = try #require(data.overwrites as? SubOverwrites)
         
         #expect(data.id == .toxicMist)
     }

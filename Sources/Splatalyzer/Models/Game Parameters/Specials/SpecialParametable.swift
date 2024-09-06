@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// A type that conforms to ``GameParametable`` and requires its ``GameParametable/Parameters``  to conform  to ``SpecialParametable``
 public protocol SpecialWeaponable: GameParametable where Parameters: SpecialParametable { }
 
 /// Sets required methods for any Special Weapon

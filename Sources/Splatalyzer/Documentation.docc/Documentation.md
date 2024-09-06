@@ -36,14 +36,20 @@ Learn more about how the package decodes and proccesses data.
 ### Analysis
 - ``Splatalyzer/Splatalyzer``
 - ``SplatalyzerError``
+
+### Decoding
 - ``JSONService``
 - ``JSONError``
+- ``DecodeType``
+- ``FileRepresentable``
 
 ### Weapons
+- ``WeaponRepresentable``
 - ``MainWeapon``
 - ``SubWeapon``
 - ``SpecialWeapon``
 - ``WeaponClass``
+- ``PlatformImage-7ec5t``
 
 ### Abilities
 
@@ -69,6 +75,7 @@ Learn more about how the package decodes and proccesses data.
 - ``MovementStats``
 - ``MiscStats``
 - ``AbilityStat``
+- ``AbilityStatRange``
 - ``StatUnit``
 - ``DamageStat``
 - ``DamageEffectStat``
@@ -121,6 +128,8 @@ Learn more about how the package decodes and proccesses data.
 - ``BeaconSubSpecUpParameter``
 
 ### Main Weapon Models
+- ``MainWeaponable``
+- ``MainParametable``
 - ``MainOverwrites``
 - ``MainWeaponSettings``
 - ``Blaster``
@@ -136,6 +145,7 @@ Learn more about how the package decodes and proccesses data.
 - ``Stringer``
 
 ### Sub Weapon Models
+- ``SubWeaponable``
 - ``SubParametable``
 - ``SubOverwrites``
 - ``SubWeaponSetting``
@@ -155,6 +165,7 @@ Learn more about how the package decodes and proccesses data.
 - ``ToxicMist``
 
 ### Special Weapon Models
+- ``SpecialWeaponable``
 - ``SpecialParametable``
 - ``SpecialOverwrites``
 - ``BigBubbler``

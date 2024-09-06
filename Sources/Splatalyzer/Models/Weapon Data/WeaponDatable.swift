@@ -7,9 +7,17 @@
 
 import Foundation
 
-/// Represents structures that contain weapon data 
+/// A type that contains weapon data
 public protocol WeaponDatable: Sendable {
-    var overwrites: any Overwritable { get }
+    associatedtype Weapon: WeaponRepresentable
+    associatedtype Overwrite: Overwritable
+    
+    /// Required throwable initializer
+    /// - Parameter weapon: Some object conforming to ``WeaponRepresentable``
+    init(for weapon: Weapon) throws
+    
+    /// An object that contains properties that can overwrite those in the conforming object
+    var overwrites: Overwrite { get }
     
     /// Fetches the proper damage value for a ``DamageType``
     /// - Parameter type: A specified type of damage

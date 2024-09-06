@@ -7,5 +7,5 @@
 
 import Foundation
 
-/// A protocol that forces conformance to `Codable` and `Sendable`
-public protocol Parametable: Codable, Sendable { }
+/// A typealias that combines `Codable` and `Senable` conformance
+public typealias Parametable = Codable & Sendable

@@ -10,11 +10,11 @@ import SwiftUI
 
 #if os(macOS)
 import AppKit
-/// A `typealias`for `UIImage` or `NSImage` depending on platform
+/// A `typealias` for `UIImage` or `NSImage` depending on platform
 public typealias PlatformImage = NSImage
 #else
 import UIKit
-/// A `typealias`for `UIImage` or `NSImage` depending on platform
+/// A `typealias` for `UIImage` or `NSImage` depending on platform
 public typealias PlatformImage = UIImage
 #endif
 
