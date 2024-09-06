@@ -5,416 +5,157 @@
 //  Created by Christopher Engelbart on 2/16/24.
 //
 
-import XCTest
+import Testing
 @testable import Splatalyzer
 
-final class BlasterDataTests: XCTestCase {
-
-    let service = JSONService()
+@Suite(.tags(.weaponData))
+struct BlasterDataTests {
     
-    var weaponInfo: WeaponInfoMain!
-    
-    override func setUp() {
-        self.weaponInfo = try! service.decode(WeaponInfoMain.self, from: "WeaponInfoMain")
-    }
-    
-    override func tearDown() {
-        self.weaponInfo = nil
-    }
-
-    // MARK: - Blaster
-    func test_MainWeaponData_init_Blaster_blaster() {
-        do {
-            let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterMiddle.game__GameParameterTable")
-            let item = self.weaponInfo.getItem(for: .blaster)!
-            
-            let data = MainWeaponData(weaponInfo: item, container: gameParams)
-            
-            XCTAssertEqual(data.mainWeaponId, .blaster)
-            XCTAssertEqual(data.subWeapon, .autobomb)
-            XCTAssertEqual(data.specialWeapon, .bigBubbler)
-            XCTAssertNil(data.weaponSpeedType)
-            XCTAssertNotNil(data.moveSpeed)
-            XCTAssertNotNil(data.damageValueMax)
-            XCTAssertNotNil(data.damageValueDirect)
-            XCTAssertEqual(data.blastDamageDistance.count, 2)
-            XCTAssertNotNil(data.jumpDegSwerve)
-            XCTAssertNotNil(data.standDegSwerve)
-            XCTAssertNotNil(data.inkRecoverStop)
-            XCTAssertNotNil(data.inkConsume)
-
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
+    @Test("Blaster Data", arguments: [
+        WeaponKit(.blaster, .autobomb, .bigBubbler),
+        WeaponKit(.customBlaster, .pointSensor, .tripleSplashdown)
+    ])
+    func blaster(_ kit: WeaponKit) throws {
+        let data = try MainWeaponData(for: kit.main)
+        
+        #expect(data.mainWeaponId == kit.main)
+        #expect(data.subWeapon == kit.sub)
+        #expect(data.specialWeapon == kit.special)
+        #expect(data.weaponSpeedType == nil)
+        #expect(data.moveSpeed != nil)
+        #expect(data.damageValueMax != nil)
+        #expect(data.damageValueDirect != nil)
+        #expect(data.blastDamageDistance.count == 2)
+        #expect(data.jumpDegSwerve != nil)
+        #expect(data.standDegSwerve != nil)
+        #expect(data.inkRecoverStop != nil)
+        #expect(data.inkConsume != nil)
     }
     
-    func test_MainWeaponData_init_Blaster_customBlaster() {
-        do {
-            let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterMiddle.game__GameParameterTable")
-            let item = self.weaponInfo.getItem(for: .customBlaster)!
-            
-            let data = MainWeaponData(weaponInfo: item, container: gameParams)
-                        
-            XCTAssertEqual(data.mainWeaponId, .customBlaster)
-            XCTAssertEqual(data.subWeapon, .pointSensor)
-            XCTAssertEqual(data.specialWeapon, .tripleSplashdown)
-            XCTAssertNil(data.weaponSpeedType)
-            XCTAssertNotNil(data.moveSpeed)
-            XCTAssertNotNil(data.damageValueMax)
-            XCTAssertNotNil(data.damageValueDirect)
-            XCTAssertEqual(data.blastDamageDistance.count, 2)
-            XCTAssertNotNil(data.jumpDegSwerve)
-            XCTAssertNotNil(data.standDegSwerve)
-            XCTAssertNotNil(data.inkRecoverStop)
-            XCTAssertNotNil(data.inkConsume)
+    @Test("Clash Blaster Data", arguments: [
+        WeaponKit(.clashBlaster, .splatBomb, .trizooka),
+        WeaponKit(.clashBlasterNeo, .curlingBomb, .superChump)
+    ])
+    func clashBlaster(_ kit: WeaponKit) throws {
+        let data = try MainWeaponData(for: kit.main)
 
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
+        #expect(data.mainWeaponId == kit.main)
+        #expect(data.subWeapon == kit.sub)
+        #expect(data.specialWeapon == kit.special)
+        #expect(data.weaponSpeedType == .fast)
+        #expect(data.moveSpeed != nil)
+        #expect(data.damageValueMax != nil)
+        #expect(data.damageValueDirect != nil)
+        #expect(data.blastDamageDistance.count == 2)
+        #expect(data.jumpDegSwerve != nil)
+        #expect(data.standDegSwerve != nil)
+        #expect(data.inkRecoverStop != nil)
+        #expect(data.inkConsume != nil)
     }
     
-    // MARK: - Clash Blaster
-    func test_MainWeaponData_init_Blaster_clashBlaster() {
-        do {
-            let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterLightShort.game__GameParameterTable")
-            let item = self.weaponInfo.getItem(for: .clashBlaster)!
-            
-            let data = MainWeaponData(weaponInfo: item, container: gameParams)
-                                    
-            XCTAssertEqual(data.mainWeaponId, .clashBlaster)
-            XCTAssertEqual(data.subWeapon, .splatBomb)
-            XCTAssertEqual(data.specialWeapon, .trizooka)
-            XCTAssertEqual(data.weaponSpeedType, .fast)
-            XCTAssertNotNil(data.moveSpeed)
-            XCTAssertNotNil(data.damageValueMax)
-            XCTAssertNotNil(data.damageValueDirect)
-            XCTAssertEqual(data.blastDamageDistance.count, 2)
-            XCTAssertNotNil(data.jumpDegSwerve)
-            XCTAssertNotNil(data.standDegSwerve)
-            XCTAssertNotNil(data.inkRecoverStop)
-            XCTAssertNotNil(data.inkConsume)
+    @Test("Luna Blaster Data", arguments: [
+        WeaponKit(.lunaBlaster, .splatBomb, .zipcaster),
+        WeaponKit(.lunaBlasterNeo, .fizzyBomb, .ultraStamp),
+        WeaponKit(.orderBlasterReplica, .splatBomb, .zipcaster)
+    ])
+    func lunaBlaster(_ kit: WeaponKit) throws {
+        let data = try MainWeaponData(for: kit.main)
 
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
+        #expect(data.mainWeaponId == kit.main)
+        #expect(data.subWeapon == kit.sub)
+        #expect(data.specialWeapon == kit.special)
+        #expect(data.weaponSpeedType == .fast)
+        #expect(data.moveSpeed != nil)
+        #expect(data.damageValueMax != nil)
+        #expect(data.damageValueDirect != nil)
+        #expect(data.blastDamageDistance.count == 2)
+        #expect(data.jumpDegSwerve != nil)
+        #expect(data.standDegSwerve != nil)
+        #expect(data.inkRecoverStop != nil)
+        #expect(data.inkConsume != nil)
     }
     
-    func test_MainWeaponData_init_Blaster_clashBlasterNeo() {
-        do {
-            let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterLightShort.game__GameParameterTable")
-            let item = self.weaponInfo.getItem(for: .clashBlasterNeo)!
-            
-            let data = MainWeaponData(weaponInfo: item, container: gameParams)
-            
-            XCTAssertEqual(data.mainWeaponId, .clashBlasterNeo)
-            XCTAssertEqual(data.subWeapon, .curlingBomb)
-            XCTAssertEqual(data.specialWeapon, .superChump)
-            XCTAssertEqual(data.weaponSpeedType, .fast)
-            XCTAssertNotNil(data.moveSpeed)
-            XCTAssertNotNil(data.damageValueMax)
-            XCTAssertNotNil(data.damageValueDirect)
-            XCTAssertEqual(data.blastDamageDistance.count, 2)
-            XCTAssertNotNil(data.jumpDegSwerve)
-            XCTAssertNotNil(data.standDegSwerve)
-            XCTAssertNotNil(data.inkRecoverStop)
-            XCTAssertNotNil(data.inkConsume)
+    @Test("Range Blaster Data", arguments: [
+        WeaponKit(.rangeBlaster, .suctionBomb, .waveBreaker),
+        WeaponKit(.customRangeBlaster, .splatBomb, .krakenRoyale)
+    ])
+    func rangeBlaster(_ kit: WeaponKit) throws {
+        let data = try MainWeaponData(for: kit.main)
 
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
-    }
-
-    // MARK: - Luna Blaster
-    func test_MainWeaponData_init_Blaster_lunaBlaster() {
-        do {
-            let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterShort.game__GameParameterTable")
-            let item = self.weaponInfo.getItem(for: .lunaBlaster)!
-            
-            let data = MainWeaponData(weaponInfo: item, container: gameParams)
-                                    
-            XCTAssertEqual(data.mainWeaponId, .lunaBlaster)
-            XCTAssertEqual(data.subWeapon, .splatBomb)
-            XCTAssertEqual(data.specialWeapon, .zipcaster)
-            XCTAssertEqual(data.weaponSpeedType, .fast)
-            XCTAssertNotNil(data.moveSpeed)
-            XCTAssertNotNil(data.damageValueMax)
-            XCTAssertNotNil(data.damageValueDirect)
-            XCTAssertEqual(data.blastDamageDistance.count, 2)
-            XCTAssertNotNil(data.jumpDegSwerve)
-            XCTAssertNotNil(data.standDegSwerve)
-            XCTAssertNotNil(data.inkRecoverStop)
-            XCTAssertNotNil(data.inkConsume)
-
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
+        #expect(data.mainWeaponId == kit.main)
+        #expect(data.subWeapon == kit.sub)
+        #expect(data.specialWeapon == kit.special)
+        #expect(data.weaponSpeedType == nil)
+        #expect(data.moveSpeed != nil)
+        #expect(data.damageValueMax != nil)
+        #expect(data.damageValueDirect != nil)
+        #expect(data.blastDamageDistance.count == 2)
+        #expect(data.jumpDegSwerve != nil)
+        #expect(data.standDegSwerve != nil)
+        #expect(data.inkRecoverStop != nil)
+        #expect(data.inkConsume != nil)
     }
     
-    func test_MainWeaponData_init_Blaster_lunaBlasterNeo() {
-        do {
-            let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterShort.game__GameParameterTable")
-            let item = self.weaponInfo.getItem(for: .lunaBlasterNeo)!
-            
-            let data = MainWeaponData(weaponInfo: item, container: gameParams)
-                                                
-            XCTAssertEqual(data.mainWeaponId, .lunaBlasterNeo)
-            XCTAssertEqual(data.subWeapon, .fizzyBomb)
-            XCTAssertEqual(data.specialWeapon, .ultraStamp)
-            XCTAssertEqual(data.weaponSpeedType, .fast)
-            XCTAssertNotNil(data.moveSpeed)
-            XCTAssertNotNil(data.damageValueMax)
-            XCTAssertNotNil(data.damageValueDirect)
-            XCTAssertEqual(data.blastDamageDistance.count, 2)
-            XCTAssertNotNil(data.jumpDegSwerve)
-            XCTAssertNotNil(data.standDegSwerve)
-            XCTAssertNotNil(data.inkRecoverStop)
-            XCTAssertNotNil(data.inkConsume)
+    @Test("Rapid Blaster Data", arguments: [
+        WeaponKit(.rapidBlaster, .inkMine, .tripleInkstrike),
+        WeaponKit(.rapidBlasterDeco, .torpedo, .inkjet)
+    ])
+    func rapidBlaster(_ kit: WeaponKit) throws {
+        let data = try MainWeaponData(for: kit.main)
 
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
+        #expect(data.mainWeaponId == kit.main)
+        #expect(data.subWeapon == kit.sub)
+        #expect(data.specialWeapon == kit.special)
+        #expect(data.weaponSpeedType == nil)
+        #expect(data.moveSpeed != nil)
+        #expect(data.damageValueMax != nil)
+        #expect(data.damageValueDirect != nil)
+        #expect(data.blastDamageDistance.count == 2)
+        #expect(data.jumpDegSwerve != nil)
+        #expect(data.standDegSwerve != nil)
+        #expect(data.inkRecoverStop != nil)
+        #expect(data.inkConsume != nil)
     }
     
-    func test_MainWeaponData_init_Blaster_orderBlasterReplica() {
-        do {
-            let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterShort.game__GameParameterTable")
-            let item = self.weaponInfo.getItem(for: .orderBlasterReplica)!
-            
-            let data = MainWeaponData(weaponInfo: item, container: gameParams)
-                                    
-            XCTAssertEqual(data.mainWeaponId, .orderBlasterReplica)
-            XCTAssertEqual(data.subWeapon, .splatBomb)
-            XCTAssertEqual(data.specialWeapon, .zipcaster)
-            XCTAssertEqual(data.weaponSpeedType, .fast)
-            XCTAssertNotNil(data.moveSpeed)
-            XCTAssertNotNil(data.damageValueMax)
-            XCTAssertNotNil(data.damageValueDirect)
-            XCTAssertEqual(data.blastDamageDistance.count, 2)
-            XCTAssertNotNil(data.jumpDegSwerve)
-            XCTAssertNotNil(data.standDegSwerve)
-            XCTAssertNotNil(data.inkRecoverStop)
-            XCTAssertNotNil(data.inkConsume)
+    @Test("Rapid Blaster Pro Data", arguments: [
+        WeaponKit(.rapidBlasterPro, .toxicMist, .inkVac),
+        WeaponKit(.rapidBlasterProDeco, .angleShooter, .killerWail51)
+    ])
+    func rapidBlasterPro(_ kit: WeaponKit) throws {
+        let data = try MainWeaponData(for: kit.main)
 
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
-    }
-
-    // MARK: - Range Blaster
-    func test_MainWeaponData_init_Blaster_rangeBlaster() {
-        do {
-            let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterLong.game__GameParameterTable")
-            let item = self.weaponInfo.getItem(for: .rangeBlaster)!
-            
-            let data = MainWeaponData(weaponInfo: item, container: gameParams)
-                                    
-            XCTAssertEqual(data.mainWeaponId, .rangeBlaster)
-            XCTAssertEqual(data.subWeapon, .suctionBomb)
-            XCTAssertEqual(data.specialWeapon, .waveBreaker)
-            XCTAssertNil(data.weaponSpeedType)
-            XCTAssertNotNil(data.moveSpeed)
-            XCTAssertNotNil(data.damageValueMax)
-            XCTAssertNotNil(data.damageValueDirect)
-            XCTAssertEqual(data.blastDamageDistance.count, 2)
-            XCTAssertNotNil(data.jumpDegSwerve)
-            XCTAssertNotNil(data.standDegSwerve)
-            XCTAssertNotNil(data.inkRecoverStop)
-            XCTAssertNotNil(data.inkConsume)
-
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
+        #expect(data.mainWeaponId == kit.main)
+        #expect(data.subWeapon == kit.sub)
+        #expect(data.specialWeapon == kit.special)
+        #expect(data.weaponSpeedType == nil)
+        #expect(data.moveSpeed != nil)
+        #expect(data.damageValueMax != nil)
+        #expect(data.damageValueDirect != nil)
+        #expect(data.blastDamageDistance.count == 2)
+        #expect(data.jumpDegSwerve != nil)
+        #expect(data.standDegSwerve != nil)
+        #expect(data.inkRecoverStop != nil)
+        #expect(data.inkConsume != nil)
     }
     
-    func test_MainWeaponData_init_Blaster_customRangeBlaster() {
-        do {
-            let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterLong.game__GameParameterTable")
-            let item = self.weaponInfo.getItem(for: .customRangeBlaster)!
-            
-            let data = MainWeaponData(weaponInfo: item, container: gameParams)
-                                    
-            XCTAssertEqual(data.mainWeaponId, .customRangeBlaster)
-            XCTAssertEqual(data.subWeapon, .splatBomb)
-            XCTAssertEqual(data.specialWeapon, .krakenRoyale)
-            XCTAssertNil(data.weaponSpeedType)
-            XCTAssertNotNil(data.moveSpeed)
-            XCTAssertNotNil(data.damageValueMax)
-            XCTAssertNotNil(data.damageValueDirect)
-            XCTAssertEqual(data.blastDamageDistance.count, 2)
-            XCTAssertNotNil(data.jumpDegSwerve)
-            XCTAssertNotNil(data.standDegSwerve)
-            XCTAssertNotNil(data.inkRecoverStop)
-            XCTAssertNotNil(data.inkConsume)
+    @Test("S-BLAST Data", arguments: [
+        WeaponKit(.sblast92, .sprinkler, .reefslider),
+        WeaponKit(.sblast91, .burstBomb, .booyahBomb)
+    ])
+    func sblast(_ kit: WeaponKit) throws {
+        let data = try MainWeaponData(for: kit.main)
 
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
-    }
-    
-    // MARK: - Rapid Blaster
-    func test_MainWeaponData_init_Blaster_rapidBlaster() {
-        do {
-            let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterLight.game__GameParameterTable")
-            let item = self.weaponInfo.getItem(for: .rapidBlaster)!
-            
-            let data = MainWeaponData(weaponInfo: item, container: gameParams)
-                                    
-            XCTAssertEqual(data.mainWeaponId, .rapidBlaster)
-            XCTAssertEqual(data.subWeapon, .inkMine)
-            XCTAssertEqual(data.specialWeapon, .tripleInkstrike)
-            XCTAssertNil(data.weaponSpeedType)
-            XCTAssertNotNil(data.moveSpeed)
-            XCTAssertNotNil(data.damageValueMax)
-            XCTAssertNotNil(data.damageValueDirect)
-            XCTAssertEqual(data.blastDamageDistance.count, 2)
-            XCTAssertNotNil(data.jumpDegSwerve)
-            XCTAssertNotNil(data.standDegSwerve)
-            XCTAssertNotNil(data.inkRecoverStop)
-            XCTAssertNotNil(data.inkConsume)
-
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
-    }
-    
-    func test_MainWeaponData_init_Blaster_rapidBlasterDeco() {
-        do {
-            let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterLight.game__GameParameterTable")
-            let item = self.weaponInfo.getItem(for: .rapidBlasterDeco)!
-            
-            let data = MainWeaponData(weaponInfo: item, container: gameParams)
-                                    
-            XCTAssertEqual(data.mainWeaponId, .rapidBlasterDeco)
-            XCTAssertEqual(data.subWeapon, .torpedo)
-            XCTAssertEqual(data.specialWeapon, .inkjet)
-            XCTAssertNil(data.weaponSpeedType)
-            XCTAssertNotNil(data.moveSpeed)
-            XCTAssertNotNil(data.damageValueMax)
-            XCTAssertNotNil(data.damageValueDirect)
-            XCTAssertEqual(data.blastDamageDistance.count, 2)
-            XCTAssertNotNil(data.jumpDegSwerve)
-            XCTAssertNotNil(data.standDegSwerve)
-            XCTAssertNotNil(data.inkRecoverStop)
-            XCTAssertNotNil(data.inkConsume)
-
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
-    }
-    
-    // MARK: - Rapid Blaster Pro
-    func test_MainWeaponData_init_Blaster_rapidBlasterPro() {
-        do {
-            let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterLightLong.game__GameParameterTable")
-            let item = self.weaponInfo.getItem(for: .rapidBlasterPro)!
-            
-            let data = MainWeaponData(weaponInfo: item, container: gameParams)
-                                    
-            XCTAssertEqual(data.mainWeaponId, .rapidBlasterPro)
-            XCTAssertEqual(data.subWeapon, .toxicMist)
-            XCTAssertEqual(data.specialWeapon, .inkVac)
-            XCTAssertNil(data.weaponSpeedType)
-            XCTAssertNotNil(data.moveSpeed)
-            XCTAssertNotNil(data.damageValueMax)
-            XCTAssertNotNil(data.damageValueDirect)
-            XCTAssertEqual(data.blastDamageDistance.count, 2)
-            XCTAssertNotNil(data.jumpDegSwerve)
-            XCTAssertNotNil(data.standDegSwerve)
-            XCTAssertNotNil(data.inkRecoverStop)
-            XCTAssertNotNil(data.inkConsume)
-
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
-    }
-
-    func test_MainWeaponData_init_Blaster_rapidBlasterProDeco() {
-        do {
-            let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterLightLong.game__GameParameterTable")
-            let item = self.weaponInfo.getItem(for: .rapidBlasterProDeco)!
-            
-            let data = MainWeaponData(weaponInfo: item, container: gameParams)
-                                    
-            XCTAssertEqual(data.mainWeaponId, .rapidBlasterProDeco)
-            XCTAssertEqual(data.subWeapon, .angleShooter)
-            XCTAssertEqual(data.specialWeapon, .killerWail51)
-            XCTAssertNil(data.weaponSpeedType)
-            XCTAssertNotNil(data.moveSpeed)
-            XCTAssertNotNil(data.damageValueMax)
-            XCTAssertNotNil(data.damageValueDirect)
-            XCTAssertEqual(data.blastDamageDistance.count, 2)
-            XCTAssertNotNil(data.jumpDegSwerve)
-            XCTAssertNotNil(data.standDegSwerve)
-            XCTAssertNotNil(data.inkRecoverStop)
-            XCTAssertNotNil(data.inkConsume)
-
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
-    }
-    
-    // MARK: - S-BLAST
-    func test_MainWeaponData_init_Blaster_sblast92() {
-        do {
-            let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterPrecision.game__GameParameterTable")
-            let item = self.weaponInfo.getItem(for: .sblast92)!
-            
-            let data = MainWeaponData(weaponInfo: item, container: gameParams)
-            
-            XCTAssertEqual(data.mainWeaponId, .sblast92)
-            XCTAssertEqual(data.subWeapon, .sprinkler)
-            XCTAssertEqual(data.specialWeapon, .reefslider)
-            XCTAssertEqual(data.weaponSpeedType, .mid)
-            XCTAssertNotNil(data.moveSpeed)
-            XCTAssertNotNil(data.damageValueMax)
-            XCTAssertNotNil(data.damageValueDirect)
-            XCTAssertEqual(data.blastDamageDistance.count, 2)
-            XCTAssertNotNil(data.jumpDegSwerve)
-            XCTAssertNotNil(data.standDegSwerve)
-            XCTAssertNotNil(data.inkRecoverStop)
-            XCTAssertNotNil(data.inkConsume)
-
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
-    }
-    
-    func test_MainWeaponData_init_Blaster_sblast91() {
-        do {
-            let gameParams = try service.decode(Blaster.self, from: "WeaponBlasterPrecision.game__GameParameterTable")
-            let item = self.weaponInfo.getItem(for: .sblast91)!
-            
-            let data = MainWeaponData(weaponInfo: item, container: gameParams)
-            
-            XCTAssertEqual(data.mainWeaponId, .sblast91)
-            XCTAssertEqual(data.subWeapon, .burstBomb)
-            XCTAssertEqual(data.specialWeapon, .booyahBomb)
-            XCTAssertEqual(data.weaponSpeedType, .mid)
-            XCTAssertNotNil(data.moveSpeed)
-            XCTAssertNotNil(data.damageValueMax)
-            XCTAssertNotNil(data.damageValueDirect)
-            XCTAssertEqual(data.blastDamageDistance.count, 2)
-            XCTAssertNotNil(data.jumpDegSwerve)
-            XCTAssertNotNil(data.standDegSwerve)
-            XCTAssertNotNil(data.inkRecoverStop)
-            XCTAssertNotNil(data.inkConsume)
-
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
+        #expect(data.mainWeaponId == kit.main)
+        #expect(data.subWeapon == kit.sub)
+        #expect(data.specialWeapon == kit.special)
+        #expect(data.weaponSpeedType == .mid)
+        #expect(data.moveSpeed != nil)
+        #expect(data.damageValueMax != nil)
+        #expect(data.damageValueDirect != nil)
+        #expect(data.blastDamageDistance.count == 2)
+        #expect(data.jumpDegSwerve != nil)
+        #expect(data.standDegSwerve != nil)
+        #expect(data.inkRecoverStop != nil)
+        #expect(data.inkConsume != nil)
     }
 }

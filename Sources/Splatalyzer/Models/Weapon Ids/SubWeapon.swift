@@ -5,16 +5,10 @@
 //  Created by Christopher Engelbart on 1/12/24.
 //
 
-#if os(macOS)
-import AppKit
-#else
-import UIKit
-#endif
-
 import Foundation
 
 /// Represents every Sub Weapon
-public enum SubWeapon: String, CaseIterable, Codable, Sendable {
+public enum SubWeapon: String, CaseIterable, Codable, Sendable, WeaponRepresentable {
     case angleShooter = "LineMarker"
     case autobomb = "Bomb_Robot"
     case burstBomb = "Bomb_Quick"
@@ -30,10 +24,8 @@ public enum SubWeapon: String, CaseIterable, Codable, Sendable {
     case torpedo = "Bomb_Torpedo"
     case toxicMist = "PoisonMist"
     
-    #if os(macOS)
     /// The image of the current sub weapon
-    /// - Note: OSes other than `macOS` use `UIImage` instead.
-    public var image: NSImage? {
+    public var image: PlatformImage? {
         guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
             return nil
         }
@@ -42,23 +34,8 @@ public enum SubWeapon: String, CaseIterable, Codable, Sendable {
             return nil
         }
         
-        return NSImage(data: data)
+        return PlatformImage(data: data)
     }
-    #else
-    /// The image of the current sub weapon
-    /// - Note: `macOS` use `NSImage` instead.
-    public var image: UIImage? {
-        guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
-            return nil
-        }
-        
-        guard let data = try? Data(contentsOf: url) else {
-            return nil
-        }
-        
-        return UIImage(data: data)
-    }
-    #endif
     
     /// The localized name of the Sub Weapon
     public var localized: String {
@@ -74,14 +51,56 @@ public enum SubWeapon: String, CaseIterable, Codable, Sendable {
     /// This function outputs `BombCurling`, removing the underscore.
     ///
     /// For no-underscore raw values, we can just return them without doing any work.
-    func fileName() -> String {
+    public var fileName: String {
         if self.rawValue.contains("_") {
             let subSplit = self.rawValue.split(separator: "_")
             
-            return String(subSplit[0] + subSplit[1])
-            
+            return "Weapon\(subSplit[0])\(subSplit[1]).game__GameParameterTable"
         } else {
-            return self.rawValue
+            return "Weapon\(self.rawValue).game__GameParameterTable"
         }
+    }
+}
+
+extension SubWeapon {
+    var modelType: any SubWeaponable.Type {
+        switch self {
+        case .angleShooter:
+            return AngleShooter.self
+        case .autobomb:
+            return Autobomb.self
+        case .burstBomb:
+            return BurstBomb.self
+        case .curlingBomb:
+            return CurlingBomb.self
+        case .fizzyBomb:
+            return FizzyBomb.self
+        case .inkMine:
+            return InkMine.self
+        case .pointSensor:
+            return PointSensor.self
+        case .splashWall:
+            return SplashWall.self
+        case .splatBomb:
+            return SplatBomb.self
+        case .squidBeakon:
+            return SquidBeakon.self
+        case .sprinkler:
+            return Sprinkler.self
+        case .suctionBomb:
+            return SuctionBomb.self
+        case .torpedo:
+            return Torpedo.self
+        case .toxicMist:
+            return ToxicMist.self
+        }
+    }
+    
+    static func fileNames() -> [String] {
+        return self.allCases.map { $0.fileName }
+    }
+    
+    static func allModelTypes() -> [any GameParametable.Type] {
+        return self.allCases.map { $0.modelType }
     }
 }

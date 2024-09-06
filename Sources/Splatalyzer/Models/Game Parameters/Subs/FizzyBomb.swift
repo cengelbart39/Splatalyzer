@@ -11,7 +11,7 @@ import Foundation
 /// weapon
 ///
 /// See the JSON file `WeaponBombFizzy.game__GameParameterTable.json`
-public struct FizzyBomb: GameParametable {
+public struct FizzyBomb: SubWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

@@ -10,7 +10,7 @@ import Foundation
 /// Represents the game parameters of the Tacticooler special weapon
 ///
 /// See the JSON file `WeaponSpEnergyStand.game__GameParameterTable.json`.
-public struct Tacticooler: GameParametable {
+public struct Tacticooler: SpecialWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

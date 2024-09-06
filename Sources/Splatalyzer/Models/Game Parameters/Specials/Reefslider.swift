@@ -10,7 +10,7 @@ import Foundation
 /// Represents the game parameters of the Reefslider special weapon
 ///
 /// See the JSON file `WeaponSpSkewer.game__GameParameterTable.json`
-public struct Reefslider: GameParametable {
+public struct Reefslider: SpecialWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

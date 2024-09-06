@@ -11,7 +11,7 @@ import Foundation
 /// weapon
 ///
 /// See the JSON file `WeaponShield.game__GameParameterTable.json`
-public struct SplashWall: GameParametable {
+public struct SplashWall: SubWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

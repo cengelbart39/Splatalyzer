@@ -10,7 +10,7 @@ import Foundation
 /// Represents the game parameters of the Torpedo sub weapon
 ///
 /// See the JSON file `WeaponBombTorpedo.game__GameParameterTable.json`
-public struct Torpedo: GameParametable {
+public struct Torpedo: SubWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

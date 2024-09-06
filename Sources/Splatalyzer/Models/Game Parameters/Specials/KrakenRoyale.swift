@@ -10,7 +10,7 @@ import Foundation
 /// Represents the game parameters of the Kraken Royale special weapon
 ///
 /// See the JSON file `WeaponSpCastle.game__GameParameterTable.json`
-public struct KrakenRoyale: GameParametable {
+public struct KrakenRoyale: SpecialWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

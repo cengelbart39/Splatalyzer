@@ -12,3 +12,5 @@ public protocol MainParametable: Parametable {
     
     var mainWeaponSetting: MainWeaponSettings { get }
 }
+
+public protocol MainWeaponable: GameParametable where Parameters: MainParametable { }

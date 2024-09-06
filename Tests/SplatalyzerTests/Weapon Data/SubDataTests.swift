@@ -5,220 +5,142 @@
 //  Created by Christopher Engelbart on 2/16/24.
 //
 
-import XCTest
+import Testing
 @testable import Splatalyzer
 
-final class SubDataTests: XCTestCase {
-    
-    let service = JSONService()
-    
-    func test_AngleShooter_properties() {
-        do {
-            let gameParams = try service.decode(AngleShooter.self, from: "WeaponLineMarker.game__GameParameterTable")
-            
-            let data = SubWeaponData(container: gameParams)
-            let overwrites = data.overwrites as! SubOverwrites
-                        
-            XCTAssertEqual(data.id, .angleShooter)
-            XCTAssertNotNil(overwrites.markingFrameSubSpec)
-            XCTAssertNotNil(data.directDamage)
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
-    }
-    
-    func test_Autobomb_properties() {
-        do {
-            let gameParams = try service.decode(Autobomb.self, from: "WeaponBombRobot.game__GameParameterTable")
-            
-            let data = SubWeaponData(container: gameParams)
-            
-            XCTAssertEqual(data.id, .autobomb)
-            XCTAssertFalse(data.distanceDamage.isEmpty)
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
-    }
-    
-    func test_BurstBomb_properties() {
-        do {
-            let gameParams = try service.decode(BurstBomb.self, from: "WeaponBombQuick.game__GameParameterTable")
-            
-            let data = SubWeaponData(container: gameParams)
-            
-            XCTAssertEqual(data.id, .burstBomb)
-            XCTAssertFalse(data.distanceDamage.isEmpty)
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
-    }
+@Suite(.tags(.weaponData))
+struct SubDataTests {
 
-    func test_CurlingBomb_properties() {
-        do {
-            let gameParams = try service.decode(CurlingBomb.self, from: "WeaponBombCurling.game__GameParameterTable")
-            
-            let data = SubWeaponData(container: gameParams)
-            
-            XCTAssertEqual(data.id, .curlingBomb)
-            XCTAssertFalse(data.distanceDamage.isEmpty)
-            XCTAssertNotNil(data.directDamage)
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
+    @Test("Angle Shooter Data")
+    func angleShooterData() throws {
+        let data = try SubWeaponData(for: .angleShooter)
+        let overwrites = try #require(data.overwrites as? SubOverwrites)
+        
+        #expect(data.id == .angleShooter)
+        #expect(data.directDamage != nil)
+        #expect(overwrites.markingFrameSubSpec != nil)
     }
     
-    func test_FizzyBomb_properties() {
-        do {
-            let gameParams = try service.decode(FizzyBomb.self, from: "WeaponBombFizzy.game__GameParameterTable")
-            
-            let data = SubWeaponData(container: gameParams)
-            
-            XCTAssertEqual(data.id, .fizzyBomb)
-            XCTAssertFalse(data.blastParam.isEmpty)
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
+    @Test("Autobomb Data")
+    func autobombData() throws {
+        let data = try SubWeaponData(for: .autobomb)
+        _ = try #require(data.overwrites as? SubOverwrites)
+        
+        #expect(data.id == .autobomb)
+        #expect(!data.distanceDamage.isEmpty)
     }
     
-    func test_InkMine_properties() {
-        do {
-            let gameParams = try service.decode(InkMine.self, from: "WeaponTrap.game__GameParameterTable")
-            
-            let data = SubWeaponData(container: gameParams)
-            let overwrites = data.overwrites as! SubOverwrites
-            
-            XCTAssertEqual(data.id, .inkMine)
-            XCTAssertNotNil(overwrites.markingFrameSubSpec)
-            XCTAssertNotNil(overwrites.sensorRadius)
-            XCTAssertNotNil(overwrites.explosionRadius)
-            XCTAssertFalse(data.distanceDamage.isEmpty)
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
+    @Test("Burst Bomb Data")
+    func burstBombData() throws {
+        let data = try SubWeaponData(for: .burstBomb)
+        _ = try #require(data.overwrites as? SubOverwrites)
+        
+        #expect(data.id == .burstBomb)
+        #expect(!data.distanceDamage.isEmpty)
     }
     
-    func test_PointSensor_properties() {
-        do {
-            let gameParams = try service.decode(PointSensor.self, from: "WeaponPointSensor.game__GameParameterTable")
-            
-            let data = SubWeaponData(container: gameParams)
-            let overwrites = data.overwrites as! SubOverwrites
-            
-            XCTAssertEqual(data.id, .pointSensor)
-            XCTAssertNotNil(overwrites.markingFrameSubSpec)
-            XCTAssertNotNil(overwrites.explosionRadius)
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
+    @Test("Curling Bomb Data")
+    func curlingBombData() throws {
+        let data = try SubWeaponData(for: .curlingBomb)
+        _ = try #require(data.overwrites as? SubOverwrites)
+        
+        #expect(data.id == .curlingBomb)
+        #expect(!data.distanceDamage.isEmpty)
+        #expect(data.directDamage != nil)
     }
     
-    func test_SplashWall_properties() {
-        do {
-            let gameParams = try service.decode(SplashWall.self, from: "WeaponShield.game__GameParameterTable")
-            
-            let data = SubWeaponData(container: gameParams)
-            let overwrites = data.overwrites as! SubOverwrites
-                        
-            XCTAssertEqual(data.id, .splashWall)
-            XCTAssertNotNil(overwrites.maxHp)
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
+    @Test("Fizzy Bomb Data")
+    func fizzyBombData() throws {
+        let data = try SubWeaponData(for: .fizzyBomb)
+        _ = try #require(data.overwrites as? SubOverwrites)
+        
+        #expect(data.id == .fizzyBomb)
+        #expect(!data.blastParam.isEmpty)
     }
     
-    func test_SplatBomb_properties() {
-        do {
-            let gameParams = try service.decode(SplatBomb.self, from: "WeaponBombSplash.game__GameParameterTable")
-            
-            let data = SubWeaponData(container: gameParams)
-            
-            XCTAssertEqual(data.id, .splatBomb)
-            XCTAssertFalse(data.distanceDamage.isEmpty)
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
+    @Test("Ink Mine Data")
+    func inkMineData() throws {
+        let data = try SubWeaponData(for: .inkMine)
+        let overwrites = try #require(data.overwrites as? SubOverwrites)
+        
+        #expect(data.id == .inkMine)
+        #expect(!data.distanceDamage.isEmpty)
+        #expect(overwrites.markingFrameSubSpec != nil)
+        #expect(overwrites.sensorRadius != nil)
+        #expect(overwrites.explosionRadius != nil)
     }
     
-    func test_Sprinkler_properties() {
-        do {
-            let gameParams = try service.decode(Sprinkler.self, from: "WeaponSprinkler.game__GameParameterTable")
-            
-            let data = SubWeaponData(container: gameParams)
-            let overwrites = data.overwrites as! SubOverwrites
-            
-            XCTAssertEqual(data.id, .sprinkler)
-            XCTAssertNotNil(overwrites.periodFirst)
-            XCTAssertNotNil(overwrites.periodSecond)
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
+    @Test("Point Sensor Data")
+    func pointSensorData() throws {
+        let data = try SubWeaponData(for: .pointSensor)
+        let overwrites = try #require(data.overwrites as? SubOverwrites)
+        
+        #expect(data.id == .pointSensor)
+        #expect(overwrites.markingFrameSubSpec != nil)
+        #expect(overwrites.explosionRadius != nil)
     }
     
-    func test_SquidBeakon_properties() {
-        do {
-            let gameParams = try service.decode(SquidBeakon.self, from: "WeaponBeacon.game__GameParameterTable")
-            let player = try service.decode(Player.self, from: "SplPlayer.game__GameParameterTable")
-            
-            let data = SubWeaponData(container: gameParams, playerInfo: player)
-            let overwrites = data.overwrites as! SubOverwrites
-            
-            XCTAssertEqual(data.id, .squidBeakon)
-            XCTAssertNotNil(overwrites.subSpecUpParam)
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
+    @Test("Splash Wall Data")
+    func splashWallData() throws {
+        let data = try SubWeaponData(for: .splashWall)
+        let overwrites = try #require(data.overwrites as? SubOverwrites)
+        
+        #expect(data.id == .splashWall)
+        #expect(overwrites.maxHp != nil)
     }
     
-    func test_SuctionBomb_properties() {
-        do {
-            let gameParams = try service.decode(SuctionBomb.self, from: "WeaponBombSuction.game__GameParameterTable")
-            
-            let data = SubWeaponData(container: gameParams)
-            
-            XCTAssertEqual(data.id, .suctionBomb)
-            XCTAssertFalse(data.distanceDamage.isEmpty)
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
+    @Test("Splat Bomb Data")
+    func splatBombData() throws {
+        let data = try SubWeaponData(for: .splatBomb)
+        _ = try #require(data.overwrites as? SubOverwrites)
+        
+        #expect(data.id == .splatBomb)
+        #expect(!data.distanceDamage.isEmpty)
     }
     
-    func test_Torpedo_properties() {
-        do {
-            let gameParams = try service.decode(Torpedo.self, from: "WeaponBombTorpedo.game__GameParameterTable")
-            
-            let data = SubWeaponData(container: gameParams)
-            
-            XCTAssertEqual(data.id, .torpedo)
-            XCTAssertFalse(data.blastParamChase.isEmpty)
-            XCTAssertFalse(data.splashBlastParam.isEmpty)
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
+    @Test("Sprinkler Data")
+    func sprinklerData() throws {
+        let data = try SubWeaponData(for: .sprinkler)
+        let overwrites = try #require(data.overwrites as? SubOverwrites)
+        
+        #expect(data.id == .sprinkler)
+        #expect(overwrites.periodFirst != nil)
+        #expect(overwrites.periodSecond != nil)
     }
     
-    func test_ToxicMist_properties() {
-        do {
-            let gameParams = try service.decode(ToxicMist.self, from: "WeaponPoisonMist.game__GameParameterTable")
-            
-            let data = SubWeaponData(container: gameParams)
-            
-            XCTAssertEqual(data.id, .toxicMist)
-            
-        } catch {
-            XCTFail(error.localizedDescription)
-        }
+    @Test("Squid Beakon Data")
+    func squidBeakonData() throws {
+        let data = try SubWeaponData(for: .squidBeakon)
+        let overwrites = try #require(data.overwrites as? SubOverwrites)
+        
+        #expect(data.id == .squidBeakon)
+        #expect(overwrites.subSpecUpParam != nil)
+    }
+    
+    @Test("Suction Bomb Data")
+    func suctionBombData() throws {
+        let data = try SubWeaponData(for: .suctionBomb)
+        _ = try #require(data.overwrites as? SubOverwrites)
+        
+        #expect(data.id == .suctionBomb)
+        #expect(!data.distanceDamage.isEmpty)
+    }
+    
+    @Test("Torpedo Data")
+    func torpedoData() throws {
+        let data = try SubWeaponData(for: .torpedo)
+        _ = try #require(data.overwrites as? SubOverwrites)
+        
+        #expect(data.id == .torpedo)
+        #expect(!data.blastParamChase.isEmpty)
+        #expect(!data.splashBlastParam.isEmpty)
+    }
+    
+    @Test("Toxic Mist Data")
+    func toxicMistData() throws {
+        let data = try SubWeaponData(for: .toxicMist)
+        _ = try #require(data.overwrites as? SubOverwrites)
+        
+        #expect(data.id == .toxicMist)
     }
 }

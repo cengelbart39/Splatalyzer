@@ -90,46 +90,209 @@
   },
   "testTargets" : [
     {
-      "skippedTests" : [
-        "BlasterDataTests",
-        "BlasterDecodingTests",
-        "BrellaDataTests",
-        "BrellaDecodingTests",
-        "BrushDataTests",
-        "BrushDecodingTests",
-        "BuildOptionsTests",
-        "ChargerDataTests",
-        "ChargerDecodingTests",
-        "DecodingTests",
-        "DualieDataTests",
-        "DualieDecodingTest",
-        "FullInkTankOptionsTests",
-        "GearBuildTests",
-        "GearPieceTests",
-        "MainDamagesTests",
-        "MainStatsTests",
-        "MovementStatsTests",
-        "RollerDataTests",
-        "RollerDecodingTests",
-        "ShooterDataTests",
-        "ShooterDecodingTests",
-        "SlosherDataTests",
-        "SlosherDecodingTests",
-        "SpecialDamagesTests",
-        "SpecialDataTests",
-        "SpecialDecodingTests",
-        "SpecialStatsTests",
-        "SplatanaDataTests",
-        "SplatanaDecodingTests",
-        "SplatlingDataTests",
-        "SplatlingDecodingTests",
-        "StringerDataTests",
-        "StringerDecodingTests",
-        "SubDataTests",
-        "SubDecodingTests",
-        "SubDefenseDamageTests",
-        "SubStatsTests"
-      ],
+      "selectedTags" : {
+        "tags" : [
+          ".localization"
+        ]
+      },
+      "skippedTests" : {
+        "suites" : [
+          {
+            "name" : "BlasterDataTests"
+          },
+          {
+            "name" : "BrellaDataTests"
+          },
+          {
+            "name" : "BrushDataTests"
+          },
+          {
+            "name" : "BuildOptionsTests"
+          },
+          {
+            "name" : "ChargerDataTests"
+          },
+          {
+            "name" : "DecodingTests"
+          },
+          {
+            "name" : "DualieDataTests"
+          },
+          {
+            "name" : "FullInkTankOptionsTests"
+          },
+          {
+            "name" : "GearBuildTests"
+          },
+          {
+            "name" : "GearPieceTests"
+          },
+          {
+            "name" : "MainDamagesTests"
+          },
+          {
+            "name" : "MainStatsTests"
+          },
+          {
+            "name" : "MovementStatsTests"
+          },
+          {
+            "name" : "RollerDataTests"
+          },
+          {
+            "name" : "ShooterDataTests"
+          },
+          {
+            "name" : "SlosherDataTests"
+          },
+          {
+            "name" : "SpecialDamagesTests"
+          },
+          {
+            "name" : "SpecialDataTests"
+          },
+          {
+            "name" : "SpecialStatsTests"
+          },
+          {
+            "name" : "SplatanaDataTests"
+          },
+          {
+            "name" : "SplatlingDataTests"
+          },
+          {
+            "name" : "StringerDataTests"
+          },
+          {
+            "name" : "SubDataTests"
+          },
+          {
+            "name" : "SubDefenseDamageTests"
+          },
+          {
+            "name" : "SubStatsTests"
+          }
+        ],
+        "xctestClasses" : [
+          {
+            "name" : "BlasterDataTests"
+          },
+          {
+            "name" : "BlasterDecodingTests"
+          },
+          {
+            "name" : "BrellaDataTests"
+          },
+          {
+            "name" : "BrellaDecodingTests"
+          },
+          {
+            "name" : "BrushDataTests"
+          },
+          {
+            "name" : "BrushDecodingTests"
+          },
+          {
+            "name" : "BuildOptionsTests"
+          },
+          {
+            "name" : "ChargerDataTests"
+          },
+          {
+            "name" : "ChargerDecodingTests"
+          },
+          {
+            "name" : "DecodingTests"
+          },
+          {
+            "name" : "DualieDataTests"
+          },
+          {
+            "name" : "DualieDecodingTest"
+          },
+          {
+            "name" : "FullInkTankOptionsTests"
+          },
+          {
+            "name" : "GearBuildTests"
+          },
+          {
+            "name" : "GearPieceTests"
+          },
+          {
+            "name" : "LocalizationTest"
+          },
+          {
+            "name" : "MainDamagesTests"
+          },
+          {
+            "name" : "MainStatsTests"
+          },
+          {
+            "name" : "MovementStatsTests"
+          },
+          {
+            "name" : "RollerDataTests"
+          },
+          {
+            "name" : "RollerDecodingTests"
+          },
+          {
+            "name" : "ShooterDataTests"
+          },
+          {
+            "name" : "ShooterDecodingTests"
+          },
+          {
+            "name" : "SlosherDataTests"
+          },
+          {
+            "name" : "SlosherDecodingTests"
+          },
+          {
+            "name" : "SpecialDamagesTests"
+          },
+          {
+            "name" : "SpecialDataTests"
+          },
+          {
+            "name" : "SpecialDecodingTests"
+          },
+          {
+            "name" : "SpecialStatsTests"
+          },
+          {
+            "name" : "SplatanaDataTests"
+          },
+          {
+            "name" : "SplatanaDecodingTests"
+          },
+          {
+            "name" : "SplatlingDataTests"
+          },
+          {
+            "name" : "SplatlingDecodingTests"
+          },
+          {
+            "name" : "StringerDataTests"
+          },
+          {
+            "name" : "StringerDecodingTests"
+          },
+          {
+            "name" : "SubDataTests"
+          },
+          {
+            "name" : "SubDecodingTests"
+          },
+          {
+            "name" : "SubDefenseDamageTests"
+          },
+          {
+            "name" : "SubStatsTests"
+          }
+        ]
+      },
       "target" : {
         "containerPath" : "container:",
         "identifier" : "SplatalyzerTests",
@@ -137,5 +300,5 @@
       }
     }
   ],
-  "version" : 1
+  "version" : 2
 }

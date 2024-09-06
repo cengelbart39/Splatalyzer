@@ -10,7 +10,7 @@ import Foundation
 /// Represents the game parameters of the Super Chump special weapon
 ///
 /// See the JSON file `WeaponSpFirework.game__GameParameterTable.json`.
-public struct SuperChump: GameParametable {
+public struct SuperChump: SpecialWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

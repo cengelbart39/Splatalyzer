@@ -10,7 +10,7 @@ import Foundation
 /// Represents the game parameters of the Triple Inkstrike special weapon
 ///
 /// See the JSON file `WeaponSpTripleTornado.game__GameParameterTable.json`.
-public struct TripleInkstrike: GameParametable {
+public struct TripleInkstrike: SpecialWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

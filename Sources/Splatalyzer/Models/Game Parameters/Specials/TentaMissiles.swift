@@ -10,7 +10,7 @@ import Foundation
 /// Represents the game parameters of the Tenta Missiles special weapon
 ///
 /// See the JSON file `WeaponSpMultiMissile.game__GameParameterTable.json`.
-public struct TentaMissiles: GameParametable {
+public struct TentaMissiles: SpecialWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

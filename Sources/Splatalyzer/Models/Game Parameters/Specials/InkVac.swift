@@ -10,7 +10,7 @@ import Foundation
 /// Represents the game parameters of the Ink Vac special weapon
 ///
 /// See the JSON file `WeaponSpBlower.game__GameParameterTable.json`
-public struct InkVac: GameParametable {
+public struct InkVac: SpecialWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

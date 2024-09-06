@@ -10,7 +10,7 @@ import Foundation
 /// Represents the game parameters of the Angle Shooter sub weapon
 ///
 /// See the JSON file `WeaponLineMarker.game__GameParameterTable.json`
-public struct AngleShooter: GameParametable {
+public struct AngleShooter: SubWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

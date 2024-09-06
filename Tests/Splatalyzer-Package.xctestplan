@@ -13,9 +13,23 @@
   },
   "testTargets" : [
     {
-      "skippedTests" : [
-        "LocalizationTest"
-      ],
+      "skippedTags" : {
+        "tags" : [
+          ".localization"
+        ]
+      },
+      "skippedTests" : {
+        "suites" : [
+          {
+            "name" : "LocalizationTests"
+          }
+        ],
+        "xctestClasses" : [
+          {
+            "name" : "LocalizationTest"
+          }
+        ]
+      },
       "target" : {
         "containerPath" : "container:",
         "identifier" : "SplatalyzerTests",
@@ -23,5 +37,5 @@
       }
     }
   ],
-  "version" : 1
+  "version" : 2
 }

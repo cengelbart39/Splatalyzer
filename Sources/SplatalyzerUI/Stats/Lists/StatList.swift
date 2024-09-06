@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Splatalyzer
 
 /// A view that displays a collapsable list of stats
 public struct StatList<Content: View>: View {
@@ -15,51 +16,24 @@ public struct StatList<Content: View>: View {
     /// The title of the stats category
     public var title: String
     
-    #if os(macOS)
-    /// Displays a `NSImage` alongside `title`. If `nil`, only displays `title`.
-    /// - Note: OSes other than macOS use `UIImage?` instead.
-    public var image: NSImage?
-    #else
-    /// Displays a `UIImage` alongside `title`. If `nil`, only displays `title`.
-    /// - Note: macOS use `NSImage?` instead.
-    public var image: UIImage?
-    #endif
+    public var content: Content
     
-    /// View content displayed within the collapsable list
-    public let content: Content
+    public var image: PlatformImage?
     
-    #if os(macOS)
-    public init(title: String, image: NSImage?, content: Content) {
+    public init(title: String, image: PlatformImage?, content: Content) {
         self.title = title
         self.image = image
         self.content = content
     }
-    #else
-    public init(title: String, image: UIImage?, content: Content) {
+    
+    public init(title: String, image: PlatformImage? = nil, @ViewBuilder content: () -> Content) {
         self.title = title
         self.image = image
-        self.content = content
+        self.content = content()
     }
-    #endif
     
     /// Whether the view is collapsed
     @State public var isCollapsed = true
-    
-    #if os(macOS)
-    /// - Note: OSes other than macOS uses `UIImage` instead.
-    public init(title: String, image: NSImage? = nil, @ViewBuilder content: () -> Content) {
-        self.title = title
-        self.image = image
-        self.content = content()
-    }
-    #else
-    /// - Note: macOS uses `NSImage` instead.
-    public init(title: String, image: UIImage? = nil, @ViewBuilder content: () -> Content) {
-        self.title = title
-        self.image = image
-        self.content = content()
-    }
-    #endif
     
     @State var labelHeight = CGFloat.zero
     
@@ -72,7 +46,7 @@ public struct StatList<Content: View>: View {
             }, label: {
                 HStack {
                     if image != nil {
-                        ImageView(image: image)
+                        Image(platformImage: image)
                             .frame(maxHeight: labelHeight)
                     }
                     

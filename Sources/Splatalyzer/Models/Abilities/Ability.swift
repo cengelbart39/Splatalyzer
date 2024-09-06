@@ -5,12 +5,6 @@
 //  Created by Christopher Engelbart on 12/29/23.
 //
 
-#if os(macOS)
-import AppKit
-#else
-import UIKit
-#endif
-
 import Foundation
 
 /// Represents the relationship between ``Ability`` and how much AP is provided.
@@ -179,11 +173,8 @@ public enum Ability: String, CaseIterable, Codable, Sendable {
         }
     }
     
-    #if os(macOS)
     /// The icon for the ability used in-game.
-    ///
-    /// On OSes outside of macOS, `UIImage` is used instead.
-    public var image: NSImage? {
+    public var image: PlatformImage? {
         guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
             return nil
         }
@@ -192,24 +183,8 @@ public enum Ability: String, CaseIterable, Codable, Sendable {
             return nil
         }
         
-        return NSImage(data: data)
+        return PlatformImage(data: data)
     }
-    #else
-    /// The icon for the ability used in-game.
-    ///
-    /// On  macOS, `NSImage` is used instead.
-    public var image: UIImage? {
-        guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
-            return nil
-        }
-        
-        guard let data = try? Data(contentsOf: url) else {
-            return nil
-        }
-        
-        return UIImage(data: data)
-    }
-    #endif
     
     /// The localized version of the ability name.
     ///
@@ -220,6 +195,8 @@ public enum Ability: String, CaseIterable, Codable, Sendable {
 }
 
 public extension Ability {
+    static let useableAbilities = Ability.allCases.filter { $0 != .none }
+    
     /// An array of abilities that can only  be used on headgear
     static let headgearAbilities = Ability.allCases.filter {
         $0.restriction == .headgearOnly || $0.restriction == .none

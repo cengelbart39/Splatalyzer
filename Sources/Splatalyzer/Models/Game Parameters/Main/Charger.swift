@@ -13,7 +13,7 @@ import Foundation
 /// To see a representative `JSON` go to
 /// `Resources/weapon-json/` and find a file prefixed with
 /// `WeaponCharger`.
-public struct Charger: GameParametable {
+public struct Charger: MainWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

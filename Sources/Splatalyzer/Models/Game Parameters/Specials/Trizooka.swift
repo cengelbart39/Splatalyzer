@@ -10,7 +10,7 @@ import Foundation
 /// Represents the game parameters of the Trizooka special weapon
 ///
 /// See the JSON file `WeaponSpUltraShot.game__GameParameterTable.json`.
-public struct Trizooka: GameParametable {
+public struct Trizooka: SpecialWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

@@ -18,9 +18,9 @@ public struct JSONService {
     ///   - file: The JSON file
     /// - Throws: Can throw a ``JSONError``
     /// - Returns: Decoded JSON as type `T`
-    public func decode<T: Decodable>(_ type: T.Type, from file: String) throws -> T {
-        guard let url = Bundle.module.url(forResource: file, withExtension: "json") else {
-            throw JSONError.invalidUrl(file)
+    public func decode<T: Decodable>(_ file: DecodeType, into type: T.Type) throws -> T {
+        guard let url = Bundle.module.url(forResource: file.fileName, withExtension: "json") else {
+            throw JSONError.invalidUrl(file.fileName)
         }
         
         do {
@@ -50,11 +50,11 @@ public struct JSONService {
             throw JSONError.decode(string)
             
         } catch {
-            throw JSONError.invalidData(file, error.localizedDescription)
+            throw JSONError.invalidData(file.fileName, error.localizedDescription)
         }
     }
 }
-
+    
 /// Errors that can be thrown by ``JSONService``
 public enum JSONError: Error, LocalizedError {
     /// The Bundle url is invalid

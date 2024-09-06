@@ -10,7 +10,7 @@ import Foundation
 /// Represents the game parameters of the Splash Bomb sub weapon
 ///
 /// See the JSON file `WeaponSprinkler.game__GameParameterTable.json`
-public struct Sprinkler: GameParametable {
+public struct Sprinkler: SubWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

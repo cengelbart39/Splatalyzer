@@ -5,40 +5,31 @@
 //  Created by Christopher Engelbart on 1/12/24.
 //
 
-#if os(macOS)
-import AppKit
-#else
-import UIKit
-#endif
-
 import Foundation
 
 /// Represents every Special Weapon
-public enum SpecialWeapon: String, CaseIterable, Codable, Sendable {
-    case inkVac = "SpBlower"
-    case krakenRoyale = "SpCastle"
-    case crabTank = "SpChariot"
-    case splattercolorScreen = "SpChimney"
-    case tacticooler = "SpEnergyStand"
-    case superChump = "SpFirework"
+public enum SpecialWeapon: String, CaseIterable, Codable, Sendable, WeaponRepresentable {
     case bigBubbler = "SpGreatBarrier"
-    case inkStorm = "SpInkStorm"
-    case inkjet = "SpJetpack"
-    case killerWail51 = "SpMicroLaser"
-    case tentaMissiles = "SpMultiMissile"
     case booyahBomb = "SpNiceBall"
-    case tripleSplashdown = "SpPogo"
-    case waveBreaker = "SpShockSonar"
+    case crabTank = "SpChariot"
+    case inkjet = "SpJetpack"
+    case inkStorm = "SpInkStorm"
+    case inkVac = "SpBlower"
+    case killerWail51 = "SpMicroLaser"
+    case krakenRoyale = "SpCastle"
     case reefslider = "SpSkewer"
-    case zipcaster = "SpSuperHook"
+    case splattercolorScreen = "SpChimney"
+    case superChump = "SpFirework"
+    case tacticooler = "SpEnergyStand"
+    case tentaMissiles = "SpMultiMissile"
     case tripleInkstrike = "SpTripleTornado"
+    case tripleSplashdown = "SpPogo"
     case trizooka = "SpUltraShot"
     case ultraStamp = "SpUltraStamp"
+    case waveBreaker = "SpShockSonar"
+    case zipcaster = "SpSuperHook"
     
-    #if os(macOS)
-    /// The image of the current special weapon
-    /// - Note: OSes other than `macOS` use `UIImage` instead.
-    public var image: NSImage? {
+    public var image: PlatformImage? {
         guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
             return nil
         }
@@ -47,23 +38,8 @@ public enum SpecialWeapon: String, CaseIterable, Codable, Sendable {
             return nil
         }
         
-        return NSImage(data: data)
+        return PlatformImage(data: data)
     }
-    #else
-    /// The image of the current special weapon
-    /// - Note: `macOS` use `NSImage` instead.
-    public var image: UIImage? {
-        guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
-            return nil
-        }
-        
-        guard let data = try? Data(contentsOf: url) else {
-            return nil
-        }
-        
-        return UIImage(data: data)
-    }
-    #endif
     
     /// The localized name of the Special Weapon
     public var localized: String {
@@ -71,7 +47,56 @@ public enum SpecialWeapon: String, CaseIterable, Codable, Sendable {
     }
     
     /// Gets file name in relation to `.game__GameParameterTable.json` files for special weapons.
-    func fileName() -> String {
-        return self.rawValue
+    public var fileName: String {
+        return "Weapon\(self.rawValue).game__GameParameterTable"
+    }
+}
+
+extension SpecialWeapon {
+    var modelType: any SpecialWeaponable.Type {
+        switch self {
+        case .inkVac:
+            return InkVac.self
+        case .krakenRoyale:
+            return KrakenRoyale.self
+        case .crabTank:
+            return CrabTank.self
+        case .splattercolorScreen:
+            return SplattercolorScreen.self
+        case .tacticooler:
+            return Tacticooler.self
+        case .superChump:
+            return SuperChump.self
+        case .bigBubbler:
+            return BigBubbler.self
+        case .inkStorm:
+            return InkStorm.self
+        case .inkjet:
+            return Inkjet.self
+        case .killerWail51:
+            return KillerWail51.self
+        case .tentaMissiles:
+            return TentaMissiles.self
+        case .booyahBomb:
+            return BooyahBomb.self
+        case .tripleSplashdown:
+            return TripleSplashdown.self
+        case .waveBreaker:
+            return WaveBreaker.self
+        case .reefslider:
+            return Reefslider.self
+        case .zipcaster:
+            return Zipcaster.self
+        case .tripleInkstrike:
+            return TripleInkstrike.self
+        case .trizooka:
+            return Trizooka.self
+        case .ultraStamp:
+            return UltraStamp.self
+        }
+    }
+    
+    static func allModelTypes() -> [any GameParametable.Type] {
+        return self.allCases.map { $0.modelType }
     }
 }

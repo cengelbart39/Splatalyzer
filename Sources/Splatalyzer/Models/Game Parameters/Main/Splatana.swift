@@ -13,7 +13,7 @@ import Foundation
 /// To see a representative `JSON` go to
 /// `Resources/weapon-json/` and find a file prefixed with
 /// `WeaponSaber`.
-public struct Splatana: GameParametable {
+public struct Splatana: MainWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

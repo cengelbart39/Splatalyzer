@@ -35,7 +35,7 @@ public struct MainWeaponPicker: View {
                             Text(weapon.localized)
                             
                         }, icon: {
-                            ImageView(image: weapon.image)
+                            Image(platformImage: weapon.image)
                         })
                         .tag(weapon)
                     }
@@ -56,7 +56,7 @@ public struct MainWeaponPicker: View {
             Label(
                 title: { Text(mainWeapon.localized) },
                 icon: {
-                    ImageView(image: mainWeapon.image)
+                    Image(platformImage: mainWeapon.image)
                         .frame(width: 50, height: 50)
                 }
             )

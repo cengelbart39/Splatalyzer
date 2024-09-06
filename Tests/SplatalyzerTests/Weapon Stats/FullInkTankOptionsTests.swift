@@ -5,833 +5,166 @@
 //  Created by Christopher Engelbart on 3/1/24.
 //
 
-import XCTest
+import Testing
 @testable import Splatalyzer
 
-final class FullInkTankOptionsTests: XCTestCase {
+@Suite(.tags(.buildStats))
+struct FullInkTankOptionsTests {
     
-    let service = JSONService()
-    
-    let mainInfo = try! JSONService().decode(WeaponInfoMain.self, from: "WeaponInfoMain")
-
-    // MARK: - Normal
-    func test_StatHelper_fullInkTankOptions_blaster_containsNormal_true() throws {
-
-        var options = try self.getInkTankOptions(for: .blaster)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
+    // MARK: - Normal Option
+    @Test("Blaster Normal Option", arguments: [
+        MainWeapon.blaster, .customBlaster, .clashBlaster, .clashBlasterNeo, .lunaBlaster, .lunaBlasterNeo, .orderBlasterReplica, .rangeBlaster, .customRangeBlaster, .rapidBlaster, .rapidBlasterDeco, .rapidBlasterPro, .rapidBlasterProDeco, .sblast92, .sblast91
+    ])
+    func blasterHasNormal(_ weapon: MainWeapon) throws {
+        let options = try TestHelper.getFullInkTankOptions(for: weapon)
+        try #require(!options.isEmpty)
         
-        options = try self.getInkTankOptions(for: .customBlaster)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .clashBlaster)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .clashBlasterNeo)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .lunaBlaster)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .lunaBlasterNeo)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .orderBlasterReplica)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .rangeBlaster)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .customRangeBlaster)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .rapidBlaster)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .rapidBlasterDeco)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .rapidBlasterPro)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .rapidBlasterProDeco)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .sblast92)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .sblast91)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
+        #expect(options.contains(type: .normal))
     }
     
-    func test_StatHelper_fullInkTankOptions_brella_containsNormal_true() throws {
-
-        var options = try self.getInkTankOptions(for: .recycledBrella24MkI)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
+    @Test("Brella Normal Option", arguments: [
+        MainWeapon.recycledBrella24MkI, .recycledBrella24MkII, .splatBrella, .sorellaBrella, .orderBrellaReplica, .tentaBrella, .tentatekSplattershot, .undercoverBrella, .undercoverSorellaBrella
+    ])
+    func brellaHasNormal(_ weapon: MainWeapon) throws {
+        let options = try TestHelper.getFullInkTankOptions(for: weapon)
+        try #require(!options.isEmpty)
         
-        options = try self.getInkTankOptions(for: .recycledBrella24MkII)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .splatBrella)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .sorellaBrella)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .orderBrellaReplica)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .tentaBrella)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .tentaSorellaBrella)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .undercoverBrella)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .undercoverSorellaBrella)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
+        #expect(options.contains(type: .normal))
     }
     
-    func test_StatHelper_fullInkTankOptions_dualie_containsNormal_true() throws {
-       
-        var options = try self.getInkTankOptions(for: .dappleDualies)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
+    @Test("Dualies Normal Option", arguments: [
+        MainWeapon.dappleDualies, .dappleDualiesNouveau, .douserDualiesFF, .customDouserDualiesFF, .dualieSquelchers, .customDualieSquelchers, .gloogaDualies, .gloogaDualiesDeco, .splatDualies, .enperrySplatDualies, .orderDualiesReplica, .darkTetraDualies, .lightTetraDualies
+    ])
+    func dualiesHasNormal(_ weapon: MainWeapon) throws {
+        let options = try TestHelper.getFullInkTankOptions(for: weapon)
+        try #require(!options.isEmpty)
         
-        options = try self.getInkTankOptions(for: .dappleDualiesNouveau)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .douserDualiesFF)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .customDouserDualiesFF)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .dualieSquelchers)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .customDualieSquelchers)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .gloogaDualies)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .gloogaDualiesDeco)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .splatDualies)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .enperrySplatDualies)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .orderDualiesReplica)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .darkTetraDualies)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .lightTetraDualies)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-    }
-
-    func test_StatHelper_fullInkTankOptions_shooter_containsNormal_true() throws {
-        
-        var options = try self.getInkTankOptions(for: .gal52)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .gal52Deco)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .gal96)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .gal96Deco)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .aerosprayMG)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .aerosprayRG)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .h3Nozzlenose)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .h3NozzlenoseD)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .jetSquelcher)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .customJetSquelcher)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .l3Nozzlenose)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .l3NozzlenoseD)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .nzap85)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .nzap89)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .splashomatic)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .neoSplashomatic)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .splattershot)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .tentatekSplattershot)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .heroShotReplica)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .octoShotReplica)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .orderShotReplica)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .splattershotJr)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .customSplattershotJr)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .splattershotNova)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .splattershotPro)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .forgeSplattershotPro)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .splooshomatic)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .neoSplooshomatic)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .squeezer)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
-        
-        options = try self.getInkTankOptions(for: .foilSqueezer)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .normal))
+        #expect(options.contains(type: .normal))
     }
     
-    // MARK: - Swing
-    func test_StatHelper_fullInkTankOptions_roller_containsSwing_true() throws {
-        var options = try self.getInkTankOptions(for: .bigSwigRoller)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .swing))
+    @Test("Shooter Normal Option", arguments: [
+        MainWeapon.gal52, .gal52Deco, .gal96, .gal96Deco, .aerosprayMG, .aerosprayRG, .h3Nozzlenose, .h3NozzlenoseD, .jetSquelcher, .customJetSquelcher, .l3Nozzlenose, .l3NozzlenoseD, .nzap85, .nzap89, .splashomatic, .neoSplashomatic, .splattershot, .tentatekSplattershot, .heroShotReplica, .orderShotReplica, .octoShotReplica, .splattershotJr, .customSplattershotJr, .splattershotNova, .annakiSplattershotNova, .splattershotPro, .forgeSplattershotPro, .splooshomatic, .neoSplooshomatic, .squeezer, .foilSqueezer
+    ])
+    func shooterHasNormal(_ weapon: MainWeapon) throws {
+        let options = try TestHelper.getFullInkTankOptions(for: weapon)
+        try #require(!options.isEmpty)
         
-        options = try self.getInkTankOptions(for: .bigSwigRollerExpress)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .swing))
-        
-        options = try self.getInkTankOptions(for: .carbonRoller)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .swing))
-        
-        options = try self.getInkTankOptions(for: .carbonRollerDeco)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .swing))
-        
-        options = try self.getInkTankOptions(for: .dynamoRoller)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .swing))
-        
-        options = try self.getInkTankOptions(for: .goldDynamoRoller)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .swing))
-        
-        options = try self.getInkTankOptions(for: .splatRoller)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .swing))
-        
-        options = try self.getInkTankOptions(for: .krakOnSplatRoller)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .swing))
-        
-        options = try self.getInkTankOptions(for: .orderRollerReplica)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .swing))
+        #expect(options.contains(type: .normal))
     }
-
     
-    func test_StatHelper_fullInkTankOptions_brush_containsSwing_true() throws {
-
-        var options = try self.getInkTankOptions(for: .inkbrush)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .swing))
+    // MARK: - Swings
+    @Test("Roller Swing Option", arguments: [
+        MainWeapon.carbonRoller, .carbonRollerDeco, .dynamoRoller, .goldDynamoRoller, .splatRoller, .krakOnSplatRoller, .orderRollerReplica, .bigSwigRoller, .bigSwigRollerExpress
+    ])
+    func rollerHasSwing(_ weapon: MainWeapon) throws {
+        let options = try TestHelper.getFullInkTankOptions(for: weapon)
+        try #require(!options.isEmpty)
         
-        options = try self.getInkTankOptions(for: .inkbrushNouveau)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .swing))
-        
-        options = try self.getInkTankOptions(for: .octobrush)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .swing))
-        
-        options = try self.getInkTankOptions(for: .octobrushNouveau)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .swing))
-        
-        options = try self.getInkTankOptions(for: .orderbrushReplica)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .swing))
-        
-        options = try self.getInkTankOptions(for: .painbrush)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .swing))
-        
-        options = try self.getInkTankOptions(for: .painbrushNouveau)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .swing))
+        #expect(options.contains(type: .swing))
     }
-
-    func test_StatHelper_fullInkTankOptions_splatana_containsSwing_true() throws {
-        var options = try self.getInkTankOptions(for: .mintDecavitator)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .swing))
+    
+    @Test("Brush Swing Option", arguments: MainWeapon.getWeapons(of: .brush))
+    func brushHasSwing(_ weapon: MainWeapon) throws {
+        let options = try TestHelper.getFullInkTankOptions(for: weapon)
+        try #require(!options.isEmpty)
         
-        options = try self.getInkTankOptions(for: .charcoalDecavitator)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .swing))
+        #expect(options.contains(type: .swing))
+    }
+    
+    @Test("Splatana Swing Option", arguments: MainWeapon.getWeapons(of: .splatana))
+    func splatanaHasSwing(_ weapon: MainWeapon) throws {
+        let options = try TestHelper.getFullInkTankOptions(for: weapon)
+        try #require(!options.isEmpty)
         
-        options = try self.getInkTankOptions(for: .splatanaStamper)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .swing))
-        
-        options = try self.getInkTankOptions(for: .splatanaStamperNouveau)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .swing))
-        
-        options = try self.getInkTankOptions(for: .orderSplatanaReplica)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .swing))
-        
-        options = try self.getInkTankOptions(for: .splatanaWiper)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .swing))
-        
-        options = try self.getInkTankOptions(for: .splatanaWiperDeco)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .swing))
+        #expect(options.contains(type: .swing))
     }
     
     // MARK: - Slosh
-    func test_StatHelper_fullInkTankOptions_slosher_containsSlosh_true() throws {
-
-        var options = try self.getInkTankOptions(for: .bloblobber)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .slosh))
+    @Test("Slosher Slosh Option", arguments: MainWeapon.getWeapons(of: .slosher))
+    func slosherHasSlosh(_ weapon: MainWeapon) throws {
+        let options = try TestHelper.getFullInkTankOptions(for: weapon)
+        try #require(!options.isEmpty)
         
-        options = try self.getInkTankOptions(for: .bloblobberDeco)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .slosh))
-        
-        options = try self.getInkTankOptions(for: .dreadWringer)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .slosh))
-        
-        options = try self.getInkTankOptions(for: .dreadWringerD)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .slosh))
-        
-        options = try self.getInkTankOptions(for: .explosher)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .slosh))
-        
-        options = try self.getInkTankOptions(for: .customExplosher)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .slosh))
-        
-        options = try self.getInkTankOptions(for: .slosher)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .slosh))
-        
-        options = try self.getInkTankOptions(for: .slosherDeco)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .slosh))
-        
-        options = try self.getInkTankOptions(for: .orderSlosherReplica)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .slosh))
-        
-        options = try self.getInkTankOptions(for: .sloshingMachine)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .slosh))
-        
-        options = try self.getInkTankOptions(for: .sloshingMachineNeo)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .slosh))
-        
-        options = try self.getInkTankOptions(for: .triSlosher)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .slosh))
-        
-        options = try self.getInkTankOptions(for: .triSlosherNouveau)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .slosh))
-    }
-
-    // MARK: - Vertical Swing
-    func test_StatHelper_fullInkTankOptions_roller_containsVerticalSwing_true() throws {
-        var options = try self.getInkTankOptions(for: .flingzaRoller)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .verticalSwing))
-        
-        options = try self.getInkTankOptions(for: .foilFlingzaRoller)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .verticalSwing))
-    }
-
-    // MARK: - Horizontal Swing
-    func test_StatHelper_fullInkTankOptions_roller_containsHorizontalSwing_true() throws {
-        var options = try self.getInkTankOptions(for: .flingzaRoller)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .horizontalSwing))
-        
-        options = try self.getInkTankOptions(for: .foilFlingzaRoller)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .horizontalSwing))
-    }
-
-    // MARK: - Tap Shot
-    func test_StatHelper_fullInkTankOptions_charger_containsTapShot_true() throws {
-
-        var options = try self.getInkTankOptions(for: .bamboozler14MkI)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .tapShot))
-        
-        options = try self.getInkTankOptions(for: .bamboozler14MkII)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .tapShot))
-        
-        options = try self.getInkTankOptions(for: .eliter4K)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .tapShot))
-        
-        options = try self.getInkTankOptions(for: .customEliter4K)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .tapShot))
-        
-        options = try self.getInkTankOptions(for: .eliter4KScope)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .tapShot))
-        
-        options = try self.getInkTankOptions(for: .customEliter4KScope)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .tapShot))
-        
-        options = try self.getInkTankOptions(for: .gooTuber)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .tapShot))
-        
-        options = try self.getInkTankOptions(for: .customGooTuber)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .tapShot))
-        
-        options = try self.getInkTankOptions(for: .snipewriter5H)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .tapShot))
-        
-        options = try self.getInkTankOptions(for: .snipewriter5B)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .tapShot))
-        
-        options = try self.getInkTankOptions(for: .splatCharger)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .tapShot))
-        
-        options = try self.getInkTankOptions(for: .zfSplatCharger)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .tapShot))
-        
-        options = try self.getInkTankOptions(for: .orderChargerReplica)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .tapShot))
-        
-        options = try self.getInkTankOptions(for: .splatterscope)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .tapShot))
-        
-        options = try self.getInkTankOptions(for: .zfSplatterscope)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .tapShot))
-        
-        options = try self.getInkTankOptions(for: .classicSquiffer)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .tapShot))
-        
-        options = try self.getInkTankOptions(for: .newSquiffer)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .tapShot))
-    }
-
-    // MARK: - Full Charge
-    func test_StatHelper_fullInkTankOptions_charger_containsFullCharge_true() throws {
-
-        var options = try self.getInkTankOptions(for: .bamboozler14MkI)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
-        
-        options = try self.getInkTankOptions(for: .bamboozler14MkII)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
-        
-        options = try self.getInkTankOptions(for: .eliter4K)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
-        
-        options = try self.getInkTankOptions(for: .customEliter4K)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
-        
-        options = try self.getInkTankOptions(for: .eliter4KScope)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
-        
-        options = try self.getInkTankOptions(for: .customEliter4KScope)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
-        
-        options = try self.getInkTankOptions(for: .gooTuber)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
-        
-        options = try self.getInkTankOptions(for: .customGooTuber)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
-        
-        options = try self.getInkTankOptions(for: .snipewriter5H)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
-        
-        options = try self.getInkTankOptions(for: .snipewriter5B)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
-        
-        options = try self.getInkTankOptions(for: .splatCharger)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
-        
-        options = try self.getInkTankOptions(for: .zfSplatCharger)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
-        
-        options = try self.getInkTankOptions(for: .orderChargerReplica)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
-        
-        options = try self.getInkTankOptions(for: .splatterscope)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
-        
-        options = try self.getInkTankOptions(for: .zfSplatterscope)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
-        
-        options = try self.getInkTankOptions(for: .classicSquiffer)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
-        
-        options = try self.getInkTankOptions(for: .newSquiffer)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
+        #expect(options.contains(type: .slosh))
     }
     
-    func test_StatHelper_fullInkTankOptions_splatana_containsFullCharge_true() throws {
-
-        var options = try self.getInkTankOptions(for: .mintDecavitator)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
+    // MARK: - Vertical Swing
+    @Test("Roller V. Swing Option", arguments: [MainWeapon.flingzaRoller, .foilFlingzaRoller])
+    func rollerHasVerticalSwing(_ weapon: MainWeapon) throws {
+        let options = try TestHelper.getFullInkTankOptions(for: weapon)
+        try #require(!options.isEmpty)
         
-        options = try self.getInkTankOptions(for: .charcoalDecavitator)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
-        
-        options = try self.getInkTankOptions(for: .splatanaStamper)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
-        
-        options = try self.getInkTankOptions(for: .splatanaStamperNouveau)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
-        
-        options = try self.getInkTankOptions(for: .orderSplatanaReplica)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
-        
-        options = try self.getInkTankOptions(for: .splatanaWiper)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
-        
-        options = try self.getInkTankOptions(for: .splatanaWiperDeco)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
+        #expect(options.contains(type: .verticalSwing))
     }
-
-    func test_StatHelper_fullInkTankOptions_stringer_containsFullCharge_true() throws {
-
-        var options = try self.getInkTankOptions(for: .reeflux450)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
+    
+    // MARK: - Horizontal Swing
+    @Test("Roller H. Swing Option", arguments: [MainWeapon.flingzaRoller, .foilFlingzaRoller])
+    func rollerHasHorizontalSwing(_ weapon: MainWeapon) throws {
+        let options = try TestHelper.getFullInkTankOptions(for: weapon)
+        try #require(!options.isEmpty)
         
-        options = try self.getInkTankOptions(for: .reeflux450)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
+        #expect(options.contains(type: .horizontalSwing))
+    }
+    
+    // MARK: - Tap Shot
+    @Test("Charger Tap Shot Option", arguments: MainWeapon.getWeapons(of: .charger))
+    func chargerHasTapShot(_ weapon: MainWeapon) throws {
+        let options = try TestHelper.getFullInkTankOptions(for: weapon)
+        try #require(!options.isEmpty)
         
-        options = try self.getInkTankOptions(for: .triStringer)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
+        #expect(options.contains(type: .tapShot))
+    }
+    
+    @Test("Charger Full Charge Option", arguments: MainWeapon.getWeapons(of: .charger))
+    func chargerHasFullCharge(_ weapon: MainWeapon) throws {
+        let options = try TestHelper.getFullInkTankOptions(for: weapon)
+        try #require(!options.isEmpty)
         
-        options = try self.getInkTankOptions(for: .inklineTriStringer)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
+        #expect(options.contains(type: .fullCharge))
+    }
+    
+    @Test("Splatana Full Charge Option", arguments: MainWeapon.getWeapons(of: .splatana))
+    func splatanaHasFullCharge(_ weapon: MainWeapon) throws {
+        let options = try TestHelper.getFullInkTankOptions(for: weapon)
+        try #require(!options.isEmpty)
         
-        options = try self.getInkTankOptions(for: .orderStringerReplica)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
+        #expect(options.contains(type: .fullCharge))
+    }
+    
+    @Test("Stringer Full Charge Option", arguments: MainWeapon.getWeapons(of: .stringer))
+    func stringerHasFullCharge(_ weapon: MainWeapon) throws {
+        let options = try TestHelper.getFullInkTankOptions(for: weapon)
+        try #require(!options.isEmpty)
         
-        options = try self.getInkTankOptions(for: .wellspringV)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
-        
-        options = try self.getInkTankOptions(for: .customWellspringV)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .fullCharge))
+        #expect(options.contains(type: .fullCharge))
     }
     
     // MARK: - Splatling Charge
-    func test_StatHelper_fullInkTankOptions_splatling_containsSplatlingCharge_true() throws {
-
-        var options = try self.getInkTankOptions(for: .ballpointSplatling)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .splatlingCharge))
+    @Test("Splatling Charge Option", arguments: MainWeapon.getWeapons(of: .splatling))
+    func splatlingHasCharge(_ weapon: MainWeapon) throws {
+        let options = try TestHelper.getFullInkTankOptions(for: weapon)
+        try #require(!options.isEmpty)
         
-        options = try self.getInkTankOptions(for: .ballpointSplatlingNouveau)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .splatlingCharge))
-        
-        options = try self.getInkTankOptions(for: .heavyEditSplatling)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .splatlingCharge))
-        
-        options = try self.getInkTankOptions(for: .heavyEditSplatlingNouveau)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .splatlingCharge))
-        
-        options = try self.getInkTankOptions(for: .heavySplatling)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .splatlingCharge))
-        
-        options = try self.getInkTankOptions(for: .heavySplatlingDeco)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .splatlingCharge))
-        
-        options = try self.getInkTankOptions(for: .orderSplatlingReplica)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .splatlingCharge))
-        
-        options = try self.getInkTankOptions(for: .hydraSplatling)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .splatlingCharge))
-        
-        options = try self.getInkTankOptions(for: .customHydraSplatling)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .splatlingCharge))
-        
-        options = try self.getInkTankOptions(for: .miniSplatling)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .splatlingCharge))
-        
-        options = try self.getInkTankOptions(for: .zinkMiniSplatling)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .splatlingCharge))
-        
-        options = try self.getInkTankOptions(for: .nautilus47)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .splatlingCharge))
-        
-        options = try self.getInkTankOptions(for: .nautilus79)
-        XCTAssertFalse(options.isEmpty)
+        #expect(options.contains(type: .splatlingCharge))
     }
     
     // MARK: - Shield Launch
-    func test_StatHelper_fullInkTankOptions_brella_containsShieldLaunch_true() throws {
-
-        var options = try self.getInkTankOptions(for: .recycledBrella24MkI)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .shieldLaunch))
+    @Test("Brella Shield Launch Option", arguments: [
+        MainWeapon.recycledBrella24MkI, .recycledBrella24MkII, .splatBrella, .sorellaBrella, .orderBrellaReplica, .tentaBrella, .tentaSorellaBrella
+    ])
+    func brellaHasShieldLaunch(_ weapon: MainWeapon) throws {
+        let options = try TestHelper.getFullInkTankOptions(for: weapon)
+        try #require(!options.isEmpty)
         
-        options = try self.getInkTankOptions(for: .recycledBrella24MkII)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .shieldLaunch))
-        
-        options = try self.getInkTankOptions(for: .splatBrella)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .shieldLaunch))
-        
-        options = try self.getInkTankOptions(for: .sorellaBrella)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .shieldLaunch))
-        
-        options = try self.getInkTankOptions(for: .orderBrellaReplica)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .shieldLaunch))
-        
-        options = try self.getInkTankOptions(for: .tentaBrella)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .shieldLaunch))
-        
-        options = try self.getInkTankOptions(for: .tentaSorellaBrella)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .shieldLaunch))
+        #expect(options.contains(type: .shieldLaunch))
     }
-
+    
     // MARK: - Dualie Roll
-    func test_StatHelper_fullInkTankOptions_dualie_containsDualieRoll_true() throws {
-       
-        var options = try self.getInkTankOptions(for: .dappleDualies)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .dualieRoll))
+    @Test("Dualie Roll Option", arguments: MainWeapon.getWeapons(of: .dualie))
+    func dualieHasRoll(_ weapon: MainWeapon) throws {
+        let options = try TestHelper.getFullInkTankOptions(for: weapon)
+        try #require(!options.isEmpty)
         
-        options = try self.getInkTankOptions(for: .dappleDualiesNouveau)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .dualieRoll))
-        
-        options = try self.getInkTankOptions(for: .douserDualiesFF)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .dualieRoll))
-        
-        options = try self.getInkTankOptions(for: .customDouserDualiesFF)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .dualieRoll))
-        
-        options = try self.getInkTankOptions(for: .dualieSquelchers)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .dualieRoll))
-        
-        options = try self.getInkTankOptions(for: .customDualieSquelchers)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .dualieRoll))
-        
-        options = try self.getInkTankOptions(for: .gloogaDualies)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .dualieRoll))
-        
-        options = try self.getInkTankOptions(for: .gloogaDualiesDeco)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .dualieRoll))
-        
-        options = try self.getInkTankOptions(for: .splatDualies)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .dualieRoll))
-        
-        options = try self.getInkTankOptions(for: .enperrySplatDualies)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .dualieRoll))
-        
-        options = try self.getInkTankOptions(for: .orderDualiesReplica)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .dualieRoll))
-        
-        options = try self.getInkTankOptions(for: .darkTetraDualies)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .dualieRoll))
-        
-        options = try self.getInkTankOptions(for: .lightTetraDualies)
-        XCTAssertFalse(options.isEmpty)
-        XCTAssertTrue(options.contains(type: .dualieRoll))
-    }
-
-    // MARK: - Helper Functions
-    /// Prepares parameters and performs `StatHelper.fullInkTankOptions(ap:abilities:mainInfo:subInfo:)`
-    func getInkTankOptions(for weapon: MainWeapon) throws -> [Int : [InkTankOption]] {
-        let mainItem = self.mainInfo.getItem(for: weapon)!
-        let subWeapon = mainItem.subWeapon.toSubWeapon()!
-        
-        let mainData = try TestHelper.getMainData(for: weapon, with: self.mainInfo)
-        let subData = try TestHelper.getSubData(for: subWeapon)
-        
-        return StatHelper.fullInkTankOptions(ap: AbilityPoints(), mainInfo: mainData, subInfo: subData)
+        #expect(options.contains(type: .dualieRoll))
     }
 }

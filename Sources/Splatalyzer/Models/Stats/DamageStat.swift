@@ -37,9 +37,9 @@ public struct DamageStat: Codable, Equatable, Identifiable, Hashable, Sendable {
         self.shotsToSplat = shotsToSplat
     }
     
-    /// Formats ``multiShots`` into a String
+    /// Formats the amount of damage a certain attack does, referencing ``values``.
     ///
-    /// For instance, if an attack does 29 damage and there are 3 shots per button press, it will return "29 + 29 + 29"
+    /// If an attack does 3-shots per button damage of 29 damage each, it will return "29 + 29 + 29"
     public func valuesToString() -> String {
         var output = String()
         

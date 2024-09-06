@@ -70,15 +70,7 @@ public struct AbilityKeyboardView: View {
                             dismiss()
                             
                         }, label: {
-                            #if canImport(UIKit)
-                            ImageView(image: ability.image)
-                                .padding(5)
-                                .abilityBackground(for: colorScheme, with: UIDevice.current.userInterfaceIdiom == .phone)
-                            #else
-                            ImageView(image: ability.image)
-                                .padding(5)
-                                .abilityBackground(for: colorScheme, with: true)
-                            #endif
+                            Image(platformImage: ability.image)
                         })
                         .buttonStyle(.plain)
                         .accessibilityLabel(ability.localized)

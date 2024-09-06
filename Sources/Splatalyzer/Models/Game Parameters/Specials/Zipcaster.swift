@@ -10,7 +10,7 @@ import Foundation
 /// Represents the game parameters of the Zipcaster special weapon
 ///
 /// See the JSON file `WeaponSpSuperHook.game__GameParameterTable.json`.
-public struct Zipcaster: GameParametable {
+public struct Zipcaster: SpecialWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

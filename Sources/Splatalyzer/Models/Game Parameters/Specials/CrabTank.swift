@@ -10,7 +10,7 @@ import Foundation
 /// Represents the game parameters of the Crab Tank special weapon
 ///
 /// See the JSON file `WeaponSpChariot.game__GameParameterTable.json`
-public struct CrabTank: GameParametable {
+public struct CrabTank: SpecialWeaponable {
     public var parameters: Parameters
     
     public init(parameters: Parameters) {

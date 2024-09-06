@@ -5,204 +5,86 @@
 //  Created by Christopher Engelbart on 2/29/24.
 //
 
-import XCTest
+import Testing
 @testable import Splatalyzer
 
-final class SubDefenseDamageTests: XCTestCase {
+@Suite(.tags(.buildStats))
+struct SubDefenseDamageTests {
     
     let ap = AbilityPoints()
     
-    func test_StatHelper_subDefenseDamages_angleShooter() throws {
-        
-        let data = try TestHelper.getSubData(for: .angleShooter)
-        let subData = [SubWeapon.angleShooter : data]
+    @Test("Bomb Normal Def.Dmg.", arguments: [
+        SubWeapon.autobomb, .burstBomb, .curlingBomb, .inkMine, .splatBomb, .suctionBomb
+    ])
+    func bombNormalDefDmg(for sub: SubWeapon) throws {
+        let data = try SubWeaponData(for: sub)
+        let subData = [sub : data]
         
         let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
-                
-        XCTAssertFalse(defDmg.isEmpty)
-        XCTAssertNotNil(defDmg[.angleShooter])
-        XCTAssertFalse(defDmg[.angleShooter]!.isEmpty)
-        XCTAssertTrue(defDmg[.angleShooter]!
-            .contains(type: .direct)
-        )
+
+        let info = try #require(defDmg[sub])
+        try #require(!info.isEmpty)
+        #expect(info.contains(type: .bombNormal))
     }
     
-    func test_StatHelper_subDefenseDamages_autobomb() throws {
-        
-        let data = try TestHelper.getSubData(for: .autobomb)
-        let subData = [SubWeapon.autobomb : data]
-        
-        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
-                
-        XCTAssertFalse(defDmg.isEmpty)
-        XCTAssertNotNil(defDmg[.autobomb])
-        XCTAssertFalse(defDmg[.autobomb]!.isEmpty)
-        XCTAssertTrue(defDmg[.autobomb]!
-            .contains(type: .bombNormal)
-        )
-    }
-    
-    func test_StatHelper_subDefenseDamages_burstBomb() throws {
-        
-        let data = try TestHelper.getSubData(for: .burstBomb)
-        let subData = [SubWeapon.burstBomb : data]
-        
-        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
-                
-        XCTAssertFalse(defDmg.isEmpty)
-        XCTAssertNotNil(defDmg[.burstBomb])
-        XCTAssertFalse(defDmg[.burstBomb]!.isEmpty)
-        XCTAssertTrue(defDmg[.burstBomb]!
-            .contains(type: .bombNormal)
-        )
-    }
-
-    func test_StatHelper_subDefenseDamages_curlingBomb() throws {
-        
-        let data = try TestHelper.getSubData(for: .curlingBomb)
-        let subData = [SubWeapon.curlingBomb : data]
-        
-        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
-                
-        XCTAssertFalse(defDmg.isEmpty)
-        XCTAssertNotNil(defDmg[.curlingBomb])
-        XCTAssertFalse(defDmg[.curlingBomb]!.isEmpty)
-        XCTAssertTrue(defDmg[.curlingBomb]!
-            .contains(type: .bombNormal)
-        )
-    }
-
-    func test_StatHelper_subDefenseDamages_fizzyBomb() throws {
-        
-        let data = try TestHelper.getSubData(for: .fizzyBomb)
-        let subData = [SubWeapon.fizzyBomb : data]
-        
-        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
-                
-        XCTAssertFalse(defDmg.isEmpty)
-        XCTAssertNotNil(defDmg[.fizzyBomb])
-        XCTAssertFalse(defDmg[.fizzyBomb]!.isEmpty)
-        XCTAssertTrue(defDmg[.fizzyBomb]!
-            .contains(type: .distance)
-        )
-    }
-
-    func test_StatHelper_subDefenseDamages_inkMine() throws {
-        
-        let data = try TestHelper.getSubData(for: .inkMine)
-        let subData = [SubWeapon.inkMine : data]
-        
-        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
-                
-        XCTAssertFalse(defDmg.isEmpty)
-        XCTAssertNotNil(defDmg[.inkMine])
-        XCTAssertFalse(defDmg[.inkMine]!.isEmpty)
-        XCTAssertTrue(defDmg[.inkMine]!
-            .contains(type: .bombNormal)
-        )
-    }
-    
-    func test_StatHelper_subDefenseDamages_pointSensor() throws {
-        
-        let data = try TestHelper.getSubData(for: .pointSensor)
-        let subData = [SubWeapon.pointSensor : data]
-        
-        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
-                
-        XCTAssertFalse(defDmg.isEmpty)
-        XCTAssertNotNil(defDmg[.pointSensor])
-        XCTAssertTrue(defDmg[.pointSensor]!.isEmpty)
-    }
-
-    func test_StatHelper_subDefenseDamages_splashWall() throws {
-        
-        let data = try TestHelper.getSubData(for: .splashWall)
-        let subData = [SubWeapon.splashWall : data]
-        
-        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
-                
-        XCTAssertFalse(defDmg.isEmpty)
-        XCTAssertNotNil(defDmg[.splashWall])
-        XCTAssertTrue(defDmg[.splashWall]!.isEmpty)
-    }
-
-    func test_StatHelper_subDefenseDamages_splatBomb() throws {
-        
-        let data = try TestHelper.getSubData(for: .splatBomb)
-        let subData = [SubWeapon.splatBomb : data]
-        
-        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
-                
-        XCTAssertFalse(defDmg.isEmpty)
-        XCTAssertNotNil(defDmg[.splatBomb])
-        XCTAssertFalse(defDmg[.splatBomb]!.isEmpty)
-        XCTAssertTrue(defDmg[.splatBomb]!
-            .contains(type: .bombNormal)
-        )
-    }
-
-    func test_StatHelper_subDefenseDamages_sprinkler() throws {
-        
-        let data = try TestHelper.getSubData(for: .sprinkler)
-        let subData = [SubWeapon.sprinkler : data]
-        
-        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
-                
-        XCTAssertFalse(defDmg.isEmpty)
-        XCTAssertNotNil(defDmg[.sprinkler])
-        XCTAssertTrue(defDmg[.sprinkler]!.isEmpty)
-    }
-    
-    func test_StatHelper_subDefenseDamages_squidBeakon() throws {
-        
-        let data = try TestHelper.getSubData(for: .squidBeakon)
-        let subData = [SubWeapon.squidBeakon : data]
-        
-        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
-                
-        XCTAssertFalse(defDmg.isEmpty)
-        XCTAssertNotNil(defDmg[.squidBeakon])
-        XCTAssertTrue(defDmg[.squidBeakon]!.isEmpty)
-    }
-    
-    func test_StatHelper_subDefenseDamages_suctionBomb() throws {
-        
-        let data = try TestHelper.getSubData(for: .suctionBomb)
-        let subData = [SubWeapon.suctionBomb : data]
-        
-        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
-                
-        XCTAssertFalse(defDmg.isEmpty)
-        XCTAssertNotNil(defDmg[.suctionBomb])
-        XCTAssertFalse(defDmg[.suctionBomb]!.isEmpty)
-        XCTAssertTrue(defDmg[.suctionBomb]!
-            .contains(type: .bombNormal)
-        )
-    }
-
-    func test_StatHelper_subDefenseDamages_torpedo() throws {
-        
-        let data = try TestHelper.getSubData(for: .torpedo)
+    @Test("Bomb Direct Def.Dmg.")
+    func bombDirectDefDmg() throws {
+        let data = try SubWeaponData(for: .torpedo)
         let subData = [SubWeapon.torpedo : data]
         
         let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
-                
-        XCTAssertFalse(defDmg.isEmpty)
-        XCTAssertNotNil(defDmg[.torpedo])
-        XCTAssertFalse(defDmg[.torpedo]!.isEmpty)
-        XCTAssertTrue(defDmg[.torpedo]!.contains(type: .splash))
-        XCTAssertTrue(defDmg[.torpedo]!.contains(type: .bombDirect))
+
+        let info = try #require(defDmg[.torpedo])
+        try #require(!info.isEmpty)
+        #expect(info.contains(type: .bombDirect))
     }
     
-    func test_StatHelper_subDefenseDamages_toxicMist() throws {
-        
-        let data = try TestHelper.getSubData(for: .toxicMist)
-        let subData = [SubWeapon.toxicMist : data]
+    @Test("Direct Def.Dmg.")
+    func directDefDmg() throws {
+        let data = try SubWeaponData(for: .angleShooter)
+        let subData = [SubWeapon.angleShooter : data]
         
         let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
-                
-        XCTAssertFalse(defDmg.isEmpty)
-        XCTAssertNotNil(defDmg[.toxicMist])
-        XCTAssertTrue(defDmg[.toxicMist]!.isEmpty)
+
+        let info = try #require(defDmg[.angleShooter])
+        try #require(!info.isEmpty)
+        #expect(info.contains(type: .direct))
+    }
+    
+    @Test("Distance Def.Dmg.")
+    func distanceDefDmg() throws {
+        let data = try SubWeaponData(for: .fizzyBomb)
+        let subData = [SubWeapon.fizzyBomb : data]
+        
+        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
+
+        let info = try #require(defDmg[.fizzyBomb])
+        try #require(!info.isEmpty)
+        #expect(info.contains(type: .distance))
+    }
+    
+    @Test("Splash Def.Dmg.")
+    func splsashDefDmg() throws {
+        let data = try SubWeaponData(for: .torpedo)
+        let subData = [SubWeapon.torpedo : data]
+        
+        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
+
+        let info = try #require(defDmg[.torpedo])
+        try #require(!info.isEmpty)
+        #expect(info.contains(type: .splash))
+    }
+    
+    @Test("Empty Def.Dmg.", arguments: [
+        SubWeapon.pointSensor, .splashWall, .sprinkler, .squidBeakon, .toxicMist
+    ])
+    func emptyDefDmg(for sub: SubWeapon) throws {
+        let data = try SubWeaponData(for: sub)
+        let subData = [sub : data]
+        
+        let defDmg = StatHelper.subDefenseDamages(ap: self.ap, subData: subData)
+
+        let info = try #require(defDmg[sub])
+        #expect(info.isEmpty)
     }
 }
