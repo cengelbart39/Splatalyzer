@@ -7,6 +7,12 @@
 
 import Foundation
 
+#if os(macOS)
+import AppKit
+#else
+import UIKit
+#endif
+
 /// Represents every Sub Weapon
 public enum SubWeapon: String, CaseIterable, Codable, Sendable, WeaponRepresentable {
     case angleShooter = "LineMarker"
@@ -24,8 +30,10 @@ public enum SubWeapon: String, CaseIterable, Codable, Sendable, WeaponRepresenta
     case torpedo = "Bomb_Torpedo"
     case toxicMist = "PoisonMist"
     
-    /// The image of the current sub weapon
-    public var image: PlatformImage? {
+    #if os(macOS)
+    /// The icon for the sub weapon used in-game.
+    /// - Note: On other OSes, `UIImage` is used instead
+    public var image: NSImage? {
         guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
             return nil
         }
@@ -34,8 +42,23 @@ public enum SubWeapon: String, CaseIterable, Codable, Sendable, WeaponRepresenta
             return nil
         }
         
-        return PlatformImage(data: data)
+        return NSImage(data: data)
     }
+    #else
+    /// The icon for the sub weapon used in-game.
+    /// - Note: On macOS, `NSImage` is used instead.
+    public var image: UIImage? {
+        guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
+            return nil
+        }
+        
+        guard let data = try? Data(contentsOf: url) else {
+            return nil
+        }
+        
+        return UIImage(data: data)
+    }
+    #endif
     
     /// The localized name of the Sub Weapon
     public var localized: String {

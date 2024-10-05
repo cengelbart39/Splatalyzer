@@ -8,6 +8,12 @@
 import SwiftUI
 import Splatalyzer
 
+#if os(macOS)
+import AppKit
+#else
+import UIKit
+#endif
+
 /// A view that displays a collapsable list of stats
 public struct StatList<Content: View>: View {
     
@@ -18,19 +24,35 @@ public struct StatList<Content: View>: View {
     
     public var content: Content
     
-    public var image: PlatformImage?
+    #if os(macOS)
+    public var image: NSImage?
     
-    public init(title: String, image: PlatformImage?, content: Content) {
+    public init(title: String, image: NSImage?, content: Content) {
         self.title = title
         self.image = image
         self.content = content
     }
     
-    public init(title: String, image: PlatformImage? = nil, @ViewBuilder content: () -> Content) {
+    public init(title: String, image: NSImage? = nil, @ViewBuilder content: () -> Content) {
         self.title = title
         self.image = image
         self.content = content()
     }
+    #else
+    public var image: UIImage?
+    
+    public init(title: String, image: UIImage?, content: Content) {
+        self.title = title
+        self.image = image
+        self.content = content
+    }
+    
+    public init(title: String, image: UIImage? = nil, @ViewBuilder content: () -> Content) {
+        self.title = title
+        self.image = image
+        self.content = content()
+    }
+    #endif
     
     /// Whether the view is collapsed
     @State public var isCollapsed = true
@@ -46,7 +68,7 @@ public struct StatList<Content: View>: View {
             }, label: {
                 HStack {
                     if image != nil {
-                        Image(platformImage: image)
+                        ImageView(image: image)
                             .frame(maxHeight: labelHeight)
                     }
                     

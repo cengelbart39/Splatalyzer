@@ -7,6 +7,12 @@
 
 import Foundation
 
+#if os(macOS)
+import AppKit
+#else
+import UIKit
+#endif
+
 /// A type that has an associated JSON file
 public protocol FileRepresentable {
     
@@ -19,6 +25,11 @@ public protocol WeaponRepresentable: FileRepresentable {
     /// The localized name of the object
     var localized: String { get }
     
+    #if os(macOS)
     /// The name of an associated image
-    var image: PlatformImage? { get }
+    var image: NSImage? { get }
+    #else
+    /// The name of an associated image
+    var image: UIImage? { get }
+    #endif
 }

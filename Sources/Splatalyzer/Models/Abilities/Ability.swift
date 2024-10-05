@@ -7,6 +7,12 @@
 
 import Foundation
 
+#if os(macOS)
+import AppKit
+#else
+import UIKit
+#endif
+
 /// Represents the relationship between ``Ability`` and how much AP is provided.
 ///
 /// This is for convenience for use in functions and 
@@ -173,8 +179,10 @@ public enum Ability: String, CaseIterable, Codable, Sendable {
         }
     }
     
+    #if os(macOS)
     /// The icon for the ability used in-game.
-    public var image: PlatformImage? {
+    /// - Note: On other OSes, `UIImage` is used instead
+    public var image: NSImage? {
         guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
             return nil
         }
@@ -183,8 +191,23 @@ public enum Ability: String, CaseIterable, Codable, Sendable {
             return nil
         }
         
-        return PlatformImage(data: data)
+        return NSImage(data: data)
     }
+    #else
+    /// The icon for the ability used in-game.
+    /// - Note: On macOS, `NSImage` is used instead.
+    public var image: UIImage? {
+        guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
+            return nil
+        }
+        
+        guard let data = try? Data(contentsOf: url) else {
+            return nil
+        }
+        
+        return UIImage(data: data)
+    }
+    #endif
     
     /// The localized version of the ability name.
     ///

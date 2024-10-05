@@ -41,6 +41,15 @@ fileprivate struct Localization: Codable {
     func isValid() -> Bool {
         return !mainWeapons.isEmpty && !subWeapons.isEmpty && !specialWeapons.isEmpty && !abilities.isEmpty && !classes.isEmpty
     }
+    
+    func encode(to encoder: any Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(mainWeapons, forKey: .mainWeapons)
+        try container.encode(subWeapons, forKey: .subWeapons)
+        try container.encode(specialWeapons, forKey: .specialWeapons)
+        try container.encode(classes, forKey: .classes)
+        try container.encode(abilities, forKey: .abilities)
+    }
 }
 
 fileprivate let inputFileNames = [
@@ -97,7 +106,7 @@ for (locale, name) in inputFileNames {
     }
 }
 
-fileprivate struct AllLocalizations: Codable {
+fileprivate struct AllLocalizations: Encodable {
     let de: Localization
     let en: Localization
     let esUS: Localization
@@ -127,6 +136,24 @@ fileprivate struct AllLocalizations: Codable {
         case zhCNSimplified = "CNzh"
         case zhTWTraditional = "TWzh"
     }
+    
+    func encode(to encoder: any Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(de, forKey: .de)
+        try container.encode(en, forKey: .en)
+        try container.encode(esEU, forKey: .esEU)
+        try container.encode(esUS, forKey: .esUS)
+        try container.encode(frEU, forKey: .frEU)
+        try container.encode(frUS, forKey: .frUS)
+        try container.encode(it, forKey: .it)
+        try container.encode(jp, forKey: .jp)
+        try container.encode(ko, forKey: .ko)
+        try container.encode(nl, forKey: .nl)
+        try container.encode(ru, forKey: .ru)
+        try container.encode(zhCNSimplified, forKey: .zhCNSimplified)
+        try container.encode(zhTWTraditional, forKey: .zhTWTraditional)
+    }
+    
 }
 
 do {
@@ -147,7 +174,7 @@ do {
     )
     
     let encoder = JSONEncoder()
-    encoder.outputFormatting = [.prettyPrinted, .withoutEscapingSlashes]
+    encoder.outputFormatting = [.sortedKeys, .prettyPrinted, .withoutEscapingSlashes]
     
     let json = try encoder.encode(localizations)
     

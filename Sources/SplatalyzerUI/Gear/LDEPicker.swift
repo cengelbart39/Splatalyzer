@@ -46,7 +46,7 @@ public struct LDEPicker: View {
     
     public var body: some View {
         HStack {
-            Image(platformImage: Ability.lastDitchEffort.image)
+            ImageView(image: Ability.lastDitchEffort.image)
                 .padding(5)
                 .abilityBackground(for: colorScheme)
                 .frame(width: 60, height: 60)

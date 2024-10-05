@@ -16,8 +16,8 @@ import SwiftUI
 public struct MainWeaponPicker: View {
     
     @Environment(\.colorScheme) var colorScheme
-    
-    @State var subHeaderSize = CGFloat.zero
+        
+    @State var labelSize = CGFloat.zero
     
     /// The current main weapon
     @Binding public var mainWeapon: MainWeapon
@@ -35,7 +35,7 @@ public struct MainWeaponPicker: View {
                             Text(weapon.localized)
                             
                         }, icon: {
-                            Image(platformImage: weapon.image)
+                            ImageView(image: weapon.image)
                         })
                         .tag(weapon)
                     }
@@ -53,13 +53,24 @@ public struct MainWeaponPicker: View {
                 .pickerStyle(.menu)
             }
         } label : {
-            Label(
-                title: { Text(mainWeapon.localized) },
-                icon: {
-                    Image(platformImage: mainWeapon.image)
-                        .frame(width: 50, height: 50)
-                }
-            )
+            Label(title: {
+                Text(mainWeapon.localized)
+                    .overlay(
+                        GeometryReader { geo in
+                            Color.clear
+                                .onAppear {
+                                    self.labelSize = geo.frame(in: .local).size.height + 20
+                                }
+                                .onChange(of: geo.frame(in: .local).size.height) { _, newValue in
+                                    self.labelSize = newValue + 20
+                                }
+                        }
+                    )
+                
+            }, icon: {
+                ImageView(image: mainWeapon.image)
+                    .frame(width: labelSize, height: labelSize)
+            })
         }
         .pickerBackground(for: colorScheme)
         .accessibilityElement(children: .combine)

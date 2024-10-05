@@ -49,7 +49,6 @@ Learn more about how the package decodes and proccesses data.
 - ``SubWeapon``
 - ``SpecialWeapon``
 - ``WeaponClass``
-- ``PlatformImage-7ec5t``
 
 ### Abilities
 

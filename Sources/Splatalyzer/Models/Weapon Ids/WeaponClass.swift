@@ -7,6 +7,12 @@
 
 import Foundation
 
+#if os(macOS)
+import AppKit
+#else
+import UIKit
+#endif
+
 /// Represents the classes of Main Weapons
 public enum WeaponClass: String, CaseIterable, Sendable {
     case blaster = "Blaster"
@@ -21,9 +27,11 @@ public enum WeaponClass: String, CaseIterable, Sendable {
     case splatling = "Spinner"
     case stringer = "Stringer"
     
-    /// The image of the weapon class
-    public var image: PlatformImage? {
-        guard let url = Bundle.main.url(forResource: self.rawValue, withExtension: "png") else {
+    #if os(macOS)
+    /// The icon for the weapon class used in-game.
+    /// - Note: On other OSes, `UIImage` is used instead
+    public var image: NSImage? {
+        guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
             return nil
         }
         
@@ -31,8 +39,23 @@ public enum WeaponClass: String, CaseIterable, Sendable {
             return nil
         }
         
-        return PlatformImage(data: data)
+        return NSImage(data: data)
     }
+    #else
+    /// The icon for the weapon class used in-game.
+    /// - Note: On macOS, `NSImage` is used instead.
+    public var image: UIImage? {
+        guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
+            return nil
+        }
+        
+        guard let data = try? Data(contentsOf: url) else {
+            return nil
+        }
+        
+        return UIImage(data: data)
+    }
+    #endif
     
     /// Localized version of the weapon class name
     public var localized: String {

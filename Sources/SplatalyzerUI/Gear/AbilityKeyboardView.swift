@@ -70,7 +70,9 @@ public struct AbilityKeyboardView: View {
                             dismiss()
                             
                         }, label: {
-                            Image(platformImage: ability.image)
+                            ImageView(image: ability.image)
+                                .padding(5)
+                                .abilityBackground(for: colorScheme, with: true)
                         })
                         .buttonStyle(.plain)
                         .accessibilityLabel(ability.localized)

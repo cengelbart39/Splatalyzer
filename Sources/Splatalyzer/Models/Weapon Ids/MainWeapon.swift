@@ -226,8 +226,24 @@ public enum MainWeapon: String, CaseIterable, Codable, Identifiable, Sendable, W
         return UUID()
     }
     
-    /// The image of the current main weapon
-    public var image: PlatformImage? {
+    #if os(macOS)
+    /// The icon for the main weapon used in-game.
+    /// - Note: On other OSes, `UIImage` is used instead
+    public var image: NSImage? {
+        guard let url = Bundle.module.url(forResource: self.rawValue, withExtension: "png") else {
+            return nil
+        }
+        
+        guard let data = try? Data(contentsOf: url) else {
+            return nil
+        }
+        
+        return NSImage(data: data)
+    }
+    #else
+    /// The icon for the ability used in-game.
+    /// - Note: On macOS, `NSImage` is used instead.
+    public var image: UIImage? {
         guard let url = Bundle.module.url(forResource: "Path_Wst_\(self.rawValue)", withExtension: "png") else {
             return nil
         }
@@ -236,8 +252,9 @@ public enum MainWeapon: String, CaseIterable, Codable, Identifiable, Sendable, W
             return nil
         }
         
-        return PlatformImage(data: data)
+        return UIImage(data: data)
     }
+    #endif
     
     /// The localized name of the main weapon.
     public var localized: String {
