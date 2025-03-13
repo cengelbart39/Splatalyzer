@@ -5,6 +5,7 @@
       "CrossPaintCheckLength": 1.5,
       "CrossPaintRadius": 1.5,
       "DamageOffsetY": -0.2,
+      "DamageRadiusEnd": 12.6,
       "KnockBackParam": {
         "Accel": 93.333,
         "Bias": 0.8,
@@ -40,11 +41,12 @@
         "Mid": 0.006
       },
       "ChargeRateNiceFriend": [
-        0.08,
-        0.04,
-        0.02,
-        0.01
+        0.088,
+        0.044,
+        0.022,
+        0.011
       ],
+      "ChargeRateNiceSelf": 0.077,
       "ThanksPaintPointMax": 15.0,
       "ThanksPaintPointOnce": [
         6.0,

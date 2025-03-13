@@ -5,6 +5,10 @@
       "DistanceDamage": [
         {
           "Damage": 530,
+          "Distance": 2.5
+        },
+        {
+          "Damage": 350,
           "Distance": 4.0
         }
       ],
@@ -95,8 +99,8 @@
       "ShotDelayFrame": 15,
       "SpecialDurationFrame": {
         "High": 480.0,
-        "Low": 360.0,
-        "Mid": 420.0
+        "Low": 330.0,
+        "Mid": 405.0
       },
       "StartDelayFrame": 5
     }

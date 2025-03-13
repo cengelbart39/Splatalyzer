@@ -70,6 +70,7 @@
     },
     "MoveParam": {
       "$type": "spl__BulletBombTorpedoParam",
+      "BetweenRotEndAndStartChaseFrame": 20,
       "BurstFrame": 30,
       "CollisionSESpanFrame": 8,
       "CollisionSEVelDotGroundNrm": -1.0,
@@ -94,9 +95,9 @@
       "SpawnSpeedY": 0.24,
       "SpawnSpeedYWorldMin": -0.4,
       "SpawnSpeedZSpecUp": {
-        "High": 1.84,
-        "Low": 1.36,
-        "Mid": 1.6
+        "High": 1.9,
+        "Low": 1.4,
+        "Mid": 1.65
       },
       "WarningSERestFrame": 30
     },

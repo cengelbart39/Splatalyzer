@@ -430,7 +430,7 @@
       "SpeedInkConsumeMax": 0.18,
       "SpeedInkConsumeMin": 0.18,
       "SpeedNormal": 0.18,
-      "SwingRepeatFrame": 15,
+      "SwingRepeatFrame": 13,
       "ToPaintFrame": 14.0
     },
     "WeaponSwingParam": {

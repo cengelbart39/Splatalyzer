@@ -82,7 +82,7 @@
       "Jump_DegBiasEndFrame": 70,
       "Jump_DegBiasMax": 0.4,
       "Jump_DegSwerve": 12.0,
-      "MoveSpeed": 0.084,
+      "MoveSpeed": 0.088,
       "PostDelayFrame": 3,
       "RepeatFrame": 5,
       "ShotGuideFrame": 8,
@@ -90,7 +90,7 @@
       "Stand_DegBiasDecrease": 0.005,
       "Stand_DegBiasKf": 0.005,
       "Stand_DegBiasMin": 0.01,
-      "Stand_DegSwerve": 5.0
+      "Stand_DegSwerve": 4.75
     },
     "spl__SpawnBulletAdditionMovePlayerParam": {
       "$type": "spl__SpawnBulletAdditionMovePlayerParam",

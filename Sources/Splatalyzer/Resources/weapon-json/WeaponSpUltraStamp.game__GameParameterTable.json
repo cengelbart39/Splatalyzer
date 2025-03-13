@@ -67,11 +67,11 @@
       "CrossPaintRadius": 2.5,
       "DistanceDamage": [
         {
-          "Damage": 600,
+          "Damage": 2200,
           "Distance": 4.0
         },
         {
-          "Damage": 300,
+          "Damage": 600,
           "Distance": 8.0
         }
       ],

@@ -9,23 +9,24 @@
       "DistanceDamage": [
         {
           "Damage": 700,
-          "Distance": 1.5
+          "Distance": 1.6
         },
         {
           "Damage": 500,
-          "Distance": 3.57
+          "Distance": 3.8
         }
       ],
       "KnockBackParam": {
         "Accel": 700.0,
         "Bias": 0.8,
-        "Distance": 3.2
+        "Distance": 3.8
       },
       "PaintRadius": 0.0
     },
     "BlasterBurstParam": {
       "$type": "spl__BulletBlasterBurstParam",
       "BurstFrame": 11,
+      "ShotCollisionHitRadiusRate": 0.4687,
       "SplashDropPaintRadius": 3.84,
       "SplashDropPaintShotColHitRadius": 2.76,
       "SplashPaintRadius": 2.4,

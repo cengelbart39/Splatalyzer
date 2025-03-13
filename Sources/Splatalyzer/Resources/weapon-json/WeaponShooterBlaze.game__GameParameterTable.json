@@ -26,9 +26,9 @@
     "MoveParam": {
       "$type": "spl__BulletSimpleMoveParam",
       "FreeGravity": 0.016,
-      "GoStraightStateEndMaxSpeed": 1.8945,
+      "GoStraightStateEndMaxSpeed": 1.9513,
       "GoStraightToBrakeStateFrame": 3,
-      "SpawnSpeed": 2.2
+      "SpawnSpeed": 2.266
     },
     "PaintParam": {
       "$type": "spl__BulletShooterPaintParam",
@@ -84,7 +84,7 @@
       "Jump_DegBiasDecreaseStartFrame": 25,
       "Jump_DegBiasEndFrame": 70,
       "Jump_DegBiasMax": 0.4,
-      "Jump_DegSwerve": 16.0,
+      "Jump_DegSwerve": 15.54,
       "MoveSpeed": 0.072,
       "PostDelayFrame": 2,
       "RepeatFrame": 4,
@@ -94,7 +94,7 @@
       "Stand_DegBiasKf": 0.03,
       "Stand_DegBiasMax": 0.5,
       "Stand_DegBiasMin": 0.06,
-      "Stand_DegSwerve": 13.0
+      "Stand_DegSwerve": 12.63
     },
     "spl__SpawnBulletAdditionMovePlayerParam": {
       "$type": "spl__SpawnBulletAdditionMovePlayerParam",

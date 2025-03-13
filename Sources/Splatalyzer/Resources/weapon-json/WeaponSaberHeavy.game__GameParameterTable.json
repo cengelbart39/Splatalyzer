@@ -116,8 +116,8 @@
       },
       "SplashPaintParam": {
         "DepthScaleMax": 1.5,
-        "WidthHalf": 2.4,
-        "WidthHalfNearest": 2.0
+        "WidthHalf": 2.112,
+        "WidthHalfNearest": 1.76
       },
       "SplashSpawnParam": {
         "DropInterval": 2.0,
@@ -421,7 +421,7 @@
           "Z": 0.3
         },
         "SideStepParam": {
-          "ChargeFrame": 8,
+          "ChargeFrame": 10,
           "InkConsume": 0.0,
           "InkRecoverStop": 0,
           "InputReqAcceptFrame": 0,

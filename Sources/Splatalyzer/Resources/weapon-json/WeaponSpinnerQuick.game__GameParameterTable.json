@@ -87,8 +87,8 @@
     "WeaponParam": {
       "$type": "spl__WeaponSpinnerParam",
       "BurstAimMoveFrame": 0,
-      "ChargeFrame_First": 20,
-      "ChargeFrame_Second": 30,
+      "ChargeFrame_First": 18,
+      "ChargeFrame_Second": 27,
       "InkConsume": 0.15,
       "InkEmptyChargeTimes": 6,
       "InkRecoverStop": 30,

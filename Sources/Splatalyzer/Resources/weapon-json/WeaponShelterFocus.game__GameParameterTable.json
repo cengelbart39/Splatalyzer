@@ -136,7 +136,7 @@
         "RandomSpawnVelZMin": 0.01,
         "SplashPaintDepthScaleFullActive": 2.4,
         "SplashPaintDepthScaleOneActive": 4.8,
-        "SplashPaintWidthFullActive": 1.57,
+        "SplashPaintWidthFullActive": 2.0,
         "SplashPaintWidthOneActive": 0.7
       },
       "SplashWallDropCollisionParam": {
@@ -177,7 +177,7 @@
     },
     "spl__WeaponShelterShotgunParam": {
       "$type": "spl__WeaponShelterShotgunParam",
-      "InkConsume": 0.07,
+      "InkConsume": 0.06,
       "InkRecoverStop": 50,
       "InkRecoverStopCanopy": 55,
       "InkRecoverStopCharge": 20,

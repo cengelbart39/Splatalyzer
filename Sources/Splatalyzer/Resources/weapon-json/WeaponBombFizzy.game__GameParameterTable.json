@@ -121,14 +121,14 @@
           "DepthMinDropHeight": 10.0,
           "DepthScaleMax": 1.6,
           "DepthScaleMin": 1.6,
-          "WidthHalf": 1.08,
-          "WidthHalfNearest": 1.08
+          "WidthHalf": 1.2,
+          "WidthHalfNearest": 1.2
         },
         {
           "DepthScaleMax": 1.6,
           "DepthScaleMin": 1.6,
-          "WidthHalf": 1.2,
-          "WidthHalfNearest": 1.2
+          "WidthHalf": 1.26,
+          "WidthHalfNearest": 1.26
         },
         {
           "DepthScaleMax": 1.6,
@@ -147,6 +147,10 @@
       "GroundPositionHorizonAirResist": 0.19,
       "GroundRotateDeg50AirResist": 0.5,
       "GroundRotateHorizonAirResist": 0.35,
+      "HopPitchH": 58.0,
+      "HopPitchL": 48.0,
+      "HopVelH": 0.32,
+      "HopVelL": 0.24,
       "ObjColDamage": 100,
       "SpawnSpeedY": 0.24,
       "SpawnSpeedZSpecUp": {

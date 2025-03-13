@@ -67,16 +67,16 @@
       "SplashSlideParam": {
         "PaintWidthHalf": 2.0
       },
-      "UnrelaxFrameMove": 45,
-      "UnrelaxFrameMove_Last": 45,
-      "UnrelaxFrameNoSideStep": 45,
-      "UnrelaxFrameNoSideStep_Last": 45,
-      "UnrelaxFrameNoSquid": 45,
-      "UnrelaxFrameNoSquid_Last": 45,
+      "UnrelaxFrameMove": 42,
+      "UnrelaxFrameMove_Last": 42,
+      "UnrelaxFrameNoSideStep": 42,
+      "UnrelaxFrameNoSideStep_Last": 42,
+      "UnrelaxFrameNoSquid": 42,
+      "UnrelaxFrameNoSquid_Last": 42,
       "UnrelaxFrameNoWeapon": 6,
       "UnrelaxFrameNoWeapon_Last": 6,
-      "UnrelaxFrameOneMuzzle": 45,
-      "UnrelaxFrameOneMuzzle_Last": 45
+      "UnrelaxFrameOneMuzzle": 42,
+      "UnrelaxFrameOneMuzzle_Last": 42
     },
     "SplashPaintParam": {
       "$type": "spl__BulletSplashShooterPaintParam",

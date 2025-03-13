@@ -105,8 +105,8 @@
     },
     "WeaponParam": {
       "$type": "spl__WeaponChargerParam",
-      "ChargeFrameFullCharge": 75,
-      "ChargeFrameMidCharge": 53,
+      "ChargeFrameFullCharge": 71,
+      "ChargeFrameMidCharge": 50,
       "FreezeFrameFullCharge": 1,
       "FreezeFrameMinCharge": 1,
       "InkConsumeFullCharge": 0.15,
