@@ -35,3 +35,16 @@ public enum ModeType: String, Codable, Sendable {
     case other = "Other"
 }
 
+public struct ABGRData: Codable, Sendable {
+    public let a: Double
+    public let b: Double
+    public let g: Double
+    public let r: Double
+    
+    public enum CodingKeys: String, CodingKey {
+        case a = "A"
+        case b = "B"
+        case g = "G"
+        case r = "R"
+    }
+}

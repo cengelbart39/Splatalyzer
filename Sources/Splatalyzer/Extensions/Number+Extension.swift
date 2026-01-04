@@ -9,15 +9,16 @@ import Foundation
 
 public extension Int {
     /// Converts a number of frames to seconds
-    func framesToSeconds() -> Double {
-        return (Double(self) / 60).cutToDecimalPlaces(3)
+    func framesToSeconds(round: NumberFormatter.RoundingMode = .up) -> Double {
+        return Double(self).framesToSeconds(round: round)
     }
 }
 
 public extension Double {
     /// Converts a number of frames to seconds
-    func framesToSeconds() -> Double {
-        return (self / 60).cutToDecimalPlaces(3)
+    func framesToSeconds(round: NumberFormatter.RoundingMode = .up) -> Double {
+        return (ceil(self) / 60)
+            .cutToDecimalPlaces(3, round: round)
     }
     
     /// Formats Doubles to displayed in `View`s
@@ -36,9 +37,10 @@ public extension Double {
     }
     
     /// Removes decimal places after the nth place.
-    func cutToDecimalPlaces(_ n: Int = 2) -> Double {
+    func cutToDecimalPlaces(_ n: Int = 2, round: NumberFormatter.RoundingMode) -> Double {
         let formatter = NumberFormatter()
         formatter.maximumFractionDigits = n
+        formatter.roundingMode = round
         
         let str = formatter.string(from: NSNumber(value: self))!
         return Double(truncating: NumberFormatter().number(from: str)!)
@@ -46,17 +48,19 @@ public extension Double {
     
     /// Rounds a double and then removes decimal places after the nth place
     /// - SeeAlso: ``cutToDecimalPlaces(_:)``
-    func roundToDecimalPlaces(_ n: Double = 2) -> Double {
-        return ((self * pow(10, n)).rounded() / pow(10, n)).cutToDecimalPlaces(Int(n))
+    func roundToDecimalPlaces(_ n: Double = 2, round: NumberFormatter.RoundingMode) -> Double {
+        return ((self * pow(10, n)).rounded() / pow(10, n))
+            .cutToDecimalPlaces(Int(n), round: round)
     }
 }
 
 public extension Optional<Int> {
     /// Converts a number of frames to seconds if non-`nil`.
-    func framesToSeconds() -> Double? {
+    func framesToSeconds(round: NumberFormatter.RoundingMode) -> Double? {
         if self == nil { return nil }
         
-        return (Double(self!) / 60).cutToDecimalPlaces(3)
+        return (Double(self!) / 60)
+            .cutToDecimalPlaces(3, round: round)
     }
     
     /// Converts to `Optional<Double>`

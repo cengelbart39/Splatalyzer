@@ -15,7 +15,8 @@ struct RollerDataTests {
         
     @Test("Big Swig Roller Data", arguments: [
         WeaponKit(.bigSwigRoller, .splashWall, .inkVac),
-        WeaponKit(.bigSwigRollerExpress, .angleShooter, .inkStorm)
+        WeaponKit(.bigSwigRollerExpress, .angleShooter, .inkStorm),
+        WeaponKit(.plantezBigSwigRoller, .torpedo, .tripleSplashdown)
     ])
     func bigSwigRoller(_ kit: WeaponKit) throws {
         let data = try MainWeaponData(for: kit.main)
@@ -35,7 +36,8 @@ struct RollerDataTests {
     
     @Test("Carbon Roller Data", arguments: [
         WeaponKit(.carbonRoller, .autobomb, .zipcaster),
-        WeaponKit(.carbonRollerDeco, .burstBomb, .trizooka)
+        WeaponKit(.carbonRollerDeco, .burstBomb, .trizooka),
+        WeaponKit(.carbonRollerANGL, .fizzyBomb, .superChump)
     ])
     func carbonRoller(_ kit: WeaponKit) throws {
         let data = try MainWeaponData(for: kit.main)
@@ -55,7 +57,8 @@ struct RollerDataTests {
     
     @Test("Dynamo Roller Data", arguments: [
         WeaponKit(.dynamoRoller, .sprinkler, .tacticooler),
-        WeaponKit(.goldDynamoRoller, .splatBomb, .superChump)
+        WeaponKit(.goldDynamoRoller, .splatBomb, .superChump),
+        WeaponKit(.starzDynamoRoller, .pointSensor, .killerWail51)
     ])
     func dynamoRoller(_ kit: WeaponKit) throws {
         let data = try MainWeaponData(for: kit.main)

@@ -2,6 +2,7 @@
   "GameParameters": {
     "CloudParam": {
       "$type": "spl__BulletSpInkStormCloudParam",
+      "DamageRadius": 10.0,
       "NoPaintRainNum": 0,
       "RainNum": 72,
       "RainyFrame": {

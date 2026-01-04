@@ -13,7 +13,7 @@ struct FullInkTankOptionsTests {
     
     // MARK: - Normal Option
     @Test("Blaster Normal Option", arguments: [
-        MainWeapon.blaster, .customBlaster, .clashBlaster, .clashBlasterNeo, .lunaBlaster, .lunaBlasterNeo, .orderBlasterReplica, .rangeBlaster, .customRangeBlaster, .rapidBlaster, .rapidBlasterDeco, .rapidBlasterPro, .rapidBlasterProDeco, .sblast92, .sblast91
+        MainWeapon.blaster, .customBlaster, .gleamzBlaster, .clashBlaster, .clashBlasterNeo, .lunaBlaster, .lunaBlasterNeo, .orderBlasterReplica, .rangeBlaster, .customRangeBlaster, .rapidBlaster, .rapidBlasterDeco, .rapidBlasterPro, .rapidBlasterProDeco, .rapidBlasterProWNTR, .sblast92, .sblast91
     ])
     func blasterHasNormal(_ weapon: MainWeapon) throws {
         let options = try TestHelper.getFullInkTankOptions(for: weapon)
@@ -23,7 +23,7 @@ struct FullInkTankOptionsTests {
     }
     
     @Test("Brella Normal Option", arguments: [
-        MainWeapon.recycledBrella24MkI, .recycledBrella24MkII, .splatBrella, .sorellaBrella, .orderBrellaReplica, .tentaBrella, .tentatekSplattershot, .undercoverBrella, .undercoverSorellaBrella
+        MainWeapon.recycledBrella24MkI, .recycledBrella24MkII, .splatBrella, .sorellaBrella, .orderBrellaReplica, .tentaBrella, .tentaSorellaBrella, .tentaBrellaCREM, .undercoverBrella, .undercoverSorellaBrella, .patternzUndercoverBrella
     ])
     func brellaHasNormal(_ weapon: MainWeapon) throws {
         let options = try TestHelper.getFullInkTankOptions(for: weapon)
@@ -33,7 +33,7 @@ struct FullInkTankOptionsTests {
     }
     
     @Test("Dualies Normal Option", arguments: [
-        MainWeapon.dappleDualies, .dappleDualiesNouveau, .douserDualiesFF, .customDouserDualiesFF, .dualieSquelchers, .customDualieSquelchers, .gloogaDualies, .gloogaDualiesDeco, .splatDualies, .enperrySplatDualies, .orderDualiesReplica, .darkTetraDualies, .lightTetraDualies
+        MainWeapon.dappleDualies, .dappleDualiesNouveau, .dappleDualiesNOCT, .douserDualiesFF, .customDouserDualiesFF, .dualieSquelchers, .customDualieSquelchers, .hoofzDualieSquelchers, .gloogaDualies, .gloogaDualiesDeco, .splatDualies, .enperrySplatDualies, .twinklezSplatDualies, .orderDualiesReplica, .darkTetraDualies, .lightTetraDualies
     ])
     func dualiesHasNormal(_ weapon: MainWeapon) throws {
         let options = try TestHelper.getFullInkTankOptions(for: weapon)
@@ -43,7 +43,7 @@ struct FullInkTankOptionsTests {
     }
     
     @Test("Shooter Normal Option", arguments: [
-        MainWeapon.gal52, .gal52Deco, .gal96, .gal96Deco, .aerosprayMG, .aerosprayRG, .h3Nozzlenose, .h3NozzlenoseD, .jetSquelcher, .customJetSquelcher, .l3Nozzlenose, .l3NozzlenoseD, .nzap85, .nzap89, .splashomatic, .neoSplashomatic, .splattershot, .tentatekSplattershot, .heroShotReplica, .orderShotReplica, .octoShotReplica, .splattershotJr, .customSplattershotJr, .splattershotNova, .annakiSplattershotNova, .splattershotPro, .forgeSplattershotPro, .splooshomatic, .neoSplooshomatic, .squeezer, .foilSqueezer
+        MainWeapon.gal52, .gal52Deco, .gal96, .gal96Deco, .clawz96Gal, .aerosprayMG, .aerosprayRG, .colorzAerospray, .h3Nozzlenose, .h3NozzlenoseD, .h3NozzlenoseVIPR, .jetSquelcher, .customJetSquelcher, .jetSquelcherCOBR, .l3Nozzlenose, .l3NozzlenoseD, .glitterzL3Nozzlenose, .nzap85, .nzap89, .splashomatic, .neoSplashomatic, .splashomaticGCKO, .splattershot, .tentatekSplattershot, .glamorzSplattershot, .heroShotReplica, .orderShotReplica, .octoShotReplica, .splattershotJr, .customSplattershotJr, .splattershotNova, .annakiSplattershotNova, .splattershotPro, .forgeSplattershotPro, .splattershotProFRZN, .splooshomatic, .neoSplooshomatic, .squeezer, .foilSqueezer
     ])
     func shooterHasNormal(_ weapon: MainWeapon) throws {
         let options = try TestHelper.getFullInkTankOptions(for: weapon)
@@ -54,7 +54,7 @@ struct FullInkTankOptionsTests {
     
     // MARK: - Swings
     @Test("Roller Swing Option", arguments: [
-        MainWeapon.carbonRoller, .carbonRollerDeco, .dynamoRoller, .goldDynamoRoller, .splatRoller, .krakOnSplatRoller, .orderRollerReplica, .bigSwigRoller, .bigSwigRollerExpress
+        MainWeapon.carbonRoller, .carbonRollerDeco, .carbonRollerANGL, .dynamoRoller, .goldDynamoRoller, .starzDynamoRoller, .splatRoller, .krakOnSplatRoller, .orderRollerReplica, .bigSwigRoller, .bigSwigRollerExpress, .plantezBigSwigRoller
     ])
     func rollerHasSwing(_ weapon: MainWeapon) throws {
         let options = try TestHelper.getFullInkTankOptions(for: weapon)
@@ -150,7 +150,7 @@ struct FullInkTankOptionsTests {
     
     // MARK: - Shield Launch
     @Test("Brella Shield Launch Option", arguments: [
-        MainWeapon.recycledBrella24MkI, .recycledBrella24MkII, .splatBrella, .sorellaBrella, .orderBrellaReplica, .tentaBrella, .tentaSorellaBrella
+        MainWeapon.recycledBrella24MkI, .recycledBrella24MkII, .splatBrella, .sorellaBrella, .orderBrellaReplica, .tentaBrella, .tentaSorellaBrella, .tentaBrellaCREM
     ])
     func brellaHasShieldLaunch(_ weapon: MainWeapon) throws {
         let options = try TestHelper.getFullInkTankOptions(for: weapon)

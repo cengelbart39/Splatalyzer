@@ -78,7 +78,8 @@ struct SplatlingDataTests {
     
     @Test("Hydra Splatling Data", arguments: [
         WeaponKit(.hydraSplatling, .autobomb, .booyahBomb),
-        WeaponKit(.customHydraSplatling, .inkMine, .splattercolorScreen)
+        WeaponKit(.customHydraSplatling, .inkMine, .splattercolorScreen),
+        WeaponKit(.torrentzHydraSplattling, .sprinkler, .bigBubbler)
     ])
     func hydraSplatling(_ kit: WeaponKit) throws {
         let data = try MainWeaponData(for: kit.main)
@@ -100,7 +101,8 @@ struct SplatlingDataTests {
     
     @Test("Mini Splatling Data", arguments: [
         WeaponKit(.miniSplatling, .burstBomb, .ultraStamp),
-        WeaponKit(.zinkMiniSplatling, .toxicMist, .bigBubbler)
+        WeaponKit(.zinkMiniSplatling, .toxicMist, .bigBubbler),
+        WeaponKit(.miniSplatlingRTLR, .squidBeakon, .trizooka)
     ])
     func miniSplatling(_ kit: WeaponKit) throws {
         let data = try MainWeaponData(for: kit.main)

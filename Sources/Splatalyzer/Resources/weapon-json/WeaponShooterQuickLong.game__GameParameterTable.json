@@ -94,7 +94,7 @@
       "Stand_DegBiasKf": 0.03,
       "Stand_DegBiasMax": 0.25,
       "Stand_DegBiasMin": 0.1,
-      "Stand_DegSwerve": 5.5
+      "Stand_DegSwerve": 4.5
     },
     "spl__SpawnBulletAdditionMovePlayerParam": {
       "$type": "spl__SpawnBulletAdditionMovePlayerParam",

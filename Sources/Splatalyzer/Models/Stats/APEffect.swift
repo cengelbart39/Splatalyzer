@@ -51,11 +51,13 @@ public struct APEffect: Sendable {
     
     /// Converts ``baseEffect`` to damage
     public func baseEffectToDamage() -> Double {
-        return (baseEffect * 100).cutToDecimalPlaces(3)
+        return (baseEffect * 100)
+            .cutToDecimalPlaces(1, round: .down)
     }
     
     /// Converts ``effect`` to damage
     public func effectToDamage() -> Double {
-        return (effect * 100).cutToDecimalPlaces(3)
+        return (effect * 100)
+            .cutToDecimalPlaces(1, round: .down)
     }
 }

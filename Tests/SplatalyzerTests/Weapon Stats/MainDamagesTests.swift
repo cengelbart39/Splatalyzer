@@ -118,7 +118,7 @@ struct MainDamagesTests {
     }
     
     @Test("Slosher (Direct Range) Main Dmg.", arguments: [
-        MainWeapon.dreadWringer, .dreadWringerD, .slosher, .slosherDeco, .orderSlosherReplica, .sloshingMachine, .sloshingMachineNeo, .triSlosher, .triSlosherNouveau
+        MainWeapon.dreadWringer, .dreadWringerD, .hornzDreadWringer, .slosher, .slosherDeco, .orderSlosherReplica, .sloshingMachine, .sloshingMachineNeo, .triSlosher, .triSlosherNouveau, .triSlosherASHN
     ])
     func slosherDirectRangeDamages(_ slosher: MainWeapon) throws {
         let data = try MainWeaponData(for: slosher)
@@ -178,7 +178,7 @@ struct MainDamagesTests {
     }
     
     @Test("Stringer (Splash) Main Dmg.", arguments: [
-        MainWeapon.triStringer, .inklineTriStringer, .orderStringerReplica, .wellspringV, .customWellspringV
+        MainWeapon.triStringer, .inklineTriStringer, .bulbzTriStringer, .orderStringerReplica, .wellspringV, .customWellspringV
     ])
     func stringerSplashDamages(_ stringer: MainWeapon) throws {
         let data = try MainWeaponData(for: stringer)

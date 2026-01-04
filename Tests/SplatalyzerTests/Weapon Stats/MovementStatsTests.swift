@@ -91,7 +91,7 @@ struct MovementStatsTests {
     }
     
     @Test("Splatling (Charging) Move Stats", arguments: [
-        MainWeapon.ballpointSplatling, .ballpointSplatlingNouveau, .heavyEditSplatling, .heavyEditSplatlingNouveau, .hydraSplatling, .customHydraSplatling, .miniSplatling, .zinkMiniSplatling, .nautilus47, .nautilus79
+        MainWeapon.ballpointSplatling, .ballpointSplatlingNouveau, .heavyEditSplatling, .heavyEditSplatlingNouveau, .hydraSplatling, .customHydraSplatling, .torrentzHydraSplattling, .miniSplatling, .zinkMiniSplatling, .miniSplatlingRTLR, .nautilus47, .nautilus79
     ])
     func splatlingChargingStats(_ splatling: MainWeapon) throws {
         let moveStats = try TestHelper.getMoveStats(for: splatling)

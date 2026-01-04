@@ -42,6 +42,7 @@
             "Ratio": 0.615
           }
         ],
+        "MaxHP": 4800,
         "MoveParam": {
           "FlyGravity": 0.009,
           "FlyPositionAirResist": 0.001,

@@ -32,7 +32,8 @@ struct ShooterDataTests {
     
     @Test(".96 Gal Data", arguments: [
         WeaponKit(.gal96, .sprinkler, .inkVac),
-        WeaponKit(.gal96Deco, .splashWall, .krakenRoyale)
+        WeaponKit(.gal96Deco, .splashWall, .krakenRoyale),
+        WeaponKit(.clawz96Gal, .angleShooter, .tacticooler)
     ])
     func gal96(_ kit: WeaponKit) async throws {
         let data = try MainWeaponData(for: kit.main)
@@ -51,7 +52,8 @@ struct ShooterDataTests {
     
     @Test("Aerospray Data", arguments: [
         WeaponKit(.aerosprayMG, .fizzyBomb, .reefslider),
-        WeaponKit(.aerosprayRG, .sprinkler, .booyahBomb)
+        WeaponKit(.aerosprayRG, .sprinkler, .booyahBomb),
+        WeaponKit(.colorzAerospray, .burstBomb, .splattercolorScreen)
     ])
     func aerospray(_ kit: WeaponKit) async throws {
         let data = try MainWeaponData(for: kit.main)
@@ -71,7 +73,8 @@ struct ShooterDataTests {
     
     @Test("H-3 Nozzlenose Data", arguments: [
         WeaponKit(.h3Nozzlenose, .pointSensor, .tacticooler),
-        WeaponKit(.h3NozzlenoseD, .splashWall, .bigBubbler)
+        WeaponKit(.h3NozzlenoseD, .splashWall, .bigBubbler),
+        WeaponKit(.h3NozzlenoseVIPR, .suctionBomb, .tripleInkstrike)
     ])
     func h3Nozzlenose(_ kit: WeaponKit) async throws {
         let data = try MainWeaponData(for: kit.main)
@@ -92,7 +95,8 @@ struct ShooterDataTests {
     
     @Test("Jet Squelcher Data", arguments: [
         WeaponKit(.jetSquelcher, .angleShooter, .inkVac),
-        WeaponKit(.customJetSquelcher, .toxicMist, .inkStorm)
+        WeaponKit(.customJetSquelcher, .toxicMist, .inkStorm),
+        WeaponKit(.jetSquelcherCOBR, .burstBomb, .tripleSplashdown)
     ])
     func jetSquelcher(_ kit: WeaponKit) async throws {
         let data = try MainWeaponData(for: kit.main)
@@ -111,7 +115,8 @@ struct ShooterDataTests {
     
     @Test("L-3 Nozzlenose Data", arguments: [
         WeaponKit(.l3Nozzlenose, .curlingBomb, .crabTank),
-        WeaponKit(.l3NozzlenoseD, .burstBomb, .ultraStamp)
+        WeaponKit(.l3NozzlenoseD, .burstBomb, .ultraStamp),
+        WeaponKit(.glitterzL3Nozzlenose, .splatBomb, .inkjet)
     ])
     func l3Nozzlenose(_ kit: WeaponKit) async throws {
         let data = try MainWeaponData(for: kit.main)
@@ -151,7 +156,8 @@ struct ShooterDataTests {
     
     @Test("Splash-o-matic Data", arguments: [
         WeaponKit(.splashomatic, .burstBomb, .crabTank),
-        WeaponKit(.neoSplashomatic, .suctionBomb, .tripleInkstrike)
+        WeaponKit(.neoSplashomatic, .suctionBomb, .tripleInkstrike),
+        WeaponKit(.splashomaticGCKO, .toxicMist, .inkStorm)
     ])
     func splashomatic(_ kit: WeaponKit) async throws {
         let data = try MainWeaponData(for: kit.main)
@@ -171,6 +177,7 @@ struct ShooterDataTests {
     @Test("Splattershot Data", arguments: [
         WeaponKit(.splattershot, .suctionBomb, .trizooka),
         WeaponKit(.tentatekSplattershot, .splatBomb, .tripleInkstrike),
+        WeaponKit(.glamorzSplattershot, .burstBomb, .krakenRoyale),
         WeaponKit(.heroShotReplica, .suctionBomb, .trizooka),
         WeaponKit(.orderShotReplica, .suctionBomb, .trizooka),
         WeaponKit(.octoShotReplica, .splatBomb, .tripleInkstrike)
@@ -231,7 +238,8 @@ struct ShooterDataTests {
     
     @Test("Splattershot Pro Data", arguments: [
         WeaponKit(.splattershotPro, .angleShooter, .crabTank),
-        WeaponKit(.forgeSplattershotPro, .suctionBomb, .booyahBomb)
+        WeaponKit(.forgeSplattershotPro, .suctionBomb, .booyahBomb),
+        WeaponKit(.splattershotProFRZN, .splatBomb, .tentaMissiles)
     ])
     func splattershotPro(_ kit: WeaponKit) async throws {
         let data = try MainWeaponData(for: kit.main)

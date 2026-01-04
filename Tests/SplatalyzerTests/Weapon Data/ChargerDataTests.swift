@@ -114,6 +114,7 @@ struct ChargerDataTests {
     @Test("Splat Charger Data", arguments: [
         WeaponKit(.splatCharger, .splatBomb, .inkVac),
         WeaponKit(.zfSplatCharger, .splashWall, .tripleInkstrike),
+        WeaponKit(.splatChargerCAMO, .sprinkler, .crabTank),
         WeaponKit(.orderChargerReplica, .splatBomb, .inkVac)
     ])
     func splatCharger(_ kit: WeaponKit) throws {
@@ -134,6 +135,7 @@ struct ChargerDataTests {
     
     @Test("Splatterscope Data", arguments: [
         WeaponKit(.splatterscope, .splatBomb, .inkVac),
+        WeaponKit(.splatterscopeCAMO, .sprinkler, .crabTank),
         WeaponKit(.zfSplatterscope, .splashWall, .tripleInkstrike),
     ])
     func splatterscope(_ kit: WeaponKit) throws {

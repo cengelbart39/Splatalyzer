@@ -48,7 +48,8 @@ struct BrellaDataTests {
     
     @Test("Tenta Brella Data", arguments: [
         WeaponKit(.tentaBrella, .squidBeakon, .inkVac),
-        WeaponKit(.tentaSorellaBrella, .inkMine, .trizooka)
+        WeaponKit(.tentaSorellaBrella, .inkMine, .trizooka),
+        WeaponKit(.tentaBrellaCREM, .toxicMist, .superChump)
     ])
     func tentaBrella(_ kit: WeaponKit) throws {
         let data = try MainWeaponData(for: kit.main)
@@ -65,7 +66,8 @@ struct BrellaDataTests {
     
     @Test("Undercover Brella Data", arguments: [
         WeaponKit(.undercoverBrella, .inkMine, .reefslider),
-        WeaponKit(.undercoverSorellaBrella, .torpedo, .splattercolorScreen)
+        WeaponKit(.undercoverSorellaBrella, .torpedo, .splattercolorScreen),
+        WeaponKit(.patternzUndercoverBrella, .curlingBomb, .killerWail51)
     ])
     func undercoverBrella(_ kit: WeaponKit) throws {
         let data = try MainWeaponData(for: kit.main)

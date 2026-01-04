@@ -77,8 +77,8 @@ struct SpecialDataTests {
         let overwrites = data.overwrites
 
         #expect(data.id == .inkVac)
-        #expect(data.exhaleBlastParamMaxCharge != nil)
-        #expect(data.exhaleBlastParamMinCharge != nil)
+        #expect(!data.exhaleBlastParamMaxCharge.isEmpty)
+        #expect(!data.exhaleBlastParamMaxCharge.isEmpty)
         #expect(overwrites.radiusMax != nil)
         #expect(overwrites.radiusMin != nil)
     }

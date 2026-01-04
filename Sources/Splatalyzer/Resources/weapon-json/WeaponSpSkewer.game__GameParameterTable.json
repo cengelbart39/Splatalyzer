@@ -2,6 +2,7 @@
   "GameParameters": {
     "BulletBlastParam": {
       "$type": "spl__BulletBlastParam",
+      "DamageOffsetY": 0.0,
       "DistanceDamage": [
         {
           "Damage": 2200,

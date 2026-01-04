@@ -8,7 +8,7 @@
       "DistanceDamage": [
         {
           "Damage": 2200,
-          "Distance": 10.0
+          "Distance": 11.0
         }
       ],
       "KnockBackParam": {
@@ -17,7 +17,7 @@
         "Distance": 9.0
       },
       "PaintOffsetY": 0.5,
-      "PaintRadius": 10.0
+      "PaintRadius": 11.0
     },
     "ExhaleBlastParamMinCharge": {
       "$type": "spl__BulletBlastParam",

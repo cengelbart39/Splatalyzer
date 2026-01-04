@@ -15,7 +15,8 @@ struct StringerDataTests {
     
     @Test("REEF-LUX 450 Data", arguments: [
         WeaponKit(.reeflux450, .curlingBomb, .tentaMissiles),
-        WeaponKit(.reeflux450Deco, .splashWall, .reefslider)
+        WeaponKit(.reeflux450Deco, .splashWall, .reefslider),
+        WeaponKit(.reeflux450MILK, .torpedo, .booyahBomb)
     ])
     func reeflux450(_ kit: WeaponKit) throws {
         let data = try MainWeaponData(for: kit.main)
@@ -34,6 +35,7 @@ struct StringerDataTests {
     @Test("Tri-Stringer Data", arguments: [
         WeaponKit(.triStringer, .toxicMist, .killerWail51),
         WeaponKit(.inklineTriStringer, .sprinkler, .superChump),
+        WeaponKit(.bulbzTriStringer, .angleShooter, .inkjet),
         WeaponKit(.orderStringerReplica, .toxicMist, .killerWail51)
     ])
     func triStringer(_ kit: WeaponKit) throws {

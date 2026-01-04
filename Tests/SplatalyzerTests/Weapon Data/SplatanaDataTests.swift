@@ -35,6 +35,7 @@ struct SplatanaDataTests {
     @Test("Splatana Stamper Data", arguments: [
         WeaponKit(.splatanaStamper, .burstBomb, .zipcaster),
         WeaponKit(.splatanaStamperNouveau, .toxicMist, .crabTank),
+        WeaponKit(.stickerzSplatanaStamper, .autobomb, .booyahBomb),
         WeaponKit(.orderSplatanaReplica, .burstBomb, .zipcaster)
     ])
     func splatanaStamper(_ kit: WeaponKit) throws {
@@ -54,7 +55,8 @@ struct SplatanaDataTests {
     
     @Test("Splatana Wiper Data", arguments: [
         WeaponKit(.splatanaWiper, .torpedo, .ultraStamp),
-        WeaponKit(.splatanaWiperDeco, .squidBeakon, .tentaMissiles)
+        WeaponKit(.splatanaWiperDeco, .squidBeakon, .tentaMissiles),
+        WeaponKit(.splatanaWiperRUST, .curlingBomb, .trizooka)
     ])
     func splatanaWiper(_ kit: WeaponKit) throws {
         let data = try MainWeaponData(for: kit.main)

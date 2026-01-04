@@ -103,7 +103,7 @@
       "DepthMaxDropHeight": 3.0,
       "DepthMinDropHeight": 10.0,
       "DepthScaleMax": 2.1,
-      "WidthHalf": 1.284,
+      "WidthHalf": 1.45,
       "WidthHalfNearest": 1.7976
     },
     "SplashSpawnParam": {

@@ -63,7 +63,8 @@ public struct SubWeaponStats: Codable, Equatable, Sendable {
         
         self.inkConsumptionPercentage = StatHelper.subInkConsumptionPercentage(ap: ap, mainInfo: mainData, subInfo: subData)
         
-        self.whiteInkSeconds = subData.inkRecoverStop.framesToSeconds()
+        self.whiteInkSeconds = subData.inkRecoverStop
+            .framesToSeconds()
         
         self.velocity = StatHelper.subVelocity(ap: ap, subInfo: subData)
         

@@ -13,7 +13,8 @@ struct BlasterDataTests {
     
     @Test("Blaster Data", arguments: [
         WeaponKit(.blaster, .autobomb, .bigBubbler),
-        WeaponKit(.customBlaster, .pointSensor, .tripleSplashdown)
+        WeaponKit(.customBlaster, .pointSensor, .tripleSplashdown),
+        WeaponKit(.gleamzBlaster, .squidBeakon, .crabTank)
     ])
     func blaster(_ kit: WeaponKit) throws {
         let data = try MainWeaponData(for: kit.main)
@@ -119,7 +120,8 @@ struct BlasterDataTests {
     
     @Test("Rapid Blaster Pro Data", arguments: [
         WeaponKit(.rapidBlasterPro, .toxicMist, .inkVac),
-        WeaponKit(.rapidBlasterProDeco, .angleShooter, .killerWail51)
+        WeaponKit(.rapidBlasterProDeco, .angleShooter, .killerWail51),
+        WeaponKit(.rapidBlasterProWNTR, .suctionBomb, .tacticooler)
     ])
     func rapidBlasterPro(_ kit: WeaponKit) throws {
         let data = try MainWeaponData(for: kit.main)

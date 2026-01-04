@@ -40,13 +40,14 @@ public struct WeaponInfoMainItem: Codable, Identifiable, Sendable {
     public let lObjParam: String
     public let label: String
     public let lockerContentInfo: [String]
+    public let lockerModelColor: ABGRData
     public let matchingId: Int
     public let npcActor: String
     public let range: Double
     public let rewardLv2: String
     public let rewardLv3: String
-    public let rewardLv4: String
-    public let rewardLv5: String
+    public let rewardLv4: String?
+    public let rewardLv5: String?
     public let season: Int
     public let shopPrice: Int
     public let shopUnlockRank: Int
@@ -72,6 +73,7 @@ public struct WeaponInfoMainItem: Codable, Identifiable, Sendable {
         case lObjParam = "LObjParam"
         case label = "Label"
         case lockerContentInfo = "LockerContentInfo"
+        case lockerModelColor = "LockerModelColor"
         case matchingId = "MatchingId"
         case npcActor = "NpcActor"
         case range = "Range"

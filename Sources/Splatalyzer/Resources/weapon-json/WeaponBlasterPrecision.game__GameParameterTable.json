@@ -229,7 +229,7 @@
     },
     "WeaponParam": {
       "$type": "spl__WeaponShooterParam",
-      "InkConsume": 0.085,
+      "InkConsume": 0.095,
       "InkRecoverStop": 60,
       "Jump_DegBiasDecreaseStartFrame": 25,
       "Jump_DegBiasEndFrame": 70,
@@ -237,7 +237,7 @@
       "Jump_DegSwerve": 8.0,
       "MoveSpeed": 0.04,
       "PostDelayFrame": 4,
-      "PostDelayFrame_Blaster": 23,
+      "PostDelayFrame_Blaster": 26,
       "PreDelayFrame_HumanShot": 10,
       "PreDelayFrame_SquidShot": 15,
       "RepeatFrame": 55,

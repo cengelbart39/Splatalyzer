@@ -26,9 +26,9 @@
     "MoveParam": {
       "$type": "spl__BulletSimpleMoveParam",
       "FreeGravity": 0.016,
-      "GoStraightStateEndMaxSpeed": 1.5815,
+      "GoStraightStateEndMaxSpeed": 1.6289,
       "GoStraightToBrakeStateFrame": 2,
-      "SpawnSpeed": 3.92
+      "SpawnSpeed": 4.0376
     },
     "PaintParam": {
       "$type": "spl__BulletShooterPaintParam",
@@ -45,7 +45,7 @@
       "$type": "spl__BulletSplashShooterPaintParam",
       "DepthMaxDropHeight": 3.0,
       "DepthMinDropHeight": 10.0,
-      "WidthHalf": 1.472,
+      "WidthHalf": 1.428,
       "WidthHalfNearest": 2.0608
     },
     "SplashSpawnParam": {

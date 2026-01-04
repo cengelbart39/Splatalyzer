@@ -110,6 +110,8 @@
       "FreezeFrameMinCharge": 1,
       "InkConsumeFullCharge": 0.35,
       "InkConsumeMinCharge": 0.0197,
+      "InkEmptyChargeTimes": 3,
+      "InkRecoverStop": 20,
       "JumpHeightFullCharge": 0.1,
       "MoveJumpDownBias": 0.5,
       "MoveSpeedFullCharge": 0.068,

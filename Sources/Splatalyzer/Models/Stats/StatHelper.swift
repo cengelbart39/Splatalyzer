@@ -40,7 +40,7 @@ public struct StatHelper {
         ap: AbilityPoints,
         mainInfo: MainWeaponData
     ) -> AbilityStat {
-        let ability = Ability.specialPowerUp
+        let ability = Ability.specialChargeUp
         
         let spuAp = ap[ability] ?? 0
         
@@ -105,7 +105,7 @@ public struct StatHelper {
     /// - Parameter x: Special lost value
     /// - Returns: Formatted  percentage value
     public static func specialSavedAfterDeath(_ x: Double) -> Double {
-        return ((1 - x) * 100.0).cutToDecimalPlaces()
+        return ((1 - x) * 100.0).cutToDecimalPlaces(round: .down)
     }
     
     /// Calculates how many shots of the main weapon can be performed after
@@ -142,7 +142,7 @@ public struct StatHelper {
                 let option = InkTankOption(
                     subsFromFullInkTank: fromFullInkTank,
                     type: type,
-                    value: tankValue.roundToDecimalPlaces())
+                    value: tankValue.roundToDecimalPlaces(round: .down))
                 
                 if result[fromFullInkTank] == nil {
                     result[fromFullInkTank] = [option]
@@ -315,14 +315,14 @@ public struct StatHelper {
                             ap: sruAp,
                             baseValue: value / 10,
                             subInfo: data
-                        ),
+                        ).cutToDecimalPlaces(1, round: .down),
                         distance: 0,
                         distanceArr: [],
                         subWeapon: weapon)
                     
                     weaponResults.append(stat)
                     
-                } else if let value = value as? [DistanceDamage] {
+                } else if let value = value as? [DistanceDamage], !value.isEmpty {
                     var localResults = [DamageEffectStat]()
                     
                     for subValue in value {
@@ -333,7 +333,7 @@ public struct StatHelper {
                                 ap: sruAp,
                                 baseValue: Double(subValue.damage) / 10,
                                 subInfo: data
-                            ),
+                            ).cutToDecimalPlaces(1, round: .down),
                             distance: subValue.distance,
                             distanceArr: [],
                             subWeapon: weapon)
@@ -345,7 +345,11 @@ public struct StatHelper {
                         let stat = DamageEffectStat(
                             type: type,
                             baseValue: localResults.sumBaseValue(),
-                            effectValue: localResults.sumBaseValue(),
+                            effectValue: StatHelper.subDamageValue(
+                                ap: sruAp,
+                                baseValue: localResults.sumBaseValue(),
+                                subInfo: data
+                            ).cutToDecimalPlaces(1, round: .down),
                             distance: 0,
                             distanceArr: [],
                             subWeapon: weapon)
@@ -468,9 +472,11 @@ public struct StatHelper {
         let subConsume = SubWeaponConsume(ap, mainInfo, subInfo)
         
         return AbilityStat(
-            baseValue: ((subInfo.inkConsume * 100) / mainInfo.inkTankSize).roundToDecimalPlaces(),
+            baseValue: ((subInfo.inkConsume * 100) / mainInfo.inkTankSize)
+                .roundToDecimalPlaces(round: .down),
             modifiedBy: [.inkSaverSub],
-            value: ((subConsume.inkConsume * 100) / mainInfo.inkTankSize).roundToDecimalPlaces(),
+            value: ((subConsume.inkConsume * 100) / mainInfo.inkTankSize)
+                .roundToDecimalPlaces(round: .down),
             unit: .percentage,
             title: String(localized: "Ink Tank Consumption")
         )
@@ -498,9 +504,11 @@ public struct StatHelper {
             weapon: mainInfo)
         
         return AbilityStat(
-            baseValue: (apEffect.baseEffect * mainInfo.inkTankSize).framesToSeconds().cutToDecimalPlaces(3),
+            baseValue: (apEffect.baseEffect * mainInfo.inkTankSize)
+                .framesToSeconds(),
             modifiedBy: [.inkRecoveryUp],
-            value: (apEffect.effect * mainInfo.inkTankSize).framesToSeconds().cutToDecimalPlaces(3),
+            value: (apEffect.effect * mainInfo.inkTankSize)
+                .framesToSeconds(),
             unit: .seconds,
             title: effectKey == .inkRecoverFrmStealth ? String(localized: "Ink Tank Recovery Time (Squid Form)") : String(localized: "Ink Tank Recovery Time (Humanoid Form)")
         )
@@ -525,9 +533,11 @@ public struct StatHelper {
             weapon: mainInfo)
         
         return AbilityStat(
-            baseValue: (apEffect.baseEffect * 10).cutToDecimalPlaces(3),
+            baseValue: (apEffect.baseEffect * 10)
+                .cutToDecimalPlaces(3, round: .down),
             modifiedBy: [ability],
-            value: (apEffect.effect * 10).cutToDecimalPlaces(3),
+            value: (apEffect.effect * 10)
+                .cutToDecimalPlaces(3, round: .down),
             unit: .unitsPerFrame,
             title: String(localized: "Run Speed")
         )
@@ -555,9 +565,11 @@ public struct StatHelper {
                 weapon: mainInfo)
             
             return AbilityStat(
-                baseValue: (moveSpeed * apEffect.baseEffect * 10).cutToDecimalPlaces(3),
+                baseValue: (moveSpeed * apEffect.baseEffect * 10)
+                    .cutToDecimalPlaces(3, round: .down),
                 modifiedBy: [.runSpeedUp],
-                value: (moveSpeed * apEffect.effect * 10).cutToDecimalPlaces(3),
+                value: (moveSpeed * apEffect.effect * 10)
+                    .cutToDecimalPlaces(3, round: .down),
                 unit: .unitsPerFrame,
                 title: String(localized: "Run Speed While Shooting")
             )
@@ -594,9 +606,11 @@ public struct StatHelper {
         let ninjaSquidMultiplier = gearBuild.hasAbility(.ninjaSquid) ? 0.9 : 1
         
         return AbilityStat(
-            baseValue: (apEffect.baseEffect * 10).cutToDecimalPlaces(3),
+            baseValue: (apEffect.baseEffect * 10)
+                .cutToDecimalPlaces(3, round: .down),
             modifiedBy: [.swimSpeedUp, .ninjaSquid],
-            value: (apEffect.effect * 10 * ninjaSquidMultiplier).cutToDecimalPlaces(3),
+            value: (apEffect.effect * 10 * ninjaSquidMultiplier)
+                .cutToDecimalPlaces(3, round: .down),
             unit: .unitsPerFrame,
             title: String(localized: "Swim Speed")
         )
@@ -619,9 +633,11 @@ public struct StatHelper {
         let rainmakerSpeedPenalty = 0.8
         
         return AbilityStat(
-            baseValue: (withoutRM.baseValue * rainmakerSpeedPenalty).cutToDecimalPlaces(3),
+            baseValue: (withoutRM.baseValue * rainmakerSpeedPenalty)
+                .cutToDecimalPlaces(3, round: .down),
             modifiedBy: withoutRM.modifiedBy,
-            value: (withoutRM.value * rainmakerSpeedPenalty).cutToDecimalPlaces(3),
+            value: (withoutRM.value * rainmakerSpeedPenalty)
+                .cutToDecimalPlaces(3, round: .down),
             unit: .unitsPerFrame,
             title: String(localized: "Swim Speed While Holding The Rainmaker")
         )
@@ -645,9 +661,11 @@ public struct StatHelper {
             weapon: mainInfo)
         
         return AbilityStat(
-            baseValue: (apEffect.baseEffect * 10).cutToDecimalPlaces(3),
+            baseValue: (apEffect.baseEffect * 10)
+                .cutToDecimalPlaces(3, round: .down),
             modifiedBy: [iru],
-            value: (apEffect.effect * 10).cutToDecimalPlaces(3),
+            value: (apEffect.effect * 10)
+                .cutToDecimalPlaces(3, round: .down),
             unit: .unitsPerFrame,
             title: String(localized: "Run Speed In Enemy Ink")
         )
@@ -825,9 +843,11 @@ public struct StatHelper {
             weapon: mainInfo)
         
         return AbilityStat(
-            baseValue: (ceil(charge.baseEffect) + ceil(move.baseEffect)).framesToSeconds(),
+            baseValue: (ceil(charge.baseEffect) + ceil(move.baseEffect))
+                .framesToSeconds(round: .down),
             modifiedBy: [.quickSuperJump],
-            value: (ceil(charge.effect) + ceil(move.effect)).framesToSeconds(),
+            value: (ceil(charge.effect) + ceil(move.effect))
+                .framesToSeconds(round: .down),
             unit: .seconds,
             title: String(localized: "Total Super Jump Time")
         )
@@ -857,9 +877,11 @@ public struct StatHelper {
             weapon: mainInfo)
         
         return AbilityStat(
-            baseValue: (ceil(charge.baseEffect) + ceil(move.baseEffect)).framesToSeconds(),
+            baseValue: (ceil(charge.baseEffect) + ceil(move.baseEffect))
+                .framesToSeconds(),
             modifiedBy: [.quickSuperJump],
-            value: (ceil(charge.effect) + ceil(move.effect)).framesToSeconds(),
+            value: (ceil(charge.effect) + ceil(move.effect))
+                .framesToSeconds(),
             unit: .frames,
             title: String(localized: "Super Jump Vulnerable Frames")
         )
@@ -891,9 +913,10 @@ public struct StatHelper {
         let reducedExtraSpeed = extraSpeed * (1 - apEffect.effect)
         
         return AbilityStat(
-            baseValue: jumpSpread.roundToDecimalPlaces(),
+            baseValue: jumpSpread.roundToDecimalPlaces(round: .down),
             modifiedBy: [ability],
-            value: (reducedExtraSpeed + groundSpread).roundToDecimalPlaces(),
+            value: (reducedExtraSpeed + groundSpread)
+                .roundToDecimalPlaces(round: .down),
             unit: .degrees,
             title: String(localized: "Shot Spread While Jumping")
         )
@@ -925,9 +948,10 @@ public struct StatHelper {
         let reducedExtraSpeed = extraSpeed * (1 - apEffect.effect)
         
         return AbilityStat(
-            baseValue: jumpSpread.roundToDecimalPlaces(),
+            baseValue: jumpSpread.roundToDecimalPlaces(round: .down),
             modifiedBy: [ability],
-            value: (reducedExtraSpeed + groundSpread).roundToDecimalPlaces(),
+            value: (reducedExtraSpeed + groundSpread)
+                .roundToDecimalPlaces(round: .down),
             unit: .degrees,
             title: String(localized: "Secondary Mode Spread While Jumping")
         )
@@ -1047,9 +1071,11 @@ public struct StatHelper {
             weapon: mainInfo)
         
         return AbilityStat(
-            baseValue: (apEffect.baseEffect * 100).roundToDecimalPlaces(),
+            baseValue: (apEffect.baseEffect * 100)
+                .roundToDecimalPlaces(round: .down),
             modifiedBy: [sru],
-            value: (apEffect.effect * 100).roundToDecimalPlaces(),
+            value: (apEffect.effect * 100)
+                .roundToDecimalPlaces(round: .down),
             unit: .percentage,
             title: String(localized: "\(SubWeapon.toxicMist.localized) Movement Reduction", comment: "Refers to the movement reduction effect of Toxic Mist.")
         )
@@ -1134,9 +1160,11 @@ public struct StatHelper {
             weapon: subInfo)
         
         return AbilityStat(
-            baseValue: apEffect.baseEffect.roundToDecimalPlaces(3),
+            baseValue: apEffect.baseEffect
+                .roundToDecimalPlaces(3, round: .down),
             modifiedBy: [spu],
-            value: apEffect.effect.roundToDecimalPlaces(3),
+            value: apEffect.effect
+                .roundToDecimalPlaces(3, round: .down),
             unit: .unitsPerFrame,
             title: String(localized: "Velocity (Decides Range)")
         )
@@ -1299,9 +1327,11 @@ public struct StatHelper {
             weapon: subInfo)
         
         return AbilityStat(
-            baseValue: (apEffect.baseEffect / 10).roundToDecimalPlaces(1),
+            baseValue: (apEffect.baseEffect / 10)
+                .roundToDecimalPlaces(1, round: .down),
             modifiedBy: [spu],
-            value: (apEffect.effect / 10).roundToDecimalPlaces(1),
+            value: (apEffect.effect / 10)
+                .roundToDecimalPlaces(1, round: .down),
             unit: .hp,
             title: String(localized: "Durability")
         )
@@ -1363,9 +1393,11 @@ public struct StatHelper {
             weapon: specialInfo)
         
         return AbilityStat(
-            baseValue: apEffect.baseEffect.roundToDecimalPlaces(4),
+            baseValue: apEffect.baseEffect
+                .roundToDecimalPlaces(4, round: .down),
             modifiedBy: [spu],
-            value: apEffect.effect.roundToDecimalPlaces(4),
+            value: apEffect.effect
+                .roundToDecimalPlaces(4, round: .down),
             unit: .damage,
             title: String(localized: "\(specialInfo.id.localized) Damage Distance", comment: "Refers to the damage done by a special weapon over some specified distance.")
         )
@@ -1395,9 +1427,11 @@ public struct StatHelper {
             weapon: specialInfo)
         
         return AbilityStat(
-            baseValue: apEffect.baseEffect.roundToDecimalPlaces(4),
+            baseValue: apEffect.baseEffect
+                .roundToDecimalPlaces(4, round: .down),
             modifiedBy: [spu],
-            value: apEffect.effect.roundToDecimalPlaces(4),
+            value: apEffect.effect
+                .roundToDecimalPlaces(4, round: .down),
             unit: .radius,
             title: String(localized: "\(specialInfo.id.localized) Paint Radius", comment: "Refers to the painting radius of certain specials.")
         )
@@ -1493,9 +1527,11 @@ public struct StatHelper {
         let zipcasterInkTankSize = 1.5
         
         return AbilityStat(
-            baseValue: ((apEffect.baseEffect * 100) / zipcasterInkTankSize).roundToDecimalPlaces(),
+            baseValue: ((apEffect.baseEffect * 100) / zipcasterInkTankSize)
+                .roundToDecimalPlaces(round: .down),
             modifiedBy: [spu],
-            value: ((apEffect.effect * 100) / zipcasterInkTankSize).roundToDecimalPlaces(),
+            value: ((apEffect.effect * 100) / zipcasterInkTankSize)
+                .roundToDecimalPlaces(round: .down),
             unit: .percentage,
             title: String(localized: "\(specialInfo.id.localized) Hook Ink Consumption", comment: "Refers to the ink consumption of the Zipcaster hook.")
         )
@@ -1527,9 +1563,11 @@ public struct StatHelper {
         let zipcasterInkTankSize = 1.5
         
         return AbilityStat(
-            baseValue: ((apEffect.baseEffect * 100) / zipcasterInkTankSize).roundToDecimalPlaces(),
+            baseValue: ((apEffect.baseEffect * 100) / zipcasterInkTankSize)
+                .roundToDecimalPlaces(round: .down),
             modifiedBy: [spu],
-            value: ((apEffect.effect * 100) / zipcasterInkTankSize).roundToDecimalPlaces(),
+            value: ((apEffect.effect * 100) / zipcasterInkTankSize)
+                .roundToDecimalPlaces(round: .down),
             unit: .percentage,
             title: String(localized: "\(specialInfo.id.localized) Hook Ink Consumption Per Second", comment: "Refers to the ink consumption of the Zipcaster special while idling.")
         )
@@ -1559,9 +1597,11 @@ public struct StatHelper {
             weapon: specialInfo)
                 
         return AbilityStat(
-            baseValue: apEffect.baseEffect.roundToDecimalPlaces(),
+            baseValue: apEffect.baseEffect
+                .roundToDecimalPlaces(round: .down),
             modifiedBy: [spu],
-            value: apEffect.effect.roundToDecimalPlaces(),
+            value: apEffect.effect
+                .roundToDecimalPlaces(round: .down),
             unit: .radius,
             title: String(localized: "\(specialInfo.id.localized) Reticle Radius", comment: "Refers to the reticle radius of the Tenta Missile special.")
         )
@@ -1591,9 +1631,11 @@ public struct StatHelper {
             weapon: specialInfo)
                 
         return AbilityStat(
-            baseValue: apEffect.baseEffect.roundToDecimalPlaces(),
+            baseValue: apEffect.baseEffect
+                .roundToDecimalPlaces(round: .down),
             modifiedBy: [spu],
-            value: apEffect.effect.roundToDecimalPlaces(),
+            value: apEffect.effect
+                .roundToDecimalPlaces(round: .down),
             unit: .distance,
             title: String(localized: "\(specialInfo.id.localized) Throw Distance", comment: "Refers to the throwing distance of the Splattercolor Screen special.")
         )
@@ -1623,9 +1665,11 @@ public struct StatHelper {
             weapon: specialInfo)
                 
         return AbilityStat(
-            baseValue: apEffect.baseEffect.roundToDecimalPlaces(4),
+            baseValue: apEffect.baseEffect
+                .roundToDecimalPlaces(4, round: .down),
             modifiedBy: [spu],
-            value: apEffect.effect.roundToDecimalPlaces(4),
+            value: apEffect.effect
+                .roundToDecimalPlaces(4, round: .down),
             unit: .unitsPerFrame,
             title: String(localized: "\(specialInfo.id.localized) Movement Speed", comment: "Refers to the player's movement speed while using certain specials.")
         )
@@ -1655,9 +1699,11 @@ public struct StatHelper {
             weapon: specialInfo)
                 
         return AbilityStat(
-            baseValue: (apEffect.baseEffect * 100).roundToDecimalPlaces(),
+            baseValue: (apEffect.baseEffect * 100)
+                .roundToDecimalPlaces(round: .down),
             modifiedBy: [spu],
-            value: (apEffect.effect * 100).roundToDecimalPlaces(),
+            value: (apEffect.effect * 100)
+                .roundToDecimalPlaces(round: .down),
             unit: .none,
             title: String(localized: "Special Auto Charge Rate")
         )
@@ -1687,9 +1733,11 @@ public struct StatHelper {
             weapon: specialInfo)
                 
         return AbilityStat(
-            baseValue: apEffect.baseEffect.roundToDecimalPlaces(),
+            baseValue: apEffect.baseEffect
+                .roundToDecimalPlaces(round: .down),
             modifiedBy: [spu],
-            value: apEffect.effect.roundToDecimalPlaces(),
+            value: apEffect.effect
+                .roundToDecimalPlaces(round: .down),
             unit: .radius,
             title: String(localized: "\(specialInfo.id.localized) Max Radius", comment: "Refers to the maximum radius of the Big Bubbler or Wave Breaker special.")
         )
@@ -1726,10 +1774,10 @@ public struct StatHelper {
             weapon: specialInfo)
         
         let range = AbilityStatRange(
-            baseMin: minEffect.baseEffect.roundToDecimalPlaces(),
-            baseMax: maxEffect.baseEffect.roundToDecimalPlaces(),
-            valueMin: minEffect.effect.roundToDecimalPlaces(),
-            valueMax: maxEffect.effect.roundToDecimalPlaces(),
+            baseMin: minEffect.baseEffect.roundToDecimalPlaces(round: .down),
+            baseMax: maxEffect.baseEffect.roundToDecimalPlaces(round: .down),
+            valueMin: minEffect.effect.roundToDecimalPlaces(round: .down),
+            valueMax: maxEffect.effect.roundToDecimalPlaces(round: .down),
             modifiedBy: [spu],
             unit: .radius,
             title: String(localized: "\(specialInfo.id.localized) Radius Range", comment: "Refers to the maximum and minimum radius of the certain specials.")

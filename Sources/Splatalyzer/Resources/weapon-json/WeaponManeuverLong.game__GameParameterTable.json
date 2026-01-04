@@ -32,16 +32,16 @@
     },
     "MoveLapOverParam": {
       "$type": "spl__BulletSimpleMoveParam",
-      "GoStraightStateEndMaxSpeed": 2.35,
-      "GoStraightToBrakeStateFrame": 4,
-      "SpawnSpeed": 2.4
+      "GoStraightStateEndMaxSpeed": 2.23,
+      "GoStraightToBrakeStateFrame": 3,
+      "SpawnSpeed": 3.312
     },
     "MoveParam": {
       "$type": "spl__BulletSimpleMoveParam",
       "FreeGravity": 0.016,
-      "GoStraightStateEndMaxSpeed": 2.7,
-      "GoStraightToBrakeStateFrame": 5,
-      "SpawnSpeed": 2.8
+      "GoStraightStateEndMaxSpeed": 2.325,
+      "GoStraightToBrakeStateFrame": 4,
+      "SpawnSpeed": 3.72
     },
     "PaintParam": {
       "$type": "spl__BulletShooterPaintParam",

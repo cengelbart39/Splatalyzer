@@ -50,6 +50,7 @@
         "InitRadiusForField": 0.1,
         "InitRadiusForPlayer": 0.04
       },
+      "DirectDamage": 500,
       "DrawSize": 0.7,
       "MoveParam": {
         "BrakeAirResist": 0.1,

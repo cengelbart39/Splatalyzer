@@ -13,7 +13,8 @@ struct DualieDataTests {
 
     @Test("Dapple Dualies Data", arguments: [
         WeaponKit(.dappleDualies, .squidBeakon, .tacticooler),
-        WeaponKit(.dappleDualiesNouveau, .torpedo, .reefslider)
+        WeaponKit(.dappleDualiesNouveau, .torpedo, .reefslider),
+        WeaponKit(.dappleDualiesNOCT, .splatBomb, .killerWail51)
     ])
     func dappleDualies(_ kit: WeaponKit) throws {
         let data = try MainWeaponData(for: kit.main)
@@ -55,7 +56,8 @@ struct DualieDataTests {
     
     @Test("Dualie Squelchers Data", arguments: [
         WeaponKit(.dualieSquelchers, .splatBomb, .waveBreaker),
-        WeaponKit(.customDualieSquelchers, .squidBeakon, .superChump)
+        WeaponKit(.customDualieSquelchers, .squidBeakon, .superChump),
+        WeaponKit(.hoofzDualieSquelchers, .pointSensor, .splattercolorScreen)
     ])
     func dualieSquelchers(_ kit: WeaponKit) throws {
         let data = try MainWeaponData(for: kit.main)
@@ -97,6 +99,7 @@ struct DualieDataTests {
     @Test("Splat Dualies Data", arguments: [
         WeaponKit(.splatDualies, .suctionBomb, .crabTank),
         WeaponKit(.enperrySplatDualies, .curlingBomb, .tripleSplashdown),
+        WeaponKit(.twinklezSplatDualies, .fizzyBomb, .bigBubbler),
         WeaponKit(.orderDualiesReplica, .suctionBomb, .crabTank)
     ])
     func splatDualies(_ kit: WeaponKit) throws {

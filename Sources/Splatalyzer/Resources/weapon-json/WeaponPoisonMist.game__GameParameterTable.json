@@ -38,8 +38,8 @@
     },
     "WeaponParam": {
       "$type": "spl__WeaponSubParam",
-      "InkConsume": 0.6,
-      "InkRecoverStop": 75
+      "InkConsume": 0.55,
+      "InkRecoverStop": 80
     },
     "spl__SpawnBulletAdditionMovePlayerParam": {
       "$type": "spl__SpawnBulletAdditionMovePlayerParam",

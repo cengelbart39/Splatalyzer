@@ -31,6 +31,7 @@ struct BrushDataTests {
     @Test("Octobrush Data", arguments: [
         WeaponKit(.octobrush, .suctionBomb, .zipcaster),
         WeaponKit(.octobrushNouveau, .squidBeakon, .inkStorm),
+        WeaponKit(.cometzOctobrush, .autobomb, .krakenRoyale),
         WeaponKit(.orderbrushReplica, .suctionBomb, .zipcaster)
     ])
     func octobrush(_ kit: WeaponKit) throws {
@@ -48,7 +49,8 @@ struct BrushDataTests {
     
     @Test("Painbrush Data", arguments: [
         WeaponKit(.painbrush, .curlingBomb, .waveBreaker),
-        WeaponKit(.painbrushNouveau, .pointSensor, .tentaMissiles)
+        WeaponKit(.painbrushNouveau, .pointSensor, .tentaMissiles),
+        WeaponKit(.painbrushBRNZ, .splashWall, .trizooka)
     ])
     func painbrush(_ kit: WeaponKit) throws {
         let data = try MainWeaponData(for: kit.main)

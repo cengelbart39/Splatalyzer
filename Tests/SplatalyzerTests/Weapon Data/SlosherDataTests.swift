@@ -32,7 +32,8 @@ struct SlosherDataTests {
     
     @Test("Dread Wringer Data", arguments: [
         WeaponKit(.dreadWringer, .suctionBomb, .reefslider),
-        WeaponKit(.dreadWringerD, .squidBeakon, .waveBreaker)
+        WeaponKit(.dreadWringerD, .squidBeakon, .waveBreaker),
+        WeaponKit(.hornzDreadWringer, .curlingBomb, .crabTank)
     ])
     func dreadWringer(_ kit: WeaponKit) throws {
         let data = try MainWeaponData(for: kit.main)
@@ -109,7 +110,8 @@ struct SlosherDataTests {
     
     @Test("Tri-Slosher Data", arguments: [
         WeaponKit(.triSlosher, .toxicMist, .inkjet),
-        WeaponKit(.triSlosherNouveau, .fizzyBomb, .tacticooler)
+        WeaponKit(.triSlosherNouveau, .fizzyBomb, .tacticooler),
+        WeaponKit(.triSlosherASHN, .splatBomb, .splattercolorScreen)
     ])
     func triSlosher(_ kit: WeaponKit) throws {
         let data = try MainWeaponData(for: kit.main)

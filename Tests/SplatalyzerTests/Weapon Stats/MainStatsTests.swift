@@ -22,7 +22,7 @@ struct MainStatsTests {
     }
     
     @Test("Brellas (Exists) Main Stats", arguments: [
-        MainWeapon.recycledBrella24MkI, .recycledBrella24MkII, .tentaBrella, .tentaSorellaBrella, .undercoverBrella, .undercoverSorellaBrella
+        MainWeapon.recycledBrella24MkI, .recycledBrella24MkII, .tentaBrella, .tentaSorellaBrella, .tentaBrellaCREM, .undercoverBrella, .undercoverSorellaBrella, .patternzUndercoverBrella
     ])
     func brellaStatsExist(_ brella: MainWeapon) throws {
         let stats = try TestHelper.getMainWeaponStats(for: brella)
@@ -60,7 +60,7 @@ struct MainStatsTests {
     }
     
     @Test("Chargers (Max Charge) Main Stats", arguments: [
-        MainWeapon.gooTuber, .customGooTuber, .eliter4K, .customEliter4K, .splatCharger, .zfSplatCharger, .orderChargerReplica, .classicSquiffer, .newSquiffer
+        MainWeapon.gooTuber, .customGooTuber, .eliter4K, .customEliter4K, .splatCharger, .zfSplatCharger, .splatChargerCAMO, .orderChargerReplica, .classicSquiffer, .newSquiffer
     ])
     func chargerMaxChargeStats(_ charger: MainWeapon) throws {
         let stats = try TestHelper.getMainWeaponStats(for: charger)
@@ -70,7 +70,7 @@ struct MainStatsTests {
     }
     
     @Test("Chargers (Not Exist) Main Stats", arguments: [
-        MainWeapon.splatterscope, .zfSplatterscope
+        MainWeapon.splatterscope, .zfSplatterscope, .splatterscopeCAMO
     ])
     func chargerNotExistStats(_ charger: MainWeapon) throws {
         let stats = try TestHelper.getMainWeaponStats(for: charger)
@@ -106,7 +106,7 @@ struct MainStatsTests {
     }
     
     @Test("Shooters (White Ink) Main Stats", arguments: [
-        MainWeapon.aerosprayMG, .aerosprayRG, .splattershotJr, .customSplattershotJr, .splooshomatic, .neoSplooshomatic, .h3Nozzlenose, .h3NozzlenoseD, .l3Nozzlenose, .l3NozzlenoseD
+        MainWeapon.aerosprayMG, .aerosprayRG, .colorzAerospray, .splattershotJr, .customSplattershotJr, .splooshomatic, .neoSplooshomatic, .h3Nozzlenose, .h3NozzlenoseD, .h3NozzlenoseVIPR, .l3Nozzlenose, .l3NozzlenoseD, .glitterzL3Nozzlenose
     ])
     func shooterWhiteInkStats(_ shooter: MainWeapon) throws {
         let stats = try TestHelper.getMainWeaponStats(for: shooter)

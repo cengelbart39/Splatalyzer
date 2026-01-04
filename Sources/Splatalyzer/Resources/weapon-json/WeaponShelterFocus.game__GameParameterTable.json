@@ -9,11 +9,12 @@
     },
     "spl__BulletShelterCanopyParam": {
       "$type": "spl__BulletShelterCanopyParam",
+      "CanopyAttackedDamageRate": 0.6,
       "CanopyCureHPPerFrame": 5,
       "CanopyDamage": 200,
       "CanopyFrame": 170,
       "CanopyGravity": 0.75,
-      "CanopyHP": 1000,
+      "CanopyHP": 1500,
       "CanopyHitOtherCanopyDamage": 1000,
       "CanopyHitOtherCanopyVolume": 1,
       "CanopyHitShieldAttackDamage": 750,

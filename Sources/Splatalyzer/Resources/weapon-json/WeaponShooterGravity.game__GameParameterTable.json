@@ -26,9 +26,9 @@
       "$type": "spl__BulletSimpleMoveParam",
       "FreeAirResist": 0.02,
       "FreeGravity": 0.016,
-      "GoStraightStateEndMaxSpeed": 1.8472,
-      "GoStraightToBrakeStateFrame": 4,
-      "SpawnSpeed": 2.2
+      "GoStraightStateEndMaxSpeed": 1.667,
+      "GoStraightToBrakeStateFrame": 3,
+      "SpawnSpeed": 3.06
     },
     "PaintParam": {
       "$type": "spl__BulletShooterPaintParam",
@@ -77,7 +77,7 @@
     },
     "WeaponParam": {
       "$type": "spl__WeaponShooterParam",
-      "InkConsume": 0.013,
+      "InkConsume": 0.015,
       "Jump_DegBiasDecreaseStartFrame": 25,
       "Jump_DegBiasEndFrame": 70,
       "Jump_DegBiasMax": 0.4,

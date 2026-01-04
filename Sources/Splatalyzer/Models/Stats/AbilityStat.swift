@@ -58,8 +58,6 @@ public enum StatUnit: Codable, CaseIterable, Sendable {
             return "p"
         case .hp:
             return "HP"
-        case .unitsPerFrame:
-            return "units/frame"
         case .frames:
             return "frames"
         case .degrees:

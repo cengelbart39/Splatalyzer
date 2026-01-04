@@ -34,7 +34,9 @@
             "SpawnSpeed": 2.6
           },
           "PaintParam": {
-            "WidthHalfNear": 1.8
+            "WidthHalfFar": 1.68,
+            "WidthHalfMiddle": 1.68,
+            "WidthHalfNear": 2.16
           },
           "TotalNum": 1,
           "VerticalDegree": 0.0,
@@ -52,16 +54,20 @@
             "ValueMin": 108
           },
           "DrawRadius": 1.325,
-          "HorizontalDegree": 6.0,
+          "HorizontalDegree": 7.2,
           "HorizontalOffset": 0.12,
           "MoveParam": {
             "GoStraightStateEndMaxSpeed": 1.652,
             "GoStraightToBrakeStateFrame": 3,
             "SpawnSpeed": 2.6
           },
-          "PaintParam": {},
+          "PaintParam": {
+            "WidthHalfFar": 1.68,
+            "WidthHalfMiddle": 1.68,
+            "WidthHalfNear": 1.68
+          },
           "TotalNum": 6,
-          "VerticalDegree": 4.0,
+          "VerticalDegree": 4.8,
           "VerticalOffset": 0.1
         },
         {
@@ -76,15 +82,20 @@
             "ValueMin": 108
           },
           "DrawRadius": 1.325,
-          "HorizontalDegree": 2.0,
+          "HorizontalDegree": 2.4,
           "HorizontalOffset": 0.05,
           "MoveParam": {
             "GoStraightStateEndMaxSpeed": 1.652,
             "GoStraightToBrakeStateFrame": 3,
             "SpawnSpeed": 2.6
           },
+          "PaintParam": {
+            "WidthHalfFar": 1.68,
+            "WidthHalfMiddle": 1.68,
+            "WidthHalfNear": 1.68
+          },
           "TotalNum": 4,
-          "VerticalDegree": 3.0,
+          "VerticalDegree": 3.6,
           "VerticalOffset": 0.05
         }
       ],
@@ -98,8 +109,8 @@
       "SplashParam": {
         "SplashPaintDepthScaleFullActive": 2.1,
         "SplashPaintDepthScaleOneActive": 4.7,
-        "SplashPaintWidthFullActive": 1.4986,
-        "SplashPaintWidthOneActive": 0.59
+        "SplashPaintWidthFullActive": 1.8733,
+        "SplashPaintWidthOneActive": 0.7375
       },
       "SplashWallDropCollisionParam": {
         "PaintRadiusFall": 0.65,
