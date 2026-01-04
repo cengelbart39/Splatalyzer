@@ -43,7 +43,7 @@ or
 
 ```swift
 .target(name: "<target>", dependencies: [
-    .product(name: "SplatalyzerUI", package: "SplatalyzerUI"),
+    .product(name: "SplatalyzerUI", package: "Splatalyzer"),
 ]),
 ```
 
@@ -55,4 +55,4 @@ Information about package localization can also be found here.
 
 ## Disclaimer
 
-Splatoon is a trademark and copyright of Nintendo 2014-2024. Splatalyzer is not affilated with Nintendo.
+Splatoon is a trademark and copyright of Nintendo 2014-2026. Splatalyzer is not affilated with Nintendo.

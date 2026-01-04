@@ -10,10 +10,13 @@
 - ``customSplattershotJr``
 - ``splashomatic``
 - ``neoSplashomatic``
+- ``splashomaticGCKO``
 - ``aerosprayMG``
 - ``aerosprayRG``
+- ``colorzAerospray``
 - ``splattershot``
 - ``tentatekSplattershot``
+- ``glamorzSplattershot``
 - ``heroShotReplica``
 - ``orderShotReplica``
 - ``octoShotReplica``
@@ -23,40 +26,50 @@
 - ``nzap89``
 - ``splattershotPro``
 - ``forgeSplattershotPro``
+- ``splattershotProFRZN``
 - ``gal96``
 - ``gal96Deco``
+- ``clawz96Gal``
 - ``jetSquelcher``
 - ``customJetSquelcher``
+- ``jetSquelcherCOBR``
 - ``splattershotNova``
 - ``annakiSplattershotNova``
 - ``l3Nozzlenose``
 - ``l3NozzlenoseD``
+- ``glitterzL3Nozzlenose``
 - ``h3Nozzlenose``
 - ``h3NozzlenoseD``
+- ``h3NozzlenoseVIPR``
 - ``squeezer``
 - ``foilSqueezer``
 
 ### Rollers
 - ``carbonRoller``
 - ``carbonRollerDeco``
+- ``carbonRollerANGL``
 - ``splatRoller``
 - ``krakOnSplatRoller``
 - ``orderRollerReplica``
 - ``dynamoRoller``
 - ``goldDynamoRoller``
+- ``starzDynamoRoller``
 - ``flingzaRoller``
 - ``foilFlingzaRoller``
 - ``bigSwigRoller``
 - ``bigSwigRollerExpress``
+- ``plantezBigSwigRoller``
 
 ### Chargers
 - ``classicSquiffer``
 - ``newSquiffer``
 - ``splatCharger``
 - ``zfSplatCharger``
+- ``splatChargerCAMO``
 - ``orderChargerReplica``
 - ``splatterscope``
 - ``zfSplatterscope``
+- ``splatterscopeCAMO``
 - ``eliter4K``
 - ``customEliter4K``
 - ``eliter4KScope``
@@ -74,6 +87,7 @@
 - ``orderSlosherReplica``
 - ``triSlosher``
 - ``triSlosherNouveau``
+- ``triSlosherASHN``
 - ``sloshingMachine``
 - ``sloshingMachineNeo``
 - ``bloblobber``
@@ -82,15 +96,18 @@
 - ``customExplosher``
 - ``dreadWringer``
 - ``dreadWringerD``
+- ``hornzDreadWringer``
 
 ### Splatlings
 - ``miniSplatling``
 - ``zinkMiniSplatling``
+- ``miniSplatlingRTLR``
 - ``heavySplatling``
 - ``heavySplatlingDeco``
 - ``orderSplatlingReplica``
 - ``hydraSplatling``
 - ``customHydraSplatling``
+- ``torrentzHydraSplattling``
 - ``ballpointSplatling``
 - ``ballpointSplatlingNouveau``
 - ``nautilus47``
@@ -101,13 +118,16 @@
 ### Dualies
 - ``dappleDualies``
 - ``dappleDualiesNouveau``
+- ``dappleDualiesNOCT``
 - ``splatDualies``
 - ``enperrySplatDualies``
+- ``twinklezSplatDualies``
 - ``orderDualiesReplica``
 - ``gloogaDualies``
 - ``gloogaDualiesDeco``
 - ``dualieSquelchers``
 - ``customDualieSquelchers``
+- ``hoofzDualieSquelchers``
 - ``darkTetraDualies``
 - ``lightTetraDualies``
 - ``douserDualiesFF``
@@ -119,8 +139,10 @@
 - ``orderBrellaReplica``
 - ``tentaBrella``
 - ``tentaSorellaBrella``
+- ``tentaBrellaCREM``
 - ``undercoverBrella``
 - ``undercoverSorellaBrella``
+- ``patternzUndercoverBrella``
 - ``recycledBrella24MkI``
 - ``recycledBrella24MkII``
 
@@ -130,6 +152,7 @@
 - ``orderBlasterReplica``
 - ``blaster``
 - ``customBlaster``
+- ``gleamzBlaster``
 - ``rangeBlaster``
 - ``customRangeBlaster``
 - ``clashBlaster``
@@ -138,6 +161,7 @@
 - ``rapidBlasterDeco``
 - ``rapidBlasterPro``
 - ``rapidBlasterProDeco``
+- ``rapidBlasterProWNTR``
 - ``sblast92``
 - ``sblast91``
 
@@ -146,24 +170,30 @@
 - ``inkbrushNouveau``
 - ``octobrush``
 - ``octobrushNouveau``
+- ``cometzOctobrush``
 - ``orderbrushReplica``
 - ``painbrush``
 - ``painbrushNouveau``
+- ``painbrushBRNZ``
 
 ### Stringers
 - ``triStringer``
 - ``inklineTriStringer``
+- ``bulbzTriStringer``
 - ``orderStringerReplica``
 - ``reeflux450``
 - ``reeflux450Deco``
+- ``reeflux450MILK``
 - ``wellspringV``
 - ``customWellspringV``
 
 ### Splatanas
 - ``splatanaStamper``
 - ``splatanaStamperNouveau``
+- ``stickerzSplatanaStamper``
 - ``orderSplatanaReplica``
 - ``splatanaWiper``
 - ``splatanaWiperDeco``
+- ``splatanaWiperRUST``
 - ``mintDecavitator``
 - ``charcoalDecavitator``

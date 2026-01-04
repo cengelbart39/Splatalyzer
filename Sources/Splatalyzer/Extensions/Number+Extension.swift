@@ -47,7 +47,7 @@ public extension Double {
     }
     
     /// Rounds a double and then removes decimal places after the nth place
-    /// - SeeAlso: ``cutToDecimalPlaces(_:)``
+    /// - SeeAlso: ``cutToDecimalPlaces(_:round:)``
     func roundToDecimalPlaces(_ n: Double = 2, round: NumberFormatter.RoundingMode) -> Double {
         return ((self * pow(10, n)).rounded() / pow(10, n))
             .cutToDecimalPlaces(Int(n), round: round)
