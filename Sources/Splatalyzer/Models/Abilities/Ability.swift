@@ -218,6 +218,8 @@ public enum Ability: String, CaseIterable, Codable, Sendable {
 }
 
 public extension Ability {
+    static let localizedFlowAura = NSLocalizedString("FlowAura", tableName: "Ability", bundle: Bundle.module, comment: "")
+    
     static let useableAbilities = Ability.allCases.filter { $0 != .none }
     
     /// An array of abilities that can only  be used on headgear

@@ -51,9 +51,17 @@ public final class SplatalyzerViewModel: ObservableObject {
     }
     
     /// Update statstics after a change in Tacticooler statis
-    @MainActor public func updateStats(for tacticooler: Bool) throws {
+    @MainActor public func updateStats(tacticooler: Bool) throws {
         DispatchQueue.main.async {
             self.build.usingTacticooler = tacticooler
+        }
+        
+        try self.analyze()
+    }
+    
+    @MainActor public func updateStats(flowAura: Bool) throws {
+        DispatchQueue.main.async {
+            self.build.usingFlowAura = flowAura
         }
         
         try self.analyze()

@@ -5,20 +5,20 @@
       "ChangeFrameForField": 0,
       "ChangeFrameForPlayer": 0,
       "EndRadiusForField": 0.2,
-      "EndRadiusForPlayer": 0.25,
+      "EndRadiusForPlayer": 0.285,
       "FriendThroughFrameForPlayer": 0,
       "InitRadiusForField": 0.2,
-      "InitRadiusForPlayer": 0.25
+      "InitRadiusForPlayer": 0.285
     },
     "CollisionParam": {
       "$type": "spl__BulletSimpleCollisionParam",
       "ChangeFrameForField": 0,
       "ChangeFrameForPlayer": 0,
       "EndRadiusForField": 0.2,
-      "EndRadiusForPlayer": 0.2,
+      "EndRadiusForPlayer": 0.235,
       "FriendThroughFrameForPlayer": 0,
       "InitRadiusForField": 0.2,
-      "InitRadiusForPlayer": 0.2
+      "InitRadiusForPlayer": 0.235
     },
     "DamageParam": {
       "$type": "spl__BulletShooterDamageParam",

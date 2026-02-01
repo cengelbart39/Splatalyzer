@@ -41,37 +41,37 @@
           {
             "ChangeFrameForField": 5,
             "EndRadiusForField": 0.3,
-            "EndRadiusForPlayer": 0.25,
+            "EndRadiusForPlayer": 0.32,
             "InitRadiusForField": 0.25,
-            "InitRadiusForPlayer": 0.25
+            "InitRadiusForPlayer": 0.32
           },
           {
             "ChangeFrameForField": 5,
             "EndRadiusForField": 0.3,
-            "EndRadiusForPlayer": 0.275,
+            "EndRadiusForPlayer": 0.345,
             "InitRadiusForField": 0.275,
-            "InitRadiusForPlayer": 0.275
+            "InitRadiusForPlayer": 0.345
           },
           {
             "ChangeFrameForField": 0,
             "EndRadiusForField": 0.3,
-            "EndRadiusForPlayer": 0.3,
+            "EndRadiusForPlayer": 0.37,
             "InitRadiusForField": 0.3,
-            "InitRadiusForPlayer": 0.3
+            "InitRadiusForPlayer": 0.37
           },
           {
             "ChangeFrameForField": 5,
             "EndRadiusForField": 0.3,
-            "EndRadiusForPlayer": 0.275,
+            "EndRadiusForPlayer": 0.345,
             "InitRadiusForField": 0.275,
-            "InitRadiusForPlayer": 0.275
+            "InitRadiusForPlayer": 0.345
           },
           {
             "ChangeFrameForField": 5,
             "EndRadiusForField": 0.3,
-            "EndRadiusForPlayer": 0.25,
+            "EndRadiusForPlayer": 0.32,
             "InitRadiusForField": 0.25,
-            "InitRadiusForPlayer": 0.25
+            "InitRadiusForPlayer": 0.32
           }
         ]
       },
@@ -222,45 +222,45 @@
         "ParamArray": [
           {
             "EndRadiusForField": 0.3,
-            "EndRadiusForPlayer": 0.3,
-            "InitRadiusForField": 0.3,
-            "InitRadiusForPlayer": 0.3
-          },
-          {
-            "EndRadiusForField": 0.35,
             "EndRadiusForPlayer": 0.35,
-            "InitRadiusForField": 0.35,
+            "InitRadiusForField": 0.3,
             "InitRadiusForPlayer": 0.35
           },
           {
-            "EndRadiusForField": 0.45,
-            "EndRadiusForPlayer": 0.45,
-            "InitRadiusForField": 0.45,
-            "InitRadiusForPlayer": 0.45
+            "EndRadiusForField": 0.35,
+            "EndRadiusForPlayer": 0.4,
+            "InitRadiusForField": 0.35,
+            "InitRadiusForPlayer": 0.4
           },
           {
-            "EndRadiusForField": 0.5,
+            "EndRadiusForField": 0.45,
             "EndRadiusForPlayer": 0.5,
-            "InitRadiusForField": 0.5,
+            "InitRadiusForField": 0.45,
             "InitRadiusForPlayer": 0.5
           },
           {
+            "EndRadiusForField": 0.5,
+            "EndRadiusForPlayer": 0.55,
+            "InitRadiusForField": 0.5,
+            "InitRadiusForPlayer": 0.55
+          },
+          {
             "EndRadiusForField": 0.45,
-            "EndRadiusForPlayer": 0.45,
+            "EndRadiusForPlayer": 0.5,
             "InitRadiusForField": 0.45,
-            "InitRadiusForPlayer": 0.45
+            "InitRadiusForPlayer": 0.5
           },
           {
             "EndRadiusForField": 0.35,
-            "EndRadiusForPlayer": 0.35,
+            "EndRadiusForPlayer": 0.4,
             "InitRadiusForField": 0.35,
-            "InitRadiusForPlayer": 0.35
+            "InitRadiusForPlayer": 0.4
           },
           {
             "EndRadiusForField": 0.3,
-            "EndRadiusForPlayer": 0.3,
+            "EndRadiusForPlayer": 0.35,
             "InitRadiusForField": 0.3,
-            "InitRadiusForPlayer": 0.3
+            "InitRadiusForPlayer": 0.35
           }
         ]
       },

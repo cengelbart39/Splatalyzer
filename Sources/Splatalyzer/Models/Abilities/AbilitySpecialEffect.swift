@@ -26,6 +26,9 @@ public enum AbilitySpecialEffect: Equatable, Sendable {
     /// The effect provided by the Tacticooler ``SpecialWeapon``
     case tacticooler
     
+    /// The effect provided by the the Flow Aura mechanic
+    case flowAura
+    
     /// The effect provided by each `AbilityEffectValue`
     ///
     /// Last-Ditch Effort calculates the AP-value by using the intensity. Other wise, values are hard-coded.
@@ -78,6 +81,13 @@ public enum AbilitySpecialEffect: Equatable, Sendable {
                 AbilityEffectValue(57, of: .intensifyAction, boostsBeyond: true)
             ]
             
+        case .flowAura:
+            return [
+                AbilityEffectValue(30, of: .swimSpeedUp, boostsBeyond: false),
+                AbilityEffectValue(30, of: .runSpeedUp, boostsBeyond: false),
+                AbilityEffectValue(30, of: .inkResistanceUp, boostsBeyond: false),
+                AbilityEffectValue(30, of: .intensifyAction, boostsBeyond: false)
+            ]
         }
     }
     

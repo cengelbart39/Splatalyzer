@@ -140,6 +140,26 @@
     "spl__PlayerCanolaShotParam": {
       "$type": "spl__PlayerCanolaShotParam"
     },
+    "spl__PlayerCollisionParam": {
+      "$type": "spl__PlayerCollisionParam",
+      "ColBullet_Height_Squid": 0.0,
+      "ColBullet_Radius_Squid": 0.675
+    },
+    "spl__PlayerDispHPParam": {
+      "$type": "spl__PlayerDispHPParam",
+      "BarBgColor": {
+        "A": 1.0,
+        "B": 0.3,
+        "G": 0.3,
+        "R": 0.3
+      },
+      "BarHeight": 5.0,
+      "BarWidth": 70.0,
+      "IsApplyDmgColorToBgColor": false,
+      "IsFixBarBgColor": false,
+      "RecvDmgReactColorFrm": 12,
+      "RecvDmgReactDispFrm": 180
+    },
     "spl__PlayerEntryLiftParam": {
       "$type": "spl__PlayerEntryLiftParam",
       "FinishVel": 0.35
@@ -181,6 +201,12 @@
     },
     "spl__PlayerGearSkillParam_SubInkSave": {
       "$type": "spl__PlayerGearSkillParam_SubInkSave"
+    },
+    "spl__PlayerGearSkillParam_SuperJumpSignHide": {
+      "$type": "spl__PlayerGearSkillParam_SuperJumpSignHide",
+      "ExtraMove_DistXZMax": 100.0,
+      "ExtraMove_DistXZMax_Tcl": 100.0,
+      "ExtraMove_FrmMax": 60
     },
     "spl__PlayerGearSkillParam_SuperJumpTimeSave": {
       "$type": "spl__PlayerGearSkillParam_SuperJumpTimeSave"

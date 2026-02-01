@@ -4,10 +4,10 @@
       "$type": "spl__BulletSimpleCollisionParam",
       "ChangeFrameForField": 0,
       "EndRadiusForField": 0.2,
-      "EndRadiusForPlayer": 0.2,
+      "EndRadiusForPlayer": 0.26,
       "FriendThroughFrameForPlayer": 0,
       "InitRadiusForField": 0.2,
-      "InitRadiusForPlayer": 0.2
+      "InitRadiusForPlayer": 0.26
     },
     "DamageParam": {
       "$type": "spl__BulletShooterDamageParam",
@@ -24,9 +24,9 @@
     },
     "MoveParam": {
       "$type": "spl__BulletSimpleMoveParam",
-      "GoStraightStateEndMaxSpeed": 1.568,
-      "GoStraightToBrakeStateFrame": 4,
-      "SpawnSpeed": 2.75
+      "GoStraightStateEndMaxSpeed": 1.946,
+      "GoStraightToBrakeStateFrame": 3,
+      "SpawnSpeed": 3.413
     },
     "PaintParam": {
       "$type": "spl__BulletShooterPaintParam",
@@ -35,9 +35,9 @@
       "DepthScaleMin": 1.31,
       "DepthScaleMinBreakFree": 1.12,
       "DistanceMiddle": 1.1,
-      "WidthHalfFar": 2.09,
-      "WidthHalfMiddle": 2.09,
-      "WidthHalfNear": 2.09
+      "WidthHalfFar": 1.7765,
+      "WidthHalfMiddle": 1.7765,
+      "WidthHalfNear": 1.7765
     },
     "SplashPaintParam": {
       "$type": "spl__BulletSplashShooterPaintParam",

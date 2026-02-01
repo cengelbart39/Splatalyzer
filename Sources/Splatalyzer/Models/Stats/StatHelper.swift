@@ -830,6 +830,9 @@ public struct StatHelper {
     ) -> AbilityStat {
         let ability = Ability.quickSuperJump
         
+        let hasStealthJump = ap[Ability.stealthJump] ?? 0 > 0
+        let stealthJumpFrames = hasStealthJump ? 60.0 : 0.0
+        
         let qsjAp = ap[ability] ?? 0
         
         let charge = APEffect(
@@ -845,8 +848,8 @@ public struct StatHelper {
         return AbilityStat(
             baseValue: (ceil(charge.baseEffect) + ceil(move.baseEffect))
                 .framesToSeconds(round: .down),
-            modifiedBy: [.quickSuperJump],
-            value: (ceil(charge.effect) + ceil(move.effect))
+            modifiedBy: [.quickSuperJump, .stealthJump],
+            value: (ceil(charge.effect) + ceil(move.effect) + stealthJumpFrames)
                 .framesToSeconds(round: .down),
             unit: .seconds,
             title: String(localized: "Total Super Jump Time")

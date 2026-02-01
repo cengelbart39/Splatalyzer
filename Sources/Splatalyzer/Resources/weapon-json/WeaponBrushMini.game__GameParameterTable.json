@@ -23,6 +23,7 @@
           "MyVelocityRate": 4800.0,
           "OpponentVelocityRate": 30.0
         },
+        "Radius": 0.4,
         "WidthHalf": 0.8
       },
       "Damage": 200,
@@ -119,10 +120,10 @@
               "ChangeFrameForPlayer": 5,
               "DepletionRate": 0.5,
               "EndRadiusForField": 0.8,
-              "EndRadiusForPlayer": 1.3,
+              "EndRadiusForPlayer": 1.5,
               "FriendThroughFrameForPlayer": 3,
               "InitRadiusForField": 0.1,
-              "InitRadiusForPlayer": 0.1
+              "InitRadiusForPlayer": 0.115
             },
             "DrawSizeParam": {
               "EndRadius": 0.35,
@@ -184,10 +185,10 @@
               "ChangeFrameForPlayer": 2,
               "DepletionRate": 0.5,
               "EndRadiusForField": 0.4,
-              "EndRadiusForPlayer": 0.7,
+              "EndRadiusForPlayer": 0.9,
               "FriendThroughFrameForPlayer": 3,
               "InitRadiusForField": 0.1,
-              "InitRadiusForPlayer": 0.1
+              "InitRadiusForPlayer": 0.115
             },
             "DrawSizeParam": {
               "EndRadius": 0.35,

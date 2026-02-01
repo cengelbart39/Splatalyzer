@@ -20,6 +20,10 @@
       "DamageEffectiveTotalMax": 810,
       "GroupParams": [
         {
+          "CollisionParam": {
+            "EndRadiusForPlayer": 0.285,
+            "InitRadiusForPlayer": 0.285
+          },
           "DamageParam": {
             "ValueMax": 162,
             "ValueMin": 108
@@ -45,9 +49,9 @@
         {
           "CollisionParam": {
             "EndRadiusForField": 0.1,
-            "EndRadiusForPlayer": 0.1,
+            "EndRadiusForPlayer": 0.185,
             "InitRadiusForField": 0.1,
-            "InitRadiusForPlayer": 0.1
+            "InitRadiusForPlayer": 0.185
           },
           "DamageParam": {
             "ValueMax": 162,
@@ -73,9 +77,9 @@
         {
           "CollisionParam": {
             "EndRadiusForField": 0.1,
-            "EndRadiusForPlayer": 0.1,
+            "EndRadiusForPlayer": 0.185,
             "InitRadiusForField": 0.1,
-            "InitRadiusForPlayer": 0.1
+            "InitRadiusForPlayer": 0.185
           },
           "DamageParam": {
             "ValueMax": 162,
@@ -139,7 +143,7 @@
     },
     "spl__WeaponShelterShotgunParam": {
       "$type": "spl__WeaponShelterShotgunParam",
-      "InkConsume": 0.055,
+      "InkConsume": 0.05,
       "JumpGndCharge": 0.07,
       "MoveSpeed": 0.065,
       "MoveSpeedCharge": 0.055,

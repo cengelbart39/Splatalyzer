@@ -38,7 +38,8 @@ public final class Splatalyzer {
             specialInfo: specialData,
             gearBuild: build.gear,
             ldeIntensity: build.ldeIntensity,
-            usingTacticooler: build.usingTacticooler)
+            usingTacticooler: build.usingTacticooler,
+            usingFlowAura: build.usingFlowAura)
         
         return stats
     }

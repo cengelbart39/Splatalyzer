@@ -3,9 +3,9 @@
     "CollisionParam": {
       "$type": "spl__BulletSimpleCollisionParam",
       "EndRadiusForField": 0.02,
-      "EndRadiusForPlayer": 0.1,
+      "EndRadiusForPlayer": 0.125,
       "InitRadiusForField": 0.02,
-      "InitRadiusForPlayer": 0.1
+      "InitRadiusForPlayer": 0.125
     },
     "DamageParam": {
       "$type": "spl__BulletChargerDamageParam",

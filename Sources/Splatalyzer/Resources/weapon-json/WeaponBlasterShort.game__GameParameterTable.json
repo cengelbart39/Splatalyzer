@@ -9,17 +9,17 @@
       "DistanceDamage": [
         {
           "Damage": 700,
-          "Distance": 1.6
+          "Distance": 1.8
         },
         {
           "Damage": 500,
-          "Distance": 3.8
+          "Distance": 4.0
         }
       ],
       "KnockBackParam": {
         "Accel": 700.0,
         "Bias": 0.8,
-        "Distance": 3.8
+        "Distance": 4.0
       },
       "PaintRadius": 0.0
     },
@@ -63,10 +63,10 @@
       "$type": "spl__BulletSimpleCollisionParam",
       "ChangeFrameForField": 0,
       "EndRadiusForField": 0.2,
-      "EndRadiusForPlayer": 0.2,
+      "EndRadiusForPlayer": 0.3,
       "FriendThroughFrameForPlayer": 1000,
       "InitRadiusForField": 0.2,
-      "InitRadiusForPlayer": 0.2
+      "InitRadiusForPlayer": 0.3
     },
     "DamageParam": {
       "$type": "spl__BulletShooterDamageParam",

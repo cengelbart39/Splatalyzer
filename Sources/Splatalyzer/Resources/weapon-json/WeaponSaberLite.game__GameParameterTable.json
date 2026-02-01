@@ -31,22 +31,22 @@
           {
             "ChangeFrameForPlayer": 0,
             "EndRadiusForField": 0.25,
-            "EndRadiusForPlayer": 0.3,
+            "EndRadiusForPlayer": 0.42,
             "InitRadiusForField": 0.25,
-            "InitRadiusForPlayer": 0.25
+            "InitRadiusForPlayer": 0.37
           },
           {
             "EndRadiusForField": 0.3,
-            "EndRadiusForPlayer": 0.3,
+            "EndRadiusForPlayer": 0.42,
             "InitRadiusForField": 0.3,
-            "InitRadiusForPlayer": 0.3
+            "InitRadiusForPlayer": 0.42
           },
           {
             "ChangeFrameForPlayer": 0,
             "EndRadiusForField": 0.25,
-            "EndRadiusForPlayer": 0.3,
+            "EndRadiusForPlayer": 0.42,
             "InitRadiusForField": 0.25,
-            "InitRadiusForPlayer": 0.25
+            "InitRadiusForPlayer": 0.37
           }
         ]
       },
@@ -188,45 +188,45 @@
         "ParamArray": [
           {
             "EndRadiusForField": 0.3,
-            "EndRadiusForPlayer": 0.3,
+            "EndRadiusForPlayer": 0.37,
             "InitRadiusForField": 0.3,
-            "InitRadiusForPlayer": 0.3
+            "InitRadiusForPlayer": 0.37
           },
           {
             "EndRadiusForField": 0.35,
-            "EndRadiusForPlayer": 0.35,
+            "EndRadiusForPlayer": 0.42,
             "InitRadiusForField": 0.35,
-            "InitRadiusForPlayer": 0.35
+            "InitRadiusForPlayer": 0.42
           },
           {
             "EndRadiusForField": 0.45,
-            "EndRadiusForPlayer": 0.45,
+            "EndRadiusForPlayer": 0.52,
             "InitRadiusForField": 0.45,
-            "InitRadiusForPlayer": 0.45
+            "InitRadiusForPlayer": 0.52
           },
           {
             "EndRadiusForField": 0.5,
-            "EndRadiusForPlayer": 0.5,
+            "EndRadiusForPlayer": 0.57,
             "InitRadiusForField": 0.5,
-            "InitRadiusForPlayer": 0.5
+            "InitRadiusForPlayer": 0.57
           },
           {
             "EndRadiusForField": 0.45,
-            "EndRadiusForPlayer": 0.45,
+            "EndRadiusForPlayer": 0.52,
             "InitRadiusForField": 0.45,
-            "InitRadiusForPlayer": 0.45
+            "InitRadiusForPlayer": 0.52
           },
           {
             "EndRadiusForField": 0.35,
-            "EndRadiusForPlayer": 0.35,
+            "EndRadiusForPlayer": 0.42,
             "InitRadiusForField": 0.35,
-            "InitRadiusForPlayer": 0.35
+            "InitRadiusForPlayer": 0.42
           },
           {
             "EndRadiusForField": 0.3,
-            "EndRadiusForPlayer": 0.3,
+            "EndRadiusForPlayer": 0.37,
             "InitRadiusForField": 0.3,
-            "InitRadiusForPlayer": 0.3
+            "InitRadiusForPlayer": 0.37
           }
         ]
       },

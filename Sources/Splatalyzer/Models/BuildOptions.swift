@@ -14,6 +14,7 @@ public struct BuildOptions: Codable, Equatable, Identifiable, Sendable {
     public var gear: GearBuild
     public var ldeIntensity: Int
     public var usingTacticooler: Bool
+    public var usingFlowAura: Bool
     
     public func hasAbility(_ ability: Ability) -> Bool {
         return self.gear.hasAbility(ability)
@@ -29,12 +30,13 @@ public struct BuildOptions: Codable, Equatable, Identifiable, Sendable {
         return (0...21).contains(self.ldeIntensity)
     }
     
-    public init(id: UUID = UUID(), mainWeapon: MainWeapon, gearBuild: GearBuild, ldeIntensity: Int, usingTacticooler: Bool) {
+    public init(id: UUID = UUID(), mainWeapon: MainWeapon, gearBuild: GearBuild, ldeIntensity: Int, usingTacticooler: Bool, usingFloodAura: Bool) {
         self.id = id
         self.mainWeapon = mainWeapon
         self.gear = gearBuild
         self.ldeIntensity = ldeIntensity
         self.usingTacticooler = usingTacticooler
+        self.usingFlowAura = usingFloodAura
     }
     
     public init() {
@@ -43,5 +45,6 @@ public struct BuildOptions: Codable, Equatable, Identifiable, Sendable {
         self.gear = GearBuild()
         self.ldeIntensity = 0
         self.usingTacticooler = false
+        self.usingFlowAura = false
     }
 }

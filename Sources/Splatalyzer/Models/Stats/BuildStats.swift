@@ -60,9 +60,10 @@ public struct BuildStats: Codable, Equatable, Identifiable, Sendable {
         specialInfo: SpecialWeaponData,
         gearBuild: GearBuild,
         ldeIntensity: Int,
-        usingTacticooler: Bool
+        usingTacticooler: Bool,
+        usingFlowAura: Bool
     ) {
-        let ap = gearBuild.toAbilityPoints(ldeIntensity: ldeIntensity, usingTacticooler: usingTacticooler)
+        let ap = gearBuild.toAbilityPoints(ldeIntensity: ldeIntensity, usingTacticooler: usingTacticooler, usingFlowAura: usingFlowAura)
         
         let subInfo = allSubInfo[mainInfo.subWeapon]!
         

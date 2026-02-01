@@ -21,6 +21,7 @@
           "MyVelocityRate": 4800.0,
           "OpponentVelocityRate": 30.0
         },
+        "Radius": 0.4,
         "WidthHalf": 1.4
       },
       "Damage": 1250,
@@ -128,10 +129,10 @@
               "ChangeFrameForPlayer": 6,
               "DepletionRate": 0.5,
               "EndRadiusForField": 1.05,
-              "EndRadiusForPlayer": 1.05,
+              "EndRadiusForPlayer": 1.12,
               "FriendThroughFrameForPlayer": 3,
               "InitRadiusForField": 0.1,
-              "InitRadiusForPlayer": 0.1
+              "InitRadiusForPlayer": 0.106
             },
             "DrawSizeParam": {
               "EndRadius": 0.48,
@@ -194,10 +195,10 @@
               "ChangeFrameForPlayer": 6,
               "DepletionRate": 0.5,
               "EndRadiusForField": 1.05,
-              "EndRadiusForPlayer": 1.05,
+              "EndRadiusForPlayer": 1.12,
               "FriendThroughFrameForPlayer": 3,
               "InitRadiusForField": 0.1,
-              "InitRadiusForPlayer": 0.1
+              "InitRadiusForPlayer": 0.106
             },
             "DrawSizeParam": {
               "EndRadius": 0.48,
@@ -256,10 +257,10 @@
               "ChangeFrameForPlayer": 5,
               "DepletionRate": 0.5,
               "EndRadiusForField": 0.7,
-              "EndRadiusForPlayer": 0.9,
+              "EndRadiusForPlayer": 0.97,
               "FriendThroughFrameForPlayer": 3,
               "InitRadiusForField": 0.1,
-              "InitRadiusForPlayer": 0.1
+              "InitRadiusForPlayer": 0.106
             },
             "DrawSizeParam": {
               "EndRadius": 0.48,
@@ -323,10 +324,10 @@
               "ChangeFrameForPlayer": 1,
               "DepletionRate": 0.5,
               "EndRadiusForField": 0.7,
-              "EndRadiusForPlayer": 0.1,
+              "EndRadiusForPlayer": 0.17,
               "FriendThroughFrameForPlayer": 3,
               "InitRadiusForField": 0.1,
-              "InitRadiusForPlayer": 0.1
+              "InitRadiusForPlayer": 0.106
             },
             "DrawSizeParam": {
               "EndRadius": 0.08,
@@ -385,10 +386,10 @@
               "ChangeFrameForPlayer": 1,
               "DepletionRate": 0.5,
               "EndRadiusForField": 0.7,
-              "EndRadiusForPlayer": 0.1,
+              "EndRadiusForPlayer": 0.17,
               "FriendThroughFrameForPlayer": 3,
               "InitRadiusForField": 0.1,
-              "InitRadiusForPlayer": 0.1
+              "InitRadiusForPlayer": 0.106
             },
             "DrawSizeParam": {
               "EndRadius": 0.08,
@@ -527,10 +528,10 @@
               "ChangeFrameForPlayer": 4,
               "DepletionRate": 0.5,
               "EndRadiusForField": 0.52,
-              "EndRadiusForPlayer": 0.76,
+              "EndRadiusForPlayer": 0.96,
               "FriendThroughFrameForPlayer": 3,
               "InitRadiusForField": 0.1,
-              "InitRadiusForPlayer": 0.1
+              "InitRadiusForPlayer": 0.126
             },
             "DrawSizeParam": {
               "EndRadius": 0.3,
@@ -588,10 +589,10 @@
               "ChangeFrameForPlayer": 4,
               "DepletionRate": 0.5,
               "EndRadiusForField": 0.52,
-              "EndRadiusForPlayer": 0.76,
+              "EndRadiusForPlayer": 0.96,
               "FriendThroughFrameForPlayer": 3,
               "InitRadiusForField": 0.1,
-              "InitRadiusForPlayer": 0.1
+              "InitRadiusForPlayer": 0.126
             },
             "DrawSizeParam": {
               "EndRadius": 0.3,

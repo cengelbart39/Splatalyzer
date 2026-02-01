@@ -4,10 +4,10 @@
       "$type": "spl__BulletSimpleCollisionParam",
       "ChangeFrameForField": 0,
       "EndRadiusForField": 0.2,
-      "EndRadiusForPlayer": 0.2,
+      "EndRadiusForPlayer": 0.225,
       "FriendThroughFrameForPlayer": 0,
       "InitRadiusForField": 0.2,
-      "InitRadiusForPlayer": 0.2
+      "InitRadiusForPlayer": 0.225
     },
     "DamageParam": {
       "$type": "spl__BulletSpinnerDamageParam",
@@ -43,9 +43,9 @@
       "DepthScaleMinBreakFree": 1.17,
       "DistanceMiddle": 1.1,
       "HeightUseDepthScaleMaxBreakFree": 3.0,
-      "WidthHalfFar": 2.04,
-      "WidthHalfMiddle": 2.16,
-      "WidthHalfNear": 2.16
+      "WidthHalfFar": 2.2848,
+      "WidthHalfMiddle": 2.4192,
+      "WidthHalfNear": 2.4192
     },
     "SplashPaintParam": {
       "$type": "spl__BulletSplashShooterPaintParam",
@@ -53,7 +53,7 @@
       "DepthMinDropHeight": 10.0,
       "DepthScaleMax": 1.6,
       "DepthScaleMin": 1.6,
-      "WidthHalf": 1.449,
+      "WidthHalf": 1.623,
       "WidthHalfNearest": 1.85472
     },
     "SplashSpawnParam": {

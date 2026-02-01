@@ -4,17 +4,17 @@
       "$type": "spl__BulletSimpleCollisionParam",
       "ChangeFrameForField": 0,
       "EndRadiusForField": 0.2,
-      "EndRadiusForPlayer": 0.2,
+      "EndRadiusForPlayer": 0.235,
       "FriendThroughFrameForPlayer": 0,
       "InitRadiusForField": 0.2,
-      "InitRadiusForPlayer": 0.2
+      "InitRadiusForPlayer": 0.235
     },
     "DamageParam": {
       "$type": "spl__BulletShooterDamageParam",
       "ReduceEndFrame": 40,
       "ReduceStartFrame": 8,
-      "ValueMax": 440,
-      "ValueMin": 220
+      "ValueMax": 450,
+      "ValueMin": 225
     },
     "MainEffectiveRangeUpParam": {
       "$type": "spl__PlayerGearSkillParam_MainEffectiveRangeUp"

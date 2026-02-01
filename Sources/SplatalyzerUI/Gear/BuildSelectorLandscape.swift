@@ -5,6 +5,7 @@
 //  Created by Christopher Engelbart on 3/26/24.
 //
 
+import Splatalyzer
 import SwiftUI
 
 public struct BuildSelectorLandscape: View {
@@ -25,10 +26,14 @@ public struct BuildSelectorLandscape: View {
 
             VStack {
                 MainWeaponPicker(mainWeapon: $analyzer.build.mainWeapon)
-                
-                LDEPicker()
+
+                if analyzer.build.gear.hasAbility(.lastDitchEffort) {
+                    LDEPicker()
+                }
                 
                 TacticoolerToggle()
+                
+                FlowAuraToggle()
             }
             
             Spacer()
@@ -46,7 +51,10 @@ public struct BuildSelectorLandscape: View {
             try? analyzer.updateStats(for: newValue)
         }
         .onChange(of: analyzer.build.usingTacticooler) { _, newValue in
-            try? analyzer.updateStats(for: newValue)
+            try? analyzer.updateStats(tacticooler: newValue)
+        }
+        .onChange(of: analyzer.build.usingFlowAura) { _, newValue in
+            try? analyzer.updateStats(flowAura: newValue)
         }
     }
 }

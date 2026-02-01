@@ -11,7 +11,7 @@
         "DistanceDamage": [
           {
             "Damage": 350,
-            "Distance": 2.8
+            "Distance": 2.87
           }
         ],
         "KnockBackParam": {
@@ -94,10 +94,10 @@
             "ChangeFrameForField": 4,
             "ChangeFrameForPlayer": 5,
             "EndRadiusForField": 0.25,
-            "EndRadiusForPlayer": 0.4,
+            "EndRadiusForPlayer": 0.435,
             "FriendThroughFrameForPlayer": 1000,
             "InitRadiusForField": 0.1,
-            "InitRadiusForPlayer": 0.04
+            "InitRadiusForPlayer": 0.0435
           },
           "DamageParam": {
             "GroupNum": 0,

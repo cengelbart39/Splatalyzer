@@ -4,10 +4,10 @@
       "$type": "spl__BulletSimpleCollisionParam",
       "ChangeFrameForField": 0,
       "EndRadiusForField": 0.2,
-      "EndRadiusForPlayer": 0.2,
+      "EndRadiusForPlayer": 0.26,
       "FriendThroughFrameForPlayer": 0,
       "InitRadiusForField": 0.2,
-      "InitRadiusForPlayer": 0.2
+      "InitRadiusForPlayer": 0.26
     },
     "DamageParam": {
       "$type": "spl__BulletShooterDamageParam",

@@ -27,9 +27,13 @@ public struct BuildSelector: View {
                 
                 GearBuildView(gearBuild: $analyzer.build.gear)
                 
-                LDEPicker()
+                if analyzer.build.gear.hasAbility(.lastDitchEffort) {
+                    LDEPicker()
+                }
                 
                 TacticoolerToggle()
+                
+                FlowAuraToggle()
                 
                 Spacer()
             }
@@ -49,7 +53,10 @@ public struct BuildSelector: View {
             try? analyzer.updateStats(for: newValue)
         }
         .onChange(of: analyzer.build.usingTacticooler) { _, newValue in
-            try? analyzer.updateStats(for: newValue)
+            try? analyzer.updateStats(tacticooler: newValue)
+        }
+        .onChange(of: analyzer.build.usingFlowAura) { _, newValue in
+            try? analyzer.updateStats(flowAura: newValue)
         }
     }
 }

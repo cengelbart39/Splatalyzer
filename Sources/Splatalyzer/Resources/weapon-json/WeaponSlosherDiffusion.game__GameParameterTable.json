@@ -67,10 +67,10 @@
             "ChangeFrameForField": 4,
             "ChangeFrameForPlayer": 5,
             "EndRadiusForField": 0.7,
-            "EndRadiusForPlayer": 0.9,
+            "EndRadiusForPlayer": 1.07,
             "FriendThroughFrameForPlayer": 2,
             "InitRadiusForField": 0.07,
-            "InitRadiusForPlayer": 0.09
+            "InitRadiusForPlayer": 0.107
           },
           "DamageParam": {
             "GroupNum": 0,
@@ -219,10 +219,10 @@
             "ChangeFrameForField": 4,
             "ChangeFrameForPlayer": 5,
             "EndRadiusForField": 0.7,
-            "EndRadiusForPlayer": 0.8,
+            "EndRadiusForPlayer": 0.97,
             "FriendThroughFrameForPlayer": 2,
             "InitRadiusForField": 0.07,
-            "InitRadiusForPlayer": 0.08
+            "InitRadiusForPlayer": 0.097
           },
           "DamageParam": {
             "GroupNum": 0,
@@ -392,10 +392,10 @@
             "ChangeFrameForField": 4,
             "ChangeFrameForPlayer": 5,
             "EndRadiusForField": 0.5,
-            "EndRadiusForPlayer": 0.7,
+            "EndRadiusForPlayer": 0.87,
             "FriendThroughFrameForPlayer": 2,
             "InitRadiusForField": 0.05,
-            "InitRadiusForPlayer": 0.07
+            "InitRadiusForPlayer": 0.087
           },
           "DamageParam": {
             "GroupNum": 0,
@@ -565,10 +565,10 @@
             "ChangeFrameForField": 4,
             "ChangeFrameForPlayer": 5,
             "EndRadiusForField": 0.5,
-            "EndRadiusForPlayer": 0.7,
+            "EndRadiusForPlayer": 0.87,
             "FriendThroughFrameForPlayer": 2,
             "InitRadiusForField": 0.05,
-            "InitRadiusForPlayer": 0.07
+            "InitRadiusForPlayer": 0.087
           },
           "DamageParam": {
             "GroupNum": 0,

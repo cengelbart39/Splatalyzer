@@ -2,11 +2,11 @@
   "GameParameters": {
     "BulletBlastParam": {
       "$type": "spl__BulletBlastParam",
-      "DamageOffsetY": 0.0,
+      "DamageOffsetY": 0.6,
       "DistanceDamage": [
         {
           "Damage": 2200,
-          "Distance": 7.5
+          "Distance": 9.0
         },
         {
           "Damage": 700,
@@ -40,9 +40,9 @@
         {
           "SpecUpType": "PaintRadius",
           "Value": {
-            "High": 9.69,
-            "Low": 8.075,
-            "Mid": 8.882
+            "High": 9.012,
+            "Low": 7.51,
+            "Mid": 8.26
           }
         },
         {
@@ -85,10 +85,10 @@
       "MoveAcc": 0.031,
       "MoveBrk": 0.031,
       "MoveCancelableFrame": 15,
-      "MoveFrame": 60,
+      "MoveFrame": 54,
       "MoveFrameOmen": 27,
       "MoveRotDeg": 0.5,
-      "MoveSpeed": 0.45,
+      "MoveSpeed": 0.405,
       "MoveSpeed_Aerial": 0.22,
       "NoDamageFrame_AfterBurst": 28,
       "NoDamageStartFrame_PreMove": 25,

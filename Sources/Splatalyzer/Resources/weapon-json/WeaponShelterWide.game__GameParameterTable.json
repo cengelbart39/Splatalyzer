@@ -35,6 +35,10 @@
       "DamageEffectiveTotalMax": 1190,
       "GroupParams": [
         {
+          "CollisionParam": {
+            "EndRadiusForPlayer": 0.235,
+            "InitRadiusForPlayer": 0.235
+          },
           "DamageParam": {
             "ReduceEndFrame": 25,
             "ReduceStartFrame": 9,
@@ -63,9 +67,9 @@
         {
           "CollisionParam": {
             "EndRadiusForField": 0.1,
-            "EndRadiusForPlayer": 0.1,
+            "EndRadiusForPlayer": 0.135,
             "InitRadiusForField": 0.1,
-            "InitRadiusForPlayer": 0.1
+            "InitRadiusForPlayer": 0.135
           },
           "DamageParam": {
             "ReduceEndFrame": 25,
@@ -94,9 +98,9 @@
         {
           "CollisionParam": {
             "EndRadiusForField": 0.1,
-            "EndRadiusForPlayer": 0.1,
+            "EndRadiusForPlayer": 0.135,
             "InitRadiusForField": 0.1,
-            "InitRadiusForPlayer": 0.1
+            "InitRadiusForPlayer": 0.135
           },
           "DamageParam": {
             "ReduceEndFrame": 25,

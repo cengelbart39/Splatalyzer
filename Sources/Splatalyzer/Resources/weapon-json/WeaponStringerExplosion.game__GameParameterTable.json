@@ -11,8 +11,8 @@
     "spl__BulletStringerParam": {
       "$type": "spl__BulletStringerParam",
       "CollisionParam": {
-        "EndRadiusForPlayer": 0.18,
-        "InitRadiusForPlayer": 0.18
+        "EndRadiusForPlayer": 0.205,
+        "InitRadiusForPlayer": 0.205
       },
       "DamageParam": {
         "DirectHitDamageMax": 350,
@@ -25,9 +25,12 @@
           "DistanceDamage": [
             {
               "Damage": 300,
-              "Distance": 2.0
+              "Distance": 2.05
             }
           ],
+          "KnockBackParam": {
+            "Distance": 2.05
+          },
           "PaintOffsetY": 0.6,
           "PaintRadius": 2.0
         },

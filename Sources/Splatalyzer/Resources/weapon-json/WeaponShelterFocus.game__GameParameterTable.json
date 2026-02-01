@@ -36,9 +36,9 @@
         {
           "CollisionParam": {
             "EndRadiusForField": 0.2,
-            "EndRadiusForPlayer": 0.2,
+            "EndRadiusForPlayer": 0.26,
             "InitRadiusForField": 0.2,
-            "InitRadiusForPlayer": 0.2
+            "InitRadiusForPlayer": 0.26
           },
           "DamageParam": {
             "ValueMax": 150,
@@ -66,9 +66,9 @@
           "AddDegree": 0.0,
           "CollisionParam": {
             "EndRadiusForField": 0.1,
-            "EndRadiusForPlayer": 0.1,
+            "EndRadiusForPlayer": 0.16,
             "InitRadiusForField": 0.1,
-            "InitRadiusForPlayer": 0.1
+            "InitRadiusForPlayer": 0.16
           },
           "DamageParam": {
             "ValueMax": 150,
@@ -96,9 +96,9 @@
           "AddDegree": 0.0,
           "CollisionParam": {
             "EndRadiusForField": 0.1,
-            "EndRadiusForPlayer": 0.1,
+            "EndRadiusForPlayer": 0.16,
             "InitRadiusForField": 0.1,
-            "InitRadiusForPlayer": 0.1
+            "InitRadiusForPlayer": 0.16
           },
           "DamageParam": {
             "ValueMax": 150,

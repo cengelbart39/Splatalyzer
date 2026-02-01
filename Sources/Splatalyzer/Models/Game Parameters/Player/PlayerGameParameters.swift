@@ -43,6 +43,10 @@ public struct Player: GameParametable {
         
         public let playerCanolaShotParam: CanolaShotParameter
         
+        public let playerCollisionParam: CollisionParameter
+        
+        public let playerDispHPParam: DispHPParameter
+        
         public let playerEntryLiftParam: EntryLiftParameter
         
         public let skillActionSpecUpSquidParam: ActionSpecUpSquidSkillParameter
@@ -66,6 +70,8 @@ public struct Player: GameParametable {
         public let skillSubEffectReductionParam: SubEffectReductionSkillParameter
         
         public let skillSubInkSaveParam: SubInkSaveSkillParameter
+        
+        public let skillSuperJumpSignHideParam: SuperJumpSignHideParameter
         
         public let skillSuperJumpTimeSave: SuperJumpTimeSaveSkillParameter
         
@@ -106,6 +112,8 @@ public struct Player: GameParametable {
             case playerBeaconSubSpecUpParam = "spl__PlayerBeaconSubSpecUpParam"
             case playerCameraPeriscopeParam = "spl__PlayerCameraPeriscopeParam"
             case playerCanolaShotParam = "spl__PlayerCanolaShotParam"
+            case playerCollisionParam = "spl__PlayerCollisionParam"
+            case playerDispHPParam = "spl__PlayerDispHPParam"
             case playerEntryLiftParam = "spl__PlayerEntryLiftParam"
             case skillActionSpecUpSquidParam = "spl__PlayerGearSkillParam_ActionSpecUp_Squid"
             case skillHumanMoveUpParam = "spl__PlayerGearSkillParam_HumanMoveUp"
@@ -118,6 +126,7 @@ public struct Player: GameParametable {
             case skillSquidMoveUpParam = "spl__PlayerGearSkillParam_SquidMoveUp"
             case skillSubEffectReductionParam = "spl__PlayerGearSkillParam_SubEffectReduction"
             case skillSubInkSaveParam = "spl__PlayerGearSkillParam_SubInkSave"
+            case skillSuperJumpSignHideParam = "spl__PlayerGearSkillParam_SuperJumpSignHide"
             case skillSuperJumpTimeSave = "spl__PlayerGearSkillParam_SuperJumpTimeSave"
             case playerGeyserParam = "spl__PlayerGeyserParam"
             case playerGrindRailParam = "spl__PlayerGrindRailParam"
@@ -363,6 +372,51 @@ extension Player.Parameters {
         }
     }
     
+    public struct CollisionParameter: Parametable {
+        var type: String
+        var colBulletHeightSquid: Double
+        var colBulletRadiusSquid: Double
+        
+        public enum CodingKeys: String, CodingKey {
+            case type = "$type"
+            case colBulletHeightSquid = "ColBullet_Height_Squid"
+            case colBulletRadiusSquid = "ColBullet_Radius_Squid"
+        }
+    }
+    
+    public struct DispHPParameter: Parametable {
+        public let type: String
+        public let barBgColor: Color
+        public let barHeight: Double
+        public let barWidth: Double
+        public let isApplyDmgColorToBgColor: Bool
+        public let isFixBarBgColor: Bool
+        public let recvDmgReactColorFrm: Int
+        public let recvDmgReactDispFrm: Int
+        
+        public enum CodingKeys: String, CodingKey {
+            case type = "$type"
+            case barBgColor = "BarBgColor"
+            case barHeight = "BarHeight"
+            case barWidth = "BarWidth"
+            case isApplyDmgColorToBgColor = "IsApplyDmgColorToBgColor"
+            case isFixBarBgColor = "IsFixBarBgColor"
+            case recvDmgReactColorFrm = "RecvDmgReactColorFrm"
+            case recvDmgReactDispFrm = "RecvDmgReactDispFrm"
+        }
+        
+        public struct Color: Parametable {
+            public let a, b, g, r: Double
+            
+            public enum CodingKeys: String, CodingKey {
+                case a = "A"
+                case b = "B"
+                case g = "G"
+                case r = "R"
+            }
+        }
+    }
+    
     public struct EntryLiftParameter: Parametable {
         public let type: String
         public let finishVel: Double
@@ -602,6 +656,20 @@ extension Player.Parameters {
         
         public enum CodingKeys: String, CodingKey {
             case type = "$type"
+        }
+    }
+    
+    public struct SuperJumpSignHideParameter: Parametable {
+        public let type: String
+        public let extraMoveDistXZMax: Double
+        public let extraMoveDistXZMaxTcl: Double
+        public let extraMoveFrmMax: Int
+        
+        public enum CodingKeys: String, CodingKey {
+            case type = "$type"
+            case extraMoveDistXZMax = "ExtraMove_DistXZMax"
+            case extraMoveDistXZMaxTcl = "ExtraMove_DistXZMax_Tcl"
+            case extraMoveFrmMax = "ExtraMove_FrmMax"
         }
     }
     

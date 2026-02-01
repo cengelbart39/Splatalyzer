@@ -38,7 +38,7 @@ public struct GearBuild: Codable, Equatable, Identifiable, Sendable {
     ///   - ldeIntensity: A number between 0 and 21. If LDE is not in the gear build, it is assumed it is set to 0.
     ///   - usingTacticooler: Flag for whether Tacticooler effects should be considered, since it temproarily adds ability effects.
     /// - Returns: The equivalent AP for each ability.
-    public func toAbilityPoints(ldeIntensity: Int = 0, usingTacticooler: Bool) -> AbilityPoints {
+    public func toAbilityPoints(ldeIntensity: Int = 0, usingTacticooler: Bool, usingFlowAura: Bool) -> AbilityPoints {
         // Merge AP of all gear pieces
         let apHead = self.headgear.toAbilityPoints()
         let apClothes = self.clothes.toAbilityPoints()
@@ -48,7 +48,7 @@ public struct GearBuild: Codable, Equatable, Identifiable, Sendable {
             .merging(apClothes, uniquingKeysWith: { $0 + $1 })
             .merging(apShoes, uniquingKeysWith: { $0 + $1 })
         
-        let specialEffects = self.specialEffects(ldeIntensity, usingTacticooler)
+        let specialEffects = self.specialEffects(ldeIntensity, usingTacticooler, usingFlowAura)
         
         // Convert special effects to AP
         for effect in specialEffects {
@@ -69,7 +69,7 @@ public struct GearBuild: Codable, Equatable, Identifiable, Sendable {
     ///   - ldeIntensity: A number between 0 and 21. Only applied to headgear with LDE.
     ///   - usingTacticooler: lag for whether Tacticooler effects should be considered, since it temproarily adds ability effects.
     /// - Returns: All `AbilitySpecialEffect`s present in the build
-    private func specialEffects(_ ldeIntensity: Int = 0, _ usingTacticooler: Bool) -> [AbilitySpecialEffect] {
+    private func specialEffects(_ ldeIntensity: Int = 0, _ usingTacticooler: Bool, _ usingFlowAura: Bool) -> [AbilitySpecialEffect] {
         var effects = [AbilitySpecialEffect]()
         
         if let headEffect = self.headgear.specialEffect(ldeIntensity: ldeIntensity) {
@@ -86,6 +86,10 @@ public struct GearBuild: Codable, Equatable, Identifiable, Sendable {
         
         if usingTacticooler {
             effects.append(.tacticooler)
+        }
+        
+        if usingFlowAura {
+            effects.append(.flowAura)
         }
         
         return effects

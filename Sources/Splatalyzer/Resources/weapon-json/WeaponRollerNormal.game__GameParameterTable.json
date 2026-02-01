@@ -21,6 +21,7 @@
           "MyVelocityRate": 4800.0,
           "OpponentVelocityRate": 30.0
         },
+        "Radius": 0.4,
         "WidthHalf": 1.4
       },
       "Damage": 1250,
@@ -130,10 +131,10 @@
               "ChangeFrameForPlayer": 4,
               "DepletionRate": 0.5,
               "EndRadiusForField": 0.75,
-              "EndRadiusForPlayer": 0.75,
+              "EndRadiusForPlayer": 0.87,
               "FriendThroughFrameForPlayer": 3,
               "InitRadiusForField": 0.1,
-              "InitRadiusForPlayer": 0.1
+              "InitRadiusForPlayer": 0.116
             },
             "DrawSizeParam": {
               "EndRadius": 0.36,
@@ -196,10 +197,10 @@
               "ChangeFrameForPlayer": 4,
               "DepletionRate": 0.5,
               "EndRadiusForField": 0.75,
-              "EndRadiusForPlayer": 0.75,
+              "EndRadiusForPlayer": 0.87,
               "FriendThroughFrameForPlayer": 3,
               "InitRadiusForField": 0.1,
-              "InitRadiusForPlayer": 0.1
+              "InitRadiusForPlayer": 0.116
             },
             "DrawSizeParam": {
               "EndRadius": 0.36,
@@ -259,10 +260,10 @@
               "ChangeFrameForPlayer": 4,
               "DepletionRate": 0.5,
               "EndRadiusForField": 0.55,
-              "EndRadiusForPlayer": 0.7,
+              "EndRadiusForPlayer": 0.82,
               "FriendThroughFrameForPlayer": 3,
               "InitRadiusForField": 0.1,
-              "InitRadiusForPlayer": 0.1
+              "InitRadiusForPlayer": 0.116
             },
             "DrawSizeParam": {
               "EndRadius": 0.36,
@@ -323,7 +324,7 @@
     "WeaponVerticalSwingParam": {
       "$type": "spl__WeaponRollerSwingParam",
       "InkConsume": 0.085,
-      "InkRecoverStop": 60,
+      "InkRecoverStop": 58,
       "SwingFrame": 26,
       "SwingMoveSpeed": 0.048
     },
@@ -333,7 +334,7 @@
         "WidthScale": 1.5
       },
       "InkConsume": 0.085,
-      "InkRecoverStop": 45,
+      "InkRecoverStop": 43,
       "SwingFrame": 21,
       "SwingMoveSpeed": 0.048
     },
@@ -401,10 +402,10 @@
               "ChangeFrameForPlayer": 4,
               "DepletionRate": 0.5,
               "EndRadiusForField": 0.6,
-              "EndRadiusForPlayer": 0.85,
+              "EndRadiusForPlayer": 1.02,
               "FriendThroughFrameForPlayer": 3,
               "InitRadiusForField": 0.1,
-              "InitRadiusForPlayer": 0.1
+              "InitRadiusForPlayer": 0.12
             },
             "DrawSizeParam": {
               "EndRadius": 0.3,
@@ -459,10 +460,10 @@
               "ChangeFrameForPlayer": 4,
               "DepletionRate": 0.5,
               "EndRadiusForField": 0.6,
-              "EndRadiusForPlayer": 0.85,
+              "EndRadiusForPlayer": 1.02,
               "FriendThroughFrameForPlayer": 3,
               "InitRadiusForField": 0.1,
-              "InitRadiusForPlayer": 0.1
+              "InitRadiusForPlayer": 0.12
             },
             "DrawSizeParam": {
               "EndRadius": 0.3,

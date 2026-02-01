@@ -31,9 +31,9 @@ public struct ImageView: View {
     public var body: some View {
         #if os(macOS)
         Image(nsImage: image ?? NSImage())
-            .resizable()
-            .scaledToFit()
-            .accessibilityHidden(true)
+//            .resizable()
+//            .scaledToFit()
+//            .accessibilityHidden(true)
         #else
         Image(uiImage: image ?? UIImage())
             .resizable()
