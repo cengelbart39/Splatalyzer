@@ -54,6 +54,7 @@ public struct BuildStats: Codable, Equatable, Identifiable, Sendable {
     ///   - gearBuild: The user's gear build
     ///   - ldeIntensity: The intensity of Last-Ditch Effort; a range from 0 to 21
     ///   - usingTacticooler: Whether Tacticooler effects should be accounted for
+    ///   - usingFlowAura: Whether Flow Aura effects should be accounted for
     public init(
         mainInfo: MainWeaponData,
         allSubInfo: [SubWeapon : SubWeaponData],

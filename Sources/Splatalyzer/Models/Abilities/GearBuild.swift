@@ -37,6 +37,7 @@ public struct GearBuild: Codable, Equatable, Identifiable, Sendable {
     /// - Parameters:
     ///   - ldeIntensity: A number between 0 and 21. If LDE is not in the gear build, it is assumed it is set to 0.
     ///   - usingTacticooler: Flag for whether Tacticooler effects should be considered, since it temproarily adds ability effects.
+    ///   - usingFlowAura: Flag for whether Flow Aura effects should be considered, since it temporarily adds ability effects.
     /// - Returns: The equivalent AP for each ability.
     public func toAbilityPoints(ldeIntensity: Int = 0, usingTacticooler: Bool, usingFlowAura: Bool) -> AbilityPoints {
         // Merge AP of all gear pieces

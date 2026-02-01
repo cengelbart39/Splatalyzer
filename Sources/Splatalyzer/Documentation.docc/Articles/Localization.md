@@ -38,6 +38,9 @@ They are as follows:
 - `InkConsumeType.xcstrings`: Localization of the way in which ink is consumed. Corresponds to ``InkConsumeType``.
 - `Localizable.xcstrings`: Localizations for Strings that don't fit into the above categories.
 
+- Note: Although, not an ability, the localizations for the Flow Aura mechanic is included within `Ability.xcstrings`. At this time, there are no official Russian or Chinese localizations.
+
+
 ## Updating Localization
 
 If a language is partially supported, it likely has localizations for Main Weapons, Sub Weapons, Special Weapons, Main Weapon Classes, and Abilities.

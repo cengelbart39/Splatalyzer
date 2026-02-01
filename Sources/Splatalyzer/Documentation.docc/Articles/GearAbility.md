@@ -63,6 +63,8 @@ There are two cases of `AbilitySpecialEffect` to note:
 
 2. Although not an ability, the effects of the Tacticooler special weapon is included here. This special applies AP of certain abilities to players temporarily.
 
+3. Similarly, the Flow Aura mechanic is account for here, as well, since it provides temporary AP of certain abilities.
+
 <doc:Ability> has a helper function ``Ability/toSpecialEffect(intensity:)``, that helps convert an `Ability` to an `AbilitySpecialEffect`.
 
 ## Representing Gear Builds
@@ -97,7 +99,7 @@ It builds off of `GearPiece`'s functions as well:
 - ``GearBuild/isValid()``: Checks if there are any illegal main abilities across its properties
 - ``GearBuild/hasAbility(_:)``: Determines if a specific ability is present across its properties.
 
-As you may expect, `GearBuild` also has ``GearBuild/toAbilityPoints(ldeIntensity:usingTacticooler:)`` that calculates the AP across the whole build. This is also where we account for any ``AbilitySpecialEffect``s, as reflected by its parameters.
+As you may expect, `GearBuild` also has ``GearBuild/toAbilityPoints(ldeIntensity:usingTacticooler:usingFlowAura:)`` that calculates the AP across the whole build. This is also where we account for any ``AbilitySpecialEffect``s, as reflected by its parameters.
 
 ## Ability Values
 
