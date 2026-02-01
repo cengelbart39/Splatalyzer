@@ -40,8 +40,15 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      shouldAutocreateTestPlan = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <TestPlans>
+         <TestPlanReference
+            reference = "container:Tests/Localization.xctestplan">
+         </TestPlanReference>
+         <TestPlanReference
+            reference = "container:Tests/Splatalyzer-Package.xctestplan">
+         </TestPlanReference>
+      </TestPlans>
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -52,6 +59,53 @@
                BlueprintName = "SplatalyzerTests"
                ReferencedContainer = "container:">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "LocalizationTests">
+               </Test>
+               <Test
+                  Identifier = "LocalizationTests/abilityLocalizations(for:)">
+               </Test>
+               <Test
+                  Identifier = "LocalizationTests/blasterLocalizations(for:)">
+               </Test>
+               <Test
+                  Identifier = "LocalizationTests/brellaLocalizations(for:)">
+               </Test>
+               <Test
+                  Identifier = "LocalizationTests/brushLocalizations(for:)">
+               </Test>
+               <Test
+                  Identifier = "LocalizationTests/chargerLocalizations(for:)">
+               </Test>
+               <Test
+                  Identifier = "LocalizationTests/dualieLocalizations(for:)">
+               </Test>
+               <Test
+                  Identifier = "LocalizationTests/rollerLocalizations(for:)">
+               </Test>
+               <Test
+                  Identifier = "LocalizationTests/shooterLocalizations(for:)">
+               </Test>
+               <Test
+                  Identifier = "LocalizationTests/slosherLocalizations(for:)">
+               </Test>
+               <Test
+                  Identifier = "LocalizationTests/specialWeaponLocalizations(for:)">
+               </Test>
+               <Test
+                  Identifier = "LocalizationTests/splatanaLocalizations(for:)">
+               </Test>
+               <Test
+                  Identifier = "LocalizationTests/splatlingLocalizations(for:)">
+               </Test>
+               <Test
+                  Identifier = "LocalizationTests/stringerLocalizations(for:)">
+               </Test>
+               <Test
+                  Identifier = "LocalizationTests/subWeaponLocalizations(for:)">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>

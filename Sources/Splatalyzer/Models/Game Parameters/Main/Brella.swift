@@ -226,9 +226,9 @@ extension Brella.Parameters.BulletShotgunParameter {
 
 extension Brella.Parameters.BulletShotgunParameter.GroupParameter {
     public struct CollisionParameter: Parametable {
-        public let endRadiusForField: Double
+        public let endRadiusForField: Double?
         public let endRadiusForPlayer: Double
-        public let initRadiusForField: Double
+        public let initRadiusForField: Double?
         public let initRadiusForPlayer: Double
         
         public enum CodingKeys: String, CodingKey {

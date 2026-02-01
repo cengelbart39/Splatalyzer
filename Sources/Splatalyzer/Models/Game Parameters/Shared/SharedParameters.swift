@@ -73,7 +73,7 @@ public struct HighMidLow: Codable, Equatable, Sendable {
 }
 
 public struct KnockbackParameter: Parametable {
-    public let accel: Double
+    public let accel: Double?
     public let bias: Double?
     public let degree: Double?
     public let directionZeroAccelRate: Double?
