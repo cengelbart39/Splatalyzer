@@ -53,6 +53,10 @@ The documentation on Splatalyzer can be found [here](https://cengelbart39.github
 
 Information about package localization can also be found here.
 
+## Updater
+
+To keep Splatalyzer update to date with the latest game updates, [SplatalyzerUpdater](https://github.com/cengelbart39/SplatalyzerUpdater) has been made to make the process easier.
+
 ## Disclaimer
 
 Splatoon is a trademark and copyright of Nintendo 2014-2026. Splatalyzer is not affilated with Nintendo.
