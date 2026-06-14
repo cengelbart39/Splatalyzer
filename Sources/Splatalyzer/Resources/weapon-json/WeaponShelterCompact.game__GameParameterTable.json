@@ -173,7 +173,7 @@
     },
     "spl__WeaponShelterShotgunParam": {
       "$type": "spl__WeaponShelterShotgunParam",
-      "InkConsume": 0.04,
+      "InkConsume": 0.037,
       "InkRecoverStop": 40,
       "InkRecoverStopCharge": 30,
       "JumpGndCharge": 0.1,

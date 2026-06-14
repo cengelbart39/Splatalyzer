@@ -13,7 +13,7 @@
         },
         {
           "Damage": 300,
-          "Distance": 4.17
+          "Distance": 4.085
         }
       ],
       "KnockBackParam": {
@@ -28,6 +28,7 @@
       "BurstFrame": 12,
       "MoveLength": 2.4,
       "NoOccurRoundYOver90RoundXPlus": true,
+      "ShotCollisionHitRadiusRate": 0.4273,
       "SplashDropPaintRadius": 2.5,
       "SplashDropPaintShotColHitRadius": 2.2,
       "SplashPaintRadius": 1.8,
@@ -159,7 +160,7 @@
       "Jump_DegBiasDecreaseStartFrame": 40,
       "Jump_DegBiasEndFrame": 70,
       "Jump_DegBiasMax": 0.5,
-      "Jump_DegSwerve": 8.0,
+      "Jump_DegSwerve": 7.0,
       "MoveSpeed": 0.068,
       "PostDelayFrame": 4,
       "PostDelayFrame_Blaster": 20,

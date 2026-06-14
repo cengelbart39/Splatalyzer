@@ -11,8 +11,8 @@
     },
     "DamageParam": {
       "$type": "spl__BulletShooterDamageParam",
-      "ReduceEndFrame": 26,
-      "ReduceStartFrame": 10,
+      "ReduceEndFrame": 25,
+      "ReduceStartFrame": 9,
       "ValueMax": 240,
       "ValueMin": 120
     },
@@ -27,8 +27,8 @@
       "$type": "spl__BulletSimpleMoveParam",
       "FreeGravity": 0.016,
       "GoStraightStateEndMaxSpeed": 2.2698,
-      "GoStraightToBrakeStateFrame": 5,
-      "SpawnSpeed": 2.2
+      "GoStraightToBrakeStateFrame": 4,
+      "SpawnSpeed": 2.75
     },
     "PaintParam": {
       "$type": "spl__BulletShooterPaintParam",
@@ -88,7 +88,7 @@
       "MoveSpeed": 0.079,
       "PostDelayFrame": 3,
       "RepeatFrame": 6,
-      "ShotGuideFrame": 10,
+      "ShotGuideFrame": 9,
       "SquidShotShorteningFrame": 1,
       "Stand_DegBiasDecrease": 0.02,
       "Stand_DegBiasKf": 0.03,

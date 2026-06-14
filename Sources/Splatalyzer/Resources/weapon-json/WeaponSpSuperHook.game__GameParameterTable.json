@@ -57,9 +57,9 @@
       "$type": "spl__WeaponSpSuperHookParam",
       "InkCapacityRt": 1.5,
       "InkConsume_Hook": {
-        "High": 0.0225,
-        "Low": 0.06,
-        "Mid": 0.0375
+        "High": 0.015,
+        "Low": 0.04,
+        "Mid": 0.025
       },
       "InkConsume_PerSec": {
         "High": 0.12,

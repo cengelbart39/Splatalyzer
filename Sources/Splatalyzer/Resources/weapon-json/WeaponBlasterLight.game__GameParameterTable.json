@@ -13,7 +13,7 @@
         },
         {
           "Damage": 350,
-          "Distance": 3.37
+          "Distance": 3.335
         }
       ],
       "KnockBackParam": {
@@ -27,6 +27,7 @@
       "$type": "spl__BulletBlasterBurstParam",
       "BurstFrame": 15,
       "MoveLength": 2.0,
+      "ShotCollisionHitRadiusRate": 0.4653,
       "SplashDropPaintRadius": 2.8,
       "SplashDropPaintShotColHitRadius": 2.3,
       "SplashRoundAxisXArray": [
@@ -98,7 +99,7 @@
       "$type": "spl__BulletSplashShooterPaintParam",
       "DepthMaxDropHeight": 3.0,
       "DepthMinDropHeight": 10.0,
-      "WidthHalf": 1.32,
+      "WidthHalf": 1.452,
       "WidthHalfNearest": 1.848
     },
     "SplashSpawnParam": {

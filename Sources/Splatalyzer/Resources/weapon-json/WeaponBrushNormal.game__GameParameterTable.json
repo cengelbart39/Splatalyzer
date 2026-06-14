@@ -236,7 +236,7 @@
         "Frame": 10,
         "WidthScale": 1.7
       },
-      "InkConsume": 0.03,
+      "InkConsume": 0.027,
       "InkRecoverStop": 30,
       "SwingFrame": 1,
       "SwingMoveSpeed": 0.03

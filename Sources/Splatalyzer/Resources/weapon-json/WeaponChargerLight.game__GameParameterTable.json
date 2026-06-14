@@ -106,7 +106,7 @@
       "InkEmptyChargeTimes": 5,
       "JumpHeightFullCharge": 0.07,
       "MoveJumpDownBias": 0.5,
-      "MoveSpeedFullCharge": 0.06
+      "MoveSpeedFullCharge": 0.068
     }
   }
 }

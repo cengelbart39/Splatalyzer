@@ -26,7 +26,7 @@
       "$type": "spl__BulletSimpleMoveParam",
       "GoStraightStateEndMaxSpeed": 1.946,
       "GoStraightToBrakeStateFrame": 3,
-      "SpawnSpeed": 3.413
+      "SpawnSpeed": 3.567
     },
     "PaintParam": {
       "$type": "spl__BulletShooterPaintParam",

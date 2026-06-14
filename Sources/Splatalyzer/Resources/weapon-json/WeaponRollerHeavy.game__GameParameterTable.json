@@ -62,8 +62,8 @@
     },
     "MainWeaponSetting": {
       "$type": "spl__PlayerGearSkillParam_MainWeaponSetting",
-      "Overwrite_ConsumeRt_Main_High": 0.5,
-      "Overwrite_ConsumeRt_Main_Mid": 0.7,
+      "Overwrite_ConsumeRt_Main_High": -1.0,
+      "Overwrite_ConsumeRt_Main_Mid": -1.0,
       "WeaponSpeedType": "Slow"
     },
     "VerticalSwingUnitGroupParam": {

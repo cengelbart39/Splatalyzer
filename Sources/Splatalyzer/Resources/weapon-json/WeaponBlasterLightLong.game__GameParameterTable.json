@@ -13,7 +13,7 @@
         },
         {
           "Damage": 350,
-          "Distance": 3.35
+          "Distance": 3.325
         }
       ],
       "KnockBackParam": {
@@ -27,6 +27,7 @@
       "$type": "spl__BulletBlasterBurstParam",
       "BurstFrame": 15,
       "MoveLength": 2.0,
+      "ShotCollisionHitRadiusRate": 0.4747,
       "SplashDropPaintRadius": 2.8,
       "SplashDropPaintShotColHitRadius": 2.22,
       "SplashRoundAxisXArray": [
@@ -149,8 +150,8 @@
     },
     "WeaponParam": {
       "$type": "spl__WeaponShooterParam",
-      "InkConsume": 0.08,
-      "InkRecoverStop": 50,
+      "InkConsume": 0.0912,
+      "InkRecoverStop": 60,
       "Jump_DegBiasDecreaseStartFrame": 40,
       "Jump_DegBiasEndFrame": 70,
       "Jump_DegBiasMax": 0.5,

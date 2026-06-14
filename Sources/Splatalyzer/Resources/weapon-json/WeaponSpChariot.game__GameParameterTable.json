@@ -30,7 +30,7 @@
         "DistanceDamage": [
           {
             "Damage": 300,
-            "Distance": 5.6
+            "Distance": 4.8
           }
         ],
         "KnockBackParam": {

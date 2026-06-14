@@ -51,7 +51,8 @@
     "SplashSpawnParam": {
       "$type": "spl__BulletSplashShooterSpawnParam",
       "ForceSpawnNearestAddNumArray": [
-        5
+        4,
+        8
       ],
       "SpawnBetweenLength": 11.0,
       "SpawnNearestLength": 1.0,

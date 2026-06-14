@@ -89,8 +89,8 @@
             "GroupNum": 0,
             "ReduceEndFallDistance": 7.625,
             "ReduceStartFallDistance": 1.5,
-            "ValueMax": 300,
-            "ValueMin": 300
+            "ValueMax": 320,
+            "ValueMin": 320
           },
           "DrawSizeParam": {
             "AfterOffsetEndRadius": 0.0,
@@ -237,8 +237,8 @@
             "GroupNum": 0,
             "ReduceEndFallDistance": 7.625,
             "ReduceStartFallDistance": 1.5,
-            "ValueMax": 300,
-            "ValueMin": 300
+            "ValueMax": 320,
+            "ValueMin": 320
           },
           "DrawSizeParam": {
             "AfterOffsetEndRadius": -0.03,

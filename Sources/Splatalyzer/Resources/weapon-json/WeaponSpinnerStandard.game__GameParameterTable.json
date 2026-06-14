@@ -43,9 +43,9 @@
       "DepthScaleMinBreakFree": 1.17,
       "DistanceMiddle": 1.1,
       "HeightUseDepthScaleMaxBreakFree": 3.0,
-      "WidthHalfFar": 2.2848,
-      "WidthHalfMiddle": 2.4192,
-      "WidthHalfNear": 2.4192
+      "WidthHalfFar": 2.102,
+      "WidthHalfMiddle": 2.226,
+      "WidthHalfNear": 2.226
     },
     "SplashPaintParam": {
       "$type": "spl__BulletSplashShooterPaintParam",
@@ -53,7 +53,7 @@
       "DepthMinDropHeight": 10.0,
       "DepthScaleMax": 1.6,
       "DepthScaleMin": 1.6,
-      "WidthHalf": 1.623,
+      "WidthHalf": 1.493,
       "WidthHalfNearest": 1.85472
     },
     "SplashSpawnParam": {

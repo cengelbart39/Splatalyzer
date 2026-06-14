@@ -9,11 +9,11 @@
       "DistanceDamage": [
         {
           "Damage": 700,
-          "Distance": 1.11
+          "Distance": 1.025
         },
         {
           "Damage": 500,
-          "Distance": 3.47
+          "Distance": 3.385
         }
       ],
       "KnockBackParam": {
@@ -25,6 +25,7 @@
     },
     "BlasterBurstParam": {
       "$type": "spl__BulletBlasterBurstParam",
+      "ShotCollisionHitRadiusRate": 0.4234,
       "SplashDropPaintShotColHitRadius": 2.5,
       "SplashRoundAxisXArray": [
         -90.0,
@@ -152,7 +153,7 @@
       "Jump_DegSwerve": 10.0,
       "MoveSpeed": 0.045,
       "PostDelayFrame": 4,
-      "PostDelayFrame_Blaster": 21,
+      "PostDelayFrame_Blaster": 22,
       "PreDelayFrame_HumanShot": 10,
       "PreDelayFrame_SquidShot": 15,
       "RepeatFrame": 50,

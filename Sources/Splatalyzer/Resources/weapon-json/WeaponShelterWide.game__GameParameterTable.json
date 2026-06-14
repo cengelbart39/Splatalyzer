@@ -169,7 +169,7 @@
       "CanopyOpenFrame": 30,
       "CanopyOpenStartOffset": -0.6,
       "CanopyShotFrame": 30,
-      "InkConsumeUmbrella": 0.3
+      "InkConsumeUmbrella": 0.23
     },
     "spl__WeaponShelterShotgunParam": {
       "$type": "spl__WeaponShelterShotgunParam",
