@@ -36,13 +36,7 @@ jobs:
 
       - name: Generate Docs
         run: |
-          swift package --allow-writing-to-directory ./.build/github-pages \
-            generate-documentation \
-            --target Splatalyzer --target SplatalyzerUI \
-            --disable-indexing \
-            --transform-for-static-hosting \
-            --hosting-base-path Splatalyzer \
-            --output-path ./.build/github-pages
+          swift package --allow-writing-to-directory ./.build/github-pages generate-documentation --enable-experimental-combined-documentation --target Splatalyzer --target SplatalyzerUI --disable-indexing --transform-for-static-hosting --hosting-base-path Splatalyzer --output-path ./.build/github-pages
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
