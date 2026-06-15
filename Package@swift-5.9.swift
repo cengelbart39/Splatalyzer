@@ -17,6 +17,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
+        .package(url: "https://github.com/apple/swift-argument-parser.git", from: "1.2.0")
     ],
     targets: [
         .target(
@@ -38,6 +39,13 @@ let package = Package(
             dependencies: ["Splatalyzer"],
             resources: [
                 .process("Resources")
+            ]
+        ),
+        
+        .executableTarget(
+            name: "SplatalyzerUpdater",
+            dependencies: [
+                .product(name: "ArgumentParser", package: "swift-argument-parser"),
             ]
         )
     ]

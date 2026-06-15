@@ -55,7 +55,12 @@ Information about package localization can also be found here.
 
 ## Updater
 
-To keep Splatalyzer update to date with the latest game updates, [SplatalyzerUpdater](https://github.com/cengelbart39/SplatalyzerUpdater) has been made to make the process easier.
+To keep Splatalyzer update to date with the latest game updates, the `SplatalyzerUpdater` executable target is included. This pulls the latest game data and updates Splatalyzer resources with it.
+
+This can be run via Xcode or by using the command:
+```bash
+$ swift run SplatalyzerUpdater
+```
 
 ## Disclaimer
 
