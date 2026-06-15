@@ -34,19 +34,11 @@ jobs:
       - name: Create Staging Directory
         run: mkdir -p ./.build/github-pages
 
-      - name: Generate Splatalyzer Docs
+      - name: Generate Docs
         run: |
           swift package --allow-writing-to-directory ./.build/github-pages \
-            generate-documentation --target Splatalyzer \
-            --disable-indexing \
-            --transform-for-static-hosting \
-            --hosting-base-path Splatalyzer \
-            --output-path ./.build/github-pages
-
-      - name: Generate SplatalyzerUI Docs
-        run: |
-          swift package --allow-writing-to-directory ./.build/github-pages \
-            generate-documentation --target SplatalyzerUI \
+            generate-documentation \
+            --target Splatalyzer --target SplatalyzerUI \
             --disable-indexing \
             --transform-for-static-hosting \
             --hosting-base-path Splatalyzer \
