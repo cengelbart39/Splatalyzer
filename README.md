@@ -49,9 +49,9 @@ or
 
 ## Documention
 
-The documentation on Splatalyzer can be found [here](https://cengelbart39.github.io/Splatalyzer/documentation/splatalyzer).
-
-Information about package localization can also be found here.
+Find package documentation below:
+* [Splatalyzer](https://cengelbart39.github.io/Splatalyzer/documentation/splatalyzer/)
+* [SplatalyzerUI](https://cengelbart39.github.io/Splatalyzer/documentation/splatalyzerui/)
 
 ## Updater
 
