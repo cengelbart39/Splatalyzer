@@ -26,11 +26,17 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
+      - name: Set Xcode version
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: '26.5'
+
       - name: Create Staging Directory
         run: mkdir -p ./.build/github-pages
 
       - name: Generate Docs
         run: |
+          swift --version
           swift package --allow-writing-to-directory ./.build/github-pages generate-documentation --enable-experimental-combined-documentation --target Splatalyzer --target SplatalyzerUI --disable-indexing --transform-for-static-hosting --hosting-base-path Splatalyzer --output-path ./.build/github-pages
 
       - name: Upload Artifacts
