@@ -116,7 +116,7 @@ struct GearPieceTests {
         let ap = piece.toAbilityPoints()
         try #require(!ap.isEmpty)
         
-        #expect(ap[.ninjaSquid] == nil)
+        #expect(ap[.ninjaSquid] == 10)
         #expect(ap[.quickSuperJump] == 3)
         #expect(ap[.swimSpeedUp] == 6)
     }

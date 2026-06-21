@@ -1,10 +1,11 @@
 name: Deploy Documentation
 
 on:
-  push:
+  workflow_run:
+    workflows: ["Swift"]
     branches: ["main"]
-  pull_request:
-    branches: ["main"]
+    types:
+      - completed
 
 permissions:
   contents: read
