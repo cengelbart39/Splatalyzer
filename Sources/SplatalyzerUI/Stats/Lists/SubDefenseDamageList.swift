@@ -25,7 +25,7 @@ public struct SubDefenseDamageList: View {
             ForEach(keys, id: \.self) { key in
                 if !defenseDamage[key]!.isEmpty {
                     SubDefenseDamageItem(key: key, values: defenseDamage[key]!)
-                        .padding(.horizontal)
+                        .padding(.leading)
                 }
             }
         }
@@ -36,6 +36,9 @@ public struct SubDefenseDamageList: View {
 /// - SeeAlso: An element of ``SubDefenseDamageList``
 public struct SubDefenseDamageItem: View {
         
+    @ScaledMetric(relativeTo: .title3)
+    private var imageSize = 20
+    
     /// A specific sub weapon
     public var key: SubWeapon
     
@@ -48,24 +51,12 @@ public struct SubDefenseDamageItem: View {
     }
     
     public var body: some View {
-        StatList(title: key.localized, image: key.image) {
+        StatList(title: key.localized, image: key.image, imageSize: imageSize) {
             LazyVStack(spacing: 10) {
                 ForEach(values, id: \.self) { stat in
                     DamageEffectStatCard(stat: stat)
                 }
             }
         }
-    }
-}
-
-struct DamageEffectAll {
-    
-    var weapon: SubWeapon
-    
-    var stats: [DamageEffectStat]
-    
-    init(sub: SubWeapon, stats: [DamageEffectStat]) {
-        self.weapon = sub
-        self.stats = stats
     }
 }

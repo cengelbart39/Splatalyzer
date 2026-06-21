@@ -33,7 +33,7 @@ public struct SubDefenseStatList: View {
                     HStack {
                         Spacer()
                         
-                        Text("\(SubWeapon.pointSensor.rawValue), \(SubWeapon.inkMine.rawValue), and \(SubWeapon.angleShooter.rawValue) tracking times are calculated against an oponent with 0 AP of \(Ability.subResistanceUp.localized).")
+                        Text("\(SubWeapon.pointSensor.localized), \(SubWeapon.inkMine.localized), and \(SubWeapon.angleShooter.localized) tracking times are calculated against an oponent with 0 AP of \(Ability.subResistanceUp.localized).")
                             .font(.caption)
                             .foregroundStyle(.secondary)
                         

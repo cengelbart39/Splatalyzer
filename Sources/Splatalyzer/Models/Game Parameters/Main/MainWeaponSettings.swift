@@ -35,10 +35,6 @@ public struct MainWeaponSettings: Parametable {
         case fast = "Fast"
         case mid = "Mid"
     }
-    
-    public func getOverwrites() -> MainOverwrites {
-        return MainOverwrites(settings: self)
-    }
 }
 
 /// Represents the weight of a Main Weapon
@@ -69,9 +65,14 @@ public struct MainOverwrites: Overwritable {
     /// Overwrites move speed while shooting the Main Weapon
     public let moveVelRtShot: HighMidLow?
     
+    public let reduceJumpSwerveRate: HighMidLow?
+        
     /// Initializes with ``MainWeaponSettings``
     /// - Parameter settings: Contains overwrite properties
-    public init(settings: MainWeaponSettings) {
+    public init(
+        settings: MainWeaponSettings,
+        reduceJumpSwerveRate: Double? = nil
+    ) {
         self.consumeRtMain = HighMidLow(
             settings.overwriteConsumeRtMainHigh,
             settings.overwriteConsumeRtMainMid,
@@ -81,12 +82,15 @@ public struct MainOverwrites: Overwritable {
             settings.overwriteMoveVelRtShotHigh,
             settings.overwriteMoveVelRtShotMid,
             settings.overwriteMoveVelRtShotLow)
+        
+        self.reduceJumpSwerveRate = HighMidLow(nil, reduceJumpSwerveRate, nil)
     }
     
     /// Initializer to set all properties to `nil`
     public init() {
         self.consumeRtMain = nil
         self.moveVelRtShot = nil
+        self.reduceJumpSwerveRate = nil
     }
     
     public func value(for key: AbilityValue) -> HighMidLow? {
@@ -95,6 +99,9 @@ public struct MainOverwrites: Overwritable {
             
         } else if key == .moveVelRtShot {
             return self.moveVelRtShot
+            
+        } else if key == .reduceJumpSwerveRate {
+            return self.reduceJumpSwerveRate
             
         } else {
             return nil

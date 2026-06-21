@@ -12,12 +12,21 @@ public struct TacticoolerToggle: View {
     
     @EnvironmentObject var analyzer: SplatalyzerViewModel
     
+    #if os(macOS)
+    @ScaledMetric(relativeTo: .title3)
+    private var imageSize = 35
+    
+    #else
+    @ScaledMetric(relativeTo: .title3)
+    private var imageSize = 55
+    
+    #endif
+    
     public init() { }
     
     public var body: some View {
         HStack {
-            ImageView(image: SpecialWeapon.tacticooler.image)
-                .frame(width: 60, height: 60)
+            ImageView(image: SpecialWeapon.tacticooler.image, targetSize: imageSize)
                 .accessibilityHidden(false)
             
             Toggle("", isOn: $analyzer.build.usingTacticooler)

@@ -27,7 +27,6 @@ Depending on your use case, you may want to use all, some, or none of these.
 - ``GearBuildView``
 - ``GearPieceView``
 - ``AbilityView``
-- ``AbilityKeyboardView``
 - ``LDEPicker``
 
 ### Stat Views

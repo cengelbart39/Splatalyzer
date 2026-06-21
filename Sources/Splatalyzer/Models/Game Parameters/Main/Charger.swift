@@ -38,6 +38,10 @@ public struct Charger: MainWeaponable {
         public let weaponScopeParam: ScopeParameter?
         public let weaponChargerGuideShapeParam: GuideShapeParameter?
         
+        public func getOverwrites() -> MainOverwrites {
+            return MainOverwrites(settings: self.mainWeaponSetting)
+        }
+        
         public enum CodingKeys: String, CodingKey {
             case collisionParam = "CollisionParam"
             case damageParam = "DamageParam"

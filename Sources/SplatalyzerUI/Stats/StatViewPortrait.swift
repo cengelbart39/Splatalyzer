@@ -19,12 +19,13 @@ public struct StatViewPortrait: View {
             ScrollView {
                 VStack {
                     BuildSelector()
+                        .padding(.bottom, 10)
                     
                     if let stats = analyzer.stats {
                         BuildStatsView(stats: stats)
                     }
                 }
-                .padding(.horizontal)
+                .scenePadding(.horizontal)
                 
             }
         }

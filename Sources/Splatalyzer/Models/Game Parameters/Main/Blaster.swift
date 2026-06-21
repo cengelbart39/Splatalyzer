@@ -55,6 +55,12 @@ public struct Blaster: MainWeaponable {
         
         public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
         
+        public func getOverwrites() -> MainOverwrites {
+            return MainOverwrites(
+                settings: self.mainWeaponSetting,
+                reduceJumpSwerveRate: self.skillActionSpecUpReduceJumpSwerveRate?.mid)
+        }
+        
         public enum CodingKeys: String, CodingKey {
             case blastJumpParam = "BlastJumpParam"
             case blastParam = "BlastParam"

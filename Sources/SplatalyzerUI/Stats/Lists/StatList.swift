@@ -24,41 +24,45 @@ public struct StatList<Content: View>: View {
     
     public var content: Content
     
+    public var imageSize: CGFloat
+    
     #if os(macOS)
     public var image: NSImage?
     
-    public init(title: String, image: NSImage?, content: Content) {
+    public init(title: String, @ViewBuilder content: () -> Content) {
         self.title = title
-        self.image = image
-        self.content = content
+        self.image = nil
+        self.imageSize = .zero
+        self.content = content()
     }
     
-    public init(title: String, image: NSImage? = nil, @ViewBuilder content: () -> Content) {
+    public init(title: String, image: NSImage?, imageSize: CGFloat, @ViewBuilder content: () -> Content) {
         self.title = title
         self.image = image
+        self.imageSize = imageSize
         self.content = content()
     }
     #else
     public var image: UIImage?
     
-    public init(title: String, image: UIImage?, content: Content) {
+    public init(title: String, image: UIImage?, imageSize: CGFloat = .zero, content: Content) {
         self.title = title
         self.image = image
+        self.imageSize = imageSize
         self.content = content
     }
     
-    public init(title: String, image: UIImage? = nil, @ViewBuilder content: () -> Content) {
+    public init(title: String, image: UIImage? = nil, imageSize: CGFloat = .zero, @ViewBuilder content: () -> Content) {
         self.title = title
         self.image = image
+        self.imageSize = imageSize
         self.content = content()
     }
     #endif
     
     /// Whether the view is collapsed
     @State public var isCollapsed = true
-    
-    @State var labelHeight = CGFloat.zero
-    
+        
     public var body: some View {
         VStack(alignment: .leading) {
             Button(action: {
@@ -68,27 +72,17 @@ public struct StatList<Content: View>: View {
             }, label: {
                 HStack {
                     if image != nil {
-                        ImageView(image: image)
-                            .frame(maxHeight: labelHeight)
+                        ImageView(image: image, targetSize: imageSize)
                     }
                     
                     Text(title)
                         .font(.title3)
-                        .overlay(
-                            GeometryReader { geo in
-                                Color.clear
-                                    .onAppear {
-                                        self.labelHeight = geo.frame(in: .local).size.height
-                                    }
-                            }
-                        )
                     
                     Spacer()
                     
                     Image(systemName: isCollapsed ? "chevron.right" : "chevron.down")
                         .font(.title3)
                 }
-//                .bold()
             })
             .contentTransition(.symbolEffect(.replace))
             .cardBackground(for: colorScheme)

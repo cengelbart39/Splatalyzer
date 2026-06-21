@@ -49,6 +49,10 @@ public struct Dualie: MainWeaponable {
         
         public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter?
         
+        public func getOverwrites() -> MainOverwrites {
+            return MainOverwrites(settings: self.mainWeaponSetting)
+        }
+        
         public enum CodingKeys: String, CodingKey {
             case collisionLapOverParam = "CollisionLapOverParam"
             case collisionParam = "CollisionParam"

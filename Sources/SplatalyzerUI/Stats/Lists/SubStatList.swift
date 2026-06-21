@@ -11,6 +11,9 @@ import SwiftUI
 /// Displays sub weapon statistics
 public struct SubStatList: View {
     
+    @ScaledMetric(relativeTo: .title3)
+    private var imageSize = 20
+    
     public var subStats: SubWeaponStats
     
     public init(subStats: SubWeaponStats) {
@@ -18,7 +21,7 @@ public struct SubStatList: View {
     }
     
     public var body: some View {
-        StatList(title: subStats.weapon.localized, image: subStats.weapon.image) {
+        StatList(title: subStats.weapon.localized, image: subStats.weapon.image, imageSize: imageSize) {
             LazyVStack(spacing: 10) {
                 AbilityStatCard(stat: subStats.inkConsumptionPercentage)
                 

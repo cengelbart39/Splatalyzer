@@ -11,6 +11,9 @@ import SwiftUI
 /// Displays Special Weapon statistics
 public struct SpecialStatList: View {
     
+    @ScaledMetric(relativeTo: .title3)
+    private var imageSize = 20
+    
     /// Stats about the special weapons
     public var specialStats: SpecialWeaponStats
     
@@ -19,7 +22,7 @@ public struct SpecialStatList: View {
     }
     
     public var body: some View {
-        StatList(title: specialStats.weapon.localized, image: specialStats.weapon.image) {
+        StatList(title: specialStats.weapon.localized, image: specialStats.weapon.image, imageSize: imageSize) {
             LazyVStack(spacing: 10) {
                 AbilityStatCard(stat: specialStats.point)
                 

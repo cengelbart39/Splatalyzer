@@ -27,6 +27,10 @@ public struct Stringer: MainWeaponable {
         public let bulletStringerParam: BulletParameter
         public let weaponStringerParam: WeaponParameter
         
+        public func getOverwrites() -> MainOverwrites {
+            return MainOverwrites(settings: self.mainWeaponSetting)
+        }
+        
         public enum CodingKeys: String, CodingKey {
             case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
             case mainWeaponSetting = "MainWeaponSetting"

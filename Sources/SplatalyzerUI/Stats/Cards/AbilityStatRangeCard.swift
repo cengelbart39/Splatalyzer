@@ -13,6 +13,9 @@ public struct AbilityStatRangeCard: View {
     
     @Environment(\.colorScheme) var colorScheme
     
+    @ScaledMetric(relativeTo: .footnote)
+    private var abilityImageSize = 20
+    
     public var range: AbilityStatRange?
     
     public init(range: AbilityStatRange?) {
@@ -106,7 +109,7 @@ public struct AbilityStatRangeCard: View {
                     
                     HStack {
                         ForEach(range.modifiedBy, id: \.self) { ability in
-                            ImageView(image: ability.image)
+                            ImageView(image: ability.image, targetSize: abilityImageSize)
                                 .padding(5)
                                 .abilityBackground(for: colorScheme)
                                 .frame(width: 35)

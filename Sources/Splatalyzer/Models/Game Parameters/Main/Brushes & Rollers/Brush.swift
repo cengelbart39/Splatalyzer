@@ -30,6 +30,10 @@ public struct Brush: MainWeaponable {
         public let weaponSwingParam: BRWeaponSwingParameter
         public let spawnBulletAdditionMovePlayerParam: BRSpawnBulletAdditionMoveParameter
         
+        public func getOverwrites() -> MainOverwrites {
+            return MainOverwrites(settings: self.mainWeaponSetting)
+        }
+        
         public enum CodingKeys: String, CodingKey {
             case bodyParam = "BodyParam"
             case bulletAdditionMovePlayerSplashNearestParam = "BulletAdditionMovePlayerSplashNearestParam"

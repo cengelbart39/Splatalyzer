@@ -11,6 +11,9 @@ import SwiftUI
 /// Displays statistics about the main weapon
 public struct MainStatList: View {
     
+    @ScaledMetric(relativeTo: .title3)
+    private var imageSize = 30
+    
     /// Main Weapon statistics
     public var mainStats: MainWeaponStats
     
@@ -19,7 +22,7 @@ public struct MainStatList: View {
     }
     
     public var body: some View {
-        StatList(title: mainStats.weapon.localized, image: mainStats.weapon.image) {
+        StatList(title: mainStats.weapon.localized, image: mainStats.weapon.image, imageSize: imageSize) {
             LazyVStack(spacing: 10) {
                 AbilityStatCard(stat: mainStats.shotSpreadAir)
                 

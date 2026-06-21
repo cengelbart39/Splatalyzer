@@ -17,6 +17,9 @@ public struct LDEPicker: View {
     
     @EnvironmentObject public var analyzer: SplatalyzerViewModel
     
+    @ScaledMetric(relativeTo: .title3)
+    private var imageSize = 45
+    
     public init() { }
     
     private var intensity = [
@@ -46,14 +49,14 @@ public struct LDEPicker: View {
     
     public var body: some View {
         HStack {
-            ImageView(image: Ability.lastDitchEffort.image)
+            ImageView(image: Ability.lastDitchEffort.image, targetSize: imageSize)
                 .padding(5)
                 .abilityBackground(for: colorScheme)
-                .frame(width: 60, height: 60)
             
             Picker(String(localized: "\(Ability.lastDitchEffort.localized) Intensity"), selection: $analyzer.build.ldeIntensity) {
                 ForEach(0..<intensity.count, id: \.self) { index in
                     Text(intensity[index])
+                        .font(.title3)
                         .tag(index)
                 }
             }

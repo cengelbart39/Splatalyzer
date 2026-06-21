@@ -56,8 +56,8 @@ public extension View {
             .padding(10)
             .background {
                 RoundedRectangle(cornerRadius: 10)
-                    .foregroundStyle(colorScheme == .light ? .white : Color(uiColor: .systemGray6))
-                    .shadow(radius: 5)
+                    .foregroundStyle(Color(uiColor: .systemGray5))
+//                    .shadow(radius: 5)
             }
         #else
         return self

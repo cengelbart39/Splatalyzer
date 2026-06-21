@@ -11,7 +11,10 @@ public protocol MainParametable: Parametable {
     var mainEffectiveRangeUpParam: MainEffectiveRangeUpParameter? { get }
     
     var mainWeaponSetting: MainWeaponSettings { get }
+    
+    func getOverwrites() -> MainOverwrites
 }
 
 /// A type that conforms to ``GameParametable`` and requires its ``GameParametable/Parameters``  to conform  to ``MainParametable``
-public protocol MainWeaponable: GameParametable where Parameters: MainParametable { }
+public protocol MainWeaponable: GameParametable where Parameters: MainParametable {
+}

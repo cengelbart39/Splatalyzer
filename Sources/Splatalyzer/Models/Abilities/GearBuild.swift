@@ -168,7 +168,7 @@ public struct GearPiece: Codable, Equatable, Identifiable, Sendable {
             
             if ability == .abilityDoubler { hasAbilityDoubler = true }
             
-            if !Ability.nonRestrictedAbilities.contains(ability) { continue }
+//            if !Ability.nonRestrictedAbilities.contains(ability) { continue }
             
             let aps = index == 0 ? 10 : 3
             let apsDoubled = aps * (hasAbilityDoubler ? 2 : 1)

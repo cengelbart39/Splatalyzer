@@ -28,7 +28,7 @@ import UIKit
 public typealias AbilityPoints = [Ability : Int]
 
 /// Special attributes for gear that effect the player and/oror weapons
-public enum Ability: String, CaseIterable, Codable, Sendable {
+public enum Ability: String, CaseIterable, Codable, Identifiable, Sendable {
     /// A unassigned ability
     case none = "Unknown"
     
@@ -112,6 +112,20 @@ public enum Ability: String, CaseIterable, Codable, Sendable {
     
     /// A shoes-exclusive ability that hides your Super Jump landing point from distant players
     case stealthJump = "SuperJumpSign_Hide"
+    
+    public var id: String {
+        return self.rawValue
+    }
+    
+    public var isMainAbility: Bool {
+        switch self {
+            case .comeback, .lastDitchEffort, .openingGambit, .tenacity, .abilityDoubler, .haunt, .ninjaSquid, .respawnPunisher, .thermalInk, .dropRoller, .objectShredder, .stealthJump:
+                return true
+            
+            default:
+                return false
+        }
+    }
     
     /// Whether an ability is restricted as a primary ability to headgear, clothes, shoes, or not-at-all.
     public var restriction: AbilityRestriction {
@@ -240,6 +254,34 @@ public extension Ability {
     /// An array of abilities that have no restriction.
     static let nonRestrictedAbilities = Ability.allCases.filter {
         $0.restriction == .none
+    }
+    
+    static func allCases(restrictedBy restriction: AbilityRestriction, includeMains: Bool) -> [Ability] {
+        switch (restriction, includeMains) {
+        case (.headgearOnly, true):
+            return Ability.headgearAbilities
+            
+        case (.headgearOnly, false):
+            return Ability.headgearAbilities.filter { !$0.isMainAbility }
+            
+        case (.clothesOnly, true):
+            return Ability.clothesAbilities
+            
+        case (.clothesOnly, false):
+            return Ability.clothesAbilities.filter { !$0.isMainAbility }
+            
+        case (.shoesOnly, true):
+            return Ability.shoesAbilities
+            
+        case (.shoesOnly, false):
+            return Ability.shoesAbilities.filter { !$0.isMainAbility }
+            
+        case (.none, true):
+            return Ability.allCases
+            
+        case (.none, false):
+            return Ability.allCases.filter { !$0.isMainAbility }
+        }
     }
     
     /// Converts certain abilities to its equivalent ``AbilitySpecialEffect``

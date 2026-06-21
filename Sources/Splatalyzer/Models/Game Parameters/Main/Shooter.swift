@@ -47,6 +47,10 @@ public struct Shooter: MainWeaponable {
         public let actionSpecUpReduceJumpSwerveRate: ActionSpecUpParameter?
         public let spawnBulletAdditionMovePlayerParam: SpawnBulletAdditionMovePlayerParameter
         
+        public func getOverwrites() -> MainOverwrites {
+            return MainOverwrites(settings: self.mainWeaponSetting)
+        }
+        
         public enum CodingKeys: String, CodingKey {
             case collisionParam = "CollisionParam"
             case damageParam = "DamageParam"

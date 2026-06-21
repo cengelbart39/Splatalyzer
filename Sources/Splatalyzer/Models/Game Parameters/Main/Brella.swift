@@ -32,6 +32,10 @@ public struct Brella: MainWeaponable {
         public let weaponShelterCanopyParam: CanopyParameter
         public let weaponShelterShotgunParam: ShotgunParameter
         
+        public func getOverwrites() -> MainOverwrites {
+            return MainOverwrites(settings: self.mainWeaponSetting)
+        }
+        
         public enum CodingKeys: String, CodingKey {
             case mainEffectiveRangeUpParam = "MainEffectiveRangeUpParam"
             case mainWeaponSetting = "MainWeaponSetting"

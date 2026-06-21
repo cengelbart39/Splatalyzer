@@ -16,15 +16,33 @@ public struct AbilityView: View {
     /// The ability displayed and modified
     @Binding public var ability: Ability
     
+    #if os(macOS)
+    @ScaledMetric(relativeTo: .body)
+    private var pickerItemImageSize = 25
+    
+    @ScaledMetric(relativeTo: .title3)
+    private var pickerLabelSizeMain = 35
+    
+    @ScaledMetric(relativeTo: .title3)
+    private var pickerLabelSizeSub = 30
+    
+    #else
+    @ScaledMetric(relativeTo: .body)
+    private var pickerItemImageSize = 25
+
+    @ScaledMetric(relativeTo: .title3)
+    private var pickerLabelSizeMain = 65
+
+    @ScaledMetric(relativeTo: .title3)
+    private var pickerLabelSizeSub = 55
+    #endif
+    
     /// Whether the ability is a main ability
     public var isMain: Bool
     
     /// The restriction applied to ability selection
     public var restriction: AbilityRestriction
-    
-    /// Whether to present ``AbilityKeyboardView``
-    @State public var showCover = false
-    
+
     public init(ability: Binding<Ability>, isMain: Bool, restriction: AbilityRestriction) {
         self._ability = ability
         self.isMain = isMain
@@ -32,22 +50,31 @@ public struct AbilityView: View {
     }
     
     public var body: some View {
-        Button(action: {
-            showCover = true
-        }, label: {
-            ImageView(image: ability.image)
-                .padding(5)
-                .abilityBackground(for: colorScheme)
-        })
+        let abilities = Ability.allCases(
+            restrictedBy: restriction,
+            includeMains: isMain
+        )
+        
+        Menu {
+            ForEach(abilities) { ability in
+                Button(action: {
+                    self.ability = ability
+                }, label: {
+                    Label {
+                        Text(ability.localized)
+                    } icon: {
+                        ImageView(image: ability.image, targetSize: pickerItemImageSize)
+                    }
+                })
+            }
+        } label: {
+            ImageView(image: ability.image, targetSize: isMain ? pickerLabelSizeMain : pickerLabelSizeSub)
+        }
+        .padding(5)
+        .abilityBackground(for: colorScheme)
+        .buttonStyle(.plain)
         .accessibilityLabel(self.getLabel())
         .accessibilityHint("Change current ability")
-        .buttonStyle(.plain)
-        .showAbilityKeyboard(isPresented: $showCover, onDismiss: {
-            self.showCover = false
-        }, content: {
-            AbilityKeyboardView(currentAbility: $ability, restriction: restriction)
-                .presentationDetents([.medium])
-        })
     }
     
     func getLabel() -> String {

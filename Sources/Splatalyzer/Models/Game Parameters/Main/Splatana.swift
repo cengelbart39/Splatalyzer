@@ -32,6 +32,10 @@ public struct Splatana: MainWeaponable {
         
         public let weaponSaberParam: WeaponParameter
         
+        public func getOverwrites() -> MainOverwrites {
+            return MainOverwrites(settings: self.mainWeaponSetting)
+        }
+        
         public enum CodingKeys: String, CodingKey {
             case bulletSaberHorizontalParam = "BulletSaberHorizontalParam"
             case bulletSaberSlashHorizontalParam = "BulletSaberSlashHorizontalParam"

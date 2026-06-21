@@ -17,7 +17,14 @@ public struct MainWeaponPicker: View {
     
     @Environment(\.colorScheme) var colorScheme
         
-    @State var labelSize = CGFloat.zero
+    @ScaledMetric(relativeTo: .title3)
+    private var weaponImageSize = 35
+    
+    @ScaledMetric(relativeTo: .title3)
+    private var classImageSize = 25
+    
+    @ScaledMetric(relativeTo: .title3)
+    private var labelImageSize = 35
     
     /// The current main weapon
     @Binding public var mainWeapon: MainWeapon
@@ -35,7 +42,7 @@ public struct MainWeaponPicker: View {
                             Text(weapon.localized)
                             
                         }, icon: {
-                            ImageView(image: weapon.image)
+                            ImageView(image: weapon.image, targetSize: weaponImageSize)
                         })
                         .tag(weapon)
                     }
@@ -45,7 +52,7 @@ public struct MainWeaponPicker: View {
                         Text(type.localized)
                         
                     }, icon: {
-                        Image(type.symbolName, bundle: .module)
+                        ImageView(image: type.image, targetSize: classImageSize)
                             .accessibilityHidden(true)
                             .symbolRenderingMode(.multicolor)
                     })
@@ -55,21 +62,9 @@ public struct MainWeaponPicker: View {
         } label : {
             Label(title: {
                 Text(mainWeapon.localized)
-                    .overlay(
-                        GeometryReader { geo in
-                            Color.clear
-                                .onAppear {
-                                    self.labelSize = geo.frame(in: .local).size.height + 20
-                                }
-                                .onChange(of: geo.frame(in: .local).size.height) { _, newValue in
-                                    self.labelSize = newValue + 20
-                                }
-                        }
-                    )
                 
             }, icon: {
-                ImageView(image: mainWeapon.image)
-                    .frame(width: labelSize, height: labelSize)
+                ImageView(image: mainWeapon.image, targetSize: labelImageSize)
             })
         }
         .pickerBackground(for: colorScheme)
@@ -81,4 +76,5 @@ public struct MainWeaponPicker: View {
 
 #Preview {
     MainWeaponPicker(mainWeapon: .constant(MainWeapon.allCases.first!))
+        .padding(100)
 }
