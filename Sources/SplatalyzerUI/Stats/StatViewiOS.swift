@@ -64,9 +64,7 @@ public struct StatViewiOS: View {
             self.isPortrait = UIDevice.current.orientation.isPortrait
         }
         .onReceive(NotificationCenter.default.publisher(for: UIDevice.orientationDidChangeNotification)) { _ in
-            guard let scene = UIApplication.shared.windows.first?.windowScene else { return }
-            print(scene.interfaceOrientation.isPortrait)
-            self.isPortrait = scene.interfaceOrientation.isPortrait
+            self.isPortrait = UIApplication.shared.activeInterfaceOrientation.isPortrait
         }
     }
 }

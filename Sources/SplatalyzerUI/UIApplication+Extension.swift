@@ -11,21 +11,36 @@ import Foundation
 import UIKit
 
 extension UIApplication {
+    private var connectedKeyWindow: UIWindow? {
+        return self.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .flatMap { $0.windows }
+            .first { $0.isKeyWindow }
+    }
+    
     public var isSplitOrSlideOver: Bool {
-        guard let window = self.windows.filter({ $0.isKeyWindow }).first else { return false }
-        return !(window.frame.width == window.screen.bounds.width)
+        guard let window = self.connectedKeyWindow, let screen = window.windowScene?.screen else { return false }
+        return !(window.frame.width == screen.bounds.width)
     }
     
     public var isFullScreen: Bool {
-        let appRect = UIApplication.shared.windows.first?.frame ?? CGRect.infinite
-        let screenRect = UIScreen.main.bounds
+        guard let window = self.connectedKeyWindow, let screen = window.windowScene?.screen else { return false }
+        
+        let appRect = window.frame
+        let screenRect = screen.bounds
         return appRect.width == screenRect.width && appRect.height == screenRect.height
     }
     
     public var screenSize: CGSize {
-        guard let size = self.windows.filter({ $0.isKeyWindow }).first?.bounds.size else { return .zero }
-        return size
+        return connectedKeyWindow?.bounds.size ?? .zero
     }
+    
+    public var activeInterfaceOrientation: UIInterfaceOrientation {
+            let windowScene = self.connectedScenes
+                .first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene
+            
+            return windowScene?.interfaceOrientation ?? .unknown
+        }
 }
 #endif
 
