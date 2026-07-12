@@ -35,18 +35,6 @@ public extension View {
         #endif
     }
     
-    func showAbilityKeyboard<Content>(
-        isPresented: Binding<Bool>,
-        onDismiss: (() -> Void)?,
-        @ViewBuilder content: @escaping () -> Content
-    ) -> some View where Content : View {
-        #if os(visionOS)
-        self.fullScreenCover(isPresented: isPresented, onDismiss: onDismiss, content: content)
-        #else
-        self.sheet(isPresented: isPresented, onDismiss: onDismiss, content: content)
-        #endif
-    }
-    
     func cardBackground(for colorScheme: ColorScheme) -> some View {
         #if os(visionOS)
         return self
@@ -57,7 +45,6 @@ public extension View {
             .background {
                 RoundedRectangle(cornerRadius: 10)
                     .foregroundStyle(Color(uiColor: .systemGray5))
-//                    .shadow(radius: 5)
             }
         #else
         return self
@@ -75,6 +62,18 @@ public extension View {
                     .shadow(radius: 5)
             }
         
+        #elseif os(macOS)
+        let lightColor = Color(red: 236/255, green: 236/255, blue: 236/255)
+        let darkColor = Color(red: 52/255, green: 56/255, blue: 57/255)
+        
+        return self
+            .menuStyle(.button)
+            .buttonStyle(.borderless)
+            .padding(2)
+            .background(
+                RoundedRectangle(cornerRadius: 6)
+                    .foregroundStyle(colorScheme == .light ? lightColor : darkColor)
+            )
         #else
         return self
         #endif

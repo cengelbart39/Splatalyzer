@@ -35,7 +35,7 @@ public struct DamageEffectStatCard: View {
                         
                     } else if stat.distanceArr.count == 2 {
                         let arr = stat.distanceArr
-                        Text("\(arr[0].format())-\(arr[1].format())", comment: "Represents a distance range, i.e. 4-7")
+                        Text("\(arr[0].format())-\(arr[1].format())", comment: "Represents a distance range, e.g., 4-7")
                             .font(.title)
                             .fontDesign(.rounded)
                     }
@@ -44,38 +44,20 @@ public struct DamageEffectStatCard: View {
                 
                 Spacer()
                 
-                VStack(alignment: .leading, spacing: 0) {
-                    Text("Base")
-                        .font(.headline.weight(.semibold))
-                        .padding(.bottom, -5)
-                        .foregroundStyle(.secondary)
-                    
-                    Text(stat.baseValue.format())
-                        .font(.title)
-                        .fontDesign(.rounded)
-                    + Text(StatUnit.hp.symbol.uppercased())
-                        .foregroundStyle(.secondary)
-                        .font(.headline)
-                }
-                .accessibilityElement(children: .combine)
+                StatLabel(
+                    label: String(localized: "Base"),
+                    value: stat.baseValue.format(),
+                    unit: .hp
+                )
                 
                 Spacer()
                 
                 if stat.baseValue != stat.effectValue {
-                    VStack(alignment: .leading, spacing: 0) {
-                        Text("Effect")
-                            .font(.headline.weight(.semibold))
-                            .padding(.bottom, -5)
-                            .foregroundStyle(.secondary)
-                        
-                        Text(stat.effectValue.format())
-                            .font(.title)
-                            .fontDesign(.rounded)
-                        + Text(StatUnit.hp.symbol.uppercased())
-                            .foregroundStyle(.secondary)
-                            .font(.headline)
-                    }
-                    .accessibilityElement(children: .combine)
+                    StatLabel(
+                        label: String(localized: "Effect"),
+                        value: stat.baseValue.format(),
+                        unit: .hp
+                    )
                     
                     Spacer()
                 }

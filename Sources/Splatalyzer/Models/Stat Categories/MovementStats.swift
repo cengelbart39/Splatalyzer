@@ -93,4 +93,9 @@ public struct MovementStats: Codable, Equatable, Sendable {
 
         self.enemyInkDamageLimit = StatHelper.enemyInkDamageLimit(ap: ap, mainInfo: mainData)
     }
+    
+    /// Determines if any stat is modified by any ability
+    public func isModifiedByAbilities() -> Bool {
+        return self.swimSpeed.isModifiedByAbilities() || self.swimSpeedWithRainmaker.isModifiedByAbilities() || self.runSpeed.isModifiedByAbilities() || self.shootingRunSpeed?.isModifiedByAbilities() == true || self.shootingRunSpeedFullCharge?.isModifiedByAbilities() == true || self.shootingRunSpeedSecondary?.isModifiedByAbilities() == true || self.squidSurgeChargeFrames.isModifiedByAbilities() || self.runSpeedInEnemyInk.isModifiedByAbilities() || self.framesBeforeDamageInEnemyInk.isModifiedByAbilities() || self.damageInEnemyInkPerSecond.isModifiedByAbilities() || self.enemyInkDamageLimit.isModifiedByAbilities()
+    }
 }

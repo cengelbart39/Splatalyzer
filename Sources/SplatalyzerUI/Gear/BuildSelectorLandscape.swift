@@ -8,6 +8,7 @@
 import Splatalyzer
 import SwiftUI
 
+/// Displays ability selection side-by-side with weapon and effect configuration
 public struct BuildSelectorLandscape: View {
     
     @EnvironmentObject public var analyzer: SplatalyzerViewModel
@@ -26,14 +27,12 @@ public struct BuildSelectorLandscape: View {
 
             VStack {
                 MainWeaponPicker(mainWeapon: $analyzer.build.mainWeapon)
-
-                if analyzer.build.gear.hasAbility(.lastDitchEffort) {
-                    LDEPicker()
-                }
                 
                 TacticoolerToggle()
                 
                 FlowAuraToggle()
+                
+                AbilityConfigView()
             }
             
             Spacer()
@@ -47,7 +46,7 @@ public struct BuildSelectorLandscape: View {
         .onChange(of: analyzer.build.mainWeapon) { _, newValue in
             try? analyzer.updateStats(for: newValue)
         }
-        .onChange(of: analyzer.build.ldeIntensity) { _, newValue in
+        .onChange(of: analyzer.build.abilityOptions) { _, newValue in
             try? analyzer.updateStats(for: newValue)
         }
         .onChange(of: analyzer.build.usingTacticooler) { _, newValue in

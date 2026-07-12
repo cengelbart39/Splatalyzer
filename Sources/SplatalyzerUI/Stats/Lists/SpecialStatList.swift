@@ -22,7 +22,7 @@ public struct SpecialStatList: View {
     }
     
     public var body: some View {
-        StatList(title: specialStats.weapon.localized, image: specialStats.weapon.image, imageSize: imageSize) {
+        StatList(title: specialStats.weapon.localized, image: specialStats.weapon.image, imageSize: imageSize, isModifiedByAbilities: specialStats.isModifiedByAbilities()) {
             LazyVStack(spacing: 10) {
                 AbilityStatCard(stat: specialStats.point)
                 

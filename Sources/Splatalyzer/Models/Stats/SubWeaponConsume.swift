@@ -9,10 +9,16 @@ import Foundation
 
 /// Represents the ink consumption of a sub weapon
 public struct SubWeaponConsume: Sendable {
-    /// The ink consumption
+    /// The ink consumption before abilities
+    public let inkConsumeBase: Double
+    
+    /// The ink consumption considering abilities
     public let inkConsume: Double
     
-    /// The number of subs used
+    /// The number of subs used before abilties
+    public let maxSubsFromFullInkTankBase: Int
+    
+    /// The number of subs used considering abilties
     public let maxSubsFromFullInkTank: Int
     
     /// Initializes and calculates an instance
@@ -32,11 +38,15 @@ public struct SubWeaponConsume: Sendable {
             of: issAp,
             weapon: mainInfo)
 
-        let inkConsumeAfterISS = subInfo.inkConsume * apEffect.effect
+        let inkConsumeBase = subInfo.inkConsume * apEffect.baseEffect
+        let inkConsume = subInfo.inkConsume * apEffect.effect
         
         let inkTankSize = mainInfo.mainWeaponId == .splattershotJr || mainInfo.mainWeaponId == .customSplattershotJr ? 1.1 : 1
         
-        self.inkConsume = inkConsumeAfterISS
-        self.maxSubsFromFullInkTank = Int(floor(inkTankSize / inkConsumeAfterISS))
+        self.inkConsumeBase = inkConsumeBase
+        self.maxSubsFromFullInkTankBase = Int(floor(inkTankSize / inkConsumeBase))
+        
+        self.inkConsume = inkConsume
+        self.maxSubsFromFullInkTank = Int(floor(inkTankSize / inkConsume))
     }
 }

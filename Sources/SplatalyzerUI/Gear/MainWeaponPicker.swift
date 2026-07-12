@@ -26,6 +26,16 @@ public struct MainWeaponPicker: View {
     @ScaledMetric(relativeTo: .title3)
     private var labelImageSize = 35
     
+    #if os(macOS)
+    private var lightColor = Color(red: 236/255, green: 236/255, blue: 236/255)
+    
+    private var darkColor = Color(red: 52/255, green: 56/255, blue: 57/255)
+    
+    #elseif os(iOS)
+    private var lightColor = Color.white
+    private var darkColor = Color(.systemGray6)
+    #endif
+    
     /// The current main weapon
     @Binding public var mainWeapon: MainWeapon
     
@@ -75,6 +85,6 @@ public struct MainWeaponPicker: View {
 }
 
 #Preview {
-    MainWeaponPicker(mainWeapon: .constant(MainWeapon.allCases.first!))
+    MainWeaponPicker(mainWeapon: .constant(MainWeapon.wellspringV))
         .padding(100)
 }

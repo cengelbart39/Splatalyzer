@@ -27,13 +27,7 @@ public struct BuildSelector: View {
                 
                 GearBuildView(gearBuild: $analyzer.build.gear)
                 
-                if analyzer.build.gear.hasAbility(.lastDitchEffort) {
-                    LDEPicker()
-                }
-                
-                TacticoolerToggle()
-                
-                FlowAuraToggle()
+                AbilityConfigView()
                 
                 Spacer()
             }
@@ -49,7 +43,7 @@ public struct BuildSelector: View {
         .onChange(of: analyzer.build.mainWeapon) { _, newValue in
             try? analyzer.updateStats(for: newValue)
         }
-        .onChange(of: analyzer.build.ldeIntensity) { _, newValue in
+        .onChange(of: analyzer.build.abilityOptions) { _, newValue in
             try? analyzer.updateStats(for: newValue)
         }
         .onChange(of: analyzer.build.usingTacticooler) { _, newValue in

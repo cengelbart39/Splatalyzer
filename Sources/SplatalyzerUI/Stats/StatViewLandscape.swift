@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// A landscape build selection view stacked on stats display
 public struct StatViewLandscape: View {
     
     @EnvironmentObject var analyzer: SplatalyzerViewModel

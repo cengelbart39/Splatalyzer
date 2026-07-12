@@ -217,7 +217,7 @@ public struct SpecialWeaponData: WeaponDatable {
     public init(crabTank: CrabTank) {
         let gameParams = crabTank.parameters
         
-        var canon = [DistanceDamage(damage: 600, distance: 1)]
+        var canon = [DistanceDamage(damage: 500, distance: 1)]
         canon.append(contentsOf: gameParams.cannonParam.blastParam.distanceDamage)
         
         self.id = .crabTank
@@ -248,7 +248,7 @@ public struct SpecialWeaponData: WeaponDatable {
         self.bulletDamageMin = nil
         self.bumpDamage = nil
         self.cannonDamage = []
-        self.directDamage = nil
+        self.directDamage = gameParams.moveParam.damageValueForDamageTag
         self.distanceDamage = []
         self.exhaleBlastParamMaxCharge = []
         self.exhaleBlastParamMinCharge = []
@@ -499,7 +499,7 @@ public struct SpecialWeaponData: WeaponDatable {
         self.swingDamage = []
         self.throwDamage = []
         self.throwDirectDamage = nil
-        self.tickDamage = nil
+        self.tickDamage = gameParams.blastParam.damageValueStart
         self.waveDamage = nil
     }
     

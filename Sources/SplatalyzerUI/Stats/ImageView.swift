@@ -19,6 +19,7 @@ public struct ImageView: View {
     /// - Parameters:
     ///   - image: The source `NSImage`. If nil, a blank image is used.
     ///   - targetSize: The maximum width and height to scale the image down to.
+    /// - Note: On other platforms, pass `UIImage` instead of `NSImage`
     public init(image: NSImage?, targetSize: CGFloat = 16) {
         if let image = image {
             let newSize = NSSize(width: targetSize, height: targetSize)
@@ -48,6 +49,7 @@ public struct ImageView: View {
     /// - Parameters:
     ///   - image: The source `UIImage`. If nil, a blank image is used.
     ///   - targetSize: The maximum width and height to scale the image down to. (Currently unused)
+    /// - Note: On macOS, pass `NSImage` instead of `UIImage`
     public init(image: UIImage? = nil, targetSize: CGFloat) {
         if let image = image {
             let newSize = CGSize(width: targetSize, height: targetSize)

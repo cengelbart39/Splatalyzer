@@ -65,7 +65,7 @@ There are two cases of `AbilitySpecialEffect` to note:
 
 3. Similarly, the Flow Aura mechanic is account for here, as well, since it provides temporary AP of certain abilities.
 
-<doc:Ability> has a helper function ``Ability/toSpecialEffect(intensity:)``, that helps convert an `Ability` to an `AbilitySpecialEffect`.
+<doc:Ability> has a helper function ``Ability/toSpecialEffect(abilityOptions:)``, that helps convert an `Ability` to an `AbilitySpecialEffect`.
 
 ## Representing Gear Builds
 
@@ -84,7 +84,7 @@ However, if you want an empty `GearPiece`, there is ``GearPiece/init(for:)`` tha
 
 It has 3 notable functions:
 - ``GearPiece/isValid()``: Checks if there is a illegal main ability
-- ``GearPiece/toAbilityPoints()``: Converts abilities to ``AbilityPoints`` (AP)
+- ``GearPiece/toAbilityPoints(options:)``: Converts abilities to ``AbilityPoints`` (AP)
 - ``GearPiece/hasAbility(_:)``: Determines if a specific ability is applied to the gear piece
 
 ### Gear Builds
@@ -99,7 +99,7 @@ It builds off of `GearPiece`'s functions as well:
 - ``GearBuild/isValid()``: Checks if there are any illegal main abilities across its properties
 - ``GearBuild/hasAbility(_:)``: Determines if a specific ability is present across its properties.
 
-As you may expect, `GearBuild` also has ``GearBuild/toAbilityPoints(ldeIntensity:usingTacticooler:usingFlowAura:)`` that calculates the AP across the whole build. This is also where we account for any ``AbilitySpecialEffect``s, as reflected by its parameters.
+As you may expect, `GearBuild` also has ``GearBuild/toAbilityPoints(abilityOptions:usingTacticooler:usingFlowAura:)`` that calculates the AP across the whole build. This is also where we account for any ``AbilitySpecialEffect``s.
 
 ## Ability Values
 

@@ -40,22 +40,12 @@
 
     },
     "%@-%@" : {
-      "comment" : "Represents a distance range, i.e. 4-7",
+      "comment" : "Represents a distance range, e.g., 4-7",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "%1$@-%2$@"
-          }
-        }
-      }
-    },
-    "%@-%@°" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@-%2$@°"
           }
         }
       }

@@ -76,11 +76,15 @@ public struct SubWeaponStats: Codable, Equatable, Sendable {
         
         self.markingRadius = StatHelper.subMarkingRadius(ap: ap, subInfo: subData)
 
-        
         self.explosionRadius = StatHelper.subExplosionRadius(ap: ap, subInfo: subData)
         
         self.subHp = StatHelper.subHp(ap: ap, subInfo: subData)
         
         self.quickSuperJumpBoost = StatHelper.quickSuperJumpBoost(ap: ap, subInfo: subData)
+    }
+    
+    /// Determines if any stat is modified by any ability
+    public func isAffectedByAbilities() -> Bool {
+        return self.inkConsumptionPercentage.isModifiedByAbilities() || self.velocity?.isModifiedByAbilities() == true || self.firstPhaseDuration?.isModifiedByAbilities() == true || self.secondPhaseDuration?.isModifiedByAbilities() == true || self.markingTimeInSeconds?.isModifiedByAbilities() == true || self.markingRadius?.isModifiedByAbilities() == true || self.explosionRadius?.isModifiedByAbilities() == true || self.subHp?.isModifiedByAbilities() == true || self.quickSuperJumpBoost?.isModifiedByAbilities() == true
     }
 }

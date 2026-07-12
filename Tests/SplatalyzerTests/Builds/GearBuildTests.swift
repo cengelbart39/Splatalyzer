@@ -98,7 +98,10 @@ struct GearBuildTests {
     func emptyBuildAP() throws {
         let build = GearBuild()
         
-        let ap = build.toAbilityPoints(usingTacticooler: false, usingFlowAura: false)
+        let ap = build.toAbilityPoints(
+            abilityOptions: BuildAbilityOptions(),
+            usingTacticooler: false, usingFlowAura: false)
+        
         try #require(!ap.isEmpty)
         
         #expect(ap[.none] == 57)
@@ -115,21 +118,60 @@ struct GearBuildTests {
                 for: .headgearOnly),
             
             clothes: GearPiece(
-                main: .dropRoller,
+                main: .ninjaSquid,
                 sub1: .quickSuperJump,
                 sub2: .swimSpeedUp,
                 sub3: .swimSpeedUp,
                 for: .clothesOnly),
             
             shoes: GearPiece(
-                main: .ninjaSquid,
+                main: .dropRoller,
                 sub1: .inkSaverSub,
                 sub2: .swimSpeedUp,
                 sub3: .inkSaverSub,
                 for: .shoesOnly)
         )
         
-        let ap = build.toAbilityPoints(usingTacticooler: false, usingFlowAura: false)
+        let options = BuildAbilityOptions()
+        let ap = build.toAbilityPoints(abilityOptions: options, usingTacticooler: false, usingFlowAura: false)
+        try #require(!ap.isEmpty)
+        
+        #expect(ap[.swimSpeedUp] == 22)
+        #expect(ap[.specialPowerUp] == 6)
+        #expect(ap[.quickSuperJump] == 3)
+        #expect(ap[.inkSaverSub] == 6)
+        
+        #expect(ap[.runSpeedUp] == nil)
+        #expect(ap[.inkResistanceUp] == nil)
+    }
+    
+    @Test("Build AP + Drop Roller Enabled")
+    func buildAPDropRoller() throws {
+        let build = GearBuild(
+            headgear: GearPiece(
+                main: .swimSpeedUp,
+                sub1: .specialPowerUp,
+                sub2: .swimSpeedUp,
+                sub3: .specialPowerUp,
+                for: .headgearOnly),
+            
+            clothes: GearPiece(
+                main: .ninjaSquid,
+                sub1: .quickSuperJump,
+                sub2: .swimSpeedUp,
+                sub3: .swimSpeedUp,
+                for: .clothesOnly),
+            
+            shoes: GearPiece(
+                main: .dropRoller,
+                sub1: .inkSaverSub,
+                sub2: .swimSpeedUp,
+                sub3: .inkSaverSub,
+                for: .shoesOnly)
+        )
+        
+        let options = BuildAbilityOptions(useDropRoller: true)
+        let ap = build.toAbilityPoints(abilityOptions: options, usingTacticooler: false, usingFlowAura: false)
         try #require(!ap.isEmpty)
         
         #expect(ap[.swimSpeedUp] == 52)
@@ -166,15 +208,16 @@ struct GearBuildTests {
                 for: .shoesOnly)
         )
         
-        let ap = build.toAbilityPoints(usingTacticooler: true, usingFlowAura: false)
+        let options = BuildAbilityOptions()
+        let ap = build.toAbilityPoints(abilityOptions: options, usingTacticooler: true, usingFlowAura: false)
         try #require(!ap.isEmpty)
         
-        #expect(ap[.swimSpeedUp] == 52)
+        #expect(ap[.swimSpeedUp] == 29)
         #expect(ap[.specialPowerUp] == 6)
         #expect(ap[.quickSuperJump] == 57)
         #expect(ap[.inkSaverSub] == 6)
         
-        #expect(ap[.runSpeedUp] == 30)
+        #expect(ap[.runSpeedUp] == 29)
         #expect(ap[.inkResistanceUp] == 57)
         #expect(ap[.specialSaver] == 57)
         #expect(ap[.intensifyAction] == 57)
@@ -205,10 +248,11 @@ struct GearBuildTests {
                 for: .shoesOnly)
         )
         
-        let ap = build.toAbilityPoints(usingTacticooler: false, usingFlowAura: true)
+        let options = BuildAbilityOptions()
+        let ap = build.toAbilityPoints(abilityOptions: options, usingTacticooler: false, usingFlowAura: true)
         try #require(!ap.isEmpty)
         
-        #expect(ap[.swimSpeedUp] == 52)
+        #expect(ap[.swimSpeedUp] == 30)
         #expect(ap[.specialPowerUp] == 6)
         #expect(ap[.quickSuperJump] == 3)
         #expect(ap[.inkSaverSub] == 6)
@@ -243,7 +287,8 @@ struct GearBuildTests {
                 for: .shoesOnly)
         )
 
-        let ap = build.toAbilityPoints(ldeIntensity: 0, usingTacticooler: false, usingFlowAura: false)
+        let options = BuildAbilityOptions(lastDitchEffort: 0)
+        let ap = build.toAbilityPoints(abilityOptions: options, usingTacticooler: false, usingFlowAura: false)
         try #require(!ap.isEmpty)
         
         #expect(ap[.inkSaverMain] == 6)
@@ -279,7 +324,8 @@ struct GearBuildTests {
                 for: .shoesOnly)
         )
 
-        let ap = build.toAbilityPoints(ldeIntensity: 21, usingTacticooler: false, usingFlowAura: false)
+        let options = BuildAbilityOptions(lastDitchEffort: 21)
+        let ap = build.toAbilityPoints(abilityOptions: options, usingTacticooler: false, usingFlowAura: false)
         try #require(!ap.isEmpty)
         
         #expect(ap[.inkSaverMain] == 24)

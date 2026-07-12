@@ -4,12 +4,13 @@
 
 ### Initializers
 - ``init(from:)``
-- ``init(subsFromFullInkTank:type:value:)``
+- ``init(subsFromFullInkTank:type:baseValue:value:)``
 
 ### Instance Properties
 - ``id``
 - ``subsFromFullInkTank``
 - ``type``
+- ``baseValue``
 - ``value``
 
 ### Array Operations

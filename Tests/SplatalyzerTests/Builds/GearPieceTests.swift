@@ -113,7 +113,8 @@ struct GearPieceTests {
             sub3: .swimSpeedUp,
             for: .clothesOnly)
         
-        let ap = piece.toAbilityPoints()
+        let options = BuildAbilityOptions()
+        let ap = piece.toAbilityPoints(options: options)
         try #require(!ap.isEmpty)
         
         #expect(ap[.ninjaSquid] == 10)
@@ -130,7 +131,8 @@ struct GearPieceTests {
             sub3: .specialPowerUp,
             for: .headgearOnly)
         
-        let ap = piece.toAbilityPoints()
+        let options = BuildAbilityOptions()
+        let ap = piece.toAbilityPoints(options: options)
         try #require(!ap.isEmpty)
         
         #expect(ap[.specialPowerUp] == 6)
@@ -146,7 +148,8 @@ struct GearPieceTests {
             sub3: .specialPowerUp,
             for: .clothesOnly)
         
-        let ap = piece.toAbilityPoints()
+        let options = BuildAbilityOptions()
+        let ap = piece.toAbilityPoints(options: options)
         try #require(!ap.isEmpty)
         
         #expect(ap[.specialPowerUp] == 12)
@@ -161,7 +164,20 @@ struct GearPieceTests {
         var gearPiece = GearPiece(for: ability.restriction)
         gearPiece.main = ability
         
-        let spEffect = gearPiece.specialEffect()
+        let options: BuildAbilityOptions
+        
+        switch ability {
+        case .dropRoller:
+            options = BuildAbilityOptions(useDropRoller: true)
+        case .openingGambit:
+            options = BuildAbilityOptions(useOpeningGambit: true)
+        case .comeback:
+            options = BuildAbilityOptions(useComeback: true)
+        default:
+            options = BuildAbilityOptions()
+        }
+        
+        let spEffect = gearPiece.specialEffect(abilityOptions: options)
         #expect(spEffect == effect)
     }
     
@@ -170,7 +186,8 @@ struct GearPieceTests {
         var gearPiece = GearPiece(for: .headgearOnly)
         gearPiece.main = .lastDitchEffort
         
-        let spEffect = gearPiece.specialEffect(ldeIntensity: intensity)
+        let options = BuildAbilityOptions(lastDitchEffort: intensity)
+        let spEffect = gearPiece.specialEffect(abilityOptions: options)
         #expect(spEffect == .lastDitchEffort(intensity))
     }
     
@@ -181,7 +198,9 @@ struct GearPieceTests {
         var gearPiece = GearPiece(for: .none)
         gearPiece.main = ablity
         
-        #expect(gearPiece.specialEffect() == nil)
+        let options = BuildAbilityOptions()
+        
+        #expect(gearPiece.specialEffect(abilityOptions: options) == nil)
     }
     
     @Test("Has Ability", arguments: [

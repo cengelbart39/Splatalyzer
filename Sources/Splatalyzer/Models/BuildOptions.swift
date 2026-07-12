@@ -12,7 +12,7 @@ public struct BuildOptions: Codable, Equatable, Identifiable, Sendable {
     public var id = UUID()
     public var mainWeapon: MainWeapon
     public var gear: GearBuild
-    public var ldeIntensity: Int
+    public var abilityOptions: BuildAbilityOptions
     public var usingTacticooler: Bool
     public var usingFlowAura: Bool
     
@@ -25,26 +25,67 @@ public struct BuildOptions: Codable, Equatable, Identifiable, Sendable {
         return self.gear.isValid()
     }
     
-    /// Determines if ``ldeIntensity`` is valid
+    /// Determines if ``abilityOptions`` is valid for Last Ditch Effort itensity
     public func isLDEIntensityValid() -> Bool {
-        return (0...21).contains(self.ldeIntensity)
+        return (0...21).contains(self.abilityOptions.lastDitchEffort)
     }
     
-    public init(id: UUID = UUID(), mainWeapon: MainWeapon, gearBuild: GearBuild, ldeIntensity: Int, usingTacticooler: Bool, usingFloodAura: Bool) {
+    public init(
+        id: UUID = UUID(),
+        mainWeapon: MainWeapon,
+        gearBuild: GearBuild,
+        abilityState: BuildAbilityOptions,
+        usingTacticooler: Bool,
+        usingFlowAura: Bool
+    ) {
         self.id = id
         self.mainWeapon = mainWeapon
         self.gear = gearBuild
-        self.ldeIntensity = ldeIntensity
+        self.abilityOptions = abilityState
         self.usingTacticooler = usingTacticooler
-        self.usingFlowAura = usingFloodAura
+        self.usingFlowAura = usingFlowAura
     }
     
     public init() {
         self.id = UUID()
         self.mainWeapon = MainWeapon.allCases.first!
         self.gear = GearBuild()
-        self.ldeIntensity = 0
+        self.abilityOptions = BuildAbilityOptions()
         self.usingTacticooler = false
         self.usingFlowAura = false
+    }
+}
+
+public struct BuildAbilityOptions: Codable, Equatable, Identifiable, Sendable {
+    public var id: UUID
+    public var lastDitchEffort: Int
+    public var useOpeningGambit: Bool
+    public var useComeback: Bool
+    public var useDropRoller: Bool
+    
+    public init(id: UUID = UUID(), lastDitchEffort: Int = 0, useOpeningGambit: Bool = false, useComeback: Bool = false, useDropRoller: Bool = false) {
+        self.id = id
+        self.lastDitchEffort = lastDitchEffort
+        self.useOpeningGambit = useOpeningGambit
+        self.useComeback = useComeback
+        self.useDropRoller = useDropRoller
+    }
+    
+    public func removableAbilities() -> [Ability] {
+        var output = [Ability]()
+        
+        if !self.useOpeningGambit {
+            output.append(.openingGambit)
+        }
+        
+        if !self.useComeback {
+            output.append(.comeback)
+        }
+        
+        if !self.useDropRoller {
+            output.append(.dropRoller)
+        }
+        
+        return output
     }
 }

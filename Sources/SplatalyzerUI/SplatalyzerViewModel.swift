@@ -42,9 +42,9 @@ public final class SplatalyzerViewModel: ObservableObject {
     }
     
     /// Update statstics after a change in LDE intensity
-    @MainActor public func updateStats(for ldeIntensity: Int) throws {
+    @MainActor public func updateStats(for abilityOptions: BuildAbilityOptions) throws {
         DispatchQueue.main.async {
-            self.build.ldeIntensity = ldeIntensity
+            self.build.abilityOptions = abilityOptions
         }
         
         try self.analyze()

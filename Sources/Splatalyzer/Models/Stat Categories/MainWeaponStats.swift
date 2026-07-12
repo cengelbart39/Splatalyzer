@@ -72,11 +72,16 @@ public struct MainWeaponStats: Codable, Equatable, Sendable {
         self.maxChargeSeconds = data.keepChargeFullFrame?.framesToSeconds()
     }
     
-    /// Checks if any property (besides ``weapon`` exists).
+    /// Checks if any property (besides ``weapon``) exists.
     ///
-    /// This structure, uniquely, may have all of its properties be `nil`.
+    /// This structure, uniquely, may have all of its other properties be `nil`.
     /// If this is the case, there is no need to display this information.
     public func exists() -> Bool {
         return !(self.shotSpreadAir == nil && self.shotSpreadGround == nil && self.shotAutofireSpreadAir == nil && self.shotAutofireSpreadGround == nil && self.whiteInkSeconds == nil && self.brellaCanopyHp == nil && self.fullChargeSeconds == nil && self.maxChargeSeconds == nil)
+    }
+    
+    /// Determines if any stat is modified by any ability
+    public func isAffectedByAbilities() -> Bool {
+        return self.shotSpreadAir?.isModifiedByAbilities() == true || self.shotAutofireSpreadAir?.isModifiedByAbilities() == true
     }
 }

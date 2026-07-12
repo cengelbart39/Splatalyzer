@@ -29,15 +29,17 @@ public struct SubDefenseStats: Codable, Equatable, Sendable {
     }
     
     public init(ap: AbilityPoints, mainData: MainWeaponData, allSubData: [SubWeapon : SubWeaponData]) {
-        
         self.toxicMistMovementReduction = StatHelper.toxicMistMovementReduction(ap: ap, mainInfo: mainData)
         
         self.pointSensorMarkedSeconds = StatHelper.subMarkedSeconds(ap: ap, mainInfo: mainData, subInfo: allSubData[.pointSensor]!)
         
         self.inkMineMarkedSeconds = StatHelper.inkMineMarkedSeconds(ap: ap, mainInfo: mainData, inkMine: allSubData[.inkMine]!)
 
-        
         self.angleShooterMarkedSeconds = StatHelper.subMarkedSeconds(ap: ap, mainInfo: mainData, subInfo: allSubData[.angleShooter]!)
-
+    }
+    
+    /// Determines if any stat is modified by any ability
+    public func isModifiedByAbilities() -> Bool {
+        return self.toxicMistMovementReduction.isModifiedByAbilities() || self.pointSensorMarkedSeconds.isModifiedByAbilities() || self.inkMineMarkedSeconds.isModifiedByAbilities() || self.angleShooterMarkedSeconds.isModifiedByAbilities()
     }
 }

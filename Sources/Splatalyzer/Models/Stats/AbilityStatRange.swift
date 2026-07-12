@@ -40,4 +40,9 @@ public struct AbilityStatRange: Codable, Equatable, Sendable {
         self.unit = unit
         self.title = title
     }
+    
+    /// Determines if the stat is modified by any ability
+    public func isModifiedByAbilities() -> Bool {
+        return self.baseMin != self.valueMin && self.baseMax != self.valueMax
+    }
 }

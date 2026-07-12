@@ -31,6 +31,11 @@ public struct AbilityStat: Codable, Equatable, Sendable {
         self.unit = unit
         self.title = title
     }
+    
+    /// Determines if the stat is modified by any ability
+    public func isModifiedByAbilities() -> Bool {
+        return self.baseValue != self.value
+    }
 }
 
 /// The unit of measurement used in ``AbilityStat``

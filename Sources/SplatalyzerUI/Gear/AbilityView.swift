@@ -21,10 +21,10 @@ public struct AbilityView: View {
     private var pickerItemImageSize = 25
     
     @ScaledMetric(relativeTo: .title3)
-    private var pickerLabelSizeMain = 35
+    private var pickerLabelSizeMain = 40
     
     @ScaledMetric(relativeTo: .title3)
-    private var pickerLabelSizeSub = 30
+    private var pickerLabelSizeSub = 35
     
     #else
     @ScaledMetric(relativeTo: .body)
@@ -70,7 +70,7 @@ public struct AbilityView: View {
         } label: {
             ImageView(image: ability.image, targetSize: isMain ? pickerLabelSizeMain : pickerLabelSizeSub)
         }
-        .padding(5)
+        .padding(3)
         .abilityBackground(for: colorScheme)
         .buttonStyle(.plain)
         .accessibilityLabel(self.getLabel())

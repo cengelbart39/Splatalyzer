@@ -52,7 +52,7 @@ public struct BuildStats: Codable, Equatable, Identifiable, Sendable {
     ///   - allSubInfo: Information about every sub weapon
     ///   - specialInfo: Information about the associated special weapon
     ///   - gearBuild: The user's gear build
-    ///   - ldeIntensity: The intensity of Last-Ditch Effort; a range from 0 to 21
+    ///   - abilityOptions: Whether to enable certain ability effects in calculations and/or to what extent
     ///   - usingTacticooler: Whether Tacticooler effects should be accounted for
     ///   - usingFlowAura: Whether Flow Aura effects should be accounted for
     public init(
@@ -60,11 +60,15 @@ public struct BuildStats: Codable, Equatable, Identifiable, Sendable {
         allSubInfo: [SubWeapon : SubWeaponData],
         specialInfo: SpecialWeaponData,
         gearBuild: GearBuild,
-        ldeIntensity: Int,
+        abilityOptions: BuildAbilityOptions,
         usingTacticooler: Bool,
         usingFlowAura: Bool
     ) {
-        let ap = gearBuild.toAbilityPoints(ldeIntensity: ldeIntensity, usingTacticooler: usingTacticooler, usingFlowAura: usingFlowAura)
+        let ap = gearBuild.toAbilityPoints(
+            abilityOptions: abilityOptions,
+            usingTacticooler: usingTacticooler,
+            usingFlowAura: usingFlowAura
+        )
         
         let subInfo = allSubInfo[mainInfo.subWeapon]!
         

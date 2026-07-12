@@ -24,6 +24,8 @@ public struct StatList<Content: View>: View {
     
     public var content: Content
     
+    public var isModifiedByAbilities: Bool
+    
     public var imageSize: CGFloat
     
     #if os(macOS)
@@ -31,31 +33,35 @@ public struct StatList<Content: View>: View {
     
     public init(title: String, @ViewBuilder content: () -> Content) {
         self.title = title
+        self.isModifiedByAbilities = false
         self.image = nil
         self.imageSize = .zero
         self.content = content()
     }
     
-    public init(title: String, image: NSImage?, imageSize: CGFloat, @ViewBuilder content: () -> Content) {
+    public init(title: String, image: NSImage? = nil, imageSize: CGFloat = .zero, isModifiedByAbilities: Bool = false, @ViewBuilder content: () -> Content) {
         self.title = title
         self.image = image
         self.imageSize = imageSize
+        self.isModifiedByAbilities = isModifiedByAbilities
         self.content = content()
     }
     #else
     public var image: UIImage?
     
-    public init(title: String, image: UIImage?, imageSize: CGFloat = .zero, content: Content) {
+    public init(title: String, content: Content) {
         self.title = title
-        self.image = image
-        self.imageSize = imageSize
+        self.image = nil
+        self.imageSize = .zero
+        self.isModifiedByAbilities = false
         self.content = content
     }
     
-    public init(title: String, image: UIImage? = nil, imageSize: CGFloat = .zero, @ViewBuilder content: () -> Content) {
+    public init(title: String, image: UIImage? = nil, imageSize: CGFloat = .zero, isModifiedByAbilities: Bool = false, @ViewBuilder content: () -> Content) {
         self.title = title
         self.image = image
         self.imageSize = imageSize
+        self.isModifiedByAbilities = isModifiedByAbilities
         self.content = content()
     }
     #endif
@@ -79,6 +85,13 @@ public struct StatList<Content: View>: View {
                         .font(.title3)
                     
                     Spacer()
+                    
+                    if isModifiedByAbilities {
+                        Image(systemName: "exclamationmark.circle")
+                            .font(.title2)
+                            .bold()
+                            .padding(.trailing, 15)
+                    }
                     
                     Image(systemName: isCollapsed ? "chevron.right" : "chevron.down")
                         .font(.title3)

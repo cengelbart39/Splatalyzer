@@ -19,7 +19,7 @@ public struct SubDefenseStatList: View {
     }
     
     public var body: some View {
-        StatList(title: "Sub Weapon Effect Defense") {
+        StatList(title: "Sub Weapon Effect Defense", isModifiedByAbilities: defenseStats.isModifiedByAbilities()) {
             LazyVStack(spacing: 10) {
                 AbilityStatCard(stat: defenseStats.toxicMistMovementReduction)
                 

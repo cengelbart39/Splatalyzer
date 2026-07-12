@@ -18,7 +18,7 @@ public struct LDEPicker: View {
     @EnvironmentObject public var analyzer: SplatalyzerViewModel
     
     @ScaledMetric(relativeTo: .title3)
-    private var imageSize = 45
+    private var imageSize = 35
     
     public init() { }
     
@@ -48,12 +48,13 @@ public struct LDEPicker: View {
     ]
     
     public var body: some View {
-        HStack {
+        GridRow {
             ImageView(image: Ability.lastDitchEffort.image, targetSize: imageSize)
                 .padding(5)
                 .abilityBackground(for: colorScheme)
+                .gridColumnAlignment(.trailing)
             
-            Picker(String(localized: "\(Ability.lastDitchEffort.localized) Intensity"), selection: $analyzer.build.ldeIntensity) {
+            Picker(String(localized: "\(Ability.lastDitchEffort.localized) Intensity"), selection: $analyzer.build.abilityOptions.lastDitchEffort) {
                 ForEach(0..<intensity.count, id: \.self) { index in
                     Text(intensity[index])
                         .font(.title3)
@@ -62,13 +63,14 @@ public struct LDEPicker: View {
             }
             .disabled(!analyzer.build.hasAbility(.lastDitchEffort))
             .pickerBackground(for: colorScheme)
+            .labelsHidden()
         }
         .accessibilityElement(children: .combine)
         .accessibilityLabel("\(Ability.lastDitchEffort.localized) Intensity")
-        .accessibilityValue("\(intensity[analyzer.build.ldeIntensity]),  \(analyzer.build.hasAbility(.lastDitchEffort) ? "Enabled" : "Disabled")")
+        .accessibilityValue("\(intensity[analyzer.build.abilityOptions.lastDitchEffort]),  \(analyzer.build.hasAbility(.lastDitchEffort) ? "Enabled" : "Disabled")")
         .onChange(of: analyzer.build.hasAbility(.lastDitchEffort)) { oldValue, newValue in
             if oldValue && !newValue {
-                analyzer.build.ldeIntensity = 0
+                analyzer.build.abilityOptions.lastDitchEffort = 0
             }
         }
     }

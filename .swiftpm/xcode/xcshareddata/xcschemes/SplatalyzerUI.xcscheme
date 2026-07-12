@@ -17,6 +17,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "SplatalyzerUI"
                BuildableName = "SplatalyzerUI"
+               BlueprintName = "SplatalyzerUI"
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
@@ -52,6 +53,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "SplatalyzerUI"
             BuildableName = "SplatalyzerUI"
+            BlueprintName = "SplatalyzerUI"
             ReferencedContainer = "container:">
          </BuildableReference>
       </MacroExpansion>

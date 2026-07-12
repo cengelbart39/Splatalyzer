@@ -19,7 +19,7 @@ public struct SubDefenseDamageList: View {
     }
     
     public var body: some View {
-        StatList(title: "Sub Weapon Damage Defense") {
+        StatList(title: "Sub Weapon Damage Defense", isModifiedByAbilities: defenseDamage.isModifiedByAbilities()) {
             let keys = Array(defenseDamage.keys).sorted(by: { $0.rawValue < $1.rawValue })
             
             ForEach(keys, id: \.self) { key in

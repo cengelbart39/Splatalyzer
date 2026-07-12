@@ -23,19 +23,23 @@ struct BuildOptionsTests {
         #expect(options.gear.headgear.toArray() == [.none, .none, .none, .none])
         #expect(options.gear.clothes.toArray() == [.none, .none, .none, .none])
         #expect(options.gear.shoes.toArray() == [.none, .none, .none, .none])
-        #expect(options.ldeIntensity == 0)
+        #expect(options.abilityOptions.lastDitchEffort == 0)
+        #expect(!options.abilityOptions.useComeback)
+        #expect(!options.abilityOptions.useOpeningGambit)
+        #expect(!options.abilityOptions.useDropRoller)
         #expect(!options.usingTacticooler)
+        #expect(!options.usingFlowAura)
     }
     
     @Test("Is LDE Intensity Valid", arguments: [0, 4, 10, 13, 18, 21])
     mutating func isLDEValid(_ intensity: Int) {
-        options.ldeIntensity = intensity
+        options.abilityOptions.lastDitchEffort = intensity
         #expect(options.isLDEIntensityValid())
     }
     
     @Test("Is LDE Intensity Invalid", arguments: [-1, 22])
     mutating func isLDEInvalid(_ intensity: Int) {
-        options.ldeIntensity = intensity
+        options.abilityOptions.lastDitchEffort = intensity
         #expect(!options.isLDEIntensityValid())
     }
     

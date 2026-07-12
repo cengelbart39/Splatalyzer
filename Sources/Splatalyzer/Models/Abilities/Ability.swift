@@ -234,6 +234,8 @@ public enum Ability: String, CaseIterable, Codable, Identifiable, Sendable {
 public extension Ability {
     static let localizedFlowAura = NSLocalizedString("FlowAura", tableName: "Ability", bundle: Bundle.module, comment: "")
     
+    static let togglableAbilities = [Ability.openingGambit, .comeback, .dropRoller]
+    
     static let useableAbilities = Ability.allCases.filter { $0 != .none }
     
     /// An array of abilities that can only  be used on headgear
@@ -285,19 +287,19 @@ public extension Ability {
     }
     
     /// Converts certain abilities to its equivalent ``AbilitySpecialEffect``
-    /// - Parameter intensity: Applicable only for Last-Ditch Effort; expects a number between 0 and 21.
+    /// - Parameter abilityOptions: Determines whether to apply certain ability effects, e.g., Last Ditch Effort Intensity.
     /// - Returns: The applicable special effect; if there is none, return `nil`
-    func toSpecialEffect(intensity: Int = 0) -> AbilitySpecialEffect? {
-        if self == .dropRoller {
+    func toSpecialEffect(abilityOptions: BuildAbilityOptions) -> AbilitySpecialEffect? {
+        if self == .dropRoller && abilityOptions.useDropRoller {
             return .dropRoller
             
-        } else if self == .openingGambit {
+        } else if self == .openingGambit && abilityOptions.useOpeningGambit {
             return .openingGambit
             
         } else if self == .lastDitchEffort {
-            return .lastDitchEffort(intensity)
+            return .lastDitchEffort(abilityOptions.lastDitchEffort)
             
-        } else if self == .comeback {
+        } else if self == .comeback && abilityOptions.useComeback {
             return .comeBack
             
         } else {

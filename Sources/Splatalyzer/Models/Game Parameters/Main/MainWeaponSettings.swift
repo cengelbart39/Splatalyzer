@@ -68,7 +68,9 @@ public struct MainOverwrites: Overwritable {
     public let reduceJumpSwerveRate: HighMidLow?
         
     /// Initializes with ``MainWeaponSettings``
-    /// - Parameter settings: Contains overwrite properties
+    /// - Parameters:
+    ///   - settings: Contains overwrite properties
+    ///   - reduceJumpSwerveRate: An optional overwrite that only applies to specific weapon
     public init(
         settings: MainWeaponSettings,
         reduceJumpSwerveRate: Double? = nil

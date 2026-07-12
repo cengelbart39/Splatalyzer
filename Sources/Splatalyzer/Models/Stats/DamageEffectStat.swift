@@ -41,6 +41,11 @@ public struct DamageEffectStat: Codable, Equatable, Identifiable, Hashable, Send
         self.distanceArr = distanceArr
         self.subWeapon = subWeapon
     }
+    
+    /// Determines if the stat is modified by any ability
+    public func isModifiedByAbilities() -> Bool {
+        return self.baseValue != self.effectValue
+    }
 }
 
 extension Array where Element == DamageEffectStat {
@@ -83,5 +88,17 @@ extension Array where Element == DamageEffectStat {
     
     func contains(type: DamageType) -> Bool {
         return self.contains(where: { $0.type == type })
+    }
+    
+    /// Determines if any stat in an array is modified by any ability
+    func isModifiedByAbilities() -> Bool {
+        return self.reduce(false, { $0 || $1.isModifiedByAbilities() })
+    }
+}
+
+public extension Dictionary where Key == SubWeapon, Value == [DamageEffectStat] {
+    /// Determines if any stat within the dictionary is modified by any ability
+    func isModifiedByAbilities() -> Bool {
+        self.reduce(false, { $0 || $1.value.isModifiedByAbilities() })
     }
 }

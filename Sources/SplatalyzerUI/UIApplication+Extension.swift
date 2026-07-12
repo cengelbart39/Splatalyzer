@@ -43,10 +43,3 @@ extension UIApplication {
         }
 }
 #endif
-
-public enum iPadLayout: String, CaseIterable {
-    case fullscreen
-    case halfScreen
-    case oneThirdScreen
-    case twoThirdsScreen
-}

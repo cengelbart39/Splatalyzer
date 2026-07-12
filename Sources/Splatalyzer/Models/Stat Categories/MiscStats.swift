@@ -76,4 +76,9 @@ public struct MiscStats: Codable, Equatable, Sendable {
             mainInfo: mainData
         )
     }
+    
+    /// Determines if any stat is modified by any ability
+    public func isModifiedByAbilities() -> Bool {
+        return self.squidInkRecovery.isModifiedByAbilities() || self.humanoidInkRecovery.isModifiedByAbilities() || self.quickRespawnTime.isModifiedByAbilities() || self.quickRespawnTimeRP.isModifiedByAbilities() || self.superJumpGroundFrames.isModifiedByAbilities() || self.superJumpTimeTotal.isModifiedByAbilities()
+    }
 }

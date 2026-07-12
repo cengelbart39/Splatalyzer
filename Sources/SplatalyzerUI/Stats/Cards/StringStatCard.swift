@@ -31,19 +31,11 @@ public struct StringStatCard: View {
                     
                     Spacer()
                     
-                    VStack(alignment: .leading, spacing: 0) {
-                        
-                        Text("Base")
-                            .font(.headline.weight(.semibold))
-                            .padding(.bottom, -5)
-                            .foregroundStyle(.secondary)
-                        
-                        Text(value)
-                            .font(.title)
-                            .fontDesign(.rounded)
-                        
-                    }
-                    .accessibilityElement(children: .combine)
+                    StatLabel(
+                        label: String(localized: "Base"),
+                        value: value,
+                        unit: .none
+                    )
                     
                     Spacer()
                     

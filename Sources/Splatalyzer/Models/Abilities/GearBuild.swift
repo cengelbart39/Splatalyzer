@@ -35,21 +35,21 @@ public struct GearBuild: Codable, Equatable, Identifiable, Sendable {
     
     /// Converts a `GearBuild` to its associated ``AbilityPoints``.
     /// - Parameters:
-    ///   - ldeIntensity: A number between 0 and 21. If LDE is not in the gear build, it is assumed it is set to 0.
+    ///   - abilityOptions: Determines whether to apply certain ability effects, e.g., Last Ditch Effort Intensity.
     ///   - usingTacticooler: Flag for whether Tacticooler effects should be considered, since it temproarily adds ability effects.
     ///   - usingFlowAura: Flag for whether Flow Aura effects should be considered, since it temporarily adds ability effects.
     /// - Returns: The equivalent AP for each ability.
-    public func toAbilityPoints(ldeIntensity: Int = 0, usingTacticooler: Bool, usingFlowAura: Bool) -> AbilityPoints {
+    public func toAbilityPoints(abilityOptions: BuildAbilityOptions, usingTacticooler: Bool, usingFlowAura: Bool) -> AbilityPoints {
         // Merge AP of all gear pieces
-        let apHead = self.headgear.toAbilityPoints()
-        let apClothes = self.clothes.toAbilityPoints()
-        let apShoes = self.shoes.toAbilityPoints()
+        let apHead = self.headgear.toAbilityPoints(options: abilityOptions)
+        let apClothes = self.clothes.toAbilityPoints(options: abilityOptions)
+        let apShoes = self.shoes.toAbilityPoints(options: abilityOptions)
         
         var combinedAp = apHead
             .merging(apClothes, uniquingKeysWith: { $0 + $1 })
             .merging(apShoes, uniquingKeysWith: { $0 + $1 })
         
-        let specialEffects = self.specialEffects(ldeIntensity, usingTacticooler, usingFlowAura)
+        let specialEffects = self.specialEffects(abilityOptions, usingTacticooler, usingFlowAura)
         
         // Convert special effects to AP
         for effect in specialEffects {
@@ -70,18 +70,18 @@ public struct GearBuild: Codable, Equatable, Identifiable, Sendable {
     ///   - ldeIntensity: A number between 0 and 21. Only applied to headgear with LDE.
     ///   - usingTacticooler: lag for whether Tacticooler effects should be considered, since it temproarily adds ability effects.
     /// - Returns: All `AbilitySpecialEffect`s present in the build
-    private func specialEffects(_ ldeIntensity: Int = 0, _ usingTacticooler: Bool, _ usingFlowAura: Bool) -> [AbilitySpecialEffect] {
+    private func specialEffects(_ abilityOptions: BuildAbilityOptions, _ usingTacticooler: Bool, _ usingFlowAura: Bool) -> [AbilitySpecialEffect] {
         var effects = [AbilitySpecialEffect]()
         
-        if let headEffect = self.headgear.specialEffect(ldeIntensity: ldeIntensity) {
+        if let headEffect = self.headgear.specialEffect(abilityOptions: abilityOptions) {
             effects.append(headEffect)
         }
         
-        if let clothesEffect = self.clothes.specialEffect() {
+        if let clothesEffect = self.clothes.specialEffect(abilityOptions: abilityOptions) {
             effects.append(clothesEffect)
         }
         
-        if let shoesEffect = self.shoes.specialEffect() {
+        if let shoesEffect = self.shoes.specialEffect(abilityOptions: abilityOptions) {
             effects.append(shoesEffect)
         }
         
@@ -157,10 +157,21 @@ public struct GearPiece: Codable, Equatable, Identifiable, Sendable {
     }
     
     /// Converts the current gear piece to AP.
-    public func toAbilityPoints() -> AbilityPoints {
+    public func toAbilityPoints(options: BuildAbilityOptions) -> AbilityPoints {
         var result = AbilityPoints()
         
-        let abilities = self.toArray()
+        let removableAbilities = options.removableAbilities()
+        
+        var abilities = self.toArray()
+        
+        for removableAbility in removableAbilities {
+            if !abilities.contains(removableAbility) { continue }
+            
+            let index = abilities.firstIndex(of: removableAbility)!
+            abilities.remove(at: index)
+            abilities.insert(.none, at: 0)
+        }
+    
         var hasAbilityDoubler = false
         
         for index in 0..<abilities.count {
@@ -182,11 +193,11 @@ public struct GearPiece: Codable, Equatable, Identifiable, Sendable {
     
     
     /// Attempts to convert the main `Ability` to an ``AbilitySpecialEffect``
-    /// - Parameter ldeIntensity: A number in the range `0...21`
+    /// - Parameter abilityOptions: Configurations on whether to consider effects, even if associated abilities are present
     /// - Returns: An `AbilitySpecialEffect` only if ``main`` is
     /// Drop Roller, Opening Gambit, Last-Ditch Effort or Comeback. Otherwise `nil`.
-    public func specialEffect(ldeIntensity: Int = 0) -> AbilitySpecialEffect? {
-        return self.main.toSpecialEffect(intensity: ldeIntensity)
+    public func specialEffect(abilityOptions: BuildAbilityOptions) -> AbilitySpecialEffect? {
+        return self.main.toSpecialEffect(abilityOptions: abilityOptions)
     }
     
     /// Convience check for the presence of a certain ability in any

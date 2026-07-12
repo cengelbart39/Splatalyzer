@@ -24,102 +24,40 @@ public struct AbilityStatRangeCard: View {
     
     public var body: some View {
         if let range = range {
-            ZStack {
-                GroupBox(range.title) {
-                    VStack(spacing: 0) {
-                        Spacer()
-                        
-                        HStack {
-                            
-                            Spacer()
-                            
-                            VStack(alignment: .leading, spacing: 0) {
-                                
-                                Text("Base", comment: "Refers to a base effect before any gear abilities.")
-                                    .font(.headline.weight(.semibold))
-                                    .padding(.bottom, -5)
-                                    .foregroundStyle(.secondary)
-                                
-                                if range.unit.symbol.isEmpty {
-                                    Text("\(range.baseMin.format())-\(range.baseMax.format())")
-                                        .font(.title)
-                                        .fontDesign(.rounded)
-                                    
-                                } else if range.unit == .degrees {
-                                    Text("\(range.baseMin.format())-\(range.baseMax.format())°")
-                                        .font(.title)
-                                        .fontDesign(.rounded)
-                                    
-                                } else {
-                                    Text("\(range.baseMin.format())-\(range.baseMax.format())")
-                                        .font(.title)
-                                        .fontDesign(.rounded)
-                                    + Text(range.unit.symbol.uppercased())
-                                        .foregroundStyle(.secondary)
-                                        .font(.headline)
-                                }
-                                
-                            }
-                            .accessibilityElement(children: .combine)
-                            
-                            Spacer()
-                            
-                            if range.baseMin != range.valueMin && range.baseMax != range.valueMax {
-                                VStack(alignment: .leading, spacing: 0) {
-                                    
-                                    Text("Build", comment: "Refers to a gear build. Used in reference to the effect caused by gear abilities.")
-                                        .font(.headline.weight(.semibold))
-                                        .padding(.bottom, -5)
-                                        .foregroundStyle(.secondary)
-                                    
-                                    if range.unit.symbol.isEmpty {
-                                        Text("\(range.valueMin.format())-\(range.valueMax.format())")
-                                            .font(.title)
-                                            .fontDesign(.rounded)
-                                        
-                                    } else if range.unit == .degrees {
-                                        Text("\(range.valueMin.format())-\(range.valueMax.format())°")
-                                            .font(.title)
-                                            .fontDesign(.rounded)
-                                        
-                                    } else {
-                                        Text("\(range.valueMin.format())-\(range.valueMax.format())")
-                                            .font(.title)
-                                            .fontDesign(.rounded)
-                                        + Text(range.unit.symbol.uppercased())
-                                            .foregroundStyle(.secondary)
-                                            .font(.headline)
-                                    }
-                                    
-                                }
-                                .accessibilityElement(children: .combine)
-                                
-                                Spacer()
-                            }
-                            
-                        }
-                        .padding(.bottom, 10)
-                        
-                        Spacer()
-                    }
-                }
-                
-                VStack {
+            GroupBox(range.title) {
+                VStack(spacing: 0) {
                     Spacer()
                     
                     HStack {
-                        ForEach(range.modifiedBy, id: \.self) { ability in
-                            ImageView(image: ability.image, targetSize: abilityImageSize)
-                                .padding(5)
-                                .abilityBackground(for: colorScheme)
-                                .frame(width: 35)
-                                .shadow(radius: colorScheme == .dark ? 5 : 0)
-                        }
                         
                         Spacer()
+                        
+                        StatLabel(
+                            label: String(localized: "Base", comment: "Refers to a base effect before any gear abilities."),
+                            value: "\(range.baseMin.format())-\(range.baseMax.format())",
+                            unit: range.unit
+                        )
+                        
+                        Spacer()
+                        
+                        if range.baseMin != range.valueMin && range.baseMax != range.valueMax {
+                            StatLabel(
+                                label: String(localized: "Build", comment: "Refers to a gear build. Used in reference to the effect caused by gear abilities."),
+                                value: "\(range.valueMin.format())-\(range.valueMax.format())",
+                                unit: range.unit
+                            )
+                            
+                            Spacer()
+                        }
+                        
                     }
+                    
+                    Spacer()
+                    
+                    StatEffectedByList(abilities: range.modifiedBy)
+                    
+                    Spacer()
                 }
-                .padding([.bottom, .leading], 10)
             }
         }
     }

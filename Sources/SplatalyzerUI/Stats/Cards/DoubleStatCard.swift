@@ -30,38 +30,18 @@ public struct DoubleStatCard: View {
         if let value = value {
             GroupBox(title) {
                 VStack {
-                    
                     Spacer()
                     
                     HStack {
-                        
                         Spacer()
                         
-                        VStack(alignment: .leading, spacing: 0) {
-                            
-                            Text("Base")
-                                .font(.headline.weight(.semibold))
-                                .padding(.bottom, -5)
-                                .foregroundStyle(.secondary)
-                            
-                            if unit.symbol.isEmpty {
-                                Text(value.format())
-                                    .font(.title)
-                                    .fontDesign(.rounded)
-                            } else {
-                                Text(value.format())
-                                    .font(.title)
-                                    .fontDesign(.rounded)
-                                + Text(unit.symbol.uppercased())
-                                    .foregroundStyle(.secondary)
-                                    .font(.headline)
-                            }
-                            
-                        }
-                        .accessibilityElement(children: .combine)
+                        StatLabel(
+                            label: String(localized: "Base"),
+                            value: value.format(),
+                            unit: unit
+                        )
                         
                         Spacer()
-                        
                     }
                     
                     Spacer()

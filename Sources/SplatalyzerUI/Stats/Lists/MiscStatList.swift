@@ -18,7 +18,7 @@ public struct MiscStatList: View {
     }
     
     public var body: some View {
-        StatList(title: "Miscellaneous") {
+        StatList(title: "Miscellaneous", isModifiedByAbilities: miscStats.isModifiedByAbilities()) {
             LazyVStack(spacing: 10) {
                 AbilityStatCard(stat: miscStats.squidInkRecovery)
                 

@@ -124,24 +124,27 @@ public struct StatHelper {
         
         let subConsume = SubWeaponConsume(ap, mainInfo, subInfo)
         
+        let apEffect = APEffect(
+            for: .consumeRtMain,
+            of: ap[.inkSaverMain] ?? 0,
+            weapon: mainInfo)
+        
         for fromFullInkTank in 0...subConsume.maxSubsFromFullInkTank {
             for type in InkConsumeType.allCases {
-                let apEffect = APEffect(
-                    for: .consumeRtMain,
-                    of: ap[.inkSaverMain] ?? 0,
-                    weapon: mainInfo)
-                
                 guard let value = mainInfo.inkConsume(for: type) else {
                     continue
                 }
                 
-                let mainConsume = value * apEffect.effect
+                let mainConsumeBase = value * apEffect.baseEffect
+                let tankValueBase = (mainInfo.inkTankSize - subConsume.inkConsumeBase * Double(fromFullInkTank)) / mainConsumeBase
                 
+                let mainConsume = value * apEffect.effect
                 let tankValue = (mainInfo.inkTankSize - subConsume.inkConsume * Double(fromFullInkTank)) / mainConsume
                 
                 let option = InkTankOption(
                     subsFromFullInkTank: fromFullInkTank,
                     type: type,
+                    baseValue: tankValueBase.roundToDecimalPlaces(round: .down),
                     value: tankValue.roundToDecimalPlaces(round: .down))
                 
                 if result[fromFullInkTank] == nil {
@@ -282,6 +285,11 @@ public struct StatHelper {
                 shotsToSplat: nil)
             
             result.insert(stat, at: firstCannonIndex)
+            
+        } else if specialInfo.id == .splattercolorScreen {
+            let newValue = result[0].values[0] / 10
+            result[0].values[0] = newValue
+            result[0].shotsToSplat = nil
         }
         
         return result
@@ -982,7 +990,7 @@ public struct StatHelper {
             baseValue: ceil(apEffect.baseEffect),
             modifiedBy: [ability],
             value: ceil(apEffect.effect),
-            unit: .degrees,
+            unit: .frames,
             title: String(localized: "Squid Surge Charge To Full")
         )
     }
@@ -1266,9 +1274,9 @@ public struct StatHelper {
             weapon: subInfo)
         
         return AbilityStat(
-            baseValue: apEffect.baseEffect,
+            baseValue: apEffect.baseEffect.roundToDecimalPlaces(2, round: .up),
             modifiedBy: [spu],
-            value: apEffect.effect,
+            value: apEffect.effect.roundToDecimalPlaces(2, round: .up),
             unit: .radius,
             title: String(localized: "Marking Radius")
         )
@@ -1298,9 +1306,9 @@ public struct StatHelper {
             weapon: subInfo)
         
         return AbilityStat(
-            baseValue: apEffect.baseEffect,
+            baseValue: apEffect.baseEffect.roundToDecimalPlaces(2, round: .up),
             modifiedBy: [spu],
-            value: apEffect.effect,
+            value: apEffect.effect.roundToDecimalPlaces(2, round: .up),
             unit: .radius,
             title: String(localized: "Explosion Radius")
         )
@@ -1834,19 +1842,27 @@ public struct StatHelper {
         
         let hml = value.rawValue
         
-        if overwrites?.high == -1 && overwrites?.mid == -1 && overwrites?.low == -1 {
-            
-            let effect =  HighMidLow(hml.high, hml.mid, hml.low)
-            
-            return effect
-        } else {
-            let effect =  HighMidLow(
-                overwrites?.high ?? hml.high,
-                overwrites?.mid ?? hml.mid,
-                overwrites?.low ?? hml.low)
-            
-            return effect
+        guard let overwrites = overwrites else {
+            return hml
         }
+        
+        var high = hml.high, mid = hml.mid, low = hml.low
+        
+        if let overwriteHigh = overwrites.high, overwriteHigh != -1 {
+            high = overwriteHigh
+        }
+        
+        if let overwriteMid = overwrites.mid, overwriteMid != -1 {
+            mid = overwriteMid
+        }
+        
+        if let overwriteLow = overwrites.low, overwriteLow != -1 {
+            low = overwriteLow
+        }
+        
+        
+        let effect = HighMidLow(high, mid, low)
+        return effect
     }
     
     public static func lerpN(_ x: Double, _ y: Double) -> Double {

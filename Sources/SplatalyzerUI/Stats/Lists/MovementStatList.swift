@@ -18,7 +18,7 @@ public struct MovementStatList: View {
     }
     
     public var body: some View {
-        StatList(title: "Movement") {
+        StatList(title: "Movement", isModifiedByAbilities: movementStats.isModifiedByAbilities()) {
             LazyVStack(spacing: 10) {
                 StringStatCard(
                     title: String(

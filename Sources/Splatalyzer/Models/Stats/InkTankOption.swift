@@ -17,13 +17,21 @@ public struct InkTankOption: Codable, Equatable, Identifiable, Sendable {
     /// The way in which ink is consumed
     public let type: InkConsumeType
     
-    /// The remaining shots the player can take
+    /// The remaining shots the player can take before any abilities
+    public let baseValue: Double
+    
+    /// The remaining shots the player can take considering any abilities
     public let value: Double
     
-    public init(subsFromFullInkTank: Int, type: InkConsumeType, value: Double) {
+    public init(subsFromFullInkTank: Int, type: InkConsumeType, baseValue: Double, value: Double) {
         self.subsFromFullInkTank = subsFromFullInkTank
         self.type = type
+        self.baseValue = baseValue
         self.value = value
+    }
+    
+    public func isAffectedByAbilities() -> Bool {
+        return self.baseValue != self.value
     }
 }
 
@@ -48,13 +56,14 @@ public extension Array where Element == InkTankOption {
             return
         }
         
-        guard vertical.value == horizontal.value else {
+        guard vertical.value == horizontal.value || vertical.baseValue == horizontal.baseValue else {
             return
         }
         
         let newOption = InkTankOption(
             subsFromFullInkTank: vertical.subsFromFullInkTank,
             type: .swing,
+            baseValue: vertical.baseValue,
             value: vertical.value
         )
         
@@ -65,6 +74,10 @@ public extension Array where Element == InkTankOption {
         self.remove(at: horizontalIndex)
 
     }
+    
+    func isAffectedByAbilities() -> Bool {
+        return self.reduce(false, { $0 || $1.isAffectedByAbilities() })
+    }
 }
 
 public extension Dictionary where Key == Int, Value == [InkTankOption] {
@@ -73,7 +86,17 @@ public extension Dictionary where Key == Int, Value == [InkTankOption] {
     /// - Returns: Whether the ink consumption type exists in the dictionary's values
     func contains(type: InkConsumeType) -> Bool {
         for (_, values) in self {
-            if values.contains(where: { $0.type == type }) {
+            if values.contains(type: type) {
+                return true
+            }
+        }
+        
+        return false
+    }
+    
+    func isAffectedByAbilities() -> Bool {
+        for (_, values) in self {
+            if values.isAffectedByAbilities() {
                 return true
             }
         }

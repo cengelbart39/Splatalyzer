@@ -122,4 +122,9 @@ public struct SpecialWeaponStats: Codable, Equatable, Sendable {
         
         self.powerUpDuration = StatHelper.specialPowerUpDuration(ap: ap, specialInfo: specialData)
     }
+    
+    /// Determines if any stat is modified by any ability
+    public func isModifiedByAbilities() -> Bool {
+        return self.point.isModifiedByAbilities() || self.lost.isModifiedByAbilities() || self.lostSplattedByRP.isModifiedByAbilities() || self.duration?.isModifiedByAbilities() == true || self.damageDistance?.isModifiedByAbilities() == true || self.paintRadius?.isModifiedByAbilities() == true || self.fieldHp?.isModifiedByAbilities() == true || self.deviceHp?.isModifiedByAbilities() == true || self.hookInkConsumption?.isModifiedByAbilities() == true || self.hookInkConsumptionPerSecond?.isModifiedByAbilities() == true || self.reticleRadius?.isModifiedByAbilities() == true || self.throwDistance?.isModifiedByAbilities() == true || self.moveSpeed?.isModifiedByAbilities() == true || self.autoChargeRate?.isModifiedByAbilities() == true || self.maxRadius?.isModifiedByAbilities() == true || self.radiusRange?.isModifiedByAbilities() == true || self.powerUpDuration?.isModifiedByAbilities() == true
+    }
 }

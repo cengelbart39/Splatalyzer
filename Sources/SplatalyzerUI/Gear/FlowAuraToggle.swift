@@ -8,6 +8,7 @@
 import Splatalyzer
 import SwiftUI
 
+/// A toggle for enabling/disabling Flow Aura effects
 public struct FlowAuraToggle: View {
     
     @EnvironmentObject var analyzer: SplatalyzerViewModel
@@ -17,10 +18,11 @@ public struct FlowAuraToggle: View {
     public init() { }
     
     public var body: some View {
-        HStack {
+        GridRow {
             Text(localizedTitle)
                 .font(.title3)
                 .bold()
+                .gridColumnAlignment(.trailing)
             
             Toggle("", isOn: $analyzer.build.usingFlowAura)
                 .labelsHidden()
