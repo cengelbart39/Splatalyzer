@@ -306,6 +306,7 @@ public enum MainRowId: String, CaseIterable, Codable, Sendable {
     case glamorzSplattershot = "Shooter_Normal_02"
     case orderShotReplica = "Shooter_Normal_O"
     case octoShotReplica = "Shooter_Normal_Oct"
+    case plasticBottleShotReplica = "Shooter_Normal_S"
     case splattershotCoop = "Shooter_Normal_Coop"
     case heroShot = "Shooter_Normal_H"
     case splattershotMsn = "Shooter_Normal_Msn"

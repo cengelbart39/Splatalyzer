@@ -703,7 +703,7 @@
       "$type": "spl__WeaponSlosherParam",
       "FrameOffsetMaxDegree": 1.5,
       "FrameOffsetMaxMoveLength": 0.5,
-      "InkConsume": 0.06,
+      "InkConsume": 0.057,
       "InkRecoverStop": 35,
       "MoveLmtFrame": 30,
       "MoveSpeed": 0.066,

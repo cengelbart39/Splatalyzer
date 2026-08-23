@@ -70,7 +70,8 @@
       },
       "SplashPaintParam": {
         "DepthScaleMax": 2.7,
-        "WidthHalf": 1.48
+        "WidthHalf": 1.39,
+        "WidthHalfNearest": 1.683
       },
       "SplashSpawnParam": {
         "DropInterval": 10.0,

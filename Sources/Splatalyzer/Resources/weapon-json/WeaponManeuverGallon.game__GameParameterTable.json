@@ -120,7 +120,7 @@
       "Jump_DegBiasEndFrame": 70,
       "Jump_DegBiasMax": 0.4,
       "Jump_DegSwerve": 8.0,
-      "LapOver_DegSwerve": 3.0,
+      "LapOver_DegSwerve": 2.7,
       "LapOver_RepeatFrame": 9,
       "MoveSpeed": 0.06,
       "PreDelayFrame_SquidShot": 4,

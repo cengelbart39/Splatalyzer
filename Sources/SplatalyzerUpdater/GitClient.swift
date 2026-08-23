@@ -82,7 +82,7 @@ class GitClient {
         }
         
         print("Shallow clone repoistory...")
-        try runCommand(["git", "clone", "--no-checkout", "--depth", "1", "--progress"],
+        try runCommand(["git", "clone", repo, "--no-checkout", "--depth", "1", "--progress"],
                        streamPull: true)
         print("\nShallow clone complete.")
                 

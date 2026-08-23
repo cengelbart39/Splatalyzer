@@ -9878,6 +9878,89 @@
         }
       }
     },
+    "Shooter_Normal_S" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PET-Kleckser Replik"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plastic-Bottle Shot Replica"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rociador PET réplica"
+          }
+        },
+        "es-ES" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lanzatintas de plástico (réplica)"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liquéficateur liqueur (réplique)"
+          }
+        },
+        "fr-FR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liquidateur soda (réplique)"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Splasher frizzante replica"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PETシューター レプリカ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PET 슈터 레플리카"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SupersPETter (replica)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ботлострел (клон)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "塑料瓶射击枪 复制"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "寶特瓶射擊槍 複製"
+          }
+        }
+      }
+    },
     "Shooter_Precision_00" : {
       "extractionState" : "manual",
       "localizations" : {

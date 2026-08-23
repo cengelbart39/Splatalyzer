@@ -60,8 +60,8 @@
       "FreeAirResist": 0.01985,
       "FreeGravity": 0.0190565,
       "GoStraightStateEndMaxSpeed": 1.0,
-      "GoStraightToBrakeStateFrame": 18,
-      "SpawnSpeed": 1.0
+      "GoStraightToBrakeStateFrame": 16,
+      "SpawnSpeed": 1.125
     },
     "UltraShotMoveParam": {
       "$type": "spl__BulletSpUltraShotMoveParam",

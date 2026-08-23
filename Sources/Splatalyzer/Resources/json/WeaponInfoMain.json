@@ -7423,7 +7423,7 @@
       },
       {
         "Type": "PaintSpeed",
-        "Value": 63
+        "Value": 68
       },
       {
         "Type": "Weight",
@@ -7492,7 +7492,7 @@
       },
       {
         "Type": "PaintSpeed",
-        "Value": 63
+        "Value": 68
       },
       {
         "Type": "Weight",
@@ -7561,7 +7561,7 @@
       },
       {
         "Type": "PaintSpeed",
-        "Value": 63
+        "Value": 68
       },
       {
         "Type": "Weight",
@@ -12197,7 +12197,7 @@
     "ShopPrice": 21900,
     "ShopUnlockRank": 23,
     "SpecActor": "Work/Actor/WeaponShooterExpert.engine__actor__ActorParam.gyml",
-    "SpecialPoint": 190,
+    "SpecialPoint": 180,
     "SpecialWeapon": "Work/Gyml/SpMultiMissile.spl__WeaponInfoSpecial.gyml",
     "SubWeapon": "Work/Gyml/Bomb_Splash.spl__WeaponInfoSub.gyml",
     "Type": "Versus",
@@ -14253,6 +14253,57 @@
     ],
     "WeaponInfoForCoop": "",
     "__RowId": "Shooter_Normal_Oct"
+  },
+  {
+    "DebugDispColumn": 8,
+    "DebugDispOrder": 4,
+    "DefaultDamageRateInfoRow": "Shooter",
+    "DefaultHitEffectorType": "Shooter",
+    "ExtraDamageRateInfoRowSet": [],
+    "ExtraHitEffectorInfoSet": [],
+    "GameActor": "Work/Actor/WmnG_Shooter_Normal_S.engine__actor__ActorParam.gyml",
+    "Id": 48,
+    "IsCoopRare": false,
+    "LObjParam": "Work/Gyml/LObj_Wmn_Shooter_Normal_SprlA.spl__LockerObjParam.gyml",
+    "Label": "PETシューター レプリカ",
+    "LockerContentInfo": [
+      "Work/Locker/Shooter_First_00_Preset_00.byml"
+    ],
+    "LockerModelColor": {
+      "A": 1.0,
+      "B": 0.67059,
+      "G": 0.74902,
+      "R": 0.10588
+    },
+    "MatchingId": 40,
+    "NpcActor": "Work/Actor/WmnS_Shooter_Normal_S.engine__actor__ActorParam.gyml",
+    "Range": 12.9,
+    "RewardLv2": "Work/Gyml/Stc_Sti_Wst_Shooter_Normal_S_Lv00.spl__LockerGoodsStickerInfo.gyml",
+    "RewardLv3": "Work/Gyml/Hla_Sti_Wst_Shooter_Normal_S_Lv01.spl__LockerGoodsStickerInfo.gyml",
+    "Season": -1,
+    "ShopPrice": 0,
+    "ShopUnlockRank": -1,
+    "SpecActor": "Work/Actor/WeaponShooterNormal.engine__actor__ActorParam.gyml",
+    "SpecialPoint": 190,
+    "SpecialWeapon": "Work/Gyml/SpTripleTornado.spl__WeaponInfoSpecial.gyml",
+    "SubWeapon": "Work/Gyml/Bomb_Splash.spl__WeaponInfoSub.gyml",
+    "Type": "Versus",
+    "UIParam": [
+      {
+        "Type": "Range",
+        "Value": 52
+      },
+      {
+        "Type": "Power",
+        "Value": 47
+      },
+      {
+        "Type": "Blaze",
+        "Value": 60
+      }
+    ],
+    "WeaponInfoForCoop": "",
+    "__RowId": "Shooter_Normal_S"
   },
   {
     "DebugDispColumn": 0,
@@ -17781,7 +17832,7 @@
     "ShopPrice": 33300,
     "ShopUnlockRank": 23,
     "SpecActor": "Work/Actor/WeaponSpinnerHyper.engine__actor__ActorParam.gyml",
-    "SpecialPoint": 200,
+    "SpecialPoint": 190,
     "SpecialWeapon": "Work/Gyml/SpChimney.spl__WeaponInfoSpecial.gyml",
     "SubWeapon": "Work/Gyml/Trap.spl__WeaponInfoSub.gyml",
     "Type": "Versus",
@@ -19015,7 +19066,7 @@
     "ShopPrice": 5000,
     "ShopUnlockRank": 11,
     "SpecActor": "Work/Actor/WeaponStringerNormal.engine__actor__ActorParam.gyml",
-    "SpecialPoint": 190,
+    "SpecialPoint": 200,
     "SpecialWeapon": "Work/Gyml/SpFirework.spl__WeaponInfoSpecial.gyml",
     "SubWeapon": "Work/Gyml/Sprinkler.spl__WeaponInfoSub.gyml",
     "Type": "Versus",

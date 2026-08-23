@@ -154,6 +154,7 @@ public enum MainWeapon: String, CaseIterable, Codable, Identifiable, Sendable, W
     case heroShotReplica = "Shooter_Normal_H"
     case orderShotReplica = "Shooter_Normal_O"
     case octoShotReplica = "Shooter_Normal_Oct"
+    case plasticBottleShotReplica = "Shooter_Normal_S"
     case splashomatic = "Shooter_Precision_00"
     case neoSplashomatic = "Shooter_Precision_01"
     case splashomaticGCKO = "Shooter_Precision_02"
@@ -239,7 +240,7 @@ public enum MainWeapon: String, CaseIterable, Codable, Identifiable, Sendable, W
         case .undercoverBrella, .undercoverSorellaBrella, .patternzUndercoverBrella, .recycledBrella24MkI, .recycledBrella24MkII, .splatBrella, .sorellaBrella, .orderBrellaReplica, .tentaBrella, .tentaSorellaBrella, .tentaBrellaCREM:
             return .brella
             
-        case .aerosprayMG, .aerosprayRG, .colorzAerospray, .splattershotPro, .forgeSplattershotPro, .splattershotProFRZN, .splattershotJr, .customSplattershotJr, .squeezer, .foilSqueezer, .gal52, .gal52Deco, .gal96, .gal96Deco, .clawz96Gal, .jetSquelcher, .customJetSquelcher, .jetSquelcherCOBR, .splattershot, .tentatekSplattershot, .glamorzSplattershot, .heroShotReplica, .orderShotReplica, .octoShotReplica, .splashomatic, .neoSplashomatic, .splashomaticGCKO, .splattershotNova, .annakiSplattershotNova, .nzap85, .nzap89, .splooshomatic, .neoSplooshomatic, .l3Nozzlenose, .l3NozzlenoseD, .glitterzL3Nozzlenose, .h3Nozzlenose, .h3NozzlenoseD, .h3NozzlenoseVIPR:
+        case .aerosprayMG, .aerosprayRG, .colorzAerospray, .splattershotPro, .forgeSplattershotPro, .splattershotProFRZN, .splattershotJr, .customSplattershotJr, .squeezer, .foilSqueezer, .gal52, .gal52Deco, .gal96, .gal96Deco, .clawz96Gal, .jetSquelcher, .customJetSquelcher, .jetSquelcherCOBR, .splattershot, .tentatekSplattershot, .glamorzSplattershot, .heroShotReplica, .orderShotReplica, .octoShotReplica, .plasticBottleShotReplica, .splashomatic, .neoSplashomatic, .splashomaticGCKO, .splattershotNova, .annakiSplattershotNova, .nzap85, .nzap89, .splooshomatic, .neoSplooshomatic, .l3Nozzlenose, .l3NozzlenoseD, .glitterzL3Nozzlenose, .h3Nozzlenose, .h3NozzlenoseD, .h3NozzlenoseVIPR:
             return .shooter
             
         case .bloblobber, .bloblobberDeco, .triSlosher, .triSlosherNouveau, .triSlosherASHN, .dreadWringer, .dreadWringerD, .hornzDreadWringer, .sloshingMachine, .sloshingMachineNeo, .slosher, .slosherDeco, .orderSlosherReplica, .explosher, .customExplosher:

@@ -27,7 +27,7 @@
       "Damage": 700,
       "PaintParam": {
         "Depth": 1.5,
-        "SpeedMax": 0.152,
+        "SpeedMax": 0.16,
         "WidthAddWallCut": 0.4,
         "WidthHalfMax": 2.2
       },
@@ -72,9 +72,9 @@
         "DamageRejectRate": 0.5,
         "DamageRejectStartFrame": 30,
         "Inside": {
-          "DamageHighDistance": 11.2,
+          "DamageHighDistance": 12.43,
           "DamageHighValue": 500,
-          "DamageLowDistance": 11.2,
+          "DamageLowDistance": 12.43,
           "DamageLowValue": 500,
           "DamageMaxDistance": 4.2,
           "DamageMaxValue": 1200,
@@ -86,9 +86,9 @@
           "InsideDistanceXZ": 0.0
         },
         "Outside": {
-          "DamageHighDistance": 11.2,
+          "DamageHighDistance": 12.43,
           "DamageHighValue": 500,
-          "DamageLowDistance": 11.2,
+          "DamageLowDistance": 12.43,
           "DamageLowValue": 500,
           "DamageMaxDistance": 4.2,
           "DamageMaxValue": 1200,
@@ -325,9 +325,9 @@
       "InkConsumeMaxPerFrame": 0.001,
       "InkConsumeMinPerFrame": 0.0002,
       "InkRecoverStop": 20,
-      "SpeedDash": 0.152,
+      "SpeedDash": 0.16,
       "SpeedDashTurnBreak": 0.128,
-      "SpeedInkConsumeMax": 0.152,
+      "SpeedInkConsumeMax": 0.16,
       "SpeedInkConsumeMin": 0.02,
       "SpeedNormal": 0.128
     },
