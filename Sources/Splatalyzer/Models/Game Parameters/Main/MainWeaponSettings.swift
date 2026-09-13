@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// C
+/// Contains shared properties across Main Weapons, including overwritable ones
 public struct MainWeaponSettings: Parametable {
     public let type: String
     public let overwriteConsumeRtMainHigh: Double?

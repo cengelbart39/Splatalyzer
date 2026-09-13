@@ -24,41 +24,41 @@ public struct SpecialStatList: View {
     public var body: some View {
         StatList(title: specialStats.weapon.localized, image: specialStats.weapon.image, imageSize: imageSize, isModifiedByAbilities: specialStats.isModifiedByAbilities()) {
             LazyVStack(spacing: 10) {
-                AbilityStatCard(stat: specialStats.point)
+                AbilityStatCard(stat: specialStats.point, statItem: .specialPoint)
                 
-                AbilityStatCard(stat: specialStats.lost)
+                AbilityStatCard(stat: specialStats.lost, statItem: .specialLost)
                 
-                AbilityStatCard(stat: specialStats.lostSplattedByRP)
+                AbilityStatCard(stat: specialStats.lostSplattedByRP, statItem: .specialLostByRP)
 
-                AbilityStatCard(stat: specialStats.duration)
+                AbilityStatCard(stat: specialStats.duration, statItem: .specialDuration)
 
-                AbilityStatCard(stat: specialStats.damageDistance)
+                AbilityStatCard(stat: specialStats.damageDistance, statItem: .specialDamageDistance)
                 
-                AbilityStatCard(stat: specialStats.paintRadius)
+                AbilityStatCard(stat: specialStats.paintRadius, statItem: .specialPaintRadius)
                 
-                AbilityStatCard(stat: specialStats.fieldHp)
+                AbilityStatCard(stat: specialStats.fieldHp, statItem: .specialFieldHp)
                 
-                AbilityStatCard(stat: specialStats.deviceHp)
+                AbilityStatCard(stat: specialStats.deviceHp, statItem: .specialDeviceHp)
                 
-                AbilityStatCard(stat: specialStats.hookInkConsumption)
+                AbilityStatCard(stat: specialStats.hookInkConsumption, statItem: .specialHookInkConsumption)
                 
-                AbilityStatCard(stat: specialStats.hookInkConsumptionPerSecond)
+                AbilityStatCard(stat: specialStats.hookInkConsumptionPerSecond, statItem: .specialHookInkConsumptionPerSecond)
                 
-                AbilityStatCard(stat: specialStats.reticleRadius)
+                AbilityStatCard(stat: specialStats.reticleRadius, statItem: .specialReticleRadius)
                 
-                AbilityStatCard(stat: specialStats.throwDistance)
+                AbilityStatCard(stat: specialStats.throwDistance, statItem: .specialThrowDistance)
                 
-                AbilityStatCard(stat: specialStats.moveSpeed)
+                AbilityStatCard(stat: specialStats.moveSpeed, statItem: .specialMoveSpeed)
                 
-                AbilityStatCard(stat: specialStats.autoChargeRate)
+                AbilityStatCard(stat: specialStats.autoChargeRate, statItem: .specialAutoChargeRate)
                 
-                if specialStats.radiusRange == nil {
-                    AbilityStatCard(stat: specialStats.maxRadius)
-                }
+                AbilityStatCard(stat: specialStats.maxRadius, statItem: .specialMaxRadius)
                 
-                AbilityStatRangeCard(range: specialStats.radiusRange)
+                AbilityStatCard(stat: specialStats.radiusMin, statItem: .specialRadiusMin)
                 
-                AbilityStatCard(stat: specialStats.powerUpDuration)
+                AbilityStatCard(stat: specialStats.radiusMax, statItem: .specialRadiusMax)
+                
+                AbilityStatCard(stat: specialStats.powerUpDuration, statItem: .specialPowerUpDuration)
             }
         }
     }

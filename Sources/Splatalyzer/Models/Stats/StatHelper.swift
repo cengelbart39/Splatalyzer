@@ -30,6 +30,59 @@ public struct StatHelper {
         .orderStringerReplica : 3
     ]
     
+    private static func optAbilityStat(
+        for ability: Ability,
+        ap: AbilityPoints,
+        effectKey: AbilityValue,
+        weapon: any WeaponDatable,
+        baseTransform: (Double) -> Double,
+        effectTransform: (Double) -> Double,
+        unit: StatUnit,
+        title: String
+    ) -> AbilityStat? {
+        let hml = abilityValues(for: effectKey, weapon: weapon)
+        
+        guard hml.hasEffect() else {
+            return nil
+        }
+        
+        return StatHelper.abilityStat(
+            for: ability,
+            ap: ap,
+            effectKey: effectKey,
+            weapon: weapon,
+            baseTransform: baseTransform,
+            effectTransform: effectTransform,
+            unit: unit,
+            title: title
+        )
+    }
+    
+    private static func abilityStat(
+        for ability: Ability,
+        ap: AbilityPoints,
+        effectKey: AbilityValue,
+        weapon: any WeaponDatable,
+        baseTransform: (Double) -> Double,
+        effectTransform: (Double) -> Double,
+        unit: StatUnit,
+        title: String
+    ) -> AbilityStat {
+        let apValue = ap[ability] ?? 0
+        
+        let effect = APEffect(for: effectKey, of: apValue, weapon: weapon)
+        
+        let stat = AbilityStat(
+            baseValue: baseTransform(effect.baseEffect),
+            modifiedBy: [ability],
+            value: effectTransform(effect.effect),
+            unit: unit,
+            title: title
+        )
+        
+        return stat
+    }
+    
     
     /// Calculates the default and effect special point value for the main weapon.
     /// - Parameters:
@@ -40,16 +93,13 @@ public struct StatHelper {
         ap: AbilityPoints,
         mainInfo: MainWeaponData
     ) -> AbilityStat {
-        let ability = Ability.specialChargeUp
-        
-        let spuAp = ap[ability] ?? 0
-        
-        let apEffect = APEffect(for: .increaseRtSpecial, of: spuAp, weapon: mainInfo)
-        
-        return AbilityStat(
-            baseValue: Double(mainInfo.specialPoints),
-            modifiedBy: [ability],
-            value: ceil(Double(mainInfo.specialPoints) / apEffect.effect),
+        return StatHelper.abilityStat(
+            for: .specialChargeUp,
+            ap: ap,
+            effectKey: .increaseRtSpecial,
+            weapon: mainInfo,
+            baseTransform: { _ in Double(mainInfo.specialPoints) },
+            effectTransform: { ceil(Double(mainInfo.specialPoints) / $0) },
             unit: .points,
             title: String(localized: "Points to Special")
         )
@@ -502,23 +552,18 @@ public struct StatHelper {
         ap: AbilityPoints,
         mainInfo: MainWeaponData
     ) -> AbilityStat {
-        let ability = Ability.inkRecoveryUp
         
-        let iruAp = ap[ability] ?? 0
-        
-        let apEffect = APEffect(
-            for: effectKey,
-            of: iruAp,
-            weapon: mainInfo)
-        
-        return AbilityStat(
-            baseValue: (apEffect.baseEffect * mainInfo.inkTankSize)
-                .framesToSeconds(),
-            modifiedBy: [.inkRecoveryUp],
-            value: (apEffect.effect * mainInfo.inkTankSize)
-                .framesToSeconds(),
+        return StatHelper.abilityStat(
+            for: .inkRecoveryUp,
+            ap: ap,
+            effectKey: effectKey,
+            weapon: mainInfo,
+            baseTransform: { ($0 * mainInfo.inkTankSize).framesToSeconds() },
+            effectTransform: { ($0 * mainInfo.inkTankSize).framesToSeconds() },
             unit: .seconds,
-            title: effectKey == .inkRecoverFrmStealth ? String(localized: "Ink Tank Recovery Time (Squid Form)") : String(localized: "Ink Tank Recovery Time (Humanoid Form)")
+            title: effectKey == .inkRecoverFrmStealth ?
+                String(localized: "Ink Tank Recovery Time (Squid Form)") :
+                String(localized: "Ink Tank Recovery Time (Humanoid Form)")
         )
     }
     
@@ -531,21 +576,13 @@ public struct StatHelper {
         ap: AbilityPoints,
         mainInfo: MainWeaponData
     ) -> AbilityStat {
-        let ability = Ability.runSpeedUp
-        
-        let rsuAp = ap[.runSpeedUp] ?? 0
-        
-        let apEffect = APEffect(
-            for: AbilityValue.getMoveVelHumanLvl(for: mainInfo.weaponSpeedType ?? .mid),
-            of: rsuAp,
-            weapon: mainInfo)
-        
-        return AbilityStat(
-            baseValue: (apEffect.baseEffect * 10)
-                .cutToDecimalPlaces(3, round: .down),
-            modifiedBy: [ability],
-            value: (apEffect.effect * 10)
-                .cutToDecimalPlaces(3, round: .down),
+        return StatHelper.abilityStat(
+            for: .runSpeedUp,
+            ap: ap,
+            effectKey: AbilityValue.getMoveVelHumanLvl(for: mainInfo.weaponSpeedType ?? .mid),
+            weapon: mainInfo,
+            baseTransform: { ($0 * 10).cutToDecimalPlaces(3, round: .down) },
+            effectTransform: { ($0 * 10).cutToDecimalPlaces(3, round: .down) },
             unit: .unitsPerFrame,
             title: String(localized: "Run Speed")
         )
@@ -562,29 +599,20 @@ public struct StatHelper {
         ap: AbilityPoints,
         mainInfo: MainWeaponData
     ) -> AbilityStat? {
-        let moveSpeed = mainInfo.shootingRunSpeed(for: type)
-        
-        if let moveSpeed = moveSpeed {
-            let rsuAp = ap[.runSpeedUp] ?? 0
-            
-            let apEffect = APEffect(
-                for: .moveVelRtShot,
-                of: rsuAp,
-                weapon: mainInfo)
-            
-            return AbilityStat(
-                baseValue: (moveSpeed * apEffect.baseEffect * 10)
-                    .cutToDecimalPlaces(3, round: .down),
-                modifiedBy: [.runSpeedUp],
-                value: (moveSpeed * apEffect.effect * 10)
-                    .cutToDecimalPlaces(3, round: .down),
-                unit: .unitsPerFrame,
-                title: String(localized: "Run Speed While Shooting")
-            )
-            
-        } else {
+        guard let moveSpeed = mainInfo.shootingRunSpeed(for: type) else {
             return nil
         }
+        
+        return StatHelper.abilityStat(
+            for: .runSpeedUp,
+            ap: ap,
+            effectKey: .moveVelRtShot,
+            weapon: mainInfo,
+            baseTransform: { (moveSpeed * $0 * 10).cutToDecimalPlaces(3, round: .down) },
+            effectTransform: { (moveSpeed * $0 * 10).cutToDecimalPlaces(3, round: .down) },
+            unit: .unitsPerFrame,
+            title: String(localized: "Run Speed While Shooting")
+        )
     }
     
     /// Calculates the player's swim speed
@@ -600,25 +628,16 @@ public struct StatHelper {
         gearBuild: GearBuild,
         mainInfo: MainWeaponData
     ) -> AbilityStat {
-        let ability = Ability.swimSpeedUp
-        
-        let ssuAp = ap[ability] ?? 0
-        
-        let value = AbilityValue.getMoveVelStealthLvl(for: mainInfo.weaponSpeedType ?? .mid)
-        
-        let apEffect = APEffect(
-            for: value,
-            of: ssuAp,
-            weapon: mainInfo)
-        
+        let effectKey = AbilityValue.getMoveVelStealthLvl(for: mainInfo.weaponSpeedType ?? .mid)
         let ninjaSquidMultiplier = gearBuild.hasAbility(.ninjaSquid) ? 0.9 : 1
         
-        return AbilityStat(
-            baseValue: (apEffect.baseEffect * 10)
-                .cutToDecimalPlaces(3, round: .down),
-            modifiedBy: [.swimSpeedUp, .ninjaSquid],
-            value: (apEffect.effect * 10 * ninjaSquidMultiplier)
-                .cutToDecimalPlaces(3, round: .down),
+        return StatHelper.abilityStat(
+            for: .swimSpeedUp,
+            ap: ap,
+            effectKey: effectKey,
+            weapon: mainInfo,
+            baseTransform: { ($0 * 10).cutToDecimalPlaces(3, round: .down) },
+            effectTransform: { ($0 * 10 * ninjaSquidMultiplier).cutToDecimalPlaces(3, round: .down) },
             unit: .unitsPerFrame,
             title: String(localized: "Swim Speed")
         )
@@ -660,20 +679,13 @@ public struct StatHelper {
         ap: AbilityPoints,
         mainInfo: MainWeaponData
     ) -> AbilityStat {
-        let iru = Ability.inkResistanceUp
-        let iruAp = ap[iru] ?? 0
-        
-        let apEffect = APEffect(
-            for: .opInkMoveVel,
-            of: iruAp,
-            weapon: mainInfo)
-        
-        return AbilityStat(
-            baseValue: (apEffect.baseEffect * 10)
-                .cutToDecimalPlaces(3, round: .down),
-            modifiedBy: [iru],
-            value: (apEffect.effect * 10)
-                .cutToDecimalPlaces(3, round: .down),
+        return StatHelper.abilityStat(
+            for: .inkResistanceUp,
+            ap: ap,
+            effectKey: .opInkMoveVel,
+            weapon: mainInfo,
+            baseTransform: { ($0 * 10).cutToDecimalPlaces(3, round: .down) },
+            effectTransform: { ($0 * 10).cutToDecimalPlaces(3, round: .down) },
             unit: .unitsPerFrame,
             title: String(localized: "Run Speed In Enemy Ink")
         )
@@ -688,18 +700,13 @@ public struct StatHelper {
         ap: AbilityPoints,
         mainInfo: MainWeaponData
     ) -> AbilityStat {
-        let iru = Ability.inkResistanceUp
-        let iruAp = ap[iru] ?? 0
-        
-        let apEffect = APEffect(
-            for: .opInkDamagePerFrame,
-            of: iruAp,
-            weapon: mainInfo)
-        
-        return AbilityStat(
-            baseValue: apEffect.baseEffectToDamage() * 60,
-            modifiedBy: [iru],
-            value: apEffect.effectToDamage() * 60,
+        return StatHelper.abilityStat(
+            for: .inkResistanceUp,
+            ap: ap,
+            effectKey: .opInkDamagePerFrame,
+            weapon: mainInfo,
+            baseTransform: { $0.toDamage() * 60 },
+            effectTransform: { $0.toDamage() * 60 },
             unit: .hp,
             title: String(localized: "Damage In Enemy Ink")
         )
@@ -714,18 +721,13 @@ public struct StatHelper {
         ap: AbilityPoints,
         mainInfo: MainWeaponData
     ) -> AbilityStat {
-        let iru = Ability.inkResistanceUp
-        let iruAp = ap[iru] ?? 0
-        
-        let apEffect = APEffect(
-            for: .opInkDamageLmt,
-            of: iruAp,
-            weapon: mainInfo)
-        
-        return AbilityStat(
-            baseValue: apEffect.baseEffectToDamage(),
-            modifiedBy: [iru],
-            value: apEffect.effectToDamage(),
+        return StatHelper.abilityStat(
+            for: .inkResistanceUp,
+            ap: ap,
+            effectKey: .opInkDamageLmt,
+            weapon: mainInfo,
+            baseTransform: { $0.toDamage() },
+            effectTransform: { $0.toDamage() },
             unit: .hp,
             title: String(localized: "Max Damage from Enemy Ink")
         )
@@ -740,18 +742,13 @@ public struct StatHelper {
         ap: AbilityPoints,
         mainInfo: MainWeaponData
     ) -> AbilityStat {
-        let iru = Ability.inkResistanceUp
-        let iruAp = ap[iru] ?? 0
-        
-        let apEffect = APEffect(
-            for: .opInkArmorHP,
-            of: iruAp,
-            weapon: mainInfo)
-        
-        return AbilityStat(
-            baseValue: ceil(apEffect.baseEffect),
-            modifiedBy: [iru],
-            value: ceil(apEffect.effect),
+        return StatHelper.abilityStat(
+            for: .inkResistanceUp,
+            ap: ap,
+            effectKey: .opInkArmorHP,
+            weapon: mainInfo,
+            baseTransform: { ceil($0) },
+            effectTransform: { ceil($0) },
             unit: .frames,
             title: String(localized: "Frames Before Damage In Enemy Ink")
         )
@@ -809,19 +806,13 @@ public struct StatHelper {
         ap: AbilityPoints,
         mainInfo: MainWeaponData
     ) -> AbilityStat {
-        let ability = Ability.quickSuperJump
-        
-        let qsjAp = ap[ability] ?? 0
-        
-        let apEffect = APEffect(
-            for: .superJumpChargeFrm,
-            of: qsjAp,
-            weapon: mainInfo)
-        
-        return AbilityStat(
-            baseValue: ceil(apEffect.baseEffect),
-            modifiedBy: [.quickSuperJump],
-            value: ceil(apEffect.effect),
+        return StatHelper.abilityStat(
+            for: .quickSuperJump,
+            ap: ap,
+            effectKey: .superJumpChargeFrm,
+            weapon: mainInfo,
+            baseTransform: { ceil($0) },
+            effectTransform: { ceil($0) },
             unit: .frames,
             title: String(localized: "Super Jump Vulnerable Frames")
         )
@@ -864,40 +855,6 @@ public struct StatHelper {
         )
     }
     
-    /// Calculates the number of Super Jump vulnerable frames
-    /// - Parameters:
-    ///   - ap: The AP of the user's gear build
-    ///   - mainInfo: Information about the main weapon
-    /// - Returns: The default and build Super Jump vulnerable frames
-    public static func superJumpTotalFrames(
-        ap: AbilityPoints,
-        mainInfo: MainWeaponData
-    ) -> AbilityStat {
-        let ability = Ability.quickSuperJump
-        
-        let qsjAp = ap[ability] ?? 0
-        
-        let charge = APEffect(
-            for: .superJumpChargeFrm,
-            of: qsjAp,
-            weapon: mainInfo)
-        
-        let move = APEffect(
-            for: .superJumpMoveFrm,
-            of: qsjAp,
-            weapon: mainInfo)
-        
-        return AbilityStat(
-            baseValue: (ceil(charge.baseEffect) + ceil(move.baseEffect))
-                .framesToSeconds(),
-            modifiedBy: [.quickSuperJump],
-            value: (ceil(charge.effect) + ceil(move.effect))
-                .framesToSeconds(),
-            unit: .frames,
-            title: String(localized: "Super Jump Vulnerable Frames")
-        )
-    }
-    
     /// Calculates the shot spread while the player is jumping
     /// - Parameters:
     ///   - ap: The AP of the user's gear build
@@ -907,27 +864,21 @@ public struct StatHelper {
         ap: AbilityPoints,
         mainInfo: MainWeaponData
     ) -> AbilityStat? {
-        let ability = Ability.intensifyAction
-        
-        let iaAp = ap[ability] ?? 0
-        
         guard let groundSpread = mainInfo.standDegSwerve, let jumpSpread = mainInfo.jumpDegSwerve else {
             return nil
         }
         
-        let apEffect = APEffect(
-            for: .reduceJumpSwerveRate,
-            of: iaAp,
-            weapon: mainInfo)
-        
         let extraSpeed = jumpSpread - groundSpread
-        let reducedExtraSpeed = extraSpeed * (1 - apEffect.effect)
         
-        return AbilityStat(
-            baseValue: jumpSpread.roundToDecimalPlaces(round: .down),
-            modifiedBy: [ability],
-            value: (reducedExtraSpeed + groundSpread)
-                .roundToDecimalPlaces(round: .down),
+        return StatHelper.abilityStat(
+            for: .intensifyAction,
+            ap: ap,
+            effectKey: .reduceJumpSwerveRate,
+            weapon: mainInfo,
+            baseTransform: { _ in
+                jumpSpread.roundToDecimalPlaces(round: .down)
+            },
+            effectTransform: { (extraSpeed * (1 - $0) + groundSpread).roundToDecimalPlaces(round: .down) },
             unit: .degrees,
             title: String(localized: "Shot Spread While Jumping")
         )
@@ -942,27 +893,21 @@ public struct StatHelper {
         ap: AbilityPoints,
         mainInfo: MainWeaponData
     ) -> AbilityStat? {
-        let ability = Ability.intensifyAction
-        
-        let iaAp = ap[ability] ?? 0
-        
         guard let groundSpread = mainInfo.variableStandDegSwerve, let jumpSpread = mainInfo.variableJumpDegSwerve else {
             return nil
         }
         
-        let apEffect = APEffect(
-            for: .reduceJumpSwerveRate,
-            of: iaAp,
-            weapon: mainInfo)
-        
         let extraSpeed = jumpSpread - groundSpread
-        let reducedExtraSpeed = extraSpeed * (1 - apEffect.effect)
         
-        return AbilityStat(
-            baseValue: jumpSpread.roundToDecimalPlaces(round: .down),
-            modifiedBy: [ability],
-            value: (reducedExtraSpeed + groundSpread)
-                .roundToDecimalPlaces(round: .down),
+        return StatHelper.abilityStat(
+            for: .intensifyAction,
+            ap: ap,
+            effectKey: .reduceJumpSwerveRate,
+            weapon: mainInfo,
+            baseTransform: { _ in
+                jumpSpread.roundToDecimalPlaces(round: .down)
+            },
+            effectTransform: { (extraSpeed * (1 - $0) + groundSpread).roundToDecimalPlaces(round: .down) },
             unit: .degrees,
             title: String(localized: "Secondary Mode Spread While Jumping")
         )
@@ -977,19 +922,13 @@ public struct StatHelper {
         ap: AbilityPoints,
         mainInfo: MainWeaponData
     ) -> AbilityStat {
-        let ability = Ability.intensifyAction
-        
-        let iaAp = ap[ability] ?? 0
-        
-        let apEffect = APEffect(
-            for: .wallJumpChargeFrm,
-            of: iaAp,
-            weapon: mainInfo)
-        
-        return AbilityStat(
-            baseValue: ceil(apEffect.baseEffect),
-            modifiedBy: [ability],
-            value: ceil(apEffect.effect),
+        return StatHelper.abilityStat(
+            for: .intensifyAction,
+            ap: ap,
+            effectKey: .wallJumpChargeFrm,
+            weapon: mainInfo,
+            baseTransform: ceil,
+            effectTransform: ceil,
             unit: .frames,
             title: String(localized: "Squid Surge Charge To Full")
         )
@@ -1073,20 +1012,13 @@ public struct StatHelper {
         ap: AbilityPoints,
         mainInfo: MainWeaponData
     ) -> AbilityStat {
-        let sru = Ability.subResistanceUp
-        let sruAp = ap[sru] ?? 0
-        
-        let apEffect = APEffect(
-            for: .moveDownRtPoisonMist,
-            of: sruAp,
-            weapon: mainInfo)
-        
-        return AbilityStat(
-            baseValue: (apEffect.baseEffect * 100)
-                .roundToDecimalPlaces(round: .down),
-            modifiedBy: [sru],
-            value: (apEffect.effect * 100)
-                .roundToDecimalPlaces(round: .down),
+        return StatHelper.abilityStat(
+            for: .subResistanceUp,
+            ap: ap,
+            effectKey: .moveDownRtPoisonMist,
+            weapon: mainInfo,
+            baseTransform: { ($0 * 100).roundToDecimalPlaces(round: .down) },
+            effectTransform: { ($0 * 100).roundToDecimalPlaces(round: .down) },
             unit: .percentage,
             title: String(localized: "\(SubWeapon.toxicMist.localized) Movement Reduction", comment: "Refers to the movement reduction effect of Toxic Mist.")
         )
@@ -1156,26 +1088,13 @@ public struct StatHelper {
         ap: AbilityPoints,
         subInfo: SubWeaponData
     ) -> AbilityStat? {
-        let hml = abilityValues(for: .subSpecUpParam, weapon: subInfo)
-        
-        guard hml.hasEffect() else {
-            return nil
-        }
-        
-        let spu = Ability.subPowerUp
-        let spuAp = ap[spu] ?? 0
-        
-        let apEffect = APEffect(
-            for: .subSpecUpParam,
-            of: spuAp,
-            weapon: subInfo)
-        
-        return AbilityStat(
-            baseValue: apEffect.baseEffect
-                .roundToDecimalPlaces(3, round: .down),
-            modifiedBy: [spu],
-            value: apEffect.effect
-                .roundToDecimalPlaces(3, round: .down),
+        return StatHelper.optAbilityStat(
+            for: .subPowerUp,
+            ap: ap,
+            effectKey: .subSpecUpParam,
+            weapon: subInfo,
+            baseTransform: { $0.roundToDecimalPlaces(3, round: .down) },
+            effectTransform: { $0.roundToDecimalPlaces(3, round: .down) },
             unit: .unitsPerFrame,
             title: String(localized: "Velocity (Decides Range)")
         )
@@ -1192,26 +1111,15 @@ public struct StatHelper {
         subInfo: SubWeaponData,
         first: Bool
     ) -> AbilityStat? {
-        let hml = abilityValues(
-            for: first ? .subFirstPhaseDuration : .subSecondPhaseDuration,
-            weapon: subInfo)
+        let effectKey: AbilityValue = first ? .subFirstPhaseDuration : .subSecondPhaseDuration
         
-        guard hml.hasEffect() else {
-            return nil
-        }
-        
-        let spu = Ability.subPowerUp
-        let spuAp = ap[spu] ?? 0
-        
-        let apEffect = APEffect(
-            for: first ? .subFirstPhaseDuration : .subSecondPhaseDuration,
-            of: spuAp,
-            weapon: subInfo)
-        
-        return AbilityStat(
-            baseValue: apEffect.baseEffect.framesToSeconds(),
-            modifiedBy: [spu],
-            value: apEffect.effect.framesToSeconds(),
+        return StatHelper.optAbilityStat(
+            for: .subPowerUp,
+            ap: ap,
+            effectKey: effectKey,
+            weapon: subInfo,
+            baseTransform: { $0.framesToSeconds() },
+            effectTransform: { $0.framesToSeconds() },
             unit: .seconds,
             title: first ? String(localized: "Full Power Phase Duration") : String(localized: "Mid-Phase Duration")
         )
@@ -1227,24 +1135,13 @@ public struct StatHelper {
         ap: AbilityPoints,
         subInfo: SubWeaponData
     ) -> AbilityStat? {
-        let hml = abilityValues(for: .subMarkingTimeInSeconds, weapon: subInfo)
-        
-        guard hml.hasEffect() else {
-            return nil
-        }
-        
-        let spu = Ability.subPowerUp
-        let spuAp = ap[spu] ?? 0
-        
-        let apEffect = APEffect(
-            for: .subMarkingTimeInSeconds,
-            of: spuAp,
-            weapon: subInfo)
-        
-        return AbilityStat(
-            baseValue: apEffect.baseEffect.framesToSeconds(),
-            modifiedBy: [spu],
-            value: apEffect.effect.framesToSeconds(),
+        return StatHelper.optAbilityStat(
+            for: .subPowerUp,
+            ap: ap,
+            effectKey: .subMarkingTimeInSeconds,
+            weapon: subInfo,
+            baseTransform: { $0.framesToSeconds() },
+            effectTransform: { $0.framesToSeconds() },
             unit: .seconds,
             title: String(localized: "Marking Duration")
         )
@@ -1259,24 +1156,13 @@ public struct StatHelper {
         ap: AbilityPoints,
         subInfo: SubWeaponData
     ) -> AbilityStat? {
-        let hml = abilityValues(for: .subMarkingRadius, weapon: subInfo)
-        
-        guard hml.hasEffect() else {
-            return nil
-        }
-        
-        let spu = Ability.subPowerUp
-        let spuAp = ap[spu] ?? 0
-        
-        let apEffect = APEffect(
-            for: .subMarkingRadius,
-            of: spuAp,
-            weapon: subInfo)
-        
-        return AbilityStat(
-            baseValue: apEffect.baseEffect.roundToDecimalPlaces(2, round: .up),
-            modifiedBy: [spu],
-            value: apEffect.effect.roundToDecimalPlaces(2, round: .up),
+        return StatHelper.optAbilityStat(
+            for: .subPowerUp,
+            ap: ap,
+            effectKey: .subMarkingRadius,
+            weapon: subInfo,
+            baseTransform: { $0.roundToDecimalPlaces(2, round: .up) },
+            effectTransform: { $0.roundToDecimalPlaces(2, round: .up) },
             unit: .radius,
             title: String(localized: "Marking Radius")
         )
@@ -1291,24 +1177,13 @@ public struct StatHelper {
         ap: AbilityPoints,
         subInfo: SubWeaponData
     ) -> AbilityStat? {
-        let hml = abilityValues(for: .subExplosionRadius, weapon: subInfo)
-        
-        guard hml.hasEffect() else {
-            return nil
-        }
-        
-        let spu = Ability.subPowerUp
-        let spuAp = ap[spu] ?? 0
-        
-        let apEffect = APEffect(
-            for: .subExplosionRadius,
-            of: spuAp,
-            weapon: subInfo)
-        
-        return AbilityStat(
-            baseValue: apEffect.baseEffect.roundToDecimalPlaces(2, round: .up),
-            modifiedBy: [spu],
-            value: apEffect.effect.roundToDecimalPlaces(2, round: .up),
+        return StatHelper.optAbilityStat(
+            for: .subPowerUp,
+            ap: ap,
+            effectKey: .subExplosionRadius,
+            weapon: subInfo,
+            baseTransform: { $0.roundToDecimalPlaces(2, round: .up) },
+            effectTransform: { $0.roundToDecimalPlaces(2, round: .up) },
             unit: .radius,
             title: String(localized: "Explosion Radius")
         )
@@ -1323,26 +1198,13 @@ public struct StatHelper {
         ap: AbilityPoints,
         subInfo: SubWeaponData
     ) -> AbilityStat? {
-        let hml = abilityValues(for: .subHp, weapon: subInfo)
-        
-        guard hml.hasEffect() else {
-            return nil
-        }
-        
-        let spu = Ability.subPowerUp
-        let spuAp = ap[spu] ?? 0
-        
-        let apEffect = APEffect(
-            for: .subHp,
-            of: spuAp,
-            weapon: subInfo)
-        
-        return AbilityStat(
-            baseValue: (apEffect.baseEffect / 10)
-                .roundToDecimalPlaces(1, round: .down),
-            modifiedBy: [spu],
-            value: (apEffect.effect / 10)
-                .roundToDecimalPlaces(1, round: .down),
+        return StatHelper.optAbilityStat(
+            for: .subPowerUp,
+            ap: ap,
+            effectKey: .subHp,
+            weapon: subInfo,
+            baseTransform: { ($0 / 10).roundToDecimalPlaces(1, round: .down) },
+            effectTransform: { ($0 / 10).roundToDecimalPlaces(1, round: .down) },
             unit: .hp,
             title: String(localized: "Durability")
         )
@@ -1357,24 +1219,13 @@ public struct StatHelper {
         ap: AbilityPoints,
         specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
-        let hml = abilityValues(for: .specialDurationFrame, weapon: specialInfo)
-        
-        guard hml.hasEffect() else {
-            return nil
-        }
-        
-        let spu = Ability.specialPowerUp
-        let spuAp = ap[spu] ?? 0
-        
-        let apEffect = APEffect(
-            for: .specialDurationFrame,
-            of: spuAp,
-            weapon: specialInfo)
-        
-        return AbilityStat(
-            baseValue: apEffect.baseEffect.framesToSeconds(),
-            modifiedBy: [spu],
-            value: apEffect.effect.framesToSeconds(),
+        return StatHelper.optAbilityStat(
+            for: .specialPowerUp,
+            ap: ap,
+            effectKey: .specialDurationFrame,
+            weapon: specialInfo,
+            baseTransform: { $0.framesToSeconds() },
+            effectTransform: { $0.framesToSeconds() },
             unit: .seconds,
             title: String(localized: "\(specialInfo.id.localized) Duration", comment: "Refers to the duration of certain special weapons.")
         )
@@ -1389,26 +1240,13 @@ public struct StatHelper {
         ap: AbilityPoints,
         specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
-        let hml = abilityValues(for: .specialDamageDistance, weapon: specialInfo)
-        
-        guard hml.hasEffect() else {
-            return nil
-        }
-        
-        let spu = Ability.specialPowerUp
-        let spuAp = ap[spu] ?? 0
-        
-        let apEffect = APEffect(
-            for: .specialDamageDistance,
-            of: spuAp,
-            weapon: specialInfo)
-        
-        return AbilityStat(
-            baseValue: apEffect.baseEffect
-                .roundToDecimalPlaces(4, round: .down),
-            modifiedBy: [spu],
-            value: apEffect.effect
-                .roundToDecimalPlaces(4, round: .down),
+        return StatHelper.optAbilityStat(
+            for: .specialPowerUp,
+            ap: ap,
+            effectKey: .specialDamageDistance,
+            weapon: specialInfo,
+            baseTransform: { $0.roundToDecimalPlaces(4, round: .down) },
+            effectTransform: { $0.roundToDecimalPlaces(4, round: .down) },
             unit: .damage,
             title: String(localized: "\(specialInfo.id.localized) Damage Distance", comment: "Refers to the damage done by a special weapon over some specified distance.")
         )
@@ -1423,26 +1261,13 @@ public struct StatHelper {
         ap: AbilityPoints,
         specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
-        let hml = abilityValues(for: .specialPaintRadius, weapon: specialInfo)
-        
-        guard hml.hasEffect() else {
-            return nil
-        }
-        
-        let spu = Ability.specialPowerUp
-        let spuAp = ap[spu] ?? 0
-        
-        let apEffect = APEffect(
-            for: .specialPaintRadius,
-            of: spuAp,
-            weapon: specialInfo)
-        
-        return AbilityStat(
-            baseValue: apEffect.baseEffect
-                .roundToDecimalPlaces(4, round: .down),
-            modifiedBy: [spu],
-            value: apEffect.effect
-                .roundToDecimalPlaces(4, round: .down),
+        return StatHelper.optAbilityStat(
+            for: .specialPowerUp,
+            ap: ap,
+            effectKey: .specialPaintRadius,
+            weapon: specialInfo,
+            baseTransform: { $0.roundToDecimalPlaces(4, round: .down) },
+            effectTransform: { $0.roundToDecimalPlaces(4, round: .down) },
             unit: .radius,
             title: String(localized: "\(specialInfo.id.localized) Paint Radius", comment: "Refers to the painting radius of certain specials.")
         )
@@ -1457,24 +1282,13 @@ public struct StatHelper {
         ap: AbilityPoints,
         specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
-        let hml = abilityValues(for: .specialFieldHp, weapon: specialInfo)
-        
-        guard hml.hasEffect() else {
-            return nil
-        }
-        
-        let spu = Ability.specialPowerUp
-        let spuAp = ap[spu] ?? 0
-        
-        let apEffect = APEffect(
-            for: .specialFieldHp,
-            of: spuAp,
-            weapon: specialInfo)
-        
-        return AbilityStat(
-            baseValue: round(apEffect.baseEffect / 10),
-            modifiedBy: [spu],
-            value: round(apEffect.effect / 10),
+        return StatHelper.optAbilityStat(
+            for: .specialPowerUp,
+            ap: ap,
+            effectKey: .specialFieldHp,
+            weapon: specialInfo,
+            baseTransform: { round($0 / 10) },
+            effectTransform: { round($0 / 10) },
             unit: .hp,
             title: String(localized: "\(specialInfo.id.localized) Shield Durability", comment: "Refers to the durability of the Big Bubbler shield.")
         )
@@ -1489,24 +1303,13 @@ public struct StatHelper {
         ap: AbilityPoints,
         specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
-        let hml = abilityValues(for: .specialDeviceHp, weapon: specialInfo)
-        
-        guard hml.hasEffect() else {
-            return nil
-        }
-        
-        let spu = Ability.specialPowerUp
-        let spuAp = ap[spu] ?? 0
-        
-        let apEffect = APEffect(
-            for: .specialDeviceHp,
-            of: spuAp,
-            weapon: specialInfo)
-        
-        return AbilityStat(
-            baseValue: round(apEffect.baseEffect / 10),
-            modifiedBy: [spu],
-            value: round(apEffect.effect / 10),
+        return StatHelper.optAbilityStat(
+            for: .specialPowerUp,
+            ap: ap,
+            effectKey: .specialDeviceHp,
+            weapon: specialInfo,
+            baseTransform: { round($0 / 10) },
+            effectTransform: { round($0 / 10) },
             unit: .hp,
             title: String(localized: "\(specialInfo.id.localized) Device Durability", comment: "Refers to the durability of the Big Bubbler device.")
         )
@@ -1521,28 +1324,15 @@ public struct StatHelper {
         ap: AbilityPoints,
         specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
-        let hml = abilityValues(for: .specialHookInkConsumption, weapon: specialInfo)
-        
-        guard hml.hasEffect() else {
-            return nil
-        }
-        
-        let spu = Ability.specialPowerUp
-        let spuAp = ap[spu] ?? 0
-        
-        let apEffect = APEffect(
-            for: .specialHookInkConsumption,
-            of: spuAp,
-            weapon: specialInfo)
-        
         let zipcasterInkTankSize = 1.5
         
-        return AbilityStat(
-            baseValue: ((apEffect.baseEffect * 100) / zipcasterInkTankSize)
-                .roundToDecimalPlaces(round: .down),
-            modifiedBy: [spu],
-            value: ((apEffect.effect * 100) / zipcasterInkTankSize)
-                .roundToDecimalPlaces(round: .down),
+        return StatHelper.optAbilityStat(
+            for: .specialPowerUp,
+            ap: ap,
+            effectKey: .specialHookInkConsumption,
+            weapon: specialInfo,
+            baseTransform: { ($0 * 100 / zipcasterInkTankSize).roundToDecimalPlaces(round: .down) },
+            effectTransform: { ($0 * 100 / zipcasterInkTankSize).roundToDecimalPlaces(round: .down) },
             unit: .percentage,
             title: String(localized: "\(specialInfo.id.localized) Hook Ink Consumption", comment: "Refers to the ink consumption of the Zipcaster hook.")
         )
@@ -1557,28 +1347,15 @@ public struct StatHelper {
         ap: AbilityPoints,
         specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
-        let hml = abilityValues(for: .specialInkConsumptionPerSecond, weapon: specialInfo)
-        
-        guard hml.hasEffect() else {
-            return nil
-        }
-        
-        let spu = Ability.specialPowerUp
-        let spuAp = ap[spu] ?? 0
-        
-        let apEffect = APEffect(
-            for: .specialInkConsumptionPerSecond,
-            of: spuAp,
-            weapon: specialInfo)
-        
         let zipcasterInkTankSize = 1.5
         
-        return AbilityStat(
-            baseValue: ((apEffect.baseEffect * 100) / zipcasterInkTankSize)
-                .roundToDecimalPlaces(round: .down),
-            modifiedBy: [spu],
-            value: ((apEffect.effect * 100) / zipcasterInkTankSize)
-                .roundToDecimalPlaces(round: .down),
+        return StatHelper.optAbilityStat(
+            for: .specialPowerUp,
+            ap: ap,
+            effectKey: .specialInkConsumptionPerSecond,
+            weapon: specialInfo,
+            baseTransform: { ($0 * 100 / zipcasterInkTankSize).roundToDecimalPlaces(round: .down) },
+            effectTransform: { ($0 * 100 / zipcasterInkTankSize).roundToDecimalPlaces(round: .down) },
             unit: .percentage,
             title: String(localized: "\(specialInfo.id.localized) Hook Ink Consumption Per Second", comment: "Refers to the ink consumption of the Zipcaster special while idling.")
         )
@@ -1593,26 +1370,13 @@ public struct StatHelper {
         ap: AbilityPoints,
         specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
-        let hml = abilityValues(for: .specialReticleRadius, weapon: specialInfo)
-        
-        guard hml.hasEffect() else {
-            return nil
-        }
-        
-        let spu = Ability.specialPowerUp
-        let spuAp = ap[spu] ?? 0
-        
-        let apEffect = APEffect(
-            for: .specialReticleRadius,
-            of: spuAp,
-            weapon: specialInfo)
-                
-        return AbilityStat(
-            baseValue: apEffect.baseEffect
-                .roundToDecimalPlaces(round: .down),
-            modifiedBy: [spu],
-            value: apEffect.effect
-                .roundToDecimalPlaces(round: .down),
+        return StatHelper.optAbilityStat(
+            for: .specialPowerUp,
+            ap: ap,
+            effectKey: .specialReticleRadius,
+            weapon: specialInfo,
+            baseTransform: { $0.roundToDecimalPlaces(round: .down) },
+            effectTransform: { $0.roundToDecimalPlaces(round: .down) },
             unit: .radius,
             title: String(localized: "\(specialInfo.id.localized) Reticle Radius", comment: "Refers to the reticle radius of the Tenta Missile special.")
         )
@@ -1627,27 +1391,14 @@ public struct StatHelper {
         ap: AbilityPoints,
         specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
-        let hml = abilityValues(for: .specialThrowDistance, weapon: specialInfo)
-        
-        guard hml.hasEffect() else {
-            return nil
-        }
-        
-        let spu = Ability.specialPowerUp
-        let spuAp = ap[spu] ?? 0
-        
-        let apEffect = APEffect(
-            for: .specialThrowDistance,
-            of: spuAp,
-            weapon: specialInfo)
-                
-        return AbilityStat(
-            baseValue: apEffect.baseEffect
-                .roundToDecimalPlaces(round: .down),
-            modifiedBy: [spu],
-            value: apEffect.effect
-                .roundToDecimalPlaces(round: .down),
-            unit: .distance,
+        return StatHelper.optAbilityStat(
+            for: .specialPowerUp,
+            ap: ap,
+            effectKey: .specialThrowDistance,
+            weapon: specialInfo,
+            baseTransform: { $0.roundToDecimalPlaces(round: .down) },
+            effectTransform: { $0.roundToDecimalPlaces(round: .down) },
+            unit: .radius,
             title: String(localized: "\(specialInfo.id.localized) Throw Distance", comment: "Refers to the throwing distance of the Splattercolor Screen special.")
         )
     }
@@ -1661,27 +1412,14 @@ public struct StatHelper {
         ap: AbilityPoints,
         specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
-        let hml = abilityValues(for: .specialMoveSpeed, weapon: specialInfo)
-        
-        guard hml.hasEffect() else {
-            return nil
-        }
-        
-        let spu = Ability.specialPowerUp
-        let spuAp = ap[spu] ?? 0
-        
-        let apEffect = APEffect(
-            for: .specialMoveSpeed,
-            of: spuAp,
-            weapon: specialInfo)
-                
-        return AbilityStat(
-            baseValue: apEffect.baseEffect
-                .roundToDecimalPlaces(4, round: .down),
-            modifiedBy: [spu],
-            value: apEffect.effect
-                .roundToDecimalPlaces(4, round: .down),
-            unit: .unitsPerFrame,
+        return StatHelper.optAbilityStat(
+            for: .specialPowerUp,
+            ap: ap,
+            effectKey: .specialMoveSpeed,
+            weapon: specialInfo,
+            baseTransform: { $0.roundToDecimalPlaces(4, round: .down) },
+            effectTransform: { $0.roundToDecimalPlaces(4, round: .down) },
+            unit: .radius,
             title: String(localized: "\(specialInfo.id.localized) Movement Speed", comment: "Refers to the player's movement speed while using certain specials.")
         )
     }
@@ -1695,26 +1433,13 @@ public struct StatHelper {
         ap: AbilityPoints,
         specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
-        let hml = abilityValues(for: .specialAutoChargeRate, weapon: specialInfo)
-        
-        guard hml.hasEffect() else {
-            return nil
-        }
-        
-        let spu = Ability.specialPowerUp
-        let spuAp = ap[spu] ?? 0
-        
-        let apEffect = APEffect(
-            for: .specialAutoChargeRate,
-            of: spuAp,
-            weapon: specialInfo)
-                
-        return AbilityStat(
-            baseValue: (apEffect.baseEffect * 100)
-                .roundToDecimalPlaces(round: .down),
-            modifiedBy: [spu],
-            value: (apEffect.effect * 100)
-                .roundToDecimalPlaces(round: .down),
+        return StatHelper.optAbilityStat(
+            for: .specialPowerUp,
+            ap: ap,
+            effectKey: .specialAutoChargeRate,
+            weapon: specialInfo,
+            baseTransform: { ($0 * 100).roundToDecimalPlaces(round: .down) },
+            effectTransform: { ($0 * 100).roundToDecimalPlaces(round: .down) },
             unit: .none,
             title: String(localized: "Special Auto Charge Rate")
         )
@@ -1729,72 +1454,52 @@ public struct StatHelper {
         ap: AbilityPoints,
         specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
-        let hml = abilityValues(for: .specialMaxRadius, weapon: specialInfo)
-        
-        guard hml.hasEffect() else {
-            return nil
-        }
-        
-        let spu = Ability.specialPowerUp
-        let spuAp = ap[spu] ?? 0
-        
-        let apEffect = APEffect(
-            for: .specialMaxRadius,
-            of: spuAp,
-            weapon: specialInfo)
-                
-        return AbilityStat(
-            baseValue: apEffect.baseEffect
-                .roundToDecimalPlaces(round: .down),
-            modifiedBy: [spu],
-            value: apEffect.effect
-                .roundToDecimalPlaces(round: .down),
+        return StatHelper.optAbilityStat(
+            for: .specialPowerUp,
+            ap: ap,
+            effectKey: .specialMaxRadius,
+            weapon: specialInfo,
+            baseTransform: { $0.roundToDecimalPlaces(round: .down) },
+            effectTransform: { $0.roundToDecimalPlaces(round: .down) },
             unit: .radius,
             title: String(localized: "\(specialInfo.id.localized) Max Radius", comment: "Refers to the maximum radius of the Big Bubbler or Wave Breaker special.")
         )
     }
     
-    /// Calculates the radius range (max and min) of certain special weapons
+    /// Calculates the maximum range of the Ink Vac special weapon
     /// - Parameters:
     ///   - ap: The AP of the user's gear build
     ///   - specialInfo: Information about the player's special weapon
     /// - Returns: The default and build radius range. Can return `nil` if there is no meaningful effect.
-    public static func specialRadiusRange(
-        ap: AbilityPoints,
-        specialInfo: SpecialWeaponData
-    ) -> AbilityStatRange? {
-        let hmlMax = abilityValues(for: .specialRadiusMax, weapon: specialInfo)
-        
-        let hmlMin = abilityValues(for: .specialRadiusMin, weapon: specialInfo)
-        
-        guard hmlMax.hasEffect() && hmlMin.hasEffect() else {
-            return nil
-        }
-        
-        let spu = Ability.specialPowerUp
-        let spuAp = ap[spu] ?? 0
-        
-        let maxEffect = APEffect(
-            for: .specialRadiusMax,
-            of: spuAp,
-            weapon: specialInfo)
-        
-        let minEffect = APEffect(
-            for: .specialRadiusMin,
-            of: spuAp,
-            weapon: specialInfo)
-        
-        let range = AbilityStatRange(
-            baseMin: minEffect.baseEffect.roundToDecimalPlaces(round: .down),
-            baseMax: maxEffect.baseEffect.roundToDecimalPlaces(round: .down),
-            valueMin: minEffect.effect.roundToDecimalPlaces(round: .down),
-            valueMax: maxEffect.effect.roundToDecimalPlaces(round: .down),
-            modifiedBy: [spu],
+    public static func specialRadiusMax(ap: AbilityPoints, specialInfo: SpecialWeaponData) -> AbilityStat? {
+        return StatHelper.optAbilityStat(
+            for: .specialPowerUp,
+            ap: ap,
+            effectKey: .specialRadiusMax,
+            weapon: specialInfo,
+            baseTransform: { $0.roundToDecimalPlaces(round: .down) },
+            effectTransform: { $0.roundToDecimalPlaces(round: .down) },
             unit: .radius,
-            title: String(localized: "\(specialInfo.id.localized) Radius Range", comment: "Refers to the maximum and minimum radius of the certain specials.")
+            title: String(localized: "\(specialInfo.id.localized) Sucking Radius (Max)", comment: "Refers to the max sucking radius of the Ink Vac special.")
         )
-                
-        return range
+    }
+    
+    /// Calculates the minimum range of the Ink Vac special weapon
+    /// - Parameters:
+    ///   - ap: The AP of the user's gear build
+    ///   - specialInfo: Information about the player's special weapon
+    /// - Returns: The default and build radius range. Can return `nil` if there is no meaningful effect.
+    public static func specialRadiusMin(ap: AbilityPoints, specialInfo: SpecialWeaponData) -> AbilityStat? {
+        return StatHelper.optAbilityStat(
+            for: .specialPowerUp,
+            ap: ap,
+            effectKey: .specialRadiusMin,
+            weapon: specialInfo,
+            baseTransform: { $0.roundToDecimalPlaces(round: .down) },
+            effectTransform: { $0.roundToDecimalPlaces(round: .down) },
+            unit: .radius,
+            title: String(localized: "\(specialInfo.id.localized) Sucking Radius (Min)", comment: "Refers to the min sucking radius of the Ink Vac special.")
+        )
     }
     
     /// Calculates the duration of Special Power Up
@@ -1806,24 +1511,13 @@ public struct StatHelper {
         ap: AbilityPoints,
         specialInfo: SpecialWeaponData
     ) -> AbilityStat? {
-        let hml = abilityValues(for: .specialPowerUpDuration, weapon: specialInfo)
-        
-        guard hml.hasEffect() else {
-            return nil
-        }
-        
-        let spu = Ability.specialPowerUp
-        let spuAp = ap[spu] ?? 0
-        
-        let apEffect = APEffect(
-            for: .specialPowerUpDuration,
-            of: spuAp,
-            weapon: specialInfo)
-                
-        return AbilityStat(
-            baseValue: apEffect.baseEffect.framesToSeconds(),
-            modifiedBy: [spu],
-            value: apEffect.effect.framesToSeconds(),
+        return StatHelper.optAbilityStat(
+            for: .specialPowerUp,
+            ap: ap,
+            effectKey: .specialPowerUpDuration,
+            weapon: specialInfo,
+            baseTransform: { $0.framesToSeconds() },
+            effectTransform: { $0.framesToSeconds() },
             unit: .seconds,
             title: String(localized: "\(specialInfo.id.localized) Drink Effect Duration", comment: "Refers to how long Tacticooler drinks effect players for.")
         )

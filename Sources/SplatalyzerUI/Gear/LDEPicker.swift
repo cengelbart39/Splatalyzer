@@ -20,32 +20,30 @@ public struct LDEPicker: View {
     @ScaledMetric(relativeTo: .title3)
     private var imageSize = 35
     
-    public init() { }
+    private let intensities: [String]
     
-    private var intensity = [
-        String(localized: "0% (+0 AP)", comment: "LDE Intensity 0"),
-        String(localized: "4.76% (+0 AP)", comment: "LDE Intensity 1"),
-        String(localized: "9.52% (+1 AP)", comment: "LDE Intensity 2"),
-        String(localized: "14.29% (+2 AP)", comment: "LDE Intensity 3"),
-        String(localized: "19.05% (+3 AP)", comment: "LDE Intensity 4"),
-        String(localized: "23.81% (+4 AP)", comment: "LDE Intensity 5"),
-        String(localized: "28.57% (+5 AP)", comment: "LDE Intensity 6"),
-        String(localized: "33.33% (+6 AP)", comment: "LDE Intensity 7"),
-        String(localized: "38.10% (+6 AP)", comment: "LDE Intensity 8"),
-        String(localized: "42.86% (+7 AP)", comment: "LDE Intensity 9"),
-        String(localized: "47.62% (+8 AP)", comment: "LDE Intensity 10"),
-        String(localized: "52.38% (+9 AP)", comment: "LDE Intensity 11"),
-        String(localized: "57.14% (+10 AP)", comment: "LDE Intensity 12"),
-        String(localized: "61.90% (+11 AP)", comment: "LDE Intensity 13"),
-        String(localized: "66.67% (+12 AP)", comment: "LDE Intensity 14"),
-        String(localized: "71.43% (+12 AP)", comment: "LDE Intensity 15"),
-        String(localized: "76.19% (+13 AP)", comment: "LDE Intensity 16"),
-        String(localized: "80.95% (+14 AP)", comment: "LDE Intensity 17"),
-        String(localized: "85.71% (+15 AP)", comment: "LDE Intensity 18"),
-        String(localized: "90.48% (+16 AP)", comment: "LDE Intensity 19"),
-        String(localized: "95.24% (+17 AP)", comment: "LDE Intensity 20"),
-        String(localized: "100% (+18 AP)", comment: "LDE Intensity 21")
-    ]
+    public init() {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .percent
+        formatter.minimumFractionDigits = 0
+        formatter.maximumFractionDigits = 2
+        formatter.locale = .autoupdatingCurrent
+        
+        let apValues = [0, 0, 1, 2, 3, 4, 5, 6, 6, 7, 8, 9, 10, 11, 12, 12, 13, 14, 15, 16, 17, 18]
+        
+        var output = [String]()
+        
+        for (index, apValue) in apValues.enumerated() {
+            let decimal = 100.0 / 21.0 / 100.0 * Double(index)
+            
+            if let percent = formatter.string(from: NSNumber(value: decimal)) {
+                let intensity = String(localized: "\(percent) (+\(apValue) AP)", comment: "LDE Intensity, e.g., '0% (+0 AP)'. Percentage is handled by a NumberFormatter.")
+                output.append(intensity)
+            }
+        }
+        
+        self.intensities = output
+    }
     
     public var body: some View {
         GridRow {
@@ -55,8 +53,8 @@ public struct LDEPicker: View {
                 .gridColumnAlignment(.trailing)
             
             Picker(String(localized: "\(Ability.lastDitchEffort.localized) Intensity"), selection: $analyzer.build.abilityOptions.lastDitchEffort) {
-                ForEach(0..<intensity.count, id: \.self) { index in
-                    Text(intensity[index])
+                ForEach(0..<intensities.count, id: \.self) { index in
+                    Text(intensities[index])
                         .font(.title3)
                         .tag(index)
                 }
@@ -67,7 +65,7 @@ public struct LDEPicker: View {
         }
         .accessibilityElement(children: .combine)
         .accessibilityLabel("\(Ability.lastDitchEffort.localized) Intensity")
-        .accessibilityValue("\(intensity[analyzer.build.abilityOptions.lastDitchEffort]),  \(analyzer.build.hasAbility(.lastDitchEffort) ? "Enabled" : "Disabled")")
+        .accessibilityValue("\(intensities[analyzer.build.abilityOptions.lastDitchEffort]),  \(analyzer.build.hasAbility(.lastDitchEffort) ? "Enabled" : "Disabled")")
         .onChange(of: analyzer.build.hasAbility(.lastDitchEffort)) { oldValue, newValue in
             if oldValue && !newValue {
                 analyzer.build.abilityOptions.lastDitchEffort = 0

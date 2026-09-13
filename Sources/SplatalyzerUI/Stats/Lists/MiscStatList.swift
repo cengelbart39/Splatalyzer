@@ -20,17 +20,17 @@ public struct MiscStatList: View {
     public var body: some View {
         StatList(title: "Miscellaneous", isModifiedByAbilities: miscStats.isModifiedByAbilities()) {
             LazyVStack(spacing: 10) {
-                AbilityStatCard(stat: miscStats.squidInkRecovery)
+                AbilityStatCard(stat: miscStats.squidInkRecovery, statItem: .squidInkRecovery)
                 
-                AbilityStatCard(stat: miscStats.humanoidInkRecovery)
+                AbilityStatCard(stat: miscStats.humanoidInkRecovery, statItem: .humanoidInkRecovery)
                 
-                AbilityStatCard(stat: miscStats.quickRespawnTime)
+                AbilityStatCard(stat: miscStats.quickRespawnTime, statItem: .quickRespawnTime)
                 
-                AbilityStatCard(stat: miscStats.quickRespawnTimeRP)
+                AbilityStatCard(stat: miscStats.quickRespawnTimeRP, statItem: .quickRespawnTimeRP)
                 
-                AbilityStatCard(stat: miscStats.superJumpGroundFrames)
+                AbilityStatCard(stat: miscStats.superJumpGroundFrames, statItem: .superJumpGroundFrames)
                 
-                AbilityStatCard(stat: miscStats.superJumpTimeTotal)
+                AbilityStatCard(stat: miscStats.superJumpTimeTotal, statItem: .superJumpTimeTotal)
             }
 
         }

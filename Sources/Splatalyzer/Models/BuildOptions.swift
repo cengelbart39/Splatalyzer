@@ -30,6 +30,13 @@ public struct BuildOptions: Codable, Equatable, Identifiable, Sendable {
         return (0...21).contains(self.abilityOptions.lastDitchEffort)
     }
     
+    public func getAbilityPoints(of ability: Ability) -> Int {
+        let ap = self.gear.toAbilityPoints(abilityOptions: self.abilityOptions, usingTacticooler: self.usingTacticooler, usingFlowAura: self.usingFlowAura)
+        return ap[ability] ?? 0
+    }
+    
+    
+    
     public init(
         id: UUID = UUID(),
         mainWeapon: MainWeapon,

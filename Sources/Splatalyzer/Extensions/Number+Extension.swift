@@ -52,6 +52,11 @@ public extension Double {
         return ((self * pow(10, n)).rounded() / pow(10, n))
             .cutToDecimalPlaces(Int(n), round: round)
     }
+    
+    func toDamage() -> Double {
+        return (self * 100)
+            .cutToDecimalPlaces(1, round: .down)
+    }
 }
 
 public extension Optional<Int> {

@@ -24,14 +24,14 @@ public struct MainStatList: View {
     public var body: some View {
         StatList(title: mainStats.weapon.localized, image: mainStats.weapon.image, imageSize: imageSize, isModifiedByAbilities: mainStats.isAffectedByAbilities()) {
             LazyVStack(spacing: 10) {
-                AbilityStatCard(stat: mainStats.shotSpreadAir)
+                AbilityStatCard(stat: mainStats.shotSpreadAir, statItem: .mainShotSpreadAir)
                 
                 DoubleStatCard(
                     title: String(localized: "Shot Spread on the Ground"),
                     value: mainStats.shotSpreadGround,
                     unit: .degrees)
                 
-                AbilityStatCard(stat: mainStats.shotAutofireSpreadAir)
+                AbilityStatCard(stat: mainStats.shotAutofireSpreadAir, statItem: .mainShotAutofireSpreadAir)
                 
                 DoubleStatCard(
                     title: String(localized: "Secondary Mode Spread on the Ground"),

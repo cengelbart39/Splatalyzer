@@ -63,3 +63,7 @@ Depending on your use case, you may want to use all, some, or none of these.
 - ``DoubleStatCard``
 - ``InkTankOptionStatCard``
 - ``StringStatCard``
+
+### Chart Views
+- ``AbilityEffectChart``
+- ``AbilityEffectChartCard``

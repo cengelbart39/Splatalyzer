@@ -57,13 +57,16 @@ public struct SpecialWeaponStats: Codable, Equatable, Sendable {
     /// Special Max Radius (Big Bubbler, Wave Breaker)
     public let maxRadius: AbilityStat?
     
-    /// Max and min radius of certain specials
-    public let radiusRange: AbilityStatRange?
+    /// Special Max Radius (Ink Vac)
+    public let radiusMax: AbilityStat?
+    
+    /// Special Min Radius (Ink Vac)
+    public let radiusMin: AbilityStat?
     
     /// Special Power Up Duration
     public let powerUpDuration: AbilityStat?
     
-    public init(weapon: SpecialWeapon, point: AbilityStat, lost: AbilityStat, lostSplattedByRP: AbilityStat, duration: AbilityStat?, damageDistance: AbilityStat?, paintRadius: AbilityStat?, fieldHp: AbilityStat?, deviceHp: AbilityStat?, hookInkConsumption: AbilityStat?, hookInkConsumptionPerSecond: AbilityStat?, reticleRadius: AbilityStat?, throwDistance: AbilityStat?, moveSpeed: AbilityStat?, autoChargeRate: AbilityStat?, maxRadius: AbilityStat?, radiusRange: AbilityStatRange?, powerUpDuration: AbilityStat?) {
+    public init(weapon: SpecialWeapon, point: AbilityStat, lost: AbilityStat, lostSplattedByRP: AbilityStat, duration: AbilityStat?, damageDistance: AbilityStat?, paintRadius: AbilityStat?, fieldHp: AbilityStat?, deviceHp: AbilityStat?, hookInkConsumption: AbilityStat?, hookInkConsumptionPerSecond: AbilityStat?, reticleRadius: AbilityStat?, throwDistance: AbilityStat?, moveSpeed: AbilityStat?, autoChargeRate: AbilityStat?, maxRadius: AbilityStat?, radiusMax: AbilityStat?, radiusMin: AbilityStat?, powerUpDuration: AbilityStat?) {
         self.weapon = weapon
         self.point = point
         self.lost = lost
@@ -80,7 +83,8 @@ public struct SpecialWeaponStats: Codable, Equatable, Sendable {
         self.moveSpeed = moveSpeed
         self.autoChargeRate = autoChargeRate
         self.maxRadius = maxRadius
-        self.radiusRange = radiusRange
+        self.radiusMax = radiusMax
+        self.radiusMin = radiusMin
         self.powerUpDuration = powerUpDuration
     }
     
@@ -118,13 +122,15 @@ public struct SpecialWeaponStats: Codable, Equatable, Sendable {
         
         self.maxRadius = StatHelper.specialMaxRadius(ap: ap, specialInfo: specialData)
         
-        self.radiusRange = StatHelper.specialRadiusRange(ap: ap, specialInfo: specialData)
+        self.radiusMax = StatHelper.specialRadiusMax(ap: ap, specialInfo: specialData)
+        
+        self.radiusMin = StatHelper.specialRadiusMin(ap: ap, specialInfo: specialData)
         
         self.powerUpDuration = StatHelper.specialPowerUpDuration(ap: ap, specialInfo: specialData)
     }
     
     /// Determines if any stat is modified by any ability
     public func isModifiedByAbilities() -> Bool {
-        return self.point.isModifiedByAbilities() || self.lost.isModifiedByAbilities() || self.lostSplattedByRP.isModifiedByAbilities() || self.duration?.isModifiedByAbilities() == true || self.damageDistance?.isModifiedByAbilities() == true || self.paintRadius?.isModifiedByAbilities() == true || self.fieldHp?.isModifiedByAbilities() == true || self.deviceHp?.isModifiedByAbilities() == true || self.hookInkConsumption?.isModifiedByAbilities() == true || self.hookInkConsumptionPerSecond?.isModifiedByAbilities() == true || self.reticleRadius?.isModifiedByAbilities() == true || self.throwDistance?.isModifiedByAbilities() == true || self.moveSpeed?.isModifiedByAbilities() == true || self.autoChargeRate?.isModifiedByAbilities() == true || self.maxRadius?.isModifiedByAbilities() == true || self.radiusRange?.isModifiedByAbilities() == true || self.powerUpDuration?.isModifiedByAbilities() == true
+        return self.point.isModifiedByAbilities() || self.lost.isModifiedByAbilities() || self.lostSplattedByRP.isModifiedByAbilities() || self.duration?.isModifiedByAbilities() == true || self.damageDistance?.isModifiedByAbilities() == true || self.paintRadius?.isModifiedByAbilities() == true || self.fieldHp?.isModifiedByAbilities() == true || self.deviceHp?.isModifiedByAbilities() == true || self.hookInkConsumption?.isModifiedByAbilities() == true || self.hookInkConsumptionPerSecond?.isModifiedByAbilities() == true || self.reticleRadius?.isModifiedByAbilities() == true || self.throwDistance?.isModifiedByAbilities() == true || self.moveSpeed?.isModifiedByAbilities() == true || self.autoChargeRate?.isModifiedByAbilities() == true || self.maxRadius?.isModifiedByAbilities() == true || self.radiusMax?.isModifiedByAbilities() == true || self.radiusMin?.isModifiedByAbilities() == true || self.powerUpDuration?.isModifiedByAbilities() == true
     }
 }

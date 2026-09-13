@@ -4,14 +4,13 @@
     "" : {
 
     },
-    "(specialWeapon.localized) Damage" : {
-      "comment" : "Refers to the damage done by the Special Weapon.",
-      "extractionState" : "stale",
+    "%@ (+%lld AP)" : {
+      "comment" : "LDE Intensity, e.g., '0% (+0 AP)'. Percentage is handled by a NumberFormatter.",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "(specialWeapon.localized) Damage"
+            "state" : "new",
+            "value" : "%1$@ (+%2$lld AP)"
           }
         }
       }
@@ -37,7 +36,15 @@
       }
     },
     "%@ Intensity" : {
-
+      "comment" : "Used in reference to Last Ditch Effort Intensity",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ Intensity"
+          }
+        }
+      }
     },
     "%@-%@" : {
       "comment" : "Represents a distance range, e.g., 4-7",
@@ -92,244 +99,22 @@
         }
       }
     },
-    "0% (+0 AP)" : {
-      "comment" : "LDE Intensity 0",
+    "Ability Points (AP)" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "0% (+0 AP)"
+            "value" : "Ability Points (AP)"
           }
         }
       }
     },
-    "4.76% (+0 AP)" : {
-      "comment" : "LDE Intensity 1",
+    "AP" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "4.76% (+0 AP)"
-          }
-        }
-      }
-    },
-    "9.52% (+1 AP)" : {
-      "comment" : "LDE Intensity 2",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "9.52% (+1 AP)"
-          }
-        }
-      }
-    },
-    "14.29% (+2 AP)" : {
-      "comment" : "LDE Intensity 3",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "14.29% (+2 AP)"
-          }
-        }
-      }
-    },
-    "19.05% (+3 AP)" : {
-      "comment" : "LDE Intensity 4",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "19.05% (+3 AP)"
-          }
-        }
-      }
-    },
-    "23.81% (+4 AP)" : {
-      "comment" : "LDE Intensity 5",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "23.81% (+4 AP)"
-          }
-        }
-      }
-    },
-    "28.57% (+5 AP)" : {
-      "comment" : "LDE Intensity 6",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "28.57% (+5 AP)"
-          }
-        }
-      }
-    },
-    "33.33% (+6 AP)" : {
-      "comment" : "LDE Intensity 7",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "33.33% (+6 AP)"
-          }
-        }
-      }
-    },
-    "38.10% (+6 AP)" : {
-      "comment" : "LDE Intensity 8",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "38.10% (+6 AP)"
-          }
-        }
-      }
-    },
-    "42.86% (+7 AP)" : {
-      "comment" : "LDE Intensity 9",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "42.86% (+7 AP)"
-          }
-        }
-      }
-    },
-    "47.62% (+8 AP)" : {
-      "comment" : "LDE Intensity 10",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "47.62% (+8 AP)"
-          }
-        }
-      }
-    },
-    "52.38% (+9 AP)" : {
-      "comment" : "LDE Intensity 11",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "52.38% (+9 AP)"
-          }
-        }
-      }
-    },
-    "57.14% (+10 AP)" : {
-      "comment" : "LDE Intensity 12",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "57.14% (+10 AP)"
-          }
-        }
-      }
-    },
-    "61.90% (+11 AP)" : {
-      "comment" : "LDE Intensity 13",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "61.90% (+11 AP)"
-          }
-        }
-      }
-    },
-    "66.67% (+12 AP)" : {
-      "comment" : "LDE Intensity 14",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "66.67% (+12 AP)"
-          }
-        }
-      }
-    },
-    "71.43% (+12 AP)" : {
-      "comment" : "LDE Intensity 15",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "71.43% (+12 AP)"
-          }
-        }
-      }
-    },
-    "76.19% (+13 AP)" : {
-      "comment" : "LDE Intensity 16",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "76.19% (+13 AP)"
-          }
-        }
-      }
-    },
-    "80.95% (+14 AP)" : {
-      "comment" : "LDE Intensity 17",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "80.95% (+14 AP)"
-          }
-        }
-      }
-    },
-    "85.71% (+15 AP)" : {
-      "comment" : "LDE Intensity 18",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "85.71% (+15 AP)"
-          }
-        }
-      }
-    },
-    "90.48% (+16 AP)" : {
-      "comment" : "LDE Intensity 19",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "90.48% (+16 AP)"
-          }
-        }
-      }
-    },
-    "95.24% (+17 AP)" : {
-      "comment" : "LDE Intensity 20",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "95.24% (+17 AP)"
-          }
-        }
-      }
-    },
-    "100% (+18 AP)" : {
-      "comment" : "LDE Intensity 21",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "100% (+18 AP)"
+            "value" : "AP"
           }
         }
       }
@@ -356,6 +141,16 @@
         }
       }
     },
+    "Calculating..." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calculating"
+          }
+        }
+      }
+    },
     "Canopy Durability" : {
       "comment" : "Refers to a Brella's shield durability.",
       "localizations" : {
@@ -368,7 +163,14 @@
       }
     },
     "Change current ability" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Change current ability"
+          }
+        }
+      }
     },
     "Charge Time To Full" : {
       "localizations" : {
@@ -381,10 +183,25 @@
       }
     },
     "Clothes Main Ability, %@" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clothes Main Ability, %@"
+          }
+        }
+      }
     },
     "Consider %@" : {
-
+      "comment" : "Used in regard to Flow State; inserted string localized in Ability.xcstrings",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Consider %@"
+          }
+        }
+      }
     },
     "Damage" : {
       "localizations" : {
@@ -392,6 +209,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Damage"
+          }
+        }
+      }
+    },
+    "Dismiss" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dismiss"
           }
         }
       }
@@ -407,7 +234,15 @@
       }
     },
     "Don't Consider %@" : {
-
+      "comment" : "Used in regard to Flow State; inserted string localized in Ability.xcstrings",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Don’t Consider %@"
+          }
+        }
+      }
     },
     "Effect" : {
       "localizations" : {
@@ -420,22 +255,24 @@
       }
     },
     "Headgear Main Ability, %@" : {
-
-    },
-    "LDE Intensity" : {
-      "comment" : "LDE = Last Ditch Error",
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "LDE Intensity"
+            "value" : "Headgear Main Ability, %@"
           }
         }
       }
     },
     "Main Weapon" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Main Weapon"
+          }
+        }
+      }
     },
     "Max Charge Hold Time" : {
       "localizations" : {
@@ -467,8 +304,35 @@
         }
       }
     },
+    "Selected AP Value" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selected AP Value"
+          }
+        }
+      }
+    },
+    "Series" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Series"
+          }
+        }
+      }
+    },
     "Shoes Main Ability, %@" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shoes Main Ability, %@"
+          }
+        }
+      }
     },
     "Shot Spread on the Ground" : {
       "localizations" : {
@@ -481,7 +345,14 @@
       }
     },
     "Sub Ability, %@" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sub Ability, %@"
+          }
+        }
+      }
     },
     "Weight" : {
       "comment" : "Refers to the weight class of a main weapon.",

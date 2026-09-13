@@ -257,22 +257,42 @@ struct SpecialStatsTests {
         #expect(rate == nil)
     }
     
-    @Test("Radius Range Not Nil Sp.Stats")
-    func radiusRangeNotNil() throws {
+    @Test("Radius Max Not Nil Sp.Stats")
+    func radiusMaxNotNil() throws {
         let data = try SpecialWeaponData(for: .inkVac)
         
-        let range = StatHelper.specialRadiusRange(ap: AbilityPoints(), specialInfo: data)
+        let range = StatHelper.specialRadiusMax(ap: AbilityPoints(), specialInfo: data)
         
         #expect(range != nil)
     }
     
-    @Test("Radius Range Nil Sp.Stats", arguments: [
+    @Test("Radius Max Nil Sp.Stats", arguments: [
         SpecialWeapon.krakenRoyale, .crabTank, .splattercolorScreen, .tacticooler, .superChump, .bigBubbler, .inkStorm, .inkjet, .killerWail51, .tentaMissiles, .booyahBomb, .tripleSplashdown, .waveBreaker, .reefslider, .tripleInkstrike, .trizooka, .ultraStamp
     ])
-    func radiusRangeNil(_ weapon: SpecialWeapon) throws {
+    func radiusMaxNil(_ weapon: SpecialWeapon) throws {
         let data = try SpecialWeaponData(for: weapon)
         
-        let range = StatHelper.specialRadiusRange(ap: AbilityPoints(), specialInfo: data)
+        let range = StatHelper.specialRadiusMax(ap: AbilityPoints(), specialInfo: data)
+        
+        #expect(range == nil)
+    }
+    
+    @Test("Radius Min Not Nil Sp.Stats")
+    func radiusMinNotNil() throws {
+        let data = try SpecialWeaponData(for: .inkVac)
+        
+        let range = StatHelper.specialRadiusMin(ap: AbilityPoints(), specialInfo: data)
+        
+        #expect(range != nil)
+    }
+    
+    @Test("Radius Min Nil Sp.Stats", arguments: [
+        SpecialWeapon.krakenRoyale, .crabTank, .splattercolorScreen, .tacticooler, .superChump, .bigBubbler, .inkStorm, .inkjet, .killerWail51, .tentaMissiles, .booyahBomb, .tripleSplashdown, .waveBreaker, .reefslider, .tripleInkstrike, .trizooka, .ultraStamp
+    ])
+    func radiusMinNil(_ weapon: SpecialWeapon) throws {
+        let data = try SpecialWeaponData(for: weapon)
+        
+        let range = StatHelper.specialRadiusMin(ap: AbilityPoints(), specialInfo: data)
         
         #expect(range == nil)
     }

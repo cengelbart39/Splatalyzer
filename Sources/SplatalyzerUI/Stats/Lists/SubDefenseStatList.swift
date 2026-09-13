@@ -21,13 +21,13 @@ public struct SubDefenseStatList: View {
     public var body: some View {
         StatList(title: "Sub Weapon Effect Defense", isModifiedByAbilities: defenseStats.isModifiedByAbilities()) {
             LazyVStack(spacing: 10) {
-                AbilityStatCard(stat: defenseStats.toxicMistMovementReduction)
+                AbilityStatCard(stat: defenseStats.toxicMistMovementReduction, statItem: .toxicMistMovementReduction)
                 
-                AbilityStatCard(stat: defenseStats.pointSensorMarkedSeconds)
+                AbilityStatCard(stat: defenseStats.pointSensorMarkedSeconds, statItem: .pointSensorMarkedSeconds)
                 
-                AbilityStatCard(stat: defenseStats.inkMineMarkedSeconds)
+                AbilityStatCard(stat: defenseStats.inkMineMarkedSeconds, statItem: .inkMineMarkedSeconds)
                 
-                AbilityStatCard(stat: defenseStats.angleShooterMarkedSeconds)
+                AbilityStatCard(stat: defenseStats.angleShooterMarkedSeconds, statItem: .angleShooterMarkedSeconds)
                 
                 GroupBox {
                     HStack {

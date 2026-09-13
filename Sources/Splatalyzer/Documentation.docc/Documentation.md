@@ -74,7 +74,6 @@ Learn more about how the package decodes and proccesses data.
 - ``MovementStats``
 - ``MiscStats``
 - ``AbilityStat``
-- ``AbilityStatRange``
 - ``StatUnit``
 - ``DamageStat``
 - ``DamageEffectStat``
@@ -85,6 +84,12 @@ Learn more about how the package decodes and proccesses data.
 - ``APEffect``
 - ``SubWeaponConsume``
 - ``ShootingRunSpeedType``
+
+### Chart Data of Statistics
+- ``AbilityEffectChartInfo``
+- ``AbilityEffectChartSeries``
+- ``AbilityEffectChartData``
+- ``StatItem``
 
 ### Weapon Data
 - ``WeaponDatable``

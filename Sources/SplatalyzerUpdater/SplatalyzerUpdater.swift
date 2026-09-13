@@ -10,6 +10,9 @@ import Foundation
 
 @main
 struct SplatalyzerUpdater: AsyncParsableCommand {
+    @Option(name: .long)
+    var splatalyzerPath: String = FileManager.default.currentDirectoryPath
+    
     func run() async throws {
         let gitClient = GitClient()
         
@@ -21,7 +24,7 @@ struct SplatalyzerUpdater: AsyncParsableCommand {
         let fileManager = FileManager.default
         
         let splatalyzerResources = GameData(
-            baseDir: URL(filePath: fileManager.currentDirectoryPath),
+            baseDir: URL(filePath: splatalyzerPath),
             weaponInfoMainPath: Splatalyzer.weaponInfoMainPath,
             playerParamsPath: Splatalyzer.playerParamsPath,
             weaponDataPath: Splatalyzer.weaponDataPath

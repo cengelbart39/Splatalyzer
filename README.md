@@ -9,7 +9,7 @@ Splatalyzer includes a companion package, SplatalyzerUI, that contains SwiftUI v
 
 The package works locally, relying on resources included within the package.
 
-The build analysis and functionality of this package is heavily based on [sendou.ink](https://github.com/Sendouc/sendou.ink)'s build analysis.
+The build analysis and functionality of this package is heavily based on [sendou.ink](https://github.com/Sendouc/sendou.ink)'s build analysis with Splatoon 3 game data sourced from [splat3 by Lean](https://github.com/Leanny/splat3).
 
 ## Installation
 
@@ -52,6 +52,7 @@ or
 Find package documentation below:
 * [Splatalyzer](https://cengelbart39.github.io/Splatalyzer/documentation/splatalyzer/)
 * [SplatalyzerUI](https://cengelbart39.github.io/Splatalyzer/documentation/splatalyzerui/)
+* [SplatalyzerUpdater](https://cengelbart39.github.io/Splatalyzer/documentation/splatalyzerupdater/)
 
 ## Updater
 

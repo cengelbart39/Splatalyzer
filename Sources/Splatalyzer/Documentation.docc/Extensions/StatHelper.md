@@ -32,7 +32,8 @@
 - ``specialMoveSpeed(ap:specialInfo:)``
 - ``specialAutoChargeRate(ap:specialInfo:)``
 - ``specialMaxRadius(ap:specialInfo:)``
-- ``specialRadiusRange(ap:specialInfo:)``
+- ``specialRadiusMax(ap:specialInfo:)``
+- ``specialRadiusMin(ap:specialInfo:)``
 - ``specialPowerUpDuration(ap:specialInfo:)``
 
 ### Sub Defense Statistics
@@ -71,4 +72,3 @@
 - ``subDamageValue(ap:baseValue:subInfo:)``
 - ``specialSavedAfterDeath(_:)``
 - ``quickSuperJumpValue(for:with:)``
-- ``superJumpTotalFrames(ap:mainInfo:)``

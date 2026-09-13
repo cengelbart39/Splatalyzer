@@ -23,6 +23,10 @@ public final class SplatalyzerViewModel: ObservableObject {
     
     public init() { }
     
+    @MainActor public func getChartData(for statItem: StatItem) throws -> AbilityEffectChartInfo {
+        return try self.splatalyzer.generateChartData(for: statItem, using: self.build.mainWeapon)
+    }
+    
     /// Update statstics after a change in `MainWeapon`
     @MainActor public func updateStats(for weapon: MainWeapon) throws {
         DispatchQueue.main.async {

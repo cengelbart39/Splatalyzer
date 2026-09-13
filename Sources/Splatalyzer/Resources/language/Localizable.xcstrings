@@ -27,7 +27,15 @@
       }
     },
     "%@ Drink Effect Duration" : {
-      "comment" : "Refers to how long Tacticooler drinks effect players for."
+      "comment" : "Refers to how long Tacticooler drinks effect players for.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ Drink Effect Duration"
+          }
+        }
+      }
     },
     "%@ Duration" : {
       "comment" : "Refers to the duration of certain special weapons.",
@@ -95,6 +103,17 @@
         }
       }
     },
+    "%@ Only" : {
+      "comment" : "Used in the chart legend to refer to considering the effect of a single ability. e.g., Swim Speed Only.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ Only"
+          }
+        }
+      }
+    },
     "%@ Paint Radius" : {
       "comment" : "Refers to the painting radius of certain specials.",
       "localizations" : {
@@ -102,17 +121,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ Paint Radius"
-          }
-        }
-      }
-    },
-    "%@ Radius Range" : {
-      "comment" : "Refers to the maximum and minimum radius of the certain specials.",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ Radius Range"
           }
         }
       }
@@ -135,6 +143,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ Shield Durability"
+          }
+        }
+      }
+    },
+    "%@ Sucking Radius (Max)" : {
+      "comment" : "Refers to the max sucking radius of the Ink Vac special.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ Sucking Radius (Max)"
+          }
+        }
+      }
+    },
+    "%@ Sucking Radius (Min)" : {
+      "comment" : "Refers to the min sucking radius of the Ink Vac special.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ Sucking Radius (Min)"
           }
         }
       }
@@ -172,6 +202,17 @@
         }
       }
     },
+    "Ability Points" : {
+      "comment" : "Y-Axis Chart Title",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ability Points"
+          }
+        }
+      }
+    },
     "Damage" : {
       "localizations" : {
         "en" : {
@@ -188,6 +229,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Damage In Enemy Ink"
+          }
+        }
+      }
+    },
+    "Degrees" : {
+      "comment" : "Y-Axis Chart Title",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Degrees"
           }
         }
       }
@@ -242,24 +294,13 @@
         }
       }
     },
-    "Failed to load (file) in bundle: (descr)" : {
-      "extractionState" : "stale",
+    "Frames" : {
+      "comment" : "Y-Axis Chart Title",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Failed to load (file) in bundle: (descr)"
-          }
-        }
-      }
-    },
-    "Failed to locate '(file)' in bundle." : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Failed to locate '(file)' in bundle."
+            "value" : "Frames"
           }
         }
       }
@@ -291,6 +332,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Heavy"
+          }
+        }
+      }
+    },
+    "HP" : {
+      "comment" : "Y-Axis Chart Title",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HP"
           }
         }
       }
@@ -387,6 +439,17 @@
         }
       }
     },
+    "Percentage" : {
+      "comment" : "Y-Axis Chart Title",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Percentage"
+          }
+        }
+      }
+    },
     "Points to Special" : {
       "localizations" : {
         "en" : {
@@ -428,6 +491,17 @@
         }
       }
     },
+    "Radius" : {
+      "comment" : "Y-Axis Chart Title",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Radius"
+          }
+        }
+      }
+    },
     "Run Speed" : {
       "localizations" : {
         "en" : {
@@ -464,6 +538,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Secondary Mode Spread While Jumping"
+          }
+        }
+      }
+    },
+    "Seconds" : {
+      "comment" : "Y-Axis Chart Title",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seconds"
           }
         }
       }
@@ -509,13 +594,12 @@
         }
       }
     },
-    "Special Power Up Duration" : {
-      "extractionState" : "stale",
+    "Special Points" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Special Power Up Duration"
+            "value" : "Special Points"
           }
         }
       }
@@ -570,6 +654,17 @@
         }
       }
     },
+    "Units Per Frame" : {
+      "comment" : "Y-Axis Chart Title",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Units Per Frame"
+          }
+        }
+      }
+    },
     "Velocity (Decides Range)" : {
       "localizations" : {
         "en" : {
@@ -587,6 +682,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Weight"
+          }
+        }
+      }
+    },
+    "With %@" : {
+      "comment" : "Used in the chart legend to refer to considering a second effect of a second abbility.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "With %@"
           }
         }
       }

@@ -27,29 +27,29 @@ public struct MovementStatList: View {
                     ),
                     value: movementStats.speedType.display)
                 
-                AbilityStatCard(stat: movementStats.swimSpeed)
+                AbilityStatCard(stat: movementStats.swimSpeed, statItem: .swimSpeed)
                 
-                AbilityStatCard(stat: movementStats.swimSpeedWithRainmaker)
+                AbilityStatCard(stat: movementStats.swimSpeedWithRainmaker, statItem: .swimSpeedWithRainmaker)
                 
-                AbilityStatCard(stat: movementStats.runSpeed)
+                AbilityStatCard(stat: movementStats.runSpeed, statItem: .runSpeed)
                 
-                AbilityStatCard(stat: movementStats.shootingRunSpeed)
+                AbilityStatCard(stat: movementStats.shootingRunSpeed, statItem: .shootingRunSpeed)
                 
-                AbilityStatCard(stat: movementStats.shootingRunSpeedCharging)
+                AbilityStatCard(stat: movementStats.shootingRunSpeedCharging, statItem: .shootingRunSpeedCharging)
                 
-                AbilityStatCard(stat: movementStats.shootingRunSpeedFullCharge)
+                AbilityStatCard(stat: movementStats.shootingRunSpeedFullCharge, statItem: .shootingRunSpeedFullCharge)
                 
-                AbilityStatCard(stat: movementStats.shootingRunSpeedSecondary)
+                AbilityStatCard(stat: movementStats.shootingRunSpeedSecondary, statItem: .shootingRunSpeedSecondary)
                 
-                AbilityStatCard(stat: movementStats.squidSurgeChargeFrames)
+                AbilityStatCard(stat: movementStats.squidSurgeChargeFrames, statItem: .squidSurgeChargeFrames)
                 
-                AbilityStatCard(stat: movementStats.runSpeedInEnemyInk)
+                AbilityStatCard(stat: movementStats.runSpeedInEnemyInk, statItem: .runSpeedInEnemyInk)
                 
-                AbilityStatCard(stat: movementStats.framesBeforeDamageInEnemyInk)
+                AbilityStatCard(stat: movementStats.framesBeforeDamageInEnemyInk, statItem: .framesBeforeDamageInEnemyInk)
                 
-                AbilityStatCard(stat: movementStats.damageInEnemyInkPerSecond)
+                AbilityStatCard(stat: movementStats.damageInEnemyInkPerSecond, statItem: .damageInEnemyInkPerSecond)
                 
-                AbilityStatCard(stat: movementStats.enemyInkDamageLimit)
+                AbilityStatCard(stat: movementStats.enemyInkDamageLimit, statItem: .enemyInkDamageLimit)
             }
 
         }

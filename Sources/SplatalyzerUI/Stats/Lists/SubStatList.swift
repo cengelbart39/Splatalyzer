@@ -23,7 +23,7 @@ public struct SubStatList: View {
     public var body: some View {
         StatList(title: subStats.weapon.localized, image: subStats.weapon.image, imageSize: imageSize) {
             LazyVStack(spacing: 10) {
-                AbilityStatCard(stat: subStats.inkConsumptionPercentage)
+                AbilityStatCard(stat: subStats.inkConsumptionPercentage, statItem: .subInkConsumptionPercentage)
                 
                 DoubleStatCard(
                     title: String(localized: "No Ink Recovery Time After Usage"),
@@ -31,23 +31,23 @@ public struct SubStatList: View {
                     unit: .seconds)
                 
                 if subStats.weapon != .squidBeakon {
-                    AbilityStatCard(stat: subStats.velocity)
+                    AbilityStatCard(stat: subStats.velocity, statItem: .subVelocity)
                 }
                 
-                AbilityStatCard(stat: subStats.firstPhaseDuration)
+                AbilityStatCard(stat: subStats.firstPhaseDuration, statItem: .subFirstPhaseDuration)
                 
-                AbilityStatCard(stat: subStats.secondPhaseDuration)
+                AbilityStatCard(stat: subStats.secondPhaseDuration, statItem: .subSecondPhaseDuration)
                 
-                AbilityStatCard(stat: subStats.markingTimeInSeconds)
+                AbilityStatCard(stat: subStats.markingTimeInSeconds, statItem: .subMarkingTimeInSeconds)
                 
-                AbilityStatCard(stat: subStats.markingRadius)
+                AbilityStatCard(stat: subStats.markingRadius, statItem: .subMarkingRadius)
                 
-                AbilityStatCard(stat: subStats.explosionRadius)
+                AbilityStatCard(stat: subStats.explosionRadius, statItem: .subExplosionRadius)
                 
-                AbilityStatCard(stat: subStats.subHp)
+                AbilityStatCard(stat: subStats.subHp, statItem: .subHp)
                 
                 if subStats.weapon == .squidBeakon {
-                    AbilityStatCard(stat: subStats.quickSuperJumpBoost)
+                    AbilityStatCard(stat: subStats.quickSuperJumpBoost, statItem: .subQuickSuperJumpBoost)
                 }
             }
         }
